@@ -1,0 +1,3 @@
+https://github.com/tomdinga/Clustering-Algorithms---Matlab/blob/master/svm/svcplot.m
+https://github.com/lambday/svc/blob/master/esvcLabel.m
+https://github.com/trungngv/gpelbmesne/blob/master/clustering/assignClusterLabels.m

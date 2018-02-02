@@ -1,0 +1,41 @@
+\documentclass{article}
+
+\def\inner#1#2{ \langle #1,#2 \rangle}
+
+\begin{document}
+
+Let $P=\{p_1,\ldots,p_n\}$ be a point set, and   $\bar{x}=\frac{1}{n}\sum_i p_i=c(P)$ the centroid of $P$.
+A coreset $Q\subset P$ for the centroid performs $\frac{2}{\epsilon^2}$ iterations:
+Choose $c_1=x_1$, 
+let $i_t=\arg\min \inner{c_t-\bar{x}}{x_i-\bar{x}}$, and
+$$
+c_{t+1}=\frac{t-1}{t}c_t+\frac{1}{t}x_{i_t}
+$$
+
+Let $Q_t=\{x_{i_1},\ldots, x_{i_t}\}$ denote the coreset.
+
+$$
+|c(Q_{\frac{2}{\epsilon^2}})-c(P)|\leq\epsilon
+$$
+
+Thus an $\epsilon$-approximation of the centroid can be sparsely represented.
+
+This algorithm can be kernelized.
+
+
+Note that we find
+$$
+i_t=\arg\min_i \inner{c_t-\bar{x}}{x_i}
+$$
+
+The kernel variance is defined by
+
+$$
+\sum_i \|x_i-\mu\|_k
+$$
+
+It can be computed and approximated
+
+% Improved Coresets for Kernel Density Estimates
+
+\end{document}

@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Thales circle theorem extended to Mahalanobis geometry</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="MahalanobisThalesTheorem.tex"> 
+<meta name="date" content="2017-10-20 09:25:00"> 
+<link rel="stylesheet" type="text/css" href="MahalanobisThalesTheorem.css"> 
+</head><body 
+>
+   <div class="maketitle">
+
+
+
+<h2 class="titleHead">Thales circle theorem extended to Mahalanobis geometry</h2>
+      <div class="author" ><span 
+class="cmr-12">Frank Nielsen</span>
+<br /><span 
+class="cmtt-12">Frank.Nielsen@acm.org</span></div><br />
+<div class="date" ><span 
+class="cmr-12">October 20, 2017</span></div>
+   </div>
+<!--l. 28--><p class="indent" >   This column is also available in pdf: filename <a 
+href="MahalanobisThalesTheorem.pdf" class="url" ><span 
+class="cmtt-10">MahalanobisThalesTheorem.pdf</span></a>
+   <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-10001"></a>Thales&#8217; theorem in Euclidean geometry</h3>
+<!--l. 34--><p class="noindent" >In planar Euclidean geometry, Thales&#8217; theorem states that any triangle <span 
+class="cmmi-10">pqr </span>circumscribing a circle with one pair
+(<span 
+class="cmmi-10">p,q</span>) of antipodal points is necessarily a right triangle. A pair (<span 
+class="cmmi-10">p,q</span>) of antipodal points of a smooth convex object is
+such that the tangent lines at <span 
+class="cmmi-10">p </span>and <span 
+class="cmmi-10">q </span>are parallel to each other. See Figure&#x00A0;<a 
+href="#x1-10021">1<!--tex4ht:ref: fig:thales --></a> for an illustration, and&#x00A0;<span class="cite">[<a 
+href="#XThales-2015">3</a>]</span> for a
+historical account (Thales of Miletus, 624&#8211;546 BC).
+   <div class="newtheorem">
+<!--l. 39--><p class="noindent" ><span class="head">
+<span 
+class="cmbx-10">Theorem</span><span 
+class="cmbx-10">&#x00A0;1</span><span 
+class="cmbx-10">&#x00A0;(Thales&#8217; circle theorem)</span> </span><span 
+class="cmti-10">Any  triangle  circumscribed  by  a  circle  with  one  side  being  a</span>
+<span 
+class="cmti-10">diameter is right-angle.</span>
+   </div>
+<!--l. 43--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+
+<a 
+ id="x1-10021"></a>
+
+<!--l. 45--><p class="noindent" ><img 
+src="Fig-Thales.png" alt="PIC" class="graphics"><!--tex4ht:graphics  
+name="MahalanobisThalesTheorem0x.png" src="Fig-ThalesTheorem.pdf"  
+-->
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;1: </span><span  
+class="content">Thales&#8217; circle theorem: Triangle <span 
+class="cmmi-10">pqr </span>is right-angle at <span 
+class="cmmi-10">r </span>where [<span 
+class="cmmi-10">pq</span>] is a diameter. (<span 
+class="cmmi-10">p,q</span>) is a pair of
+antipodal points.</span></div><!--tex4ht:label?: x1-10021 -->
+
+<!--l. 48--><p class="indent" >   </div><hr class="endfigure">
+   <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-20002"></a>Thales&#8217; theorem in Mahanalobis geometry</h3>
+<!--l. 53--><p class="noindent" >Let <span 
+class="cmmi-10">D</span><sub><span 
+class="cmmi-7">A</span></sub>(<span 
+class="cmmi-10">p,q</span>) denote the Mahalanobis distance between two points <span 
+class="cmmi-10">p </span>and <span 
+class="cmmi-10">q</span>, for a positive definite matrix
+<span 
+class="cmmi-10">A </span><span 
+class="cmsy-10">&#x227B; </span>0:
+   <center class="math-display" >
+<img 
+src="MahalanobisThalesTheorem1x.png" alt="         &#x2218; ---------------
+DA(p,q) =  (p- q)&#x22A4;A(p - q) = &#x2225;p- q&#x2225;A.  " class="math-display" ></center>
+When <span 
+class="cmmi-10">A </span>= <span 
+class="cmmi-10">I </span>is the 2 <span 
+class="cmsy-10">&#x00D7; </span>2 identity matrix, the Mahalanobis distance amounts to the Euclidean distance
+<span 
+class="cmmi-10">D</span><sub><span 
+class="cmmi-7">E</span></sub>(<span 
+class="cmmi-10">p,q</span>) = <span 
+class="cmsy-10">&#x2225;</span><span 
+class="cmmi-10">p </span><span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">q</span><span 
+class="cmsy-10">&#x2225; </span>= <img 
+src="MahalanobisThalesTheorem2x.png" alt="&#x2218;(p-- q)&#x22A4;(p-- q)"  class="sqrt" >.
+<!--l. 59--><p class="indent" >   A Mahalanobis circle&#x00A0;<span class="cite">[<a 
+href="#Xnielsen-2008">2</a>]</span> <span 
+class="cmmi-10">C</span><sub><span 
+class="cmmi-7">A</span></sub>(<span 
+class="cmmi-10">c,r</span>) of center <span 
+class="cmmi-10">c </span>and radius <span 
+class="cmmi-10">r </span>is defined as follows:
+   <center class="math-display" >
+<img 
+src="MahalanobisThalesTheorem3x.png" alt="CA (c,r) = {x : DA(c,x) = r}.  " class="math-display" ></center> A
+Mahalanobis circle has an ellipsoid (Euclidean) shape.
+<!--l. 65--><p class="indent" >   Let us generalize Thales&#8217; theorem as follows:
+   <div class="newtheorem">
+<!--l. 67--><p class="noindent" ><span class="head">
+<span 
+class="cmbx-10">Theorem</span><span 
+class="cmbx-10">&#x00A0;2</span><span 
+class="cmbx-10">&#x00A0;(Thales&#8217; Mahalanobis circle theorem)</span> </span><span 
+class="cmti-10">Any  triangle  circumscribed  by  a  Mahalanobis</span>
+<span 
+class="cmti-10">circle with one pair of points being antipodal is right-angle.</span>
+   </div>
+<!--l. 72--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-30002"></a><span 
+class="cmbx-10">Proof:</span></span>
+   Consider the Cholesky decomposition of <span 
+class="cmmi-10">A</span>: <span 
+class="cmmi-10">A </span>= <span 
+class="cmmi-10">LL</span><sup><span 
+class="cmsy-7">&#x22A4;</span></sup> = <span 
+class="cmmi-10">U</span><sup><span 
+class="cmsy-7">&#x22A4;</span></sup><span 
+class="cmmi-10">U </span>with <span 
+class="cmmi-10">L </span>(<span 
+class="cmmi-10">U </span>= <span 
+class="cmmi-10">L</span><sup><span 
+class="cmsy-7">&#x22A4;</span></sup>) a lower triangular matrix (an
+upper triangular matrix, respectively) with positive diagonal elements. The Mahalanobis distance
+amounts to calculate an ordinary Euclidean distance on affinely transformed points <span 
+class="cmmi-10">x</span><span 
+class="cmsy-10">&#x2032; </span>= <span 
+class="cmmi-10">L</span><sup><span 
+class="cmsy-7">&#x22A4;</span></sup><span 
+class="cmmi-10">x </span>= <span 
+class="cmmi-10">Ux</span>:
+<div class="eqnarray">
+
+   <center class="math-display" >
+<img 
+src="MahalanobisThalesTheorem4x.png" alt="            &#x2218; -----------------
+DA (p,q)  =    (p- q)&#x22A4;LL &#x22A4;(p- q),
+
+         =  DE (L&#x22A4;p,L&#x22A4;q ).
+" class="math-display" ></center>
+</div>
+<!--l. 80--><p class="indent" >   Thus a Mahalanobis circles <span 
+class="cmmi-10">C</span><sub><span 
+class="cmmi-7">A</span></sub> transforms affinely to a Euclidean circle <span 
+class="cmmi-10">C</span><sub><span 
+class="cmmi-7">E</span></sub> = <span 
+class="cmmi-10">C</span><sub><span 
+class="cmmi-7">I</span></sub>, and antipodal pairs of points
+on <span 
+class="cmmi-10">C</span><sub><span 
+class="cmmi-7">A</span></sub> remain antipodal in <span 
+class="cmmi-10">C</span><sub><span 
+class="cmmi-7">E</span></sub>.
+<!--l. 83--><p class="indent" >   Two vectors <span 
+class="cmmi-10">u </span>and <span 
+class="cmmi-10">v </span>are perpendicular in the Mahalanobis geometry if and only if <span 
+class="cmmi-10">u</span><sup><span 
+class="cmsy-7">&#x22A4;</span></sup><span 
+class="cmmi-10">Av </span>= 0. That is, if
+<span 
+class="cmmi-10">u</span><sup><span 
+class="cmsy-7">&#x22A4;</span></sup><span 
+class="cmmi-10">Av </span>= <span 
+class="cmmi-10">u</span><sup><span 
+class="cmsy-7">&#x22A4;</span></sup><span 
+class="cmmi-10">LL</span><sup><span 
+class="cmsy-7">&#x22A4;</span></sup><span 
+class="cmmi-10">v </span>= (<span 
+class="cmmi-10">L</span><sup><span 
+class="cmsy-7">&#x22A4;</span></sup><span 
+class="cmmi-10">u</span>)<sup><span 
+class="cmsy-7">&#x22A4;</span></sup><span 
+class="cmmi-10">L</span><sup><span 
+class="cmsy-7">&#x22A4;</span></sup><span 
+class="cmmi-10">v </span>= <span 
+class="cmmi-10">u</span><span 
+class="cmsy-10">&#x2032;</span><sup><span 
+class="cmsy-7">&#x22A4;</span></sup><span 
+class="cmmi-10">v</span><span 
+class="cmsy-10">&#x2032; </span>= 0.
+<!--l. 86--><p class="indent" >   A triangle <span 
+class="cmmi-10">pqr </span>circumscribing the Mahalanobis circle <span 
+class="cmmi-10">C</span><sub><span 
+class="cmmi-7">A</span></sub> with (<span 
+class="cmmi-10">p,q</span>) an antipodal pair in Mahalanobis geometry
+transforms into a triangle <span 
+class="cmmi-10">p</span><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmmi-10">q</span><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmmi-10">r</span><span 
+class="cmsy-10">&#x2032; </span>circumscribing the Euclidean circle <span 
+class="cmmi-10">C</span><span 
+class="cmsy-10">&#x2032; </span>= <span 
+class="cmsy-10">{</span><span 
+class="cmmi-10">L</span><sup><span 
+class="cmsy-7">&#x22A4;</span></sup><span 
+class="cmmi-10">x</span><span 
+class="cmmi-10">&#x00A0; </span>: <span 
+class="cmmi-10">&#x00A0;x </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">C</span><sub><span 
+class="cmmi-7">A</span></sub>(<span 
+class="cmmi-10">c,r</span>)<span 
+class="cmsy-10">} </span>with (<span 
+class="cmmi-10">p</span><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmmi-10">,q</span><span 
+class="cmsy-10">&#x2032;</span>) an
+antipodal pair. Therefore <span 
+class="cmmi-10">p</span><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmmi-10">q</span><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmmi-10">r</span><span 
+class="cmsy-10">&#x2032; </span>is a right-angle triangle in Euclidean geometry, and:
+<!--l. 90--><p class="indent" >   <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="MahalanobisThalesTheorem5x.png" alt="       &#x2032;  &#x2032; &#x22A4;  &#x2032;  &#x2032;
+     (q- r ) (p - r ) =  0,                             (1)
+(L&#x22A4; (q - r))&#x22A4;L &#x22A4;(p- r)  =  0,                             (2)
+   (q- r)&#x22A4;LL &#x22A4;(p- r)  =  0,                             (3)
+
+       (q- r)A (p- r)  =  0.                             (4)
+" class="math-display" ></center>
+</div>Therefore, <span 
+class="cmmi-10">pqr </span>is a right-angle triangle in Mahalanobis geometry.                                                     <span 
+class="msam-10">&#x25A1;</span>
+<!--l. 100--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+
+<a 
+ id="x1-30032"></a>
+
+<!--l. 102--><p class="noindent" ><img 
+src="Fig-ThalesMahalanobis.png" alt="PIC" class="graphics"><!--tex4ht:graphics  
+name="MahalanobisThalesTheorem6x.png" src="Fig-ThalesMahalanobisTheorem.pdf"  
+-->
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;2: </span><span  
+class="content">Thales&#8217; circle theorem in Mahalanobis geometry: Triangle <span 
+class="cmmi-10">pqr </span>is right-angle at <span 
+class="cmmi-10">r </span>where [<span 
+class="cmmi-10">pq</span>] is an
+antipodal pair of points. Notice that Mahalanobis geometry is generally not conformal so that a Mahalanobis
+right-angle does not visualize as a Euclidean right-angle.</span></div><!--tex4ht:label?: x1-30032 -->
+
+<!--l. 106--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 109--><p class="indent" >   Note that Mahalanobis geometry is not conformal when <span 
+class="cmmi-10">A </span><span 
+class="cmsy-10">&#x2044;</span>= <span 
+class="cmmi-10">&#x03BB;I </span>(for <span 
+class="cmmi-10">&#x03BB; &#x003E; </span>0), the scaled identity matrix.
+Therefore angles are not preserved in Mahalanobis geometry: That is, a Mahalanobis right-angle cannot be
+visualized as a Euclidean right-angle in general.
+<!--l. 114--><p class="indent" >   Squared Mahalanobis distances are the only symmetric Bregman divergences&#x00A0;<span class="cite">[<a 
+href="#XBVD-2010">1</a>]</span>. But Thales&#8217; theorem do not
+extend to other (asymmetric) Bregman divergences.
+   <h3 class="likesectionHead"><a 
+ id="x1-40002"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+   <div class="thebibliography">
+   <p class="bibitem" ><span class="biblabel">
+ [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XBVD-2010"></a>Jean-Daniel Boissonnat, Frank Nielsen, and Richard Nock. Bregman Voronoi diagrams. <span 
+class="cmti-10">Discrete &amp;</span>
+   <span 
+class="cmti-10">Computational Geometry</span>, 44(2):281&#8211;307, 2010.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xnielsen-2008"></a>Frank Nielsen and Richard Nock. On the smallest enclosing information disk. <span 
+class="cmti-10">Information Processing</span>
+   <span 
+class="cmti-10">Letters</span>, 105(3):93&#8211;97, 2008.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XThales-2015"></a>Christoph&#x00A0;J Scriba and Peter Schreiber.  Geometry in the Greek-Hellenistic era and late antiquity.
+   In <span 
+class="cmti-10">5000 Years of Geometry</span>, pages 27&#8211;116. Springer, 2015.
+</p>
+   </div>
+    
+</body></html> 
+
+
+

@@ -1,0 +1,57 @@
+\documentclass{beamer}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsthm}
+
+ 
+
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+\def\myframepart#1{\begin{frame}\begin{center}{\Huge \bf #1}\end{center}\end{frame}}
+  
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+
+\newtheorem{lem}{Lemma}
+\newtheorem{thm}{Theorem}
+%\newtheorem{problem}{Problem}
+%\newtheorem{fact}{Fact}
+
+\def\textred#1{#1}
+\def\textblue#1{#1}
+ \def\map{\mathrm{MAP}}
+
+\usetheme{default}
+\usefonttheme{structurebold}
+\setbeamercovered{invisible}
+\setbeamertemplate{navigation symbols}{} 
+
+\usepackage{graphicx}
+\graphicspath{{./figs/}}
+ 
+ 
+
+\begin{document}
+
+\title{Geometric Sciences of Information:\\ Random musings}
+ 
+\date{Last updated, \today}
+
+\author{Frank Nielsen\\ {\tt Frank.Nielsen@acm.org}}
+ 
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}{Geometry of Hamming spaces}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]
+        \frametitle{References}
+				\tiny
+\bibliographystyle{plain}
+\bibliography{RandomMusings-Bib}
+\end{frame}
+
+\end{document}

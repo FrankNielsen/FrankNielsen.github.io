@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+
+\bibitem{IG-2014}
+O.~Calin and C.~Udri{\c{s}}te.
+\newblock {\em Geometric Modeling in Probability and Statistics}.
+\newblock Mathematics and Statistics. Springer International Publishing, 2014.
+
+\bibitem{CR-2013}
+Frank Nielsen.
+\newblock Cram\'er-{R}ao lower bound and information geometry.
+\newblock {\em arXiv preprint arXiv:1301.3578}, 2013.
+
+\bibitem{EF-2009}
+Frank Nielsen and Vincent Garcia.
+\newblock Statistical exponential families: A digest with flash cards.
+\newblock {\em arXiv preprint arXiv:0911.4863}, 2009.
+
+\bibitem{RFIM-2017}
+Ke~Sun and Frank Nielsen.
+\newblock Relative {F}isher information and natural gradient for learning large
+  modular models.
+\newblock In Doina Precup and Yee~Whye Teh, editors, {\em Proceedings of the
+  34th International Conference on Machine Learning}, volume~70 of {\em
+  Proceedings of Machine Learning Research}, pages 3289--3298, International
+  Convention Centre, Sydney, Australia, 06--11 Aug 2017. PMLR.
+
+\end{thebibliography}

@@ -1,0 +1,71 @@
+% Frank.Nielsen@acm.org
+
+\documentclass[11pt]{article}
+\usepackage{fullpage,amssymb,amsmath,hyperref,url}
+
+\def\eqdef{:=}
+\def\eqnota{:=:}
+\def\dnu{\mathrm{d}\nu}
+\def\calX{\mathcal{X}}
+\def\bbR{\mathbb{R}}
+\def\Var{\mathrm{Var}}
+\def\vol{\mathrm{vol}}
+\def\floor#1{{\lceil {#1} \rceil}}
+
+\title{Adaptive Algorithms:\\ Revisiting Klee's measure problem...}
+
+\date{11th November 2017}
+\author{Frank Nielsen}
+
+\begin{document}
+\maketitle
+
+This column is also available in pdf: filename \url{AdaptiveAlgorithmKleeMeasure.pdf} 
+\vskip 0.5cm
+
+
+In 1977, Klee~\cite{Klee-1977} asked whether the union $\cup_{i=1}^n [a_i,b_i]$ of a set of $n$ intervals can be computed in less than $O(n\log n)$ or not. 
+In general, the {\em Klee's measure problem} (KMP) asks to calculate the union $\cup_{i=1}^n B_i$ of $n$ axis-parallel boxes (also called isothetic boxes) in $\bbR^d$.
+This problem can be solved deterministically in $O(n\log n)$ time for $d\in\{1,2\}$, and (so far) in $O(n^\floor{\frac{d}{2}})$ for arbitrary $d\geq 3$, see Chan~\cite{ChanKlee-2013} (2013). 
+
+A simple Monte Carlo algorithm~\cite{BringmannKlee-2008} consists in sampling uniformly $s$ points (iid) in the smallest axis-parallel bounding box $B$ of $\cup_{i=1}^n B_i$:
+The probability of a sample point to fall inside the union $U=\cup_{i=1}^n B_i$ is $\frac{\vol(U)}{\vol(B)}$. 
+Therefore $\vol(U) \simeq \frac{h}{s} \vol(B)$, where $h$ denote the number of points falling in $U$.
+This is a probabilistic algorithm that runs in $\tilde O(nsd)$ time.
+
+Getting back to Klee's original question: Can we beat the $O(n\log n)$ bound (even in 1D)?
+This is where two computational aspects pop up: (1) the model of computation, and (2) the concept of adaptive parameter:
+
+\begin{enumerate}
+\item It is common to consider the {\em real RAM}  (random access machine) model of computation where arithmetic operations are carried in constant time on real numbers (without any precision limitations).
+If instead, we consider the  {\em word RAM} model~\cite{ChanKlee-2013} (integer input coded using $w$ bits), KMP can be solved in
+$O\left(\frac{n^{\frac{d}{2}}}{\log^{\frac{d}{2}-2} n} (\log\log n)^{O(1)}\right)$.
+
+
+\item For special input cases like hypercubes or fat boxes~\cite{ChanKlee-2013}, KMP can be solved faster: For example, in $O(n^{\frac{d+1}{3}}\log^{O(1)} n)$ for hypercubes. 
+The 1D (interval) KMP can be solved in $O(n\log p)$ where $p$ denotes the number of piercing points to stab\footnote{Piercing javascript demo at \url{https://www.lix.polytechnique.fr/~nielsen/PiercingBoxes/}} all intervals~\cite{nielsen-2000}.
+Clearly, $p$ is an {\em adaptive parameter} that depends on the input configuration. 
+So even, if we fix a computation model, there are potentially many adaptive parameters to consider to improve the computational complexity.
+So a modern extension of Klee's measure problem is to ask whether we can beat the $O(n\log p)$ bound (on real RAM)?
+Let $c$ denote the number of connected components of $U=\cup_{i=1}^n [a_i,b_i]$. Is it possible to get a 
+$O(n\log c)$ bound. Well, when $p=\frac{n}{2}$ and $c=1$, we need $O(n\log n)$ time to detect that we have a single component in the union.
+Indeed, consider the {\sc MaxGap} problem that consists in finding the largest gap $\Delta$ between two consecutive scalars in a given set $\{x_1,\ldots, x_n\}$. Consider the set of intervals $\{B_i=[x_i,x_i+\delta]\}_i$. 
+Then $\cup_{i=1}^n B_i$ has a single component if and only if $\delta\geq\frac{\Delta}{2}$.
+On the real RAM model of computation, {\sc MaxGap} has lower bound $\Omega(n\log n)$ (see~\cite{PS-1988}, p. 261).
+However, by using the floor function and the pigeon principle, one can get a simple linear time algorithm for {\sc MaxGap}.
+
+It is not easy to find {\em adaptive (computational) parameters}.
+For example, consider computing the diameter~\cite{malandain-2002} of a set of $n$ points of $\bbR^2$.
+Solving this problem requires $\Omega(n\log n)$-time on the algebraic computation-tree model.
+However, we can compute the smallest enclosing disk in $\Theta(n)$ time~\cite{megiddo-1983}: 
+When a pair of antipodal points are on the border of the smallest enclosing disk, it defines the diameter.
+
+In general, {\em adaptive algorithms} refine the concept of output-sensitive algorithms by allowing one to take into account further attributes of the input configuration that can be used to improve the overall running time~\cite{n-aga-1996} (1996).
+See also the instance-optimal geometric algorithms~\cite{afshani-2017} (2017).
+
+\end{enumerate}
+
+\bibliographystyle{plain}
+\bibliography{AdaptiveAlgorithmKleeMeasureBIB}
+\end{document}
+

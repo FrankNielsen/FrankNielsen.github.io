@@ -1,0 +1,56 @@
+\begin{thebibliography}{1}
+
+\bibitem{afshani-2017}
+Peyman Afshani, J{\'e}r{\'e}my Barbay, and Timothy~M Chan.
+\newblock Instance-optimal geometric algorithms.
+\newblock {\em Journal of the ACM (JACM)}, 64(1):3, 2017.
+
+\bibitem{BringmannKlee-2008}
+Karl Bringmann and Tobias Friedrich.
+\newblock Approximating the volume of unions and intersections of
+  high-dimensional geometric objects.
+\newblock In {\em International Symposium on Algorithms and Computation}, pages
+  436--447. Springer, 2008.
+
+\bibitem{ChanKlee-2013}
+Timothy~M Chan.
+\newblock Klee's measure problem made easy.
+\newblock In {\em Foundations of Computer Science (FOCS), 2013 IEEE 54th Annual
+  Symposium on}, pages 410--419. IEEE, 2013.
+
+\bibitem{Klee-1977}
+Victor Klee.
+\newblock Can the measure of $\cup_{i=1}^n [a_i, b_i]$ be computed in less than
+  $o(n log n)$ steps?
+\newblock {\em American Mathematical Monthly}, pages 284--285, 1977.
+
+\bibitem{malandain-2002}
+Gr{\'e}goire Malandain and Jean-Daniel Boissonnat.
+\newblock Computing the diameter of a point set.
+\newblock {\em International Journal of Computational Geometry \&
+  Applications}, 12(06):489--509, 2002.
+
+\bibitem{megiddo-1983}
+Nimrod Megiddo.
+\newblock Linear-time algorithms for linear programming in $r^3$ and related
+  problems.
+\newblock {\em SIAM journal on computing}, 12(4):759--776, 1983.
+
+\bibitem{n-aga-1996}
+Frank Nielsen.
+\newblock {\em Adaptive Computational Geometry (``Algorithmes
+  g{\'e}om{\'e}triques adaptatifs'')}.
+\newblock Th\`{e}se de doctorat en sciences, Universit\'e de {Nice-Sophia
+  Antipolis}, France, 1996.
+
+\bibitem{nielsen-2000}
+Frank Nielsen.
+\newblock Fast stabbing of boxes in high dimensions.
+\newblock {\em Theoretical Computer Science}, 246(1):53--72, 2000.
+
+\bibitem{PS-1988}
+F.P. Preparata and M.I. Shamos.
+\newblock {\em Computational geometry: an introduction}.
+\newblock Texts and monographs in computer science. Springer-Verlag, 1988.
+
+\end{thebibliography}

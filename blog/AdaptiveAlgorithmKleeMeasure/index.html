@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Adaptive Algorithms:
+Revisiting Klee&#8217;s measure problem...</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="AdaptiveAlgorithmKLeeMeasure.tex"> 
+<meta name="date" content="2017-11-11 18:41:00"> 
+<link rel="stylesheet" type="text/css" href="AdaptiveAlgorithmKLeeMeasure.css"> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+
+<h2 class="titleHead">Adaptive Algorithms:<br />
+Revisiting Klee&#8217;s measure problem...</h2>
+<div class="author" ><span 
+class="cmr-12">Frank Nielsen</span></div><br />
+<div class="date" ><span 
+class="cmr-12">11th November 2017</span></div>
+   </div>
+<!--l. 25--><p class="indent" >   This column is also available in pdf: filename <a 
+href="AdaptiveAlgorithmKleeMeasure.pdf" class="url" ><span 
+class="cmtt-10x-x-109">AdaptiveAlgorithmKleeMeasure.pdf</span></a>
+<!--l. 29--><p class="indent" >   In 1977, Klee&#x00A0;<span class="cite">[<a 
+href="#XKlee-1977">4</a>]</span> asked whether the union <span 
+class="cmsy-10x-x-109">&#x222A;</span><sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">n</span></sup>[<span 
+class="cmmi-10x-x-109">a</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">,b</span><sub><span 
+class="cmmi-8">i</span></sub>] of a set of <span 
+class="cmmi-10x-x-109">n </span>intervals can be computed in less
+than <span 
+class="cmmi-10x-x-109">O</span>(<span 
+class="cmmi-10x-x-109">n</span>log <span 
+class="cmmi-10x-x-109">n</span>) or not. In general, the <span 
+class="cmti-10x-x-109">Klee&#8217;s measure problem </span>(KMP) asks to calculate the union <span 
+class="cmsy-10x-x-109">&#x222A;</span><sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">n</span></sup><span 
+class="cmmi-10x-x-109">B</span><sub><span 
+class="cmmi-8">i</span></sub>
+of <span 
+class="cmmi-10x-x-109">n </span>axis-parallel boxes (also called isothetic boxes) in <span 
+class="msbm-10x-x-109">&#x211D;</span><sup><span 
+class="cmmi-8">d</span></sup>. This problem can be solved deterministically
+in <span 
+class="cmmi-10x-x-109">O</span>(<span 
+class="cmmi-10x-x-109">n</span>log <span 
+class="cmmi-10x-x-109">n</span>) time for <span 
+class="cmmi-10x-x-109">d </span><span 
+class="cmsy-10x-x-109">&#x2208;{</span>1<span 
+class="cmmi-10x-x-109">,</span>2<span 
+class="cmsy-10x-x-109">}</span>, and (so far) in <span 
+class="cmmi-10x-x-109">O</span>(<span 
+class="cmmi-10x-x-109">n</span><sup><span 
+class="cmsy-8">&#x2308;</span><img 
+src="AdaptiveAlgorithmKLeeMeasure0x.png" alt="d
+2"  class="frac" align="middle"><span 
+class="cmsy-8">&#x2309;</span></sup>) for arbitrary <span 
+class="cmmi-10x-x-109">d </span><span 
+class="cmsy-10x-x-109">&#x2265; </span>3, see Chan&#x00A0;<span class="cite">[<a 
+href="#XChanKlee-2013">3</a>]</span>
+(2013).
+<!--l. 33--><p class="indent" >   A simple Monte Carlo algorithm&#x00A0;<span class="cite">[<a 
+href="#XBringmannKlee-2008">2</a>]</span> consists in sampling uniformly <span 
+class="cmmi-10x-x-109">s </span>points (iid) in the smallest
+axis-parallel bounding box <span 
+class="cmmi-10x-x-109">B </span>of <span 
+class="cmsy-10x-x-109">&#x222A;</span><sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">n</span></sup><span 
+class="cmmi-10x-x-109">B</span><sub><span 
+class="cmmi-8">i</span></sub>: The probability of a sample point to fall inside the union
+<span 
+class="cmmi-10x-x-109">U </span>= <span 
+class="cmsy-10x-x-109">&#x222A;</span><sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">n</span></sup><span 
+class="cmmi-10x-x-109">B</span><sub><span 
+class="cmmi-8">i</span></sub> is <img 
+src="AdaptiveAlgorithmKLeeMeasure1x.png" alt="vol(U)
+vol(B)"  class="frac" align="middle">. Therefore vol(<span 
+class="cmmi-10x-x-109">U</span>) <span 
+class="cmsy-10x-x-109">&#x2243;</span><img 
+src="AdaptiveAlgorithmKLeeMeasure2x.png" alt="h
+s"  class="frac" align="middle">vol(<span 
+class="cmmi-10x-x-109">B</span>), where <span 
+class="cmmi-10x-x-109">h </span>denote the number of points falling in <span 
+class="cmmi-10x-x-109">U</span>.
+This is a probabilistic algorithm that runs in <span 
+class="cmmi-10x-x-109">Õ</span>(<span 
+class="cmmi-10x-x-109">nsd</span>) time.
+<!--l. 38--><p class="indent" >   Getting back to Klee&#8217;s original question: Can we beat the <span 
+class="cmmi-10x-x-109">O</span>(<span 
+class="cmmi-10x-x-109">n</span>log <span 
+class="cmmi-10x-x-109">n</span>) bound (even in 1D)? This is
+where two computational aspects pop up: (1) the model of computation, and (2) the concept of adaptive
+parameter:
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-3x1">It is common to consider the <span 
+class="cmti-10x-x-109">real RAM </span>(random access machine) model of computation where
+     arithmetic operations are carried in constant time on real numbers (without any precision
+     limitations). If instead, we consider the <span 
+class="cmti-10x-x-109">word RAM </span>model&#x00A0;<span class="cite">[<a 
+href="#XChanKlee-2013">3</a>]</span> (integer input coded using <span 
+class="cmmi-10x-x-109">w</span>
+     bits), KMP can be solved in <span 
+class="cmmi-10x-x-109">O</span><img 
+src="AdaptiveAlgorithmKLeeMeasure3x.png" alt="(    d               )
+  --nd2--(loglogn )O (1)
+  log2-2n"  class="left" align="middle">.
+     </li>
+     <li 
+  class="enumerate" id="x1-5x2">For special input cases like hypercubes or fat boxes&#x00A0;<span class="cite">[<a 
+href="#XChanKlee-2013">3</a>]</span>,  KMP can be solved faster:  For
+     example,  in  <span 
+class="cmmi-10x-x-109">O</span>(<span 
+class="cmmi-10x-x-109">n</span><sup><img 
+src="AdaptiveAlgorithmKLeeMeasure4x.png" alt="d+31"  class="frac" align="middle"></sup> log <sup><span 
+class="cmmi-8">O</span><span 
+class="cmr-8">(1)</span></sup><span 
+class="cmmi-10x-x-109">n</span>)  for  hypercubes.  The  1D  (interval)  KMP  can  be  solved  in
+     <span 
+class="cmmi-10x-x-109">O</span>(<span 
+class="cmmi-10x-x-109">n</span>log <span 
+class="cmmi-10x-x-109">p</span>) where <span 
+class="cmmi-10x-x-109">p </span>denotes the number of piercing points to stab<span class="footnote-mark"><a 
+href="AdaptiveAlgorithmKLeeMeasure2.html#fn1x0"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-6f1"></a> 
+     all intervals&#x00A0;<span class="cite">[<a 
+href="#Xnielsen-2000">8</a>]</span>. Clearly, <span 
+class="cmmi-10x-x-109">p </span>is an <span 
+class="cmti-10x-x-109">adaptive parameter </span>that depends on the input configuration.
+     So even, if we fix a computation model, there are potentially many adaptive parameters to
+                                                                                         
+                                                                                         
+     consider to improve the computational complexity. So a modern extension of Klee&#8217;s measure
+     problem is to ask whether we can beat the <span 
+class="cmmi-10x-x-109">O</span>(<span 
+class="cmmi-10x-x-109">n</span>log <span 
+class="cmmi-10x-x-109">p</span>) bound (on real RAM)? Let <span 
+class="cmmi-10x-x-109">c </span>denote
+     the number of connected components of <span 
+class="cmmi-10x-x-109">U </span>= <span 
+class="cmsy-10x-x-109">&#x222A;</span><sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">n</span></sup>[<span 
+class="cmmi-10x-x-109">a</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">,b</span><sub><span 
+class="cmmi-8">i</span></sub>]. Is it possible to get a <span 
+class="cmmi-10x-x-109">O</span>(<span 
+class="cmmi-10x-x-109">n</span>log <span 
+class="cmmi-10x-x-109">c</span>)
+     bound. Well, when <span 
+class="cmmi-10x-x-109">p </span>= <img 
+src="AdaptiveAlgorithmKLeeMeasure5x.png" alt="n
+2"  class="frac" align="middle"> and <span 
+class="cmmi-10x-x-109">c </span>= 1, we need <span 
+class="cmmi-10x-x-109">O</span>(<span 
+class="cmmi-10x-x-109">n</span>log <span 
+class="cmmi-10x-x-109">n</span>) time to detect that we have a single
+     component in the union. Indeed, consider the <span 
+class="cmcsc-10x-x-109">M<span 
+class="small-caps">a</span><span 
+class="small-caps">x</span>G<span 
+class="small-caps">a</span><span 
+class="small-caps">p</span> </span>problem that consists in finding the
+     largest gap &#x0394; between two consecutive scalars in a given set <span 
+class="cmsy-10x-x-109">{</span><span 
+class="cmmi-10x-x-109">x</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-10x-x-109">,</span><span 
+class="cmmi-10x-x-109">&#x2026;</span><span 
+class="cmmi-10x-x-109">,x</span><sub><span 
+class="cmmi-8">n</span></sub><span 
+class="cmsy-10x-x-109">}</span>. Consider the set of
+     intervals <span 
+class="cmsy-10x-x-109">{</span><span 
+class="cmmi-10x-x-109">B</span><sub><span 
+class="cmmi-8">i</span></sub> = [<span 
+class="cmmi-10x-x-109">x</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">,x</span><sub><span 
+class="cmmi-8">i</span></sub> + <span 
+class="cmmi-10x-x-109">&#x03B4;</span>]<span 
+class="cmsy-10x-x-109">}</span><sub><span 
+class="cmmi-8">i</span></sub>. Then <span 
+class="cmsy-10x-x-109">&#x222A;</span><sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">n</span></sup><span 
+class="cmmi-10x-x-109">B</span><sub><span 
+class="cmmi-8">i</span></sub> has a single component if and only if <span 
+class="cmmi-10x-x-109">&#x03B4; </span><span 
+class="cmsy-10x-x-109">&#x2265;</span><img 
+src="AdaptiveAlgorithmKLeeMeasure6x.png" alt="&#x0394;-
+2"  class="frac" align="middle">. On
+     the real RAM model of computation, <span 
+class="cmcsc-10x-x-109">M<span 
+class="small-caps">a</span><span 
+class="small-caps">x</span>G<span 
+class="small-caps">a</span><span 
+class="small-caps">p</span> </span>has lower bound &#x03A9;(<span 
+class="cmmi-10x-x-109">n</span>log <span 
+class="cmmi-10x-x-109">n</span>) (see&#x00A0;<span class="cite">[<a 
+href="#XPS-1988">9</a>]</span>, p. 261).
+     However, by using the floor function and the pigeon principle, one can get a simple linear
+     time algorithm for <span 
+class="cmcsc-10x-x-109">M<span 
+class="small-caps">a</span><span 
+class="small-caps">x</span>G<span 
+class="small-caps">a</span><span 
+class="small-caps">p</span></span>.
+     <!--l. 59--><p class="noindent" >It is not easy to find <span 
+class="cmti-10x-x-109">adaptive (computational) parameters</span>. For example, consider computing
+     the diameter&#x00A0;<span class="cite">[<a 
+href="#Xmalandain-2002">5</a>]</span> of a set of <span 
+class="cmmi-10x-x-109">n </span>points of <span 
+class="msbm-10x-x-109">&#x211D;</span><sup><span 
+class="cmr-8">2</span></sup>. Solving this problem requires &#x03A9;(<span 
+class="cmmi-10x-x-109">n</span>log <span 
+class="cmmi-10x-x-109">n</span>)-time on
+     the algebraic computation-tree model. However, we can compute the smallest enclosing disk
+     in &#x0398;(<span 
+class="cmmi-10x-x-109">n</span>) time&#x00A0;<span class="cite">[<a 
+href="#Xmegiddo-1983">6</a>]</span>: When a pair of antipodal points are on the border of the smallest enclosing
+     disk, it defines the diameter.
+     <!--l. 65--><p class="noindent" >In general, <span 
+class="cmti-10x-x-109">adaptive algorithms </span>refine the concept of output-sensitive algorithms by allowing
+     one  to  take  into  account  further  attributes  of  the  input  configuration  that  can  be  used
+     to  improve  the  overall  running  time&#x00A0;<span class="cite">[<a 
+href="#Xn-aga-1996">7</a>]</span>  (1996).  See  also  the  instance-optimal  geometric
+     algorithms&#x00A0;<span class="cite">[<a 
+href="#Xafshani-2017">1</a>]</span> (2017).
+     </li></ol>
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+   <div class="thebibliography">
+   <p class="bibitem" ><span class="biblabel">
+ [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xafshani-2017"></a>Peyman  Afshani,  Jérémy  Barbay,  and  Timothy&#x00A0;M  Chan.   Instance-optimal  geometric
+   algorithms. <span 
+class="cmti-10x-x-109">Journal of the ACM (JACM)</span>, 64(1):3, 2017.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XBringmannKlee-2008"></a>Karl Bringmann and Tobias Friedrich. Approximating the volume of unions and intersections
+   of  high-dimensional  geometric  objects.    In  <span 
+class="cmti-10x-x-109">International  Symposium  on  Algorithms  and</span>
+   <span 
+class="cmti-10x-x-109">Computation</span>, pages 436&#8211;447. Springer, 2008.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XChanKlee-2013"></a>Timothy&#x00A0;M Chan. Klee&#8217;s measure problem made easy. In <span 
+class="cmti-10x-x-109">Foundations of Computer Science</span>
+   <span 
+class="cmti-10x-x-109">(FOCS), 2013 IEEE 54th Annual Symposium on</span>, pages 410&#8211;419. IEEE, 2013.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [4]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XKlee-1977"></a>Victor Klee.  Can the measure of <span 
+class="cmsy-10x-x-109">&#x222A;</span><sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">n</span></sup>[<span 
+class="cmmi-10x-x-109">a</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">,b</span><sub><span 
+class="cmmi-8">i</span></sub>] be computed in less than <span 
+class="cmmi-10x-x-109">o</span>(<span 
+class="cmmi-10x-x-109">nlogn</span>) steps?
+   <span 
+class="cmti-10x-x-109">American Mathematical Monthly</span>, pages 284&#8211;285, 1977.
+                                                                                         
+                                                                                         
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [5]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xmalandain-2002"></a>Grégoire Malandain and Jean-Daniel Boissonnat.  Computing the diameter of a point set.
+   <span 
+class="cmti-10x-x-109">International Journal of Computational Geometry &amp; Applications</span>, 12(06):489&#8211;509, 2002.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [6]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xmegiddo-1983"></a>Nimrod Megiddo. Linear-time algorithms for linear programming in <span 
+class="cmmi-10x-x-109">r</span><sup><span 
+class="cmr-8">3</span></sup> and related problems.
+   <span 
+class="cmti-10x-x-109">SIAM journal on computing</span>, 12(4):759&#8211;776, 1983.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [7]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xn-aga-1996"></a>Frank Nielsen. <span 
+class="cmti-10x-x-109">Adaptive Computational Geometry (&#8220;Algorithmes g</span><span 
+class="cmti-10x-x-109">éom</span><span 
+class="cmti-10x-x-109">étriques adaptatifs&#8221;)</span>.
+   Thèse de doctorat en sciences, Université de Nice-Sophia Antipolis, France, 1996.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [8]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xnielsen-2000"></a>Frank Nielsen.  Fast stabbing of boxes in high dimensions.  <span 
+class="cmti-10x-x-109">Theoretical Computer Science</span>,
+   246(1):53&#8211;72, 2000.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [9]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XPS-1988"></a>F.P. Preparata and M.I. Shamos.  <span 
+class="cmti-10x-x-109">Computational geometry: an introduction</span>.  Texts and
+   monographs in computer science. Springer-Verlag, 1988.
+</p>
+   </div>
+    
+</body></html> 
+
+                                                                                         
+
+

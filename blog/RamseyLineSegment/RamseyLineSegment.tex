@@ -1,0 +1,86 @@
+% Frank.Nielsen@acm.org
+
+\documentclass[11pt]{article}
+\usepackage{fullpage,amssymb,amsmath,hyperref,url}
+
+\def\eqdef{:=}
+\def\eqnota{:=:}
+\def\dnu{\mathrm{d}\nu}
+\def\calX{\mathcal{X}}
+\def\calE{\mathcal{E}}
+\def\bbR{\mathbb{R}}
+\def\Var{\mathrm{Var}}
+
+
+\title{Structures cannot be avoided!\\--- Ramsey theory on the intersection graphs of line segments ---}
+\date{27 November 2017}
+\author{Frank Nielsen}
+
+\begin{document}
+\maketitle
+
+
+This column is also available in pdf: filename \url{RamseyLineSegment.pdf} 
+\vskip 0.5cm
+ 
+Consider $n$ line segments $S_1,\ldots, S_n$ on the plane in {\em general position} (ie., segments are either disjoint or intersect in exactly one point).
+We ask the following question:\\
+How many {\bf pairwise disjoint segments} \underline{OR} how many {\bf pairwise intersecting segments} are there?
+
+Define the {\em intersection graph} $G=(V,E)$ where each segment $S_i$ is associated to a corresponding node $V_i$, and where there is an edge 
+$\{V_i,V_j\}$ if and only if the corresponding line segments intersect ($S_i\cap S_j\not=\emptyset$).  
+A subset of pairwise intersecting segments corresponds to a clique in $G$, and
+a subset of pairwise disjoint segments corresponds to an independent set in $G$ (an anti-clique also called a stable).
+Consider the complement graph $\bar{G}=(V,\bar E)$ where $\bar E=\calE\backslash E$, with $\calE=\{\{V_i,V_j\}\ :\ i\not =j\}$ the full edge set.
+$\bar G$ is the {\em disjointness graph}~\cite{RamseySegment-2017} of the segments (i.e., an edge between nodes if and only if corresponding segments are disjoint), and we have $G\cup \bar G=K_n$, the clique of size $n$.
+
+Ramsey-type theorems are characterizing the following types of questions:
+``How large a structure must  be to guarantee a given property?''
+Surprisingly, complete disorder is impossible! 
+That is, there always exists  (some) order in structures!
+
+Define the {\bf Ramsey number} $R(s,t)$ as the minimum number $n$ such that any graph with $|V|=n$ nodes
+contains either an independent set of size $s$ or a clique $K_t$ of size $t$.
+
+One can prove that those Ramsey numbers are all {\em finite}~\cite{Ramsey-2009} (by proving the recursive formula $R(s,t)\leq R(s-1,t)+R(s,t-1)$ with terminal cases $R(s,1)=R(1,t)=1$ for $s,t\geq 1$), and that the following bound holds (due to the theorem of Erd\"os-Szekeres~\cite{ES-1935}):
+$$
+R(s,t)\leq \binom{s+t-2}{s-1} <\infty.
+$$
+ 
+
+
+When $s=t$, $\binom{s+t-2}{s-1}=\binom{2(s-1)}{s-1}$ is a central binomial coefficient that is upper bounded by $2^{2s}$.
+Therefore the diagonal Ramsey number $R(s)=R(s,s)$ is upper bounded by $2^{2s}$.
+Furthermore, we have the following lower bound: $2^{\frac{s}{2}}< R(s)$ when $s\geq 3$~\cite{ES-1935}.
+Thus $s\geq \lfloor \frac{1}{2}\log_2 n \rfloor$.  
+Erd\"os proved using a probabilistic argument~\cite{Erdos-1947} that there exists a graph $G$ such that $s\leq 2\log_2 n$ ($G$ and $\bar G$ do not contain $K_s$ subgraphs).
+It is proved in~\cite{RamseySegment-2017} (2017) a much stronger result that $s=\Omega(n^{\frac{1}{5}})$ for intersection graphs of line segments: 
+Thus there are always $\Omega(n^{\frac{1}{5}})$ pairwise disjoint or pairwise intersecting segments in a set of $n$ segments in general position.
+
+In general, one can consider a {\bf coloring} of the edges of the clique $K_n$ into $c$ colors, and asks for the largest {\bf monochromatic clique} $K_m$ in the edge-colored $K_n$.
+For the pairwise disjoint/intersecting line segments, we have $c=2$: 
+Say, we color edges red when their corresponding segments intersect and blue, otherwise.
+
+
+Ramsey's theorem~\cite{Ramsey-2009} (1930) states that for all $c$, 
+there exists $n \geq m\geq 2$ such that every $c$-coloring of $K_n$ has a monochromatic clique $K_m$.
+
+Let us conclude with the theorem on acquaintances (people who already met) and strangers (people who meet for the first time):
+In a group of six people, either at least three of them are pairwise mutual strangers or at least three of them are pairwise mutual acquaintances.
+Consider $K_6$ ($n=6$, 15 edges), and color an edge in red if the edge people  already met and in blue, otherwise.
+Then there is a monochromatic triangle ($m=3$). 
+Proof: $R(3)=R(3,3)\leq \binom{4}{2}=6$.
+
+Well, it is known that $R(4)=18$ but $R(5)$ is not known! We only know that $43\leq R(5)\leq 48$, $102\leq R(6,6)\leq 165$, etc.
+Quantum computers~\cite{QRamsey-2016} can be used to compute Ramsey numbers!
+
+
+\vskip 1cm
+Initially created 27th November 2017 (last updated \today).
+
+\bibliographystyle{plain}
+\bibliography{RamseyLineSegment-Bib}
+\end{document}
+
+
+ 

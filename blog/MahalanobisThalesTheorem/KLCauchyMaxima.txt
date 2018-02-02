@@ -1,0 +1,17 @@
+ 
+
+p(x,a) := 1.0/(pi*a*(1+(x/a)**2));
+integrate(p(x,a),x,-inf,inf);
+
+
+
+kl(x) := (p(x,1)*log(p(x,1)/p(x,2)));
+ 
+integrate((p(x,1)*log(p(x,1)/p(x,2))),x,-inf,inf);
+
+
+integrate(kl(x),x,-inf,inf);
+ 
+
+% 0.117783
+integrate (1.0/(pi*1*(1+(x/1)**2)))*log((1.0/(pi*1*(1+(x/1)**2)))/(1.0/(pi*2*(1+(x/2)**2)))) dx, x=-oo to oo

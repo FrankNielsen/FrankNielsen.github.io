@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>The &#x03B1;-representations of the Fisher Information Matrix
+&#8212; On equivalent expressions of the FIM &#8212;</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="alpha-FIM.tex"> 
+<meta name="date" content="2017-09-22 11:59:00"> 
+<link rel="stylesheet" type="text/css" href="alpha-FIM.css"> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+
+<h2 class="titleHead">The &#x03B1;-representations of the Fisher Information Matrix<br />
+&#8212; On equivalent expressions of the FIM &#8212;</h2>
+<div class="author" ><span 
+class="cmr-12">Frank Nielsen</span></div><br />
+<div class="date" ><span 
+class="cmr-12">19 September 2017</span></div>
+   </div>
+<!--l. 22--><p class="indent" >   This column is also available in pdf: filename <a 
+href="alpha-FIM.pdf" class="url" ><span 
+class="cmtt-10x-x-109">alpha-FIM.pdf</span></a>
+<!--l. 25--><p class="indent" >   The Fisher Information Matrix&#x00A0;<span class="cite">[<a 
+href="#XIG-2014">1</a>]</span> (FIM) for a family of <span 
+class="cmti-10x-x-109">parametric </span>probability models <span 
+class="cmsy-10x-x-109">{</span><span 
+class="cmmi-10x-x-109">p</span>(<span 
+class="cmmi-10x-x-109">x</span>;<span 
+class="cmmi-10x-x-109">&#x03B8;</span>)<span 
+class="cmsy-10x-x-109">}</span><sub><span 
+class="cmmi-8">&#x03B8;</span></sub>
+(densities <span 
+class="cmmi-10x-x-109">p</span>(<span 
+class="cmmi-10x-x-109">x</span>;<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) expressed with respect to a base measure <span 
+class="cmmi-10x-x-109">&#x03BD;</span>) indexed by a <span 
+class="cmmi-10x-x-109">D</span>-dimensional parameter
+vector <span 
+class="cmmi-10x-x-109">&#x03B8; </span>:= (<span 
+class="cmmi-10x-x-109">&#x03B8;</span><sup><span 
+class="cmr-8">1</span></sup><span 
+class="cmmi-10x-x-109">,</span><span 
+class="cmmi-10x-x-109">&#x2026;</span><span 
+class="cmmi-10x-x-109">,&#x03B8;</span><sup><span 
+class="cmmi-8">D</span></sup>) is originally defined by
+   <table 
+class="equation"><tr><td><a 
+ id="x1-2r1"></a>
+   <center class="math-display" >
+<img 
+src="alpha-FIM0x.png" alt="I(&#x03B8;) := (Iij(&#x03B8;)), Iij(&#x03B8;) := Ep(x;&#x03B8;)[&#x2202;il(x;&#x03B8;)&#x2202;jl(x;&#x03B8;)],
+" class="math-display" ></center></td><td class="equation-label">(1)</td></tr></table>
+<!--l. 32--><p class="nopar" >
+where <span 
+class="cmmi-10x-x-109">l</span>(<span 
+class="cmmi-10x-x-109">x</span>;<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) := log <span 
+class="cmmi-10x-x-109">p</span>(<span 
+class="cmmi-10x-x-109">x</span>;<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) is the log-likelihood function, and <span 
+class="cmmi-10x-x-109">&#x2202;</span><sub><span 
+class="cmmi-8">i</span></sub> :=: <img 
+src="alpha-FIM1x.png" alt=" &#x2202;
+&#x2202;&#x03B8;i"  class="frac" align="middle"> (by notational convention). The
+FIM is a <span 
+class="cmmi-10x-x-109">D </span><span 
+class="cmsy-10x-x-109">&#x00D7; </span><span 
+class="cmmi-10x-x-109">D </span>positive semi-definite matrix for a <span 
+class="cmmi-10x-x-109">D</span>-order family.
+<!--l. 37--><p class="indent" >   The FIM is a cornerstone in statistics and occurs in many places, like for example the celebrated
+Cramér-Rao lower bound&#x00A0;<span class="cite">[<a 
+href="#XCR-2013">2</a>]</span> for an unbiased estimator <img 
+src="alpha-FIM2x.png" alt="&#x03B8;&#x02C6;"  class="circ" >
+   <center class="math-display" >
+                                                                                         
+                                                                                         
+<img 
+src="alpha-FIM3x.png" alt="Varp(x;&#x03B8;)[&#x02C6;&#x03B8;] &#x227D; I-1(&#x03B8;),  " class="math-display" ></center>
+where <span 
+class="cmsy-10x-x-109">&#x227D; </span>denotes the Löwner ordering of positive semi-definite matrices: <span 
+class="cmmi-10x-x-109">A </span><span 
+class="cmsy-10x-x-109">&#x227D; </span><span 
+class="cmmi-10x-x-109">B </span>iff. <span 
+class="cmmi-10x-x-109">A</span><span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmmi-10x-x-109">B </span><span 
+class="cmsy-10x-x-109">&#x227B; </span>0 is positive
+semi-definite. Another use of the FIM is in gradient descent method for deep learning using the natural
+gradient&#x00A0;<span class="cite">[<a 
+href="#XRFIM-2017">4</a>]</span>.
+<!--l. 46--><p class="indent" >   Yet, it is common to encounter another equivalent expression of the FIM in the litterature&#x00A0;<span class="cite">[<a 
+href="#XCR-2013">2</a>,&#x00A0;<a 
+href="#XIG-2014">1</a>]</span>
+   <table 
+class="equation"><tr><td><a 
+ id="x1-3r2"></a>
+   <center class="math-display" >
+<img 
+src="alpha-FIM4x.png" alt="          &#x222B;   &#x2218; ------  &#x2218; ------
+I&#x2032;ij(&#x03B8;) := 4   &#x2202;i  p(x;&#x03B8;)&#x2202;j  p(x;&#x03B8;)d&#x03BD;(x)
+" class="math-display" ></center></td><td class="equation-label">(2)</td></tr></table>
+<!--l. 50--><p class="nopar" >
+This form of the FIM is well-suited to prove that the FIM is always positive semi-definite matrix&#x00A0;<span class="cite">[<a 
+href="#XIG-2014">1</a>]</span>:
+<span 
+class="cmmi-10x-x-109">I</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) <span 
+class="cmsy-10x-x-109">&#x227D; </span>0.
+<!--l. 55--><p class="indent" >   It turns out that one can define a family of equivalent representations of the FIM using the
+<span 
+class="cmmi-10x-x-109">&#x03B1;</span>-embedding of the parametric family. We define the <span 
+class="cmmi-10x-x-109">&#x03B1;</span>-representation of densities <span 
+class="cmmi-10x-x-109">l</span><sup><span 
+class="cmr-8">(</span><span 
+class="cmmi-8">&#x03B1;</span><span 
+class="cmr-8">)</span></sup>(<span 
+class="cmmi-10x-x-109">x</span>;<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) := <span 
+class="cmmi-10x-x-109">k</span><sub><span 
+class="cmmi-8">&#x03B1;</span></sub>(<span 
+class="cmmi-10x-x-109">p</span>(<span 
+class="cmmi-10x-x-109">x</span>;<span 
+class="cmmi-10x-x-109">&#x03B8;</span>))
+with
+   <table 
+class="equation"><tr><td><a 
+ id="x1-4r3"></a>
+   <center class="math-display" >
+<img 
+src="alpha-FIM5x.png" alt="         {  -2--1-&#x03B1;
+k&#x03B1; (u ) :=   1- &#x03B1;u 2 ,  if &#x03B1; &#x2044;= 1
+           logu,      if &#x03B1; = 1.
+" class="math-display" ></center></td><td class="equation-label">(3)</td></tr></table>
+<!--l. 66--><p class="nopar" >
+<!--l. 68--><p class="indent" >   The function <span 
+class="cmmi-10x-x-109">l</span><sup><span 
+class="cmr-8">(</span><span 
+class="cmmi-8">&#x03B1;</span><span 
+class="cmr-8">)</span></sup>(<span 
+class="cmmi-10x-x-109">x</span>;<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) is called the <span 
+class="cmmi-10x-x-109">&#x03B1;</span>-likelihood function.
+<!--l. 70--><p class="indent" >   The <span 
+class="cmmi-10x-x-109">&#x03B1;</span>-representation of the FIM is
+   <table 
+class="equation"><tr><td><a 
+ id="x1-5r4"></a>
+                                                                                         
+                                                                                         
+   <center class="math-display" >
+<img 
+src="alpha-FIM6x.png" alt="|---------&#x222B;----------------------------|
+|I(&#x03B1;)(&#x03B8;) :=   &#x2202;l(&#x03B1;)(x;&#x03B8;)&#x2202; l(- &#x03B1;)(x;&#x03B8;)d&#x03BD; (x )|
+--ij-----------i--------j---------------|
+" class="math-display" ></center></td><td class="equation-label">(4)</td></tr></table>
+<!--l. 73--><p class="nopar" >
+In compact notation, we have <span 
+class="cmmi-10x-x-109">I</span><sub><span 
+class="cmmi-8">ij</span></sub><sup><span 
+class="cmr-8">(</span><span 
+class="cmmi-8">&#x03B1;</span><span 
+class="cmr-8">)</span></sup>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) = <span 
+class="cmex-10x-x-109">&#x222B;</span>
+  <span 
+class="cmmi-10x-x-109">&#x2202;</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">l</span><sup><span 
+class="cmr-8">(</span><span 
+class="cmmi-8">&#x03B1;</span><span 
+class="cmr-8">)</span></sup><span 
+class="cmmi-10x-x-109">&#x2202;</span><sub><span 
+class="cmmi-8">j</span></sub><span 
+class="cmmi-10x-x-109">l</span><sup><span 
+class="cmr-8">(</span><span 
+class="cmsy-8">-</span><span 
+class="cmmi-8">&#x03B1;</span><span 
+class="cmr-8">)</span></sup>d<span 
+class="cmmi-10x-x-109">&#x03BD;</span>(<span 
+class="cmmi-10x-x-109">x</span>) (this is the <span 
+class="cmmi-10x-x-109">&#x03B1;</span>-FIM). We can expand the
+<span 
+class="cmmi-10x-x-109">&#x03B1;</span>-FIM expressions as follows
+   <center class="math-display" >
+<img 
+src="alpha-FIM7x.png" alt="         {
+ (&#x03B1;)        --1- &#x222B; &#x2202;p(x;&#x03B8;)1-2&#x03B1;&#x2202; p(x;&#x03B8;)1+2&#x03B1;d &#x03BD;(x)  for &#x03B1; &#x2044;= ±1
+Iij (&#x03B8;) =   1&#x222B;-&#x03B1;2    i          j
+             &#x2202;ilogp(x;&#x03B8;)&#x2202;jp(x;&#x03B8;)d&#x03BD;(x)          for &#x03B1; &#x2208; {- 1,1}
+" class="math-display" ></center>
+<!--l. 87--><p class="indent" >   The proof that <span 
+class="cmmi-10x-x-109">I</span><sub><span 
+class="cmmi-8">ij</span></sub><sup><span 
+class="cmr-8">(</span><span 
+class="cmmi-8">&#x03B1;</span><span 
+class="cmr-8">)</span></sup>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) = <span 
+class="cmmi-10x-x-109">I</span><sub><span 
+class="cmmi-8">ij</span></sub>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) follows from the fact that
+   <center class="math-display" >
+<img 
+src="alpha-FIM8x.png" alt="   &#x03B1;    - &#x03B1;+21      1-2&#x03B1;
+&#x2202;il =  p    &#x2202;ip = p   &#x2202;il,  " class="math-display" ></center> since
+<span 
+class="cmmi-10x-x-109">&#x2202;</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">l </span>= <img 
+src="alpha-FIM9x.png" alt="&#x2202;ipp-"  class="frac" align="middle">.
+<!--l. 93--><p class="indent" >   Therefore we get
+   <center class="math-display" >
+<img 
+src="alpha-FIM10x.png" alt="&#x2202;il(&#x03B1;)&#x2202;jl(- &#x03B1;) = p&#x2202;il&#x2202;jl,  " class="math-display" ></center> and
+<span 
+class="cmmi-10x-x-109">I</span><sub><span 
+class="cmmi-8">ij</span></sub><sup><span 
+class="cmr-8">(</span><span 
+class="cmmi-8">&#x03B1;</span><span 
+class="cmr-8">)</span></sup>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) = <span 
+class="cmmi-10x-x-109">E</span>[<span 
+class="cmmi-10x-x-109">&#x2202;</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">l&#x2202;</span><sub><span 
+class="cmmi-8">j</span></sub><span 
+class="cmmi-10x-x-109">l</span>] = <span 
+class="cmmi-10x-x-109">I</span><sub><span 
+class="cmmi-8">ij</span></sub>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>).
+<!--l. 99--><p class="indent" >   Thus Eq.&#x00A0;<a 
+href="#x1-2r1">1<!--tex4ht:ref: eq:FIM1 --></a> and Eq.&#x00A0;<a 
+href="#x1-3r2">2<!--tex4ht:ref: eq:FIM0 --></a> where two examples of the <span 
+class="cmmi-10x-x-109">&#x03B1;</span>-representation, namely the 1-representation and
+the 0-representation, respectively. The 1-representation of Eq.&#x00A0;<a 
+href="#x1-2r1">1<!--tex4ht:ref: eq:FIM1 --></a> is called the logarithmic representation,
+and the 0-representation of Eq.&#x00A0;<a 
+href="#x1-3r2">2<!--tex4ht:ref: eq:FIM0 --></a> is called the square root representation.
+<!--l. 102--><p class="indent" >   Note that <span 
+class="cmmi-10x-x-109">I</span><sub><span 
+class="cmmi-8">ij</span></sub>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) = <span 
+class="cmmi-10x-x-109">E</span>[<span 
+class="cmmi-10x-x-109">&#x2202;</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">l&#x2202;</span><sub><span 
+class="cmmi-8">j</span></sub><span 
+class="cmmi-10x-x-109">l</span>] = <span 
+class="cmex-10x-x-109">&#x222B;</span>
+  <span 
+class="cmmi-10x-x-109">p&#x2202;</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">l&#x2202;</span><sub><span 
+class="cmmi-8">j</span></sub><span 
+class="cmmi-10x-x-109">l</span>d<span 
+class="cmmi-10x-x-109">&#x03BD;</span>(<span 
+class="cmmi-10x-x-109">x</span>) = <span 
+class="cmex-10x-x-109">&#x222B;</span>
+  <span 
+class="cmmi-10x-x-109">&#x2202;</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">p&#x2202;</span><sub><span 
+class="cmmi-8">j</span></sub><span 
+class="cmmi-10x-x-109">l</span>d<span 
+class="cmmi-10x-x-109">&#x03BD;</span>(<span 
+class="cmmi-10x-x-109">x</span>) = <span 
+class="cmmi-10x-x-109">I</span><sub><span 
+class="cmmi-8">ij</span></sub><sup><span 
+class="cmr-8">(1)</span></sup>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) since <span 
+class="cmmi-10x-x-109">&#x2202;</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">l </span>= <img 
+src="alpha-FIM11x.png" alt="&#x2202;ip-
+p"  class="frac" align="middle">
+<!--l. 104--><p class="indent" >   In information geometry&#x00A0;<span class="cite">[<a 
+href="#XIG-2014">1</a>]</span>, <span 
+class="cmsy-10x-x-109">{</span><span 
+class="cmmi-10x-x-109">&#x2202;</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">l</span><sup><span 
+class="cmr-8">(</span><span 
+class="cmmi-8">&#x03B1;</span><span 
+class="cmr-8">)</span></sup><span 
+class="cmsy-10x-x-109">}</span><sub><span 
+class="cmmi-8">i</span></sub> plays the role of tangent vectors, the <span 
+class="cmmi-10x-x-109">&#x03B1;</span>-scores. Geometrically
+speaking, the tangent plane <span 
+class="cmmi-10x-x-109">T</span><sub><span 
+class="cmmi-8">p</span><span 
+class="cmr-8">(</span><span 
+class="cmmi-8">x</span><span 
+class="cmr-8">;</span><span 
+class="cmmi-8">&#x03B8;</span><span 
+class="cmr-8">)</span></sub> can be described using any <span 
+class="cmmi-10x-x-109">&#x03B1;</span>-base. The statistical manifold
+<span 
+class="cmmi-10x-x-109">M </span>= <span 
+class="cmsy-10x-x-109">{</span><span 
+class="cmmi-10x-x-109">p</span>(<span 
+class="cmmi-10x-x-109">x</span>;<span 
+class="cmmi-10x-x-109">&#x03B8;</span>)<span 
+class="cmsy-10x-x-109">}</span><sub><span 
+class="cmmi-8">&#x03B8;</span></sub> is imbedded into the function space <span 
+class="msbm-10x-x-109">&#x211D;</span><sup><span 
+class="cmsy-8"><img 
+src="cmsy8-58.png" alt="X" class="8x-x-58" /></span></sup>, where <span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-58.png" alt="X" class="10-109x-x-58" /> </span>denotes the support of the
+densities.
+<!--l. 110--><p class="indent" >   Under regular conditions&#x00A0;<span class="cite">[<a 
+href="#XCR-2013">2</a>,&#x00A0;<a 
+href="#XIG-2014">1</a>]</span>, the <span 
+class="cmmi-10x-x-109">&#x03B1;</span>-representation of the FIM can further be rewritten
+as
+   <center class="math-display" >
+<img 
+src="alpha-FIM12x.png" alt="                &#x222B;
+I(&#x03B1;)(&#x03B8;) = - --2--   p(x;&#x03B8;)1+2&#x03B1;&#x2202;i&#x2202;jl(&#x03B1;)(x; &#x03B8;)d &#x03BD;(x ).
+ ij        1+ &#x03B1;
+" class="math-display" ></center>
+<!--l. 115--><p class="indent" >   Since we have
+   <center class="math-display" >
+<img 
+src="alpha-FIM13x.png" alt="                   (                  )
+     (&#x03B1;)         1-&#x03B1;         1 - &#x03B1;
+&#x2202;i&#x2202;jl  (x;&#x03B8;) = p 2   &#x2202;i&#x2202;jl +--2--&#x2202;il&#x2202;jl ,  " class="math-display" ></center> it
+follows that
+   <center class="math-display" >
+<img 
+src="alpha-FIM14x.png" alt="                (                    )
+I(&#x03B1;)(&#x03B8;) = - --2--  - I(&#x03B1;)(&#x03B8;)+ 1---&#x03B1; I(&#x03B1;)  = Iij(&#x03B8;).
+ ij        1+  &#x03B1;    ij        2    ij
+" class="math-display" ></center>
+<!--l. 127--><p class="indent" >   Notice that when <span 
+class="cmmi-10x-x-109">&#x03B1; </span>= 1, we recover the equivalent expression of the FIM (under mild
+conditions)
+   <center class="math-display" >
+<img 
+src="alpha-FIM15x.png" alt=" (1)           2
+Iij (&#x03B8;) = - E [&#x2207; logp(x;&#x03B8;)].
+" class="math-display" ></center>
+<!--l. 132--><p class="indent" >   In particular, when the family is an exponential family&#x00A0;<span class="cite">[<a 
+href="#XEF-2009">3</a>]</span> with cumulant function <span 
+class="cmmi-10x-x-109">F</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>), we
+have
+   <center class="math-display" >
+<img 
+src="alpha-FIM16x.png" alt="        2
+I(&#x03B8;) = &#x2207;  F(&#x03B8;).
+" class="math-display" ></center>
+<!--l. 137--><p class="indent" >   Similarly, the coefficients of the <span 
+class="cmmi-10x-x-109">&#x03B1;</span>-connection can be expressed using the <span 
+class="cmmi-10x-x-109">&#x03B1;</span>-representation
+as
+   <center class="math-display" >
+<img 
+src="alpha-FIM17x.png" alt="       &#x222B;
+  (&#x03B1;)          (&#x03B1; )(-&#x03B1;)
+&#x0393; ij,k =   &#x2202;i&#x2202;jl  &#x2202;k   d&#x03BD;(x).
+" class="math-display" ></center>
+<!--l. 142--><p class="indent" >   The Riemannian metric tensor <span 
+class="cmmi-10x-x-109">g</span><sub><span 
+class="cmmi-8">ij</span></sub> (a geometric object) can be expressed in matrix form <span 
+class="cmmi-10x-x-109">I</span><sub><span 
+class="cmmi-8">ij</span></sub><sup><span 
+class="cmr-8">(</span><span 
+class="cmmi-8">&#x03B1;</span><span 
+class="cmr-8">)</span></sup>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) using
+the <span 
+class="cmmi-10x-x-109">&#x03B1;</span>-base, and this tensor is called the Fisher metric tensor.
+                                                                                         
+                                                                                         
+<!--l. 147--><p class="indent" >   Initially created 19th September 2017 (last update September 22, 2017).
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+   <div class="thebibliography">
+   <p class="bibitem" ><span class="biblabel">
+ [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XIG-2014"></a>O.&#x00A0;Calin and C.&#x00A0;Udri&#351;te.  <span 
+class="cmti-10x-x-109">Geometric Modeling in Probability and Statistics</span>.  Mathematics
+   and Statistics. Springer International Publishing, 2014.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XCR-2013"></a>Frank  Nielsen.    Cramér-Rao  lower  bound  and  information  geometry.    <span 
+class="cmti-10x-x-109">arXiv  preprint</span>
+   <span 
+class="cmti-10x-x-109">arXiv:1301.3578</span>, 2013.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XEF-2009"></a>Frank Nielsen and Vincent Garcia. Statistical exponential families: A digest with flash cards.
+   <span 
+class="cmti-10x-x-109">arXiv preprint arXiv:0911.4863</span>, 2009.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [4]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XRFIM-2017"></a>Ke&#x00A0;Sun and Frank Nielsen.  Relative Fisher information and natural gradient for learning
+   large modular models.  In Doina Precup and Yee&#x00A0;Whye Teh, editors, <span 
+class="cmti-10x-x-109">Proceedings of the 34th</span>
+   <span 
+class="cmti-10x-x-109">International Conference on Machine Learning</span>, volume&#x00A0;70 of <span 
+class="cmti-10x-x-109">Proceedings of Machine Learning</span>
+   <span 
+class="cmti-10x-x-109">Research</span>, pages 3289&#8211;3298, International Convention Centre, Sydney, Australia, 06&#8211;11 Aug
+   2017. PMLR.
+</p>
+   </div>
+    
+</body></html> 
+
+                                                                                         
+
+

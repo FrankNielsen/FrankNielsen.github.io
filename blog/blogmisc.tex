@@ -1,0 +1,27 @@
+
+Bregman divergence is the remainder of a first-order Taylor polynomial induced by a generator $F(x)$.
+Thus there are as many expressions of Bregman divergences as there are remainder expressions of Taylor expansions.
+
+
+Integral form of Bregman divergence
+
+$$
+B_F(p:q)=\int_q^p (p-t)F''(t)\dt
+$$
+
+For example, let $F(x)=x\log x$, $F''(x)=\frac{1}{x}$, then
+
+$$
+B_F(p:q)=\int_q^p (p-t)/t\dt = p\int_q^p\frac{1}{t}\dt -\int_q^p \dt
+= p\log\frac{p}{q}+q-p
+$$
+
+Eq.~12 of http://mark.reid.name/bits/pubs/icml09.pdf
+
+From the fundamental theorem of calculus
+$F(x)=F(a)+\int_a^x F'(t)\dt$, we deduce that
+
+
+$$
+B_F=\int_a^x 
+$$

@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{Erdos-1947}
+Paul Erd{\"o}s.
+\newblock Some remarks on the theory of graphs.
+\newblock {\em Bulletin of the American Mathematical Society}, 53(4):292--294,
+  1947.
+
+\bibitem{ES-1935}
+Paul Erd{\"o}s and George Szekeres.
+\newblock A combinatorial problem in geometry.
+\newblock {\em Compositio Mathematica}, 2:463--470, 1935.
+
+\bibitem{RamseySegment-2017}
+J.~{Pach}, G.~{Tardos}, and G.~{Toth}.
+\newblock {Disjointness graphs of segments}.
+\newblock {\em ArXiv e-prints}, April 2017.
+
+\bibitem{Ramsey-2009}
+Frank~P Ramsey.
+\newblock On a problem of formal logic.
+\newblock In {\em Classic Papers in Combinatorics}, pages 1--24. Springer,
+  2009.
+
+\bibitem{QRamsey-2016}
+Hefeng Wang.
+\newblock Determining {R}amsey numbers on a quantum computer.
+\newblock {\em Physical Review A}, 93(3), 2016.
+
+\end{thebibliography}

@@ -1,0 +1,508 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>A note on kernelizing the smallest enclosing ball for machine learning</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="kernelCoreSetMEB.tex"> 
+<meta name="date" content="2017-09-27 10:49:00"> 
+<link rel="stylesheet" type="text/css" href="kernelCoreSetMEB.css"> 
+</head><body 
+>
+   <div class="maketitle">
+
+
+
+<h2 class="titleHead">A note on kernelizing the smallest enclosing ball for machine
+learning</h2>
+      <div class="author" ><span 
+class="cmr-12">Frank Nielsen</span>
+<br /><span 
+class="cmtt-12">Frank.Nielsen@acm.org</span></div><br />
+<div class="date" ><span 
+class="cmr-12">September 27, 2017</span></div>
+   </div>
+   <div 
+class="abstract" 
+>
+<div class="center" 
+>
+<!--l. 27--><p class="noindent" >
+<!--l. 27--><p class="noindent" ><span 
+class="cmbx-9">Abstract</span></div>
+     <!--l. 28--><p class="indent" >    <span 
+class="cmr-9">This note describes how to kernelize Badoiu and Clarkson&#8217;s algorithm</span><span 
+class="cmr-9">&#x00A0;</span><span class="cite"><span 
+class="cmr-9">[</span><a 
+href="#XBC-2003"><span 
+class="cmr-9">1</span></a><span 
+class="cmr-9">]</span></span> <span 
+class="cmr-9">to compute approximations</span>
+     <span 
+class="cmr-9">of the smallest enclosing balls in the feature space induced by a kernel.</span>
+</div>
+<!--l. 31--><p class="indent" >   This column is also available in pdf: filename <a 
+href="kernelCoreSetMEB.pdf" class="url" ><span 
+class="cmtt-10">kernelCoreSetMEB.pdf</span></a>
+   <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-10001"></a>Smallest enclosing ball and coresets</h3>
+<!--l. 35--><p class="noindent" >Let <span 
+class="cmsy-10"><img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" /> </span>= <span 
+class="cmsy-10">{</span><span 
+class="cmmi-10">p</span><sub><span 
+class="cmr-7">1</span></sub><span 
+class="cmmi-10">,</span><span 
+class="cmmi-10">&#x2026;</span><span 
+class="cmmi-10">,p</span><sub><span 
+class="cmmi-7">n</span></sub><span 
+class="cmsy-10">} </span>be a finite point set. In <span 
+class="msbm-10">&#x211D;</span><sup><span 
+class="cmmi-7">d</span></sup>, the Smallest Enclosing Ball (SEB) SEB(<span 
+class="cmsy-10"><img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" /></span>) with radius <span 
+class="cmmi-10">r</span>(SEB(<span 
+class="cmsy-10"><img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" /></span>)) is
+fully determined by <span 
+class="cmmi-10">s </span>points of <span 
+class="cmsy-10"><img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" /> </span>lying on the boundary sphere&#x00A0;<span class="cite">[<a 
+href="#XWelzl-1991">15</a>,&#x00A0;<a 
+href="#XNielsen-2008">9</a>]</span>, with 2 <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">s </span><span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">d </span>+ 1 (assuming general
+position with no <span 
+class="cmmi-10">d </span>+ 2 cospherical points). Computing efficiently the SEB in finite dimensional space has been
+thoroughly investigated in computational geometry&#x00A0;<span class="cite">[<a 
+href="#XSEB-1999">5</a>]</span>.
+<!--l. 39--><p class="indent" >   A (1 + <span 
+class="cmmi-10">&#x03F5;</span>)-approximation of the SEB is a ball covering <span 
+class="cmsy-10"><img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" /> </span>with radius (1 + <span 
+class="cmmi-10">&#x03F5;</span>)<span 
+class="cmmi-10">r</span>(SEB(<span 
+class="cmsy-10"><img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" /></span>)). A simple iterative
+approximation algorithm&#x00A0;<span class="cite">[<a 
+href="#XBC-2003">1</a>]</span> (BC algorithm) proceeds iteratively as follows: Set <span 
+class="cmmi-10">c</span><sup><span 
+class="cmr-7">(0)</span></sup> = <span 
+class="cmmi-10">p</span><sub><span 
+class="cmr-7">1</span></sub> and update the current
+center as
+   <center class="math-display" >
+<img 
+src="kernelCoreSetMEB0x.png" alt=" (i+1)    i  (i)    1
+c    = i+-1 c  + i+-1fi,  " class="math-display" ></center> where
+
+<span 
+class="cmmi-10">f</span><sub><span 
+class="cmmi-7">i</span></sub> denotes the farthest point of <span 
+class="cmmi-10">c</span><sup><span 
+class="cmr-7">(</span><span 
+class="cmmi-7">i</span><span 
+class="cmr-7">)</span></sup> in <span 
+class="cmsy-10"><img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" /> </span>(in case of ties choose any arbitrary farthest point). To get a
+(1 + <span 
+class="cmmi-10">&#x03F5;</span>)-approximation of the SEB, one needs to perform <span 
+class="cmsy-10">&#x2308;</span><img 
+src="kernelCoreSetMEB1x.png" alt="1&#x03F5;2-"  class="frac" align="middle"><span 
+class="cmsy-10">&#x2309; </span>iterations&#x00A0;<span class="cite">[<a 
+href="#XBC-2003">1</a>]</span>, so that this simple heuristic yields a
+<span 
+class="cmmi-10">O</span>(<img 
+src="kernelCoreSetMEB2x.png" alt="d&#x03F5;n2"  class="frac" align="middle">)-time approximation algorithm. Moreover, this algorithm proves that there exist <span 
+class="cmti-10">coresets</span>&#x00A0;<span class="cite">[<a 
+href="#XBC-2003">1</a>,&#x00A0;<a 
+href="#XBregball-2005">10</a>]</span> of size <span 
+class="cmmi-10">O</span>(<img 
+src="kernelCoreSetMEB3x.png" alt="&#x03F5;12"  class="frac" align="middle">):
+That is, a subset <span 
+class="cmsy-10"><img 
+src="cmsy10-43.png" alt="C" class="10x-x-43" />&#x2282;<img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" /> </span>such that <span 
+class="cmmi-10">r</span>(SEB(<span 
+class="cmsy-10"><img 
+src="cmsy10-43.png" alt="C" class="10x-x-43" /></span>)) <span 
+class="cmsy-10">&#x2264; </span>(1 + <span 
+class="cmmi-10">&#x03F5;</span>)<span 
+class="cmmi-10">r</span>(SEB(<span 
+class="cmsy-10"><img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" /></span>)) and <span 
+class="cmsy-10"><img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" />&#x2282; </span>(1 + <span 
+class="cmmi-10">&#x03F5;</span>)SEB(<span 
+class="cmsy-10"><img 
+src="cmsy10-43.png" alt="C" class="10x-x-43" /></span>). Optimal coresets for balls
+are known to be of size <span 
+class="cmsy-10">&#x2308;</span><img 
+src="kernelCoreSetMEB4x.png" alt="1&#x03F5;"  class="frac" align="middle"><span 
+class="cmsy-10">&#x2309;</span>, see&#x00A0;<span class="cite">[<a 
+href="#XCoresetBall-2008">2</a>]</span> and&#x00A0;<span class="cite">[<a 
+href="#Xkumar-2003">8</a>,&#x00A0;<a 
+href="#XCoresetBall-2008">2</a>]</span> for more efficient coreset algorithms. Notice that the size
+of a coreset for the SEB is both independent of the dimension <span 
+class="cmmi-10">d </span>and the number of source points
+<span 
+class="cmmi-10">n</span>.
+<!--l. 52--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-20002"></a>Smallest enclosing ball in feature space</h3>
+<!--l. 54--><p class="noindent" >In machine learning, one is interested in defining the data domain&#x00A0;<span class="cite">[<a 
+href="#XSVDD-1999">13</a>]</span>. For example, this is useful for anomaly
+detection that can be performed by checking whether a new point belongs to the domain (inlier) or not (outlier).
+The Support Vector Data Description&#x00A0;<span class="cite">[<a 
+href="#XSVDD-1999">13</a>,&#x00A0;<a 
+href="#XSVDD-2004">14</a>]</span> (SVDD) defines the domain of data by computing an enclosing ball
+in the feature space <span 
+class="cmsy-10"><img 
+src="cmsy10-46.png" alt="F" class="10x-x-46" /> </span>induced by a given kernel <span 
+class="cmmi-10">k</span>(<span 
+class="cmsy-10">&#x22C5;</span><span 
+class="cmmi-10">,</span><span 
+class="cmsy-10">&#x22C5;</span>) (e.g., polynomial or Gaussian kernels). The Support Vector
+Clustering&#x00A0;<span class="cite">[<a 
+href="#XSVC-2001">3</a>]</span> (SVC) further builds on the enclosing feature ball to retrieve clustering in the data
+space.
+<!--l. 59--><p class="indent" >   Let <span 
+class="cmmi-10">k</span>(<span 
+class="cmsy-10">&#x22C5;</span><span 
+class="cmmi-10">,</span><span 
+class="cmsy-10">&#x22C5;</span>) be a kernel&#x00A0;<span class="cite">[<a 
+href="#Xkernel-2001">12</a>]</span> so that <span 
+class="cmmi-10">k</span>(<span 
+class="cmmi-10">x,y</span>) = <span 
+class="cmsy-10">&#x27E8;</span>&#x03A6;(<span 
+class="cmmi-10">x</span>)<span 
+class="cmmi-10">,</span>&#x03A6;(<span 
+class="cmmi-10">y</span>)<span 
+class="cmsy-10">&#x27E9; </span>(kernel trick) for a feature map &#x03A6;(<span 
+class="cmmi-10">x</span>) : <span 
+class="msbm-10">&#x211D;</span><sup><span 
+class="cmmi-7">d</span></sup> <span 
+class="cmsy-10">&#x2192; </span><span 
+class="msbm-10">&#x211D;</span><sup><span 
+class="cmmi-7">D</span></sup>, where
+<span 
+class="cmsy-10">&#x27E8;&#x22C5;</span><span 
+class="cmmi-10">,</span><span 
+class="cmsy-10">&#x22C5;&#x27E9; </span>denotes the inner product in the Hilbert feature space <span 
+class="msbm-10">F</span>. Denote by <span 
+class="cmsy-10"><img 
+src="cmsy10-46.png" alt="F" class="10x-x-46" /> </span>= <span 
+class="cmsy-10">{</span><span 
+class="cmmi-10">&#x03D5;</span><sub><span 
+class="cmr-7">1</span></sub><span 
+class="cmmi-10">,</span><span 
+class="cmmi-10">&#x2026;</span><span 
+class="cmmi-10">,&#x03D5;</span><sub><span 
+class="cmmi-7">n</span></sub><span 
+class="cmsy-10">} </span>the corresponding feature
+vectors in <span 
+class="msbm-10">F</span>, with <span 
+class="cmmi-10">&#x03D5;</span><sub><span 
+class="cmmi-7">i</span></sub> = &#x03A6;(<span 
+class="cmmi-10">p</span><sub><span 
+class="cmmi-7">i</span></sub>). SVDD (and SVC) needs to compute SEB(<span 
+class="cmsy-10"><img 
+src="cmsy10-46.png" alt="F" class="10x-x-46" /></span>).
+<!--l. 66--><p class="indent" >   We can kernelize the BC algorithm&#x00A0;<span class="cite">[<a 
+href="#XBC-2003">1</a>]</span> by maintaining an <span 
+class="cmti-10">implicit representation </span>of the <span 
+class="cmti-10">feature center</span>
+<span 
+class="cmmi-10">&#x03C6; </span>= <span 
+class="cmex-10">&#x2211;</span>
+  <sub><span 
+class="cmmi-7">i</span><span 
+class="cmr-7">=1</span></sub><sup><span 
+class="cmmi-7">n</span></sup><span 
+class="cmmi-10">&#x03B1;</span><sub><span 
+class="cmmi-7">i</span></sub><span 
+class="cmmi-10">&#x03D5;</span><sub><span 
+class="cmmi-7">i</span></sub> where <span 
+class="cmmi-10">&#x03B1; </span><span 
+class="cmsy-10">&#x2208; </span>&#x0394;<sub><span 
+class="cmmi-7">n</span></sub> is a normalized unit positive weight vector (with &#x0394;<sub><span 
+class="cmmi-7">n</span></sub> denoting the
+(<span 
+class="cmmi-10">n</span><span 
+class="cmsy-10">- </span>1)-dimensional probability simplex). The distance between the feature center <span 
+class="cmmi-10">&#x03C6; </span>= <span 
+class="cmex-10">&#x2211;</span>
+  <sub><span 
+class="cmmi-7">i</span></sub><span 
+class="cmmi-10">&#x03B1;</span><sub><span 
+class="cmmi-7">i</span></sub><span 
+class="cmmi-10">&#x03D5;</span>(<span 
+class="cmmi-10">p</span><sub><span 
+class="cmmi-7">i</span></sub>) = <span 
+class="cmex-10">&#x2211;</span>
+  <sub><span 
+class="cmmi-7">i</span></sub><span 
+class="cmmi-10">&#x03B1;</span><sub><span 
+class="cmmi-7">i</span></sub><span 
+class="cmmi-10">&#x03D5;</span><sub><span 
+class="cmmi-7">i</span></sub> and a
+feature point <span 
+class="cmmi-10">&#x03D5;</span>(<span 
+class="cmmi-10">p</span>) is calculated as follows: <div class="eqnarray">
+   <center class="math-display" >
+<img 
+src="kernelCoreSetMEB5x.png" alt="                &#x2211;n &#x2211;n              &#x2211;n
+&#x2225;&#x03C6; - &#x03D5;(p)&#x2225;2 =         &#x03B1;i&#x03B1;j&#x27E8;&#x03D5;i,&#x03D5;j&#x27E9;- 2   &#x03B1;i&#x27E8;&#x03D5;i,&#x03D5;(p)&#x27E9;+ &#x27E8;&#x03D5;(p),&#x03D5; (p)&#x27E9;,            (1)
+                i=1 j=1             i=1
+                &#x2211;n &#x2211;n               &#x2211;
+            =         &#x03B1;i&#x03B1;jk(pi,pj)- 2   &#x03B1;ik(pi,p)+ k(p,p).                  (2)
+                i=1 j=1               i
+" class="math-display" ><a 
+ id="x1-2001r2"></a></center>
+</div>
+<!--l. 76--><p class="indent" >   Therefore at iteration <span 
+class="cmmi-10">i</span>, the farthest distance of the current center <span 
+class="cmmi-10">&#x03C6;</span><sub><span 
+class="cmmi-7">i</span></sub> to a point of <span 
+class="cmsy-10"><img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" /> </span>in the feature space can be
+computed using the implicit feature center representation: max<sub><span 
+class="cmmi-7">j</span><span 
+class="cmsy-7">&#x2208;</span><span 
+class="cmr-7">[</span><span 
+class="cmmi-7">d</span><span 
+class="cmr-7">]</span></sub><span 
+class="cmsy-10">&#x2225;</span><span 
+class="cmmi-10">&#x03C6;</span><sub><span 
+class="cmmi-7">i</span></sub> <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03D5;</span>(<span 
+class="cmmi-10">p</span><sub><span 
+class="cmmi-7">j</span></sub>)<span 
+class="cmsy-10">&#x2225;</span>. Denote by <span 
+class="cmmi-10">f</span><sub><span 
+class="cmmi-7">i</span></sub> the <span 
+class="cmti-10">index </span>of the
+farthest point in <span 
+class="msbm-10">F</span>. Then we update the implicit representation of the feature center by updating the weight vector
+<span 
+class="cmmi-10">&#x03B1; </span>as follows:
+
+   <center class="math-display" >
+<img 
+src="kernelCoreSetMEB6x.png" alt=" (i+1)  --i- (i)  -1--
+&#x03B1;     = i+ 1&#x03B1;   + i+ 1efi,  " class="math-display" ></center> where
+<span 
+class="cmmi-10">e</span><sub><span 
+class="cmmi-7">l</span></sub> denotes the hot unit vector (all coordinates set to zero except the <span 
+class="cmmi-10">l</span>-th one set to one).
+<!--l. 84--><p class="indent" >   Observe that at iteration <span 
+class="cmmi-10">i</span>, at most <span 
+class="cmmi-10">i </span>+ 1 coordinates of <span 
+class="cmmi-10">&#x03B1; </span>are non-zero (sparse implicit representation), so that
+the maximum distance of the center to the point set <span 
+class="cmsy-10"><img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" /> </span>can be computed via Eq.&#x00A0;<a 
+href="#x1-2001r2">2<!--tex4ht:ref: eq:distk --></a> in <span 
+class="cmmi-10">O</span>(<span 
+class="cmmi-10">ni</span><sup><span 
+class="cmr-7">2</span></sup>). Thus it
+follows that the kernelized BC algorithm costs overall <span 
+class="cmmi-10">O</span>(<img 
+src="kernelCoreSetMEB7x.png" alt="dn
+ &#x03F5;4"  class="frac" align="middle">)-time. The proof of the approximation
+quality of the BC algorithm relies on the Pythagoras&#8217;s theorem&#x00A0;<span class="cite">[<a 
+href="#XPythaI-2002">6</a>,&#x00A0;<a 
+href="#XPythaII-2002">7</a>]</span> that holds in finite-dimensional
+Hilbert spaces. Although we used an implicit feature map &#x03A6; (e.g., Gaussian kernel feature map), we can
+approximate feature maps by finite-dimensional feature maps using the randomized Fourier feature maps
+<img 
+src="kernelCoreSetMEB8x.png" alt="&#x02DC;&#x03A6;"  class="tilde" >&#x00A0;<span class="cite">[<a 
+href="#XRFF-2008">11</a>]</span>.
+<!--l. 91--><p class="indent" >   This note is closely related to the work&#x00A0;<span class="cite">[<a 
+href="#XBulatov-2004">4</a>]</span> where the authors compute a feature SEB for each class of data
+(points having the same label), and perform classification using the Voronoi diagrams defined on the feature
+(approximated) circumcenters.
+<!--l. 94--><p class="indent" >   Notice that the choice of the kernel for SVDD/SVC is important since the feature SEB has at most <span 
+class="cmmi-10">D </span>+ 1
+support vectors (without outliers) in general position, where <span 
+class="cmmi-10">D </span>is the dimension of the feature space. Thus for a
+polynomial kernel, the number of support vectors is bounded (and so is the number of clusters retrieved using SVC).
+Another byproduct of the kernelized BC algorithm is that it proves that the feature circumcenter is
+contained in the convex hull of the feature vectors (since <span 
+class="cmmi-10">&#x03B1; </span>encodes a convex combination of the feature
+vectors).
+<!--l. 103--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-30003"></a>Some kernel examples</h3>
+<!--l. 105--><p class="noindent" >The feature map of the polynomial kernel <span 
+class="cmmi-10">k</span><sub><span 
+class="cmmi-7">P</span></sub>(<span 
+class="cmmi-10">x,y</span>) = <img 
+src="kernelCoreSetMEB9x.png" alt="(            )
+ &#x2211;d   xiyi + c
+   i=1"  class="left" align="middle"><sup><span 
+class="cmmi-7">a</span></sup> (with <span 
+class="cmmi-10">c </span><span 
+class="cmsy-10">&#x2265; </span>0) is finite-dimensional (<span 
+class="msbm-10">F </span>= <span 
+class="msbm-10">&#x211D;</span><sup><span 
+class="cmmi-7">D</span></sup>
+with <span 
+class="cmmi-10">D </span>= <img 
+src="kernelCoreSetMEB10x.png" alt="(d+a)
+  a" >). For <span 
+class="cmmi-10">a </span>= 2, we get the explicit feature map:
+   <center class="math-display" >
+<img 
+src="kernelCoreSetMEB11x.png" alt="        ( 2     2 &#x221A;-          &#x221A; -     &#x221A;-            &#x221A; -          &#x221A; -    &#x221A; --      &#x221A;--    )
+&#x03A6;P(x) =  xd,...,x1, 2xdxd-1,..., 2xdx1, 2xd-1xd-2,...,  2xd-1x1,...,  2x2x1,  2cxd,..., 2cx1,c ." class="math-display" ></center> That
+is, a 2D polynomial kernel <span 
+class="cmmi-10">k</span><sub><span 
+class="cmmi-7">P</span></sub> induces a 6D feature map &#x03A6;<sub><span 
+class="cmmi-7">P</span></sub>(<span 
+class="cmmi-10">x</span>).
+<!--l. 113--><p class="indent" >   The feature map &#x03A6;<sub><span 
+class="cmmi-7">G</span></sub>(<span 
+class="cmmi-10">x</span>) of the Gaussian kernel <span 
+class="cmmi-10">k</span><sub><span 
+class="cmmi-7">G</span></sub>(<span 
+class="cmmi-10">x,y</span>) = exp(<span 
+class="cmsy-10">-</span><span 
+class="cmmi-10">&#x03B3;</span><span 
+class="cmsy-10">&#x2225;</span><span 
+class="cmmi-10">x </span><span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">y</span><span 
+class="cmsy-10">&#x2225;</span><sup><span 
+class="cmr-7">2</span></sup>) (Radial Basis Function, RBF) is
+infinite-dimensional (<span 
+class="cmmi-10">D </span>= <span 
+class="cmsy-10">&#x221E;</span>):
+
+   <center class="math-display" >
+<img 
+src="kernelCoreSetMEB12x.png" alt="                 (   ----- )
+                   &#x2218; (2&#x03B3;)i
+&#x03A6;G (x) = exp(- &#x03B3;x2)  --i!-xi         .
+                             i&#x2208;{0,1,...}
+" class="math-display" ></center>
+<!--l. 1--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-40003"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+    <div class="thebibliography">
+    <p class="bibitem" ><span class="biblabel">
+  [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XBC-2003"></a>Mihai Badoiu and Kenneth&#x00A0;L Clarkson. Smaller core-sets for balls. In <span 
+class="cmti-10">Proceedings of the fourteenth</span>
+    <span 
+class="cmti-10">annual  ACM-SIAM  symposium  on  Discrete  algorithms</span>,  pages  801&#8211;802.  Society  for  Industrial  and
+    Applied Mathematics, 2003.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XCoresetBall-2008"></a>Mihai B&#x0103;doiu and Kenneth&#x00A0;L Clarkson.  Optimal core-sets for balls.  <span 
+class="cmti-10">Computational Geometry</span>,
+    40(1):14&#8211;22, 2008.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XSVC-2001"></a>Asa Ben-Hur, David Horn, Hava&#x00A0;T Siegelmann, and Vladimir Vapnik.  Support vector clustering.
+    <span 
+class="cmti-10">Journal of machine learning research</span>, 2(Dec):125&#8211;137, 2001.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [4]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XBulatov-2004"></a>Yaroslav Bulatov, Sachin Jambawalikar, Piyush Kumar, and Saurabh Sethia. Hand recognition using
+    geometric classifiers. <span 
+class="cmti-10">Biometric Authentication</span>, pages 1&#8211;29, 2004.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [5]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XSEB-1999"></a>Bernd Gärtner. Fast and robust smallest enclosing balls. <span 
+class="cmti-10">Algorithms-ESA99</span>, pages 693&#8211;693, 1999.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [6]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XPythaI-2002"></a>Richard&#x00A0;V Kadison.   The pythagorean theorem: I. the finite case.   <span 
+class="cmti-10">Proceedings of the National</span>
+    <span 
+class="cmti-10">Academy of Sciences</span>, 99(7):4178&#8211;4184, 2002.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [7]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XPythaII-2002"></a>Richard&#x00A0;V Kadison.  The pythagorean theorem: II. the infinite discrete case.  <span 
+class="cmti-10">Proceedings of the</span>
+    <span 
+class="cmti-10">National Academy of Sciences</span>, 99(8):5217&#8211;5222, 2002.
+
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [8]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xkumar-2003"></a>Piyush Kumar, Joseph&#x00A0;SB Mitchell, E&#x00A0;Alper Yildirim, and E&#x00A0;Alper Y<img 
+src="cmr10-10.png" alt="i" class="10x-x-10" />ld<img 
+src="cmr10-10.png" alt="i" class="10x-x-10" />r<img 
+src="cmr10-10.png" alt="i" class="10x-x-10" />m. Computing core-sets
+    and approximate smallest enclosing hyperspheres in high dimensions.   In <span 
+class="cmti-10">ALENEX), Lecture Notes</span>
+    <span 
+class="cmti-10">Comput. Sci</span>. Citeseer, 2003.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [9]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XNielsen-2008"></a>Frank Nielsen and Richard Nock. On the smallest enclosing information disk. <span 
+class="cmti-10">Information Processing</span>
+    <span 
+class="cmti-10">Letters</span>, 105(3):93&#8211;97, 2008.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [10]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XBregball-2005"></a>Richard Nock and Frank Nielsen.  Fitting the smallest enclosing Bregman ball.  In <span 
+class="cmti-10">ECML</span>, pages
+    649&#8211;656. Springer, 2005.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [11]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XRFF-2008"></a>Ali Rahimi and Benjamin Recht. Random features for large-scale kernel machines. In <span 
+class="cmti-10">Advances in</span>
+    <span 
+class="cmti-10">neural information processing systems</span>, pages 1177&#8211;1184, 2008.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [12]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xkernel-2001"></a>Bernhard Scholkopf and Alexander&#x00A0;J. Smola.  <span 
+class="cmti-10">Learning with Kernels: Support Vector Machines,</span>
+    <span 
+class="cmti-10">Regularization, Optimization, and Beyond</span>. MIT Press, Cambridge, MA, USA, 2001.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [13]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XSVDD-1999"></a>David&#x00A0;MJ Tax and Robert&#x00A0;PW Duin.  Support vector domain description.  <span 
+class="cmti-10">Pattern recognition</span>
+    <span 
+class="cmti-10">letters</span>, 20(11):1191&#8211;1199, 1999.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [14]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XSVDD-2004"></a>David&#x00A0;MJ  Tax  and  Robert&#x00A0;PW  Duin.    Support  vector  data  description.    <span 
+class="cmti-10">Machine  learning</span>,
+    54(1):45&#8211;66, 2004.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [15]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XWelzl-1991"></a>Emo Welzl. Smallest enclosing disks (balls and ellipsoids). <span 
+class="cmti-10">New results and new trends in computer</span>
+    <span 
+class="cmti-10">science</span>, pages 359&#8211;370, 1991.
+</p>
+    </div>
+    
+</body></html> 
+
+
+

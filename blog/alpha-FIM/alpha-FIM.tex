@@ -1,0 +1,154 @@
+% Frank.Nielsen@acm.org
+
+\documentclass[11pt]{article}
+\usepackage{fullpage,amssymb,amsmath,hyperref,url}
+
+\def\eqdef{:=}
+\def\eqnota{:=:}
+\def\dnu{\mathrm{d}\nu}
+\def\calX{\mathcal{X}}
+\def\bbR{\mathbb{R}}
+\def\Var{\mathrm{Var}}
+
+
+\title{The $\alpha$-representations of the Fisher Information Matrix\\ --- On equivalent expressions of the FIM ---}
+\date{19 September 2017}
+\author{Frank Nielsen}
+
+\begin{document}
+\maketitle
+
+
+This column is also available in pdf: filename \url{alpha-FIM.pdf} 
+\vskip 0.5cm
+
+The Fisher Information Matrix~\cite{IG-2014} (FIM) for a family of {\em parametric} probability models $\{p(x;\theta)\}_\theta$ 
+(densities $p(x;\theta)$ expressed with respect to a base measure $\nu$) indexed by
+ a $D$-dimensional parameter vector $\theta\eqdef(\theta^1,\ldots,\theta^D)$  is originally defined by
+
+\begin{equation}\label{eq:FIM1}
+I(\theta) \eqdef (I_{ij}(\theta)),
+\quad I_{ij}(\theta) \eqdef E_{p(x;\theta)}[\partial_i l(x;\theta)\partial_j l(x;\theta)],
+\end{equation}
+where $l(x;\theta)\eqdef\log p(x;\theta)$ is the log-likelihood function, and 
+$\partial_i \eqnota \frac{\partial}{\partial\theta^i}$ (by notational convention).
+The FIM is a $D\times D$ positive semi-definite matrix for a $D$-order family.
+
+The FIM  is a cornerstone in statistics and occurs in many places, like for example the celebrated
+ Cram\'er-Rao lower bound~\cite{CR-2013} for an unbiased estimator $\hat\theta$
+$$
+\Var_{p(x;\theta)}[\hat{\theta}]\succeq I^{-1}(\theta),
+$$
+where $\succeq$ denotes the L\"owner ordering of positive semi-definite matrices: 
+$A\succeq B$  iff. $A-B\succ 0$ is  positive semi-definite.
+Another use of the FIM is in gradient descent method for deep learning using the natural gradient~\cite{RFIM-2017}.
+
+Yet, it is common to encounter  another equivalent expression of the FIM in the litterature~\cite{CR-2013,IG-2014}
+
+\begin{equation}\label{eq:FIM0}
+I_{ij}'(\theta) \eqdef 4\int \partial_i\sqrt{p(x;\theta)}\partial_j\sqrt{p(x;\theta)}\dnu(x)
+\end{equation}
+This form of the FIM is well-suited to prove that the FIM is always positive semi-definite matrix~\cite{IG-2014}: $I(\theta)\succeq 0$.
+
+
+
+It turns out that one can define a family of equivalent representations of the FIM using the $\alpha$-embedding of the parametric family.
+We define the $\alpha$-representation of densities $l^{(\alpha)}(x;\theta):=k_\alpha(p(x;\theta))$ with
+
+
+\begin{equation}\label{eq:alphaembedding}
+k_\alpha(u) \eqdef \left\{
+\begin{array}{ll}
+\frac{2}{1-\alpha}u^{\frac{1-\alpha}{2}}, & \mbox{if $\alpha\not=1$}\\
+\log u, & \mbox{if $\alpha=1$}.
+\end{array}
+\right.
+\end{equation}
+
+The function $l^{(\alpha)}(x;\theta)$ is called the $\alpha$-likelihood function.
+
+The $\alpha$-representation of the FIM is
+\begin{equation}\label{eq:FIMalpha}
+\boxed{I_{ij}^{(\alpha)}(\theta) \eqdef \int \partial_i l^{(\alpha)}(x;\theta)\partial_j l^{(-\alpha)}(x;\theta) \dnu(x)}
+\end{equation}
+In compact notation, we have $I_{ij}^{(\alpha)}(\theta)=\int  \partial_i l^{(\alpha)}\partial_j l^{(-\alpha)} \dnu(x)$ (this is the $\alpha$-FIM).
+We can expand the $\alpha$-FIM expressions as follows
+$$
+I_{ij}^{(\alpha)}(\theta) = \left\{
+\begin{array}{ll}
+\frac{1}{1-\alpha^2}\int \partial_i p(x;\theta)^{\frac{1-\alpha}{2}}  \partial_j p(x;\theta)^{\frac{1+\alpha}{2}} \dnu(x) & \mbox{for $\alpha\not =\pm1$}\\
+\int \partial_i \log p(x;\theta) \partial_j p(x;\theta) \dnu(x) & \mbox{for $\alpha\in \{-1,1\}$}\\
+%\int \partial_i p(x;\theta)\partial_j \log p(x;\theta) \dnu(x) & \mbox{for $\alpha=-1$}
+\end{array}
+\right.
+$$
+
+
+The proof that $I_{ij}^{(\alpha)}(\theta)=I_{ij}(\theta)$ follows from the fact that
+$$
+\partial_i l^{\alpha} =  p^{-\frac{\alpha+1}{2}}\partial_i p = p^{\frac{1-\alpha}{2}}\partial_i l,
+$$
+since $\partial_i l=\frac{\partial_i p}{p}$.
+
+Therefore we get
+$$
+\partial_i l^{(\alpha)}\partial_j l^{(-\alpha)}=p\partial_i l\partial_j l,
+$$
+and $I_{ij}^{(\alpha)}(\theta)=E[\partial_i l\partial_j l]=I_{ij}(\theta)$.
+
+Thus Eq.~\ref{eq:FIM1} and Eq.~\ref{eq:FIM0} where two examples of the $\alpha$-representation, namely the $1$-representation and the $0$-representation, respectively. The $1$-representation of Eq.~\ref{eq:FIM1} is called the logarithmic representation, and the  $0$-representation of Eq.~\ref{eq:FIM0} 
+is called the square root representation.
+
+Note that $I_{ij}(\theta)=E[\partial_i l\partial_j l]=\int p\partial_i l\partial_j l\dnu(x)=\int \partial_i p\partial_j l\dnu(x)=I_{ij}^{(1)}(\theta)$ since $\partial_i l=\frac{\partial_i p}{p}$
+
+In information geometry~\cite{IG-2014}, $\{\partial_i l^{(\alpha)}\}_i$ plays the role of tangent vectors, the $\alpha$-scores.
+Geometrically speaking, the tangent plane $T_{p(x;\theta)}$ can be described using any $\alpha$-base. 
+The statistical manifold $M=\{p(x;\theta)\}_\theta$ is imbedded into the function space $\bbR^{\calX}$, where $\calX$ denotes the support of the densities.
+
+
+
+Under regular conditions~\cite{CR-2013,IG-2014}, the $\alpha$-representation of the FIM can further be rewritten as
+$$
+I_{ij}^{(\alpha)}(\theta)=  -\frac{2}{1+\alpha} \int p(x;\theta)^{\frac{1+\alpha}{2}} \partial_i\partial_j l^{(\alpha)}(x;\theta)\dnu(x).
+$$
+
+Since we have 
+$$
+ \partial_i\partial_j l^{(\alpha)}(x;\theta) = p^{\frac{1-\alpha}{2}}\left(
+\partial_i\partial_j l + \frac{1-\alpha}{2} \partial_i l\partial_j l
+ \right),
+$$
+it follows that 
+$$
+I_{ij}^{(\alpha)}(\theta)= -\frac{2}{1+\alpha} \left(-I_{ij}^{(\alpha)}(\theta)+ \frac{1-\alpha}{2} I_{ij}^{(\alpha)}\right)=I_{ij}(\theta).
+$$
+
+
+Notice that when $\alpha=1$, we recover the equivalent expression of the FIM (under mild conditions)
+$$
+I_{ij}^{(1)}(\theta)= -E[\nabla^2 \log p(x;\theta)].
+$$
+
+In particular, when the family is an exponential family~\cite{EF-2009} with cumulant function $F(\theta)$, we have
+$$
+I(\theta)=\nabla^2 F(\theta).
+$$
+
+Similarly, the coefficients of the $\alpha$-connection can be expressed using the $\alpha$-representation as
+$$
+\Gamma_{ij,k}^{(\alpha)}= \int \partial_i\partial_j l^{(\alpha)}\partial_k^{(-\alpha)} \dnu(x).
+$$
+
+The Riemannian metric tensor $g_{ij}$ (a geometric object) can be expressed 
+in matrix form $I_{ij}^{(\alpha)}(\theta)$ using the $\alpha$-base, and this tensor is called the Fisher metric tensor.
+
+
+\vskip 1cm
+Initially created 19th September 2017 (last update \today).
+
+\bibliographystyle{plain}
+\bibliography{alphaFIMBib}
+\end{document}
+
+
+ 

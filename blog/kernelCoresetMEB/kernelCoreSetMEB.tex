@@ -1,0 +1,135 @@
+% Frank.Nielsen@acm.org 
+% September 2017
+
+\documentclass{article}
+\usepackage{fullpage,amssymb,amsmath,url}
+
+\def\calC{\mathcal{C}}
+\def\calP{\mathcal{P}}
+\def\calF{\mathcal{F}}
+\def\bbR{\mathbb{R}}
+\def\bbF{\mathbb{F}}
+\def\SEB{\mathrm{SEB}}
+\def\ceil#1{\lceil #1\rceil}
+\def\eps{\epsilon}
+\def\inner#1#2{\langle #1,#2\rangle}
+
+%\title{Kernelized Smallest Enclosing Ball  Coresets for  Support Vector Clustering}
+
+\title{A note on kernelizing the smallest enclosing ball for machine learning}
+\author{Frank Nielsen\\ {\tt Frank.Nielsen@acm.org}}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note describes how to kernelize Badoiu and Clarkson's algorithm~\cite{BC-2003} to compute approximations of the smallest enclosing balls in the feature space induced by a kernel.
+\end{abstract}
+
+This column is also available in pdf: filename \url{kernelCoreSetMEB.pdf} 
+\vskip 0.5cm
+
+\section{Smallest enclosing ball and coresets}
+Let $\calP=\{p_1,\ldots, p_n\}$ be a finite point set.
+In $\bbR^{d}$, the Smallest Enclosing Ball (SEB) $\SEB(\calP)$ with radius $r(\SEB(\calP))$ is fully determined by $s$ points of $\calP$ lying on the boundary sphere~\cite{Welzl-1991,Nielsen-2008}, with $2\leq s\leq d+1$ (assuming general position with no $d+2$ cospherical points).
+Computing efficiently the SEB in finite dimensional space has been thoroughly investigated in computational geometry~\cite{SEB-1999}.
+
+A $(1+\epsilon)$-approximation of the SEB is a ball covering $\calP$ with radius $(1+\epsilon)r(\SEB(\calP))$.
+A simple iterative approximation algorithm~\cite{BC-2003} (BC algorithm) proceeds iteratively as follows: 
+Set $c^{(0)}=p_1$ and update the current center as
+$$
+c^{(i+1)} = \frac{i}{i+1} c^{(i)} + \frac{1}{i+1} f_i,
+$$
+where $f_i$ denotes the farthest point of $c^{(i)}$ in  $\calP$ (in case of ties choose any arbitrary farthest point).
+To get a $(1+\epsilon)$-approximation of the SEB, one needs to perform $\ceil{\frac{1}{\eps^2}}$ iterations~\cite{BC-2003}, so that
+this simple heuristic yields a $O(\frac{dn}{\epsilon^2})$-time approximation algorithm.
+Moreover, this algorithm proves that there exist {\em coresets}~\cite{BC-2003,Bregball-2005} of size $O(\frac{1}{\epsilon^2})$:
+That is, a subset $\calC\subset\calP$ such that $r(\SEB(\calC))\leq (1+\epsilon)r(\SEB(\calP))$ and $\calP\subset (1+\epsilon)\SEB(\calC)$.
+Optimal coresets for balls are known to be of size $\ceil{\frac{1}{\epsilon}}$, see~\cite{CoresetBall-2008} and~\cite{kumar-2003,CoresetBall-2008} for more efficient coreset algorithms. Notice that the size of a coreset for the SEB is both independent of the dimension $d$ and the number of source points $n$.
+
+\section{Smallest enclosing ball in feature space}
+
+In machine learning, one is interested in defining the data domain~\cite{SVDD-1999}.
+For example, this is useful for anomaly detection that can be performed by checking whether a new point belongs to the domain (inlier) or not (outlier).
+The Support Vector Data Description~\cite{SVDD-1999,SVDD-2004} (SVDD) defines the domain of data by computing an enclosing ball in the feature space $\calF$ induced by a given kernel $k(\cdot,\cdot)$ (e.g., polynomial or Gaussian kernels).
+The Support Vector Clustering~\cite{SVC-2001} (SVC) further builds on the enclosing feature ball to retrieve clustering in the data space.
+
+Let $k(\cdot,\cdot)$ be a kernel~\cite{kernel-2001} so that $k(x,y)=\inner{\Phi(x)}{\Phi(y)}$ (kernel trick) 
+for a feature map $\Phi(x):\bbR^d\rightarrow \bbR^D$, where $\inner{\cdot}{\cdot}$
+ denotes the inner product in the Hilbert feature space $\bbF$.
+Denote by  $\calF=\{\phi_1,\ldots, \phi_n\}$  the corresponding feature vectors in $\bbF$, 
+ with $\phi_i=\Phi(p_i)$.
+SVDD (and SVC) needs to compute $\SEB(\calF)$.
+
+We can kernelize the BC algorithm~\cite{BC-2003} by maintaining an {\em implicit representation} of the {\em feature center} 
+$\varphi=\sum_{i=1}^n \alpha_i\phi_i$ where $\alpha\in\Delta_n$ is a normalized unit positive weight vector 
+(with $\Delta_n$ denoting the $(n-1)$-dimensional probability simplex).
+The distance between the feature center $\varphi=\sum_i \alpha_i\phi(p_i)=\sum_i \alpha_i\phi_i$ and a feature point $\phi(p)$ is calculated as follows:
+\begin{eqnarray}
+\|\varphi-\phi(p)\|^2 &=& \sum_{i=1}^n\sum_{j=1}^n \alpha_i\alpha_j\inner{\phi_i}{\phi_j} -2 \sum_{i=1}^n \alpha_i\inner{\phi_i}{\phi(p)} 
++\inner{\phi(p)}{\phi(p)},\\
+&=& \sum_{i=1}^n\sum_{j=1}^n \alpha_i\alpha_j k(p_i,p_j) -2 \sum_i \alpha_i k(p_i,p)+ k(p,p). \label{eq:distk}
+\end{eqnarray}
+
+Therefore at iteration $i$, the farthest distance of the current center $\varphi_i$ to a point of $\calP$ in the feature space can be computed using the implicit feature center representation:
+$\max_{j\in [d]} \|\varphi_i-\phi(p_j)\|$. Denote by $f_i$ the {\em index} of the farthest point in $\bbF$.
+Then we update the implicit representation of the feature center by updating the weight vector $\alpha$ as follows:
+$$
+\alpha^{(i+1)} = \frac{i}{i+1} \alpha^{(i)} + \frac{1}{i+1} e_{f_i},
+$$
+where $e_l$ denotes the hot unit vector (all coordinates set to zero except the $l$-th one set to one).
+
+Observe that at iteration $i$, at most $i+1$ coordinates of $\alpha$ are non-zero (sparse implicit representation), so that the maximum distance of the center to the point set $\calP$ can be computed via Eq.~\ref{eq:distk}
+ in $O(ni^2)$.
+Thus  it follows that the kernelized BC algorithm costs overall $O(\frac{dn}{\epsilon^4})$-time.
+The proof of the approximation quality of the BC algorithm relies on the Pythagoras's theorem~\cite{PythaI-2002,PythaII-2002} that holds in finite-dimensional Hilbert spaces.
+Although we used an implicit feature map $\Phi$ (e.g., Gaussian kernel feature map), we can approximate  feature maps
+by  finite-dimensional feature maps using the randomized Fourier feature maps $\tilde{\Phi}$~\cite{RFF-2008}. 
+
+ This note is closely related to the work~\cite{Bulatov-2004} where the authors compute a feature SEB for each class of data (points having the same label), and perform classification using the Voronoi diagrams defined on the feature (approximated) circumcenters. 
+
+
+Notice that the choice of the kernel for SVDD/SVC is important since the feature SEB has at most $D+1$ support vectors (without outliers) in general position, where $D$ is the dimension of the feature space. Thus for a polynomial kernel, the number of support vectors is bounded (and so is the number of clusters retrieved using SVC).
+Another byproduct of the kernelized BC algorithm is that it proves that the feature circumcenter is contained in the convex hull of the feature vectors (since $\alpha$ encodes a convex combination of the feature vectors).
+
+
+
+ 
+
+
+
+\section{Some kernel examples}
+
+The feature map of the polynomial kernel $k_P(x,y) = \left(\sum_{i=1}^d x_i y_i + c\right)^a$  (with $c\geq 0$) is finite-dimensional ($\bbF=\bbR^D$ with $D=\binom{d+a}{a}$).
+For $a=2$, we get the explicit feature map:
+$$
+\Phi_P(x)=  \left(x_d^2, \ldots, x_1^2, \sqrt{2} x_d x_{d-1}, \ldots, \sqrt{2} x_d x_1, \sqrt{2} x_{d-1} x_{d-2}, \ldots, 
+\sqrt{2} x_{d-1} x_{1}, \ldots, \sqrt{2} x_{2} x_{1}, \sqrt{2c} x_d, \ldots, \sqrt{2c} x_1, c \right). 
+$$
+That is, a 2D polynomial kernel $k_P$ induces a 6D feature map $\Phi_P(x)$.
+
+The feature map $\Phi_G(x)$ of the Gaussian kernel $k_G(x,y)=\exp(-\gamma \|x-y\|^2)$ (Radial Basis Function, RBF) is infinite-dimensional ($D=\infty$):
+$$
+\Phi_G(x)=\exp(-\gamma x^2) \left(\sqrt{\frac{(2\gamma)^i}{i!}}x^i\right)_{i\in\{0,1,\ldots\}}.
+$$
+
+
+
+
+
+
+ 
+%In~\cite{SVDD-coreset-2004}.
+
+%For a finite orthonormal set $  \|\sum_i x_i\|^2  = \sum_i \|x_i\|^2   $
+%SVC of balls, ellipsoids, etc.
+
+
+
+
+\bibliographystyle{plain}
+\bibliography{CoreSetMEBBib}
+
+\end{document}

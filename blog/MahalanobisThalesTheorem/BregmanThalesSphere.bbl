@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+
+\bibitem{IG-2016}
+Shun-ichi Amari.
+\newblock {\em Information geometry and its applications}.
+\newblock Springer, 2016.
+
+\bibitem{Amari-2007}
+Shun-ichi Amari and Hiroshi Nagaoka.
+\newblock {\em Methods of information geometry}, volume 191.
+\newblock American Mathematical Soc., 2007.
+
+\bibitem{BVD-2010}
+Jean-Daniel Boissonnat, Frank Nielsen, and Richard Nock.
+\newblock Bregman {V}oronoi diagrams.
+\newblock {\em Discrete \& Computational Geometry}, 44(2):281--307, 2010.
+
+\bibitem{IG-2014}
+Ovidiu Calin and Constantin Udri{\c{s}}te.
+\newblock {\em Geometric modeling in probability and statistics}.
+\newblock Springer.
+
+\end{thebibliography}

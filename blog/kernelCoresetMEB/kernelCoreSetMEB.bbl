@@ -1,0 +1,87 @@
+\begin{thebibliography}{10}
+
+\bibitem{BC-2003}
+Mihai Badoiu and Kenneth~L Clarkson.
+\newblock Smaller core-sets for balls.
+\newblock In {\em Proceedings of the fourteenth annual ACM-SIAM symposium on
+  Discrete algorithms}, pages 801--802. Society for Industrial and Applied
+  Mathematics, 2003.
+
+\bibitem{CoresetBall-2008}
+Mihai B{\u{a}}doiu and Kenneth~L Clarkson.
+\newblock Optimal core-sets for balls.
+\newblock {\em Computational Geometry}, 40(1):14--22, 2008.
+
+\bibitem{SVC-2001}
+Asa Ben-Hur, David Horn, Hava~T Siegelmann, and Vladimir Vapnik.
+\newblock Support vector clustering.
+\newblock {\em Journal of machine learning research}, 2(Dec):125--137, 2001.
+
+\bibitem{Bulatov-2004}
+Yaroslav Bulatov, Sachin Jambawalikar, Piyush Kumar, and Saurabh Sethia.
+\newblock Hand recognition using geometric classifiers.
+\newblock {\em Biometric Authentication}, pages 1--29, 2004.
+
+\bibitem{SEB-1999}
+Bernd G{\"a}rtner.
+\newblock Fast and robust smallest enclosing balls.
+\newblock {\em Algorithms-ESA’99}, pages 693--693, 1999.
+
+\bibitem{PythaI-2002}
+Richard~V Kadison.
+\newblock The pythagorean theorem: {I}. the finite case.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  99(7):4178--4184, 2002.
+
+\bibitem{PythaII-2002}
+Richard~V Kadison.
+\newblock The pythagorean theorem: {II}. the infinite discrete case.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  99(8):5217--5222, 2002.
+
+\bibitem{kumar-2003}
+Piyush Kumar, Joseph~SB Mitchell, E~Alper Yildirim, and E~Alper
+  Y{\i}ld{\i}r{\i}m.
+\newblock Computing core-sets and approximate smallest enclosing hyperspheres
+  in high dimensions.
+\newblock In {\em ALENEX), Lecture Notes Comput. Sci}. Citeseer, 2003.
+
+\bibitem{Nielsen-2008}
+Frank Nielsen and Richard Nock.
+\newblock On the smallest enclosing information disk.
+\newblock {\em Information Processing Letters}, 105(3):93--97, 2008.
+
+\bibitem{Bregball-2005}
+Richard Nock and Frank Nielsen.
+\newblock Fitting the smallest enclosing {B}regman ball.
+\newblock In {\em ECML}, pages 649--656. Springer, 2005.
+
+\bibitem{RFF-2008}
+Ali Rahimi and Benjamin Recht.
+\newblock Random features for large-scale kernel machines.
+\newblock In {\em Advances in neural information processing systems}, pages
+  1177--1184, 2008.
+
+\bibitem{kernel-2001}
+Bernhard Scholkopf and Alexander~J. Smola.
+\newblock {\em Learning with Kernels: Support Vector Machines, Regularization,
+  Optimization, and Beyond}.
+\newblock MIT Press, Cambridge, MA, USA, 2001.
+
+\bibitem{SVDD-1999}
+David~MJ Tax and Robert~PW Duin.
+\newblock Support vector domain description.
+\newblock {\em Pattern recognition letters}, 20(11):1191--1199, 1999.
+
+\bibitem{SVDD-2004}
+David~MJ Tax and Robert~PW Duin.
+\newblock Support vector data description.
+\newblock {\em Machine learning}, 54(1):45--66, 2004.
+
+\bibitem{Welzl-1991}
+Emo Welzl.
+\newblock Smallest enclosing disks (balls and ellipsoids).
+\newblock {\em New results and new trends in computer science}, pages 359--370,
+  1991.
+
+\end{thebibliography}

@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Structures cannot be avoided!
+&#8212; Ramsey theory on the intersection graphs of line segments &#8212;</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="RamseyLineSegment.tex"> 
+<meta name="date" content="2017-11-30 10:30:00"> 
+<link rel="stylesheet" type="text/css" href="RamseyLineSegment.css"> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+
+<h2 class="titleHead">Structures cannot be avoided!<br />
+&#8212; Ramsey theory on the intersection graphs of line segments &#8212;</h2>
+<div class="author" ><span 
+class="cmr-12">Frank Nielsen</span></div><br />
+<div class="date" ><span 
+class="cmr-12">27 November 2017</span></div>
+   </div>
+<!--l. 23--><p class="indent" >   This column is also available in pdf: filename <a 
+href="RamseyLineSegment.pdf" class="url" ><span 
+class="cmtt-10x-x-109">RamseyLineSegment.pdf</span></a>
+<!--l. 26--><p class="indent" >   Consider <span 
+class="cmmi-10x-x-109">n </span>line segments <span 
+class="cmmi-10x-x-109">S</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-10x-x-109">,</span><span 
+class="cmmi-10x-x-109">&#x2026;</span><span 
+class="cmmi-10x-x-109">,S</span><sub><span 
+class="cmmi-8">n</span></sub> on the plane in <span 
+class="cmti-10x-x-109">general position </span>(ie., segments are either disjoint or
+intersect in exactly one point). We ask the following question:<br 
+class="newline" />How many <span 
+class="cmbx-10x-x-109">pairwise disjoint segments </span><span class="underline">OR</span> how many <span 
+class="cmbx-10x-x-109">pairwise intersecting segments </span>are
+there?
+<!--l. 30--><p class="indent" >   Define the <span 
+class="cmti-10x-x-109">intersection graph </span><span 
+class="cmmi-10x-x-109">G </span>= (<span 
+class="cmmi-10x-x-109">V,E</span>) where each segment <span 
+class="cmmi-10x-x-109">S</span><sub><span 
+class="cmmi-8">i</span></sub> is associated to a corresponding node
+<span 
+class="cmmi-10x-x-109">V</span> <sub><span 
+class="cmmi-8">i</span></sub>, and where there is an edge <span 
+class="cmsy-10x-x-109">{</span><span 
+class="cmmi-10x-x-109">V</span> <sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">,V</span> <sub><span 
+class="cmmi-8">j</span></sub><span 
+class="cmsy-10x-x-109">} </span>if and only if the corresponding line segments intersect
+(<span 
+class="cmmi-10x-x-109">S</span><sub><span 
+class="cmmi-8">i</span></sub> <span 
+class="cmsy-10x-x-109">&#x2229; </span><span 
+class="cmmi-10x-x-109">S</span><sub><span 
+class="cmmi-8">j</span></sub> <span 
+class="cmsy-10x-x-109">&#x2044;</span>= <span 
+class="cmsy-10x-x-109">&#x2205;</span>). A subset of pairwise intersecting segments corresponds to a clique in <span 
+class="cmmi-10x-x-109">G</span>, and a subset of
+pairwise disjoint segments corresponds to an independent set in <span 
+class="cmmi-10x-x-109">G </span>(an anti-clique also called a stable).
+Consider the complement graph <span class="bar-css"><span 
+class="cmmi-10x-x-109">G</span></span> = (<span 
+class="cmmi-10x-x-109">V,</span><span class="bar-css"><span 
+class="cmmi-10x-x-109">E</span></span>) where <span class="bar-css"><span 
+class="cmmi-10x-x-109">E</span></span> = <span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-45.png" alt="E" class="10-109x-x-45" />\</span><span 
+class="cmmi-10x-x-109">E</span>, with <span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-45.png" alt="E" class="10-109x-x-45" /> </span>= <span 
+class="cmsy-10x-x-109">{{</span><span 
+class="cmmi-10x-x-109">V</span> <sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">,V</span> <sub><span 
+class="cmmi-8">j</span></sub><span 
+class="cmsy-10x-x-109">}</span><span 
+class="cmmi-10x-x-109">&#x00A0; </span>: <span 
+class="cmmi-10x-x-109">&#x00A0;i </span><span 
+class="cmsy-10x-x-109">&#x2044;</span>= <span 
+class="cmmi-10x-x-109">j</span><span 
+class="cmsy-10x-x-109">} </span>the full
+edge set. <span class="bar-css"><span 
+class="cmmi-10x-x-109">G</span></span> is the <span 
+class="cmti-10x-x-109">disjointness graph</span>&#x00A0;<span class="cite">[<a 
+href="#XRamseySegment-2017">3</a>]</span> of the segments (i.e., an edge between nodes if and
+only if corresponding segments are disjoint), and we have <span 
+class="cmmi-10x-x-109">G </span><span 
+class="cmsy-10x-x-109">&#x222A;</span><span class="bar-css"><span 
+class="cmmi-10x-x-109">G</span></span> = <span 
+class="cmmi-10x-x-109">K</span><sub><span 
+class="cmmi-8">n</span></sub>, the clique of size
+<span 
+class="cmmi-10x-x-109">n</span>.
+<!--l. 37--><p class="indent" >   Ramsey-type theorems are characterizing the following types of questions: &#8220;How large a structure must
+be to guarantee a given property?&#8221; Surprisingly, complete disorder is impossible! That is, there always
+exists (some) order in structures!
+<!--l. 42--><p class="indent" >   Define the <span 
+class="cmbx-10x-x-109">Ramsey number </span><span 
+class="cmmi-10x-x-109">R</span>(<span 
+class="cmmi-10x-x-109">s,t</span>) as the minimum number <span 
+class="cmmi-10x-x-109">n </span>such that any graph with <span 
+class="cmsy-10x-x-109">|</span><span 
+class="cmmi-10x-x-109">V </span><span 
+class="cmsy-10x-x-109">| </span>= <span 
+class="cmmi-10x-x-109">n</span>
+nodes contains either an independent set of size <span 
+class="cmmi-10x-x-109">s </span>or a clique <span 
+class="cmmi-10x-x-109">K</span><sub><span 
+class="cmmi-8">t</span></sub> of size <span 
+class="cmmi-10x-x-109">t</span>.
+<!--l. 45--><p class="indent" >   One can prove that those Ramsey numbers are all <span 
+class="cmti-10x-x-109">finite</span>&#x00A0;<span class="cite">[<a 
+href="#XRamsey-2009">4</a>]</span> (by proving the recursive formula
+<span 
+class="cmmi-10x-x-109">R</span>(<span 
+class="cmmi-10x-x-109">s,t</span>) <span 
+class="cmsy-10x-x-109">&#x2264; </span><span 
+class="cmmi-10x-x-109">R</span>(<span 
+class="cmmi-10x-x-109">s </span><span 
+class="cmsy-10x-x-109">- </span>1<span 
+class="cmmi-10x-x-109">,t</span>) + <span 
+class="cmmi-10x-x-109">R</span>(<span 
+class="cmmi-10x-x-109">s,t </span><span 
+class="cmsy-10x-x-109">- </span>1) with terminal cases <span 
+class="cmmi-10x-x-109">R</span>(<span 
+class="cmmi-10x-x-109">s,</span>1) = <span 
+class="cmmi-10x-x-109">R</span>(1<span 
+class="cmmi-10x-x-109">,t</span>) = 1 for <span 
+class="cmmi-10x-x-109">s,t </span><span 
+class="cmsy-10x-x-109">&#x2265; </span>1), and that the
+following bound holds (due to the theorem of Erdös-Szekeres&#x00A0;<span class="cite">[<a 
+href="#XES-1935">2</a>]</span>):
+   <center class="math-display" >
+                                                                                         
+                                                                                         
+<img 
+src="RamseyLineSegment0x.png" alt="         (        )
+R (s,t) &#x2264;  s + t- 2  &#x003C; &#x221E;.
+            s- 1
+" class="math-display" ></center>
+<!--l. 52--><p class="indent" >   When <span 
+class="cmmi-10x-x-109">s </span>= <span 
+class="cmmi-10x-x-109">t</span>, <img 
+src="RamseyLineSegment1x.png" alt="(     )
+ s+st--12" > = <img 
+src="RamseyLineSegment2x.png" alt="(     )
+ 2(ss--11)" > is a central binomial coefficient that is upper bounded by 2<sup><span 
+class="cmr-8">2</span><span 
+class="cmmi-8">s</span></sup>.
+Therefore the diagonal Ramsey number <span 
+class="cmmi-10x-x-109">R</span>(<span 
+class="cmmi-10x-x-109">s</span>) = <span 
+class="cmmi-10x-x-109">R</span>(<span 
+class="cmmi-10x-x-109">s,s</span>) is upper bounded by 2<sup><span 
+class="cmr-8">2</span><span 
+class="cmmi-8">s</span></sup>. Furthermore, we have the
+following lower bound: 2<sup><img 
+src="RamseyLineSegment3x.png" alt="s2"  class="frac" align="middle"></sup> <span 
+class="cmmi-10x-x-109">&#x003C; R</span>(<span 
+class="cmmi-10x-x-109">s</span>) when <span 
+class="cmmi-10x-x-109">s </span><span 
+class="cmsy-10x-x-109">&#x2265; </span>3&#x00A0;<span class="cite">[<a 
+href="#XES-1935">2</a>]</span>. Thus <span 
+class="cmmi-10x-x-109">s </span><span 
+class="cmsy-10x-x-109">&#x2265;&#x230A;</span><img 
+src="RamseyLineSegment4x.png" alt="1
+2"  class="frac" align="middle"> log <sub><span 
+class="cmr-8">2</span></sub><span 
+class="cmmi-10x-x-109">n</span><span 
+class="cmsy-10x-x-109">&#x230B;</span>. Erdös proved using a probabilistic
+argument&#x00A0;<span class="cite">[<a 
+href="#XErdos-1947">1</a>]</span> that there exists a graph <span 
+class="cmmi-10x-x-109">G </span>such that <span 
+class="cmmi-10x-x-109">s </span><span 
+class="cmsy-10x-x-109">&#x2264; </span>2log <sub><span 
+class="cmr-8">2</span></sub><span 
+class="cmmi-10x-x-109">n </span>(<span 
+class="cmmi-10x-x-109">G </span>and <span class="bar-css"><span 
+class="cmmi-10x-x-109">G</span></span> do not contain <span 
+class="cmmi-10x-x-109">K</span><sub><span 
+class="cmmi-8">s</span></sub> subgraphs).
+It is proved in&#x00A0;<span class="cite">[<a 
+href="#XRamseySegment-2017">3</a>]</span> (2017) a much stronger result that <span 
+class="cmmi-10x-x-109">s </span>= &#x03A9;(<span 
+class="cmmi-10x-x-109">n</span><sup><img 
+src="RamseyLineSegment5x.png" alt="1
+5"  class="frac" align="middle"></sup>) for intersection graphs of line segments:
+Thus there are always &#x03A9;(<span 
+class="cmmi-10x-x-109">n</span><sup><img 
+src="RamseyLineSegment6x.png" alt="1
+5"  class="frac" align="middle"></sup>) pairwise disjoint or pairwise intersecting segments in a set of <span 
+class="cmmi-10x-x-109">n </span>segments in
+general position.
+<!--l. 60--><p class="indent" >   In general, one can consider a <span 
+class="cmbx-10x-x-109">coloring </span>of the edges of the clique <span 
+class="cmmi-10x-x-109">K</span><sub><span 
+class="cmmi-8">n</span></sub> into <span 
+class="cmmi-10x-x-109">c </span>colors, and asks for the
+largest <span 
+class="cmbx-10x-x-109">monochromatic clique </span><span 
+class="cmmi-10x-x-109">K</span><sub><span 
+class="cmmi-8">m</span></sub> in the edge-colored <span 
+class="cmmi-10x-x-109">K</span><sub><span 
+class="cmmi-8">n</span></sub>. For the pairwise disjoint/intersecting line
+segments, we have <span 
+class="cmmi-10x-x-109">c </span>= 2: Say, we color edges red when their corresponding segments intersect and blue,
+otherwise.
+<!--l. 65--><p class="indent" >   Ramsey&#8217;s theorem&#x00A0;<span class="cite">[<a 
+href="#XRamsey-2009">4</a>]</span> (1930) states that for all <span 
+class="cmmi-10x-x-109">c</span>, there exists <span 
+class="cmmi-10x-x-109">n </span><span 
+class="cmsy-10x-x-109">&#x2265; </span><span 
+class="cmmi-10x-x-109">m </span><span 
+class="cmsy-10x-x-109">&#x2265; </span>2 such that every <span 
+class="cmmi-10x-x-109">c</span>-coloring of
+<span 
+class="cmmi-10x-x-109">K</span><sub><span 
+class="cmmi-8">n</span></sub> has a monochromatic clique <span 
+class="cmmi-10x-x-109">K</span><sub><span 
+class="cmmi-8">m</span></sub>.
+<!--l. 68--><p class="indent" >   Let us conclude with the theorem on acquaintances (people who already met) and strangers (people
+who meet for the first time): In a group of six people, either at least three of them are pairwise mutual
+strangers or at least three of them are pairwise mutual acquaintances. Consider <span 
+class="cmmi-10x-x-109">K</span><sub><span 
+class="cmr-8">6</span></sub> (<span 
+class="cmmi-10x-x-109">n </span>= 6, 15 edges), and
+color an edge in red if the edge people already met and in blue, otherwise. Then there is a monochromatic
+triangle (<span 
+class="cmmi-10x-x-109">m </span>= 3). Proof: <span 
+class="cmmi-10x-x-109">R</span>(3) = <span 
+class="cmmi-10x-x-109">R</span>(3<span 
+class="cmmi-10x-x-109">,</span>3) <span 
+class="cmsy-10x-x-109">&#x2264;</span><img 
+src="RamseyLineSegment7x.png" alt="(4)
+ 2" > = 6.
+<!--l. 74--><p class="indent" >   Well, it is known that <span 
+class="cmmi-10x-x-109">R</span>(4) = 18 but <span 
+class="cmmi-10x-x-109">R</span>(5) is not known! We only know that 43 <span 
+class="cmsy-10x-x-109">&#x2264; </span><span 
+class="cmmi-10x-x-109">R</span>(5) <span 
+class="cmsy-10x-x-109">&#x2264; </span>48,
+102 <span 
+class="cmsy-10x-x-109">&#x2264; </span><span 
+class="cmmi-10x-x-109">R</span>(6<span 
+class="cmmi-10x-x-109">,</span>6) <span 
+class="cmsy-10x-x-109">&#x2264; </span>165, etc. Quantum computers&#x00A0;<span class="cite">[<a 
+href="#XQRamsey-2016">5</a>]</span> can be used to compute Ramsey numbers!
+<!--l. 79--><p class="indent" >   Initially created 27th November 2017 (last updated November 30, 2017).
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+   <div class="thebibliography">
+   <p class="bibitem" ><span class="biblabel">
+ [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XErdos-1947"></a>Paul Erdös. Some remarks on the theory of graphs. <span 
+class="cmti-10x-x-109">Bulletin of the American Mathematical</span>
+   <span 
+class="cmti-10x-x-109">Society</span>, 53(4):292&#8211;294, 1947.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XES-1935"></a>Paul  Erdös  and  George  Szekeres.   A  combinatorial  problem  in  geometry.   <span 
+class="cmti-10x-x-109">Compositio</span>
+   <span 
+class="cmti-10x-x-109">Mathematica</span>, 2:463&#8211;470, 1935.
+   </p>
+                                                                                         
+                                                                                         
+   <p class="bibitem" ><span class="biblabel">
+ [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XRamseySegment-2017"></a>J.&#x00A0;Pach, G.&#x00A0;Tardos, and G.&#x00A0;Toth.  Disjointness graphs of segments.  <span 
+class="cmti-10x-x-109">ArXiv e-prints</span>, April
+   2017.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [4]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XRamsey-2009"></a>Frank&#x00A0;P Ramsey. On a problem of formal logic. In <span 
+class="cmti-10x-x-109">Classic Papers in Combinatorics</span>, pages
+   1&#8211;24. Springer, 2009.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [5]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XQRamsey-2016"></a>Hefeng Wang. Determining Ramsey numbers on a quantum computer. <span 
+class="cmti-10x-x-109">Physical Review A</span>,
+   93(3), 2016.
+</p>
+   </div>
+    
+</body></html> 
+
+                                                                                         
+
+

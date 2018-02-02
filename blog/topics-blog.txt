@@ -1,0 +1,17 @@
+alpha-representation the Fisher Information Matrix
+potential function plot and immersion
+
+
+On the discontinuity of the Shannon information measures
+SW Ho, RW Yeung 
+
+
+integral rep of f-div
+
+Integral form of BD
+
+
+Divergences from graphs of convex functions (J, BD): two properties: below chord and above supporting hyperplane
+
+
+coarse-graining, lumping, from continuous to discrete
