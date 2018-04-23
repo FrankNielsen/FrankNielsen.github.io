@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Bregman proximity queries: Bregman nearest neighbors, Bregman ball trees, Bregman vantage point trees</title>
+</head>
+<body>
+<h1>Bregman proximity queries</h1>
+
+
+Problem: Given a query point, find the k nearest neighbors with respect to a Bregman divergence, or a symmetrized Bregman divergence (that is not of Bregman-type except for squared Mahalanobis distances).
+Bregman ball trees (BBTs) and Bregman Vantange Point treees (BVPTs) data structures have proved to be very effective for image retrieval applications.
+
+<BR>
+<center>
+<IMG SRC="bbtree-illustration.png" width="20%" ><BR>
+<HR>
+<IMG SRC="explore.png" width="20%" >
+<IMG SRC="prune.png" width="20%" >
+</center>
+
+<h2>C++ source codes</h2>
+<ul>
+<li><A HREF="bvp-tree_1.1.zip">bvp-tree_1.1.zip</A>: Bregman Vantage Point Tree (BVPT)
+<li><A HREF="bbtreepp.zip">bbtreepp.zip</A>: Bregman ball tree++
+</ul> 
+(developed by Paolo Piro)
+
+<h2>Illustrations for the BVPTs</h2>
+
+
+<table>
+ <tr>
+    <td>Bregman divergence</td>
+    <td>One point/leaf</td>
+    <td>Ten points/leaf</td>
+  </tr>
+  
+  <tr>
+    <td>L22 (squared Euclidean)</td>
+    <td><IMG SRC="vizbvp-L2-nbleaf1.png" width="50%" ></td>
+    <td><IMG SRC="vizbvp-L2-nbleaf10.png" width="50%" ></td>
+  </tr>
+  <tr>
+    <td>eKL (extended Kullback-Leibler)</td>
+    <td><IMG SRC="vizbvp-GKL-nbleaf1.png" width="50%" ></td>
+    <td><IMG SRC="vizbvp-GKL-nbleaf10.png" width="50%" ></td>
+  </tr>
+  <tr>
+    <td>Itakura-Saito</td>
+    <td></td>
+    <td><IMG SRC="vizbvp-ItakuraSait-nbleaf10.png" width="50%" >
+</td>
+  </tr> 
+  
+</table>
+
+Download all figures: <A HREF="BVPfigs.zip">BVPfigs.zip</A>.
+
+
+
+
+
+
+<h2>References</h2>
+<ul>
+<li>Frank Nielsen, Paolo Piro, Michel Barlaud: 
+<A HREF="2009-BregmanVantagePointTree-ICME.pdf" target="_blank">Bregman vantage point trees for efficient nearest Neighbor Queries,</A> 
+ICME 2009: 878-881
+
+<Li>Nielsen, Frank, Paolo Piro, and Michel Barlaud. 
+<A HREF="eurocgbbtree09-cr.pdf" target="_blank">Tailored Bregman ball trees for effective nearest neighbors<A>,
+ In Proceedings of the 25th European Workshop on Computational Geometry (EuroCG), pp. 29-32. 2009.  <A HREF="eurocg09_presentation.pdf" target="_blank">eurocg09_presentation.pdf</A>
+
+</ul> 
+</body>
+<HR>
+Frank Nielsen, last updated July 2016.
+</html>

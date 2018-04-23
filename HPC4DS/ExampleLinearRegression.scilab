@@ -1,0 +1,11 @@
+// filename: ExampleLinearRegression.scilab
+rand('seed',getdate('s'))
+x = -30:30;  a=0.8; b=5; y=a*x+b;
+// add a uniform noise
+mynoise=rand(1,61,'uniform')-0.5;
+y = y+10*mynoise;
+// call the linear regression in scilab
+[aa, bb] = reglin(x, y);
+// plot the result
+plot(x, y,'r+' );
+plot(x, a*x+b,'bo-')

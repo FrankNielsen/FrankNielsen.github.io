@@ -1,0 +1,21 @@
+Large-Scale Estimation of Mixture Models with Comix
+
+Olivier Schwander, Stéphane Marchand-Maillet, Frank Nielsen
+
+
+In this paper, we introduce the framework of co-mixture models dubbed comix. 
+This framework addresses the problem of learning simultaneously a large
+number of mixture models from different datasets. The goal of our
+framework is to exploit intrinsic similarities between datasets by
+sharing the parameters of the mixtures components among all the
+mixtures. We provide a set of algorithms to deal with this particular
+class of mixtures and show that the sharing of the parameters can bring
+interesting improvements for various computations. A first
+Expectation-Maximization-based method is derived to learn the parameters
+of a comix, one vector of common component parameters and a matrix of
+weights. A natural online extension is then proposed and analyzed.
+Finally we show how our method allows to design a fast version of the
+variational approximation of the Kullback-Leibler divergence. The
+proposed methods are experimentally validated on artificial data and on
+a dataset coming from a speaker authentication task.
+
