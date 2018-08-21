@@ -1,0 +1,924 @@
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for your "contribution" to a contributed volume
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[graybox]{svmult}
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+\usepackage{mathptmx}       % selects Times Roman as basic font
+\usepackage{helvet}         % selects Helvetica as sans-serif font
+\usepackage{courier}        % selects Courier as typewriter font
+\usepackage{type1cm}        % activate if the above 3 fonts are
+                            % not available on your system
+%
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+\newcommand{\bm}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\bms}[1]{\mbox{\scriptsize\boldmath $#1$}}
+
+% see the list of further useful packages
+% in the Reference Guide
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\title*{Statistical Manifolds Admitting Torsion and Partially Flat Spaces}
+\author{Masayuki Henmi and Hiroshi Matsuzoe}
+\institute{Masayuki Henmi \at The Institute of Statistical Mathematics,
+10-3 Midori-cho, Tachikawa, Tokyo 190-8562, Japan \\
+\email{henmi@ism.ac.jp}
+\and Hiroshi Matsuzoe \at Nagoya Institute of Technology,
+gokiso-cho, showa-ku, Nagoya, Aichi 466-8555, Japan \\
+\email{matsuzoe@nitech.ac.jp}}
+\maketitle
+
+\abstract{It is well-known that a contrast function defined on a product manifold 
+$M \times M$ induces a Riemannian metric and a pair of dual torsion-free affine 
+connections on the manifold $M$. This geometrical structure is called a statistical 
+manifold and plays a central role in information geometry.
+Recently, the notion of pre-contrast function has been introduced and shown to
+induce a similar differential geometrical structure on $M$, but one of the two dual
+affine connections is not necessarily torsion-free. This structure is called a statistical 
+manifold admitting torsion. The notion of statistical manifolds admitting torsion has
+been originally introduced to study a geometrical structure which appears in a quantum
+statistical model. However, it has been shown that an estimating function which is
+used in ``classical'' statistics also induces a statistical manifolds admitting torsion
+through its associated pre-contrast function.
+The aim of this paper is to summarize such previous results. In particular, we focus
+on a partially flat space, which is a statistical manifolds admitting torsion where one
+of its dual connections is flat. In this space, it is possible to discuss some properties     
+similar to those in a dually flat space, such as canonical a pre-contrast function and
+a generalized projection theorem.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:1}
+A statistical manifold is a Riemannian manifold with a pair of two dual torsion-free affine
+connections and it plays a central role in information geometry.
+This geometrical structure is induced from an asymmetric (squared) distance-like smooth
+function called a contrast function by taking its second and third derivatives \cite{E},
+\cite{Ma1}.
+The Kullback-Leibler divergence on a regular parametric statistical model is a typical
+example of contrast functions and its induced geometrical objects are the Fisher metric,
+the exponential and mixture connections. The geometrical structure determined by these
+objects plays an important role in the geometry of statistical inference, as is widely
+known \cite{AN}, \cite{A}.
+
+A statistical manifold admitting torsion (SMAT) is a Riemannian manifold with a pair of
+two dual affine connections, where only one of them must be torsion-free but the other
+is necessarily {\it not}. This geometrical structure naturally appears in a quantum
+statistical model (i.e. a set of density matrices representing quantum states) \cite{AN}
+and the notion of SMAT was originally introduced to study such a geometrical structure 
+from a mathematical point of view \cite{Ku2}. A pre-contrast function was subsequently
+introduced as a generalization for the first derivative of a contrast function and it was
+shown that an pre-contrast function induces a SMAT by taking its first and second
+derivatives \cite{Ma2}.
+
+In statistics, an estimating function is a function defined on a direct product of
+parameter and sample spaces, and it is used to obtain an estimator by solving its 
+corresponding estimating equation.
+Henmi and Matsuzoe \cite{HM} showed that a SMAT also appears in ``classical"
+statistics through an estimating function. More precisely, an estimating function
+naturally defines a pre-contrast function on a parametric statistical model and a
+SMAT is induced from it.
+
+This paper summarizes such previous results, focusing on a SMAT where one
+of its dual connections is flat. We call this geometrical structure a partially flat space.
+Although this space is different from a dually flat space in general since one of the
+dual connections in a SMAT has possibly torsion, some similar properties hold.
+For example, the canonical pre-contrast function can be naturally defined on a
+partially flat space, which is an analog of the canonical contrast function (or canonical
+divergence) in a dually flat space. In addition, a generalized projection theorem holds
+with respect to the canonical pre-contrast function. This theorem can be seen as a
+generalization of the projection theorem in a dually flat space.
+This paper is an extended version of the conference proceeding \cite{He}.
+We consider a statistical problem to see an example of statistical manifolds admitting
+torsion induced from estimating functions and discuss some future problems, both of
+which were not included in \cite{He}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% Statistical Manifolds and Contrast Functions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Statistical Manifolds and Contrast Functions}
+\label{sec:2}
+Through this paper, we assume that all geometrical objects on differentiable manifolds are
+smooth and restrict our attention to Riemannian manifolds, although the most of the concepts
+can be defined for semi-Riemannian manifolds.
+
+Let $(M,g)$ be a Riemannian manifold and $\nabla$ be an affine connection on $M$. The {\em
+dual connection} $\nabla^{\ast}$ of $\nabla$ with respect to $g$ is defined by
+%
+\begin{eqnarray*}
+   Xg(Y,Z) = g(\nabla_{X}Y, Z) + g(Y, \nabla^{\ast}_{X}Z) \ \ \
+   (\forall X,\forall Y,\forall Z \in {\cal X}(M))
+\end{eqnarray*}
+%
+where ${\cal X}(M)$ is the set of all vector fields on $M$.
+
+For a affine connection $\nabla$ on $M$, its curvature tensor field $R$ and torsion tensor
+field $T$ are defined by the following equations as usual:
+%
+\begin{eqnarray*}
+   R(X,Y)Z &:=& \nabla_{X}\nabla_{Y}Z - \nabla_{Y}\nabla_{X}Z - \nabla_{[X,Y]}Z, \\
+   T(X,Y) &:=& \nabla_{X}Y - \nabla_{Y}X - [X,Y]
+\end{eqnarray*}
+%
+($\forall X,\forall Y,\forall Z \in {\cal X}(M)$).
+It is said that an affine connection $\nabla$ is {\em torsion-free} if $T=0$.
+Note that for a torsion-free affine connection $\nabla$, $\nabla^{\ast}=\nabla$ implies
+that $\nabla$ is the Levi-Civita connection with respect to $g$.
+Let $R^{\ast}$ and $T^{\ast}$ be the curvature and torsion tensor fields of
+$\nabla^{\ast}$, respectively. It is easy to see that $R=0$ always implies $R^{\ast}=0$,
+but $T=0$ does not necessarily implies $T^{\ast}=0$.
+
+Let $\nabla$ be a torsion-free affine connection on a Riemannian manifold $(M,g)$.
+Following \cite{Ku1},
+we say that $(M,g,\nabla)$ is a {\em statistical manifold} if and only if $\nabla g$ is a
+symmetric $(0,3)$-tensor field, that is
+%
+\begin{eqnarray}\label{SM}
+   (\nabla_{X}g)(Y,Z) = (\nabla_{Y}g)(X,Z) \ \ \ (\forall X,\forall Y,\forall Z \in {\cal X}(M)).
+\end{eqnarray}
+%
+This condition is equivalent to $T^{\ast}=0$ under the condition that $\nabla$ is a torsion-free.
+If $(M,g,\nabla)$ is a statistical manifold, so is $(M,g,\nabla^{\ast})$ and it is called the
+{\em dual statistical manifold} of $(M,g,\nabla)$. Since $\nabla$ and $\nabla^{\ast}$ are both
+torsion-free for a statistical manifold $(M,g,\nabla)$, $R=0$ implies that
+$\nabla$ and $\nabla^{\ast}$ are both flat. In this case, $(M,g,\nabla,\nabla^{\ast})$ is called
+a {\em dually flat space} \cite{AN}.
+
+Let $\phi$ be a real-valued function on the direct product $M \times M$ of a manifold $M$
+and $X_1,...,X_i,Y_1,...,Y_j$ be vector fields on $M$. The functions
+$\phi[X_1,...,X_i|Y_1,...,Y_j]$, $\phi[X_1,...,X_i| \ ]$ and $\phi[ \ |Y_1,...,Y_j]$ on
+$M$ are defined by the equations
+%
+\begin{eqnarray}
+   \phi[X_1,\ldots,X_i | Y_1,\ldots,Y_j](r) &:=&
+   (X_1)_p \cdots (X_i)_p(Y_1)_q \cdots (Y_j)_q\phi(p,q)|_{p=r,q=r}, \label{Eguchi1} \\
+   \phi[X_1,\ldots,X_i | \ ](r) &:=&
+   (X_1)_p \cdots (X_i)_p\phi(p,r)|_{p=r}, \label{Eguchi2} \\
+   \phi[ \ |Y_1,\ldots,Y_j](r) &:=&
+   (Y_1)_q \cdots (Y_j)_q\phi(r,q)|_{q=r} \label{Eguchi3}
+\end{eqnarray}
+%
+for any $r \in M$, respectively \cite{E}.
+Using these notations, a {\em contrast function} $\phi$ on $M$ is defined to be a real-valued
+function on $M \times M$ which satisfies the following conditions \cite{E}, \cite{Ma1}:
+%
+\begin{eqnarray*}
+   &(a)& \phi(p,p) = 0 \ \ \ (\forall p \in M), \\
+   &(b)& \phi[X| \ ] = \phi[ \ |X] = 0 \ \ \ (\forall X \in {\cal X}(M)), \\
+   &(c)& \mbox{$g(X,Y) := -\phi[X|Y] \ \ (\forall X, \forall Y \in {\cal X}(M))$
+               is a Riemannian metric on $M$}.
+\end{eqnarray*}
+%
+Note that these conditions imply that
+%
+\begin{eqnarray*}
+   \phi(p,q) \ge 0, \ \ \phi(p,q) = 0 \Longleftrightarrow p=q
+\end{eqnarray*}
+%
+in some neighborhood of the diagonal set $\{(r,r) | r \in M\}$ in $M \times M$.
+Although a contrast function is not necessarily symmetric, this property means that
+a contrast function measures some discrepancy between two points on $M$ (at least locally).
+For a given contrast function $\phi$, the two affine connections $\nabla$ and $\nabla^{\ast}$ 
+are defined by
+%
+\begin{eqnarray*}
+   g(\nabla_{X}Y,Z) = -\phi[XY|Z], \ \
+   g(Y,\nabla^{\ast}_{X}Z) = -\phi[Y|XZ]
+\end{eqnarray*}
+%
+($\forall X, \forall Y, \forall Z \in {\cal X}(M)$).
+In this case, $\nabla$ and $\nabla^{\ast}$ are both torsion-free and dual to each other with
+respect to $g$. This means that both of $(M,g,\nabla)$ and $(M,g,\nabla^{\ast})$ are statistical
+manifolds. In particular, $(M,g,\nabla)$ is called the statistical manifold induced from the
+contrast function $\phi$.
+
+A typical example of contrast functions is the Kullback-Leibler divergence on a statistical model.
+Let
+$S=\{p(\bm{x};\bm{\theta}) \ | \ \bm{\theta}=(\theta^1,...,\theta^d) \in \Theta \subset \bm{R}^d\}$
+be a regular parametric statistical model, which is a set of probability density functions with
+respect to a dominating measure $\nu$ on a sample space $\Omega$. Each element is indexed by a
+parameter (vector) $\bm{\theta}$ in an open subset $\Theta$ of $\bm{R}^d$ and the set $S$ satisfies
+some regularity conditions, under which $S$ can be seen as a differentiable manifold. 
+The Kullback-Leibler divergence of the two density functions $p_1(\bm{x})=p(\bm{x};\bm{\theta}_1)$
+and $p_2(\bm{x})=p(\bm{x};\bm{\theta}_2)$ in $S$ is defined to be
+%
+\begin{eqnarray*}\label{KL}
+\phi_{KL}(p_1,p_2) := \int_{\Omega}p_2(\bm{x})\log\frac{p_2(\bm{x})}{p_1(\bm{x})}\nu(d\bm{x}).
+\end{eqnarray*}
+%
+It is easy to see that the Kullback-Leibler divergence satisfies the conditions $(a)$, $(b)$
+and $(c)$, and so it is a contrast function on $S$. Its induced Riemannian metric and dual
+connectins are Fisher metric $g^F$, the exponential connection $\nabla^{(e)}$ and mixture
+connection $\nabla^{(m)}$, respectively. They are given as follows:
+%
+\begin{eqnarray*}
+   &&g_{jk}^F(\bm{\theta}) := g^F(\partial_j,\partial_k)
+                            = E_{\bms{\theta}}\{s^j(\bm{x},\bm{\theta})s^k(\bm{x},\bm{\theta})\},
+                            \label{Fisher} \\
+   &&\left\{\begin{array}{l}
+               \Gamma_{ij,k}^{(e)}(\bm{\theta}) 
+               := g^F(\nabla_{\partial_i}^{(e)}\partial_j,\partial_k)
+                = E_{\bms{\theta}}[\{\partial_is^j(\bm{x},\bm{\theta})\}s^k(\bm{x},\bm{\theta})] \\
+               \Gamma_{ik,j}^{(m)}(\bm{\theta})
+               := g^F(\partial_j,\nabla_{\partial_i}^{(m)}\partial_k)
+                = \int_{\Omega}s^j(\bm{x},\bm{\theta})\partial_i\partial_kp(\bm{x};\bm{\theta})
+                  \nu(d\bm{x})
+            \end{array}
+     \right., \label{emconn}
+\end{eqnarray*}
+%
+where $E_{\bms{\theta}}$ indicates that the expectation is taken with respect to
+$p(\bm{x};\bm{\theta})$, $\partial_i=\frac{\partial}{\partial\theta^i}$ and
+$s^{i}(\bm{x};\bm{\theta})=\partial_{i}\log p(\bm{x};\bm{\theta}) \ (i=1,\ldots,d)$.
+As is widely known, this geometrical structure plays the most fundamental and important role
+in the differential geometry of statistical inference \cite{AN}, \cite{A}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% Statistical Manifolds Admitting Torsion and Pre-contrast Functions %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Statistical Manifolds Admitting Torsion and Pre-contrast Functions}
+\label{sec:3}
+A statistical manifold admitting torsion is an abstract notion for the geometrical structure
+where only one of the dual connections is allow to have torsion, which naturally appears in
+a quantum statistical model \cite{AN}. The definition is obtained by generalizing (\ref{SM})
+in the definition of statistical manifold as follows \cite{Ku2}.
+
+Let $(M,g)$ be a Riemannian manifold and $\nabla$ be an affine connection on $M$.
+We say that $(M,g,\nabla)$ is a {\em statistical manifold admitting torsion} (SMAT for short)
+if and only if
+%
+\begin{eqnarray}\label{SMAT}
+   (\nabla_{X}g)(Y,Z) - (\nabla_{Y}g)(X,Z) = -g(T(X,Y),Z) \ \ \
+   (\forall X,\forall Y,\forall Z \in {\cal X}(M)).
+\end{eqnarray}
+%
+This condition is equivalent to $T^{\ast}=0$ in the case where $\nabla$ possibly has torsion,
+and it reduces to (\ref{SM}) if $\nabla$ is torsion-free.
+Note that $(M,g,\nabla^{\ast})$ is not necessarily a statistical manifold although $\nabla^{\ast}$
+is torsion-free. It should be also noted that $(M,g,\nabla^{\ast})$ is a SMAT whenever a
+torsion-free affine connection $\nabla$ is given on a Riemannian manifold $(M,g)$.
+
+For a SMAT $(M,g,\nabla)$, $R=0$ does not necessarily imply that $\nabla$ is flat, but it
+implies that $\nabla^{\ast}$ is flat since $R^{\ast}=0$ and $T^{\ast}=0$. In this case,
+we call $(M,g,\nabla,\nabla^{\ast})$ a {\em partially flat space}.
+
+Let $\rho$ be a real-valued function on the direct product $TM \times M$ of a manifold
+$M$ and its tangent bundle $TM$, and $X_1,...,X_i,Y_1,...,Y_j,Z$ be vector fields on $M$.
+The function $\rho[X_1,...,X_iZ|Y_1,...,Y_j]$ on $M$ is defined by
+%
+\begin{eqnarray*}
+   \rho[X_1,\ldots,X_iZ | Y_1,\ldots,Y_j](r) := (X_1)_p \cdots (X_i)_p(Y_1)_q \cdots (Y_j)_q
+\rho(Z_p,q)|_{p=r,q=r}
+\end{eqnarray*}
+%
+for any $r \in M$.
+Note that the role of $Z$ is different from those of the vector fields in the notation of 
+(\ref{Eguchi1}). The functions $\rho[X_1,...,X_iZ| \ ]$ and $\rho[ \ |Y_1,...,Y_j]$ are also
+defined in the similar way to (\ref{Eguchi2}) and (\ref{Eguchi3}).
+
+We say that $\rho$ is a {\em pre-contrast function} on $M$ if and only if the following
+conditions are satisfied \cite{Ma2}, \cite{HM}:
+%
+\begin{eqnarray*}
+   &(a)& \rho(f_1X_1+f_2X_2,q) = 0 \ \
+         (\forall f_1, \forall f_2 \in C^{\infty}(M), \ \forall X_1, \forall X_2 \in {\cal X}(M), \ \forall q \in M). \\
+   &(b)& \rho[X| \ ] = 0 \ \ (\forall X \in {\cal X}(M)) \ \ \
+         \left({\it i.e.} \ \rho(X_p,p)=0 \ \ (\forall p \in M)\right). \\
+   &(c)& \mbox{$g(X,Y) := -\rho[X|Y] \ \ (\forall X, \forall Y \in {\cal X}(M))$
+               is a Riemannian metric on $M$}.
+\end{eqnarray*}
+%
+Note that for any contrast function $\phi$ on $M$, the function $\rho_{\phi}$ which is defined by 
+%
+\begin{eqnarray*}
+   \rho_{\phi}(X_p,q) := X_p\phi(\cdot,q) \ \ \ (\forall p, \forall q \in M, \ \forall X_p \in T_p(M))
+\end{eqnarray*}
+%
+is a pre-contrast function on $M$.
+The notion of pre-contrast function is obtained by taking the fundamental properties of the first
+derivative of a contrast function as axioms.
+For a given pre-contrast function $\rho$, two affine connections $\nabla$ and $\nabla^{\ast}$ are
+defined by
+%
+\begin{eqnarray*}
+   g(\nabla_{X}Y,Z) = -\rho[XY|Z], \ \ g(Y,\nabla^{\ast}_{X}Z) = -\rho[Y|XZ]
+\end{eqnarray*}
+%
+($\forall X, \forall Y, \forall Z \in {\cal X}(M)$) in the same way as a contrast function.
+In this case, $\nabla$ and $\nabla^{\ast}$ are dual to each other with respect to $g$ and
+$\nabla^{\ast}$ is torsion-free. However, the affine connection $\nabla$ possibly has
+torsion. This means that $(M,g,\nabla)$ is a SMAT and it is called the SMAT induced from
+the pre-contrast function $\rho$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% Canonical Pre-contrast functions in Partially Flat Spaces %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Canonical Pre-contrast Functions in Partially Flat Spaces}
+\label{sec:4}
+In a dually flat space $(M,g,\nabla,\nabla^{\ast})$, it is well-known that the canonical
+contrast functions (called $\nabla$ and $\nabla^{\ast}$- divergences) are naturally
+defined, and the Pythagorean theorem and the projection theorem are stated in terms of
+the $\nabla$ and $\nabla^{\ast}$- geodesics and the canonical contrast functions \cite{AN},
+\cite{A}.
+In a partially flat space $(M,g,\nabla,\nabla^{\ast})$, where $R=R^{\ast}=0$ and
+$T^{\ast}=0$, it is possible to define a pre-contrast function which can be seen as
+canonical, and a projection theorem holds with respect to the ``canonical" pre-contrast
+function and the $\nabla^{\ast}$-geodesic.
+%
+\begin{proposition}[Canonical Pre-contrast Functions]
+   Let $(M,g,\nabla,\nabla^{\ast})$ be a partially flat space (i.e. $(M,g,\nabla)$
+   is a SMAT with $R=R^{\ast}=0$ and $T^{\ast}=0$) and $(U,\eta_i)$ be an affine
+   coordinate neighborhood with respect to $\nabla^{\ast}$ in $M$.
+   The function $\rho$ on $TU \times U$ defined by
+%
+\begin{eqnarray}
+      \rho(Z_p, q) := - g_p(Z_p, \dot{\gamma}^{\ast}(0)) \ \ 
+      (\forall p, \forall q \in U, \forall Z_p \in T_p(U)), \label{canpre}
+\end{eqnarray}
+%
+is a pre-contrast function on $U$,
+where $\gamma^{\ast}:[0,1] \rightarrow U$ is the $\nabla^{\ast}$-geodesic such that
+$\gamma^{\ast}(0)=p, \gamma^{\ast}(1)=q$ and $\dot{\gamma}^{\ast}(0)$ is the tangent
+vector of $\gamma^{\ast}$ on $p$.
+Furthermore, the pre-contrast function $\rho$ induces the original Riemannian metric
+$g$ and the dual connections $\nabla$ and $\nabla^{\ast}$ on $U$.
+\end{proposition}
+%
+\begin{proof}%[of Proposition 1]
+   For the function $\rho$ defined as (\ref{canpre}), the condition $(a)$ in the definition
+   of pre-contrast functions follows from the bilinearity of the inner product $g_p$.
+   The condition $(b)$ immediately follows from $\dot{\gamma}^{\ast}(0)=0$ when $p=q$.
+   By calculating the derivatives of $\rho$ with the affine coordinate system $(\eta_i)$,
+   it can be shown that the condition $(c)$ holds and that the induced Riemannian metric
+   and dual affine connections coincide with the original $g$, $\nabla$ and $\nabla^{\ast}$.
+   \qed
+\end{proof}
+%
+In particular, if $(U,g,\nabla,\nabla^{\ast})$ is a dually flat space, the pre-contrast
+function $\rho$ defined in (\ref{canpre}) coincides with the directional derivative
+$Z_p\phi^{\ast}(\cdot,q)$ of $\nabla^{\ast}$-divergence $\phi^{\ast}(\cdot,q)$ with
+respect to $Z_p$ (cf. \cite{HK}, \cite{AA}).
+Hence, the definition of (\ref{canpre}) seems to be natural one and we call the function
+$\rho$ in (\ref{canpre}) the {\em canonical pre-contrast function} in a partially flat
+space $(U,g,\nabla,\nabla^{\ast})$.
+
+From the definition of the canonical pre-contrast function, we can immediately obtain
+the following theorem.
+%
+\begin{corollary}[Generalized Projection Theorem]
+   Let $(U,\eta_i)$ be an affine coordinate neighborhood in a partially flat space 
+   $(M,g,\nabla,\nabla^{\ast})$ and $\rho$ be the canonical pre-contrast function 
+   on $U$. For any submanifold $N$ in $U$, the following
+   conditions are equivalent:
+%
+\begin{eqnarray*}
+   &(i)& \mbox{The $\nabla^{\ast}$-geodesic starting at $q \in U$ is perpendicular to $N$
+               at $p \in N$}. \\
+   &(ii)& \ \rho(Z_p, q) = 0 \ \mbox{for any $Z_p$ in $T_p(N)$.} \label{gpthm}
+\end{eqnarray*}
+\end{corollary}
+%
+If $(U,g,\nabla,\nabla^{\ast})$ is a dually flat space, this theorem reduces to the
+projection theorem with respect to the $\nabla^{\ast}$-divergence $\phi^{\ast}$, since
+$\rho(Z_p, q)=Z_p\phi^{\ast}(\cdot,q)$.
+In this sense, it can be seen as a generalized version of the projection theorem in
+dually flat spaces, and this is also one of the reasons why we consider the pre-contrast
+function $\rho$ defined in (\ref{canpre}) as canonical.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% Statistical Manifolds Admitting Torsion Induced from Estimating Functions %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Statistical Manifolds Admitting Torsion Induced from Estimating Functions}
+\label{sec:5}
+As we mentioned in Introduction, a SMAT naturally appears through an estimating function in
+a ``classical" statistical model as well as in a quantum statistical model. In this section,
+we briefly explain how a SMAT is induced on a parametric statistical model from an estimating
+function. See \cite{HM} for more details.
+
+Let $S=\{p(\bm{x};\bm{\theta}) \ | \ \bm{\theta}=(\theta^1,...,\theta^d) \in \Theta \subset
+\bm{R}^d\}$ be a regular parametric statistical model.
+An estimating function on $S$, which we consider here, is a $\bm{R}^{d}$-valued function
+$\bm{u}(\bm{x},\bm{\theta})$ satisfying the following conditions:
+%
+\begin{eqnarray*}
+   E_{\bms{\theta}}\{\bm{u}(\bm{x},\bm{\theta})\} = \bm{0}, \ \
+   E_{\bms{\theta}}\{\|\bm{u}(\bm{x},\bm{\theta})\|^2\} < \infty, \ \
+   \det\left[E_{\bms{\theta}}\left\{\frac{\partial\bm{u}}{\partial\bm{\theta}}
+   (\bm{x},\bm{\theta})\right\}\right] \neq 0 \ \
+   (\forall\bm{\theta} \in \Theta).
+\end{eqnarray*}
+%
+The first condition is called the unbiasedness of estimating functions, which is important
+to ensure the consistency of the estimator obtained from an estimating function.
+Let $X_1,\ldots,X_n$ be a random sample from an unknown probability distribution
+$p(\bm{x};\bm{\theta}_0)$ in $S$. The estimator $\hat{\bm{\theta}}$ for $\bm{\theta}_0$
+is called an M-estimator if it is obtained as a solution to the estimating equation
+%
+\begin{eqnarray}\label{esteq}
+   \sum_{i=1}^{n}\bm{u}(\bm{X}_i,\bm{\theta}) = \bm{0}.
+\end{eqnarray}
+%
+The M-estimator $\hat{\bm{\theta}}$ has the consistency
+%
+\begin{eqnarray*}
+   \hat{\bm{\theta}} \longrightarrow \bm{\theta}_0 \ \ (\mbox{in probability})
+\end{eqnarray*}
+%
+as $n \rightarrow \infty$ and the asymptotic normality
+%
+\begin{eqnarray*}
+   \sqrt{n}(\hat{\bm{\theta}} - \bm{\theta}_0) \longrightarrow
+   N\left(\bm{0},{\rm Avar}\left(\hat{\bm{\theta}}\right)\right) \ \ (\mbox{in distribution})
+\end{eqnarray*}
+%
+as $n \rightarrow \infty$ under some additional regularity conditions \cite{V}, where
+${\rm Avar}(\hat{\bm{\theta}})$ is the asymptotic variance-covariance matrix of
+$\hat{\bm{\theta}}$ and is given by
+%
+\begin{eqnarray}\label{avar}
+   {\rm Avar}(\hat{\bm{\theta}}) = \{A(\bm{\theta}_0)\}^{-1}B(\bm{\theta}_0)
+                                   \{A(\bm{\theta}_0)\}^{-T} \label{avar}
+\end{eqnarray}
+%
+with $A(\bm{\theta}):=E_{\bms{\theta}}\left\{(\partial\bm{u}/\partial\bm{\theta})(\bm{x},\bm{\theta})\right\}$
+and $B(\bm{\theta}):=E_{\bms{\theta}}\left\{\bm{u}(\bm{x},\bm{\theta})\bm{u}(\bm{x},\bm{\theta})^T\right\}$.
+
+In order to induce the structure of SMAT on $S$ from an estimating function, we consider
+the notion of {\em standardization} of estimating functions. For an estimating function
+$\bm{u}(\bm{x},\bm{\theta})$, its standardization
+(or {\em standardized estimating function}) is defined by
+%
+\begin{eqnarray*}
+   \bm{u}_{\ast}(\bm{x},\bm{\theta})
+   := E_{\bms{\theta}}\left\{\bm{s}(\bm{x},\bm{\theta})\bm{u}(\bm{x},\bm{\theta})^T\right\}
+      \left[E_{\bms{\theta}}\left\{\bm{u}(\bm{x},\bm{\theta})\bm{u}
+      (\bm{x},\bm{\theta})^T\right\}\right]^{-1}\bm{u}(\bm{x},\bm{\theta}),
+\end{eqnarray*}
+%
+where $\bm{s}(\bm{x},\bm{\theta})=(\partial/\partial\bm{\theta})\log p(\bm{x};\bm{\theta})$
+is the score function for $\bm{\theta}$ \cite{H}.
+Geometrically, the $i$-th component of the standardized estimating function
+$\bm{u}_{\ast}(\bm{x},\bm{\theta})$ is the orthogonal projection of the $i$-th component of
+the score function $\bm{s}(\bm{x},\bm{\theta})$ onto the linear space spanned by
+all components of the estimating function $\bm{u}(\bm{x},\bm{\theta})$ in the Hilbert space
+%
+\begin{eqnarray*}
+   {\cal H}_{\bms{\theta}} := \{a(\bm{x}) \ | \ E_{\bms{\theta}}\{a(\bm{x})\} = 0, \
+                                E_{\bms{\theta}}\{a(\bm{x})^2\} < \infty\}
+\end{eqnarray*}
+%
+with the inner product
+$<a(\bm{x}), b(\bm{x})>_{\bms{\theta}}:=E_{\bms{\theta}}\{a(\bm{x})b(\bm{x})\} \
+(\forall a(\bm{x}), \forall b(\bm{x}) \in {\cal H}_{\bms{\theta}})$.
+The standardization $\bm{u}_{\ast}(\bm{x},\bm{\theta})$ of $\bm{u}(\bm{x},\bm{\theta})$ does
+not change the estimator since the estimating equation obtaind from
+$\bm{u}_{\ast}(\bm{x},\bm{\theta})$ is equivalent to the original estimating equation
+(\ref{esteq}).
+In terms of the standardization, the asymptotic variance-covariance matrix (\ref{avar}) can
+be rewritten as
+%
+\begin{eqnarray*}
+   {\rm Avar}(\hat{\bm{\theta}}) = \{G(\bm{\theta}_0)\}^{-1},
+\end{eqnarray*}
+%
+where $G(\bm{\theta}):=E_{\bms{\theta}}\left\{\bm{u}_{\ast}(\bm{x},\bm{\theta})\bm{u}_{\ast}
+(\bm{x},\bm{\theta})^T\right\}$.
+The matrix $G(\bm{\theta})$ is called a Godambe information matrix \cite{G}, which can be seen
+as a generalization of the Fisher information matrix.
+
+As we have seen in Section 2, the Kullback-Leibler divergence $\phi_{KL}$ is a contrast 
+function on $S$. Hence, the first derivative of $\phi_{KL}$ is a pre-contrast function on 
+$S$ and given by
+%
+\begin{eqnarray*}\label{preKL}
+   \rho_{KL}((\partial_j)_{p_1},p_2) 
+   := (\partial_j)_{p_1}\phi_{KL}(p_1,p_2)
+    = - \int_{\Omega}s^{j}(\bm{x},\bm{\theta}_1)p(\bm{x};\bm{\theta}_2)\nu(d\bm{x})
+\end{eqnarray*}
+%
+for any two probability distributions $p_1(\bm{x})=p(\bm{x};\bm{\theta}_1)$,
+$p_2(\bm{x})=p(\bm{x};\bm{\theta}_2)$ in $S$ and $j=1,\ldots,d$.
+This observation leads to the following proposition \cite{HM}.
+%
+\begin{proposition}[Pre-contrast Functions from Estimating Functions]
+   For an estimating function $\bm{u}(\bm{x},\bm{\theta})$ on the parametric model $S$,
+   a pre-contrast function $\rho_{\bms{u}}:TS \times S \rightarrow \bm{R}$ is defined by
+%
+   \begin{eqnarray}\label{preest}
+      \rho_{\bms{u}}((\partial_j)_{p_1},p_2) := 
+      - \int_{\Omega}u_{\ast}^j(\bm{x},\bm{\theta}_1)p(\bm{x};\bm{\theta}_2)\nu(d\bm{x})
+   \end{eqnarray}
+%
+   for any two probability distributions $p_1(\bm{x})=p(\bm{x};\bm{\theta}_1)$,
+   $p_2(\bm{x})=p(\bm{x};\bm{\theta}_2)$ in $S$ and $j=1,\ldots,d$, where
+   $u_{\ast}^j(\bm{x},\bm{\theta})$ is the $j$-th component of the standardization
+   $\bm{u}_{\ast}(\bm{x},\bm{\theta})$ of $\bm{u}(\bm{x},\bm{\theta})$.
+\end{proposition}
+%
+The use of the standardization $\bm{u}_{\ast}(\bm{x},\bm{\theta})$ instead of
+$\bm{u}(\bm{x},\bm{\theta})$ ensures that the definition of the function $\rho_{\bms{u}}$
+does not depend on the choice of coordinate system (parameter) of $S$.
+In fact, for a coordinate transformation (parameter transformation) 
+$\bm{\eta}=\Phi(\bm{\theta})$, the estimating function $\bm{u}(\bm{x},\bm{\theta})$ is
+changed into $\bm{v}(\bm{x},\bm{\eta})=\bm{u}(\bm{x},\Phi^{-1}(\bm{\eta}))$ and we have
+%
+\begin{eqnarray*}
+   \bm{v}_{\ast}(\bm{x},\bm{\eta}) = \left(\frac{\partial\bm{\theta}}{\partial\bm{\eta}}\right)^T
+                                     \bm{u}_{\ast}(\bm{x},\bm{\theta}).
+\end{eqnarray*}
+%
+This is the same as the transformation rule of coordinate bases on a tangent space of a
+manifold. The set of all components of the standardized estimating function
+$\bm{u}_{\ast}(\bm{x},\bm{\theta})$ can be seen as a representation of the coordinate 
+basis $\{(\partial_1)_p,\ldots,(\partial_d)_p\}$ on the tangent space $T_p(S)$ of $S$,
+where $p(\bm{x})=p(\bm{x};\bm{\theta})$.
+
+The proof of Proposition 2 is straightforward. In particular, the condition $(b)$ in the
+definition of pre-contrast function follows from the unbiasedness of the (standardized)
+estimating function.
+The Riemannian metric $g$, dual connections $\nabla$ and $\nabla^{\ast}$ induced from
+the pre-contrast function $\rho_{\bms{u}}$ are given as follows:
+%
+\begin{eqnarray*}
+   &&g_{jk}(\bm{\theta}) := g(\partial_j,\partial_k)
+                          = E_{\bms{\theta}}\{u_{\ast}^j(\bm{x},\bm{\theta})
+                            u_{\ast}^k(\bm{x},\bm{\theta})\}
+                          = G(\bm{\theta})_{jk}, 
+                          \label{Godambe} \\
+   &&\left\{\begin{array}{l}
+             \Gamma_{ij,k}(\bm{\theta}) := g(\nabla_{\partial_i}\partial_j,\partial_k)
+             = E_{\bms{\theta}}[\{\partial_iu_{\ast}^j(\bm{x},\bm{\theta})\}s^k(\bm{x},\bm{\theta})] \\
+             \Gamma^{\ast}_{ik,j}(\bm{\theta}) 
+             := g(\partial_j,\nabla^{\ast}_{\partial_i}\partial_k)
+              = \int_{\Omega}u_{\ast}^j(\bm{x},\bm{\theta})\partial_i\partial_kp(\bm{x};\bm{\theta})
+                \nu(d\bm{x})
+            \end{array}
+     \right., \label{dualconn}
+\end{eqnarray*}
+%
+where $G(\bm{\theta})_{jk}$ is the $(j,k)$ component of the Godambe information matrix 
+$G(\bm{\theta})$. Note that $\nabla^{\ast}$ is always torsion-free since 
+$\Gamma^{\ast}_{ik,j}=\Gamma^{\ast}_{ki,j}$, whereas $\nabla$ is not necessarily 
+torsion-free unless $\bm{u}_{\ast}(\bm{x},\bm{\theta})$ is integrable with respect to
+$\bm{\theta}$.
+
+If it is integrable and $\nabla$ is torsion-free, it is possible to construct a contrast
+function on $S$, from which the pre-contrast function $\rho_{\bms{u}}$ in (\ref{preest})
+is obtained by taking its first derivative, as follows:
+%
+\begin{eqnarray*}
+   \phi_{\bms{u}}(p_1,p_2) = \int_{\Omega}\left\{\psi(\bm{x},\bm{\theta}_1) - \psi(\bm{x},\bm{\theta}_2)
+                             \right\}p(\bm{x};\bm{\theta}_2)\nu(d\bm{x}),
+\end{eqnarray*}
+%
+where $\partial_j\psi(\bm{x},\bm{\theta})=u_{\ast}^j(\bm{x},\bm{\theta}) \ (j=1,\ldots,d)$
+and $p_l(\bm{x})=p(\bm{x};\bm{\theta}_l) \ (l=1,2)$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% Example %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Example}
+\label{sec:6}
+In this section, we consider the estimation problem of voter transition probabilities 
+described in \cite{MN} to see an example of statistical manifolds admitting torsion (SMAT) 
+induced from estimation functions.
+
+Suppose that we had two successive elections which were carried out in $N$ constituencies,
+and that the two political parties C and L contended in each election.
+The table below summarizes the numbers of voters in the $n$-th constituency for the respective
+elections. It is assumed that we can observe only the marginal totals $m_{1n}, m_{2n}, X_n$
+and $m_n-X_n$, where $X_n$ is only a random variable and the others are treated as fixed 
+constants.
+Let $\theta^1$ and $\theta^2$ be the probabilities that a voter who votes for the parties
+C and L in Election $1$ votes for C in Election $2$, respectively. They are the parameters
+of interest here. Then, the random variables $X_{1n}$ and $X_{2n}$ in Table $1$ independently
+follow the binomial distributions $B(m_{1n},\theta^1)$ and $B(m_{2n},\theta^2)$, respectively.
+
+\begin{table}
+\begin{center}
+\caption{Votes cast in the $n$-th constituency ($n=1,\ldots,N$)}
+\label{tab:1}
+\begin{tabular}{p{2cm}p{2cm}p{2cm}p{0.6cm}}
+Party & C & L & Total \\ 
+\noalign{\smallskip}\hline\noalign{\smallskip}
+C & $X_{1n}$ & $m_{1n}-X_{1n}$ & $m_{1n}$ \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+L & $X_{2n}$ & $m_{2n}-X_{2n}$ & $m_{2n}$ \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+Total & $X_n$ & $m_n-X_n$ & $m_n$ \\
+%\noalign{\smallskip}\hline\noalign{\smallskip}
+\end{tabular}
+\end{center}
+\end{table}
+
+\noindent
+In the $n$-th constituency, the probability function of the observation $X_n=X_{1n}+X_{2n}$ is given by
+%
+\begin{eqnarray*}
+   p_n(x_n;\bm{\theta}) = \sum_{x_{1n}=0}^{m_{1n}}\left(\begin{array}{c}
+                                                           m_{1n} \\
+                                                           x_{1n}
+                                                        \end{array}
+                                                  \right)
+                                                  \left(\begin{array}{c}
+                                                           m_{2n} \\
+                                                           x_n - x_{1n}
+                                                        \end{array}
+                                                  \right)
+                          \left(\theta^1\right)^{x_{1n}}\left(1 - \theta^1\right)^{m_{1n}-x_{1n}}
+                          \left(\theta^2\right)^{x_n-x_{1n}}\left(1 - \theta^2\right)^{m_{2n}-x_n+x_{1n}},
+\end{eqnarray*}
+%
+where $\bm{\theta}=\left(\theta^1,\theta^2\right)$.
+The statistical model $S$ in this problem consists of all possible probability functions of the observed data
+$\bm{X}=(X_1,\ldots,X_N)$ as follows:
+%
+\begin{eqnarray*}
+   S = \left\{p(\bm{x};\bm{\theta}) \left| \ \bm{\theta}=\left(\theta^1,\theta^2\right) \in (0,1) \times (0,1)\right.\right\},
+\end{eqnarray*}
+%
+where $p(\bm{x};\bm{\theta})=\prod_{n=1}^{N}p_n(x_n;\bm{\theta}) \ \left(\bm{x}=(x_1,\ldots,x_n)\right)$ since 
+$X_1,\ldots,X_n$ are independent.
+
+Although the maximum likelihood estimation for $\bm{\theta}$ is possible 
+based on the likelihood function $L(\bm{\theta})=p(\bm{X};\bm{\theta})$, it is a little complicated since 
+$X_{1n}$ and $X_{2n}$ are not observed in each $n$-th constituency. An alternative approach for estimating 
+$\bm{\theta}$ is to use the quasi-score function
+$\bm{q}(\bm{x},\bm{\theta})=(q^1(\bm{x},\bm{\theta}),q^2(\bm{x},\bm{\theta}))^T$ 
+\cite{MN} as an estimating function, where
+%
+\begin{eqnarray*}\label{conestfun}
+   q^1(\bm{x},\bm{\theta}) = \sum_{n=1}^{N}\frac{m_{1n}\{x_n - \mu_n(\bm{\theta})\}}{V_n(\bm{\theta})}, \
+   q^2(\bm{x},\bm{\theta}) = \sum_{n=1}^{N}\frac{m_{2n}\{x_n - \mu_n(\bm{\theta})\}}{V_n(\bm{\theta})}.
+\end{eqnarray*}
+%
+Here, $\mu_n(\bm{\theta})$ and $V_n(\bm{\theta})$ are the mean and variance of $X_n$, respectively, i.e.
+%
+\begin{eqnarray}
+   &&\mu_n(\bm{\theta}) = E(X_n) = m_{1n}\theta^1 + m_{2n}\theta^2 \label{mean} \\
+   &&V_n(\bm{\theta}) = V(X_n) = m_{1n}\theta^1\left(1-\theta^1\right) + m_{2n}\theta^2\left(1-\theta^2\right). \nonumber
+\end{eqnarray}
+%
+In this example, the random variables $X_1,\ldots,X_n$ in the observed data are independent, but not
+identically distributed. However, it is possible to apply the results in Section 5 by considering the
+left hand side of (\ref{esteq}) as an estimating function.
+Note that the estimating function $\bm{q}(\bm{x},\bm{\theta})$ is already standardized since
+the $i$-th component $q^i(\bm{x},\bm{\theta})$ of $\bm{q}(\bm{x},\bm{\theta})$ is obtained
+by the orthogonal projection of the $i$-th component of the score function $\bm{s}(\bm{x},\bm{\theta})$ 
+for $\bm{\theta}$ onto the linear space spanned by $\{x_1-\mu_1(\bm{\theta}),\ldots,x_N-\mu_N(\bm{\theta})\}$. 
+In fact, the orthogonal projection is calculated as follows:
+%
+\begin{eqnarray*}
+   &&E_{\bms{\theta}}\left\{\bm{s}(\bm{x},\bm{\theta})(\bm{x} - \bm{\mu}(\bm{\theta}))^T\right\}
+     \left[E_{\bms{\theta}}\left\{(\bm{x} - \bm{\mu}(\bm{\theta}))(\bm{x} - \bm{\mu}(\bm{\theta}))^T\right\}\right]^{-1}
+     (\bm{x} - \bm{\mu}(\bm{\theta})) \\
+   &=&
+      -E_{\bms{\theta}}\left\{\frac{\partial}{\partial\bm{\theta}^T}(\bm{x} - \bm{\mu}(\bm{\theta}))\right\}
+      \left[E_{\bms{\theta}}\left\{(\bm{x} - \bm{\mu}(\bm{\theta}))(\bm{x} - \bm{\mu}(\bm{\theta}))^T\right\}\right]^{-1}
+      (\bm{x} - \bm{\mu}(\bm{\theta})) \\
+   &=&
+      \left(\begin{array}{ccc}
+               m_{11} & \cdots & m_{1N} \\
+               m_{21} & \cdots & m_{2N}
+            \end{array}
+      \right)
+      \left(\begin{array}{ccc}
+               V_1(\bm{\theta}) & \cdots & 0 \\
+               \vdots               & \ddots & \vdots \\
+               0                       & \cdots & V_n(\bm{\theta})
+            \end{array}
+      \right)
+      \left(\begin{array}{c}
+               x_1 - \mu_1(\bm{\theta}) \\
+               \vdots \\
+               x_N - \mu_N(\bm{\theta})
+            \end{array}
+      \right)
+    = \left(\begin{array}{c}
+               q^1(\bm{x},\bm{\theta}) \\
+               q^2(\bm{x},\bm{\theta})
+            \end{array}
+      \right),
+\end{eqnarray*}
+%
+where $\bm{x}=(x_1,\ldots,x_N)^T$ and $\bm{\mu}(\bm{\theta})=(\mu_1(\bm{\theta}),\ldots,\mu_N(\bm{\theta}))^T$.
+In addition, the estimating function $\bm{q}(\bm{x},\bm{\theta})$ is not integrable with respect
+to $\bm{\theta}$ since $\partial q^1/\partial\theta^2 \neq \partial q^2/\partial\theta^1$.
+From Proposition 2 and the fact that $\bm{q}(\bm{x},\bm{\theta})$ itself is a standardized estimating function,
+we immediately obtain the pre-contrast function $\rho_q:TS \times S \rightarrow \bm{R}$
+defined by $\bm{q}(\bm{x},\bm{\theta})$, where
+%
+\begin{eqnarray*}
+   \rho_q((\partial_i)_{p_1},p_2) = -\sum_{\bms{x}}q^i(\bm{x},\bm{\theta}_1)p(\bm{x};\bm{\theta}_2)
+                                  = \sum_{n=1}^{N}\frac{m_{in}\{\mu_n(\bm{\theta}_1) - \mu_n(\bm{\theta}_2)\}}
+                                    {V_n(\bm{\theta}_1)}
+\end{eqnarray*}
+%
+with $p_l(\bm{x})=p(\bm{x};\bm{\theta}_l) \in S \ (l=1,2)$.
+The pre-contrast function $\rho_q$ induces the statistical manifold admitting torsion as follows. \\
+%
+Riemannian metric $g$:
+%
+\begin{eqnarray*}
+   g_{ij}(\bm{\theta}) = \sum_{\bms{x}}q^i(\bm{x},\bm{\theta})q^j(\bm{x},\bm{\theta})p(\bm{x};\bm{\theta})
+                       = \sum_{n=1}^{N}\frac{1}{V_n(\bm{\theta})}m_{in}m_{jn}.
+\end{eqnarray*}
+%
+Dual affine connections $\nabla^{\ast}$ and $\nabla$:
+%
+\begin{eqnarray*}
+   \Gamma_{ij,k}^{\ast}(\bm{\theta}) &=& \sum_{\bms{x}}\{\partial_i\partial_jp(\bm{x};\bm{\theta})\}
+                                         q^k(\bm{x},\bm{\theta}) \\
+                                     &=& \sum_{n=1}^{N}\frac{m_{kn}}{V_n(\bm{\theta})}
+                                         \left[\sum_{\bms{x}}x_n\{\partial_i\partial_jp(\bm{x};\bm{\theta})\}
+                                         - \mu_n(\bm{\theta})\sum_{\bms{x}}\{\partial_i\partial_jp(\bm{x};\bm{\theta})\}
+                                         \right] \\
+                                     &=& \sum_{n=1}^{N}\frac{m_{kn}}{V_n(\bm{\theta})}
+                                         \left[\partial_i\partial_j\sum_{\bms{x}}x_np(\bm{x};\bm{\theta})
+                                         - \mu_n(\bm{\theta})\partial_i\partial_j\sum_{\bms{x}}p(\bm{x};\bm{\theta})
+                                         \right] \\
+                                     &=& \sum_{n=1}^{N}\frac{m_{kn}}{V_n(\bm{\theta})}\partial_i\partial_j\mu_n(\bm{\theta})
+                                      = 0 \vspace{2mm} \ \ (\mbox{from (\ref{mean})}) \\
+   \Gamma_{ij,k}(\bm{\theta}) &=& \Gamma_{ij,k}^{\ast}(\bm{\theta}) - \partial_ig_{jk}(\bm{\theta}) \ \ 
+                                  (\mbox{from the duality between $\nabla$ and $\nabla^{\ast}$}) \\
+                              &=& \sum_{n=1}^{N}\frac{1-2\theta^i}{V_n(\bm{\theta})^2}m_{in}m_{jn}m_{kn}.
+\end{eqnarray*}
+%
+In this example, the statistical model $S$ is $\nabla^{\ast}$-flat since the coefficient of $\nabla$ 
+with respect to the parameter $\bm{\theta}$ is equal to zero.
+Furthermore, this shows that $\bm{\theta}$ provides an affine coordinate system for $\nabla$.
+Although the curvature tensor of $\nabla$ vanishes because the curvature tensor of $\nabla^{\ast}$
+vanishes and $\nabla$ is dual to $\nabla^{\ast}$, the statistical model $S$ is not $\nabla$-flat 
+because $\nabla$ is not torsion-free, which comes from the non-integrability of the estimating 
+function $\bm{q}(\bm{x},\bm{\theta})$.
+Hence, this geometrical structure provides an example of partially flat spaces, which was discussed
+in Section 4.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% Futute Problems %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Future Problems}
+\label{sec:6}
+In this paper, we have summarized existing results on statistical manifolds admitting
+torsion, especially focusing on partially flat spaces. Although some results that are not
+seen in the standard theory of information geometry have been obtained, including a
+generalized projection theorem in partially flat spaces and statistical manifolds admitting
+torsion induced from estimating functions in statistics, a lot of (essential) problems have
+been unsolved. We discuss some of them to conclude this paper.
+\vspace{3mm} \\
+%
+(1) The canonical pre-contrast function and the generalized projection theorem in a partially
+    flat spase $(M,g,\nabla,\nabla^{\ast})$ are described only in terms of the flat connection
+    $\nabla^{\ast}$. In this sense, it can be said that these are a concept and a theorem for
+    the Riemannian manifold $(M,g)$ with the flat connection $\nabla^{\ast}$. What is the role
+    of the affine connection $\nabla$ that has possibly torsion in the partially flat space
+    $(M,g,\nabla,\nabla^{\ast})$? \vspace{2mm} \\
+%
+(2) The canonical pre-contrast function is defined in terms of the Riemannian metric $g$ and
+    the $\nabla^{\ast}$-geodesic in a partially flat space $(U,g,\nabla,\nabla^{\ast})$
+    {\it without} using the affine coordinate system $(\eta_i)$ on $U$.
+    Hence, this concept can be defined in a general statistical manifold admitting torsion
+    $(M,g,\nabla)$ as long as the $\nabla^{\ast}$-geodesic uniquely exists.
+    What is the condition under which it is possible? What properties does the canonical 
+    pre-contrast function have in this case?
+    These problems are closely related to the works by \cite{HK} and \cite{AA}, who try to
+    define a canonical divergence (canonical contrast function) on a general statistical
+    manifold beyond a dually flat space. \vspace{2mm} \\
+%
+(3) Relationship between the canonical pre-contrast functions and pre-divergences defined from
+    the viewpoint of affine differential geometry. \vspace{2mm} \\
+%
+(4) The definition of pre-contrast functions from estimating functions is obtained by replacing
+    the score function which appears in the pre-contrast function as the derivative of
+    Kullback-Leibler divergence with the standardized estimating functions.
+    However, this is not the unique way to obtain a pre-contrast function from an estimating
+    function. For example, if we consider the $\beta$-divergence \cite{EK} (or density power
+    divergence \cite{BHHJ}) as a contrast function, its first derivative is also a pre-contrast
+    function and takes the same form as (\ref{preest}) in Proposition 2.
+    However, the estimating function which appears in the pre-contrast function is not
+    standardized. Although the standardization seems to be natural, further consideration is
+    necessary on how to define a pre-contrast function from a given estimating function. \vspace{2mm} \\
+%
+(5) For the example considered in Section 6,  we can show that the pre-contrast function
+     $\rho_{\bms{q}}$ coincides with the canonical pre-contrast function in the partially flat
+     space $(S,g,\nabla,\nabla^{\ast})$ and the generalized projection theorem (Corollary 1 
+     in Section 4) can be applied. However, its statistical meaning has not been clarified yet. 
+     Although it is expected that the SMAT induced from an estimating function has something
+     to do with statistical inference based on the estimating function, the clarification on it is 
+     a future problem.
+
+\begin{acknowledgement}
+This work was supported by JSPS KAKENHI Grant Number 15K00064.
+\end{acknowledgement}
+
+\begin{thebibliography}{99.}
+%
+\bibitem{E}
+Eguchi, S.:
+Geometry of minimum contrast.
+{\em Hiroshima Math. J.} \textbf{22}, 631-647 (1992)
+
+\bibitem{Ma1}
+Matsuzoe, H.:
+Geometry of contrast functions and conformal geometry.
+{\em Hiroshima Math. J.} \textbf{29}, 175-191 (1999)
+
+\bibitem{AN}
+Amari, S., Nagaoka, H.:
+{\em Method of Information Geometry}.
+Amer. Math. Soc., Providence, Oxford University Press, Oxford (2000)
+
+\bibitem{A}
+Amari, S.:
+{\em Information Geometry and Its Applications}. Springer (2016)
+
+\bibitem{Ku2}
+Kurose, T.:
+{\em Statistical Manifolds Admitting Torsion}.
+Geometry and Something, Fukuoka University (2007)
+
+\bibitem{Ma2}
+Matsuzoe, H.:
+{\em Statistical Manifolds Admitting Torsion and Pre-contrast Functions}.
+Information Geometry and Its Related Fields, Osaka City University (2010)
+
+\bibitem{HM}
+Henmi, M., Matsuzoe, H.:
+Geometry of pre-contrast functions and non-conservative estimating functions.
+{\em AIP Conference Proceedings} \textbf{1340}, 32-41 (2011)
+
+\bibitem{He}
+Henmi, M.:
+Statistical Manifolds Admitting Torsion, Pre-contrast Functions and Estimating
+Functions.
+{\em Lecture Notes in Computer Science} \textbf{10589}, 153-161 (2017)
+
+\bibitem{Ku1}
+Kurose, T.:
+On the divergences of 1-conformally flat statistical manifolds.
+{\em Tohoku Math. J.} \textbf{46}, 427-433 (1994)
+
+\bibitem{HK}
+Henmi, M., Kobayashi, R.:
+Hooke's law in statistical manifolds and divergences.
+{\em Nagoya Math. J.} \textbf{159}, 1-24 (2000)
+
+\bibitem{AA}
+Ay, N. and Amari, S.:
+A novel approach to canonical divergences within information geometry.
+{\em Entropy} \textbf{17}, 8111-8129 (2015)
+
+\bibitem{V}
+van der Vaart, A.W.:
+{\em Asymptotic Statistics}.
+Cambridge University Press (2000)
+
+\bibitem{H}
+Heyde, C.C.:
+{\em Quasi-Likelihood and Its Application}. Springer (1997)
+
+\bibitem{G}
+Godambe, V.:
+An optimum property of regular maximum likelihood estimation.
+{\em Ann. Math. Statist.} \textbf{31}, 1208-1211 (1960)
+
+\bibitem{MN}
+McCullagh, P., Nelder J.A.:
+{\em Generalized Linear Models} (2nd ed.).
+Chapman and Hall (1989)
+
+\bibitem{EK}
+Eguchi, S., Kano, Y.:
+Robustifying maximum likelihood estimation.
+{\em Research Memorandum of the Institute of Statistical Mathematics}
+\textbf{802} (2001)
+
+\bibitem{BHHJ}
+Basu, A., Harris, I.R., Hjort, N.L., Jones, M.C.:
+Robust and efficient estimation by minimizing a density power divergence.
+{\em Biometrika} \textbf{85}, 549-559 (1998)
+%
+\end{thebibliography}
+\end{document}

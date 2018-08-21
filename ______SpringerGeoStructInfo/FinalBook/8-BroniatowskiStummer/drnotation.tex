@@ -1,0 +1,809 @@
+\chapter*{List of Principal Notation}
+\addcontentsline{toc}{chapter}{\numberline{}List of Principal Notation}
+
+\thispagestyle{empty}
+
+
+\pagestyle{myheadings}
+\markboth{{\MakeUppercase{List of Principal Notation}}}{{\MakeUppercase{List of Principal Notation}}}
+
+
+%\chapter*[List of Principal Notation]{List of Principal Notation}
+
+%\begin{tabularx}{\linewidth}%
+%  {>{\setlength{\hsize}{.2 \hsize}}X%
+%   >{\setlength{\hsize}{1.8 \hsize}}X}
+
+%\begin{tabular}{@{}ll@{}}
+
+%\begin{longtable}{ll}
+% & \\
+%===== &  ======================= \\
+%Time variables &   \\
+%===== &  ======================= \\
+% & \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\large \bf Time Variables}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{longtable}{ll}
+
+$\obzeit$ &   fixed final time horizon, with value in $]\untzeit,\infty[$
+\\
+$\widetilde{\obzeit}$ &   varying final time horizon, with value in $]\untzeit,\infty[$ 
+\\
+$\fixezeit$ & merely used as fixed starting time 
+%in $[\untzeit,\infty[$ resp. $[\untzeit,\obzeit]$ 
+\\
+$\supzeit$ &  merely used as time for suprema
+%, with value in $[\untzeit,\infty[$ resp. $[\untzeit,\obzeit]$
+\\
+$\beschrzeit$ &  merely used as general descriptive
+ time
+%, with values in $[\untzeit,\infty[$ resp. $[\untzeit,\obzeit]$ 
+\\
+$\obbeschrzeit$ &  merely used as general descriptive time ($\geq \beschrzeit$)
+%, with values in $[\beschrzeit,\infty[$ resp. $[\beschrzeit,\obzeit]$ 
+\\
+$\intzeitv, \intzeitvei, \ldots$ &  time variables used for integration and products 
+\\
+$\evolzeitei,\evolzeitzw,\evolzeitdr,\evolzeitvi,\evolzeitfue$ & evolution times for upper integral bounds 
+\\
+$\tau$ &  stopping time (often a terminal time) 
+\\
+$(\stopfixezeit)_{\fixezeit \in [\untzeit,\infty[}$ &  special family of random times
+%, with values in  $[\fixezeit,\infty[$ 
+\\
+%$\sprunghzeit$ &  exponentially distributed jumping time 
+%\\
+$\fixezeit \wedge \obzeit := \min\{ \fixezeit, \obzeit \}$
+\\
+$\fixezeit \vee \obzeit := \max\{ \fixezeit, \obzeit \}$
+\\
+\end{longtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\large \bf Some Spaces, Domains, etc.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{longtable}{ll}
+
+$\TOPE$ & (auxiliary) topological space
+\\
+$\BOREL(\TOPE)$ & (auxiliary) Borel sigma-algebra on $\TOPE$
+\\
+$\RSPG$ & Radon measurable space 
+\\
+$\RSPGEI$ & sigma-algebra on $\RSPG$
+\\
+$\domD$ & domain in $\RSPG$ 
+\\
+$\borelsetZ$ & Borel subset of $\domD$ 
+\\
+$\opsM$ & open set in $\RSPG$ 
+\\
+%$\euspacedi$ & dimension of $\deucl$  
+%\\
+$\deucl$ & $\euspacedi-$dimensional Euclidean space;
+we write $\eieucl$ if $\euspacedi=1$ 
+\\
+$\eicompl$ & complex plane 
+\\
+$\NZ$ & set of strictly positive integers;  $\NZ_{0} := \NZ \cup \{0\}$
+%$= \ \{1,2,3 \ldots \}$  
+\\
+${\stetigerraum}([\untzeit,\obzeit],\deucl)$ &  space
+of all continuous functions from $\Bzi$ into $\deucl$
+\\
+$\RAZ_+$ & set of nonnegative rationals
+\\
+ 
+%% lange tabellen
+\end{longtable}
+%\end{tabularx}
+%\end{supertabular}
+%\end{tabular}
+
+
+% \neueseite
+
+
+%\begin{tabularx}{\linewidth}%
+%  {>{\setlength{\hsize}{.2 \hsize}}X%
+%   >{\setlength{\hsize}{1.8 \hsize}}X}
+
+%\begin{tabular}{@{}ll@{}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\large \bf Some Space Variables, and Connected Quantities}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{longtable}{ll}
+
+${{\dball}({\suppunkt},{\ballradius})}$ & ($\euspacedi-$dimensional) ball with center $\suppunkt$ and radius $\ballradius$
+\\
+ ${\drehmatrix}({\beschrzeit},{\intraumy})$ &   $3 \times 3$ - matrix, which depends on ${\beschrzeit} \in \Bzi$ and ${\intraumy} \in \deucl$
+\\
+${\sechspunkte}_{1},{\sechspunkte}_{2},\dots$ & a sequence of points in $\deucl$
+\\
+$\lebmass$ & one-dimensional Lebesgue measure
+\\
+$\intraumy$ & descriptive space variable, also used as integration variable
+\\
+$\coopK$ & complex number 
+\\
+$\intallgvs,\intallgvsei,\intallgvszw$ & integration variables
+\\
+$\intgrenzea$ & real number, used for integral bounds
+\\
+$\{{\siebrat}_0,{\siebrat}_1,{\siebrat}_2,\ldots\}$ & enumeration of some nonneggative rationals
+\\
+$\phi^{tr} $ & transposition of matrix or vector $\phi$
+\\
+$1_{\domD}({\intraumy})$ &  indicator function on a set ${\domD}$
+\\
+ 
+\end{longtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\large \bf Some Random Variables}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{longtable}{ll}
+
+$\sprungh$ & random jump height 
+\\
+$\Psprungh$ &  law of $\sprungh$ 
+\\
+$\EPsprungh$ &  expectation taken with respect to $\Psprungh$ 
+\\
+$\sprunghzeit$ & random jump time (for $\sprungh$) 
+\\
+\end{longtable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\large \bf   Some Constants, Variables  and Functions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{longtable}{ll}
+
+$\neunepsilon,\neunepsilonstr,\neunepsilon_{1},\neunepsilon_{2}, \ldots$ & strictly positive constants; merely indicating a  perturbation 
+\\
+$\siebkappa$ &  a constant
+\\
+$\siebG$ & lower bound for  an enumeration of some rationals
+\\
+$\siebeta,\siebetast$ & constants which indicate a multiple of an  
+\\
+$\ $ & (absolutely continuous) additive functional
+\\
+$\sumvari,\sumvarj,\neunk,\siebk,\neunn,\siebntil$ & (strictly) positive integers
+\\
+$\siebchi$ & non-negative real number (residual error) 
+\\
+$\KEI_{1}, \KEI_{2}, \ldots$ &  some constants 
+\\
+$\KZW_{1}, \KZW_{2}, \ldots$ & some constants 
+\\
+$\KDR_{1}, \KDR_{2}, \ldots$ & some constants 
+\\
+$\KPOW_{1}, \KPOW_{2}, \ldots$ & some constants; used for describing powers
+\\
+$\KHOELD_{1},\KHOELD_{2}, \ldots$ & some constants; used for describing powers  
+\\
+$\FUEI_{1}, \FUEI_{2}, \ldots$ & some functions 
+\\
+$\KBEW_{1}, \KBEW_{2}, \ldots$ & some  auxiliary constants or functions;  used in the proofs
+\\
+$({\achtmue}_{\sumvarj})$ & series of nonnegative numbers
+\\
+$\neunfug,\neunfuh$ & some functions
+\\
+%$\pertcoulombpo(\intraumy)$ & perturbed C
+%\\
+ 
+\end{longtable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%{\large \bf Operators}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{longtable}{ll}
+
+%%%%% alte bezeichnungen 
+
+%$\opK$ &  operators on $\univfu$ \\
+
+%$\opT_{\coopK}$ & resolvent ??? for complex number $\coopK$  \\
+
+%$\opP$ &  Markov kernel ??? \\
+
+
+%\end{longtable}
+
+
+%\neueseite
+
+
+%\begin{tabularx}{\linewidth}%
+%  {>{\setlength{\hsize}{.2 \hsize}}X%
+%   >{\setlength{\hsize}{1.8 \hsize}}X}
+
+%\begin{tabular}{@{}ll@{}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\large \bf Additive Functionals and Transforms}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{longtable}{ll}
+
+$\neunIADD{\fixezeit}{\beschrzeit}$ & nonnegative, right-continuous (w.r.t.\ $\beschrzeit$), inhomogeneous, 
+\\
+$\ $ & additive functional
+\\
+$\neunIADD{\fixezeit}{\beschrzeit} = \neunIADD{\fixezeit}{\beschrzeit}^{cont} + 
+\neunIADD{\fixezeit}{\beschrzeit}^{dis}$ & decomposition, where   $\LSCH^{cont}$ is the
+continuous part of  
+\\
+$\ $ & $\neunIADD{\fixezeit}{\cdot}$ and $\LSCH^{dis}$ is the purely
+discontinuous part 
+\\
+$\neunIADDN{\fixezeit}{\beschrzeit}{\neunn}$ & compensated $\neunn-$th power of $\LSCH$
+\\
+$\neunIWELADD{\fixezeit}{\beschrzeit}$ & transform of $\LSCH$; used for $\exp-$case  
+\\
+$\HSCH_{\fixezeit,\beschrzeit}$ & auxiliary additive functional
+\\
+$\neunHADD{\beschrzeit}$ & nonnegative, right-continuous, homogeneous, additive 
+\\
+$\ $ & functional
+\\
+$\neunHADDN{\beschrzeit}{\neunn}$ & compensated $\neunn-$th power of $\ASCH$
+\\
+$\neunHWELADD{\beschrzeit}$ & transform of $\ASCH$; used for $\exp-$case  
+\\
+$\neunSEXP{\big(}\neunIADD{\fixezeit}{\beschrzeit}{\big)}$ &   Stieltjes 
+(Doleans) exponential of $\LSCH$; analogously for $\ASCH$  
+\\
+$\neunSLOG{\big(}\neunIADD{\fixezeit}{\beschrzeit}{\big)}$ &   Stieltjes logarithm of $\LSCH$; analogously for $\ASCH$  
+\\
+ 
+\end{longtable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\large \bf Stochastic Processes -- Some General Notations for all four Set-Ups I, II, III, IV}
+
+Remark: All quantities in this notations-section,  which are indexed by I, are adapted to the set-ups
+II resp. III resp. IV by simply using the set-up symbol II resp. III resp. IV instead
+of I;
+some quantities, which are used for all four set-ups I to IV, are not indexed by the corresponding set-up symbol, for the sake of non-overloading formulae. Some special features for the
+set-ups I resp. II resp. III resp. IV are given in separate
+   notations-sections, afterwards. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{longtable}{ll}
+
+$(\OMEGAXE,\sialgebraXE)$  & basic measurable space, sample space 
+\\
+$(\XE_{\beschrzeit})$ & stochastic process on $(\OMEGAXE,\sialgebraXE)$ 
+\\
+$\sialgebraXE_{\fixezeit,\beschrzeit}$, $\sialgebraXE_{\beschrzeit}$ & filtrations for $\XE$ 
+\\
+$\suppunkt$ & starting point (e.g. at time $\fixezeit$) of the process $\XE$ 
+\\
+$\ $ & also used as an index for Markov families of laws $\IPFIXSUPXE$
+\\
+$\IPFIXSUPXE$ &  law of $\XE$ with starting time $\fixezeit$ and starting point $\suppunkt$  
+\\
+$\IEPFIXSUPXE$ & expectation taken with respect to $\IPFIXSUPXE$
+\\
+$\fixevert$ & starting (probab.) distribution (e.g.\ at time $\fixezeit$) of the process $\XE$ 
+\\
+$\fixevertH$ & some fixed starting distribution
+\\
+$\IPFIXFIXXE$ &  law of $\XE$ with starting time $\fixezeit$ and starting distribution $\fixevert$  
+\\
+$\IEPFIXFIXXE$ & expectation taken with respect to $\IPFIXFIXXE$
+\\
+$\diracmass_{\suppunkt}$ & Dirac measure concentrated at $\suppunkt$
+\\
+ 
+
+\end{longtable}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\bf Some Special Notations for Set-Up I}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{longtable}{ll}
+
+$(\XE_{\beschrzeit})$ & time-inhomogeneous right process on Radon space $\RSPG$ 
+\\
+$(\STXE_{\beschrzeit})$ & space-time version of $\XE$ 
+\\
+$\shiftXE_{\beschrzeit}$ & shift-operator for $\XE$; used for   homogeneous set-up 
+\\
+$\opP_{\fixezeit,\beschrzeit}$ &  family of Markov kernels of the process $\XE$ 
+\\
+$\sialgebraRI$ & sigma-algebra generated over $\neungrzi$ by the space-time  
+\\
+$\ $ & excessive functions associated with the Markov kernels $\opP_{\fixezeit,\beschrzeit}$ 
+\\
+$\univfu_{b}(\neungrzi,\eicompl)$  & class of all 
+complex-valued, bounded, ${\sialgebraRI}$-measurable  
+ 
+\\
+$\ $ & functions on $\neungrzi$
+\\
+$\opK$ &  operators on $\univfu_{b}(\neungrzi,\eicompl)$ 
+\\
+$\opT_{\coopK}$ & resolvent (at $\coopK$) of $\opK$  
+\\
+
+\end{longtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{
+\large 
+\bf Diffusion Processes (Set-Ups II, III, IV)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\bf Some General Notations for all Three Set-Ups II, III, IV}
+
+Remark: All quantities in this notations-section,  which are indexed by II, are adapted to the set-ups
+III resp. IV by simply using the set-up symbol III resp. IV instead
+of II;
+some quantities, which are used for all three set-ups II to IV, are not indexed by the corresponding set-up symbol, for the sake of non-overloading formulae. Some special features for the
+set-ups II resp. III resp. IV are given in separate 
+ notations-sections, afterwards. 
+
+\par
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{longtable}{ll}
+
+\hspace{-0.33cm} $\driftfuZ(\beschrzeit,\XZ_{\beschrzeit})$ & drift (vector, function)
+of the diffusion process $\XZ$
+\\
+\hspace{-0.33cm} $\driftfueiV({\beschrzeit})$ & auxiliary function for bounding the drift $\driftfuV({\beschrzeit}, {\intraumy})$
+\\
+\hspace{-0.33cm} $\driftfuzwV({\intraumy})$ & auxiliary function for bounding the drift $\driftfuV({\beschrzeit}, {\intraumy})$
+\\
+\hspace{-0.33cm} $\diffmatrixZ(\beschrzeit,X_{\beschrzeit})$ & diffusion matrix
+(function) of the diffusion process $\XZ$; cal-
+\\
+\hspace{-0.33cm} $\ $  &  led diffusion coefficient in case of one-dimensional state space 
+\\
+\hspace{-0.33cm} $\XZ$ & weak solution of the SDE $d\XZ_{\beschrzeit} \negthinspace \negthinspace = \negthinspace \driftfuZ(\beschrzeit,\XZ_{\beschrzeit}) d\beschrzeit + \diffmatrixZ(\beschrzeit,\XZ_{\beschrzeit}) d\WZ_{\beschrzeit}$    \\
+\hspace{-0.33cm} $\IQFIXSUPXZ$ & law of $\XZ$ in case of general $\driftfuZ$, living in time interval $[\fixezeit,\obzeit]$, 
+\\
+\hspace{-0.33cm} $\ $ & with starting point $\suppunkt$ 
+\\
+\hspace{-0.33cm} $\IQFIXFIXXZ$ & law of $\XZ$ in case of general $\driftfuZ$, living in time interval $[\fixezeit,\obzeit]$, 
+\\
+\hspace{-0.33cm} $\ $ & with starting distribution $\fixevert$ 
+\\
+\hspace{-0.33cm} $\WZ$ & Brownian motion (Wiener process) under the law $\IQFIXSUPXZ$ 
+\\
+\hspace{-0.33cm} $\ $  & resp. $\IQFIXFIXXZ$ 
+\\
+\hspace{-0.33cm} $\IEQFIXSUPXZ$ & expectation taken with respect to  $\IQFIXSUPXZ$ \\
+\hspace{-0.33cm} $\IEQFIXFIXXZ$ & expectation taken with respect to  $\IQFIXFIXXZ$ \\
+\hspace{-0.33cm} $\IQFIXEVOFIXXZ$ & the restriction of $\IQFIXSUPXZ$ to the smaller time 
+\\
+\hspace{-0.33cm} $\ $  & interval $[\fixezeit,(\fixezeit + \evolzeitei) \wedge \obzeit]$ 
+\\
+\hspace{-0.33cm} $\IEQFIXEVOFIXXZ$ & expectation taken with respect to  $\IQFIXEVOFIXXZ$ 
+\\
+\hspace{-0.33cm} $\XZ$ & also weak solution of the drift-less
+SDE $d\XZ_{\beschrzeit} \negthinspace \negthinspace = \negthinspace \diffmatrixZ({\beschrzeit},\XZ_{\beschrzeit}) d\WOVERZ_{\beschrzeit}$    
+\\
+\hspace{-0.33cm} $\IPFIXSUPXZ$ & law of $\XZ$ in case of $b \equiv 0$, living in time interval $[\fixezeit,\obzeit]$,
+\\
+\hspace{-0.33cm} $\ $ & with starting point $\suppunkt$ 
+\\
+\hspace{-0.33cm} $\IPFIXFIXXZ$ & law of $\XZ$ in case in case of $b \equiv 0$, living in time  
+\\
+\hspace{-0.33cm} $\ $ & interval $[\fixezeit,\obzeit]$, with starting distribution $\fixevert$ 
+\\
+\hspace{-0.33cm} $\WOVERZ$ & Brownian motion (Wiener process) under the law $\IPFIXSUPXZ$ 
+\\
+\hspace{-0.33cm} $\ $ & resp. $\IPFIXFIXXZ$ 
+\\
+\hspace{-0.33cm} $\IEPFIXSUPXZ$ & expectation taken with respect to  $\IPFIXSUPXZ$ \\
+\hspace{-0.33cm} $\IEPFIXFIXXZ$ & expectation taken with respect to  $\IPFIXFIXXZ$ \\
+\hspace{-0.33cm} $\IPFIXEVOFIXXZ$ & the restriction of $\IPFIXSUPXZ$ to the smaller time 
+\\
+\hspace{-0.33cm} $\ $ & interval $[\fixezeit,(\fixezeit + \evolzeitei) \wedge \obzeit]$ 
+\\
+\hspace{-0.33cm} $\IEPFIXEVOFIXXZ$ & expectation taken with respect to  $\IPFIXEVOFIXXZ$ 
+\\
+\hspace{-0.33cm} $\ZZ_{\fixezeit,\beschrzeit}$ & (Maruyama-) Girsanov density
+\\
+\hspace{-0.33cm} $\ZHZ_{\beschrzeit}$ & (Maruyama-) Girsanov density
+for time-homogeneous case
+\\
+\hspace{-0.33cm} $\ZDREZ_{\fixezeit,\beschrzeit}$ & (Maruyama-) Girsanov density
+for opposite direction
+\\
+\hspace{-0.33cm} $\ZDHREZ_{\beschrzeit}$ & (Maruyama-) Girsanov density
+for opposite direction, for 
+\\
+\hspace{-0.33cm} $\ $ & time-homogeneous case
+\\
+\hspace{-0.33cm} $\XZcomp{\sumvari}$ & $\sumvari-th$ coordinate of $\XZ$
+\\
+\hspace{-0.33cm} $\borelsetzweiZ$ & event in $\sialgebraXZ$
+\\
+\hspace{-0.33cm} $\Pi_{\beschrzeit}$ & projection (i.e. coordinate)  process
+\\
+ 
+\end{longtable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%{\bf Some Special Notations for Set-Up II}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{longtable}{ll}
+
+%\end{longtable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\bf Some Special Notations for Set-Up III}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{longtable}{ll}
+
+\hspace{-0.33cm} $\XD$ & weak solution of the $\euspacedi-$dimensional SDE $d\XD_{\beschrzeit} 
+\negthinspace \negthinspace = \negthinspace \driftfuD({\beschrzeit},\XD_{\beschrzeit}) d{\beschrzeit} + d\WD_{\beschrzeit}$  
+\\
+\hspace{-0.33cm} $\IPFIXSUPXD$ & Wiener measure, living in time interval $[\fixezeit,\obzeit]$, with starting point $\suppunkt$ 
+\\
+ 
+\end{longtable}
+
+\shakernewpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\bf Some Special Notations for Set-Up IV}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{longtable}{ll}
+
+\hspace{-0.33cm} $\volafu{\beschrzeit}$ & deterministic volatility function (in $\beschrzeit$) 
+\\
+\hspace{-0.33cm} $\volaco$ & a constant; used for constant volatility function $\volafu{\beschrzeit} \equiv \volaco$ 
+\\
+\hspace{-0.33cm} $\XV$ & weak solution of the one-dimensional SDE 
+\\
+\hspace{-0.33cm} $\ $ & $d\XV_{\beschrzeit} = \driftfuV({\beschrzeit},\XV_{\beschrzeit}) d{\beschrzeit} + \volafu{\beschrzeit} 
+\XV_{\beschrzeit} d\WV_{\beschrzeit}$ 
+%on the state space $\PRZ$ 
+\\
+\hspace{-0.33cm} $\IPFIXSUPXV$ & law of the drift-less geometric Brownian motion,  
+\\
+\hspace{-0.33cm} $\ $ & living in time interval $[\fixezeit,\obzeit]$, with starting point $\suppunkt$ 
+\\
+\hspace{-0.33cm} $p(\fixezeit,\suppunkt,{\intzeitv},{\intraumy})$ & transition density of the process $\XV_{\beschrzeit}$ under the measure $\IPFIXSUPXV$
+\\
+\hspace{-0.33cm} $\driftfutilV$ & transform of the drift $\driftfuV$
+\\ 
+\hspace{-0.33cm} $\XTILV_{\beschrzeit}$  & transform of $\XV_{\beschrzeit}$ (e.g. the discounted price process); weak solu-  
+\\
+\hspace{-0.33cm} $\ $ & tion
+of the one-dimens.\ SDE $d\XTILV_{\beschrzeit}\negthinspace  = \negthinspace \driftfutilV({\beschrzeit},\XTILV_{\beschrzeit}) d{\beschrzeit} 
++  \volafu{{\beschrzeit}}  \XTILV_{\beschrzeit}  
+d\WTILV_{\beschrzeit}$ 
+\\
+\hspace{-0.33cm} $\suppunkttil$ & starting point (price) for transformed (discounted) context
+\\
+\hspace{-0.33cm} $\fixeverttil$ & starting distribution for transformed (discounted) context
+\\
+\hspace{-0.33cm} $\IQFIXSUPTILXV$ & law of $\XTILV$ in case of general $\driftfutilV$, living in time interval $[\fixezeit,\obzeit]$, 
+\\
+\hspace{-0.33cm} $\ $ & with starting point $\suppunkttil$ 
+\\
+\hspace{-0.33cm} $\IQFIXFIXTILXV$ & law of $\XTILV$ in case of general $\driftfutilV$, living in time interval $[\fixezeit,\obzeit]$, 
+\\
+\hspace{-0.33cm} $\ $ & with starting distribution $\fixeverttil$ 
+\\
+\hspace{-0.33cm} $\WTILV$ & Brownian motion (Wiener process) under the law $\IQFIXSUPTILXV$ 
+\\
+\hspace{-0.33cm} $\ $ & resp. $\IQFIXFIXTILXV$ 
+\\
+\hspace{-0.33cm} $\IEQFIXSUPTILXV$ & expectation taken with respect to  $\IQFIXSUPTILXV$ 
+\\
+\hspace{-0.33cm} $\IEQFIXFIXTILXV$ & expectation taken with respect to  $\IQFIXFIXTILXV$ 
+\\
+\hspace{-0.33cm} $\XTILV_{\beschrzeit}$ & also weak solution of the drift-less
+SDE $d\XTILV_{\beschrzeit} =  \volafu{{\beschrzeit}} \XTILV_{\beschrzeit} d\WTILOVERV_{\beschrzeit} $    
+\\
+\hspace{-0.33cm} $\IPFIXSUPTILXV$ & law of $\XTILV$ in case of $b \equiv 0$, living in time interval $[\fixezeit,\obzeit]$, 
+\\
+\hspace{-0.33cm} $\ $ & with starting point $\suppunkttil$ 
+\\
+\hspace{-0.33cm} $\IPFIXFIXTILXV$ & law of $\XV$ in case in case of $b \equiv 0$, living in time interval $[\fixezeit,\obzeit]$, 
+\\
+\hspace{-0.33cm} $\ $ & with starting distribution $\fixeverttil$ 
+\\
+\hspace{-0.33cm} $\WTILOVERV$ & Brownian motion (Wiener process) under the law $\IPFIXSUPTILXV$ 
+\\
+\hspace{-0.33cm} $\ $ & resp. $\IPFIXFIXTILXV$ 
+\\
+\hspace{-0.33cm} $\IEPFIXSUPTILXV$ & expectation taken with respect to  $\IPFIXSUPTILXV$ 
+\\
+\hspace{-0.33cm} $\IEPFIXFIXTILXV$ & expectation taken with respect to  $\IPFIXFIXTILXV$ 
+\\
+\hspace{-0.33cm} $\widetilde{\ZV_{{\fixezeit},{\beschrzeit}}}$ & (Maruyama-) Girsanov density 
+ for transformed (discounted) 
+\\
+\hspace{-0.33cm} $\ $ & context
+\\
+\hspace{-0.33cm} $\widetilde{\ZVREV_{\fixezeit,\beschrzeit}}$ & (Maruyama-) Girsanov density  for  transformed (discounted)
+\\
+\hspace{-0.33cm} $\ $ &
+ context, for opposite direction
+\\
+\hspace{-0.33cm} $\widetilde{\ZVHREV_{{\beschrzeit}}}$ & (Maruyama-) Girsanov density
+for  transformed (discounted)  
+\\
+\hspace{-0.33cm} $\ $ & context, for opposite direction, for time-homogeneous case
+\\
+\hspace{-0.33cm} $\neuY_{\beschrzeit}$ & process of log-returns of $\XV_{\beschrzeit}$; used for Esscher transform 
+\\
+\hspace{-0.33cm} $\ $ & method
+\\
+
+\end{longtable}
+
+\shakernewpage 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\large \bf Divergences and Statistical Informations}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{longtable}{ll}
+
+\hspace{-0.33cm} $\divfuf$ & function used for $\divfuf-$divergence
+\\
+\hspace{-0.33cm} $\nu_1,\nu_2$ & probability measures for $\divfuf-$divergence,   having densities 
+\\
+\hspace{-0.33cm} $\ $ & $\rho_1$ and $\rho_2$ with respect to a dominating $\sigma-$finite measure $\nu$
+\\
+\hspace{-0.33cm} $\fdiv(\nu_1||\nu_2)$ & $\divfuf-$divergence of $\nu_1$ and $\nu_2$ 
+\\
+\hspace{-0.33cm} $\divpar$ & parameter used for $\alphdiv-$divergence
+\\
+\hspace{-0.33cm} $\divpartil$ & auxiliary version of $\divpar$
+\\
+\hspace{-0.33cm} $\alphdiv(\nu_1||\nu_2)$ & $\alphdiv-$divergence; 
+$\divfuf-$divergence with some special 
+\\
+\hspace{-0.33cm} $\ $ & function $\divfuf = \divfuf_{\divpar}$
+\\
+\hspace{-0.33cm} ${\priorpr}$ & prior probability
+\\
+\hspace{-0.33cm} ${\postpr}$ & posterior probability
+\\
+\hspace{-0.33cm} ${\distfuF}({\priorpr}), {\distfuF}_{\divpar}({\priorpr})$ & distribution functions, evaluated 
+at {\priorpr}
+\\
+\hspace{-0.33cm} $\classdommeas_{\divpar}$ & a class of prior-probability-weighting measures
+\\
+\hspace{-0.33cm} $\ $ & connected with ${\distfuF}_{\divpar}$
+\\
+\hspace{-0.33cm} ${\dommeas}_{\divpar}$ & a measure from $\classdommeas_{\divpar}$
+\\
+\hspace{-0.33cm} $\decpar$ & dichotomous decision parameter
+\\
+\hspace{-0.33cm} $\evdegree$ & degree of evidence
+\\
+\hspace{-0.33cm} $\ruleevdegree$ & corresponding decision rule
+\\
+\hspace{-0.33cm} ${\lossfusym}({\decpar},{\evdegree})$  & loss function
+\\
+\hspace{-0.33cm} ${\bayrisksym}_{\lossfusym}({\priorpr})$ & prior Bayes risk, from the optimal decision about the   
+\\
+\hspace{-0.33cm} $\ $ &
+degree of evidence ${\evdegree}$ concerning the parameter ${\decpar}$
+\\
+\hspace{-0.33cm} ${\bayrisksym}_{\lossfusym}({\priorpr} \ ||| \ \nu_1 , \nu_2)$ &
+posterior Bayes risk, from the optimal decision  about    
+\\
+\hspace{-0.33cm} $\ $ & the degree of evidence ${\evdegree}$ concerning the parameter ${\decpar}$  
+\\
+\hspace{-0.33cm} $\Delta {\bayrisksym}_{\lossfusym}{\big(}{\priorpr},\nu_1,\nu_2 {\big)}$ & statistical information measure; Bayes risk difference,     
+\\
+\hspace{-0.33cm} $\ $ & from the optimal decision about the degree of  
+\\
+\hspace{-0.33cm} $\ $ & evidence ${\evdegree}$ concerning the parameter ${\decpar}$
+\\
+\hspace{-0.33cm} ${\frequrisksym}({\decpar},{\ruleevdegree})$  & frequentist risk 
+\\
+\hspace{-0.33cm} ${\intrisksym}({\priorpr},{\ruleevdegree})$  & integrated risk  
+\\
+\hspace{-0.33cm} ${\lossfusym}_{0}({\decpar},{\evdegree})$ & special loss function;
+corresponds to a Bayesian 
+\\
+\hspace{-0.33cm} $\ $ & testing problem
+\\
+\hspace{-0.33cm} ${\bayrisksym}_0 := {\bayrisksym}_{{\lossfusym}_0}$ & 
+corresponding Bayes risk difference
+\\
+\hspace{-0.33cm} ${\lossfusym}_{\divpar,\zeta}({\decpar},{\evdegree})$ & special loss function
+\\
+\hspace{-0.33cm} ${\bayrisksym}_{\divpar,{\priorpr}} := {\bayrisksym}_{{\lossfusym}_{\divpar,{\priorpr}}}$ &
+corresponding Bayes risk difference
+\\
+\hspace{-0.33cm} $\fuenfUN,\fuenfUNH,\siebenUN$ & auxiliary sub-intervals of $]0,\infty[$; 
+used for the range of $\divpar$
+\\
+%\hspace{-0.33cm} $\fuenfAV,\fuenfAVH,\siebenAV$ & abbreviations for some average Bayes risk differences  
+%\\
+%\hspace{-0.33cm} $\fuenfAVZ,\fuenfAVZI,\siebenAVZI$ & abbreviations for some Bayes risk differences 
+%\\
+\hspace{-0.33cm} $H_0$ & hypothesis test, with alternative $H_1$
+\\
+
+
+\end{longtable}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%{\large \bf Mathematical Finance}
+{\large \bf Finance}
+
+
+Remark: All quantities in this notations-sections which are indexed by II, are adapted to the set-ups
+III resp. IV by simply using the set-up symbol III resp. IV instead
+of II;
+some quantities, which are used for all three set-ups II to IV, are not indexed by the corresponding set-up symbol, for the sake of non-overloading formulae.
+
+\par
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{longtable}{ll}
+
+
+\hspace{-0.33cm} $\market := \{\bankaccsym,\XZ\}$ & a market with  asset (vector) $\XZ$ and 
+\\
+\hspace{-0.33cm} $\ $ & a bond (or bank account) $\bankaccsym$
+\\
+\hspace{-0.33cm} $\XZ_{\beschrzeit}$ & asset price (vector) at time ${\beschrzeit}$
+\\
+\hspace{-0.33cm} $\bankaccsym_{\beschrzeit}$ & bond price  at time ${\beschrzeit}$
+\\
+\hspace{-0.33cm} $\tradingsymZ \negthinspace  := \negthinspace \{ \tradingbondsymZ, \tradingstockvecsymZ
+\}$ & trading strategy in the market $\market=(\bankaccsym,\XZ)$
+\\
+\hspace{-0.33cm} $\tradingbondZ{\beschrzeit}$ & number of shares of bond $\bankaccsym$ which are
+held at time $\beschrzeit$ 
+\\
+%\hspace{-0.33cm} $\tradingstockvecZ{\beschrzeit} :=
+%(\tradingstockeiZ{\beschrzeit}, \ldots, %\tradingstockdimZ{\beschrzeit})^{\transp}$, & where
+%$\tradingstocksumvariZ{\beschrzeit}$ is the number of shares of
+%the $\sumvari-th$ financial
+%\\
+%\hspace{-0.33cm} $\ $ & asset $\XZcomp{\sumvari}$ which are
+%held at time $\beschrzeit$
+%\\
+\hspace{-0.33cm} $\tradingstocksumvariZ{\beschrzeit}$ & number of shares of
+the $\sumvari-th$ financial asset $\XZcomp{\sumvari}$  
+\\
+\hspace{-0.33cm} $\ $ & which are
+held at time $\beschrzeit$
+\\
+\hspace{-0.33cm} $\tradingstockvecZ{\beschrzeit}$ & (column) vector of number of
+shares for the whole
+\\ 
+\hspace{-0.33cm} $\ $ &  asset vector $\XZ$
+\\
+
+%\shakernewpage
+
+\hspace{-0.33cm} $\portZ_{\beschrzeit}$ &  value at time $\beschrzeit$ of the
+portfolio $\portZ$ with respect to 
+\\
+\hspace{-0.33cm} $\ $ & the trading strategy $\tradingsymZ$
+\\
+\hspace{-0.33cm} $\GZ_{\beschrzeit}$ & gains process associated with trading strategy $\tradingsymZ$
+\\
+\hspace{-0.33cm} $\ddratenfucomp{\sumvari}_{\beschrzeit}$ & dividend yield,
+between time ${\beschrzeit}$ and ${\beschrzeit} + d{\beschrzeit}$, paid by the
+\\
+\hspace{-0.33cm} $\ $ &  ${\sumvari}-$th financial asset $\XZcomp{\sumvari}$ 
+\\
+\hspace{-0.33cm} $\ddratenfu_{\beschrzeit}$ & (column) vector of dividend yields
+for the whole
+\\ 
+\hspace{-0.33cm} $\ $ &  asset vector $\XZ$ 
+\\
+\hspace{-0.33cm} $\ddratenco$  & a constant; used for constant dividend yield  $\ddratenfucomp{\sumvari}_{\beschrzeit} \equiv \ddratenco$
+\\
+\hspace{-0.33cm} ${\zinsfu}_{\beschrzeit}$ & deterministic short rate process (in $\beschrzeit$) 
+\\
+\hspace{-0.33cm} $\zinsco$  & a constant; used for constant short rate process  ${\zinsfu}_{\beschrzeit} \equiv \zinsco$
+\\
+\hspace{-0.33cm} $\contingent$ & European (type) contingent claim
+\\
+\hspace{-0.33cm} $\valuecon_{\beschrzeit}$ & arbitrage-based price (risk-neutral value) of $\contingent$  at time ${\beschrzeit}$
+\\
+\hspace{-0.33cm} $\strikeprice$ & strike price of a European call option
+\\
+\hspace{-0.33cm} $\valueopt_{\beschrzeit}$ & arbitrage-based price (risk-neutral value) of  
+\\
+\hspace{-0.33cm} $\ $ & a European call option at time ${\beschrzeit}$
+\\
+\hspace{-0.33cm} $\bsN$ & distribution function of a standard normal distribution
+\\
+\hspace{-0.33cm} $\bsdeins,\bsdzwei$ & auxiliary real numbers, at which $\bsN$ is evaluated
+\\
+\hspace{-0.33cm} $\MV_{\beschrzeit}$ & auxiliary martingale; used for derivation of 
+$\valuecon_{\beschrzeit}$
+\\
+\hspace{-0.33cm} $\widetilde{\GV_{\beschrzeit}}$ & discounted gains process
+\\
+\hspace{-0.33cm} $L^{1}({\widetilde{\IPUNTXUNTXV}},
+\sialgebraXV_{\obzeit})$ & space of all ${\widetilde{\IPUNTXUNTXV}}-$integrable, $\sialgebraXV_{\obzeit}-$
+measurable  
+\\
+\hspace{-0.33cm} $\ $ & random variables     
+\\
+\hspace{-0.33cm} $\tameY$ & stochastic bound; used for tame trading strategies
+\\
+
+ \end{longtable}
+
+
+\clearemptydoublepage  % falls leeres Blatt am Ende, dann ohne Seitenummerierung
+
+
+
+
+
+
+
+
+

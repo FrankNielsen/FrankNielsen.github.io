@@ -1,0 +1,20 @@
+Author: Ting-Kam Leonard Wong
+Title of paper: Information geometry in portfolio theory
+
+
+Potential reviewers:
+
+1) Johannes Ruf (London School of Economics)
+johannes.ruf@gmail.com 
+
+2) Michael Monoyios (University of Oxford)
+monoyios@maths.ox.ac.uk
+
+3) Nihat Ay (Max Planck Institute)
+nay@mis.mpg.de
+
+4) Shun-Ichi Amari (RIKEN)
+amari@brain.riken.jp
+
+5) Tomoyuki Ichiba (UCSB)
+tomoyuki.ichiba@gmail.com 

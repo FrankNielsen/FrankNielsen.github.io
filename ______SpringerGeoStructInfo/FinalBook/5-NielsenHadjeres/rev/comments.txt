@@ -1,0 +1,6 @@
+Voici la revue de l'article.  Il y a quelques annotations que je n'ai pas pu effectuer:
+p. 13: utiliser les mêmes couleurs ou symboles pour les deux figures
+p. 21: une figure pour montrer aussi le clustering au niveau des paramètres
+p. 23: l'eq 118  où je ne comprends pas les notations, fig 7 où il faudrait expliquer la signification des flèches dans le diagramme.
+
+Sinon contrôle aussi mes corrections p.2 concernant les définitions des gradients \delta_i et delta_^i (les différences entre covariant et contravariant n'ont jamais été mon fort).

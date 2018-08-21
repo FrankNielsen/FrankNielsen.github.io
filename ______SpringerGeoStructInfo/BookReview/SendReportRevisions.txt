@@ -1,0 +1,21 @@
+[Geometric Structures of Information] Conditional acceptance of your book chapter
+
+Dear Colleague,
+
+We received the reports for your contribution to the Springer book "Geometric Structures of Information."
+Based on the Reviewer reports, we are pleased to accept your contribution provided you address all Reviewer comments.
+
+Please submit your revised draft by
+*** 30th June 2018 ***
+
+by sending an email to me with subject
+
+'[Geometric Structures of Information] Final zip: "paper title"'
+
+Include in a zip file (a) all necessary latex files (with all figures listed in a directory fig/) and (b) your compiled pdf chapter file.
+Please be sure to include all latex files so that we can recompile your chapter (including your potential macro files)
+and (c) attach a signed copyright form (see former emails).
+
+We are looking forward to receiving your revised work,
+
+Best regards, Frank Nielsen.

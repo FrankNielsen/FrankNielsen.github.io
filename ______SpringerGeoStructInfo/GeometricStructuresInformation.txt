@@ -1,0 +1,98 @@
+https://me.jhu.edu/faculty/gregory-s-chirikjian/
+gchirik1@jhu.edu
+
+
+Tom Fletcher and Miaomiao Zhang
+http://www.sci.utah.edu/~fletcher/publications.html
+fletcher@sci.utah.edu
+
+
+tsuda@k.u-tokyo.ac.jp
+r.nickl@statslab.cam.ac.uk
+---
+
+[Geometric Structures of Information] Call for book chapter
+
+Dear Colleague,
+
+We are currently working on editing a peer-reviewed Springer book focusing on "Geometric Structures of Information."
+The book shall be published in November 2018 by Springer in the same collection as "Matrix Information Geometry", see 
+http://www.springer.com/fr/book/9783642302312
+
+We already received a dozen nice proposals.
+I became familiar with your work and would like to sollicitate for your contribution.
+
+Therefore I kindly invite you to submit a chapter on either your original contribution or on a survey 
+(in the latter case, please state survey) with the following deadlines:
+
+Important dates:
+- 31st January: Title proposal 
+	(eventually with a short abstract, estimated page length, so that we can organize the overall structure of the book)
+
+- March 1st 2018: Submission due
+- 15th June 2018: Review feedback
+- 15th September 2018: Revised draft due
+- 15th October 2018: Acceptance notification
+- 15th November 2018: Camera-ready files due
+- March 1st 2019: Edited book published by Springer.
+
+We are looking forward to receiving your contribution.
+
+Best regards, Frank Nielsen.
+
+----
+
+Soumik Pal
+Zhang
+Naudts
+Hitoshi Furuhata
+Hiroshi Matsuzoe
+Atsumi Ohara
+Eguchi
+Wolfgang Stummer
+Hà Quang Minh
+Yannick
+Salem Said 
+Barbaresco
+Masayuki Henmi
+Stanley Durrleman
+Martin Bauer
+Florio M. Ciaglia
+John Armstrong
+Giovanni Pistone
+Amari
+
+soumikpal@gmail.com
+
+
+----
+
+
+Information Geometry Under Monotone Embedding
+
+Shape Analysis on Lie Groups and Homogeneous Spaces . . . . . . . . . . . . . . 49
+Elena Celledoni, Sølve Eidnes, Markus Eslitzbichler,
+and Alexander Schmeding
+
+A Sequential Structure of Statistical Manifolds on Deformed
+Exponential Family . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 223
+Hiroshi Matsuzoe, Antonio M. Scarfone, and Tatsuaki Wada
+
+
+On Affine Immersions of the Probability Simplex
+and Their Conformal Flattening . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 247
+Atsumi Ohara
+
+
+3D Insights to Some Divergences for Robust Statistics
+and Machine Learning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 460
+Birgit Roensch and Wolfgang Stummer
+
+
+Log-Determinant Divergences Between Positive Definite
+Hilbert-Schmidt Operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 505
+Hà Quang Minh
+
+
+Warped Metrics for Location-Scale Models . . . . . . . . . . . . . . . . . . . . . . . . 631
+Salem Said and Yannick Berthoumieu

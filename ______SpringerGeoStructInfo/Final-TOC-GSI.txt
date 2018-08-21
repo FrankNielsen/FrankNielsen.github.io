@@ -1,0 +1,45 @@
+
+
+12 chapters
+
+\begin{enumerate}
+
+\item ``Rho-Tau Embedding of Statistical Models''
+by Jan Naudts and Jun Zhang
+
+\item ``Information Geometry of Non-Parametric Exponential Models''
+by Luigi Montrucchio and Giovanni Pistone
+
+\item ``Statistical Manifolds Admitting Torsion and Partially Flat Spaces'' 
+by Masayuki Henmi and Hiroshi Matsuzoe
+
+\item ``Conformal Flattening on the Probability Simplex and its Applications to Voronoi Partitions and Centroids''
+by Atsumi Ohara
+
+\item ``Monte Carlo Information-Geometric Structures''
+by Frank Nielsen and Ga\"etan Hadjeres
+
+
+\item  ``Information Geometry in Portfolio Theory''
+by Ting-Kam Leonard Wong
+
+\item ``Generalising Frailty Assumptions in Survival Analysis: A Geometric Approach''
+by Vahed Maroufy and Paul Marriott
+
+\item  ``Some Universal Insights on Divergences for Statistics, Machine Learning and Artificial Intelligence''
+by Michel Broniatowski and Wolfgang Stummer
+
+\item ``Information-Theoretic Matrix Inequalities and Diffusion Processes on Unimodular Lie Groups''
+by Gregory S. Chirikjian
+
+\item ``Warped Riemannian Metrics for Location-Scale Models''
+by Salem Said, Lionel Bombrun, and Yannick Berthoumieu
+
+
+\item ``Clustering in Hilbert geometry: Two case studies in the probability simplex and in the elliptope''
+by Frank Nielsen and Ke Sun
+
+\item ``Jean-Louis Koszul and the Elementary Structures of Information Geometry''
+by Fr\'ed\'eric Barbaresco
+
+\end{enumerate}

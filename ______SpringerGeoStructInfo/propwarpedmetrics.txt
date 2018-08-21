@@ -1,0 +1,76 @@
+Bonjour Salem et Yannick,
+
+Merci d'avoir accepté de contribuer à un chapitre.
+J'ai relu (pour la 3eme fois) votre papier avec plus de recul suite a votre exposé.
+Ci-dessous quelques commentaires et références.
+
+Si vous êtes intéressé par collaborer dans la version longue, voici quelques extensions possibles pour la collaboration
+- Voronoi diagrams et ses applis en classification, test :
+https://www.youtube.com/watch?v=i9IUzNxeH4o&t=98s
+(je peux fournir le code et une vidéo)
+- parler de foliations
+- orthogonalisation et nuisance parameters de Fisher, elliptical distributions, multiply warped-product, etc.
+
+A bientôt, Frank.
+
+---
+
+# commentaires dans les actes:
+- mettre en underbrace I0 I1 dans (2) (3)
+- introduire plutot \mu que \bar{x} pour location?
+- introduire g_M et g_{\calM} et parler de infinitesimal elements ds (parles de bases duales?)
+- definir au début scale, concentration, dispersion
+- apres (9) c'est "squared Mahalanobis"
+- il manque une virgule dans (5), (17), (23)
+- en concl. il manque un espace entre prop 2 et 3
+
+# Refs à ajouter (suggestions) :
+
+
+@article{Hotelling-1930,
+  title={Spaces of statistical parameters},
+  author={Hotelling, Harold},
+  journal={Bull. Amer. Math. Soc},
+  volume={36},
+  pages={191},
+  year={1930},
+  note={First mention hyperbolic geometry for Fisher-Rao metric of location-scale family},
+ addnoteby={Frank Nielsen}
+}
+
+
+@article{Mitchell-1989information,
+  title={The information matrix, skewness tensor and $\alpha$-connections for the general multivariate elliptic distribution},
+  author={Mitchell, Ann ES},
+  journal={Annals of the Institute of Statistical Mathematics},
+  volume={41},
+  number={2},
+  pages={289--304},
+  year={1989},
+  publisher={Springer}
+}
+
+@article{Mitchell-1988,
+  title={Statistical manifolds of univariate elliptic distributions},
+  author={Mitchell, Ann FS},
+  journal={International Statistical Review/Revue Internationale de Statistique},
+  pages={1--16},
+  year={1988},
+	note={univariate location-scale families are univariate elliptic distributions},
+	addnoteby={Frank Nielsen}
+}
+
+
+@book{KassVos-1997,
+    author = {Kass, Robert E. and Vos, Paul W.},
+    day = {03},
+    howpublished = {Hardcover},
+    isbn = {0471826685},
+    keywords = {fisher-information, geometry, information, riemann-manifold},
+    month = jul,
+    publisher = {Wiley-Interscience},
+    title = {Geometrical Foundations of Asymptotic Inference},
+    year = {1997},
+    note={Fisher-Rao metric of location-scale family is hyperbolic (and can be diagonalized), pages 192--193},
+  addnoteby={Frank Nielsen}
+} 

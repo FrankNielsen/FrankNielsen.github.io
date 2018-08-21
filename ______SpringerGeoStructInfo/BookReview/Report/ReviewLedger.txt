@@ -1,0 +1,146 @@
+DATA-DRIVEN NONPARAMETRIC HYPOTHESIS TESTING
+Authors:	Yixian Liu, Shanghai Institute of Microsystem & Information Technology; University of Chinese Academy of Sciences; School of Information Science and Technology, China; Yingbin Liang, The Ohio State University, United States; Shuguang Cui, University of California, Davis; Shenzhen Research Institute of Big Data, United States
+
+https://en.wikipedia.org/wiki/Irving_Fisher
+
+https://www.ams.org/journals/tran/1925-027-03/S0002-9947-1925-1501317-8/S0002-9947-1925-1501317-8.pdfsai
+
+
+Harold Hotelling, problem solver
+http://www-history.mcs.st-andrews.ac.uk/Biographies/Hotelling.html
+http://www-groups.dcs.st-and.ac.uk/history/Biographies/Hotelling.html
+
+thesis "Three-Dimensional Manifolds of States of Motion" 
+
+1895 born
+1919 BA journalism, U of Washington
+1924 PhD topology, Princeton, advisor Oswald Veblen
+* Presented to the Society, San Francisco Section, October 25, 1924
+https://en.wikipedia.org/wiki/Oswald_Veblen
+http://www-history.mcs.st-andrews.ac.uk/Biographies/Veblen.html
+book Invariants of quadratic differential forms
+Oswald Veblen
+
+1924-27 Research associate Food Research Institute of Stanford U
+1927 Associate Professor in Math Dept of Stanford
+1929 six months with Sir Fisher / Metrization of statistics
+1931 Professor Economics Dep at Columbia U
+WWII Research group for war effort
+1946 U North Carolina, Statistics program
+1973
+
+
+----
+"deep learning" "information geometry" 260
+https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Matsukawa_Hierarchical_Gaussian_Descriptor_CVPR_2016_paper.pdf
+https://arxiv.org/pdf/1705.02891.pdf
+---
+1985 152 
+1990 376
+1995 874
+2000 1730
+2005 2960
+2010 3830
+
+"natural gradient" amari
+
+1996 474
+2000 1050
+2005 1220 
+2010 987
+2013 1090
+
+any time 11,000
+"computational geometry" 243,000
+"computer vision" 1,880,000
+"affine connection" 14,100 
+"frank nielsen" 1,300
+133 "computational information geometry"
+
+
+
+(sent) ok Maroufy-Marriott:  vahed.maroufy@uth.tmc.edu, pmarriot@uwaterloo.ca
+(OK+R) shinto.eguchi@gmail.com, 
+(OK+R) VOSP@ecu.edu, 
+j.b.Copas@stats.warwick.ac.uk, K.Anaya-Izquierdo@bath.ac.uk, 
+
+(sent) Naudts-Zhang:
+(OK+R) giovanni.pistone@carloalberto.org, 
+(OK+R) charles@ufc.br, (OK) Frank, 
+(OK+R) hadjeres.g@gmail.com, 
+(OK+R) shinto.eguchi@gmail.com ,  
+njn@essex.ac.uk,nay@mis.mpg.de,
+
+(sent) Chirikjian:
+(OK+R) Xavier.Pennec@inria.fr, 
+(OK+R)  pturaga@asu.edu, (NG) fcp@snu.ac.kr, (NG) rajenbhatia@gmail.com,frederic.barbaresco@thalesgroup.com,
+
+
+Statistical Manifolds Admitting Torsion and Partially Flat Spaces
+(sent) Henmi-Matsuzoe: henmi@ism.ac.jp matsuzoe@nitech.ac.jp
+(OK+R) eguchi@ism.ac.jp,  
+(OK+R) crg31562@kwansei.ac.jp, 
+(OK+R) ohara@u-fukui.ac.jp, 
+kanamori@c.titech.ac.jp, 
+(OK+R) pej@st-andrews.ac.uk, 
+
+(sent) Barbaresco:
+(OK+R) ruppeiner@ncf.edu,  Hector Quiceno romanquiceno@gmail.com (ok), 
+(OK+R) salem.said@u-bordeaux.fr, 
+fabrice.gamboa@math.univ-toulouse.fr, (bad email) h-shima@c-able.ne.jp, 
+(NG) malago@rist.ro, (NG) giovanni.pistone@carloalberto.org, rfvigelis@ufc.br, romanquiceno@gmail.com
+ Gabriel Loaiza,, Rui Vigelis or Charles Cavalcante
+
+
+
+(sent) ok Montrucchio Pistone:  luigi.montrucchio@unito.it, giovanni.pistone@carloalberto.org
+(OK+R) bertrand.lods@unito.it , 
+(OK+R) matsuzoe@nitech.ac.jp,  
+(OK+R) njn@essex.ac.uk, 
+(OK+R) barbara.trivellato@polito.it
+
+
+, 
+(OK+R) jan.naudts@uantwerpen.be ,
+
+(sent) Broniatowski-Stummer:  michel.broniatowski@sorbonne-universite.fr,  stummer@math.fau.de
+(OK+R) ayanbasu@isical.ac.in,  
+(OK+R) aida.toma@csie.ase.ro, 
+(OK+ R, light!) amor.keziou@univ-reims.fr, 
+friedrich.liese@uni-rostock.de, 
+(OK+R) kzograf@uoi.gr,
+
+
+
+(sent)  Said, Bombrun, Berthoumieu:
+salem.said@ims-bordeaux.fr,   lionel.bombrun@ims-bordeaux.fr, Yannick.Berthoumieu@ims-Bordeaux.fr 
+
+(OK+R) csm54@cam.ac.uk, 
+(OK+R) Gaetan
+(OK) jmanton@unimelb.edu.au,silvere.bonnabel@mines-paristech.fr,Jochen.Trumpf@anu.edu.au
+
+
+ 
+(sent) Ting-Kam Leonard Wong  Wong:
+Leonard Wong <tkleonardwong@gmail.com>
+(OK+R) johannes.ruf@gmail.com http://www.maths.lse.ac.uk/Personal/jruf/, 
+(OK+Wait) monoyios@maths.ox.ac.uk, 
+(OK+R) tomoyuki.ichiba@gmail.com , 
+(OK+R) hadjeres.g@gmail.com, 
+nay@mis.mpg.de,
+
+
+(sent) Ohara: ohara@u-fukui.ac.jp
+(OK+R) Frank, 
+(OK+R) matsuzoe@nitech.ac.jp, 
+smoosath@iist.ac.in (OK+R),  
+Richard.Nock@data61.csiro.au, (NG) crg31562@kwansei.ac.jp, 
+(6) (OK+R) hadjeres.g@gmail.com, 
+junz@umich.edu
+ 
+
+
+
+ 
+
+

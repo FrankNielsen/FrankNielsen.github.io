@@ -1,0 +1,20 @@
+\BOOKMARK [0][-]{section*.1}{Monte Carlo Information-Geometric Structures}{}% 1
+\BOOKMARK [0][-]{section*.1}{Frank Nielsen and Ga\353tan Hadjeres}{}% 2
+\BOOKMARK [1][-]{section.0.1}{Introduction}{section*.1}% 3
+\BOOKMARK [2][-]{subsection.0.1.1}{Dually flat space: Bregman geometry}{section.0.1}% 4
+\BOOKMARK [2][-]{subsection.0.1.2}{Geometry of statistical manifolds}{section.0.1}% 5
+\BOOKMARK [2][-]{subsection.0.1.3}{Computational tractability of dually flat statistical manifolds}{section.0.1}% 6
+\BOOKMARK [2][-]{subsection.0.1.4}{Paper organization}{section.0.1}% 7
+\BOOKMARK [1][-]{section.0.2}{Monte Carlo Information Geometry of Mixture Families}{section*.1}% 8
+\BOOKMARK [2][-]{subsection.0.2.1}{MCIG of Order-1 Mixture Family}{section.0.2}% 9
+\BOOKMARK [2][-]{subsection.0.2.2}{General D-order mixture case}{section.0.2}% 10
+\BOOKMARK [1][-]{section.0.3}{Monte Carlo Information Geometry of Exponential Families}{section*.1}% 11
+\BOOKMARK [2][-]{subsection.0.3.1}{MCIG of Order-1 Exponential Family}{section.0.3}% 12
+\BOOKMARK [2][-]{subsection.0.3.2}{The general D-order case}{section.0.3}% 13
+\BOOKMARK [1][-]{section.0.4}{Application to clustering}{section*.1}% 14
+\BOOKMARK [2][-]{subsection.0.4.1}{Clustering mixtures on the mixture family manifold}{section.0.4}% 15
+\BOOKMARK [2][-]{subsection.0.4.2}{Parallelizing information geometry}{section.0.4}% 16
+\BOOKMARK [1][-]{section.0.5}{Information-geometric structures induced by statistical separable divergences}{section*.1}% 17
+\BOOKMARK [1][-]{section.0.6}{Conclusion and perspectives}{section*.1}% 18
+\BOOKMARK [1][-]{section*.2}{References}{section*.1}% 19
+\BOOKMARK [1][-]{section.Alph0.7}{lse0+\(x\) is a Bregman generator}{section*.1}% 20

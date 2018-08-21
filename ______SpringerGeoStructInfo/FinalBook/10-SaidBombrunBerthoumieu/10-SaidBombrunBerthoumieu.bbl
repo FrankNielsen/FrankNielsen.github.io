@@ -1,0 +1,231 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{absil}
+Absil, P.A., Mahony, R., Sepulchre, R.: Optimization algorithms on matrix
+  manifolds.
+\newblock Princeton University Press, Princeton, NJ (2008)
+
+\bibitem{amari}
+Amari, S., Nagaoka, H.: Methods of information geometry.
+\newblock American Mathematical Society (2000)
+
+\bibitem{amaring}
+Amari, S.I.: Natural gradient works efficiently in learning.
+\newblock Neural Comput. \textbf{10}(2), 251--276 (1998)
+
+\bibitem{arnaudon}
+Arnaudon, M.: Semi-martingales dans les espaces homog\`enes.
+\newblock Annales de l'I.H.P. \textbf{29}(3), 269--288 (1993)
+
+\bibitem{miclo}
+Arnaudon, M., Miclo, L.: A stochastic algorithm finding generalized means on
+  compact manifolds.
+\newblock Stochastic. Process. Appl. \textbf{124}(10), 3463 -- 3479 (2014)
+
+\bibitem{atkinson}
+Atkinson, C., Mitchell, A.: Rao's distance measure.
+\newblock Sankhya Ser. A \textbf{43}, 345--365 (1981)
+
+\bibitem{jost}
+Ay, N., Jost, J., L{\^e}, H.V., Schwachh{\"o}fer, L.: Information geometry and
+  sufficient statistics.
+\newblock Probab. Theory Relat. Fields \textbf{162}(1), 327--364 (2015)
+
+\bibitem{bensadon}
+Bensadon, J.: Black-box optimization using geodesics in statistical manifolds.
+\newblock Entropy \textbf{17}(1), 304--345 (2015)
+
+\bibitem{bensadonth}
+Bensadon, J.: Applications of information theory to machine learning.
+\newblock Ph.D. thesis, {Universit{\'e} Paris-Saclay} (2016).
+\newblock \urlprefix\url{https://tel.archives-ouvertes.fr/tel-01297163}
+
+\bibitem{icip}
+Berthoumieu, Y., Bombrun, L., Said, S.: Classification approach based on the
+  product of {Riemannian} manifolds from {Gaussian} parameterization space.
+\newblock In: International Conference on Image Processing (ICIP) (2017)
+
+\bibitem{bishop}
+Bishop, R.L., O'NEILL, B.: Manifolds of negative curvature.
+\newblock Trans. Amer. Math. Soc. \textbf{145}, 1--49 (1969)
+
+\bibitem{bottou}
+Bottou, L., Curtis, F.E., Nocedal, J.: Optimization methods for large-scale
+  machine learning (2017).
+\newblock \urlprefix\url{http://arxiv.org/abs/1606.04838v2}
+
+\bibitem{chavel}
+Chavel, I.: Riemannian geometry, a modern introduction.
+\newblock Cambridge University Press, Cambridge, UK (2006)
+
+\bibitem{vemuri}
+Cheng, G., Vemuri, B.C.: A novel dynamic system in the space of {SPD} matrices
+  with applications to appearance tracking.
+\newblock SIAM J. Imaging Sci. \textbf{6}(1), 592--615 (2013)
+
+\bibitem{chentsov}
+Chentsov, N.N.: Statistical decision rules and optimal inference.
+\newblock American Mathematical Society, Providence, RI (1982)
+
+\bibitem{chikuse}
+Chikuse, Y.: Statistics on special manifolds, (Lecture Notes in Statistics,
+  174).
+\newblock Springer Science+Business Media, LLC (2003)
+
+\bibitem{docarmo}
+{Do Carmo}, M.P.: Riemannian geometry (second edition).
+\newblock Birkhauser, Boston (1992)
+
+\bibitem{multipl1}
+Dobarro, F., Unal, B.: Curvature of multiply warped products.
+\newblock J. Geom. Phys. \textbf{55}, 75--106 (2005)
+
+\bibitem{emery}
+Emery, M.: Stochastic Calculus in Manifolds.
+\newblock Springer-Verlag, Berlin Heidelberg (1980)
+
+\bibitem{estrade}
+Estrade, A.: Exponentielle stochastique et int\'egrale multiplicative
+  discontinues.
+\newblock Annales de l'I.H.P. \textbf{28}(1), 107--129 (1992)
+
+\bibitem{gallavotti}
+Gallavotti, G.: The elements of mechanics.
+\newblock Springer Science+Business Media, LLC, New York (1983)
+
+\bibitem{helgason}
+Helgason, S.: Differential geometry and symmetric spaces.
+\newblock Academic Press, New York and London (1962)
+
+\bibitem{hsu}
+Hsu, E.P.: Stochastic analysis on manifolds.
+\newblock American Mathematical Society, Providence, RI (2002)
+
+\bibitem{ikeda}
+Ikeda, N., Watanabe, S.: Stochastic differential equations and diffusion
+  processes.
+\newblock North-Holland Publishing Company, Amsterdam (1981)
+
+\bibitem{kallenberg}
+Kallenberg, O.: Foundations of modern probability (second edition).
+\newblock Springer-Verlag, New York (2001)
+
+\bibitem{platen}
+Kloeden, P.E., Platen, E.: Numerical Solution of Stochastic Differential
+  Equations.
+\newblock Springer, New York (2011)
+
+\bibitem{knapp}
+Knapp, A.W.: Lie groups beyond an introduction (second edition).
+\newblock Birkhauser, Boston (2002)
+
+\bibitem{lang}
+Lang, S.: Introduction to linear algebra (second edition).
+\newblock Springer-Verlag, New York (1986)
+
+\bibitem{lee}
+Lee, J.M.: Introduction to smooth manifolds (second edition).
+\newblock Springer Science+Business Media, New York (2012)
+
+\bibitem{lehman}
+Lehmann, E.L., Romano, J.P.: Testing statistical hypotheses (third edition).
+\newblock Springer Science+Business Media, Inc., New York (2005)
+
+\bibitem{liao}
+Liao, E.: L\'evy processes on {L}ie groups.
+\newblock Cambridge University Press, Cambridge, UK (2004)
+
+\bibitem{lue}
+Luenbeger, D.G.: Linear and nonlinear programming (second edition).
+\newblock Addison-Wesley publishing company, Reading, MA (1973)
+
+\bibitem{jupp}
+Mardia, K.V., Jupp, P.E.: Directional statistics.
+\newblock John Wiley \& Sons, Ltd., Chichester (2002)
+
+\bibitem{marsden}
+Marsden, J.E., Ratiu, T.: Manifolds, tensor analysis, and applications.
+\newblock Springer-Verlag Publishing Company Inc., New York (2001)
+
+\bibitem{martens}
+Martens, J.: New insights and perspectives on the natural gradient method
+  (2017).
+\newblock \urlprefix\url{http://arxiv.org/abs/1412.1193v8}
+
+\bibitem{maclahlan}
+{McLachlan}, G.J.: Discriminant analysis and statistical pattern recognition.
+\newblock John Wiley \& Sons, Inc., Hoboken (2004)
+
+\bibitem{igo}
+Ollivier, Y., Arnold, L., Auger, A., Hansen, N.: Information geometric
+  optimization algorithms\,: a unifying picture via invariance principles.
+\newblock J. Mach. Learn. Res. \textbf{18}(18), 1--65 (2017)
+
+\bibitem{oneil}
+O'{Neill}, B.: Semi-{R}iemannian geometry with applications to relativity.
+\newblock Academic Press, San Diego, California (1983)
+
+\bibitem{pennec2}
+Pennec, X., Fillard, P., Ayache, N.: A {Riemannian} framework for tensor
+  computing.
+\newblock Int. J. Comput. Vision \textbf{66}(1), 41--66 (2006)
+
+\bibitem{petersen}
+Petersen, P.: Riemannian geometry (second edition).
+\newblock Springer Science+Business Media, LLC, New York (2006)
+
+\bibitem{said1}
+Said, S., Bombrun, L., Berthoumieu, Y., Manton, J.H.: Riemannian {Gaussian}
+  distributions on the space of symmetric positive definite matrices.
+\newblock IEEE. Trans. Inf. Theory \textbf{63}(4), 2153--2170 (2017)
+
+\bibitem{said2}
+Said, S., Hajri, H., Bombrun, L., Vemuri, B.C.: Gaussian distributions on
+  {Riemannian} symmetric spaces\,: statistical learning with structured
+  covariance matrices.
+\newblock IEEE. Trans. Inf. Theory \textbf{64}(2), 752--772 (2018)
+
+\bibitem{spanier}
+Spanier, E.H.: Algebraic topology.
+\newblock Springer-Verlag New York, Inc., New York (1966)
+
+\bibitem{terras2}
+Terras, A.: Harmonic analysis on symmetric spaces and applications, Vol. II.
+\newblock Springer-Verlag, New York (1988)
+
+\bibitem{multipl2}
+Unal, B.: Doubly warped products.
+\newblock Differential Geom. Appl. \textbf{15}, 253--263 (2001)
+
+\bibitem{watson}
+Watson, G.N.: A treatise on the theory of {B}essel functions.
+\newblock Cambridge University Press, Cambridge, UK (1922)
+
+\bibitem{nes}
+Wierstra, D., Schaul, T., Glasmachers, T., Sun, Y., Peters, J., Schmidhuber,
+  J.: Natural evolution strategies.
+\newblock J. Mach. Learn. Res. \textbf{15}(1), 949--980 (2014)
+
+\bibitem{inference}
+Young, G.A., Smith, R.L.: Essentials of statistical inference.
+\newblock Cambridge University Press, Cambridge, UK (2005)
+
+\bibitem{paolomix}
+Zanini, P., Said, S., Berthoumieu, Y., Congedo, M., Jutten, C.: Riemannian
+  online algorithm for estimating mixture model parameters.
+\newblock In: Geometric Science of Information (GSI) (2017)
+
+\bibitem{paolo}
+Zanini, P., Said, S., Congedo, M., Berthoumieu, Y., Jutten, C.: Parameter
+  estimates of {R}iemannian {G}aussian distributions in the manifold of
+  covariance matrices.
+\newblock In: Sensor Array and Multichannel Signal Processsing Workshop (SAM)
+  (2016)
+
+\end{thebibliography}

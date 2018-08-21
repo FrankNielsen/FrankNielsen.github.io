@@ -1,0 +1,35 @@
+I enjoyed reading the paper although I recommend the Author added some figures and label all equations. 
+How to define reference duality in this context?
+I recommend to accept this chapter.
+
+---
+
+In Sec 1 "a concluding remark" (remove s)
+Is simplex open or not?
+Define star notation in (1)
+In Sec 2 after [5] remove , in (,
+In assumption 2, define subscript vs superscript notation
+In assump. 3 (sign definite = non-zero ?)
+before (6), why is it called "geometric divergence" explain meaning of geometric here (immersion?)
+In Eq 7, typo ?
+After Eq 9, you can also mention the conformal divergence:
+Nielsen, Frank, and Richard Nock. "Total Jensen divergences: definition, properties and clustering." Acoustics, Speech and Signal Processing (ICASSP),
+ 2015 IEEE International Conference on. IEEE, 2015.
+
+Page 6, explain "projectively flat"
+label examples ex1 ex2 in Sec 2.4
+
+Page 8, one-to-one functional. See
+Nielsen, Frank, and Richard Nock. "On R\'enyi and Tsallis entropies and divergences for exponential families." arXiv preprint arXiv:1105.3259 (2011).
+
+
+Page 9, upper envelope (add a e)
+
+It is very nice to have the appendix.
+
+For beginners, please explain eq 19: right quantity seems scalar and left vector field
+How R depends on $\nabla$?
+
+P14: define pregeodesic
+meaning of $*$ in A.2 ?
+

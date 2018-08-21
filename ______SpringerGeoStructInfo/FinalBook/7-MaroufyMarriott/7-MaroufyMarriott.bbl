@@ -1,0 +1,150 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{Anaya-Izquierdo2013a}
+Anaya-Izquierdo, K., Critchley, F., Marriott, P.: When are first order
+  asymptotics adequate? a diagnostic.
+\newblock Stat \textbf{3}(1), 17--22 (2013)
+
+\bibitem{Anaya2016CIG}
+Anaya-Izquierdo, K., Critchley, F., Marriott, P., Vos, P.: The geometry of
+  model sensitivity: an illustration.
+\newblock In: Computational Information Geometry: For Image and Signal
+  Processing. Springer (2016)
+
+\bibitem{Anaya-Izquierdo2007}
+Anaya-Izquierdo, K., Marriott, P.: Local mixture models of exponential
+  families.
+\newblock Bernoulli \textbf{13}, 623--640 (2007)
+
+\bibitem{anaya2007local}
+Anaya-Izquierdo, K., Marriott, P.: local mixture of the exponential
+  distribution.
+\newblock Annals of the Insti. Math. Statist. \textbf{59}(1), 111--134 (2007)
+
+\bibitem{Breslow1972}
+Breslow, N.: Contribution to the discussion on the paper of {C}ox (1972).
+\newblock Biom \textbf{34}, 216--217 (1972)
+
+\bibitem{Clayton1978}
+Clayton, D.G.: A model for association in bivariate life tables and its
+  application in epidemiological studies of familial tendency in chronic
+  disease incidence.
+\newblock Biometrika \textbf{65}(1), 141--151 (1978)
+
+\bibitem{Cook2007}
+Cook, R.J., Lawless, J.F.: The statistical analysis of recurrent events  (2007)
+
+\bibitem{copas2005local}
+Copas, J., Eguchi, S.: Local model uncertainty and incomplete-data bias (with
+  discussion).
+\newblock Journal of the Royal Statistical Society: Series B (Statistical
+  Methodology) \textbf{67}(4), 459--513 (2005)
+
+\bibitem{Cox1972}
+Cox, D.R.: Regression models and life-tables.
+\newblock Journal of the Royal Statistical Society B \textbf{34}, 187--200
+  (1972)
+
+\bibitem{critchley2017information}
+Critchley, F., Marriott, P.: Information geometry and its applications: An
+  overview.
+\newblock In: Computational Information Geometry: For Image and Signal
+  Processing, pp. 1--31. Springer (2017)
+
+\bibitem{Eleber1982}
+Eleber, C., Ridder, G.: True and spurious duration dependence: The
+  identifiability of the proportional hazard model.
+\newblock Review of Economic Studies \textbf{49}, 403--409 (1982)
+
+\bibitem{Gorfine2006}
+Gorfine, M., Zucher, D.M., Hsu, L.: Prospective survival analysis with general
+  semiparametric shared frialty model: A pseudo full likelihood approach.
+\newblock Biometrika \textbf{93}(3), 735--741 (2006)
+
+\bibitem{Henderson2002}
+Henderson, R., Shimakura, S., Gorst, D.: Modeling partial variation in leukemia
+  survival data.
+\newblock Journal of the American Statistical Association \textbf{97}(460),
+  965--972 (2002)
+
+\bibitem{Horowitz2010}
+Horowitz, J.L.: Semiparametric and Nonparametric Methods in Econometrics.
+\newblock Springer (2010)
+
+\bibitem{Hougaard1986a}
+Hougaard, P.: Survival models for heterogeneous population derived from stable
+  distributions.
+\newblock Biometrika \textbf{73}(2), 387--396 (1986)
+
+\bibitem{Hougaard1995}
+Hougaard, P.: Frailty models for survival data.
+\newblock Lifetime data analysis \textbf{1}(3), 255--273 (1995)
+
+\bibitem{Hsu2004}
+Hsu, L., Chen, L., Gorfine, M., Malone, K.: Semiparametric estimation of
+  marginal hazard function from case-control family studies.
+\newblock Biometrics \textbf{60}, 936--944 (2004)
+
+\bibitem{Johansen1983}
+Johansen, S.: An extension of {C}ox's regression model.
+\newblock International Statistical Review \textbf{51}, 258--262 (1983)
+
+\bibitem{Klein1992}
+Klein, J.P.: Semiparametric estimation of random effects using cox model based
+  on the em algorithm.
+\newblock Biometrics \textbf{48}, 795--806 (1992)
+
+\bibitem{Lawless1981}
+Lawless, J.F.: Statistical Models and Methods for Lifetime Data.
+\newblock Wiley (1981)
+
+\bibitem{Lindsay1995}
+Lindsay, B.G.: Mixture Models: Theory, Geometry and Applications.
+\newblock Inst of Mathematical Statistics (1995)
+
+\bibitem{Maroufy2015}
+Maroufy, V., Marriott, P.: Computing boundaries in local mixture models.
+\newblock Geometric Science of Information, Lecture Notes in Computer Science
+  (9389), 577--585 (2015)
+
+\bibitem{Maroufy2016a}
+Maroufy, V., Marriott, P.: Mixture models: Building a parameter space.
+\newblock Statistics and Computing pp. 1--7 (2016)
+
+\bibitem{Maroufya}
+Maroufy, V., Marriott, P.: Local and global robustness in conjugate bayesian
+  analysis and sparsity models.
+\newblock Statistica Sinica \textbf{In press} (2018)
+
+\bibitem{Marriott2002}
+Marriott, P.: On the local geometry of mixture models.
+\newblock Biometrika \textbf{89}, 77--93 (2002)
+
+\bibitem{Marriott2006}
+Marriott, P.: Extending local mixture models.
+\newblock AISM \textbf{59}, 95--110 (2006)
+
+\bibitem{Nielsen1992}
+Nielsen, G.G., Gill, R.D., Anderson, P.K., Sorensen, T.I.A.: A counting process
+  approach to maximum likelihood estimation in frailty models.
+\newblock Scandinavian Journal of Statistics \textbf{19}(1), 25--43 (1992)
+
+\bibitem{Vaupel1979}
+Vaupel, J.W., Manton, K.G., Stallard, E.: The impact of heterogeneity in
+  individual frailty on the dynamics of mortality.
+\newblock Demography \textbf{16}, 539--454 (1979)
+
+\bibitem{Zucker2008}
+Zucker, D., Gorfine, M., Hsu, L.: Pseudo-full likelihood estimation for
+  prospective survival analysis with a general semiparametric shared frailty
+  model: Asymptotic theory.
+\newblock Journal of Statistical Planning and Inference \textbf{138}(7),
+  1998--2016 (2008)
+
+\end{thebibliography}

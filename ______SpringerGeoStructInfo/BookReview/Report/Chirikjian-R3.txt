@@ -1,0 +1,5 @@
+Reviewer declined to review but mentionned that
+
+... switched "left" and "right" in his description of left-
+and right-invariant Riemannian metrics on Lie groups (X'X^-1 should be right,
+but Greg called it left, and vice versa).

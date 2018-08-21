@@ -1,0 +1,296 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb,enumerate}
+
+
+\newcommand{\Ro}{\mathbb R}
+\newcommand{\Mo}{\mathbb M}
+
+\newcommand{\upd}{{\rm d}}
+
+
+\begin{document}
+
+\section{Major changes}
+
+\begin{enumerate}[(i)]
+
+ \item  A short introductory section on statistical manifolds is added.
+In particular, the notion of Banach manifold is somewhat clarified.
+
+ \item Al occurrences of Fr\'echet derivatives are replaced by the weaker notion
+of directional derivatives. The topology is left unspecified.
+
+ \item The introductory paragraph of the section ``Parametric Models'' is modified.
+
+ \item The formulation of Theorem 2 is improved. The connections $\Gamma^{(\pm 1)}$ are not defined
+at the moment of stating the theorem.
+Therefore they are replaced by the corresponding covariant derivatives.
+
+\item We have added a table, giving specific examples of $(\rho, \tau)$ combinations.
+
+ \item Also the proof of Theorem 2 is clarified.
+
+ \item We fixed the references, including adding one as suggested by one of the Reviewers.
+
+
+\end{enumerate}
+
+
+\section{Detailed Response to Referee 1}
+\begin{itemize}
+\item ``Most of the literature quoted in the introduction considers a manifold
+of probability densities while the divergences are defined as functions on random
+variables. If the random variables are non-negative it is a set of unnormalized
+densities otherwise I do not know. I feel that some word of explanation would
+improve the clarity of the argument.'' \\
+{\tt Response.} {\it Two sentences are added: ``Later on, manifolds of probability densities are considered.
+Note that these are non-negative-valued random variables with expectation equal to 1.'' }
+
+\item ``... the logarithm f a (strictly positive) density function is considered ... In contrast to that, the definition
+of directional derivative top of page 5 is not really compatible with any positivity assumption.'' \\
+{\tt Response.} {\it 
+We changed to an approach based on taking directional derivatives of $P$ rather than taking directonal derivatives of $\log(P)$ or more generally $h(P)$. In this way, the positivity assumption of $P+ \epsilon X$ will not be needed. 
+%We adapted so that now derivatives are always taken in the tangent plane, which is a linear space.
+}
+
+\item Apparently, Eq. (11) is intended to overcome the difficulty with the
+introduction of the $\tau$ function as a generalized embedding. \\
+{\tt Response.} {\it No, (11) intends to remind the reader that the vectors in the tangent plane correspond with derivatives of the expectation functional. }
+
+
+\item In the classical case, the embedding $p\mapsto\sqrt p$ maps densities to the $L^2$ sphere, and the push-back of
+the sphere geometry gives a geometry on densities. The corresponding set-up in
+the generalization should be specified in order the argument to be clear. \\
+{\tt Response.} {\it See answers to the previous two questions related to ``positivity assumption'' which is not needed in our approach.}
+
+
+\item The statement following Eq. (11) of this section should be clarified, at least to explain
+the general set-up, before referring the reader to [20]. I can see that formal
+equivalence of Eq. (11) with the following equation can be derived from Eq. (5). \\
+{\tt Response.}
+{\it 
+By having all derivatives in the tangent plane these difficulties disappear.
+%Jan, by Eq (5) he probably means Eq (10). I think this line of questions has all to do with requiring positivity in $\log p$, i.e., $\log (p + \epsilon X)$ is ill-defined unless $p +\epsilon X > 0$, thereby restricting $X$. 
+}
+
+
+\item page 2, line 11: A measure space is usually written with brackets, $({\cal X}, \mu)$. \\
+{\tt Response.}  
+{\it Brackets are added}
+
+
+\item page 2, line 12: The notation for the expectation is not consistent
+through the paper. Sometimes there are brackets (of two types) and in
+other cases the brackets are missing. \\
+{\tt Response.} {\it Indeed, brackets are used only if needed for grouping terms.}
+
+\item page 2, Eq. (2): As $\rho$ is differentiable, it holds $\upd\rho(x) = \rho'(x)\upd x$. What
+is the advantage of the Stieltjes Integral notation? In fact, both $\rho'$ and $\tau'$
+are used in Eq. (12). \\
+{\tt Response.}
+{\it  Some of our formulas can be used when $\rho$ and $\tau$ are not differentiable.
+ This is however not the focus of the present text.}
+
+\item page 2, line -3: An “open convex domain of $\Ro$” is an open interval,
+correct? The statement as it is makes the reader wonder if it would be
+possible to define the rho-tau-divergence with $\rho$ and $\tau$ defined on $\Ro^d$, $d > 1$. \\
+{\tt Response.} 
+{\it We now replaced `convex domain'  with `interval'; the generalization of the rho-tau formalism
+ is a relevant problem, however not under consideration here.}
+
+\item page 3, line 8: According to the following Eq. (6), $p(\zeta,\eta)$ is joint density
+function. Is this a special case or the existence of a joint density is a
+general assumption? As it is stated, it is not clear. However, no special
+assumption is needed to prove inequality (6). \\
+{\tt Response.} {\it The formulation of the sentence is improved.
+ Note that (6) is not needed for the sequel. The statement is made only
+ to mention this remarkable inequality. }
+
+\item page 3, Eq. (6): The last inequality is Cauchy–Schwarz inequality. Why
+is the result relevant? To give sufficient condition for the divergence to be
+finite? Why not to use the most general H\"older’s inequality? \\
+{\tt Response.} 
+{\it One can use indeed H\"older’s inequality, or other inqualities even weaker (e.g. involving Young functions). The only intention of (6)
+ is to make the reader aware of the point that the divergence of an arbitrary pair
+ of random variables might diverge.}
+
+\item page 4, line -14: The statement “The Fr\'echet derivative of a random
+variable . . . ” is confusing. The random variables are the points in the
+manifold, while the Fr\'echet derivative applies to functions on some domain. \\
+{\tt Response.} {\it The word 'Fr\'echet' is omitted. What remains is rather straightforward.
+ The derivative is a limit and limits of random variables are again random variables.
+ Note that these lines of text moved to the new Section 2.}
+
+\item page 5, line 5: Please explain “to deform the logarithmic function”. It
+is a deformation or a replacement? If $\tau$ is an embedding, the space into
+which the embedding is done should be specified. \\
+{\tt Response.} {\it The sentence is modified to better express the intention.}
+
+\item page 5, Eq. (11): Please explain the relation between Eq. (11) and Eq.
+(10). Also, how the inner product defined in the equation following (11)
+relates with the metric in Eq. (12)? \\
+{\tt Response.} {\it (i) The derivation of (10) starting from (11) has been added.(ii) The use of the inner product in (12) is just a notational issue.
+ The expression is derived from the divergence function in a straightforward manner.}
+
+\item page 5, line 17: Please check “. . . in the form of for the non-parametric
+. . . ”. \\
+{\tt Response. } {\it Corrected. The missing reference to (12) has been inserted.}
+
+\item page 5, line -12: Reference “From (3)” does not seem correct. Is it (12)? \\
+{\tt Response.} {\it It is indeed (12). We corrected it.}
+
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%
+\section{Detailed Response to Referee 2}
+
+\begin{itemize}
+\item Here, although can be derived, the statement of the generalized Pythagorean equality being satisfied by the rho-tau
+divergence for any three given points P, Q, R could be linked to a reference. \\
+{\tt Response.} {\it Previously, in [20], the rho-tau divergence, denoted D-divergence there, was shown to be the canonical divergence, and as a result,  Pythagorean equality would hold. Here, we explicitly write out the Pythagorean equality.}
+
+\item Also, the definition of the rho-tau entropy in Equation (7) is not well
+justified. I believe it is a direct extension from the Shannon definition and
+usage of general $f$-divergence, but it would worth mentioning the origin of it
+so one can easily get the result from Equation (8). \\
+{\tt Response.} {\it A reference is added and one sentence which makes clear that this
+ is a very general definition of entropy.}
+
+\item One question that come to my mind is that in such general proposed
+model one does not need to assume the function (divergence) is Gateaux
+differentiable in order to ensure the convergence conditions for the expectations? \\
+{\tt Response.} {\it For the derivatives of the divergence function it suffices that
+ the functions $\rho$ and $\tau$ are differentiable. However, it was implicitly assumed that
+ the manifold itself is differentiable. Therefore one sentence is added in the new introductory
+ section, stating that ``Throughout the text it is assumed that the manifold is differentiable
+ and that for each $X$ in $\Mo$ the tangent plane $T_X\Mo$ is well-defined.''
+ }
+
+\item Regarding the gauge freedom, for the case of $\rho(u)=1/\tau'(u)$
+and the corresponding deformed logarithm the divergence becomes a generalization of the
+Kullback-Leibler one. Would it be possible to select different $\rho(u)$ such that
+the divergence becomes a general model for the R\'enyi’s divergence? If so,
+could you comment on that? \\
+{\tt Response.} {\it R\'enyi’s divergence is not of the Bregman type. For $\alpha\not=1$
+ it is not the expectation of a random variable. In particular, it is not a rho-tau divergence.
+ Hence, we cannot say much about it. }
+ 
+\item With respect to the deformed exponential family (Section 7) if we select
+a general model, as the one proposed in [17], does the rho-tau divergence
+can be reduced or extended to the model proposed in [17]? If so, which
+conditions should be imposed over the deformed family for such situation? \\
+{\tt Response.} {\it Section 7 (now Section 8) is about the parametric case
+ whereas in [17], but also [14-16], the manifold has maximal extent.
+ As said in the paper, we use concepts of the latter although it is left for future research to to clarify the interplay between both approaches.}
+ 
+   \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%
+\section{Detailed Response to Referee 3}
+\begin{itemize}
+\item Is faithful in Theo 1 a usual term (add ref then) \\
+{\tt Response.} {\it The notion of a 'faithful state' is common in the context of C*-algebras.
+ Since probability distributions are special cases of states on a C*-algebra it is
+ justified, although not common, to use the term here. Because it is not common, the meaning of
+the term is explained in the text. }
+
+\item In Eq 7, index $S$ by $\rho,\tau$? \\
+{\tt Response.} {\it These have been added at 4 places.}
+
+\item why index proba density with superscript theta instead of usual subscript? add footnote? \\
+{\tt Response.} {\it The reason is not very deep. In the case of a discrete probabilities $p^\theta_i$
+ is somewhat easier than $p_{\theta,i}$. Also $p^\theta(x)$ is better than $p(x|\theta)$ and
+ $p^\theta_i$ is better than $p(i|\theta)$. But again, it is more a question of taste. }
+
+\item page 6, a table with the $\rho$, $\tau$, $f$, $f^*$ would be nice with various examples \\
+{\tt Response.} {\it Such a table has been added.}
+
+\item Sec 5 "by taking two derivatives" "by taking its second-order partial derivatives"? \\
+{\tt Response.} {\it No, one takes one derivative of each of the two arguments to get the metric tensor.}
+
+\item Sec 7 specify that you use regular exp fam \\
+{\tt Response.} {\it No, the statements in this section is NOT specific the regular (or for that matter, deformed) exponential family. They are generic. We added a sentence to that effect.}
+
+\item I also recommend to add those citations: ... \\
+{\tt Response}. {\it We have added a reference to the book of Shima in Section 6, now 7. We did not include the other reference, as the Reviewer did not explain why voronoi diagram is relevant to the current investigation.}
+% 
+% @book{GeoHessian-2007,
+%   title={The Geometry of {H}essian Structures},
+%   author={Shima, H.},
+%   isbn={9789812707536},
+%   year={2007},
+%   publisher={World Scientific}
+% }
+% 
+% @inproceedings{RepBregman-2009,
+%   title={The dual {V}oronoi diagrams with respect to representational {B}regman divergences},
+%   author={Nielsen, Frank and Nock, Richard},
+%   booktitle={Sixth International Symposium on Voronoi Diagrams},
+%   pages={71--78},
+%   year={2009},
+%   organization={IEEE}
+% }
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%
+\section{Detailed Response to Referee 4}
+
+\begin{itemize}
+\item {\tt Response.} {\it  After (6) the sentence ``To obtain the latter the Cauchy-Schwarz inequality is used.'' has been added. }
+
+\item {\tt Response.} {\it ``Pythagorian'' $\Rightarrow$ ``Pythagorean''.}
+
+\item {\tt Response.} {\it Various typos have been corrected.}
+
+\item Line after (13): ``hermitian'' with a capital? \\
+{\tt Response.}  {\it We have changed to ``adjoint'' as the correct terminology. } 
+%Is ``{\bf adjoint}'' right word???
+
+\item $\nabla^{-1}$ instead of $\nabla^{-1}_Z$ \\
+{\tt Response.} {\it  It has been corrected.}
+
+\item {\tt Response.} {\it  The statement and the proof of Theorem 2 are both clarified.}
+
+\item The probability distributions of the deformed exponential family belong to statistics and are not random variables. \\
+{\tt Response.} {\it We consider them as special cases of random variables. Usually it is the other way round:
+ random variables are often associated with measures. }
+
+\item The function $\phi(v)$ 'must be strictly monotone'. \\ 
+{\tt Response.} {\it  One can drop this condition but then the deformed logarithm is not concave. } 
+ 
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+\section{Detailed Response to Referee 5}
+
+\begin{itemize}
+\item Furthermore, it would be excellent if any physical notion associated with the gauge freedom is given. \\
+{\tt Response.} {\it  A paragraph is added to clarify the meaning in Physics. }
+
+\item It would be nice to suggest any relevant perspectives connecting the parametric with the nonparametric framework. \\
+{\tt Response.} {\it The connection between both has been worked out a little bit further. The long term goal
+of developing a common framework goes beyond the present paper. }
+
+\item The deformed exponential model authors discuss can be connected with the idea of maximum entropy if the rho-tau divergence is decomposed into the cross and diagonal entropies? For this it might be necessary to consider a constrain by the escort expectation. \\
+{\tt Response.} {\it The deformed exponential model can indeed be derived using a maximum entropy approach, both
+ with and without escort constraints. There is a link with the gauge freedom of the rho-tau formalism. See for 
+ instance [12]. However, it would take an additional Section to work this out in the present paper, while not
+ contributing to the central topic.
+}
+
+\item In the notation of the paper the arguments P and Q are used as random variables, for
+example, as in equation (1). However, in the standard notation P and Q are used to express
+probability measures, and so it would be very confusing for readers who work in probabilistic
+paradigms and applications. \\
+{\tt Response.} {\it We tried a systematic use of capitals for random variables, not only $P$ and $Q$, but also $X$ and $Y$ for tangent vectors, small characters for probabilities and greek symbols for
+ scalar functions and parameters. In functional analysis it would be highly unusual to use $p(x)$
+ for the value of a probability distribution $P$ at the point $x$. So yes, in  many places we deviate from
+ habits found in statistics.
+}
+
+\end{itemize}
+
+\end{document}

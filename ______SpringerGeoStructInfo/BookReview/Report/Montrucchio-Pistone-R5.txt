@@ -1,0 +1,41 @@
+Montrucchio and Pistone,
+A class of non-parametric deformed exponential statistical models
+
+The paper contains interesting extensions of the work published in [14].
+
+I have one suggestion for improvement.
+The remark about the work of Donsker and Varadhan on page 12 is rather puzzling,
+particularly because the discussion continues with the two possible
+choices of fixing the non-uniqueness of the function K_p(u).
+I guess it would be better to start a new section after (12)
+and to put Donsker and Varadhan there.
+
+Small remarks
+
+l.3 of Sect. 1: the symbol 'cal.P' is not yet defined. Anyhow, 'at each p' is confusing.
+Therefore it is better to replace 'at each p in {\cal P}' by 'at p'.
+
+p2, l14: 'dominate' should read 'dominated'
+
+p2, l16: 'in a special case on Sec. 2' better ' the use of 'on' is not appropriate, better is 'in Section 2'
+
+l4 of Sect. 2: the integral contains twice the differential 'd\xi'
+
+Line before (4): A(x)<1 holds in Nigel Newton's case, not in general. hence, the lhs of (4) should contain 1/||A||.
+
+l1 of 2.1 contains "the the"
+
+p4 l9: "with parameter 1/2 of [17]," looks silly. Better is "of [17], with parameter 1/2,"
+
+Sect. 3.1, line 3: the use of the infinity norm of q, although not incorrect, is confusing because it gives the impression that q should be bounded. The third item in the series of inequalities may be omitted.
+
+Prop. 3, item 2): it is not clear what is meant by a 'simple density'. Is it linked to absence of ideals?
+
+p.11, last but 1 line: It is not clear what you mean by 'quasi-integrable'.
+
+p. 12, l3 from below: It is not clear why the choice of u such that its mean w.r.t. the escort of q vanishes is relevant for Statistical Physics.
+I am pretty sure that Landau and Lifschitz never heard about escort distributions.
+Can you explain why this choice is of special interest in Statistical Physics?
+
+p13, l4: 'representation' should read 'representations'
+---------------------------------------------------------------------

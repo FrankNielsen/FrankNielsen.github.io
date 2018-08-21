@@ -1,0 +1,25 @@
+Potential Reviewers
+
+1.Shinto Eguchi
+The Institute of Statistical Mathematics
+E-mail: eguchi@ism.ac.jp
+
+2.Takashi Kurose
+Department of Mathematical Sciences
+Kwansei Gakuin University
+E-mail: ?
+
+3. Atsumi 
+Graduate School of Engineering
+University of Fukui
+E-mail: ohara@u-fukui.ac.jp
+
+4. Takafumi Kanamori
+Department of Mathematical and Computing Science
+Tokyo Institute of Technology
+E-mail: kanamori@c.titech.ac.jp
+
+5. Peter Jupp
+School of Mathematics and Statistics
+University of St.Andrews
+E-mail: pej@st-andrews.ac.uk

@@ -1,0 +1,29 @@
+
+The chapter presents a dictionary of Hermitian matrix inequalities and some results on diffusion processes on unimodular Lie groups. I like the dictionary of inequalities, but I am lacking clear and precise mathematical statements on what is done next and a big picture of what the author wants to achieve in this chapter. In particular, I believe that the three points below should be clarified.
+
+The means m_0 to M-2 defined in Section 6.1 need additional assumptions to be correctly defined. The group logarithm is indeed not always defined, for instance on the unimodular group SL(2), where elements with trace less than -2 cannot be reached by a one-parameter subgroup. Thus, the pdf should be restricted to group elements that have a square root for m_0, or elements such that $m_1^{-1} \circ g$ has a square root for m_1 (and similarly with h for m_2). The mean m_0 has also previously been described under the name “Log-Euclidean mean”, while the properties of the mean m_1 have been studied in depth in [PA2012] as exponential barycenters of the Symmetric Cartan Schouten connection (or bi-invariant mean on Lie groups). It is worth stating that this invariant mean was shown to be locally well posed (existence and uniqueness) when the distribution is sufficiently concentrated thanks to the use of an auxiliary metric in the Lie algebra.
+
+On the definition of the Gaussian (p.18) and later on covariance propagation (p.20): a maximal entropic definition of the Gaussian (conditionally to the mean and the covariance matrix) has been proposed by Pennec in his PhD (1996) and in [P2006] for the case of Riemannian manifolds. This definition notably coincide (modulo correction terms) with the one propose here when the Lie groups is compact so that it can be endowed with a bi-invariant metric for which the Riemannian and group exp/log are the same. It is shown in particular that a correction term for the curvature needs to be introduced in addition to \Sigma^{-1} in the concentration matrix of the Gaussian if we want the Gaussian to have covariance matrix \Sigma.  How does that fit with the results asserted here with no such correction?
+
+The Entropy-Power Inequality (EPI) is the central point of the conclusion but this inequality is never stated in the paper. Can you state it more clerly in the introduction as a conjecture?
+
+[PA2012] Xavier Pennec and Vincent Arsigny. Exponential Barycenters of the Canonical Cartan Connection and Invariant Means on Lie Groups. In Frederic Barbaresco, Amit Mishra, and Frank Nielsen, editors, Matrix Information Geometry, pages 123-166. Springer, May 2012.
+[P2006] Pennec. Intrinsic Statistics on Riemannian Manifolds: Basic Tools for Geometric Measurements. J. Math Imaging and Vision25:127, July 2006.
+
+Minor points:
+* Page 4, first formula: the space $\Lambda$ of the variable $\lambda$ is not described. Is it $\R^+$ or can it be a matrix space?
+* P.4 4th formula: Does HS in index of the norm denote the Hilbert-Schmidt norm? 
+* P.4 just below: it could be useful to specify if the Lie algebra is seen here as the algebra of left-invariant vector fields or as $T_{Id}G$.
+* P.62nd paragraph: when you say that the dot product on the Lie algebra defines a metric tensor on the Lie group, do you mean a left invariant or a right-invariant one?
+* P.8, 3rd quarter of the page: I guess that $f_i$ should be change to $f$ otherwise I don’t understand what is f_i
+* P.9, first two formulas. It might worth explaining that exp is the matrix exp functions. Is the log in the second formula the principal matrix logarithm? Otherwise the IUR matrix U(g,\lambda might be multivalued.
+* P.14, formula (32): parenthesis problem (not opened, closed outside the index).
+*  P.15, first formula of Sec.5.1: don’t you need to take into account boundary conditions for closed geodesics in order to differentiate under the sum? I am surprised not to see any problem arising from the topology or the cut locus.
+* P.15, theorem 1 and Equation (36): The “constant h” and the well-posedness of the pdf alpha are not defined in the theorem. Please add a line before the theorem to explain how the constant h appear in the solution of diffusion equation and what are roughly the conditions of the pdf alpha.
+* P. 17, definition m_3 of the means on Lie groups: a norm on the Lie algebra does not give a distance on the Lie group and will generally not be invariant under the adjoint action.  
+* P.18, formula 39: Please specify what is $log^V$ in this formula and below. How does this differ from the group logarithm? What are the conditions for this log to be uniquely defined?
+* P.28 Lock of EPI: I understand that S(\rho) is the entropy S(\rho) = - \int_g \rho(g) \log(\rho(g)) dg for an non vanishing pdf rho. But what is N9\rho) in this paragraph? Please clarify.
+
+Typos:
+* p.17: arbitrary
+* p.19: altogether

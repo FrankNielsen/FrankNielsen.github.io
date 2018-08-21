@@ -1,0 +1,253 @@
+\begin{thebibliography}{10}
+
+\bibitem{AN02}
+S.~Amari, H.~Nagaoka, and D.~Harada.
+\newblock {\em Methods of Information Geometry}.
+\newblock Translations of mathematical monographs. American Mathematical
+  Society, 2002.
+
+\bibitem{A16}
+S.-I. Amari.
+\newblock {\em Information Geometry and Its Applications}.
+\newblock Springer, 2016.
+
+\bibitem{AFF07}
+F.~Audrino, R.~Fernholz, and R.~G. Ferretti.
+\newblock A forecasting model for stock market diversity.
+\newblock {\em Annals of Finance}, 3(2):213--240, 2007.
+
+\bibitem{BF08}
+A.~D. Banner and D.~Fernholz.
+\newblock Short-term relative arbitrage in volatility-stabilized markets.
+\newblock {\em Annals of Finance}, 4(4):445--454, 2008.
+
+\bibitem{BFK05}
+A.~D. Banner, R.~Fernholz, and I.~Karatzas.
+\newblock Atlas models of equity markets.
+\newblock {\em The Annals of Applied Probability}, 15(4):2296--2330, 2005.
+
+\bibitem{BF92}
+D.~G. Booth and E.~F. Fama.
+\newblock Diversification returns and asset contributions.
+\newblock {\em Financial Analysts Journal}, 48(3):26--32, 1992.
+
+\bibitem{BV04}
+S.~Boyd and L.~Vandenberghe.
+\newblock {\em Convex Optimization}.
+\newblock Cambridge University Press, 2004.
+
+\bibitem{BC13}
+T.~Breuer and I.~Csisz{\'a}r.
+\newblock Information geometry in mathematical finance: Model risk, worst and
+  almost worst scenarios.
+\newblock In {\em Information Theory Proceedings (ISIT), 2013 IEEE
+  International Symposium on}, pages 404--408. IEEE, 2013.
+
+\bibitem{BH01}
+D.~C. Brody and L.~P. Hughston.
+\newblock Interest rates and information geometry.
+\newblock In {\em Proceedings of the Royal Society of London A: Mathematical,
+  Physical and Engineering Sciences}, volume 457, pages 1343--1363. The Royal
+  Society, 2001.
+
+\bibitem{CDO07}
+M.~Chuaqui, P.~Duren, and B.~Osgood.
+\newblock Schwarzian derivative criteria for valence of analytic and harmonic
+  mappings.
+\newblock In {\em Mathematical Proceedings of the Cambridge Philosophical
+  Society}, volume 143, pages 473--486. Cambridge University Press, 2007.
+
+\bibitem{DT17}
+A.~Dembo and L.-C. Tsai.
+\newblock Equilibrium fluctuation of the atlas model.
+\newblock {\em The Annals of Probability}, 45(6b):4529--4560, 2017.
+
+\bibitem{E83}
+S.~Eguchi.
+\newblock Second order efficiency of minimum contrast estimators in a curved
+  exponential family.
+\newblock {\em The Annals of Statistics}, 11(3):793--803, 1983.
+
+\bibitem{E92}
+S.~Eguchi et~al.
+\newblock Geometry of minimum contrast.
+\newblock {\em Hiroshima Mathematical Journal}, 22(3):631--647, 1992.
+
+\bibitem{ETM17}
+P.~A. Ernst, J.~R. Thompson, and Y.~Miao.
+\newblock Tukey’s transformational ladder for portfolio management.
+\newblock {\em Financial Markets and Portfolio Management}, 31(3):317--355,
+  2017.
+
+\bibitem{FK:10}
+D.~Fernholz and I.~Karatzas.
+\newblock On optimal arbitrage.
+\newblock {\em Ann. Appl. Probab.}, 20(4):1179--1204, 2010.
+
+\bibitem{F02}
+E.~R. Fernholz.
+\newblock {\em Stochastic Portfolio Theory}.
+\newblock Springer, 2002.
+
+\bibitem{FK09}
+E.~R. Fernholz and I.~Karatzas.
+\newblock Stochastic portfolio theory: an overview.
+\newblock In P.~G. Ciarlet, editor, {\em Handbook of Numerical Analysis},
+  volume~15 of {\em Handbook of Numerical Analysis}, pages 89 -- 167. Elsevier,
+  2009.
+
+\bibitem{FKR17}
+E.~R. Fernholz, I.~Karatzas, and J.~Ruf.
+\newblock Volatility and arbitrage.
+\newblock {\em The Annals of Applied Probability}, 28(1):378--417, 2018.
+
+\bibitem{F99}
+R.~Fernholz.
+\newblock Portfolio generating functions.
+\newblock In {\em Quantitative Analysis in Financial Markets: Collected Papers
+  of the New York University Mathematical Finance Seminar}, volume~1, pages
+  344--367. World Scientific, 1999.
+
+\bibitem{FGH98}
+R.~Fernholz, R.~Garvy, and J.~Hannon.
+\newblock Diversity-weighted indexing.
+\newblock {\em The Journal of Portfolio Management}, 24(2):74--82, 1998.
+
+\bibitem{FIK13}
+R.~Fernholz, T.~Ichiba, and I.~Karatzas.
+\newblock A second-order stock market model.
+\newblock {\em Annals of Finance}, 9(3):439--454, 2013.
+
+\bibitem{FK05}
+R.~Fernholz and I.~Karatzas.
+\newblock Relative arbitrage in volatility-stabilized markets.
+\newblock {\em Annals of Finance}, 1(2):149--177, 2005.
+
+\bibitem{FKK05}
+R.~Fernholz, I.~Karatzas, and C.~Kardaras.
+\newblock Diversity and relative arbitrage in equity markets.
+\newblock {\em Finance and Stochastics}, 9(1):1--27, 2005.
+
+\bibitem{IPS13}
+T.~Ichiba, S.~Pal, and M.~Shkolnikov.
+\newblock Convergence rates for rank-based models with applications to
+  portfolio theory.
+\newblock {\em Probability Theory and Related Fields}, 156(1-2):415--448, 2013.
+
+\bibitem{IPBKF11}
+T.~Ichiba, V.~Papathanakos, A.~Banner, I.~Karatzas, and R.~Fernholz.
+\newblock Hybrid atlas models.
+\newblock {\em The Annals of Applied Probability}, 21(2):609--644, 2011.
+
+\bibitem{RX18}
+R.~Johannes and X.~Kangjianan.
+\newblock Generalised lyapunov functions and functionally generated trading
+  strategies.
+\newblock {\em arXiv preprint arXiv:1801.07817}, 2018.
+
+\bibitem{JR15}
+B.~Jourdain and J.~Reygner.
+\newblock Capital distribution and portfolio performance in the mean-field
+  atlas model.
+\newblock {\em Annals of Finance}, 11(2):151--198, 2015.
+
+\bibitem{KR17}
+I.~Karatzas and J.~Ruf.
+\newblock Trading strategies generated by {L}yapunov functions.
+\newblock {\em Finance and Stochastics}, 21(3):753--787, 2017.
+
+\bibitem{KY16}
+K.~Khashanah and H.~Yang.
+\newblock Evolutionary systemic risk: Fisher information flow metric in
+  financial network dynamics.
+\newblock {\em Physica A: Statistical Mechanics and its Applications},
+  445:318--327, 2016.
+
+\bibitem{MSZ18}
+S.~A.~A. Monter, M.~Shkolnikov, and J.~Zhang.
+\newblock Dynamics of observables in rank-based models and performance of
+  functionally generated portfolios.
+\newblock {\em arXiv preprint arXiv:1802.03593}, 2018.
+
+\bibitem{NMBN11}
+R.~Nock, B.~Magdalou, E.~Briys, and F.~Nielsen.
+\newblock On tracking portfolios with certainty equivalents on a generalization
+  of {M}arkowitz model: the fool, the wise and the adaptive.
+\newblock In {\em Proceedings of the 28th International Conference on Machine
+  Learning (ICML-11)}, pages 73--80, 2011.
+
+\bibitem{NMBN13}
+R.~Nock, B.~Magdalou, E.~Briys, and F.~Nielsen.
+\newblock Mining matrix data with bregman matrix divergences for portfolio
+  selection.
+\newblock In {\em Matrix Information Geometry}, pages 373--402. Springer, 2013.
+
+\bibitem{P11}
+S.~Pal.
+\newblock Analysis of market weights under volatility-stabilized market models.
+\newblock {\em The Annals of Applied Probability}, 21(3):1180--1213, 2011.
+
+\bibitem{P16}
+S.~Pal.
+\newblock Exponentially concave functions and high dimensional stochastic
+  portfolio theory.
+\newblock {\em arXiv preprint arXiv:1603.01865}, 2016.
+
+\bibitem{P17}
+S.~Pal.
+\newblock Embedding optimal transports in statistical manifolds.
+\newblock {\em Indian Journal of Pure and Applied Mathematics}, 48(4):541--550,
+  2017.
+
+\bibitem{PW13}
+S.~Pal and T.-K.~L. Wong.
+\newblock Energy, entropy, and arbitrage.
+\newblock {\em arXiv preprint arXiv:1308.5376}, 2013.
+
+\bibitem{PW15}
+S.~Pal and T.-K.~L. Wong.
+\newblock The geometry of relative arbitrage.
+\newblock {\em Mathematics and Financial Economics}, 10(3):263--293, 2016.
+
+\bibitem{PW16}
+S.~Pal and T.-K.~L. Wong.
+\newblock Exponentially concave functions and a new information geometry.
+\newblock {\em The Annals of Probability}, 46(2):1070--1113, 2018.
+
+\bibitem{R70}
+R.~T. Rockafellar.
+\newblock {\em Convex Analysis}.
+\newblock Princeton Landmarks in Mathematics. Princeton University Press, 1997.
+
+\bibitem{T13}
+B.~Trivellato.
+\newblock Deformed exponentials and applications to finance.
+\newblock {\em Entropy}, 15(9):3471--3489, 2013.
+
+\bibitem{V16}
+A.~Vervuurt.
+\newblock {\em On Portfolio Construction Through Functional Generation}.
+\newblock PhD thesis, Oxford Unviersity, 2016.
+
+\bibitem{VK15}
+A.~Vervuurt and I.~Karatzas.
+\newblock Diversity-weighted portfolios with negative parameter.
+\newblock {\em Annals of Finance}, 11(3-4):411--432, 2015.
+
+\bibitem{W15}
+T.-K.~L. Wong.
+\newblock Optimization of relative arbitrage.
+\newblock {\em Annals of Finance}, 11(3-4):345--382, 2015.
+
+\bibitem{W17b}
+T.-K.~L. Wong.
+\newblock Logarithmic divergences from optimal transport and {R}\'{e}nyi
+  geometry.
+\newblock {\em arXiv preprint arXiv:1712.03610}, 2017.
+
+\bibitem{W17a}
+T.-K.~L. Wong.
+\newblock On portfolios generated by optimal transport.
+\newblock {\em arXiv preprint arXiv:1709.03169}, 2017.
+
+\end{thebibliography}

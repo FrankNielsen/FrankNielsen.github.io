@@ -1,0 +1,64 @@
+
+Potential reviewers for Chapter
+Some Universal Insights on Divergences for Statistics, 
+Machine Learning and Artificial Intelligence
+by M. Broniatowski and W. Stummer:
+
+====================================================
+
+
+Ayanendranath Basu
+Interdisciplinary Statistical Research Unit (ISRU)
+Indian Statistical Institute
+203 B.T. Road, Kolkata
+Pin - 700 108, INDIA.
+E-mail : ayanbasu@isical.ac.in
+
+========================
+
+Friedrich Liese
+Department of Mathematics
+University of Rostock
+Ulmenstrasse 69 HS3
+18057 Rostock
+Germany
+friedrich.liese@uni-rostock.de
+
+==========================
+
+Konstantinos Zografos
+Probability, Statistics and Operational Research Unit
+Department of Mathematics
+University of Ioannina
+451 10 Ioannina
+Greece
+kzograf@uoi.gr
+
+=========================
+
+Aida Toma
+Department of Applied Mathematics,
+Bucharest Academy of Economic Studies,
+Piata Romana 6,
+Bucharest, Romania
+aida.toma@csie.ase.ro
+
+========================
+
+Amor Keziou
+Laboratoire de Mathématiques de Reims EA 4535
+U.F.R. Sciences Exactes et Naturelles
+Université de Reims Champagne-Ardenne
+Moulin de la Housse – BP 1039
+51687 REIMS cedex 2
+France
+amor.keziou@univ-reims.fr
+
+
+
+
+
+
+
+
+

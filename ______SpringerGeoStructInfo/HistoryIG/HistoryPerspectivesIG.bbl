@@ -1,0 +1,36 @@
+\begin{thebibliography}{1}
+
+\bibitem{IG-2016}
+S.~Amari.
+\newblock {\em Information Geometry and Its Applications}.
+\newblock Applied Mathematical Sciences. Springer Japan, 2016.
+
+\bibitem{IG-2017}
+Nihat Ay, J{\"u}rgen Jost, HV~L{\^e}, and Lorenz Schwachh{\"o}fer.
+\newblock Information geometry.
+\newblock {\em Ergebnisse der Mathematik und Ihrer Grenzgebiete/A Series of
+  Modern Surveys in Mathematics, Springer}, 2017.
+
+\bibitem{Hotelling-1930}
+Harold Hotelling.
+\newblock Spaces of statistical parameters.
+\newblock {\em Bull. Amer. Math. Soc}, 36:191, 1930.
+
+\bibitem{Rao-reprint-1992}
+Calyampudi~Radhakrishna Rao.
+\newblock Information and the accuracy attainable in the estimation of
+  statistical parameters.
+\newblock In {\em Breakthroughs in statistics}, pages 235--247. Springer, 1992.
+
+\bibitem{Rao-1945}
+Radhakrishna~C. Rao.
+\newblock Information and the accuracy attainable in the estimation of
+  statistical parameters.
+\newblock {\em Bull. Calcutta Math. Soc.}, 37:81--91, 1945.
+
+\bibitem{EpicML-2007}
+Stephen~M Stigler.
+\newblock The epic story of maximum likelihood.
+\newblock {\em Statistical Science}, 22(4):598--620, 2007.
+
+\end{thebibliography}

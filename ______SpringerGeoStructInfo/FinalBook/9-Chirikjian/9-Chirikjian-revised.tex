@@ -1,0 +1,2017 @@
+
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for your "contribution" to a proceedings volume
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+\documentclass{svmult}
+%\documentclass{svproc}
+
+%
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\usepackage{amssymb,amsmath}
+\usepackage{amsfonts}
+% to typeset URLs, URIs, and DOIs
+\usepackage{url}
+\def\UrlFont{\rmfamily}
+
+\def\half{ {1\over 2} }
+ \def\tab{ {\hskip 0.15 true in} }
+ \def\vtab{ {\vskip 0.1 true in} }
+ \def\htab{ {\hskip 0.1 true in} }
+  \def\ntab{ {\hskip -0.1 true in} }
+ \def\vtabb{ {\vskip 0.0 true in} }
+ \def\blah{ {\vskip 0.1 true in} }
+ \def\Order{\mbox{$\cal{O}$}}
+ \def\vec#1{ {\overline {#1}} }
+ \def\vecc#1{ {\overline {#1}} }
+ \def\congruent{=}
+\newcommand{\OO}{\mathbb{O}}
+\newcommand{\oo}{{\bf o}}
+      \newcommand{\ba}{\left(\begin{array}}
+      \newcommand{\ea}{\end{array}\right)}
+      \newcommand{\beq}{ \begin{equation}}
+      \newcommand{\eeq}{ \end{equation} }
+%       \newcommand{\eqref}[1]{(\ref{eq.#1})}
+       \newcommand{\IR}{\mathbb{R}}
+        \newcommand{\IF}{\mathbb{F}}
+        \newcommand{\IZ}{\mathbb{Z}}
+           \newcommand{\II}{\mathbb{I}}
+       \newcommand{\intrn}{\int_{\IR^n}}
+       \newcommand{\intg}{\int_{G}}
+        \newcommand{\sumn}{\sum_{i=1}^{n}}
+        \newcommand{\sumN}{\sum_{i=1}^{N}}
+ \newcommand{\IC}{\mathbb{C}}
+       \newcommand{\IS}{\mathbb{S}}
+%       \newcommand{\IP}{\mathbb{P}}
+       \newcommand{\sfrac}[2]{{\scriptstyle \frac{#1}{#2}}}
+        \newcommand{\RR}{{\bf R}}
+        \newcommand{\XX}{{\bf X}}
+        \newcommand{\WW}{{\bf w}}
+        \newcommand{\llangle}{\langle \hskip -0.02 true in \langle}
+        \newcommand{\rrangle}{\rangle \hskip -0.02 true in \rangle}
+\newcommand{\bfomega}{\mbox{\boldmath $\omega$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\gt}{g}
+\newcommand{\JJ}{{\bf J}}
+\newcommand{\xx}{{\bf x}}
+\newcommand{\ttt}{{\bf t}}
+\newcommand{\ff}{{\bf f}}
+\newcommand{\yy}{{\bf y}}
+\newcommand{\bb}{{\bf b}}
+% \newcommand{\ba}{{\bf a}} % is this ever used ? If so, needs to be
+% changed since \ba is defined as ``begin array'' above
+\newcommand{\uu}{{\bf u}}
+\newcommand{\sss}{{\bf s}}
+\newcommand{\dd}{{\bf d}}
+\newcommand{\vv}{{\bf v}}
+\newcommand{\ww}{{\bf w}}
+\newcommand{\zz}{{\bf z}}
+\newcommand{\qq}{{\bf q}}
+\newcommand{\pp}{{\bf p}}
+\newcommand{\grad}{{\rm grad}}
+\newcommand{\rplus}{\mathbb{R}_{> 0}}
+\newcommand{\rpluss}{\mathbb{R}_{\geq 0}}
+\newcommand{\bfxi}{\mbox{\boldmath $\xi$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\bfsigma}{\mbox{\boldmath $\sigma$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\bftau}{\mbox{\boldmath $\tau$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\bfepsilon}{\mbox{\boldmath $\epsilon$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\bfphi}{\mbox{\boldmath $\phi$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\bfchi}{\mbox{\boldmath $\chi$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\bfdelta}{\mbox{\boldmath $\delta$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\bftheta}{\mbox{\boldmath $\theta$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\bfeta}{\mbox{\boldmath $\eta$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\bfmu}{\mbox{\boldmath $\mu$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\bfgamma}{\mbox{\boldmath $\gamma$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\bfalpha}{\mbox{\boldmath $\alpha$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\bflambda}{\mbox{\boldmath $\lambda$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\bfbeta}{\mbox{\boldmath $\beta$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\bfpi}{\mbox{\boldmath $\pi$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\bfnu}{\mbox{\boldmath $\nu$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\bfpsi}{\mbox{\boldmath $\psi$ \unboldmath} \hskip -0.05 true in}
+\newcommand{\tx}{\tilde{X}}
+\newcommand{\tr}{{\rm tr}}
+\newcommand{\te}{\tilde{E}}
+\newcommand{\xr}{\tilde{X}^r}
+\newcommand{\xl}{\tilde{X}^l}
+\newcommand{\Rho}{{\mathcal P}}
+\newcommand{\Qho}{{\mathcal Q}}
+\newcommand{\ostar}{\circledast}
+\newcommand{\kprod}{\widehat{\otimes}}
+\newcommand{\ksum}{\widehat{\oplus}}
+\newcommand{\emptysett}{\mbox{\O}}
+
+\newcommand{\bfIto}{It\^{o} }
+\newcommand{\Ito}{It\^{o}\,}
+\newcommand{\Itoit}{{\it It\^{o}}}
+\newcommand{\s}{\sin}
+%\newcommand{\c}{\cos} % \c already defined as something else
+% \newcommand{\th}{\theta}
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\ee}{{\bf e}}
+\newcommand{\bea}{\begin{eqnarray*}}
+\newcommand{\eea}{\end{eqnarray*}}
+\newcommand{\beaq}{\begin{eqnarray}}
+\newcommand{\eeaq}{\end{eqnarray}}
+\newcommand{\bz}{{\bf 0}}
+\newcommand{\askip}{\htab\htab {\rm and} \htab\htab}
+\newcommand{\asskip}{\htab {\rm and} \htab}
+\newcommand{\wskip}{\htab {\rm where} \htab}
+\newcommand{\wwskip}{\htab\htab {\rm where} \htab\htab}
+\newcommand{\cX}{\tilde{X}}
+
+\newcommand{\dimm}{m}
+\newcommand{\dinn}{n}
+\newcommand{\plus}{+}
+%\newcommand{\kq0}{\mbox{$|0\rangle$}}
+%\newcommand{\kq1}{\mbox{$|1\rangle$}}
+%\newcommand{\bq0}{\mbox{$\langle 0|$}}
+%\newcommand{\bq1}{\mbox{$\langle 1|$}}
+
+\newcommand{\intf}{\int_{-\infty}^{\infty}}
+
+%% in discussion of Maurer-Cartan, am using omega, but might change
+%% to xi later, so better to be flexible by defining these
+\newcommand{\om}{\omega}
+\newcommand{\Om}{\Omega}
+\newcommand{\bom}{\bfomega}
+\newcommand{\trip}{\|\hskip -0.015 true in |}
+\newcommand{\bltrip}{\left\|\hskip -0.02 true in \left|}
+\newcommand{\brtrip}{\right\|\hskip -0.02 true in \right|}
+\newcommand{\com}{********}
+\newcommand{\ggloss}{\index}
+\newcommand{\authgloss}{\index}
+\newcommand{\bwin}{\stackrel{n}{\underset{\large i=1}{\large \bigwedge}}}
+\newcommand{\bwjn}{\stackrel{n}{\underset{\large j=1}{\large \bigwedge}}}
+\newcommand{\bwim}{\stackrel{m}{\underset{\large i=1}{\large \bigwedge}}}
+\newcommand{\bwij}{\stackrel{j}{\underset{\large i=1}{\large \bigwedge}}}
+
+
+\begin{document}
+\mainmatter              % start of a contribution
+%
+\title{Information-Theoretic Matrix Inequalities and Diffusion Processes on
+Unimodular Lie Groups}
+\titlerunning{Information Theory and Lie Groups}  % abbreviated title (for running head)
+%                                     also used for the TOC unless
+%                                     \toctitle is used
+%
+\author{Gregory S. Chirikjian}
+%
+\authorrunning{Gregory S. Chirikjian} % abbreviated author list (for running head)
+\institute{Johns Hopkins University, Baltimore, MD 21218, USA,\\
+\email{gchirik1@jhu.edu},\\ WWW home page:
+\texttt{http://rpk.lcsr.jhu.edu}}
+
+\maketitle              % typeset the title of the contribution
+
+\begin{abstract}
+Unimodular Lie groups admit natural generalizations of many of the core concepts on which classical
+information-theoretic inequalities are built.  Specifically, they have the properties of shift-invariant integration,
+an associative convolution operator, well-defined diffusion processes, and concepts of Entropy, Fisher information,
+Gaussian distribution, and Fourier transform. Equipped with these definitions, it is shown that many inequalities from classical information theory generalize to this setting. Moreover, viewing the Fourier transform for noncommutative unimodular Lie groups as a matrix-valued function, relationships between trace inequalities, diffusion processes, and convolution are
+examined.
+
+\keywords{Haar measure, convolution, group theory, harmonic analysis, diffusion processes, inequalities}
+\end{abstract}
+
+
+\section{Introduction}
+
+This paper explores aspects of information-theoretic inequalites that naturally extend from $\IR^n$ to an arbitrary
+unimodular Lie group. The exposition is mostly a condensed summary of material that can be found in
+\cite{vol2,dover}, but also presents some new inequalities. The motivations for investigating such inequalities
+are twofold: (1) physical information-processing agents (such as mobile robots or microscopic organisms) often have configuration spaces with Lie-group structure, and their localization in the world is therefore inextricably connected to both information theory and geometry; (2) Due to the identical form of the entropy functional in
+continuous information theory and in statistical mechanics, results from one field carry over to the other, and
+so it becomes possible to make statements about the statistical mechanical entropy of passive objects such as DNA
+and loops in proteins using the results of Lie-theoretic information theory.
+
+\subsection{Mathematical Preliminaries}
+
+A unimodular Lie group, $(G,\circ)$, is one which possesses a bi-invariant integration measure.
+That is, it is possible to construct a measure $\mu$ and associated volume element $dg \doteq d\mu(g)$ around each $g \in G$ such that given any function $f:G\rightarrow \IC$ whose measure
+$$\mu(f) = \int_{G} f(g) \,dg $$
+exists, the
+following invariance properties will hold
+\begin{equation}
+\int_{G} f(g) \,dg = \int_{G} f(g^{-1}) \,dg = \int_{G} f(h \circ g) \,dg = \int_{G} f(g \circ h) \,dg
+\label{invariant-integral}
+\end{equation}
+for arbitrary $h \in G$. Here, of course, $g^{-1}$ is the inverse of $g \in G$, which is the unique element such that
+$$ g \circ g^{-1} = g^{-1} \circ g = e $$
+with $e$ being the identity element, which for every $g \in G$ satisifies
+$$ g \circ e = e \circ g = g\,. $$
+This is the unique element of $G$ with such properties.
+
+The equalities in (\ref{invariant-integral}) are analogous to the properties of the Lebesgue integral
+$$ \int_{\IR^n} f(\xx) \,d\xx = \int_{\IR^n} f(-\xx) \,d\xx = \int_{\IR^n} f(\yy + \xx) \,d\xx = \int_{\IR^n} f(\xx + \yy) \,d\xx\,. $$
+
+All compact Lie groups are unimodular, as are all nilpotent and semisimple Lie groups. When referring to Lie groups in this paper, the discussion is restricted to matrix Lie groups with
+elements that are square matrices, and group operation, $\circ$, being matrix multiplication and the identity element is the identity matrix in the case of a matrix Lie group.
+In this context, the set of $n\times n$ unitary matrices, $U(n)$, and all of its subgroups are
+compact Lie groups. An example of a noncompact semi-simple Lie group is the much-studied  $SL(2,\IR)$ consisting of all $2\times 2$ matrices with real entries and unit determinant \cite{lang,8howe,harish,lang2}. And an example of a nilpotent
+group is the Heisenberg group, ${\cal H}(3)$, consisting of matrices of the form
+$$ H(\alpha,\beta,\gamma) = \left(\begin{array}{ccc}
+1 & \alpha & \beta \\
+0 & 1 & \gamma \\
+0 & 0 & 1 \end{array} \right) $$
+where $\alpha,\beta,\gamma \in \IR$.
+Probability distributions, harmonic analysis, and diffusion processes on this group have
+been studied in detail \cite{8thangavelu,7neuen}.
+
+As a nontrivial example of a noncompact unimodular Lie group that arises frequently in engineering
+applications, and which is neither semisimple nor nilpotent, consider the Special Euclidean group, $SE(n)$, which consists of elements of the
+form $g = (R, {\bf t}) \in SO(n) \times \IR^n$ with the semi-direct product group law
+$$ (R_1, {\bf t}_1) \circ (R_2, {\bf t}_2) = (R_1 R_2, R_1 {\bf t}_2 + {\bf t}_1). $$
+Here $R_i \in SO(n)$, the special orthogonal group consisting of $n\times n$
+rotation matrices, and the resulting semi-direct product group is denoted as
+$$ SE(n) = \IR^n \,\rtimes\, SO(n)\,. $$
+Building on the classic works of Miller \cite{8Miller1_l2,Miller64_l2} and Vilenkin
+\cite{10Vilenkin1_l2,vilenkin68_l2,8vilenkin_l2},
+the author has published extensively on harmonic analysis and diffusion processes on this
+group in the context of applications in robotics and polymer science \cite{phasenoise,mypoly,semijoint}.
+Detailed treatment of these topics can be found in \cite{dover,vol2}, and a recent concise
+summary can be found in \cite{myholm}. In order to avoid repetition, examples in the present
+paper are instead illustrated with ${\cal H}(3)$ and $SO(3)$, though the general formulation
+is kept abstract and general, in the spirit of
+\cite{8folland,8gross,8Gurarie,8hewitt,8sugiura_l2,8taylor_l2,8Grenander,myjgm}.
+
+In the context of unimodular Lie groups, it then makes sense to consider probability density functions, i.e.,
+$f:G \rightarrow \IR$ with the properties
+$$ f(g) \geq 0 \,\,\, {\rm and} \,\,\, \int_G f(g) \, dg = 1. $$
+Moreover, the concept of entropy of a pdf is simply
+\beq
+S(f) \doteq - \int_G f(g) \log f(g) \, dg\,,
+\label{entdef3303}
+\eeq
+and an entropy power is
+$$ N(f) \doteq \frac{1}{2\pi e} \exp\left(\frac{2}{{\rm dim}(G)} S(f)\right)\, . $$
+
+For unimodular Lie groups, a well-defined concept of convolution of functions in $(L^1 \cap L^2)(G)$ exists:
+\begin{equation}
+(f_1 * f_2)(g) \doteq
+\int_{G} f_1(h) f_2(h^{-1} \circ g) \,dh \,.
+\label{convdef}
+\end{equation}
+This inherits the associative property from $G$\,:
+$$ ((f_1 * f_2)* f_3)(g) = (f_1 * (f_2 * f_3))(g)\,. $$
+Moreover, for broad classes of unimodular Lie groups, including all compact Lie goups and group extensions such as  $SE(n)$, it is possible to define a concept
+of Fourier transform. This is based on the concept of an irreducible unitary representation (IUR) of $G$.
+An IUR is
+a unitary operator (which can be thought of as a square matrix of either finite or infinite dimension) with the
+proprties
+$$ U(g_1 \circ g_2, \lambda) = U(g_1, \lambda) \, U(g_2, \lambda) \,\,\,\,\, {\rm and} \,\,\,\,\,
+U(g^{-1},\lambda) = U^*(g,\lambda) $$
+where $\lambda$ can be thought of as a frequency parameter and $*$ denotes the Hermitian conjugate. The space of all $\Lambda$ values is called the unitary dual of $G$. In the case
+when $G$ is Abelian, the unitary dual is also a group. In the case of compact Lie groups, $\Lambda$ is a discrete space with countable elements. In the case of some noncompact unimodular Lie groups the space $\Lambda$ has been fully characterized, and its description can be a quite complicated requiring a combination of continuous and discrete parameters.
+
+Within this context the Fourier transform is defined as
+$$ \hat{f}(\lambda) = \int_{G} f(g)\, U(g^{-1},\lambda) \,dg\,. $$
+As with classical Fourier analysis, there is a convolution theorem
+$$ \widehat{(f_1 * f_2)}(\lambda) = \hat{f}_2(\lambda) \, \hat{f}_1(\lambda) $$
+and a reconstruction formula
+$$ f(g) = \int_{\Lambda} {\rm tr}\left[\hat{f}(\lambda) \,U(g,\lambda)\right] \,d\lambda \,. $$
+Combining the above gives
+$$ (f_1 * f_2)(e) = \int_{\Lambda} {\rm tr}\left[\hat{f}_2(\lambda) \, \hat{f}_1(\lambda) \right] \,d\lambda = (f_2 * f_1)(e) \,. $$
+Moreover, the Plancherel equality gives
+$$ \int_{G} f_1(g) \overline{f_2(g)} \, dg = \int_{\Lambda} {\rm tr}\left[\hat{f}_1(\lambda)\, \hat{f}_2^*(\lambda) \right] \,d\lambda \,. $$
+When $f_1  = f_2  = f$, this becomes the familiar form of Parseval's equality
+$$ \int_{G} |f(g)|^2 \, dg = \int_{\Lambda} \left\|\hat{f}(\lambda) \right\|_{HS}^{2} \,d\lambda \,, $$
+where $\left\|A\right\|_{HS}^{2} = {\rm tr}(AA^*)$ is the familiar
+Hilbert-Schmidt norm.
+
+In the context of Lie groups there are also natural generalizations of the
+concept of partial derivatives. Namely, if $X \in {\cal G}$ (the Lie algebra
+corresponding to the Lie group $G$), then a (left-invariant) directional derivative of $f(g)$ is computed as
+$$ (\tilde{X}f)(g) \doteq \left.\frac{d}{dt} f\left(g \circ e^{tX}\right)\right|_{t=0}. $$
+If $\{E_i\}$ is a basis for ${\cal G}$, then $(\tilde{E}_i f)(g)$ can be thought
+of as partial derivatives, and the derivative in the direction $X = \sum_i x_i E_i$ can be
+written as
+$$ (\tilde{X}f)(g) = \sum_i x_i (\tilde{E}_if)(g)\,. $$
+Making a choice $\{E_i\}$ and defining an inner product by imposing orthonormality
+conditions $(E_i,E_j) = \delta_{ij}$ in effect fixes a metric for $\cal{G}$, which can be
+transported by left or right action to define a metric on $G$.
+
+Operational properties of the Fourier transform include
+$$ \widehat{(\tilde{X}f)}(\lambda) =  u(X,\lambda) \, \hat{f}(\lambda) $$
+where
+$$ u(X,\lambda) \doteq \left.\frac{d}{dt} U(e^{tX},\lambda)\right|_{t=0}\,. $$
+This matrix function is linear in $X$, and so
+$$ u\left(\sum_i x_i E_i,\lambda\right) = \sum_i x_i u(E_i,\lambda)\,. $$
+
+The concept of a Fisher information matix
+with elements
+$$ F_{ij}(f) \doteq \int_G \frac{(\tilde{E}_i f)(g) (\tilde{E}_j f)(g)}{f(g)} \,dg\, $$
+and a diffusion process on $G$ can be described with an equation of the form\footnote{The diffusion coefficients
+are $D_{ij}$ and the drift coefficients are $h_i$. When $h_i=0$ for all $i \in \{1,...,dim(G)\}$ the diffusion process is called driftless.}
+\begin{equation}
+\frac{\partial f}{\partial t} = -\sum_{i=1}^{dim(G)} h_{i} \tilde{E}_i f
++ \half \sum_{i,j=1}^{dim(G)} D_{ij} \tilde{E}_i \tilde{E}_j f \,.
+\label{mainmo}
+\end{equation}
+
+With all of this in mind, it becomes possible to explore generalizations of inequalities from classical information theory.
+%For example, does the
+%entropy power inequality apply ? Given a diffusion process, does the de Briujn identity hold ? What is the rate of entropy increase under a diffusion process ? Is there a sharp Young inequality ? Does the Young-Hausdorf Inequality apply ?
+%Do the Hirschman-Beckner, and Beckner-Bobenko inequalities apply ?
+%Do Kolmogorov concentration inequalities apply ? Is there a
+%Cramer-Rao Bound ?
+Two major hindrances to trivially extending these inequalities to the noncommutative case are:
+(1) for general functions on $G$,
+$$ (f_1 * f_2)(g) \neq (f_2 * f_1)(g)\,; $$
+and, (2) unlike in the case of $\IR^n$ where the Gaussian distribution is simultaneously (a) the
+maximal entropy distribution subject to covariance constraints, (b) is closed under convolution and
+conditioning, and (c) solves the Euclidean-space version of (\ref{mainmo}),
+these attributes cannot in general be simultaneously satisfied for more general Lie groups.
+For example, the Entropy-Power Inequality (EPI) is not even true for
+the circle group $\IR/\IZ \cong SO(2)$.
+
+This paper summarizes what is already known, introduces some new results, and poses some questions for future exploration.
+
+\subsection{Structure of The Paper}
+
+Section \ref{binivsec} explains how to compute the integration measure for unimodular Lie groups.
+Section \ref{postypesec} reviews the concept of functions of positive type on unimodular Lie groups, and the resulting properties of Fourier matrices for such functions.
+Section \ref{tracesec} explains why trace inequalities are significant in the harmonic
+analysis of diffusion processes on noncommutative unimodular Lie groups, and reviews some of the most well-known trace inequalities and various conjectures put forth in the literature.
+Section \ref{fishdiff} reviews how Fisher information arises in quantifying entropy increases under diffusion and reviews a generalization the de Bruijn identity, which is shown to hold for unimodular Lie groups in general. This too involves trace inequalities.
+Section \ref{covariancedefsec} reviews definitions of mean of covariance of probability densities on unimodular Lie groups, and how the propagate under convolution. Section \ref{examplesec} illustrates the theory with specific examples ($SO(3)$ as
+an example of compact Lie groups and the Heisenberg group ${\cal H}(3)$ as an example of
+a noncommutative noncompact unimodular Lie group.)
+
+\section{Explicit Computation of the Bi-Invariant Integration Measure} \label{binivsec}
+
+This section explains how to compute the bi-invariant integration measure for a unimodular Lie group, summarizing
+the discussion in \cite{vol2,dover}.
+
+To begin, an inner product $(\cdot,\cdot)$ between arbitrary elements of the Lie algebra, $Y = \sum_i y_i E_i$ and
+$Z = \sum_j z_j E_j$, can be defined such that
+\beq
+(Y,Z) \doteq \sum_{i=1}^{n} y_i z_i \wwskip (E_i, E_j) = \delta_{ij}.
+\label{innerproddef}
+\eeq
+The basis $\{E_i\}$ is then orthonormal with respect to this inner product.
+The definition of the inner product together with the constraint of orthonormality of a particular choice of basis
+$\{E_i\}$
+in (\ref{innerproddef}) defines a metric tensor for the Lie group.
+
+Let $\qq=[q_1,...,q_n]^T$ be a column vector of local coordinates. Then $g(t) = \tilde{g}(\qq(t))$ is a curve in $G$ where $\tilde{g}: \IR^n \rightarrow G$ is the local parametrization of the Lie group $G$. Henceforth
+the tilde will be dropped since it will be clear from the argument whether the function $g(t)$ or $g(\qq)$
+is being referred to.
+The right-Jacobian matrix\footnote{Here `right' and `left' 
+respectively refer to differentiation appearing on the right or left side in calculations.
+As such a `right' quantity denoted with a subscript $r$ is left invariant, and a `left'
+quantity denoted with a subscript $l$ is right invariant.} 
+for an $n$-dimensional Lie group parameterized with local
+coordinates $q_1, ..., q_n$ is the matrix $J_r(\qq)$ that relates rates of change $\dot{\qq}$
+to $g^{-1} \dot{g}$, and likewise for $J_l(\qq)$ and $\dot{g} g^{-1}$, where a dot denotes $d/dt$. Specifically,
+$$ \dot{g}  g^{-1} = \sum_j \omega_j^l E_j  \askip \bfomega^l = J_l(\qq) \dot{\qq} $$
+and
+$$ g^{-1} \dot{g} = \sum_j \omega_j^r E_j  \askip \bfomega^r = J_r(\qq) \dot{\qq}. $$
+In other words,
+$$ (\dot{g}  g^{-1}, E_k) = \left(\sum_j \omega_j^l E_j , E_k \right) = \sum_j \omega_j^l \left(E_j , E_k \right) = \sum_j \omega_j^l \delta_{jk} = \omega_k^l .$$
+The scalars $\omega_k^l$ can be stacked in an array to
+form the column vector $\bfomega^l = [\omega_1^l, \omega_2^l, ..., \omega_n^l]^T$.
+Analogous calculations follow for the ``$r$'' case.
+This whole process
+is abbreviated with the ``$\vee$'' operation as
+\beq
+\left(\dot{g}  g^{-1}\right)^{\vee}  = \bfomega^l \askip \left(g^{-1} \dot{g}\right)^{\vee}  = \bfomega^r.
+\label{veedefllsls}
+\eeq
+
+Given an orthogonal basis $E_1, ..., E_n$
+for the Lie algebra, projecting the left and
+right tangent operators onto this basis yields
+elements of the right- and left-Jacobian matrices:\footnote{The `l' and `r' convention
+used here for Jacobians and for vector fields is opposite that used in the mathematics literature.
+The reason for the choice made here is to emphasize the location of the ``the most informative part'' of the
+expression. In Jacobians, this is the location of the partial derivatives. In vector fields this is where
+the components defining the field appear.}
+\begin{equation}
+(J_r)_{ij} = \left(g^{-1} \frac{\partial g}{\partial q_j},
+E_i\right)
+\hskip 0.2 true in {\rm and} \hskip 0.2 true in
+(J_l)_{ij} = \left(\frac{\partial g}{\partial q_j} g^{-1},
+E_i\right).
+\label{jacdefs}
+\end{equation}
+In terms of the $\vee$ operation this is written as
+$$ \left(g^{-1} \frac{\partial g}{\partial q_j} \right)^{\vee} = J_r(\qq) \, {\bf e}_j
+\askip \left(\frac{\partial g}{\partial q_j} g^{-1}\right)^{\vee} = J_l(\qq) \, {\bf e}_j . $$
+As another abuse of notation, the distinction between $J(\qq)$ and $J(g(\qq))$ can be blurred
+in both the left and right cases. Again, it is clear which is being referred to from the argument
+of these matrix-valued functions.
+
+Note that $J_r(h \circ g) = J_r(g)$
+and $J_l(g \circ h) = J_l(g)$.
+For unimodular Lie groups,
+\begin{equation}
+|\det (J_r)(\qq)| \,=\, |\det (J_l)(\qq)| \,\,\,\,\,{\rm and}\,\,\,\,\, dg = |\det (J_{r,l})(\qq)|\,d\qq\,.
+\label{detcond2322}
+\end{equation}
+This $dg$ has the bi-invariance property, and is called the {\it Haar measure}. Examples of how this looks in different coordinates are given for ${\cal H}(3)$ and $SO(3)$ in Section \ref{examplesec}. In the compact case,
+it is always possible to find a constant $c$ to normalize as $d\,'g \doteq c \cdot dg$ such that $\int_{G} d\,'g = 1$.
+
+\section{Functions of Positive Type} \label{postypesec}
+
+In harmonic analysis, a function $\varphi:G \rightarrow \IC$ is called
+a {\it function of positive type} if for every
+$c_i \in \IC$ and every $g_i, g_j \in G$ and any $n \in \IZ_{>0}$ the inequality
+$$ \sum_{i,j=1}^{n} c_i\, \overline{c_j}\, \varphi(g_{i}^{} \circ g_{j}^{-1}) \,\geq\,0\,. $$
+In some texts, such functions are also called {\it positive definite}, whereas
+in others that term is used only when the inequality above excludes equality
+except when all values of $c_i$ are zero. Here a function of
+positive type will be taken to be one for which the matrix $M = [m_{ij}]$ with entries  $m_{ij} \doteq \varphi(g_{i}^{} \circ g_{j}^{-1})$ is Hermitian positive semi-definite (which can be shown to be equivalent to the above expression), and a positive  definite function is one for which $M$ is positive definite.
+
+Some well-known properties of functions of positive type include \cite{8folland,8gross,8hewitt}: % HR p 255
+\begin{eqnarray*}
+\varphi(e) &=& \overline{\varphi(e)} \geq 0 \\
+|\varphi(g)| &\leq& \varphi(e) \\
+\varphi(g^{-1}) &=& \overline{\varphi(g)}\,.
+\end{eqnarray*}
+Moreover, if $\varphi_1$ and $\varphi_2$ are two such functions, then so are
+$\overline{\varphi_i}$, $\varphi_1 \cdot \varphi_2$, as are linear combinations of the form $a_1 \varphi_1 + a_2 \varphi_2$ where $a_i \in \IR_{>0}$.
+
+Clearly, if $\varphi$ is a function constructed as
+$$ \varphi(g;\lambda) \doteq {\rm tr}\left[A^* U(g,\lambda) A\right] $$
+when $A$ is positive definite, then
+$$ \sum_{i,j=1}^{n} c_i\, \overline{c_j}\, \varphi(g_{i}^{} \circ g_{j}^{-1})
+= \sum_{i,j=1}^{n} c_i\, \overline{c_j}\, {\rm tr}\left[A^* U(g_{i}^{} \circ g_{j}^{-1},\lambda) A\right] $$
+$$ = \left\|A^* \sum_{i=1}^{n} U(g_{i}^{},\lambda) \right\|_{HS}^{2} \geq 0 $$
+because
+$$ U(g_{i}^{} \circ g_{j}^{-1},\lambda) =
+U(g_{i}^{},\lambda)\, U^*( g_{j},\lambda)\,. $$
+And hence $\varphi(g;\lambda)$ is a function of positive type.
+Moreover, by the same reasoning, if $f(g)$ is any functions for which $\hat{f}(\lambda)$ is a Hermitian positive definite matrix, then $f(g)$
+will be a positive definite function. And, according to Hewitt and Ross
+\cite{8gross,8hewitt} (p. 683 Lemma D.12),
+if $A$ and $B$ are both positive definite matrices, then so is their product.
+This has implications regarding the positivity of the convolution of positive
+functions on a group.
+
+In particular, if $\rho_t(g) = \rho(g;t)$ is the solution to a driftless diffusion equation with Dirac-delta initial conditions, then the Fourier-space solution is
+written as
+$$ \hat{\rho}(\lambda;t) = \exp\left[\half \sum_{i,j=1}^{dim(G)}
+D_{ij} u(E_i,\lambda) u(E_j,\lambda) \right]\,, $$
+which is Hermitian positive definite, and hence $\rho_{t}(g)$ is a real-valued
+positive definite function for each value of $t \in \IR_{\geq 0}$. Moreover,\footnote{Here the dependence on $D = [D_{ij}]$ has been suppressed, but really
+$\rho_{t}(g) = \rho_{t}(g;D)$.}
+$$ \rho_{t}(g) = \rho_{t}(g^{-1})\,. $$
+
+It is not difficult to show that given two symmetric functions, $\rho_1(g) \doteq \rho_{t_1}(g;D_1)$ and
+$\rho_2(g) \doteq \rho_{t_2}(g;D_2)$, that
+$$ (\rho_{1} * \rho_{2})(g) = (\rho_{2} * \rho_{1})(g^{-1})\,. $$
+Though this does not imply that $(\rho_1 * \rho_2)(g)$ is symmetric, it is easy to show that $(\rho_1 * \rho_2 * \rho_1)(g)$ is symmetric.
+
+Moreover, if $f:G\,\rightarrow\,\IR_{\geq 0}$ is a pdf which is not symmetric, it is not difficult to show that
+$$ f'(g) \doteq \frac{f(g) + f(g^{-1})}{2} $$
+and
+$$ f''(g) \doteq \frac{f(g) f(g^{-1})}{(f*f)(e)} $$
+are symmetric pdfs.
+
+For any positive definite symmetric pdf, the Fourier transform is
+a positive definite Hermitian matrix because
+\begin{eqnarray*}
+\hat{\rho}(\lambda) &=& \int_G \rho(g)\, U(g^{-1},\lambda)\, dg =
+\int_G \rho(g^{-1})\, U(g^{-1},\lambda)\, dg \\
+&=& \int_G \rho(g)\, U(g,\lambda)\, dg =
+\int_G \rho(g)\, U^*(g^{-1},\lambda)\, dg = \hat{\rho}^*(\lambda)\,.
+\end{eqnarray*}
+
+From positive definiteness, it is possible to write
+$$ \hat{\rho}(\lambda) = \exp H(\lambda) $$
+where $H$ is Hermitian, though not necessarily positive definite.
+
+Moreover, every special unitary matrix can be expressed as the exponential of
+a skew-Hermitian matrix, and even more than that, if $g = \exp X$, then the IUR matrix $U(g,\lambda)$ can be computed as
+$$ U(g,\lambda)\,=\,\exp Z(\log(g),\lambda) $$
+where
+$$ Z(X,\lambda) = \sum_{i=1}^{dim(G)} x_i u(E_i,\lambda) = - Z^*(X,\lambda)\,. $$
+In analogy with the way that the exponential map for a matrix Lie group is simply the
+matrix exponential defined by the Taylor series, here and throughout this work 
+the logarithm is the matrix logarithm defined by its Taylor series.
+
+In this light, the Fourier inversion formula has in it the evaluation of
+$$ {\rm tr}\left[
+\exp H \exp Z
+\right]\,, $$
+and the evaluation of $(\rho_1*\rho_2)(e)$ has in it
+$$ {\rm tr}\left[
+\exp H_1 \exp H_2
+\right]\,. $$
+Also, in the evaluation of probability densities for diffusion processes with
+drift, it is desirable to find approximations of the form
+$$ {\rm tr}\left[
+\exp (H + Z)
+\right]\,\approx\,{\rm tr}\left[
+\exp H' \exp Z')
+\right]\,. $$
+
+For these reasons, there are connections between harmonic analysis on
+unimodular Lie groups and trace inequalities.
+
+\section{Trace Inequalities} \label{tracesec}
+
+% \subsection{The Role of Trace Inequalities in Noncommutative Harmonic Analysis}
+
+In the Fourier reconstruction formula for a diffusion process on a Lie group, the trace of the product of exponentials of two matrices is
+computed. It is therefore relevant to consider: (1) when
+can the product of two exponentials be simplified; (2) even
+when the product cannot be simplified, it would be useful to
+ determine when the trace
+operation has the effect of simplifying the result.
+For example, if $A$ and $B$ are bandlimited matrices
+and ${\rm tr}(e^A e^B) \approx {\rm tr}(\exp(A+B))$ then
+computing the eigenvalues of $A+B$, exponentiating each eigenvalue,
+and summing potentially could be much faster than directly exponentiating the matrices, and then taking the trace of the product.
+The statements that follow therefore may have some relevance to the
+rapid evaluation of the Fourier inversion formula for diffusion
+processes on Lie groups.
+
+\subsection{Generalized Golden-Thompson Inequalities}
+
+
+For $n\times n$ Hermitian matrices $A$ and $B$, the
+{\it Golden-Thompson inequality} \cite{golden,thom1,thombook} is
+\beq
+\varphi(e^A e^B) \geq \varphi(e^{A+B})
+\label{}
+\eeq
+where $\varphi$ is one of a large number of so-called spectral functions. For the case when $\varphi(\cdot) = {\rm tr}(\cdot)$
+(which is the case of primary interest in this chapter) this
+ was proven in \cite{golden}, and generalized in \cite{Lenard}.
+
+\vskip 0.1 true in
+\noindent
+{\it The Thompson Conjecture} \cite{thom2}: If $H$ and $K$ are Hermitian matrices, there exist unitary matrices $U$ and $V$ dependent
+on $H$ and $K$ such that
+\beq
+e^{iH} e^{iK} = e^{i(UHU^* + VKV^*)} .
+\label{thmcon02}
+\eeq
+
+\vskip 0.1 true in
+\noindent
+{\it The So-Thompson Conjecture} \cite{sothomp91}: If $H$ and $K$ are Hermitian matrices, there exist unitary matrices $U$ and $V$ dependent
+on $H$ and $K$ such that
+\beq
+e^{H/2} e^{K} e^{H/2} = e^{UHU^* + VKV^*} .
+\label{sothmcon02}
+\eeq
+
+Interestingly, such conjectures have been proven \cite{soproof}
+using techniques associated with random walks on symmetric space
+of Lie groups \cite{Klyachko}, thereby bringing the problem back
+to the domain of interest in this chapter.
+
+In \cite{cohen82}, Cohen et al. prove that {\it spectral
+matrix functions}\footnote{These are functions that depend only the eigenvalues of a matrix, and are therefore invariant under similarity tranformations.}, $\varphi:\IC^{n\times n} \rightarrow \IC$
+(including the trace) satisfy the inequality
+\beq
+\varphi(e^{(A+A^*)/2}  e^{(B+B^*)/2}) \geq |\varphi(e^{A+B})|
+\label{sothmcon02}
+\eeq
+when the following condition holds:
+$$ \varphi([X X^*]^s) \geq |\varphi(X^{2s})| \hskip 0.2 true in
+\forall\, X \in \IC^{n\times n}
+\hskip 0.2 true in {\rm for} \hskip 0.2 true in s = 1,2, ... $$
+
+An interesting corollary to (\ref{sothmcon02}) is that if $A$ is skew-Hermitian, and $B \in \IC^{n\times n}$, then \cite{cohen82}:
+\beq
+\varphi(e^{(B+B^*)/2}) \geq |\varphi(e^{A+B})|.
+\label{ssl33m}
+\eeq
+
+Bernstein proved the following general statement for
+$A \in \IC^{n\times n}$ \cite{Bernsteingg}:
+\beq
+{\rm tr}(e^{A^*} e^A) \leq {\rm tr}(e^{A^* + A})
+\label{bernform}
+\eeq
+
+Inequalities involving functions of products of exponentials
+have a long history (see e.g., \cite{fan23,fanref}) and
+remain an area of active investigation. A few recent papers include
+\cite{Bebiano,FriedlandSo,FriedlandPorta}.
+
+\subsection{Matrix Inequalities from Systems Theory}
+
+Another sort of matrix inequality that may be useful would be
+extensions of results that comes from
+systems theory. For example, it is known that if
+$A, B \in \IR^{n\times n}$ and $B=B^T>0$ then \cite{Mori}
+\beq
+\lambda_n(\hat{A}) {\rm tr}(B) \leq {\rm tr}(AB) \leq \lambda_1(\hat{A}) {\rm tr}(B)
+\label{}
+\eeq
+where $\hat{A} = (A+A^T)/2$ and the eigenvalues are ordered as
+$\lambda_1 \geq \lambda_2 \geq \cdots \geq \lambda_n >0$.
+This has been tightened by Fang et al. \cite{Fang}:
+\beq
+\lambda_n(\hat{A}) {\rm tr}(B)  - \lambda_n(B)[n\lambda_n(\hat{A})
+-{\rm tr}(A)]
+\leq {\rm tr}(AB) \leq
+\lambda_1(\hat{A}) {\rm tr}(B)  - \lambda_n(B)[n\lambda_1(\hat{A})
+-{\rm tr}(A)]
+\label{}
+\eeq
+Additional modifications have been made by Park \cite{Parkkwlw}.
+
+Under the same conditions on $A$ and $B$,
+Komaroff and Lasserre independently derived the inequality \cite{Komaroff,Lasserre1}:
+\beq
+\sum_{i=1}^{n} \lambda_i(\hat{A})  \lambda_{n-i+1}(B)
+\leq {\rm tr}(AB) \leq  \sum_{i=1}^{n} \lambda_i(\hat{A})  \lambda_{i}(B)
+\label{Lasserreeq1}
+\eeq
+and Lasserre tightened this with the result  \cite{Lasserre2}:
+\beq
+f(-\epsilon) \leq {\rm tr}(AB) \leq f(\epsilon) \hskip 0.2 true in
+\forall \, \epsilon > 0
+\label{}
+\eeq
+where
+$$ f(\epsilon) \doteq \frac{1}{\epsilon}
+\sum_{i=1}^{n} [\lambda_i(B + \epsilon\hat{A}) \lambda_i(B) -
+{\rm tr}(B^2)]. $$
+
+Apparently, when $A \in \IC^{n\times n}$ and $B = B^* \in \IC^{n\times n}$
+(\ref{Lasserreeq1}) holds with the substitutions
+$A^T \rightarrow A^*$ and
+${\rm tr}(AB) \rightarrow {\rm Re}[{\rm tr}(AB)]$ \cite{Zhang}.
+Generalized formulas for products of arbitrary real matrices
+have been made recently \cite{Xing,Zhang,JianzhouLiu}.
+
+\subsection{Classical Matrix Inequalities}
+
+In a sense, inequalities of the form in the previous section
+can be traced back to work done as early as the 1930s.
+ Mirsky \cite{Mirsky3} attributes the following result for
+ arbitrary $A, B \in \IC^{n\times n}$ to
+ a 1937 paper by John von Neumann:
+\beq
+|{\rm tr}(AB)| \leq \sum_{i=1}^{n} \mu_i(A) \mu_i(B)
+\label{}
+\eeq
+where $\mu_1(A) \geq \mu_2(A) \geq \cdots \geq \mu_n(A)$
+are the singular values of $A$.
+
+% The classical result of
+Hoffman and Wieland \cite{Wieland} states that for $n\times n$
+normal matrices
+$A$ and $B$ (i.e., $A^* A = A A^*$ and $B^* B = B B^*$) permutations
+$\pi, \sigma \in \Pi_n$ can be found such that
+\beq
+\sum_{i=1}^{n} |\lambda_i(A) - \lambda_{\pi(i)}|^2 \leq
+\|A - B\|^2 \leq \sum_{i=1}^{n} |\lambda_i(A) - \lambda_{\sigma(i)}|^2
+\label{}
+\eeq
+where $\|A\|^2 = {\rm tr}(A A^*)$ is the Frobenius norm.
+For generalizations see \cite{COCHRAN}. In particular,
+Richter \cite{Richter} and Mirsky \cite{Mirsky} have shown that if $A$ and $B$ are both $n\times n$ Hermitian matrices,
+\beq
+\sum_{i=1}^{n} \lambda_i(A) \lambda_{n+1-i}(B) \leq {\rm tr}(AB) \leq
+\sum_{i=1}^{n} \lambda_i(A) \lambda_{i}(B)
+\label{}
+\eeq
+and Marcus \cite{Marcus} showed that for normal matrices $A$ and $B$,
+there exist permutations $\pi$ and $\sigma$ for which
+\beq
+\sum_{i=1}^{n} \lambda_i(A) \lambda_{\pi(i)}(B) \leq {\rm Re}[{\rm tr}(AB)] \leq
+\sum_{i=1}^{n} \lambda_i(A) \lambda_{\sigma(i)}(B)
+\label{}
+\eeq
+
+\subsection{The Arithmetic-Mean-Geometric-Mean (AM-GM) Inequality} \label{agineqsec}
+
+The {\it arithmetic-geometric-mean inequality} states that the arithmetic mean of a set of positive real
+numbers is always less than the geometric mean of the same set of numbers:
+\beq
+\frac{1}{n} \sum_{i=1}^{n} \lambda_i \geq \prod_{i=1}^{n} \lambda_i^{\frac{1}{n}}.
+\label{amgmdef}
+\eeq
+This fact can be used to derive many useful inequalities. For example, Steele \cite{Steele} uses the AM-GM inequality to derive
+a reverse Cauchy-Schwarz inequality of the form
+\beq
+\left(\sum_{k=1}^{n} a_k^2 \right)^{\half} \left(\sum_{k=1}^{n} b_k^2 \right)^{\half} \leq \frac{m+M}{2 \sqrt{mM}} \sum_{k=1}^{n} a_k b_k
+\label{revcsineq2}
+\eeq
+where $ \{a_k\}, \{b_k\} \subset \IR_{>0}$ and
+$0 < m \leq a_k/b_k \leq M < \infty$  for all $k \in \{1,...,n\}$.
+
+It is no coincidence that the numbers in (\ref{amgmdef}) are denoted as $\lambda_i$ because when they are interpreted as the eigenvalues of a positive definite Hermitian matrix, $A = A^* >0$, and so
+\beq
+\frac{1}{n} {\rm tr}(A) \geq |A|^{\frac{1}{n}}.
+\label{lsdmskd}
+\eeq
+This is useful for bounding the trace of the matrix exponential of a not-necessarily-positive-definite Hermitian matrix, $H = H^*$, since
+$A = \exp H = A^* > 0$ can be substituted into (\ref{lsdmskd}). The determinant-trace equality for the matrix exponential
+${\rm det}(\exp(H)) = e^{{\rm tr}(H)}$ then gives $|\exp H|^{\frac{1}{n}} = |e^{{\rm tr}(H)}|^{\frac{1}{n}} $
+and so
+\beq
+% \boxed{
+\frac{1}{n} {\rm tr}(\exp H) \geq  e^{{\rm tr}(H)/n}.
+% }
+\label{lsdmskdee}
+\eeq
+
+Though (\ref{lsdmskd}) is more fundamental than (\ref{lsdmskdee}), the latter is directly useful in studying properties of
+diffusion processes on Lie groups.
+
+It is also interesting to note that (\ref{lsdmskd}) generalizes in several ways. For example, if
+$$ \mu_p(\lambda_1,...,\lambda_n) \doteq \left(\frac{1}{n} \sum_{i=1}^{n} \lambda_i^p \right)^{\frac{1}{p}} $$
+then the AM-GM inequality can be stated as
+$$ \lim_{p\rightarrow 0} \mu_p(\lambda_1,...,\lambda_n)  \leq \mu_1(\lambda_1,...,\lambda_n) $$
+and more generally,
+\beq
+\mu_p(\lambda_1,...,\lambda_n)  \leq \mu_q(\lambda_1,...,\lambda_n) \hskip 0.2 true in p < q.
+\label{genmean}
+\eeq
+For each fixed choice of $\lambda_1,...,\lambda_n$, the function $f:\IR \rightarrow \IR_{\geq 0}$
+defined by $f(p) = \mu_p(\lambda_1,...,\lambda_n)$ is an increasing function.
+
+When $p=-1$, the {\it harmonic mean}
+$$ \mu_{-1}(\lambda_1,...,\lambda_n) = n \cdot \left[\sum_{i=1}^{n} \frac{1}{\lambda_i} \right]^{-1} $$
+results, and (\ref{genmean}) for $p=-1$ and $q=0$ implies that
+$$  n \cdot \left[\sum_{i=1}^{n} \frac{1}{\lambda_i} \right]^{-1} \leq \left[\prod_{i=1}^{n} {\lambda_i} \right]^{\frac{1}{n}}. $$
+The implication of this for positive definite Hermitian matrices is that
+\beq
+n \cdot {\rm tr} [A^{-1}] \leq [{\rm det} A]^{\frac{1}{n}} \,\,\, \Longleftrightarrow \,\,\, {\rm tr} A \leq \frac{1}{n} [{\rm det} A]^{-\frac{1}{n}}.
+\label{dkkk332d}
+\eeq
+One generalization of (\ref{amgmdef}) is the {\it weighted AM-GM inequality}
+\beq
+\frac{1}{\alpha} \sum_{i=1}^{n} \alpha_i \lambda_i \geq \left(\prod_{i=1}^{n} \lambda_i^{\alpha_i}
+\right)^{\frac{1}{\alpha}} \wskip \alpha = \sum_{i=1}^{n} \alpha_i \,\,\, , \,\,\, \alpha_i \in \IR_{>0}.
+\label{weightedamgmdef}
+\eeq
+Another generalization is {\it Ky Fan's inequality} \cite{Neuman}:
+\beq
+\frac{\frac{1}{n} \sum_{i=1}^{n} \lambda_i}{\frac{1}{n} \sum_{i=1}^{n} (1-\lambda_i)}
+ \geq \frac{\prod_{i=1}^{n} \lambda_i^{\frac{1}{n}}}{\prod_{i=1}^{n} (1-\lambda_i)^{\frac{1}{n}}}
+\label{kyfanlambda}
+\eeq
+which holds for $0 \leq \lambda_i \leq \half$.
+If the numbers $\lambda_i$ are viewed as the eigenvalues of a matrix, $A$,
+then Ky Fan's inequality can be written as
+\beq
+\frac{{\rm tr} A}{{\rm tr} (\II - A)}
+\geq \frac{|A|^{\frac{1}{n}}}{|\II - A|^{\frac{1}{n}}}
+\hskip 0.2 true in {\rm or} \hskip 0.2 true in
+{\rm tr} A \geq \frac{n}{1 + |A|^{-\frac{1}{n}} |\II - A|^{\frac{1}{n}}}.
+\label{kyfanlambdamat}
+\eeq
+Of course this statement should then be restricted to those matrices that have real eigenvalues that obey
+$0 \leq \lambda_i(A) \leq \half$.
+
+\subsection{Consequences for Harmonic Analysis and Diffusion Processes}
+
+If $\rho_{D^{(k)}}(g,t)$ denotes the solution to the driftless diffusion
+equation on $G$ with diffusion coefficients $D_{ij}^{(k)}$, subject to initial
+conditions $\rho_{D^{(k)}}(g,0)= \delta(g)$, then from the Golden-Thompson
+inequality
+\beq
+(\rho_{D^{(1)}}*\rho_{D^{(2)}})(e;t) \,\geq\, \rho_{D^{(1)} + D^{(2)}}(e;t) \,.
+\label{lsdmskd1234}
+\eeq
+Alternatively, using the fact that $B^{\half} A B^{\half}$ is Hermitian positive definite whenever $A$ and $B$ are,
+the trace of the product ${\rm tr}[AB]  = {\rm tr}[B^{\half} A B]$ can be bounded using (\ref{lsdmskd}),
+resulting in
+\beq
+\frac{1}{n} {\rm tr}(AB) \geq |A|^{\frac{1}{n}} |B|^{\frac{1}{n}}.
+\label{lsdmskd12345}
+\eeq
+This can then be used to bound $(\rho_{D^{(1)}}*\rho_{D^{(2)}})(e;t)$ from below as well. But it can also be used
+in a different way. Given a diffusion with drift, the Fourier matrices will be of the form
+$\exp(H + Z)$ where $H=H^*$ and $Z=-Z^*$. Then the convolution of two diffusions with drifts being the negative
+of each other will be $\exp(H + Z) \exp(H - Z)$, which is Hermitian, and hence
+\beq
+\frac{1}{n} {\rm tr}(\exp(H + Z) \exp(H - Z)) \geq |\exp(H + Z)|^{\frac{1}{n}} |\exp(H - Z)|^{\frac{1}{n}}.
+\label{lsdmskd123456}
+\eeq
+Then from the determinant-trace equality, we can simplify
+$$ |\exp(H + Z)| = e^{{\rm tr}(H + Z)} \,\,\,\,\,{\rm and}\,\,\,\,\,|\exp(H - Z)| = e^{{\rm tr}(H - Z)}\,,$$
+thereby giving that
+\beq
+\frac{1}{n} {\rm tr}(\exp(H + Z) \exp(H - Z)) \geq e^{\frac{2}{n}{\rm tr}(H)}.
+\label{lsdmskd1234567}
+\eeq
+
+These will be demonstrated in Section \ref{examplesec}.
+
+In the case when $G = \IR^n$, covariances add under convolution and for a diffusion $\Sigma^{(k)} = D^{(k)} t$, and so
+$$ (\rho_{D^{(1)}}*\rho_{D^{(2)}})({\bf 0};t) \,=\,
+\frac{1}{(2\pi t)^{n/2} \left|D^{(1)} + D^{(2)}\right|^{\half} }
+\,=\,
+\rho_{D^{(1)} + D^{(2)}}({\bf 0};t) \,. $$
+
+This begs the question of how to define and propagate covariances on a unimodular Lie group, and what relationships may exist with Fisher information. Inequalities relating Fisher information
+and entropy are reviewed in Section \ref{fishdiff}, followed by definitions of covariance in
+Section \ref{covariancedefsec} and the relationship be Fisher information and covariance.
+
+\section{Inequalities Involving Fisher Information and Diffusion Processes} \label{fishdiff}
+
+This section connects trace inequalities with Fisher information and the rate of entropy increase under a diffusion process. The results presented here are an abridged version of those presented
+in \cite{vol2}.
+
+\subsection{Rate of Increase of Entropy under Diffusion}
+
+The entropy of a pdf on a Lie group is defined in (\ref{entdef3303})
+If $f(g,t)$ is a pdf that satisfies a diffusion equation (regardless of the details of the initial conditions) then some interesting properties of $S_f(t)$ can be studied. In particular, if $\dot{S}_{f} = dS_f/dt$, then differentiating
+under the integral sign gives
+\bea
+\dot{S}_{f} &=& - \int_G \left\{\frac{\partial f}{\partial t} \log f + \frac{\partial f}{\partial t}
+\right\} \,dg .
+\eea
+But from the properties of a diffusion equation,
+$$ \int_{G} \frac{\partial f}{\partial t} \,dg =
+\frac{d}{dt} \int_G f(g,t) \,dg = 0, $$
+and so the second term in the above braces integrates to zero.
+
+Substitution of
+$$ \frac{\partial f}{\partial t} = \half \sum_{i,j=1}^{n} D_{ij} \tilde{E}_i^r \tilde{E}_j^r f
+- \sum_{k=1}^{n} h_k \tilde{E}_k^r f $$
+into the integral for $\dot{S}_{f}$ gives
+\bea
+\dot{S}_{f} &=& - \int_G \left\{
+\half \sum_{i,j=1}^{n} D_{ij} \tilde{E}_i^r \tilde{E}_j^r f
+- \sum_{k=1}^{n} h_k \tilde{E}_k^r f
+\right\} \log f \, dg \\
+&=& - \half \sum_{i,j=1}^{n} D_{ij} \int_G (\tilde{E}_i^r \tilde{E}_j^r f) \log f \, dg
+- \sum_{k=1}^{n}  h_k \int_G (\tilde{E}_k^r f) \, \log f \, dg \\
+&=& \half \sum_{i,j=1}^{n} D_{ij} \int_G  (\tilde{E}_j^r f) (\tilde{E}_i^r\log f)\, dg
++ \sum_{k=1}^{n} h_k \int_G f \, (\tilde{E}_k^r \log f) \, dg \\
+&=& \half \sum_{i,j=1}^{n} D_{ij} \int_G  \frac{1}{f} (\tilde{E}_j^r f) (\tilde{E}_i^r f)\, dg + \sum_{k=1}^{n} h_k \int_G \tilde{E}_k^r f \, dg \\
+&=& \half \sum_{i,j=1}^{n} D_{ij} \int_G  \frac{1}{f} (\tilde{E}_j^r f) (\tilde{E}_i^r f)\, dg \\
+&\geq& 0
+\eea
+
+
+\subsection{The Generalized de Briujn Identity}
+
+This section generalizes the de Bruijn identity, in which entropy rates are related to
+Fisher information.
+
+\begin{theorem} \label{th7.1}
+Let $f_{D, {\bf h},t}(g) = f(g,t;D,{\bf h})$ denote the solution of the diffusion
+equation (\ref{mainmo}) with constant ${\bf h} = [h_1,...,h_n]^T$ subject to the initial condition $f(g,0;D,{\bf h}) = \delta(g)$.
+Then for any well-behaved pdf $\alpha(g)$,
+\beq
+\frac{d}{dt} S(\alpha* f_{D, {\bf h},t}) = \half {\rm tr}[D F^r(\alpha * f_{D, {\bf h},t})].
+\label{debru323ii205}
+\eeq
+\end{theorem}
+\begin{proof}
+It is easy to see that the solution of the diffusion equation
+\beq
+\frac{\partial \rho}{\partial t} = \half \sum_{i,j=1}^{n} D_{ij} \tilde{E}_i^r \tilde{E}_j^r \rho
+- \sum_{k=1}^{n} h_k \tilde{E}_k^r \rho
+\label{skk3k2s}
+\eeq
+subject to the initial conditions $\rho(g,0) = \alpha(g)$
+ is simply $\rho(g,t) = (\alpha * f_{D,{\bf h},t)}(g)$. This follows
+ because all derivatives ``pass through'' the convolution integral
+ for $\rho(g,t)$ and act on $f_{D,{\bf h},t}(g)$.
+
+ Taking the time derivative of $S(\rho(g,t))$ gives
+\beq
+\frac{d}{dt} S(\rho) = -\frac{d}{dt} \int_G \rho(g,t) \log \rho(g,t) \,dg = -\int_G \left\{
+\frac{\partial \rho}{\partial t} \log \rho + \frac{\partial \rho}{\partial t} \right\} \,dg.
+\label{skk322499}
+\eeq
+Using (\ref{skk3k2s}), the partial with respect to time can be replaced with Lie derivatives.
+But
+$$ \int_{G} \tilde{E}_k^r \rho \,dg = \int_{G} \tilde{E}_i^r \tilde{E}_j^r \rho \,dg = 0, $$
+so the second term on the right side of (\ref{skk322499})
+completely disappears. Using the integration-by-parts formula\footnote{There are no
+surface terms because, like the circle and real line, each coordinate in the integral either wraps around
+or goes to infinity.}
+$$ \int_{G} f_1 \, \tilde{E}_k^r f_2 \,dg = - \int_{G} f_2 \, \tilde{E}_k^r f_1 \,dg, $$
+with $f_1 = \log \rho$ and $f_2 = \rho$ then gives
+\bea
+ \frac{d}{dt} S(\alpha * f_{D,{\bf h},t}) &=& \half \sum_{i,j=1}^{n} D_{ij} \int_G  \frac{1}{\alpha * f_{D,{\bf h},t}} \tilde{E}_j^r (\alpha * f_{D,{\bf h},t}) \tilde{E}_i^r (\alpha * f_{D,{\bf h},t})\, dg \\
+&=& \half \sum_{i,j=1}^{n} D_{ij} F^r_{ij}(\alpha * f_{D,{\bf h},t}) \, = \, \half {\rm tr}\left[D \, F^r(\alpha * f_{D,{\bf h},t})\right].
+\eea
+The implication of this is that
+$$ S(\alpha * f_{D,{\bf h},t_2}) - S(\alpha * f_{D,{\bf h},t_1}) = \half \int_{t_1}^{t_2} {\rm tr}\left[D F^r(\alpha * f_{D,{\bf h},t})\right] dt. $$
+\end{proof}
+
+\section{Mean, Covariance, and Their Propagation Under Convolution} \label{covariancedefsec}
+
+This section reviews concepts of mean and covariance for unimodular matrix Lie groups, and how they propagate under convolution. In these definitions, the concepts of Lie-theoretic exponential and logarithm play central roles. For a matrix Lie group, $G$, with corresponding
+Lie algebra, ${\cal G}$, the exponential map
+$$ \exp: {\cal G} \,\longrightarrow\, G $$
+simply can be viewed as the matrix exponential defined by the Taylor series. In general, this map is neither surjective nor injective. However, it is possible to characterize the largest path-connected subset
+${\cal G}^{\circ} \subset {\cal G}$ for which the image $G^{\circ} \doteq \exp\left({\cal G}^{\circ}\right) \subset G$ has a well-defined inverse map
+$$ \log: G^{\circ} \,\longrightarrow\, {\cal G}\,. $$
+This is also simply the matrix logarithm defined by its Taylor series.
+
+For $SO(3)$, $SE(2)$, and $SE(3)$ which are three of the most common unimodular matrix Lie groups encountered in applications, the exponential map is surjective and $G$ and $G^{\circ}$ differ only by a set of measure zero.
+
+In what follows, it is assumed that all probability density functions $f:G\,\longrightarrow\,\mathbb{R}_{\geq 0}$ are either supported in $G^{\circ}$, or
+that 
+$$ \int_{G} f(g)\,dg = \epsilon + \int_{G^{\circ}} f(g)\,dg $$
+where $\epsilon$ is an inconsequential probability. With this in mind, it becomes possible
+to blur the difference between $G$ and $G^{\circ}$.
+
+\subsection{Defining Mean}
+
+At least three different definitions for the mean of a pdf on a unimodular Lie group exist in the literature. The definitions reviewed here are all in the context of matrix-Lie-theoretic
+language which grew out of the author's applied work \cite{wangprop1,wangprop2}. For similar definitions expressed in differential-geometric terms see \cite{pennec96,pennec06,pennec12}.
+
+Directly generalizing the definition
+$$ {\bf m} = \int_{\IR^n} \xx \, f(\xx) \, d\xx $$
+to a Lie group is problematic because $\int_G g\, f(g)\, dg$ is not an element
+of the group. However, it is possible to define $m_0 \in G$ such that
+$$ \log m_0 = \int_G \log g \, f(g) \, dg\,. $$
+Alternatively,
+$$ \int_{\IR^n} (\xx - {\bf m})\, f(\xx) \, d\xx = {\bf 0} $$
+generalizes to searching for $m_1 \in G$ such that
+$$ \int_G \log \left(m_{1}^{-1} \circ g\right) \, f(g) \, dg \,=\,\OO. $$
+Thirdly,
+$$ {\bf m} =
+\begin{array}{c}
+{} \\
+{\rm  argmin} \\
+{\yy \in \IR^n} \end{array}
+\int_{\IR^n} (\xx - \yy)^2 \, f(\xx) \, d\xx $$
+generalizes as
+$$ m_2 =
+\begin{array}{c}
+{} \\
+{\rm  argmin} \\
+{h \in G} \end{array}
+\int_G \left\|\log \left(h^{-1} \circ g\right)\right\|^2 \, f(g) \, dg\,. $$
+In general, no two of $m_0$, $m_1$, and $m_2$ are equal. However, in practice
+for distributions that are concentrated, they are quite close to each other.
+That said, if $f(g) = \rho(g)$ is a symmetric function, then all three reduce to the identity element, and hence are equal in this special case.
+
+Though $m_0$ seems simple and straight forward, it has the undesirable property that shifting a symmetric pdf as $\rho(\mu^{-1} \circ g)$ does
+not automatically shift the mean from $e$ to $\mu$. $m_2$ has the problem
+that the norm $\|\cdot\|$ requires a choice of metric, and for noncompact
+unimodular Lie groups, a bi-invariant metric generally does not exist.
+Therefore, conjugating by an arbotrary $a \in G$ a symmetric pdf as $\rho(a^{-1} \circ g \circ a)$, which in the Euclidean setting would leave the mean fixed at $e$, results in a change to the value of the mean $m_2$ which
+depends on $a$.
+
+In contrast, the mean $m_1$ shifts naturally with shifts of the pdf because
+$$ \int_G \log \left(m_{1}^{-1} \circ g\right) \, \rho(\mu^{-1} \circ g) \, dg \,=\, \int_G \log \left(m_{1}^{-1} \circ \mu \circ h\right) \, \rho(h) dh. $$
+hence $m_{1}^{-1} \circ \mu = e$, or $m_1 = \mu$. Under conjugation of the pdf, the appearance of $\log$ linearly in the definition of $m_1$ means that
+$$ \int_G \log \left(m_{1}^{-1} \circ g\right) \rho(a^{-1} \circ g \circ a) \, dg = \int_G \log \left(m_{1}^{-1} \circ a \circ h \circ a^{-1} \right) \rho(h) \, dh \,=\,\OO $$
+can be written as
+$$ \int_G a^{-1}\,\log \left(m_{1}^{-1} \circ a \circ h \circ a^{-1} \right)\,a \, \rho(h) \, dh \,=\,a^{-1}\,\OO\,a = \OO. $$
+But since
+$$ a^{-1}\,\log (g) \, a = \log(a^{-1} \circ g \circ a)\,, $$
+then the mean $m_1$ of the conjuagated pdf will be the conjugated mean. The implication of this general result in the special case when $\rho$ is symmetric is
+$$ a^{-1} \circ m_{1}^{-1} \circ a = e \,\,\Longrightarrow\,\, m_{1} = e, $$
+giving the desirable property of invariance of the mean of a symmetric function under conjugation.
+
+For these reasons, $m_1$ is chosen here (and in the author's previous work) as
+the best definition of the mean, and this is what will be used henceforth, and
+denoted as $\mu$. The value of $\mu$ can be obtained numerically with an iterative procedure using $m_0$ as the initial starting point.
+
+\subsection{Defining Covariance}
+
+Previously the concepts of $\log: G^{\circ} \rightarrow {\cal G}$ and $\vee:{\cal G} \,\rightarrow\, \mathbb{R}^n$ where defined. The composition of these maps is defined
+as
+$$ \log^{\vee} G^{\circ} \,\rightarrow\, \mathbb{R}^n\,. $$
+That is, for any $g \in G^{\circ}$, $\log^{\vee}(g) \in \mathbb{R}^n$.
+
+One way to define the covariance of pdf on a unimodular Lie group $G$ is \cite{wangprop1,wangprop2,vol2,dover}
+\beq
+\Sigma \doteq \int_{G} \log^{\vee}(\mu^{-1} \circ g) [\log^{\vee}(\mu^{-1} \circ g)]^T f(g)\, dg\,.
+\label{covdef1}
+\eeq
+This definition is natural as a generalization of the concept of covariance in Euclidean space
+when the pdf of interest is relatively concentrated. Then, for example, a Gaussian distribution
+can be defined as
+$$ f(g; \mu,\Sigma) \,\doteq\, \frac{1}{(2\pi)^{d/2}|\Sigma|^{\half}} \exp\left(-\half
+[\log^{\vee}(\mu^{-1} \circ g)]^T \Sigma^{-1} \log^{\vee}(\mu^{-1} \circ g)\right)\,. $$
+This definition makes sense when the tails decay to negligible values inside a ball around
+$\mu$ for which the exponential and logarithm maps form a bijective pair. Otherwise, the topological properties of $G$ become relevant.
+
+Alternative definitions of scalar variance can be found in \cite{vol2,Heyer,8Grenander}. If the covariance as defined in (\ref{covdef1}) has been computed for pdfs $f_1$ and $f_2$, a convenient and accurate approximation for the covariance of $f_1 * f_2$ is known \cite{wangprop2,dover}. This
+is known as a covariance propagation formula.
+In contrast, the scalar definitions in \cite{Heyer,8Grenander} have exact propagation formulas, but
+these quantities do not have the form or properties that are usually associated with covariance
+of pdfs on Euclidean space.
+
+An altogether different way to define covariance that does not involve any approximation is to recognize that for a Gaussian distribution with the mean serving as the statistic, the Cram\'{e}r-Rao Bound becomes the equality
+\begin{equation}
+\Sigma_{gaussian} \,=\, F^{-1}_{gaussian}\,,
+\label{cree33laa}
+\end{equation}
+and since a Gaussian distribution with $\mu = e$ solves a driftless diffusion equation subject
+to Dirac delta initial conditions, it is possible to define a kind of covariance for such processes by computing the Fisher information and using (\ref{cree33laa}). By generalization, an alternative definition of covariance can be taken as
+$$ \Sigma' \doteq F^{-1}\,. $$
+The exact properties of this definition under convolution are unknown.
+
+The covariance propagation formula for (\ref{covdef1}) involves the concept of the adjoint matrix, $Ad(g)$. This concept is reviewed in the following section.
+
+\subsection{The Adjoint Operators $ad$ and $Ad$}
+
+Given $X,Y \in {\cal G}$, ``little ad'' operator is defined as
+$$ ad_Y(X) \doteq [Y,X] = YX - XY\,, $$
+and ``big Ad'' is
+$$ Ad_g(X) \doteq g X g^{-1} \,. $$
+Here ``ad'' is short for ``adjoint''. Both of these are linear in $X$. That is, for arbitrary $c_1, c_2 \in \IR$ and $X_1, X_2 \in \IR^{n \times n}$
+$$ ad_{Y}(c_1 X_1 + c_2 X_2) = c_1 ad_{Y}(X_1) + c_2 ad_{Y}(X_2) $$
+and
+$$ Ad_{g}(c_1 X_1 + c_2 X_2) = c_1 Ad_{g}(X_1) + c_2 Ad_{g}(X_2) \,. $$
+
+Sometimes $Ad_g$ is written as $Ad(g)$ and $ad_Y$ is written as $ad(Y)$. It turns out that these are related as
+$$ Ad(\exp(Y)) = \exp(ad(Y)). $$
+
+By introducing a basis for the Lie algebra of a Lie group, it is possible to express the $Ad$ and $ad$ operators
+as square matrices of the same dimension as the group.
+The distinction between operators and matrices can sometimes be confusing, which is why, for example, the matrices of
+$ad(X)$ and $Ad(A)$ are written as $[ad(X)]$ and $[Ad(A)]$ in \cite{dover,vol2} where
+$$ [ad(X)]_{ij} = (E_i, ad(X) E_j) \,\,\,\,\,{\rm and}\,\,\,\,\, [Ad(A)]_{ij} = (E_i, Ad(A) E_j) $$
+computed using the inner product $(\cdot,\cdot)$.
+
+\subsection{Covariance Propagation}
+
+Given two pdfs with mean and covariance specified, i.e.,  $f_{(\mu_i,\Sigma_i)}(g)$ for $i=1,2$, one would like to be able
+to write expressions for $\mu_3,\Sigma_3$ such that
+$$ f_{(\mu_1,\Sigma_1)} * f_{(\mu_2,\Sigma_2)} = f_{(\mu_3,\Sigma_3)}. $$
+In the case when $G = \IR^n$, the result is simply
+${\bf m}_3 = {\bf m}_1 + {\bf m}_2$, and $\Sigma_3 = \Sigma_1 + \Sigma_2$.
+This result is nonparametric. That is, it does not require the pdfs to have
+a specific form, such as a Gaussian.
+
+For general unimodular Lie groups, there is no simple exact formula. However,
+when the pdfs are concentrated, i.e., both $\|\Sigma_i\|$ are small, then
+it is possible to write \cite{wangprop1}
+$$ \mu_3 \approx \mu_1 \circ \mu_2 \,\,\,{\rm and}\,\,\,
+\Sigma_3 \approx  \Sigma_1^{\mu_2} + \Sigma_2. $$
+where
+$$ \Sigma_1^{\mu_2} \doteq [Ad_{\mu_2^{-1}}] \Sigma_1 [Ad_{\mu_2^{-1}}]^T. $$
+A higher-order approximation of the form \cite{wangprop2}
+\begin{equation}
+\Sigma_3 \approx  \Sigma_1^{\mu_2} + \Sigma_2 +
+\Phi(\Sigma_1^{\mu_2} , \Sigma_2 )
+\label{sig3def}
+\end{equation}
+is also possible, but in many applications $\Phi(\Sigma_1^{\mu_2} , \Sigma_2)$
+is negligible because it depends quadratically on the elements of
+$\Sigma_1^{\mu_2}$ and $\Sigma_2$.
+% This ``second order'' approximation
+% developed in \cite{} has been rebranded as being ``forth order'' in \cite{}.
+
+If $f_{(\mu, \Sigma)}(g) = f(g; \mu, \Sigma)$ denotes a Gaussian distribution in exponential coordinates on a $d$-dimensional Lie group,
+it will be of the form
+$$ f(g; \mu, \Sigma) = \frac{1}{(2\pi)^{d/2} |\Sigma_i|^{\half}}
+\exp\left(-\half [\log^{\vee}(\mu^{-1} \circ g)]^T \Sigma^{-1} \log^{\vee}(\mu^{-1} \circ g)\right)\,. $$
+Then
+\begin{equation}
+f_{(\mu_1, \Sigma_1)}*f_{(\mu_2, \Sigma_2)} \approx f_{(\mu_3, \Sigma_3)}\,.
+\label{convapprox}
+\end{equation}
+The quality of these approximations, as well as those that are even
+more accurate, have been studied in \cite{dover}. This is also a nonparametric result.
+
+In the case when the distributions are more spread out, it is possible to compute the covariance
+in a different way using the group Fourier transform using the convolution theorem.
+%  if the distributions are parametric.
+For example, if $\Sigma_i = D^{(i)}t$ and
+$$ f_{(\mu_i,\Sigma_i)}(g) \,\doteq\, \rho_{\Sigma_i}(\mu_{i}^{-1} \circ g;t) \,, $$
+and since
+$$ \hat{f}_i(\lambda) = U(\mu_i,\lambda) \exp\left(\sum_{j,k} \sigma_{jk}^{(i)} E_j E_k\right), $$
+from the convolution theorem it is possible to write
+the Fourier version of (\ref{convapprox}) as
+$$ U(\mu_2,\lambda) \exp\left(\sum_{j,k} \sigma_{jk}^{(2)} E_j E_k\right)
+U(\mu_1,\lambda) \exp\left(\sum_{j,k} \sigma_{jk}^{(1)} E_j E_k\right) \approx
+U(\mu_3,\lambda) \exp\left(\sum_{j,k} \sigma_{jk}^{(3)} E_j E_k\right)\,.$$
+which can then be substituted in the reconstruction formula to reproduce (\ref{convapprox}), which
+produces an approximate expression involving traces, which is of a different type than the trace
+inequalities studied previously in the literature.
+
+% *** check order of all multiplications, and if $U$ should be $U^*$ ***
+
+\section{Examples} \label{examplesec}
+
+This section illustrates ideas presented earlier in this paper on the Heisenberg and rotation groups.
+
+%*** Fourier and Folded normal distributions for SO(3) and H(3) ***
+%
+%, and CR Bound - Use SO(3) and H(3) as examples ***
+
+\subsection{The Heisenberg Group, ${\cal H}(3)$}
+
+The Heisenberg group, $H(3)$, is defined by elements of the form
+\beq
+g(\alpha, \beta, \gamma) = \ba{ccc}
+1 & \alpha & \beta \\
+0 & 1 & \gamma \\
+0 & 0 & 1
+\ea \htab \htab {\rm where} \htab \htab \alpha, \beta, \gamma \in \IR
+\label{heissdef}
+\eeq
+and the operation of matrix multiplication. Therefore, the group law
+can be viewed in terms of parameters as
+$$ g(\alpha_1, \beta_1, \gamma_1) g(\alpha_2, \beta_2, \gamma_2) =
+g(\alpha_1+\alpha_2, \beta_1+\beta_2 + \alpha_1\gamma_2, \gamma_1+\gamma_2). $$
+The identity element is the identity matrix $g(0,0,0)$, and the
+inverse of an arbitrary element $g(\alpha, \beta, \gamma)$ is
+$$ g^{-1}(\alpha, \beta, \gamma) = g(-\alpha, \alpha \gamma - \beta, -\gamma). $$
+
+\subsubsection{Lie Algebra and Exponential Map} \index{exponential map}
+
+Basis elements for the Lie algebra are
+\beq
+E_1 = \ba{ccc}
+0 & 1 & 0 \\
+0 & 0 & 0 \\
+0 & 0 & 0
+\ea ; \htab\htab
+E_2 = \ba{ccc}
+0 & 0 & 1 \\
+0 & 0 & 0 \\
+0 & 0 & 0
+\ea ; \htab\htab
+E_3 = \ba{ccc}
+0 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 0 & 0
+\ea .
+\eeq
+A linear mapping between the Lie algebra spanned by this basis with $\IR^3$ is defined by $E_{i}^{\vee} = {\bf e}_i$.
+
+The Lie bracket is defined as $[E_i,E_j] = E_i E_j - E_j E_i = -[E_j,E_i] $,
+and so, as is always the case, $[E_i,E_i] = \OO$.
+For these particular basis elements,
+$$ [E_1,E_2] = [E_2,E_3]= \OO \htab\htab {\rm and} \htab\htab [E_1,E_3]=E_2. $$
+In addition, all double brackets involving the first two listed above are also zero,
+$$ [E_i,[E_1,E_2]] = [E_i,[E_2,E_3]] = \OO \,\,{\rm for}\,\, i=1,2,3 $$
+From these, and the bilinearity of the Lie bracket, it follows that for arbitrary
+$$ X = \sum_i x_i E_i \,\,\,{\rm and}\,\,\,  Y = \sum_j x_j E_j $$
+that
+\begin{equation}
+ [X,Y] = \sum_{i,j} x_i y_j [E_i,E_j] = (x_1 y_3 - x_3 y_1) E_2\,.
+\label{bracketeq}
+\end{equation}
+
+If the inner product for the Lie algebra spanned by these basis
+elements is defined as $(X,Y) = {\rm tr}(X Y^T)$, then this basis
+is orthonormal: $(E_i,E_j) = \delta_{ij}$.
+
+The group $H(3)$ is nilpotent because $(x_1 E_1 + x_2 E_2 + x_3 E_3)^{n} = 0$
+for all $n \geq 3$. As a result, the matrix exponential is a polynomial in
+the coordinates $\{x_i\}$:
+\beq
+\exp \ba{ccc}
+0 & x_1 & x_2 \\
+0 & 0 & x_3 \\
+0 & 0 & 0
+\ea = g(x_1, x_2 + \half{x_1 x_3}, x_3).
+\label{expparheis}
+\eeq
+The parametrization in (\ref{heissdef}) can be viewed as the
+following product of exponentials:
+$$ g(\alpha, \beta, \gamma) = g(0, \beta, 0) g(0,0, \gamma) g(\alpha, 0,0) = \exp(\beta E_2) \exp(\gamma E_3) \exp(\alpha E_1). $$
+
+The logarithm is obtained by solving for each $x_i$ as a function
+of $\alpha, \beta, \gamma$. By inspection this is
+$x_1 = \alpha$, $x_3 = \gamma$ and $x_2 = \beta - \alpha\gamma/2$.
+Therefore,
+$$ \log g(\alpha, \beta, \gamma) = \ba{ccccc}
+0 & & \alpha & & \beta - \alpha\gamma/2 \\
+0 & & 0 & & \gamma \\
+0 & & 0 & & 0
+\ea . $$
+
+\subsubsection{Adjoint Matrices for ${\cal H}(3)$}
+
+The adjoint matrix, defined by $[Ad(g)] {\bf x} = (g X g^{-1})^{\vee}$,
+is computed by evaluating
+$$ \ba{ccc}
+1 & \alpha & \beta \\
+0 & 1 & \gamma \\
+0 & 0 & 1
+\ea \ba{ccc}
+0 & x_1 & x_2 \\
+0 & 0 & x_3 \\
+0 & 0 & 0
+\ea \ba{ccccc}
+1 & & -\alpha & & \alpha \gamma -\beta \\
+0 & & 1 & &  -\gamma \\
+0 & & 0 & & 1
+\ea = \ba{ccccc}
+0 & & x_1 & & -\gamma x_1 + x_2 + \alpha x_3 \\
+0 & & 0 & & x_3 \\
+0 & & 0 & & 0
+\ea . $$
+Therefore,
+$$ (g X g^{-1})^{\vee} = \ba{c}
+x_1 \\
+-\gamma x_1 + x_2 + \alpha x_3 \\
+x_3 \ea \askip
+[Ad(g(\alpha, \beta, \gamma))] =
+\ba{rcccc}
+1 & &   0 & &   0 \\
+-\gamma & &   1 & &    \alpha\\
+0 & &   0 & &   1
+\ea .$$
+The fact that $\det [Ad(g)] = 1$ for all $g \in G$ indicates that this
+group is unimodular. This fact is independent of the parametrization.
+It can also be shown that for $X = \sum_{i=1}^{3} x_i E_i$ that
+\beq [Ad(\exp X)] =  \ba{ccccc}
+1 & &   0 & &   0 \\
+-x_3 & &   1 & &   x_1 \\
+0 & &   0 & &   1
+\ea.
+\label{h3adeq33rr}
+\eeq
+
+\subsection{Bi-Invariant Integration Measure}
+
+The Jacobian matrices for this group can be computed in either parametrization.
+In terms of $\alpha, \beta, \gamma$,
+$$ \frac{\partial g}{\partial \alpha} = E_1 ;\htab\htab
+\frac{\partial g}{\partial \beta} = E_2 ;\htab\htab
+\frac{\partial g}{\partial \gamma} = E_3 . $$
+A straightforward calculation then gives
+$$ g^{-1} \frac{\partial g}{\partial \alpha} = E_1; \htab\htab
+g^{-1} \frac{\partial g}{\partial \beta} = E_2; \htab\htab
+g^{-1} \frac{\partial g}{\partial \gamma} = E_3 - \alpha E_2. $$
+Therefore
+\beq
+J_r(\alpha, \beta, \gamma) = \ba{ccccr}
+1 & & 0 & & 0 \\
+0 & & 1 & & -\alpha \\
+0 & & 0 & & 1
+\ea \htab\htab {\rm and} \htab\htab
+J_l(\alpha, \beta, \gamma) = \ba{rcccc}
+1 & & 0 & & 0 \\
+-\gamma & &  1 & &  0 \\
+0 & &  0 & &  1
+\ea
+\eeq
+Then $|J_l(\alpha, \beta, \gamma)| = |J_r(\alpha, \beta, \gamma)| = 1$ and bi-invariant integration measure expressed in these coordinates is simply
+$$ dg = d\alpha d\beta d\gamma \,. $$
+
+In exponential coordinates
+\beq
+J_r(\xx) = \ba{ccccc}
+1 & &   0 & &   0 \\
+x_3/2 & &   1 & &   -x_1/2 \\
+0 & &   0 & &   1
+\ea \htab\htab {\rm and} \htab\htab
+J_{l}(\xx) = \ba{ccccc}
+1 & &   0 & &   0 \\
+-x_3/2 & &   1 & &   x_1/2 \\
+0 & &   0 & &   1
+\ea
+\label{expheis}
+\eeq
+and
+$$ dg = dx_1 dx_2 dx_3 \,. $$
+
+\subsection{Covariance Propagation and the EPI for ${\cal H}(3)$}
+
+From (\ref{bracketeq})the only nonzero term in the second-order covariance propagation formula from \cite{wangprop2,dover}  is
+$$ \frac{1}{4} [X,Y]^{\vee} \left([X,Y]^{\vee}\right)^T =
+\frac{1}{4} (x_1 y_3 - x_3 y_1)^2 {\bf e}_2 {\bf e}_2^T. $$
+Hence, for ${\cal H}(3)$, the second-order term in (\ref{sig3def}), which results from integrating the above
+as was done in \cite{wangprop2}, becomes
+$$ \Phi(\Sigma_1^{\mu_2} , \Sigma_2) \,=\, a {\bf e}_2 {\bf e}_2^T $$
+where
+$$ a = \frac{1}{4}\left(\sigma_{11}^{(1)} \sigma_{33}^{(2)} -
+\sigma_{13}^{(1)} \sigma_{31}^{(2)} -
+\sigma_{31}^{(1)} \sigma_{13}^{(2)} +
++ \sigma_{33}^{(1)} \sigma_{11}^{(2)}
+\right) \,\geq\,0 $$
+with $\sigma_{ij}^{(1)} = {\bf e}_i^T {\Sigma}_1^{\mu_2} {\bf e}_j$ and
+$\sigma_{ij}^{(2)} = {\bf e}_i^T {\Sigma}_2 {\bf e}_j$.
+
+Moreover, from the matrix identity for $A=A^T>0$,
+$$ \det(A + {\bf u}{\bf v}^T) = (1 + {\bf v}^T A^{-1} {\bf u}) \det A\,, $$
+it follows that
+$$
+\det(\Sigma_{(1*2)}) =
+ \det(\Sigma_1^{\mu_2} + {\Sigma}_2  + a {\bf e}_2 {\bf e}_2^T) = (1 + a {\bf e}_2^T (\Sigma_1^{\mu_2} + {\Sigma}_2)^{-1} {\bf e}_2) \det(\Sigma_1^{\mu_2} + {\Sigma}_2)\,, $$
+where ${\Sigma}_1^{\mu_2} = Ad_{\mu_{2}^{-1}} \Sigma_1 Ad_{\mu_{2}^{-1}}^T$\,.
+Consequently, from the Euclidean EPI and the unimodularity of $G$, which implies that
+$$ \det({\Sigma}_1^{\mu_2}) = \det({\Sigma}_1)\,, $$
+it is not difficult to see that
+$$
+\det(\Sigma_{(1*2)})^{\frac{1}{\rm dim}(G)} \,\geq\, \det(\Sigma_1^{\mu_2} + {\Sigma}_2)^{\frac{1}{\rm dim}(G)} \,\geq\,
+\det(\Sigma_1)^{\frac{1}{\rm dim}(G)} + \det({\Sigma}_2)^{\frac{1}{\rm dim}(G)}. $$
+That is, the entropy power inequality for pdfs from diffusion processes on ${\cal H}(3)$ follows
+in the small time limit from the classical EPI, and it is less restrictive than in
+the Euclidean case.
+
+\subsection{The Case of $SO(3)$}
+
+The group of rotations of three-dimensional space has elements that are $3\times 3$ special orthogonal matrices, i.e., those satisfying
+$$ R R^T = \II \,\,\,\,\, {\rm and} \,\,\,\,\, \det(R) = +1\,. $$
+That is, they satisfy $R R^T = \II$ and $\det R = +1$. It is easy to see that closure of these propeties under multiplication is satisfied because
+$$ (R_1 R_2)^T (R_1 R_2) = R_2^T R_1^T R_1 R_2 = R_2^T R_2 = \II $$
+and
+$$ \det(R_1 R_2) = \det(R_1) \det(R_2) = 1\,\cdot\,1 = 1. $$
+
+\subsubsection{The Lie Algebra}
+
+The Lie algebra $so(3)$ consists of skew-symmetric matrices of the form
+\begin{equation}
+{X} = \left(\begin{array}{ccc}
+0 & -x_3 & x_2 \\
+x_3 & 0 & -x_1 \\
+-x_2 & x_1 & 0
+\end{array} \right) = \sum_{i=1}^{3} x_i E_i\,.
+\label{skew}
+\end{equation}
+Every such matrix can be associated with a vector ${\bf x}$ by making the identification
+$$ E_{i}^{\vee} = {\bf e}_i\,\,\,\Longleftrightarrow\,\,\,
+E_{i} = \hat{\bf e}_i\,. $$
+
+For $SO(3)$ the adjoint matrices are
+$$ [Ad(R)] = R \hskip 0.1 true in {\rm and} \hskip 0.1 true in [ad(X)] = X. $$
+Furthermore,
+$$ [X,Y]^{\vee} = {\bf x} \times {\bf y}. $$
+
+\subsubsection{Exponential and Logarithm}
+
+It is well known that the exponential map $\exp: so(3) \rightarrow SO(3)$ is related to Euler's Theorem as
+$$ R = \exp(\theta N) = \II + \sin\theta\,N + (1-\cos\theta)\,N^2\,, $$
+where $\theta \in [0,\pi]$ is the angle of rotation around the axis ${\bf n} \in S^2$, with $N$
+being the associated skew-symmetric matrix. Then $X = \theta N$ and ${\bf x} = \theta {\bf n}$.
+It is convenient to limit $\theta \in [0,\pi]$ and to allow ${\bf n}$ to take any value in the unit sphere, $S^2$.
+Moreover,
+$$ {\rm tr}(R) = 1 + 2 \cos \theta \,\,\,\,\,{\rm and}\,\,\,\,\, N = \frac{R - R^T}{2\sin\theta}\,. $$
+Then, since
+$$ \theta = \cos^{-1}\left[\frac{{\rm tr}(R)-1}{2}\right] \,\,\,\,\,{\rm and}\,\,\,\,\,\sin(\cos^{-1} a) = \sqrt{1-a^2}\,, $$
+it follows that $\sin\theta$ can be written explicitly in terms of $R$ as
+$$ \sin\theta = \sqrt{1 - \frac{({\rm tr}(R)-1)^2}{4}} = \sqrt{\frac{3}{4} - \frac{({\rm tr}(R))^2}{4} +
+ \frac{2 {\rm tr}(R)}{4}}\,. $$
+Since $X = \theta N = \log R$, it follows that
+\begin{equation}
+\log(R) \,=\, \frac{\cos^{-1}\left[\frac{{\rm tr}(R)-1}{2}\right] (R - R^T)}{
+\sqrt{{3} - {({\rm tr}(R))^2} + {2 {\rm tr}(R)}}}\,.
+\label{logso3}
+\end{equation}
+This expression breaks down when $\theta = \pi$, which defines a set of measure zero, and hence is inconsequential when evaluating the logarithm under an integral.
+
+\subsubsection{Invariant Integration Measure}
+
+Two common ways to parameterize rotations are using the matrix exponential $R = \exp X$ and using
+Euler angles such as $R = R_3(\alpha) R_1(\beta) R_3(\gamma)$ where $0 \leq \alpha,\gamma \leq 2\pi$
+and $0 \leq \beta \leq \pi$.
+
+Relatively simple analytical expressions were derived
+by Park \cite{15parkthesis} for
+the Jacobian $J_l$ when $R = \exp X$ as
+\begin{equation}
+J_l({\bf x}) = \II + \frac{1 - \cos \|{\bf x}\|}{\|{\bf x}\|^2}
+{X} + \frac{\|{\bf x}\| - \sin \|{\bf x}\|}{\|{\bf x}\|^3} {X}^2
+\label{jlx928}
+\end{equation}
+The corresponding Jacobian $J_r$ and its inverse are \cite{dover,vol2}
+$$ J_r({\bf x}) = \II - \frac{1 - \cos \|{\bf x}\|}{\|{\bf x}\|^2}
+{X} + \frac{\|{\bf x}\| - \sin \|{\bf x}\|}{\|{\bf x}\|^3} {X}^2 $$
+
+In terms of ZXZ Euler angles,
+\beq
+{J}_l(\alpha,\beta,\gamma) =
+\left[{\bf e}_3, {R_3}(\alpha) {\bf e}_1, {R_3}(\alpha){R_1}(\beta) {\bf e}_3 \right]
+=
+\left(\begin{array}{ccccc}
+0 & &   \cos \alpha & &   \sin \alpha \sin \beta \\
+0 & &   \sin \alpha & &   -\cos \alpha \sin \beta \\
+1 & &   0 & &   \cos \beta
+\end{array}\right).
+\label{jleul}
+\eeq
+and
+\beq
+{J}_r = {R^T} J_{l} =
+\left[{R_3}(-\gamma) {R_1}(-\beta)
+{\bf e}_3, {R_3}(-\gamma) {\bf e}_1, {\bf e}_3 \right]
+=  \left(\begin{array}{ccccc}
+\sin \beta \sin \gamma & &   \cos \gamma & &   0 \\
+\sin \beta \cos \gamma & &   -\sin \gamma & &   0 \\
+\cos \beta & &   0 & &   1 \end{array}\right).
+\label{jreul}
+\eeq
+
+From this we see that
+$$ dR = \frac{2(1-\cos\|{\bf x}\|)}{\|{\bf x}\|^2}\, dx_1 dx_2 dx_3 = \sin\beta\, d\alpha d\beta d\gamma\,. $$
+From these it can be shown that
+$$ \int_{SO(3)} dR = 8\pi^2\,. $$
+
+\subsubsection{Fourier Series}
+
+For $SO(3)$, irreducible unitary representations (IURs) \cite{dover}
+are enumerated by $l \in \IZ_{\geq 0}$, and for any $R,A \in SO(3)$ these $(2l+1)\times(2l+1)$ IUR matrices have the fundamental properties
+$$ U^l(R A) = U^l(R)\, U^l(A) \,\,\, {\rm and} \,\,\, U^l(R^T) = U^l(R)^* $$
+where $*$ is the Hermitian conjugate of a matrix. The explicit forms of these matrices when $R$ is expressed
+in Euler angles are well known in
+Physics as the Wigner-D functions \cite{9biedenharn1,9gelfand,9talman,9varshalovich,9Wigner1959}
+
+For functions $f \in L^2(SO(3))$, the Fourier coefficients are computed as
+\begin{equation}
+\hat{f}_{mn}^{l} = \int_{SO(3)}
+f(A) U_{mn}^{l}(A^{-1})\,dA\,.
+\label{fsso32}
+\end{equation}
+The following orthogonality relation holds
+\begin{equation}
+\int_{SO(3)} U_{mn}^{l}(A) \overline{U_{pq}^{s}(A)}\,dA = \frac{1}{2l+1} \delta_{ls} \delta_{mp} \delta_{nq}
+\label{intorthoso3}
+\end{equation}
+where $dA$ is scaled so that $\int_{SO(3)}\,dA = 1$.
+The Fourier series on $SO(3)$ has the form
+\begin{equation}
+f(A) = \sum_{l=0}^{\infty} (2l+1) \sum_{m=-l}^{l} \sum_{n=-l}^{l}
+\hat{f}_{mn}^{l} U_{nm}^{l}(A)\,,
+\label{fsso31}
+\end{equation}
+which results from the completeness relation
+\begin{equation}
+\sum_{l=0}^{\infty} (2l+1) \sum_{m=-l}^{l} \sum_{n=-l}^{l}
+U_{mn}^{l}(R^{-1}) U_{nm}^{l}(A) = \delta(R^{-1} A)\,.
+\label{so3complete9292}
+\end{equation}
+Another way to write (\ref{fsso31}) is
+\begin{equation}
+f(A) = \sum_{l=0}^{\infty} (2l+1) {\rm trace}\left[
+\hat{f}^{l}\, U^{l}(A)\right]\,.
+\label{fsso31aa}
+\end{equation}
+
+\subsection{Diffusions on $SO(3)$}
+
+A diffusion process on $SO(3)$ commonly encountered in applications is of the form
+\begin{equation}
+\frac{\partial f}{\partial t} =
+\half \sum_{i,j=1}^{3} D_{ij} \tilde{E}_{i} \tilde{E}_{j} f + \sum_{k=1}^{3}
+d_k \tilde{E}_{k} f\,.
+\label{pdepoly277}
+\end{equation}
+
+By expanding the PDF in the PDE in (\ref{pdepoly277})
+into a Fourier series on $SO(3)$, the solution can be obtained
+once we know how the differential operators $X_{i}^{R}$ transform the matrix elements $U_{m,n}^{l}(A)$. Explicitly,
+\begin{eqnarray}
+\tilde{E}_{1} U_{mn}^{l} &=& \half c_{-n}^{l} U_{m,n-1}^{l} -
+\half c_{n}^{l} U_{m,n+1}^{l}; \label{oper1} \\
+\tilde{E}_{2} U_{mn}^{l} &=&
+\half i c_{-n}^{l} U_{m,n-1}^{l} +
+\half i c_{n}^{l} U_{m,n+1}^{l}; \\
+\tilde{E}_{3} U_{mn}^{l} &=& -in U_{mn}^{l};
+\label{oper3}
+\end{eqnarray}
+where $c_{n}^{l} = \sqrt{(l-n)(l+n+1)}$ for $l \geq |n|$ and
+$c_{n}^{l} = 0$ otherwise. From this definition it is clear that
+$c_{k}^{k} = 0,$ $c_{-(n+1)}^{l} = c_{n}^{l},$ $c_{n-1}^{l} = c_{-n}^{l},$ and $c_{n-2}^{l} = c_{-n+1}^{l}$).
+
+By repeated application of these rules, it can be shown that \cite{dover}
+$$ {\cal F}\left(\half \sum_{i,j=1}^{3} D_{ij} \tilde{E}_i \tilde{E}_j f
++ \sum_{i=1}^{3} d_{i} \tilde{E}_i f\right)_{mn}^{l} =
+\sum_{k={\rm max}(-l,m-2)}^{{\rm min}(l,m+2)} {\cal A}_{m,k}^{l} \hat{f}_{k,n}^{l}, $$
+where
+$$ {\cal A}_{m,m+2}^{l} = \left[\frac{(D_{11}-D_{22})}{8} + \frac{i}{4} D_{12} \right] c_{m+1}^{l} c_{-m-1}^{l}; $$
+$$ {\cal A}_{m,m+1}^{l} = \left[\frac{(2m+1)}{4} (D_{23}
+-i D_{13}) + \half (d_1 + i d_2) \right]c_{-m-1}^{l}; $$
+$$ {\cal A}_{m,m}^{l} = \left[
+-\frac{(D_{11}+D_{22})}{8}
+(c_{-m}^{l} c_{m-1}^{l} + c_{m}^{l} c_{-m-1}^{l})
+-\frac{D_{33} m^2}{2} -i d_3 m
+\right];$$
+$$ {\cal A}_{m,m-1}^{l} = \left[\frac{(2m-1)}{4}(D_{23} + i D_{13})
+ + \half (-d_1 + i d_2) \right]c_{m-1}^{l}; $$
+$$ {\cal A}_{m,m-2}^{l} = \left[
+\frac{(D_{11}-D_{22})}{8}
+-\frac{i}{4} D_{12}
+\right] c_{-m+1}^{l} c_{m-1}^{l}; $$
+
+Hence, application of the $SO(3)$-Fourier transform to
+(\ref{pdepoly277}) and corresponding initial conditions
+reduces (\ref{pdepoly277}) to a set of linear time-invariant
+ODEs of the form
+\begin{equation}
+\frac{d\hat{f}^{l}}{dL} = {\cal A}^{l} \hat{f}^{l} \hskip 0.2 true in
+{\rm with}
+\hskip 0.2 true in
+\hat{f}^{l}(0) = \II_{2l+1}.
+\label{rotodes}
+\end{equation}
+Here $\II_{2l+1}$ is the $(2l+1)\times(2l+1)$ identity
+matrix and the banded matrix ${\cal A}^{l}$ are of the following
+form for
+$l=0,1, 2,3$:
+$${\cal A}^{0} = {\cal A}_{0,0}^{0} = 0; \hskip 0.1 true in
+{\cal A}^{1} = \left(\begin{array}{ccc}
+{\cal A}_{-1,-1}^{1} & {\cal A}_{-1,0}^{1} & {\cal A}_{-1,1}^{1} \\
+{\cal A}_{0,-1}^{1} & {\cal A}_{0,0}^{1} & {\cal A}_{0,1}^{1} \\
+{\cal A}_{1,-1}^{1} & {\cal A}_{1,0}^{1} & {\cal A}_{1,1}^{1} \end{array} \right); $$
+
+$$ {\cal A}^{2} = \left(\begin{array}{ccccc}
+{\cal A}_{-2,-2}^{2} & {\cal A}_{-2,-1}^{2} & {\cal A}_{-2,0}^{2} & 0 & 0 \\
+{\cal A}_{-1,-2}^{2} & {\cal A}_{-1,-1}^{2} & {\cal A}_{-1,0}^{2} & {\cal A}_{-1,1}^{2} & 0 \\
+{\cal A}_{0,-2}^{2} &
+{\cal A}_{0,-1}^{2} & {\cal A}_{0,0}^{2} & {\cal A}_{0,1}^{2} & {\cal A}_{0,2}^{2} \\
+0 & {\cal A}_{1,-1}^{2} & {\cal A}_{1,0}^{2} & {\cal A}_{1,1}^{2} & {\cal A}_{1,2}^{2} \\
+0 & 0 & {\cal A}_{2,0}^{2} & {\cal A}_{2,1}^{2} & {\cal A}_{2,2}^{2}
+\end{array} \right); $$
+
+$$ {\cal A}^{3} = \left(\begin{array}{ccccccc}
+{\cal A}_{-3,-3}^{3} & {\cal A}_{-3,-2}^{3} & {\cal A}_{-3,-1}^{3} & 0 & 0 & 0 & 0 \\
+{\cal A}_{-2,-3}^{3} & {\cal A}_{-2,-2}^{3} & {\cal A}_{-2,-1}^{3} & {\cal A}_{-2,0}^{3}
+& 0 & 0 & 0 \\ {\cal A}_{-1,-3}^{3} &
+{\cal A}_{-1,-2}^{3} & {\cal A}_{-1,-1}^{3} & {\cal A}_{-1,0}^{3} & {\cal A}_{-1,1}^{3} & 0 & 0 \\ 0 & {\cal A}_{0,-2}^{3} &
+{\cal A}_{0,-1}^{3} & {\cal A}_{0,0}^{3} & {\cal A}_{0,1}^{3} & {\cal A}_{0,2}^{3} & 0 \\
+0 & 0 & {\cal A}_{1,-1}^{3} & {\cal A}_{1,0}^{3} & {\cal A}_{1,1}^{3} & {\cal A}_{1,2}^{3}
+& {\cal A}_{1,3}^{3} \\
+0 & 0 & 0 & {\cal A}_{2,0}^{3} & {\cal A}_{2,1}^{3} & {\cal A}_{2,2}^{3}
+& {\cal A}_{2,3}^{3} \\
+0 & 0 & 0 & 0 & {\cal A}_{3,1}^{3} & {\cal A}_{3,2}^{3}
+& {\cal A}_{3,3}^{3}
+\end{array} \right). $$
+
+The solution to (\ref{rotodes}) is then
+of the form of a matrix exponential:
+\begin{equation}
+\hat{f}^{l}(L) = e^{L {\cal A}^{l}}.
+\label{matexp}
+\end{equation}
+% Exploiting the special nature of ${\cal A}^{0}$ and ${\cal A}^{1}$,
+% the first two Fourier transform matrices
+% have particularly simple forms:
+% $$ \hat{f}^{0}(L) = 1; \hskip 0.1 true in \hat{f}^{1}(L) =
+% \frac{\exp[L(\alpha_{-1}^{1} + \alpha_{0}^{1} + \alpha_{1}^{1})]}{
+% \alpha_{-1}^{1} + \alpha_{0}^{1} + \alpha_{1}^{1}} {\cal A}^{1}.$$
+Since ${\cal A}^l$ is a band-diagonal matrix for $l > 1$, the
+matrix exponential can be calculated much more efficiently
+(either numerically or symbolically) for large
+values of $l$ than for general matrices of dimension
+$(2l+1)\times(2l+1)$.
+
+Given the explicit forms provided above, (\ref{lsdmskd1234})-(\ref{lsdmskd1234567}) can be verified.
+
+\subsubsection{Lack of an Entropy-Power Inequality}
+
+For all unimodular Lie groups, the EPI holds for concentrated Gaussian pdfs for which the first-order covariance
+propagation formula from (\cite{wangprop1}) holds by application of the Euclidean EPI to Gaussians. However, for compact Lie groups (including the circle and $n$-torus) the EPI always breaks down. For example, the uniform distribution on the circle, $\rho(\theta) = 1/2\pi$, has entropy
+$S(\rho) = \log(1/2\pi)$. But since this distribution is stable under convolution, we have that
+$S(\rho*\rho) = S(\rho)$ and so the EPI cannot hold since
+$N(\rho*\rho) = N(\rho) < 2 \cdot N(\rho) \,.$
+Similarly, unlike for ${\cal H}(3)$, the EPI does not hold for $SO(3)$.
+
+%
+%\subsection{Cram\'{e}r-Rao Bound}
+%
+%*** Calculate Fisher info for ${\cal H}(3)$ ***
+
+\section{Conclusions}
+
+Many inequalities of information theory that are based on probability densities on Euclidean space extend to the case of probabilities on
+Lie groups. In addition to reviewing appropriate concepts of integration, convolution, partial derivative, Fourier transform, covariance, and diffusion processes on unimodular Lie groups, this paper also presents some new
+inequalities that extend to this setting those known in the classical
+Abelian case.
+
+\begin{thebibliography}{99}
+
+\bibitem{myholm}
+Chirikjian, G.S.,
+``Degenerate Diffusions and Harmonic Analysis on SE(3): A Tutorial,'' in {\it Stochastic Geometric Mechanics},
+(S. Albeverio, A. Cruzeiro, D.Holm, eds.),
+pp. 77-99, Springer, 2017.
+
+\bibitem{simon}
+Simon, B., {\it Trace Ideals and Their Applications, $2^{nd}$ ed.},
+Mathematical Surveys and Monographs, American Mathematical Society, 2010
+
+\bibitem{myjgm}
+Chirikjian, G.S., ``Information-Theoretic Inequalities on Unimodular Lie Groups,''
+{\it Journal of Geometric Mechanics}, 2(2):119\,--\,158, June 2010.
+
+\bibitem{phasenoise}
+Wang, Y., Zhou, Y., Maslen, D.K., Chirikjian, G.S., ``Solving the Phase-Noise Fokker-Planck
+Equation Using the Motion-Group Fourier Transform,'' {\it IEEE Transactions on Communications},
+54 (5): 868\,--\,877 May 2006.
+
+\bibitem{semijoint}
+Zhou, Y., Chirikjian, G.S., ``Conformational Statistics of Semi-Flexible Macromolecular Chains
+with Internal Joints,'' {\it Macromolecules}, 39(5), pp. 1950\,--\,1960, 2006.
+
+\bibitem{mypoly}
+Chirikjian, G.S., Kyatkin, A.B.,``An Operational Calculus for
+the Euclidean Motion Group with Applications
+in Robotics and Polymer Science,''
+{\it J. Fourier Analysis and Applications},
+6: (6) 583\,--\,606, December 2000.
+
+\bibitem{8folland}
+Folland, G.B., {\it A Course in Abstract Harmonic
+Analysis}, CRC Press, Boca Raton, FL, 1995.
+
+\bibitem{8Grenander}
+Grenander, U., {\it Probabilities on Algebraic Structures}, Dover, 2008.
+
+\bibitem{8gross}
+Gross, K.I., ``Evolution of Noncommutative
+Harmonic Analysis,'' {\it American Mathematical Monthly},
+85(7):\,525\,--\,548, 1978.
+
+\bibitem{8Gurarie}
+Gurarie, D., {\it Symmetry and Laplacians. Introduction to
+ Harmonic Analysis, Group Representations and Applications},
+Elsevier Science Publisher, The Netherlands, 1992. (Dover Edition, 2008).
+
+\bibitem{8hewitt}
+Hewitt, E., Ross, K.A., {\it Abstract Harmonic Analysis
+I, and II}, Springer-Verlag, Berlin, 1963 and 1970. (reprinted 1994).
+
+\bibitem{8Miller1_l2}
+Miller, W., Jr., {\it Lie Theory and Special Functions},
+Academic Press, New York, 1968;
+
+\bibitem{Miller64_l2}
+Miller, W. Jr., ``Some Applications of the Representation
+ Theory of the Euclidean Group in Three-Space,''
+{\it Commun. Pure App. Math.},
+Vol. {17}, pp. 527-540, 1964.
+
+\bibitem{8sugiura_l2}
+Sugiura, M., {\it Unitary Representations and Harmonic Analysis},
+$2^{nd}$ edition, North-Holland, Amsterdam, 1990.
+
+\bibitem{8taylor_l2}
+Taylor, M.E., {\it Noncommutative Harmonic Analysis},
+Mathematical Surveys and Monographs, American Mathematical
+Society, Providence, RI, 1986.
+
+\bibitem{8thangavelu}
+Thangavelu, S., {\it Harmonic Analysis on the Heisenberg
+Group}, Birkh\"{a}user, Boston, 1998.
+
+\bibitem{8vilenkin_l2}
+Vilenkin, N.Ja. Klimyk, A.U.,
+{\it Representation of Lie Groups and Special Functions},
+Vols. 1-3, Kluwer Academic Publ., Dordrecht, Holland 1991.
+
+\bibitem{vilenkin68_l2}
+Vilenkin, N.J., {\it Special Functions and the Theory of Group Representations}, American Mathematical Society, 1968.
+
+\bibitem{10Vilenkin1_l2} \authgloss{Akim, E.L.} \authgloss{Levin, A.A.}
+Vilenkin, N.J., Akim, E.L., Levin, A.A.,
+``The Matrix Elements of Irreducible Unitary Representations of the
+Group of Euclidean Three-Dimensional Space Motions and Their Properties,''  {\it Dokl. Akad. Nauk SSSR}, Vol. {112}, pp. 987-989, 1957 (in Russian).
+
+\bibitem{8howe}
+Howe, R., and Tan, E.C., {\it Non-Abelian Harmonic Analysis}, Springer, 1992.
+
+\bibitem{lang}
+Lang, S., $SL_2(R)$, Addison-Wesley, 1975 %%% check
+
+\bibitem{harish}
+Harish Chandra, ``Spherical Functions on a Semisimple Lie Group II,''
+ American Journal of Mathematics 27:569--579, 1960.
+
+\bibitem{lang2}
+Jorgenson, J., Lang, S.,  {\it Spherical Inversion on} $SL_n(R)$, Springer, 2001.
+
+\bibitem{7neuen} \authgloss{Neuenschwander, D.}
+Neuenschwander, D., {\it Probabilities on the Heisenberg Group:
+Limit Theorems and Brownian Motion}, Lecture Notes in Mathematics,
+1630, Springer-Verlag, Berlin, 1996.
+
+
+\bibitem{8kunze}
+Kunze, R.,
+``$L_p$ Fourier Transforms on Locally Compact Unimodular Groups,''
+{\it Transactions of the American Mathematical Society},
+89: 519\,--\,540, 1958.
+
+\bibitem{8Applebaum} 
+Applebaum, D., {\it Probability on Compact Lie Groups}, Springer, New York, 2014.
+
+\bibitem{beckner1_ig} 
+Beckner, W., ``Sharp inequalities and geometric manifolds,'' {\it J. Fourier Anal. Appl.} 3 (1997), 825-836.
+
+\bibitem{beckner2_ig}
+Beckner, W., ``Geometric inequalities in Fourier analysis,'' Essays on Fourier Analysis in Honor
+of Elias M. Stein, Princeton University Press, 1995, pp. 36-68
+
+
+\bibitem{blachman_ig} 
+Blachman, N.M., ``The convolution inequality for entropy powers,''
+{\it IEEE Trans. Inform. Theory}, 11(2): 267–271, 1965.
+
+\bibitem{carlen_ig} 
+Carlen, E.A., ``Superadditivity of Fisher’s Information
+and Logarithmic Sobolev Inequalities,''
+{\it Journal Of Functional Analysis}, 101, 194-211 (1991)
+
+\bibitem{Cover_ig} 
+Cover, T.M., Thomas, J.A., {\it Elements of Information Theory},
+Wiley-Interscience, $2^{nd}$ ed., Hoboken, NJ, 2006.
+
+\bibitem{dembo_ig} 
+Dembo, A., Cover, T.M., Thomas, J.A.,
+``Information Theoretic Inequalities,''
+{\it IEEE Transactions On Information Theory}  37(6):1501-1518  NOV 1991
+
+\bibitem{Heyer} 
+Heyer, H., {\it Probability Measures on Locally Compact Groups}, Springer-Verlag, New York,
+1977.
+
+\bibitem{bhatia}
+Bhatia, R., {\it Positive Definite Matrices}, Princeton University Press, 2007.
+
+\bibitem{dover}
+Chirikjian, G.S., Kyatkin, A.B., {\it Harmonic Analysis for Engineers and Applied
+Scientists}, Dover, Mineola, NY, 2016.
+
+\bibitem{vol2}
+Chirikjian, G.S.,  {\it Stochastic Models, Information Theory, and Lie Groups: Volume 2 - Analytic Methods and Modern Applications},
+Birkh\"{a}user, Boston, 2011.
+
+\bibitem{Bernsteinbook}
+Bernstein, D.S.,
+{\it Matrix Mathematics: Theory, Facts, and Formulas with Application to Linear Systems Theory},
+Princeton University Press (February 22, 2005)
+
+\bibitem{sothomp91}
+So, W., Thompson, R.C.,
+``Products of Exponentials of Hermitian and
+Complex Symmetric Matrices,'' {\it
+Linear and Multilinear Algebra}, 1991, Vol. 29, pp. 225-233
+
+
+\bibitem{thom2}
+Thompson, R.C., ``Special cases of a matrix exponential formula,''
+ {\it Linear Algebra And Its Applications},
+ 107 (1988), 283-292.
+
+\bibitem{thom1}
+Thompson, C.J., ``Inequalities and Partial Orders on Matrix
+Spaces,'' {\it Indiana University Mathematics Journal},
+21(5) 1971, pp. 469-480.
+
+\bibitem{cohen82}
+Cohen, J.E., Friedland, S., Kato, T., Kelly, F.P.,
+``Eigenvalue Inequalities for Products of Matrix Exponentials,''
+{\it Linear Algebra And Its Applications} 45:55-95 (1982)
+
+\bibitem{golden}
+Golden, S., ``Lower bounds for the Helmholtz function,'' {\it Phys. Rev.}  137:B1127-B1128 (1965).
+
+\bibitem{thombook}
+Thompson, C.J., {\it Mathematical Statistical Mechanics}, Macmillan, New York, 1972; reprint, Princeton University Press, Princeton, 1979, 1992.
+
+\bibitem{trotterref}
+Trotter, H.F., ``On the product of semi-groups of operators,''
+ {\it Proc. Amer. Math. Soc.}, 10545-551 (1959).
+
+\bibitem{fanref}
+Fan, K., ``Maximum properties and inequalities for the eigenvalues
+of completely continuous operators,'' {\it PNAS} 37 (1951) pp. 760-766.
+
+\bibitem{Klyachko}
+Klyachko, A.A., ``Random walks on symmetric spaces and inequalities for matrix spectra,'' {\it Linear Algebra Appl.} 319 (2000) 37–59.
+
+\bibitem{soproof}
+So, W., ``The high road to an exponential formula,''
+{\it Linear Algebra and its Applications}, 379 (2004) 69–75
+
+\bibitem{soeq}
+So, W., ``Equality Cases In Matrix Exponential Inequalities,''
+{\it SIAM J. Matrix Anal. Appl.},
+Vol. 13, No. 4, pp. 1154-1158, October 1992
+
+\bibitem{Bernsteingg}
+Bernstein, D.S., ``Inequalities for the trace of matrix exponentials,''  {\it SIAM J. Matrix Anal. Appl.}, 9 (1988),
+pp. 156-158.
+
+\bibitem{fan23}
+Fan, K., ``On a theorem of Weyl concerning eigenvalues of linear transformations I,'' {\it  Proc. Nat. Acad. Sci.
+U.S.A.}, 35 (1949), pp. 652-655.
+
+\bibitem{Lenard}
+Lenard, A., ``Generalization of the Golden-Thompson inequality $Tr (e^A e^B) \geq Tr (e^{A+B})$,'' {\it Indiana Univ. Math. J.}, 21 (1971), pp. 457-467.
+
+\bibitem{Bebiano}
+Bebiano, N.,  da Provid\^{e}ncia, J. Jr.,  Lemos, R.,
+``Matrix inequalities in statistical mechanics,''
+{\it Linear Algebra and its Applications},
+Volume 376, 1 January 2004, Pages 265-273
+
+\bibitem{FriedlandSo}
+Friedland, S., So, W., ``Product of matrix exponentials,''
+ {\it Linear Algebra Appl.} 196 (1994) 193–205.
+
+\bibitem{FriedlandPorta}
+Friedland, S., Porta, B.,
+``The limit of the product of the parameterized
+exponentials of two operators,''
+{\it Journal of Functional Analysis} 210 (2004) 436–464
+
+\bibitem{Fang}
+Fang, Y., Loparo, K.A., Feng, X.,
+``Inequalities for the Trace of Matrix Product,''
+{\it IEEE Transactions On Automatic Control}, 39(12), December 1994,
+pp. 2489-2490.
+
+\bibitem{Komaroff}
+Komaroff, N., ``Bounds on eigenvalues of matrix products with an application
+to the algebraic Riccati equation,'' {\it IEEE Trans. Autom. Control},
+vol. 35, no. 3, pp. 348–350, Mar. 1990.
+
+\bibitem{Wieland}
+Hoffman, A.J., Wielandt, H.W., 
+``The Variation of the Spectrum of a Normal Matrix,''
+{\it Duke Math. J.}, 20 (1953), pp. 37-40.
+
+\bibitem{COCHRAN}
+Cochran, J.A., Hinds, E.W.,
+``Improved Error Bounds For The
+Eigenvalues Of Certain Normal Operators,''
+{\it SIAM J. Numer. Anal.}, 9(3), September 1972,
+pp. 446-453.
+
+\bibitem{Lasserre1}
+Lasserre, J.B., ``A trace inequality for the matrix product,'' {\it IEEE Trans.
+Automat. Contr.}, vol. 40, pp. 1500–1501, 1995
+
+\bibitem{Lasserre2}
+Lasserre, J.B., ``Tight Bounds for the Trace of a Matrix Product,''
+{\it IEEE Transactions on Automatic Control}, 42(4) April 1997,
+pp. 578-581.
+
+\bibitem{Xing}
+Wei Xing, Qingling Zhang, and Qiyi Wang
+``A Trace Bound for a General Square Matrix Product,''
+{\it IEEE Transactions on Automatic Control}, 45(8) August 2000,
+pp. 1563-1565.
+
+\bibitem{Zhang}
+Fuzhen Zhang and Qingling Zhang
+Eigenvalue Inequalities for Matrix Product
+{\it IEEE Transactions on Automatic Control}, 51(9), September 2006,
+pp. 1506-1509.
+
+\bibitem{Parkkwlw}
+Park, P.-G.,
+``On the Trace Bound of a Matrix Product,''
+{\it IEEE Transactions on Automatic Control}, 41(12), December 1996,
+pp. 1799-1802.
+
+\bibitem{Mori}
+T. Mori, “Comments on ‘A matrix inequality associated with bounds on
+solutions of algebraic Riccati and Lyapunov equation,’ ” IEEE Trans.
+Automat. Contr., vol. AC-29, p. 1088, Nov. 1988
+
+\bibitem{JianzhouLiu}
+Jianzhou Liu and Lingli He
+A New Trace Bound for a General Square Matrix Product
+{\it IEEE Transactions on Automatic Control}, 52(2), February 2007,
+pp. 349-352.
+
+\bibitem{Marcus}
+Marcus, M.,
+``An Eigenvalue Inequality for the Product of Normal Matrices,''
+The American Mathematical Monthly, Vol. 63, No. 3. (Mar., 1956), pp. 173-174.
+
+\bibitem{Mirsky}
+L. Mirsky, ``On the trace of matrix products,'' {\it Mathematische Nachrichten}, 20 (1959), pp. 171-174.
+
+\bibitem{Mirsky2}
+L. Mirsky, ``A Note On Normal Matrices,''
+The American Mathematical Monthly, Vol. 63, No. 7. (Aug. - Sep., 1956), p. 479.
+
+\bibitem{Mirsky3}
+Mirsky, L., ``A Trace Inequality of John von Neumann,''
+{\it Monatshefte f\"{u}r Mathematik} 79, pp. 303-306 (1975)
+
+\bibitem{Reid}
+Reid, R.M., ``Some Eigenvalue Properties of Persymmetric Matrices,''
+SIAM Review, Vol. 39, No. 2. (Jun., 1997), pp. 313-316.
+
+\bibitem{schur33}
+Schur, I., ``\"{U}ber die charakteristischen Wurzeln einer linearen Substitution mit einer Anwendung
+auf die Theorie der Integralgleichungen,'' {\it Math. Annalen}, vol. 66, 1909 ,pp. 488-510.
+
+\bibitem{Richter}
+Richter, H., ``Zur Absch\"{a}tzung von Matrizennormen,''
+ {\it Mathematische Nachrichten}, 18 (1958), pp. 178-187.
+
+\bibitem{Thurston}
+Thurston, H.S., ``On the characteristic equations of products of square matrices,''
+{\it The American Mathematical Monthly}, vol. 38, 1931, pp. 322-324.
+
+\bibitem{Scott}
+Scott, W.M., ``On Characteristic Roots of Matrix Products,'' {\it
+The American Mathematical Monthly}, Vol. 48, No. 3. (Mar., 1941), pp. 201-203.
+
+\bibitem{Neuman}
+Neuman, E., S\'{a}ndor, J., 
+``On the Ky Fan inequality and related inequalities I,''
+{\it Mathematical Inequalities \& Applications} 5 (1): 49–56, 2002.
+
+\bibitem{Steele}
+Steele, J.M., {\it 
+The Cauchy-Schwarz master class : an introduction to the art of mathematical inequalities},
+Cambridge ; New York : Cambridge University Press, 2004.
+
+\bibitem{h}
+Varopoulos, N.Th., Saloff-Coste, L., Coulhon, T.,
+{\it Analysis and Geometry on Groups}, Cambridge University Press,
+1992.
+
+
+\bibitem{h}
+Varopoulos, N.Th., Saloff-Coste, L., Coulhon, T.,
+{\it Analysis and Geometry on Groups}, Cambridge University Press,
+1992.
+
+\bibitem{Maslen}
+Maslen, D.K., {\it Fast Transforms and Sampling for Compact
+Groups} (Ph.D. Dissertation, Department of Mathematics,
+Harvard University, May 1993).
+
+\bibitem{Rockmore}
+Maslen, D.K., Rockmore, D.N., ``Generalized FFTs—a
+survey of some recent results,'' {\it DIMACS Series Discrete Math.
+Theor. Comput. Sci.} 28, 183–237 (1997).
+
+\bibitem{bhatpar}
+Bhatia, R., Parthasarathy, K.R., ``Positive Definite Functions and Operator Inequalities,'' {\it Bull. London Math. Soc.},
+Vol. 32, pp. 214-228, 2000.
+
+\bibitem{andruchow}
+Andruchow, E., Corach, G., Stojanoff, D., ``Geometric Operator Inequalities,'' {\it Lin. Alg. Appl.}, Vol. 258, pp. 295-310, 1997.
+
+
+\bibitem{Kittaneh1}
+Bhatia, R., Kittaneh, F., ``On Singular Values of a Product of Operators,'' {\it SIAM J. Matrix Anal. Appl.}, Vol. 11, pp. 272-277, 1990.
+
+\bibitem{hlp} 
+Hardy, G.H., Littlewood, J.E., P\'{o}lya, G., 
+{\it Inequalities}, Cambridge University Press, 1932.
+
+\bibitem{Polya}
+P\'{o}lya, G.,
+{\it Isoperimetric inequalities in mathematical physics},	
+Princeton, Princeton University Press, 1951.
+
+\bibitem{Bhatia1}
+Bhatia, R., {\it Matrix Analysis}, Springer, 1996.
+
+\bibitem{wangprop1}
+Wang, Y., Chirikjian, G.S., ``Error Propagation on the Euclidean Group with Applications
+to Manipulator Kinematics,'' {\it IEEE Transactions on Robotics}, 22(4):591\,--\,602 August 2006.
+
+\bibitem{wangprop2}
+Wang, Y., Chirikjian, G.S., ``Nonparametric Second-Order Theory
+of Error Propagation on the Euclidean Group,'' {\it International Journal of Robotics Research}, Vol. 27, No. 11–12, November/December 2008, pp. 1258–-1273
+
+
+\bibitem{pennec96}
+Pennec, X., {\it L'incertitude dans les probl\`{e}mes de reconnaissance et de recalage--Applications en imagerie m\'{e}dicale et biologie mol\'{e}culaire}, (Doctoral dissertation, Ecole Polytechnique X),  1996. 
+
+\bibitem{pennec06}
+Pennec, X., ``Intrinsic Statistics on Riemannian Manifolds: Basic Tools for Geometric Measurements,'' {\it J. Math Imaging and Vision}, 25:127, July 2006.
+
+\bibitem{pennec12}
+Pennec, X., and Vincent Arsigny, V.,
+``Exponential Barycenters of the Canonical Cartan Connection and Invariant Means on Lie Groups,'' In Frederic Barbaresco, Amit Mishra, and Frank Nielsen, editors, {\it Matrix Information Geometry}, pages 123-166. Springer, May 2012.
+
+\bibitem{9biedenharn1}
+Biedenharn, L.C., Louck, J.D., {\it Angular Momentum in Quantum Physics},
+Encyclopedia of Mathematics and Its Applications, Vol. 8, Cambridge University Press, 1985.
+(paperback version 2009).
+
+\bibitem{9gelfand}
+Gel´fand, I. M., Minlos, R.A., Shapiro, Z.Ya., {\it
+Representations of the Rotation and Lorentz Groups and Their Applications}, Macmillan, New York, 1963. 
+
+\bibitem{9talman}
+Talman, J., {\it Special Functions}, W. A. Benjamin, Inc.,
+Amsterdam, 1968.
+
+\bibitem{9varshalovich}
+Varshalovich, D.A., Moskalev, A.N., Khersonskii, V.K.,
+{\it Quantum Theory of Angular Momentum}, World Scientific,
+Singapore, 1988.
+
+\bibitem{9Wigner1959}
+Wigner, E.P.,
+{\it Group Theory and its Applications to the Quantum Mechanics
+of Atomic Spectra}, Academic Press, New York, 1959.
+
+\bibitem{15parkthesis} 
+Park, F.C., {\it The Optimal Kinematic Design of Mechanisms},
+Ph.D. Thesis, Division of Engineering and Applied Sciences,
+Harvard University, Cambridge, MA 1991.
+
+\end{thebibliography}
+
+\end{document} 

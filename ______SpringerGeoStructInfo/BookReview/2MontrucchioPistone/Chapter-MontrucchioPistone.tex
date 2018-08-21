@@ -1,0 +1,967 @@
+
+\documentclass[graybox]{svmult}
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+\usepackage{mathptmx}       % selects Times Roman as basic font
+\usepackage{helvet}         % selects Helvetica as sans-serif font
+% \usepackage{courier}        % selects Courier as typewriter font
+\usepackage{type1cm}        % activate if the above 3 fonts are
+                            % not available on your system
+%
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+% see the list of further useful packages
+% in the Reference Guide
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\DeclareMathOperator{\Expectation}{E} 
+\newcommand{\absoluteval}[1]{\left\vert#1\right\vert}
+\newcommand{\derivby}[1]{\frac{d}{d#1}}
+\newcommand{\escortof}[1]{\operatorname{escort}\left(#1\right)}
+\newcommand{\expectat}[2]{{\Expectation}_{#1}\left[#2\right]}
+\newcommand{\logof}[1]{\log\left(#1\right)}
+\newcommand{\model}{\mathcal P}
+\newcommand{\normat}[2]{\left\Vert#2\right\Vert_{#1}}
+\newcommand{\partiald}[2]{\frac{\partial}{\partial #1} #2}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\scalarat}[3]{\left\langle#2,#3\right\rangle_{#1}}
+\newcommand{\setof}[2]{\left\{#1 | #2 \right\}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+
+\begin{document}
+
+\title*{A class of non-parametric deformed exponential statistical models}
+\titlerunning{Deformed exponential models}
+\author{Montrucchio, Luigi and Pistone, Giovanni}
+\authorrunning{L. Montrucchio and G. Pistone}
+\institute{Luigi Montrucchio \at Collegio Carlo Alberto, Piazza Vincenzo Arbarello 8, 10122 Torino, Italy, \email{luigi.montrucchio@unito.it}
+\and Giovanni Pistone \at de Castro Statistics, Collegio Carlo Alberto, Piazza Vincenzo Arbarello 8, 10122 Torino, Italy, \email{giovanni.pistone@carloalberto.org}}
+% 
+\maketitle
+\smartqed
+%\abstract*{??}
+
+\abstract{We study the class on non-parametric deformed statistical models where the deformed exponential has linear growth at infinity and is sub-exponential at zero. We discuss the convexity and regularity of the normalization operator, the form of the deformed statistical divergences and their convex duality, the properties of the escort densities, and the affine manifold structure of the statistical bundle.}
+
+\section{Introduction}\label{sec:introduction}
+Let $\mathcal{M}$ be a family of (strictly) positive probability densities on the probability space $(\mathbb{X},\mathcal{X},\mu)$. At each $p \in \mathcal M$, the Hilbert space of square-integrable random variables $L^2(p \cdot
+\mu)$ provides a fiber that sits at each $p \in \mathcal{P}$, so we can define the \emph{Hilbert bundle} with base $\mathcal{M}$. Such a bundle is a convenient framework for Information Geometry, cf. \cite{amari:87dual} and the non-parametric version in \cite{pistone|sempi:95,pistone:2013GSI}.
+
+If $\mathcal{M}$ is an exponential manifold in the sense of \cite{pistone|sempi:95}, there exists a splitting of
+each fiber $L(p \cdot \mu) = H_p \oplus H_p^\perp$, such that each $H_p$ contains a dense vector sub-space which is an expression of the tangent space $T_p\mathcal M$ of the manifold. Moreover, the geometry on $\mathcal{M}$ is affine and Hessian.
+
+When the sample space is finite and $\mathcal M$ is the full set $\mathcal P$ of positive probability densities, then $H_p = L^2_0(p)$ and each $H_p \simeq T_p\mathcal M$. A similar situation occurs when $\mathcal M$ is a finite-dimensional exponential family. It is difficult to devise set-ups other than those mentioned above, where the identification of the Hilbert fiber with the tangent space holds true. In fact, a necessary condition would be the topological linear isomorphism between the fibers.
+
+There have been many alternative proposals on how to define a manifold $\mathcal M$ of positive probability densities modeled on an Hilbert space. A successful one has been introduced by N.J. Newton \cite{newton:2012} using what he calls the ``balanced chart'' $p \mapsto \log p + p - 1 \in L^2_0(\mu)$. This chart is a ``deformation'' of the usual logarithmic representation and it is an instance of ``deformed logarithm'' as defined by J. Naudts \cite{naudts:2011GTh}. In this approach the Hilbert bundle is trivial as all the fibers coincide with $L^2_0(\mu)$.
+
+In this paper, we take out this approach showing how to define the affine structure of the relevant Hilbert bundle by the use of deformed exponential families as defined \cite{naudts:2011GTh} but allowing for a general reference measure as done by R.F. Vigelis and C.C. Cavalcante \cite{vigelis|cavalcante:2013}. We use the representation $p = \exp_A(v)$, where $\exp_A$ is an exponential-like function which has a linear growth at $+\infty$ and is dominate by an exponential at $-\infty$. 
+
+The formalism of deformed exponentials is reviewed in a special case on Sec.~\ref{sec:deformed}. The following Sec.~\ref{sec:nigel-newt-deform} is devoted to the adaptation of deformed exponential families to the non-parametric case. In Sec.~\ref{sec:convex-conjugate} we discuss the form of the divergence which is natural in our case. Sec.~\ref{sec:riem-manif-based} discusses the construction of the Hilbert statistical bundle.
+
+A partial version of this piece of research has been presented at the GSI 2017 Conference \cite{montrucchio|pistone:2017} and we refer to that paper for some of the proofs.
+
+\section{Deformed exponential}\label{sec:deformed}
+
+We review first a special case of the deformed exponential formalism of \cite{naudts:2011GTh}.
+
+We assume to be given a function $A$ from $]0,+\infty[ $ onto $]0,a[$,
+strictly increasing, continuously differentiable, such that $\left\Vert A^{\prime }\right\Vert_{\infty } < \infty$. It follows $a = \left\Vert A\right\Vert_{\infty}$ and $A(x) \le
+\left\Vert A^{\prime }\right\Vert_{\infty } x$, so that $\int_0^1 d\xi/A(\xi) \ d\xi = +\infty$. 
+
+The $A$-logarithm is the function 
+\begin{equation*}
+\log _{A}(x)=\int_{1}^{x}\frac{1}{A(\xi )}\ d\xi ,\quad x\in ]0,+\infty
+\lbrack \ .
+\end{equation*}
+The $A$-logarithm is strictly increasing from $-\infty $ to $+\infty $, its
+derivative $\log _{A}^{\prime }(x)=1/A(x)$ is positive and strictly
+decreasing for all $x>0$, hence it is strictly concave.
+
+By inverting the $A$-logarithm, one obtains the $A$-exponential, $\exp
+_{A}=\log _{A}^{-1}$. Hence, the function $\exp _{A}\colon ]-\infty ,+\infty
+\lbrack \rightarrow ]0,+\infty \lbrack $ is strictly increasing, strictly
+convex, and is the solution of the Cauchy problem 
+\begin{equation}\label{Aexp}
+\exp _{A}^{\prime }(y)=A(\exp _{A}(y)),\quad \exp _{A}(0)=1\ .
+\end{equation}
+As a consequence, we have the linear bound 
+\begin{equation}\label{eq:lip}
+\left\vert \exp _{A}(y_{1})-\exp _{A}(y_{2})\right\vert \leq \left\Vert
+A\right\Vert _{\infty }\left\vert y_{1}-y_{2}\right\vert \ .
+\end{equation}
+
+The behavior of the $A$-logarithm is linear for large arguments and super-logarithmic for small arguments. To derive explicit bounds, define
+\begin{equation*}
+\alpha_1 = \min_{x\le 1} \frac{A(x)}x \ , \quad \alpha_2 = \max_{x \le 1} \frac{A(x)}x \ ,
+\end{equation*}
+namely the best constants such that $\alpha_1 x \le A(x) \le \alpha_2 x$ if $x \le 1$. Note that $\alpha_1 \geq 0$ and $\alpha_2 > 0$. If $\alpha_1 > 0$, it follows that
+\begin{equation}\label{eq:bound1}
+  \frac1{\alpha_2} \log x \le \log_A x \le  \frac1{\alpha_1} \log x \ , \quad x \le 1 \ .
+\end{equation}
+If $\alpha_1=0$, the left inequality only holds.
+
+For $x \ge 1$ we have $A(1) \leq A(x) < 1$, hence
+\begin{equation}\label{eq:bound2}
+ x-1 < \log_A x \leq \frac1{A(1)}(x-1) \ , \quad x \ge 1 \ .
+\end{equation}
+
+\subsection{Examples}
+\label{sec:examples}
+The main example of $A$-logarithm is the the N.J. Newton $A$-logarithm 
+\cite{newton:2012}, with 
+\begin{equation*}
+A(x)=1-\frac1{1+x}=\frac{x}{1+x} \ ,
+\end{equation*}
+so that 
+\begin{equation*}
+\log_A(y) = \log x + x - 1\ .
+\end{equation*}
+
+There is a simple algebraic expression for the product,
+\begin{equation*}
+  \log_A(x_1x_2) = \log_A(x_1) + \log_A(x_2) + (x_1-1)(x_2-1) \ .
+\end{equation*}
+
+Other similar examples are available in the literature. One is a special
+case of the G. Kaniadakis' exponential of \cite{kaniadakis:2001PhA} i.e., 
+\begin{equation*}
+\exp_A(y) = y + \sqrt{1+y^2} \ ,
+\end{equation*}
+whose inverse is easily derived from the relation 
+\begin{equation*}
+y + \sqrt{1+y^2} - \frac1{y + \sqrt{1+y^2}}=2y.
+\end{equation*}
+The inverse is 
+\begin{equation*}
+\log_A x = \frac{x-x^{-1}}2 \ ,
+\end{equation*}
+which in turn provides 
+\begin{equation*}
+A(\xi) = \frac{2\xi^2}{1+\xi^2} \ .
+\end{equation*}
+
+A remarkable feature of the G. Kaniadakis' exponential is 
+\begin{equation*}
+\exp_A(y)\exp_A(-y) = \left(y+\sqrt{1+y^2}\right)\left(-y+\sqrt{1+y^2}
+\right) = 1
+\end{equation*}
+
+Notice that the $A$ function on the N.J. Newton exponential is concave, while the $A$ function of the G. Kaniadakis exponential is not.
+
+Another example is $A(\xi) = 1 - 2^{-\xi}$, which gives $\log_A(x) = \log_2(1 - 2^{-x})$ and $\exp_A(y) = \log_2(1+2^y)$. 
+
+A notable example of deformed exponential that does not fit into our set of
+assumptions is the Tsallis logarithm with parameter $1/2$ of \cite{tsallis:1988}, 
+\begin{equation*}
+\log _{1/2}x=2\left( \sqrt{x}-1\right) =\int_{1}^{x}\frac{1}{\sqrt{\xi }}\
+d\xi \ .  \label{eq:tsallislog}
+\end{equation*}
+In this case, $\log _{1/2}(0+)=-\int_{0}^{1}d\xi /\sqrt{\xi }=-2$, so that
+the inverse is not defined for all real numbers. The Tsallis logarithm provides models with heavy tails, which is not the case in our setting.
+
+\subsection{Superposition operator}
+\label{sec:superposition-operator}
+
+The deformed exponential is used to represent positive probability densities
+in the form $p(x) = \exp_A[u(x)]$, where $u$ is a random variable on the
+probability space $(\mathbb{X}, \mathcal{X},\mu)$. Because of that, we are
+interested in the properties of the \emph{superposition operator} 
+\begin{equation}\label{eq:superposition}
+S_A \colon u \mapsto \exp_A\circ\, u
+\end{equation}
+in some convenient functional setting. See e.g. \cite[Ch. 1]{ambrosetti|prodi:1993} and \cite[Ch. 3]{appell|zabrejko:1990} about
+superposition operators.
+
+It is clear from Eq.~\eqref{eq:lip} that $\exp _{A}(u)\leq 1+\left\Vert
+A\right\Vert _{\infty }\left\vert u\right\vert $, which in turn implies that
+the superposition operator $S_{A}$ maps $L^{\alpha }(\mu )$ to itself for all $\alpha \in [1,+\infty]$ and the mapping is uniformly Lipschitz
+with constant $\left\Vert A\right\Vert _{\infty }$. Notice that we are
+assuming that $\mu$ is a finite measure. The superposition operator $S_{A}\colon L^{\alpha }(\mu )\rightarrow L^{\alpha }(\mu )$ is 1-to-1 and its image consists of all positive random variables $f$ such that $\log _{A}f\in L^{\alpha }(\mu )$.
+
+\begin{proposition}
+\label{prop:BBA}
+\begin{enumerate}
+\item For all $\alpha \in [1,\infty]$, the superposition operator $S_A$ of
+Eq.~\eqref{eq:superposition} is Gateaux-differentiable with derivative 
+\begin{equation}  \label{eq:derivative-of-exp}
+d S_A(u)[h] = A(\exp_A(u))h \ .
+\end{equation}
+\item \label{item:BBA2} For all $\alpha > \beta \ge 1$, the superposition operator $S_A$ of
+Eq.~\eqref{eq:superposition} is Fr\'echet-differentiable from $L^{\alpha}(\mu)$
+to $L^{\beta}(\mu)$.
+\end{enumerate}
+\end{proposition}
+%
+\begin{proof}
+\begin{enumerate}
+\item Eq.~\eqref{Aexp} implies that for each couple of random variables 
+$u,h\in L^{\alpha }(\mu )$ we have 
+\begin{equation*}  
+\lim_{t\rightarrow 0}t^{-1}\left( \exp _{A}(u+th)-\exp _{A}(u)\right)
+-A(\exp _{A}(u))h=0
+\end{equation*}
+point-wise. Moreover, for each $\alpha \in \lbrack 1,\infty \lbrack $ we
+derive, by Jensen inequality, that for $t > 0$ it holds 
+\begin{multline*}
+\left\vert t^{-1}\left( \exp _{A}(u+th)-\exp _{A}(u)\right) -A(\exp
+_{A}(u))h\right\vert ^{\alpha }\leq \\
+t^{-1}\left\vert h\right\vert ^{\alpha }\int_{0}^{t}\left\vert A(\exp
+_{A}(u+rh))-A(\exp _{A}(u))\right\vert ^{\alpha }\ dr \leq \left( 2\left\Vert
+A\right\Vert _{\infty }\right) ^{\alpha }\left\vert h\right\vert ^{\alpha }\
+.
+\end{multline*}
+Now, bounded converge forces the limit to hold in $L^{\alpha }(\mu )$. For $t < 0$, change $h$ to $-h$.
+
+If $\alpha =\infty $, we can use the second order bound 
+\begin{multline*}
+\left\vert t^{-1}\left( \exp _{A}(u+th)-\exp _{A}(u)\right) -A(\exp
+_{A}(u))h\right\vert = \\
+\vert t \vert^{-1}h^{2}\left\vert \int_{0}^{t}(t-r)\frac{d}{dr}A(\exp _{A}(u+rh))\
+dr\right\vert \leq \frac{t}{2}\left\Vert h\right\Vert _{\infty
+}^{2} \normat \infty {A'} \normat \infty A \ .
+\end{multline*}
+As $\left\Vert A^{\prime }\cdot A\right\Vert _{\infty }<\infty $, then the
+RHS goes to 0 as $t\rightarrow 0$ uniformly for each $h\in L^{\infty }(\mu )$.
+%
+\item Given $u,h\in L^{\alpha }(\mu )$, let us use again the Taylor
+formula to get 
+\begin{multline*}
+\int \left\vert \exp _{A}(u+h)-\exp _{A}(u)-A(\exp _{A}(u))h\right\vert
+^{\beta }\ d\mu \leq \\
+\int \left\vert h\right\vert ^{\beta }\int_{0}^{1}\left\vert A(\exp
+_{A}(u+rh))-A(\exp _{A}(u))\right\vert ^{\beta }\ dr\ d\mu \ .
+\end{multline*}
+By using H\"{o}lder inequality with conjugate exponents $\alpha /\beta $ and 
+$\alpha /(\alpha -\beta )$ the RHS is bounded by 
+\begin{equation*}
+\left( \int \left\vert h\right\vert ^{\alpha }\ d\mu \right) ^{\frac{\beta }{\alpha }}
+\left( \iint \left\vert A(\exp _{A}(u+rh))-A(\exp _{A}(u))\right\vert ^{\frac{\alpha \beta }{\alpha -\beta }}\ dr\ d\mu\right) ^{\frac{\alpha -\beta 
+}{\alpha }}\ ,
+\end{equation*}
+hence, 
+\begin{multline*}
+\left\Vert h\right\Vert _{L^{\alpha }(\mu )}^{-1}\left\Vert \exp
+_{A}(u+h)-\exp _{A}(u)-A(\exp _{A}(u))h\right\Vert _{L^{\beta }(\mu )}\leq \\
+\left( \iint \left\vert A(\exp _{A}(u+rh))-A(\exp _{A}(u))\right\vert ^{\frac{\alpha \beta }{\alpha -\beta }}\ dr\ d\mu\right) ^{\frac{\alpha -\beta 
+}{\alpha \beta }}\ .
+\end{multline*}
+In order to show that the RHS tend to zero as $\left\Vert h\right\Vert
+_{L^{\alpha }(\mu )}\rightarrow 0$, observe that for all $\delta >0$ we have 
+\begin{equation*}
+\left\vert A(\exp _{A}(u+rh))-A(\exp _{A}(u))\right\vert \leq 
+\begin{cases}
+2\left\Vert A\right\Vert _{\infty } & \text{always,} \\ 
+\normat \infty {A'} \normat \infty A \delta & \text{if $\left\vert h\right\vert \leq \delta $,}
+\end{cases}
+\end{equation*}
+so that, decomposing the double integral as $\iint =\iint_{\left\vert h\right\vert \leq \delta }+\iint_{\left\vert
+h\right\vert >\delta }$,
+we obtain 
+\begin{multline*}
+\iint \left\vert A(\exp _{A}(u+rh))-A(\exp _{A}(u))\right\vert ^{\gamma }\ dr\
+ d\mu \leq \\
+\left( 2\left\Vert A\right\Vert _{\infty }\right) ^{\gamma }\mu \left\{
+\left\vert h\right\vert >\delta \right\} +\left(\normat \infty {A'} \normat \infty A \delta \right) ^{\gamma }\leq \\
+\left( 2\left\Vert A\right\Vert _{\infty }\right) ^{\gamma }\delta ^{-\alpha
+}\int \left\vert h\right\vert ^{\alpha }\ d\mu +\left(\normat \infty {A'} \normat \infty A \delta \right) ^{\gamma }\ ,
+\end{multline*}
+where $\gamma =\alpha \beta /(\alpha -\beta )$ and we have used Cebi\v{c}ev
+inequality. Now it is clear that the last bound implies the conclusion for
+each $\alpha <\infty $. The case $\alpha =\infty $ follows \emph{a fortiori}.
+\qed\end{enumerate}
+\end{proof}
+
+It is not generally true for $\alpha = \beta$ that the
+superposition operator $S_A$ is Fr\'echet differentiable, cf. \cite[\S 1.2]{ambrosetti|prodi:1993}. Here is a well known counter-example. Assume $\mu$ is a non-atomic probability measure. For each $\lambda \in \mathbb{R}$ and $\delta > 0$ define the simple
+function 
+\begin{equation*}
+h_{\lambda,\delta}(x) = 
+\begin{cases}
+\lambda & \text{if $\left\vert x \right\vert \le \delta$,} \\ 
+0 & \text{otherwise.}
+\end{cases}
+\end{equation*}
+It follows that for each $\alpha \in [1,+\infty[$ we have 
+\begin{equation*}
+\lim_{\delta \to 0} \left\Vert
+h_{\lambda,\delta}\right\Vert_{L^{\alpha}(\mu)}= \lim_{\delta\to 0} \left\vert
+\lambda \right\vert \mu\left\{\left\vert x \right\vert \le \delta
+\right\}^{1/\alpha} = 0 \ .
+\end{equation*}
+Differentiability at 0 in $L^{\alpha}(\mu)$ would imply for all $\lambda$ 
+\begin{multline*}
+0 = \lim_{\delta\to0} \frac{\left\Vert \exp_A(h_{\lambda,\delta}) - 1 -
+A(1) h_{\lambda,\delta}\right\Vert_{L^{\alpha}(\mu)}}{\left\Vert
+h_{\lambda,\delta}\right\Vert_{L^\alpha(\mu)}} = \\
+\lim_{\delta\to0} \frac{\left\vert \exp_A(\lambda) - 1
+-A(1)\lambda\right\vert \mu\left\{x | \left\vert x \right\vert \le \delta
+\right\}^{1/\alpha}}{ \left\vert \lambda \right\vert \mu\left\{x |
+\left\vert x \right\vert \le \delta \right\}^{1/\alpha}} = \left\vert \frac{\exp_A(\lambda) - 1}\lambda - A(1)\right\vert \ ,
+\end{multline*}
+hence a contradiction.
+
+We conclude this section by observing that it is also interesting to study
+the action of the superposition operator on spaces of differentiable functions, for example Gauss-Sobolev spaces \cite{malliavin:1995}. Assume that $\mu$ is the standard Gaussian measure on $\reals^n$, and $u$ is a differentiable function such that $u, \partiald {x_i} u \in L^2(\mu)$, $i=1,\dots,n$. It follows $\exp_A(u) \in L^2(\mu)$ and also $\partiald {x_i} \exp_A(u) \in L^2(\mu)$ because 
+\begin{equation*}
+\frac{\partial}{\partial x_i} \exp_A(u(x)) = A(\exp_A(u(x)) \frac{\partial}{\partial x_i} u(x) \ .
+\end{equation*}
+We do not pursue this line of investigation here.
+
+\section{Deformed exponential family based on $\exp_A$}
+
+\label{sec:nigel-newt-deform} In the spirit of \cite{vigelis|cavalcante:2013,ay|jost|le|schwachhofer:2017IGbook}, we consider
+the deformed exponential curve in the space of positive measures on $(
+\mathbb{X},\mathcal{X})$ given by
+\begin{equation*}
+  t\mapsto \mu _{t}=\exp _{A}(tu+\log
+_{A}p)\cdot \mu \ , \quad u\in L^{1}(\mu ) \ . 
+\end{equation*}
+We have $\exp _{A}(x+y)\leq
+\left\Vert A\right\Vert _{\infty }x^{+}+\exp _{A}(y)$, because the inequality holds for $x\leq 0$ as $\exp _{A}$ is
+increasing and for $x=x^{+}>0$ the inequality follows from Eq.~\eqref{eq:lip}.
+As a consequence, each $\mu _{t}$ is a finite measure, $\mu _{t}(\mathbb{X})\leq \left\Vert
+A\right\Vert _{\infty }\int (tu)^{+}\ d\mu +1$, with $\mu _{0}=p\cdot \mu $.
+The curve is actually continuous and differentiable in $L^1(\mu)$ because the point-wise derivative of the density $p_{t}=\exp _{A}(tu+\log _{A}(p))$ is $\dot{p}_{t}=A(p_{t})u$ so that $\left\vert \dot{p}_{t}\right\vert \leq \left\Vert
+A\right\Vert _{\infty }\left\vert u\right\vert $. In conclusion $\mu _{0}=p$
+and $\dot{\mu}_{0}=A\left( p\right) u$.
+
+Notice that there are two ways to normalize to total mass 1 the density $p_t$, either dividing by a normalizing constant $Z(t)$ to get the statistical
+model $t \mapsto \exp_A(tu - \log_A p)/Z(t)$ or, subtracting a constant $
+\psi(t)$ from the argument to get the model $t \mapsto \exp_A(tu - \psi(t) +
+\log_A(p))$. In the standard exponential case the two methods lead to the
+same result, which is not the case for deformed exponentials where $
+\exp_A(\alpha+\beta) \neq \exp_A(\alpha)\exp_A(\beta)$. We choose in the
+present paper the latter option.
+
+Here we use the ideas of \cite{naudts:2011GTh,vigelis|cavalcante:2013,ay|jost|le|schwachhofer:2017IGbook}
+to construct deformed non-parametric exponential families. Recall that we
+are given: the probability space $(\mathbb{X},\mathcal{X},\mu )$; the set $\mathcal{P}$ of positive probability densities and the function $A$
+satisfies the conditions listed in Section \ref{sec:deformed}. Throughout
+this section, the density $p\in \mathcal{P}$ will be fixed.
+
+The following proposition is taken from \cite{montrucchio|pistone:2017} where a detailed proof is given.
+
+\begin{proposition}
+\ \label{prop:Aexp}
+%
+\begin{enumerate}
+\item The mapping $L^{1}(\mu )\ni u\mapsto \exp _{A}(u+\log _{A}p)\in
+L^{1}(\mu )$ has full domain and is $\left\Vert A\right\Vert _{\infty }$
+-Lipschitz. Consequently, the mapping 
+\begin{equation*}
+u\mapsto \int g\exp _{A}(u+\log _{A}p)\ d\mu
+\end{equation*}
+is $\left\Vert g\right\Vert _{\infty }\cdot \left\Vert A\right\Vert _{\infty
+}$-Lipschitz for each bounded function $g$.
+
+\item For each $u\in L^{1}(\mu )$ there exists a unique constant $
+K_{p}(u)\in \mathbb{R}$ such that $\exp _{A}(u-K_{p}(u)+\log _{A}p)\cdot \mu 
+$ is a probability.
+
+\item It holds $K_{p}(u)=u$ if, and only if, $u$ is constant. In such a
+case, 
+\begin{equation*}
+\exp _{A}(u-K_{p}(u)+\log _{A}p)\cdot \mu =p\cdot \mu \ .
+\end{equation*}
+Otherwise, $\exp _{A}(u-K_{p}(u)+\log _{A}p)\cdot \mu \neq p\cdot \mu $.
+
+\item\label{item:Aexp4} A density $q$ is of the form $q=\exp _{A}(u-K_p(u)+\log_A p)$, with $
+u\in L^{1}(\mu )$ if, and only if, $\log _{A}q - \log_A p \in L^1(\mu)$.
+
+\item If $u,v\in L^{1}(\mu )$ and 
+\begin{equation*}
+\exp _{A}(u-K_{p}(u)+\log _{A}p)=\exp _{A}(v-K_{p}(v)+\log _{A}p)\ ,
+\end{equation*}
+then $u-v$ is constant.
+
+\item The functional $K_{p}\colon L^{1}(\mu )\rightarrow \mathbb{R}$ is
+translation invariant. More specifically, $K_{p}(u+c)=K_{p}(u)+cK_{p}(1)$
+holds for all $c\in \mathbb{R}$.
+
+\item $K_{p}:L^{1}(\mu )\rightarrow \mathbb{R}$ is continuous and convex.
+\end{enumerate}
+\end{proposition}
+
+We now discuss the form of the sub-gradient of the convex continuous function 
+$K_p$. We refer to \cite[Part I]{ekeland|temam:1999convex2nd} for the
+general theory of convex functions in infinite dimension.
+
+\subsection{Escort density}
+\label{sec:escortdensity}
+For each positive density $q\in \mathcal{P}$, its \emph{escort density} is
+\begin{equation*}
+  \escortof q = \frac{A(q)}{\int A(q)\ d\mu} \ ,
+\end{equation*}
+see \cite{naudts:2011GTh}. Notice that $0 \le A(q)\le A(\normat \infty q) \le \normat \infty {A}$. In particular $\widetilde q = \escortof q$ is a bounded positive density.
+
+Assume $\escortof{q_1} = \escortof{q_2}$ for $\mu$-almost all $x$. Say, $\int A\circ q_{1}\ d\mu \geq \int A\circ
+q_{2}\ d\mu $. Then $A(q_{1}(x))\leq A(q_{2}(x))$, for $\mu$-almost all $x$. Since $A$ is strictly increasing, it follows $q_{1}(x)\leq q_{2}(x)$ for $\mu$-almost all $x$, which, in turn, implies $q_{1}=q_{2}$ $\mu$-a.s. because both $\mu $-integrals are equal to 1. In conclusion, the escort mapping is a.s. injective.
+
+We want to discuss the image of the $\operatorname{escort}$ mapping.
+
+\begin{proposition}
+  \label{prop:XCM}
+  \begin{enumerate}
+    \item\label{item:XCM1}
+A bounded positive density $\widetilde q$ is an escort density if, and only if,
+\begin{equation}\label{eq:rangecondition}
+ \lim_{\alpha \uparrow \normat \infty {A}} \int A^{-1}\left(\alpha \frac{\widetilde q}{\normat \infty {\widetilde q}}\right)\ d\mu \ge 1 \ .
+\end{equation}
+\item \label{item:XCM2}
+The condition \eqref{eq:rangecondition} holds if $\mu\set{\widetilde q = \normat \infty {\widetilde q}} > 0$. In particular, every simple density is an escort density.
+\item\label{item:XCM3} If $\widetilde q_1 = \escortof {q_1}$ is an escort density, and $q_2$ is a bounded positive density such that
+  \begin{equation*}
+    \mu\set{\widetilde q_1 > t \normat \infty {\widetilde q_1}} \leq \mu\set{q_2 > t \normat \infty {q_2}}, \quad t > 0 \ , 
+  \end{equation*}
+then $q_2$ is an escort density.
+\end{enumerate}
+\end{proposition}
+%
+\begin{proof}
+  \begin{enumerate}
+  \item
+    Let be given a $\widetilde{q}\in \mathcal{P}\cap L^{\infty }(\mu )$, and consider the mapping
+\begin{equation*}
+  f(\alpha) = \int A^{-1}\left(\alpha \frac{\widetilde q}{\normat \infty {\widetilde q}}\right)\ d\mu, \quad \alpha \in [0,1[ \ .
+\end{equation*}
+We have $f(0)=0$ and the mapping is finite, increasing, continuous.
+It is clear that the range condition in Eq.~\eqref{eq:rangecondition} is necessary because $\widetilde q = \escortof q$ implies $q = A^{-1}\left(\left(\int A(q)\ d\mu\right)\widetilde q\right)$ and, in turn, $1 =  \int A^{-1}\left(\left(\int A(q)\ d\mu\right)\widetilde q\right) \ d\mu$ because $q$ is a probability density. We can take $\alpha = \int A(q)\ d\mu \ \normat \infty {\widetilde q} \le \normat \infty A$ to satisfy the range condition. Conversely, if the rank condition is satisfied, there exists $\alpha \le \normat \infty A$ such that $q = A^{-1}\left(\alpha \frac{\widetilde q}{\normat \infty {\widetilde q}}\right)$ is positive probability density whose escort is $\widetilde q$. 
+\item The special case of Item~\ref{item:XCM2}. follows from the inequality
+  \begin{equation*}
+    \int A^{-1}\left(\alpha \frac{\widetilde q}{\normat \infty {\widetilde q}}\right)\ d\mu  \ge A^{-1}(\alpha)\mu\set{\widetilde q = \normat \infty {\widetilde q}} \ .
+  \end{equation*}
+\item For each bounded positive density $q$ we have
+\begin{multline*}
+ \int A^{-1}\left(\frac{q}{\normat \infty {q}}\right)\ d\mu = \int_0^{+\infty} \mu\set{\frac{q}{\normat \infty {q}} > A(t)} \ dt = \\ \int_0^{\normat \infty A} \mu\set{\frac{q}{\normat \infty {q}} > s} \frac1{A'\left(A^{-1}(s)\right)} \ ds \ . 
+\end{multline*}
+Now the necessary condition of Item~\ref{item:XCM3}. follows from Item~\ref{item:XCM1}. and our assumptions.
+\qed
+\end{enumerate}
+\end{proof}
+
+The previous proposition shows that the range of the escort mapping is uniformly dense as it contains all simple densities. Moreover, in the partial order induced by the rearrangement of the normalized density (that is for each $q$ the mapping $t \mapsto \mu\set{\frac q {\normat \infty q} \
+> t}$), it contains the full right interval of each element. But the range of the escort mapping is not the full set of bounded positive densities, unless the $\sigma$-algebra $\mathcal X$ is a finite partition. To provide an example, consider on the Lebesgue unit interval the densities $q_{\delta}(x) \propto (1 - x^{1/\delta})$, $\delta > 0$, and $A(x)=x/(1+x)$. It turns out that $q_{\delta}$ is an escort density if, and only if, $\delta \le 1$.
+
+\subsection{Gradient of $K_p$}
+Prop. \ref{prop:Aexp} shows that the functional $K_{p}$ is a global solution
+of a functional equation. We now give local properties of $K_{p}$ by the
+implicit function theorem.
+
+For each $u\in L^{1}(\mu )$, we write 
+\begin{equation*}
+q(u)=\exp _{A}(u-K_{p}(u)+\log _{A}p)
+\end{equation*}
+and $\widetilde{q}(u) = \escortof{q(u)}$ denotes its escort density.
+
+\begin{proposition}
+\ \label{prop:subgradient}
+%
+\begin{enumerate}
+\item \label{item:subgradient1} The functional $K_{p}\colon L^{1}(\mu )\rightarrow \mathbb{R}$ is
+Gateaux-differentiable with derivative 
+\begin{equation*}
+\left. \frac{d}{dt}K_{p}(u+tv)\right\vert _{t=0}=\int v\widetilde{q}(u)\
+d\mu \ .
+\end{equation*}
+It follows that $K_{p}\colon L^{1}(\mu )\rightarrow \mathbb{R}$ is monotone and globally Lipschitz.
+\item For every $u,v\in L^{1}(\mu )$, the inequality 
+\begin{equation*}
+K_{p}(u+v)-K_{p}(u)\geq \int v\widetilde{q}(u)\ d\mu
+\end{equation*}
+holds i.e., the density $\widetilde{q}(u)\in L^{\infty }(\mu )$ is the
+unique sub-gradient of $K_{p}$ at $u$.
+\end{enumerate}
+\end{proposition}
+%
+\begin{proof}
+\begin{enumerate}
+\item Consider the equation 
+\begin{equation*}
+F(t,\kappa )=\int \exp _{A}(u+tv-\kappa +\log _{A}p)\ d\mu -1,\quad t,\kappa
+\in \mathbb{R} \ .
+\end{equation*}
+so that $\kappa = K_p(u+tv)$. The implicit function theorem applies by derivation under the integral because of the bounds 
+\begin{multline*}
+\left\vert \frac{\partial }{\partial t}\exp _{A}(u+tv-\kappa +\log
+_{A}p)\right\vert = \\
+\left\vert A(\exp _{A}(u+tv-\kappa +\log _{A}p))v\right\vert \leq \left\Vert
+A\right\Vert _{\infty }\left\vert v\right\vert
+\end{multline*}
+and 
+\begin{equation*}
+\left\vert \frac{\partial }{\partial \kappa }\exp _{A}(u+tv-\kappa +\log
+_{A}p)\right\vert = \\
+\left\vert A(\exp _{A}(u+tv-\kappa +\log _{A}p))\right\vert \leq \left\Vert
+A\right\Vert _{\infty }\ .
+\end{equation*}
+Moreover the partial derivative with respect to $\kappa$ is never zero.
+Therefore there exists the derivative $\left( d\kappa /dt\right) _{t=0}$
+which is the desired Gateaux derivative. As $\widetilde q(u)$ is positive and bounded, then $K_p$ is monotone and globally Lipschitz.
+%
+\item Thanks to convexity of $\exp _{A}$ and the derivation formula, we
+have 
+\begin{equation*}
+\exp _{A}(u+v-K_{p}(u+v)+\log _{A}p)\geq q+A(q)(v-(K_{p}(u+v)-K_{p}(v)))\ ,
+\end{equation*}
+where $q = \exp_A(u - K_p(u) + \log_A p)$
+If we take $\mu $-integral of both sides, 
+\begin{equation*}
+0\geq \int vA(q)\ d\mu -(K_{p}(u+v)-K_{p}(v))\int A(q)\ d\mu \ .
+\end{equation*}
+Isolating the increment $K_{p}(u+v)-K_{p}(v)$, the desired inequality
+obtains. Therefore, $\widetilde{q}(u)$ is a sub-gradient of $K_{p}$ at $u$.
+From Item~\ref{item:subgradient1}. we deduce that $\widetilde{q}(u)$ is the unique sub-gradient and further $\widetilde{q}(u)$ is the Gateaux differential of $K_{p}$ at $u$. \qed
+\end{enumerate}
+\end{proof}
+
+We can also prove a special Fr\'echet-differentiability as follows.
+
+\begin{proposition}
+\label{prop:FAZ} Let $\alpha \geq 2.$
+\begin{enumerate}
+\item The superposition operator 
+\begin{equation*}
+L^{\alpha }(\mu )\ni v\mapsto \exp _{A}(v+\log _{A}p)\in L^{1}(\mu )
+\end{equation*}
+is continuously Fr\'{e}chet differentiable with derivative 
+\begin{equation*}
+d\exp _{A}(v)=(h\mapsto A(\exp _{A}(v+\log _{A}p))h)\in \mathcal{L}
+(L^{\alpha }(\mu ),L^{1}(\mu ))\ .
+\end{equation*}
+%
+\item The functional $K_{p}:L^{\alpha }(\mu )\rightarrow \mathbb{R}$,
+implicitly defined by the equation 
+\begin{equation*}
+\int \exp _{A}(v-K_{p}(v)+\log _{A}p)\ d\mu =1,\quad v\in L^{\alpha }(\mu )
+\end{equation*}
+is continuously Fr\'{e}chet differentiable with derivative 
+\begin{equation*}
+dK_{p}(v)=(h\mapsto \int h\widetilde{q}(v)\ d\mu )\ ,
+\end{equation*}
+where $\widetilde q(u) = \escortof{q(u)}$.
+\end{enumerate}
+\end{proposition}
+%
+\begin{proof}
+\begin{enumerate}
+\item Setting $\beta =1$ in Prop.~\ref{prop:BBA}.\ref{item:BBA2}, we
+get easily the assertion. It remains just to check that the Fr\'{e}chet
+derivative is continuous i.e., that the Fr\'echet derivative is a continuous
+map $L^{\alpha }(\mu )\rightarrow \mathcal{L}(L^{\alpha }(\mu ),L^{1}(\mu ))$. If $\Vert {h}\Vert _{L^{\alpha }(\mu )}\leq 1$ and $v,w\in L^{\alpha }(\mu
+)$ we have 
+\begin{multline*}
+\int \left\vert {(A[\exp _{A}(v+\log _{A}p)]-A[\exp _{A}(w+\log _{A}p)])h}
+\right\vert \ d\mu \\
+\leq \Vert {A[\exp _{A}(v+\log _{A}p)-A[\exp _{A}(w+\log _{A}p)]}\Vert
+_{L^{\sigma }(\mu )}\ ,
+\end{multline*}
+where $\sigma =\alpha /\left( \alpha -1\right) $ is the conjugate exponent of $
+\alpha $. On the other hand,
+\begin{eqnarray*}
+&&\Vert {A[\exp _{A}(v+\log _{A}p)-A[\exp _{A}(w+\log _{A}p)]}\Vert
+_{L^{\sigma }(\mu )} \\
+&\leq &\left\Vert A^{\prime }\right\Vert _{\infty }\left\Vert A\right\Vert
+_{\infty }\left\Vert v-w\right\Vert _{L^{\sigma }(\mu )}
+\end{eqnarray*}
+and so the map $L^{\alpha }(\mu )\rightarrow \mathcal{L}(L^{\alpha }(\mu
+),L^{1}(\mu ))$ is continuous whenever $\alpha \geq \sigma ,$ i.e., $\alpha
+\geq 2$.
+
+\item Fr\'echet differentiability of $K_{p}$ is a consequence of the
+Implicit Function Theorem in Banach spaces, see \cite{dieudonne:60}, applied
+to the $C^{1}$-mapping 
+\begin{equation*}
+L^{\alpha }(\mu )\times \mathbb{R}\ni (v,\kappa )\mapsto \int \exp
+_{A}(v-\kappa +\log _{A}p)\ d\mu \ .
+\end{equation*}
+The value of the derivative is given by Proposition \ref{prop:subgradient}. \qed
+\end{enumerate}
+\end{proof}
+
+\section{$A$-Divergence}
+\label{sec:convex-conjugate}
+%
+In analogy with the standard exponential case, define the $A$-divergence between
+probability densities as
+\begin{equation*}
+D_{A}(q\Vert p)=\int \left( \log _{A}q-\log _{A}p\right) \escortof{q}\text{ }
+d\mu \text{, \ for }q,p\in \mathcal{P} \ .
+\end{equation*}
+
+Let us check that $D_A$ is well defined that is, $\left( \log _{A}q-\log _{A}p\right)$ is quasi-integrable. As $\log_A$ is strictly concave with derivative $1/A$ we have
+\begin{equation*}
+\log _{A}\left( x\right) \leq \log _{A}\left( y\right) +\frac{1}{A\left(
+y\right) }\left( x-y\right)
+\end{equation*}
+for all $x,y>0$ and with equality if, and only if, $x=y.$ Hence 
+\begin{equation}\label{eq:HSA}
+A\left( y\right) \left( \log _{A}\left( y\right) -\log _{A}\left( x\right)
+\right) \geq y-x\ .  
+\end{equation}
+It follows in particular that 
+\begin{equation*}
+A\left( y\right) \left( \log _{A}y-\log _{A}x\right) \geq -\left\vert
+y-x\right\vert 
+\end{equation*}
+hence the quasi-integrability is proved and $D_{A}(\cdot \Vert \cdot )$ is a well defined, possibly extended valued, function.
+
+Observe further that by Prop.~\ref{prop:Aexp}.\ref{item:Aexp4}, if $q = \exp_A(u - K_p(u) + \log_A p)$, then $\log _{A}q-\log _{A}p \in L^{1}\left( \mu \right) $, and so 
+$D_{A}(q\Vert p)<\infty $.
+
+The binary relation $D_{A}$ satisfies Gibbs' inequality hence it is a faithful divergence.
+
+\begin{proposition}
+We have $D_{A}(q\Vert p)\geq 0$ and $D_{A}(q\Vert p)=0$ if and only if $p=q$.
+\end{proposition}
+
+\begin{proof}
+From inequality \eqref{eq:HSA} it follows
+\begin{align*}
+D_{A}(q\Vert p) &=\frac{1}{\int A\left( q\right) d\mu }\int \left( \log
+_{A}q-\log _{A}p\right) A\left( q\right) \ d\mu \\
+&\geq \frac{1}{\int A\left( q\right) d\mu }\int \left( q-p\right) \text{ } \ d\mu =0.
+\end{align*}
+Moreover, equality holds if and only if $p=q$ $\mu $-a.e. \qed
+\end{proof}
+
+Now we give a variational formula in the spirit of the classical one by
+Donsker-Varadhan. In equation
+%
+\begin{equation} \label{eq:expmodel1}
+q = \exp _{A}(u-K_p(u)+\log _{A}p),\quad u\in L^{1}(\mu )\ , \ q \in \mathcal P \ ,
+\end{equation}
+the random variable $u$ is identified up to a constant for any given $q$.
+There are at least two options for selecting an interesting representative
+in the equivalence class.
+
+One option is to assume $\int u\widetilde{p}\ d\mu =0$ with $\widetilde p = \escortof p$, the integral being well defined as the escort density is bounded. Such a choice is that used in the construction of the non-parametric exponential manifold, see \cite{pistone|sempi:95,pistone|rogantin:99}. In this case we can solve Eq.~\eqref{eq:expmodel1} for $u-K(u)$ to get 
+\begin{equation}\label{eq:QMP}
+K_{p}(u)={\Expectation}_{\widetilde{p}}\left[ \log _{A}p-\log _{A}q\right]
+=D_{A}(p\Vert q),  
+\end{equation}
+with ${\Expectation}_{\widetilde{p}}\left[ u\right] =0$ and $q=\exp _{A}(u-K_p(u)+\log _{A}p)$.
+
+A second option is to assume in Eq.~\eqref{eq:expmodel1} the random variable 
+$u$ to be centered with respect to $\widetilde{q} = \escortof q$, i.e., ${\Expectation}_{\widetilde{q}}\left[ u\right] =0$. This representation is of special interest in Statistical Physics, see for example \cite{landau|lifshits:1980}.
+
+To avoid confusion we rewrite Eq.~\eqref{eq:expmodel1} as 
+\begin{equation}
+q=\exp _{A}(v+H_{p}(v)+\log _{A}p),\quad v\in L^{1}(\mu ),\quad {\Expectation}_{
+\widetilde{q}}\left[ v\right] =0,  \label{eq:expmodel2}
+\end{equation}
+so that 
+\begin{equation*}
+D_{A}(q\Vert p)={\Expectation}_{\widetilde{q}}\left[ \log _{A}q-\log _{A}p\right]
+=H_{p}(v),
+\end{equation*}
+where ${\Expectation}_{\widetilde{q}}\left[ v\right] =0$.
+
+In conclusion, we have two notable representation of the same probability
+density $q$, namely 
+\begin{equation*}
+\exp_A(u - K_p(u) + \log_A p) = \exp_A(v + H_p(v) + \log_A p)
+\end{equation*}
+which implies $u - v = K_p(u) + H_p(v)$. This, in turn, implies 
+\begin{equation}  \label{eq:conjugate}
+- {\Expectation}_{\widetilde p}\left[v \right] = {\Expectation}_{\widetilde q}\left[u \right] =
+K_p(u)+H_p(v).
+\end{equation}
+
+The previous discussion is actually related to the computation of the convex
+conjugate of $K_{p}$ in the duality $L^{\infty }(\mu )\times L^{1}(\mu )$ as we see now. Let us denote by $\overline{\mathcal P}$ the set of all probability densities that is, the closure in $L^1(\mu)$ of $\mathcal P$. The operator $\eta \mapsto \hat{\eta}$ denotes
+the inverse of the escort operator that is, $\eta = \escortof {\hat \eta}$, see Sec.~\ref{sec:escortdensity}. 
+
+\begin{proposition}
+\begin{enumerate}
+\item The convex conjugate mapping of $K_{p}$,
+\begin{equation}\label{eq:FEN}
+K_{p}^{\ast }\left( w\right) =\sup_{u\in L^{1}(\mu )}\left(\int wu\ d\mu
+-K_{p}\left( u\right)\right), \quad w\in L^{\infty }(\mu )  
+\end{equation}
+has domain contained into $\overline{\mathcal P}\cap L^{\infty}(\mu)$.
+\item At each $\eta$ in the image of the escort mapping, that is $\eta = \escortof{\hat \eta} = dK_p(v)$, with $\hat \eta = q(v) = \exp_A(v - K_p(v) + \log_A p)$, the conjugate $K_p^*(\eta)$ is given by the \emph{Legendre transform},
+  \begin{equation*}
+K_p^*(\eta) = \int v\ \escortof{q(v)} \ d\mu - K_p(v) \  ,    
+\end{equation*}
+so that $K_p^*(\eta)  = H_p(v) = D_A(q(u)\Vert p)$. In particular, $K_p^*$ is finite on the image of the escort mapping.
+\end{enumerate}
+\end{proposition}
+%
+\begin{proof}
+\begin{enumerate} 
+\item It follows from the fact that $K_{p}$ is monotone and translation invariant. Actually, from the definition in Eq.~\eqref{eq:FEN} it follows 
+\begin{equation*}
+K_{p}^{\ast }\left( w\right) \geq \sup_{u\in L^{1}(\mu ),u\leq 0}\left(\int wu\ d\mu -K_{p}\left(
+u\right)\right) \geq \sup_{u\in L^{1}(\mu ),u\leq 0}\int wu\ d\mu
+\end{equation*}
+since $K_{p}\left( u\right) \leq 0$ if $u\leq 0.$ If $w$ is not positive,
+then there exists an element $u_{0}\leq 0$ such that $\int wu_{0}\ d\mu >0$.
+Hence $K_{p}^{\ast }\left( w\right) =+\infty .$ Now consider the case $w \geq 0$ and $u = \lambda \in \reals$, $\lambda >0$. We have $K_p(\lambda) = \lambda$ and 
+\begin{equation*}
+K_p^*(w) \geq \sup_{\lambda > 0}\left( \lambda \int w\ d\mu
+-\lambda \right) \ ,
+\end{equation*}
+which is $+\infty$ unless $\int w \ d\mu = 1$.
+Summarizing, $K_{p}^{\ast }\left( w\right) <\infty $ implies $w\in \overline{\mathcal{P}}$ i.e., the domain of $K_{p}^{\ast }$ is contained in $\mathcal{P\cap }L^{\infty }(\mu)$.
+
+\item The concave and Gateaux differentiable function $u \mapsto \int \eta u \ d\mu - K_p(u)$ has derivative at $u$ is $\eta - dK_p(u) = \eta - \escortof{q(u)}$ with $q(u) = \exp_A(u - K_p(u) + \log_p)$. As $\eta = \escortof{q(v)}$ by assumption, the derivative is zero at $v$ and the $\sup$ in the definition of $K_p^*$ is attained at that point. The value is $K_p^*(\eta) = \int \eta v \ d\mu - K_p(v)$. \qed
+\end{enumerate}
+\end{proof}
+
+Notice that, given any $\eta \in \overline{\mathcal P} \cap L^\infty(\mu)$ and $\epsilon > 0$, there exist a simple $\eta_\epsilon \in \mathcal P \cap L^\infty(\mu)$ such that $\normat \infty {\eta-\eta_\epsilon} < \epsilon$. Now, $\eta_\epsilon$ belongs to the image of the escort mapping because of Prop.~\ref{prop:XCM}.\ref{item:XCM2}, hence $K_p^*(\eta_\epsilon) < \infty$ so that the uniform closure of the image of the escort mapping is the full $\overline{\mathcal P}\cap L^\infty(\mu)$.
+
+\section{Hilbert bundle based on $\exp_A$}
+\label{sec:riem-manif-based}
+
+We discuss now the Hilbert manifold of probability densities as defined in \cite{newton:2012}. With respect to that reference, we consider a slightly more general set-up. We use a general $A$ function, provide an atlas of charts, and define a linear bundle as an expression of the tangent space.
+
+Let $\mathcal{P}(\mu )$ denote the set of all $\mu $-densities on the
+probability space $(\mathbb{X},\mathcal{X},\mu )$ of the kind 
+\begin{equation}\label{eq:Pmu}
+q=\exp _{A}(u-K_{1}(u)),\quad u\in L^{2}(\mu ),\quad {\Expectation}_{\mu }\left[ u
+\right] =0 \ .
+\end{equation}
+Notice that $1\in \mathcal{P}(\mu )$ because we can 
+take $u=0$.
+
+\begin{proposition}\ 
+  \begin{enumerate}
+  \item $\mathcal{P}(\mu )$ is the set of all densities $q$ such that $\log _{A}q\in L^{2}(\mu )$, in which case $u = \log_A q - \expectat \mu {\log_A q}$.
+  \item If $A'(0)>0$, then $\mathcal{P}(\mu )$ is the set of all densities $q$ such that both $q$ and $\log q$ are in $L^{2}(\mu )$. 
+  \item Assume $A'(0) > 0$. On a product space with reference probability measures $\mu_1$ and $\mu$, and densities respectively $q_1$ and $q_2$, it holds $(q_1\cdot\mu_1)\otimes(q_2\cdot\mu_2) = (q_1\otimes q_2) \cdot (\mu_1 \otimes \mu_2)$. Moreover, $q_1 \in \mathcal P(\mu_1)$ and $q_2 \in \mathcal P(\mu_2)$ if, and only if, $(q_1 \otimes q_2) \in \mathcal P(\mu_1 \otimes \mu_2)$. 
+  \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+  \begin{enumerate}
+  \item 
+If Eq.~\eqref{eq:Pmu} holds, then $\log_A q = u - K_1(q) \in L^2(\mu)$. Conversely, if $v = \log _{A}q\in L^{2}(\mu )$, then Prop.~\eqref{prop:Aexp} implies
+\begin{equation*}
+  q = \exp_A(v) = \exp_A(v - c - K_1(v-c)), \quad c \in \reals
+\end{equation*}
+and we can take $c = \expectat \mu v$ to satisfy Eq.~\eqref{eq:Pmu} with $u = \log_A q - \expectat \mu {\log_A q}$.
+\item Write $\absoluteval {\log_A q}^2 = \absoluteval{\log_A q}^2 (q < 1) + \absoluteval{\log_A q}^2 (q \geq 1)$, and use the bounds in Eq.~\eqref{eq:bound1} and Eq.~\eqref{eq:bound2} to get
+\begin{multline*}
+  \expectat \mu {\absoluteval {\log_A q}^2} \le \frac1{\alpha_1^2}\expectat \mu {\absoluteval{\log q}^2 (q < 1)} + \expectat \mu {\absoluteval{q-1}^2 (q \geq 1)} \leq \\ \frac1{\alpha_1^2} \expectat \mu {\absoluteval{\log q}^2} + \expectat \mu {q^2} -1 \ .
+\end{multline*}
+By using the other two bounds, we get
+\begin{equation*}
+  \expectat \mu {\absoluteval {\log_A q}^2} \ge \frac1{\alpha_2^2} \expectat \mu {\absoluteval{\log q}^2} + \alpha_1(\expectat \mu {q^2} - 1) \ .
+\end{equation*}
+\item We use the previous item. $q_1 \otimes q_2 \in \mathcal P(\mu_1 \otimes \mu_2)$ if and only if both $q_1 \otimes q_2$ and $\log (q_1 \otimes q_2)$ are in $L^2(\mu_1\otimes\mu_2)$. The first condition is equivalent to both $q_1 \in L^2(\mu_1)$ and $q_2 \in L^2(\mu_2)$. The second condition is $\log q_1 + \log q_2 \in L^2(\mu_1\otimes\mu_2)$. We have
+\begin{multline*}
+  \expectat {\mu_1 \otimes \mu_2}{(\log q_1 + \log q_2)^2} = \\ \expectat {\mu_1}{(\log q_1)^2} + \expectat {\mu_2}{(\log q_2)^2} + 2 \absoluteval{\expectat {\mu_1} {\log q_1}} \absoluteval{\expectat {\mu_2} {\log q_2}}
+\end{multline*}
+because $\expectat {\mu_i} {\log q_i} \le \expectat {\mu_1} {q_i-1} = 0$. It follows that the second condition is equivalent to $\log q_1 \in L^2(\mu_1)$ and $\log  q_2 \in L^2(\mu_2)$.\qed
+\end{enumerate}
+\end{proof}
+
+We proceed now to define an Hilbert bundle with base $\mathcal{P}(\mu )$.
+The notion of Hilbert bundle has been introduced in Information Geometry by 
+\cite{amari:87dual}. We use here an adaptation to the $A$-exponential of
+arguments elaborated by \cite{gibilisco|pistone:98,pistone:2013GSI}. Notice that the construction depends in a essential way on the special conditions we are assuming for the present class of deformed exponential.
+
+At each $q \in \mathcal{P}(\mu )$ the escort density $\widetilde q$ is bounded, so that we can define the fiber given by the Hilbert spaces 
+\begin{equation*}
+H_{q}=\left\{ u\in L^{2}(\mu )|{\Expectation}_{\widetilde{q}}\left[ u\right] =0\right\}
+\end{equation*}
+with scalar product $\left\langle u,v\right\rangle _{q}=\int uv\ d\mu $. The Hilbert bundle is
+\begin{equation*}
+H\mathcal{P}(\mu )=\left\{ (q,u)|q\in \mathcal{P}(\mu ),u\in H_{q}\right\} \
+.
+\end{equation*}
+For each $p,q\in \mathcal{P}(\mu )$ the mapping $\mathbb{U}_{p}^{q}u=u-{\Expectation}_{\widetilde{q}}\left[ u\right] $ is a continuous linear mapping from $H_{p}$
+to $H_{q}$. We have $\mathbb{U}_{q}^{r}\mathbb{U}_{p}^{q}=\mathbb{U}_{p}^{r}$. In particular, $\mathbb{U}_{q}^{p}\mathbb{U}_{p}^{q}$ is the identity on $H_{p}$, hence $\mathbb{U}_{p}^{q}$ is an isomorphism of $H_{p}$ onto $H_{q}$.
+
+In the following proposition we introduce an affine atlas of charts and use
+it to define our Hilbert bundle which is an expression of the tangent
+bundle. The velocity of a curve $t \mapsto p(t) \in \mathcal{P}(\mu)$ is
+expressed in the Hilbert bundle by the so called $A$-score that, in our
+case, takes the form $A(p(t))^{-1} \dot p(t)$, with $\dot p(t)$ computed in $L^1(\mu)$.
+
+The following proposition is taken from \cite{montrucchio|pistone:2017} where a detailed proof is given.
+
+\begin{proposition}
+
+\begin{enumerate}
+\item Fix $p\in \mathcal{P}(\mu )$. A positive density $q$ can be
+written as 
+\begin{equation*}
+q=\exp _{A}(u-K_{p}(u)+\log _{A}p),\text{ with $u\in L^{2}(\mu )$ and ${\Expectation}_{\widetilde{p}}\left[ u\right] =0$,}
+\end{equation*}
+if, and only if, $q\in \mathcal{P}(\mu )$.
+
+\item For each $p\in \mathcal{P}(\mu )$ the mapping 
+\begin{equation*}
+s_{p}\colon \mathcal{P}(\mu )\ni q\mapsto \log _{A}q-\log _{A}p+D_{A}(p\Vert
+q)\in H_{p}
+\end{equation*}
+is injective and surjective, with inverse $e_{p}(u)=\exp
+_{A}(u-K_{p}(u)+\log _{A}p)$.
+
+\item The atlas $\left\{ s_{p}|p\in \mathcal{P}(\mu )\right\} $ is
+affine with transitions 
+\begin{equation*}
+s_{q}\circ e_{p}(u)=\mathbb{U}_{p}^{q}u+s_{p}(q)\ .
+\end{equation*}
+
+\item The expression of the velocity of the differentiable curve $t\mapsto p(t)\in \mathcal{P}(\mu )$ in the chart $s_{p}$ is $ds_{p}(p(t))/dt\in H_{p}$. Conversely, given any $u\in H_{p}$, the curve 
+\begin{equation*}
+p\colon t\mapsto \exp _{A}(tu-K_{p}(tu)+\log _{A}p)
+\end{equation*}
+has $p(0)=p$ and has velocity at $t=0$ expressed in the chart $s_{p}$ by $u$. If the velocity of a curve is expressed in the chart $s_{p}$ by $t\mapsto 
+\dot{u}(t)$, then its expression in the chart $s_{q}$ is $\mathbb{U}_{p}^{q}
+\dot{u}(t)$.
+
+\item If $t\mapsto p(t)\in \mathcal{P}(\mu )$ is differentiable with
+respect to the atlas then it is differentiable as a mapping in $L^{1}(\mu )$. It follows that the $A$-score is well-defined and is the expression of the
+velocity of the curve $t\mapsto p(t)$ in the moving chart $t\mapsto s_{p(t)}$.
+\end{enumerate}
+\end{proposition}
+
+\section{Final remarks}
+\label{sec:conclusions}
+A non-parametric Hilbert manifold based on a deformed exponential representation of positive densities has been firstly introduced by N. J. Newton \cite{newton:2012}. We have derived regularity properties of the normalizing functional $K_p$ and discussed the relevant Fenchel conjugation. With respect to the original version, we allow for an atlas containing charts centered at each density in the model. Moreover, we discuss explicitly the Hilbert bundle on the Hilbert manifold. Though $K_p$ is a convex function, it should be remarked we do not follow the standard development that uses it as a potential function to derive a Fisher metric from its Hessian.
+
+\begin{acknowledgement}
+L. Montrucchio is Honorary Fellow of the Collegio Carlo Alberto Foundation. G. Pistone is a member of GNAMPA-INdAM and acknowledges the support of de Castro Statistics and Collegio Carlo Alberto.
+\end{acknowledgement}
+
+\bibliographystyle{spmpsci}
+%\bibliography{tutto}
+
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{amari:87dual}
+Amari, S.: Dual connections on the {H}ilbert bundles of statistical models.
+\newblock In: Geometrization of statistical theory (Lancaster, 1987), pp.
+  123--151. ULDM Publ. (1987)
+
+\bibitem{ambrosetti|prodi:1993}
+Ambrosetti, A., Prodi, G.: A primer of nonlinear analysis, \emph{Cambridge
+  Studies in Advanced Mathematics}, vol.~34.
+\newblock Cambridge University Press (1993)
+
+\bibitem{appell|zabrejko:1990}
+Appell, J., Zabrejko, P.P.: Nonlinear superposition operators, \emph{Cambridge
+  Tracts in Mathematics}, vol.~95.
+\newblock Cambridge University Press (1990).
+\newblock \doi{10.1017/CBO9780511897450}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1017/CBO9780511897450}
+
+\bibitem{ay|jost|le|schwachhofer:2017IGbook}
+Ay, N., Jost, J., L\^e, H.V., Schwachh\"ofer, L.: Information geometry,
+  \emph{Ergebnisse der Mathematik und ihrer Grenzgebiete. 3. Folge. A Series of
+  Modern Surveys in Mathematics [Results in Mathematics and Related Areas. 3rd
+  Series. A Series of Modern Surveys in Mathematics]}, vol.~64.
+\newblock Springer, Cham (2017)
+
+\bibitem{dieudonne:60}
+Dieudonn\'e, J.: Foundations of Modern Analysis.
+\newblock Academic press (1960)
+
+\bibitem{ekeland|temam:1999convex2nd}
+Ekeland, I., T\'emam, R.: Convex analysis and variational problems,
+  \emph{Classics in Applied Mathematics}, vol.~28, english edn.
+\newblock Society for Industrial and Applied Mathematics (SIAM) (1999).
+\newblock \doi{10.1137/1.9781611971088}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1137/1.9781611971088}.
+\newblock Translated from the French
+
+\bibitem{gibilisco|pistone:98}
+Gibilisco, P., Pistone, G.: Connections on non-parametric statistical manifolds
+  by {O}rlicz space geometry.
+\newblock IDAQP \textbf{1}(2), 325--347 (1998)
+
+\bibitem{kaniadakis:2001PhA}
+Kaniadakis, G.: Non-linear kinetics underlying generalized statistics.
+\newblock Physica A \textbf{296}(3-4), 405--425 (2001)
+
+\bibitem{landau|lifshits:1980}
+Landau, L.D., Lifshitz, E.M.: Course of theoretical physics. {V}ol. 5:
+  {S}tatistical physics.
+\newblock Translated from the Russian by J. B. Sykes and M. J. Kearsley. Second
+  revised and enlarged edition. Pergamon Press, Oxford-Edinburgh-New York
+  (1968)
+
+\bibitem{malliavin:1995}
+Malliavin, P.: Integration and probability, \emph{Graduate Texts in
+  Mathematics}, vol. 157.
+\newblock Springer-Verlag (1995).
+\newblock With the collaboration of Hélène Airault, Leslie Kay and Gérard
+  Letac, Edited and translated from the French by Kay, With a foreword by Mark
+  Pinsky
+
+\bibitem{montrucchio|pistone:2017}
+Montrucchio, L., Pistone, G.: Deformed exponential bundle: the linear growth
+  case.
+\newblock In: F.~Nielsen, F.~Barbaresco (eds.) Geometric Science of
+  Information, pp. 239--246. Springer (2017).
+\newblock Third International Conference, GSI 2017, Paris, France, November
+  7-9, 2017, Proceedings
+
+\bibitem{naudts:2011GTh}
+Naudts, J.: Generalised thermostatistics.
+\newblock Springer-Verlag London Ltd. (2011).
+\newblock \doi{10.1007/978-0-85729-355-8}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1007/978-0-85729-355-8}
+
+\bibitem{newton:2012}
+Newton, N.J.: An infinite-dimensional statistical manifold modelled on
+  {H}ilbert space.
+\newblock J. Funct. Anal. \textbf{263}(6), 1661--1681 (2012).
+\newblock \doi{10.1016/j.jfa.2012.06.007}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1016/j.jfa.2012.06.007}
+
+\bibitem{pistone:2013GSI}
+Pistone, G.: Nonparametric information geometry.
+\newblock In: F.~Nielsen, F.~Barbaresco (eds.) Geometric science of
+  information, \emph{Lecture Notes in Comput. Sci.}, vol. 8085, pp. 5--36.
+  Springer, Heidelberg (2013).
+\newblock First International Conference, GSI 2013 Paris, France, August 28-30,
+  2013 Proceedings
+
+\bibitem{pistone|rogantin:99}
+Pistone, G., Rogantin, M.: The exponential statistical manifold: mean
+  parameters, orthogonality and space transformations.
+\newblock Bernoulli \textbf{5}(4), 721--760 (1999)
+
+\bibitem{pistone|sempi:95}
+Pistone, G., Sempi, C.: An infinite-dimensional geometric structure on the
+  space of all the probability measures equivalent to a given one.
+\newblock Ann. Statist. \textbf{23}(5), 1543--1561 (1995)
+
+\bibitem{tsallis:1988}
+Tsallis, C.: Possible generalization of {B}oltzmann-{G}ibbs statistics.
+\newblock J. Statist. Phys. \textbf{52}(1-2), 479--487 (1988)
+
+\bibitem{vigelis|cavalcante:2013}
+Vigelis, R.F., Cavalcante, C.C.: On $\phi$-families of probability
+  distributions.
+\newblock Journal of Theoretical Probability \textbf{26}, 870--884 (2013)
+
+\end{thebibliography}
+
+\end{document}

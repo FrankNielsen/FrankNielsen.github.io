@@ -1,0 +1,29 @@
+I strongly recommend to accept this paper.
+
+
+- Is faithful in Theo 1 a usual term (add ref then)
+- In Eq 7, index S by rho tau?
+- why index proba density with superscript theta instead of usual subscript? add footnote?
+- page 6, a table with the rho, tau, f, f^* would be nice with various examples
+- Sec 5 "by taking two derivatives" "by taking its second-order partial derivatives"?
+- Sec 7 specify that you use regular exp fam
+
+I also recommend to add those citations:
+
+@book{GeoHessian-2007,
+  title={The Geometry of {H}essian Structures},
+  author={Shima, H.},
+  isbn={9789812707536},
+  year={2007},
+  publisher={World Scientific}
+}
+
+@inproceedings{RepBregman-2009,
+  title={The dual {V}oronoi diagrams with respect to representational {B}regman divergences},
+  author={Nielsen, Frank and Nock, Richard},
+  booktitle={Sixth International Symposium on Voronoi Diagrams},
+  pages={71--78},
+  year={2009},
+  organization={IEEE}
+}
+

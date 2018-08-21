@@ -1,0 +1,289 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{IG-2016}
+Amari, S.: Information Geometry and Its Applications.
+\newblock Applied Mathematical Sciences. Springer Japan (2016)
+
+\bibitem{IGDiv-2010}
+Amari, S.i., Cichocki, A.: Information geometry of divergence functions.
+\newblock Bulletin of the Polish Academy of Sciences: Technical Sciences
+  \textbf{58}(1), 183--195 (2010)
+
+\bibitem{AW-KLBD-2001}
+Azoury, K.S., Warmuth, M.K.: Relative loss bounds for on-line density
+  estimation with the exponential family of distributions.
+\newblock Machine Learning \textbf{43}(3), 211--246 (2001)
+
+\bibitem{Bregman-2005}
+Banerjee, A., Merugu, S., Dhillon, I.S., Ghosh, J.: Clustering with {B}regman
+  divergences.
+\newblock Journal of machine learning research \textbf{6}(Oct), 1705--1749
+  (2005)
+
+\bibitem{Ising-2018}
+Bhattacharya, B.B., Mukherjee, S., et~al.: Inference in {I}sing models.
+\newblock Bernoulli \textbf{24}(1), 493--525 (2018)
+
+\bibitem{BVD-2010}
+Boissonnat, J.D., Nielsen, F., Nock, R.: Bregman {V}oronoi diagrams.
+\newblock Discrete \& Computational Geometry \textbf{44}(2), 281--307 (2010)
+
+\bibitem{Boyd-2004}
+Boyd, S., Vandenberghe, L.: Convex optimization.
+\newblock Cambridge university press (2004)
+
+\bibitem{IG-2014}
+Calin, O., Udriste, C.: Geometric Modeling in Probability and Statistics.
+\newblock Mathematics and Statistics. Springer International Publishing (2014)
+
+\bibitem{Ising-2000}
+Cipra, B.A.: The {I}sing model is {NP}-complete.
+\newblock SIAM News \textbf{33}(6), 1--3 (2000)
+
+\bibitem{Cobb-1983}
+Cobb, L., Koppstein, P., Chen, N.H.: Estimation and moment recursion relations
+  for multimodal distributions of the exponential family.
+\newblock Journal of the American Statistical Association \textbf{78}(381),
+  124--130 (1983)
+
+\bibitem{Cover-2012}
+Cover, T.M., Thomas, J.A.: Elements of information theory.
+\newblock John Wiley \& Sons (2012)
+
+\bibitem{Critchley-CIG}
+Critchley, F., Marriott, P.: Computational information geometry in statistics:
+  theory and practice.
+\newblock Entropy \textbf{16}(5), 2454--2471 (2014)
+
+\bibitem{Crouzeix-1977}
+Crouzeix, J.P.: A relationship between the second derivatives of a convex
+  function and of its conjugate.
+\newblock Mathematical Programming \textbf{13}(1), 364--365 (1977)
+
+\bibitem{GaussianClustering-2007}
+Davis, J.V., Dhillon, I.S.: Differential entropic clustering of multivariate
+  gaussians.
+\newblock In: Advances in Neural Information Processing Systems, pp. 337--344
+  (2007)
+
+\bibitem{Dawid-2007}
+Dawid, A.P.: The geometry of proper scoring rules.
+\newblock Annals of the Institute of Statistical Mathematics \textbf{59}(1),
+  77--93 (2007)
+
+\bibitem{Eguchi-1983}
+Eguchi, S.: Second order efficiency of minimum contrast estimators in a curved
+  exponential family.
+\newblock The Annals of Statistics pp. 793--803 (1983)
+
+\bibitem{Eguchi-1992}
+Eguchi, S.: Geometry of minimum contrast.
+\newblock Hiroshima Mathematical Journal \textbf{22}(3), 631--647 (1992)
+
+\bibitem{tensor-2011}
+Fleisch, D.A.: A student's guide to vectors and tensors.
+\newblock Cambridge University Press (2011)
+
+\bibitem{Frongillo-2014}
+Frongillo, R., Reid, M.D.: Convex foundations for generalized {MaxEnt} models.
+\newblock In: AIP Conference Proceedings, vol. 1636, pp. 11--16. AIP (2014)
+
+\bibitem{lse-2017}
+{Gao}, B., {Pavel}, L.: {On the Properties of the Softmax Function with
+  Application in Game Theory and Reinforcement Learning}.
+\newblock ArXiv e-prints  (2017)
+
+\bibitem{MRF-1986}
+Geman, S., Graffigne, C.: Markov random field image models and their
+  applications to computer vision.
+\newblock In: Proceedings of the international congress of mathematicians,
+  vol.~1, p.~2 (1986)
+
+\bibitem{Bregman1DClustering-2017}
+Gr{\o}nlund, A., Larsen, K.G., Mathiasen, A., Nielsen, J.S.: Fast exact
+  $k$-means, $k$-medians and {B}regman divergence clustering in {1D}.
+\newblock CoRR \textbf{abs/1701.07204} (2017).
+\newblock \urlprefix\url{http://arxiv.org/abs/1701.07204}
+
+\bibitem{Fast1DClustering-2017}
+Gr{\o}nlund, A., Larsen, K.G., Mathiasen, A., Nielsen, J.S.: Fast exact
+  $k$-means, $k$-medians and {B}regman divergence clustering in 1d.
+\newblock arXiv preprint arXiv:1701.07204  (2017)
+
+\bibitem{KassVos-1997}
+Kass, R.E., Vos, P.W.: Geometrical Foundations of Asymptotic Inference.
+\newblock Wiley-Interscience (1997).
+\newblock Fisher-Rao metric of location-scale family is hyperbolic (and can be
+  diagonalized), pages 192--193
+
+\bibitem{Lauritzen-1987}
+Lauritzen, S.L.: Statistical manifolds.
+\newblock Differential Geometry in Statistical Inference p. 164 (1987)
+
+\bibitem{SymbolicMonotoneOp-2017}
+Lauster, F., Luke, D.R., Tam, M.K.: Symbolic computation with monotone
+  operators.
+\newblock Set-Valued and Variational Analysis pp. 1--16 (2017)
+
+\bibitem{KLaveraging-2014}
+Liu, Q., Ihler, A.T.: Distributed estimation, information loss and exponential
+  families.
+\newblock In: Advances in Neural Information Processing Systems, pp. 1098--1106
+  (2014)
+
+\bibitem{matsuzoe-2017}
+Matsuzoe, H., Scarfone, A.M., Wada, T.: A sequential structure of statistical
+  manifolds on deformed exponential family.
+\newblock In: International Conference on Geometric Science of Information, pp.
+  223--230. Springer (2017)
+
+\bibitem{nielsen-2010}
+Nielsen, F.: A family of statistical symmetric divergences based on {J}ensen's
+  inequality.
+\newblock arXiv preprint arXiv:1009.4004  (2010)
+
+\bibitem{LegendreIG-2010}
+Nielsen, F.: Legendre transformation and information geometry (2010)
+
+\bibitem{HT-2013}
+Nielsen, F.: Hypothesis testing, information divergence and computational
+  geometry.
+\newblock In: Geometric Science of Information, pp. 241--248. Springer (2013)
+
+\bibitem{Chernoff-2013}
+Nielsen, F.: An information-geometric characterization of {C}hernoff
+  information.
+\newblock IEEE Signal Processing Letters \textbf{20}(3), 269--272 (2013)
+
+\bibitem{hpc-2016}
+Nielsen, F.: Introduction to {HPC} with {MPI} for Data Science.
+\newblock Undergraduate Topics in Computer Science. Springer (2016).
+\newblock \doi{10.1007/978-3-319-21903-5}.
+\newblock \urlprefix\url{https://doi.org/10.1007/978-3-319-21903-5}
+
+\bibitem{BVD-2007}
+Nielsen, F., Boissonnat, J.D., Nock, R.: On {B}regman {V}oronoi diagrams.
+\newblock In: Proceedings of the eighteenth annual ACM-SIAM symposium on
+  Discrete algorithms, pp. 746--755. Society for Industrial and Applied
+  Mathematics (2007)
+
+\bibitem{BR-2011}
+Nielsen, F., Boltz, S.: The {B}urbea-{R}ao and {B}hattacharyya centroids.
+\newblock IEEE Transactions on Information Theory \textbf{57}(8), 5455--5466
+  (2011)
+
+\bibitem{flashcards-2009}
+Nielsen, F., Garcia, V.: Statistical exponential families: A digest with flash
+  cards.
+\newblock arXiv preprint arXiv:0911.4863  (2009)
+
+\bibitem{GaussianClustering-2009}
+Nielsen, F., Garcia, V., Nock, R.: Simplifying {G}aussian mixture models via
+  entropic quantization.
+\newblock In: 17th European Conference on Signal Processing (EUSIPCO), pp.
+  2012--2016. IEEE (2009)
+
+\bibitem{SEB-2008}
+Nielsen, F., Nock, R.: On the smallest enclosing information disk.
+\newblock Information Processing Letters \textbf{105}(3), 93--97 (2008)
+
+\bibitem{SymBregman-2009}
+Nielsen, F., Nock, R.: Sided and symmetrized {B}regman centroids.
+\newblock IEEE transactions on Information Theory \textbf{55}(6), 2882--2904
+  (2009)
+
+\bibitem{Bregman1DClustering-2014}
+Nielsen, F., Nock, R.: Optimal interval clustering: Application to {B}regman
+  clustering and statistical mixture learning.
+\newblock IEEE Signal Processing Letters \textbf{21}(10), 1289--1292 (2014)
+
+\bibitem{PEF-2016}
+Nielsen, F., Nock, R.: Patch matching with polynomial exponential families and
+  projective divergences.
+\newblock In: International Conference on Similarity Search and Applications,
+  pp. 109--116. Springer (2016)
+
+\bibitem{wmixture-2017}
+Nielsen, F., Nock, R.: On $w$-mixtures: Finite convex combinations of
+  prescribed component distributions.
+\newblock CoRR \textbf{abs/1708.00568} (2017).
+\newblock \urlprefix\url{http://arxiv.org/abs/1708.00568}
+
+\bibitem{geowmixtures-2018}
+Nielsen, F., Nock, R.: On the geometric of mixtures of prescribed
+  distributions.
+\newblock In: {IEEE} International Conference on Acoustics, Speech and Signal
+  Processing ({ICASSP}) (2018)
+
+\bibitem{BVT-2009}
+Nielsen, F., Piro, P., Barlaud, M.: Bregman vantage point trees for efficient
+  nearest neighbor queries.
+\newblock In: Multimedia and Expo, 2009. ICME 2009. IEEE International
+  Conference on, pp. 878--881. IEEE (2009)
+
+\bibitem{BBT-2009}
+Nielsen, F., Piro, P., Barlaud, M.: Tailored {B}regman ball trees for effective
+  nearest neighbors.
+\newblock In: Proceedings of the 25th European Workshop on Computational
+  Geometry (EuroCG), pp. 29--32 (2009)
+
+\bibitem{lse-2016}
+Nielsen, F., Sun, K.: Guaranteed bounds on information-theoretic measures of
+  univariate mixtures using piecewise log-sum-exp inequalities.
+\newblock Entropy \textbf{18}(12), 442 (2016)
+
+\bibitem{Holder-2017}
+Nielsen, F., Sun, K., Marchand-Maillet, S.: On h{\"o}lder projective
+  divergences.
+\newblock Entropy \textbf{19}(3), 122 (2017)
+
+\bibitem{MixedBregmanClustering-2008}
+Nock, R., Luosto, P., Kivinen, J.: Mixed {B}regman clustering with
+  approximation guarantees.
+\newblock In: Joint European Conference on Machine Learning and Knowledge
+  Discovery in Databases, pp. 154--169. Springer (2008)
+
+\bibitem{gammadiv-2014}
+Notsu, A., Komori, O., Eguchi, S.: Spontaneous clustering via minimum
+  $\gamma$-divergence.
+\newblock Neural computation \textbf{26}(2), 421--448 (2014)
+
+\bibitem{Pelletier-2005}
+Pelletier, B.: Informative barycentres in statistics.
+\newblock Annals of the Institute of Statistical Mathematics \textbf{57}(4),
+  767--780 (2005)
+
+\bibitem{MC-2014}
+Robert, C.P.: Monte {C}arlo methods.
+\newblock Wiley Online Library (2004)
+
+\bibitem{HIG-2007}
+Shima, H.: The geometry of {H}essian structures.
+\newblock World Scientific (2007)
+
+\bibitem{BMFamily-2013}
+Tang, Y., Salakhutdinov, R.R.: Learning stochastic feedforward neural networks.
+\newblock In: Advances in Neural Information Processing Systems, pp. 530--538
+  (2013)
+
+\bibitem{Gervsgorin-2010}
+Varga, R.S.: Ger{\v{s}}gorin and his circles, vol.~36.
+\newblock Springer Science \& Business Media (2010)
+
+\bibitem{KLnotanalytic-2004}
+Watanabe, S., Yamazaki, K., Aoyagi, M.: Kullback information of normal mixture
+  is not an analytic function.
+\newblock technical report of IEICE (in Japanese) (2004-0), 41--46 (2004)
+
+\bibitem{refduality-2015}
+Zhang, J.: Reference duality and representation duality in information
+  geometry.
+\newblock In: AIP Conference Proceedings, vol. 1641, pp. 130--146. AIP (2015)
+
+\end{thebibliography}

@@ -1,0 +1,1080 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.19)  20 JUL 2018 23:46
+entering extended mode
+**./8-BroniatowskiStummer.tex
+(8-BroniatowskiStummer.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
+(llncs.cls
+Document Class: llncs 2015/06/24 v2.20 
+ LaTeX document class for Lecture Notes in Computer Science
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
+\c@tracingmulticols=\count87
+\mult@box=\box26
+\multicol@leftmargin=\dimen103
+\c@unbalance=\count88
+\c@collectmore=\count89
+\doublecol@number=\count90
+\multicoltolerance=\count91
+\multicolpretolerance=\count92
+\full@width=\dimen104
+\page@free=\dimen105
+\premulticols=\dimen106
+\postmulticols=\dimen107
+\multicolsep=\skip43
+\multicolbaselineskip=\skip44
+\partial@page=\box27
+\last@line=\box28
+\maxbalancingoverflow=\dimen108
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count93
+\c@finalcolumnbadness=\count94
+\last@try=\dimen109
+\multicolovershoot=\dimen110
+\multicolundershoot=\dimen111
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+\mc@col@check@num=\count95
+) (aliascnt.sty
+Package: aliascnt 2009/09/08 v1.3 Alias counter (HO)
+ (remreset.sty))
+\c@chapter=\count96
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 362.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 363.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 364.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 365.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 366.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 367.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 368.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 369.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 370.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 371.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 372.
+\tocchpnum=\dimen112
+\tocsecnum=\dimen113
+\tocsectotal=\dimen114
+\tocsubsecnum=\dimen115
+\tocsubsectotal=\dimen116
+\tocsubsubsecnum=\dimen117
+\tocsubsubsectotal=\dimen118
+\tocparanum=\dimen119
+\tocparatotal=\dimen120
+\tocsubparanum=\dimen121
+\@tempcntc=\count97
+\fnindent=\dimen122
+\c@@inst=\count98
+\c@@auth=\count99
+\c@auco=\count100
+\instindent=\dimen123
+\authrun=\box52
+\authorrunning=\toks14
+\tocauthor=\toks15
+\titrun=\box53
+\titlerunning=\toks16
+\toctitle=\toks17
+\c@theorem=\count101
+\c@case=\count102
+\c@conjecture=\count103
+\c@corollary=\count104
+\c@definition=\count105
+\c@example=\count106
+\c@exercise=\count107
+\c@lemma=\count108
+\c@note=\count109
+\c@problem=\count110
+\c@property=\count111
+\c@proposition=\count112
+\c@question=\count113
+\c@solution=\count114
+\c@remark=\count115
+\headlineindent=\dimen124
+) ("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\makeidx.sty"
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks18
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen125
+))
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen126
+)
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count116
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count117
+\leftroot@=\count118
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count119
+\DOTSCASE@=\count120
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box54
+\strutbox@=\box55
+\big@size=\dimen127
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+
+
+Package amsmath Warning: Unable to redefine math accent \vec.
+
+\macc@depth=\count121
+\c@MaxMatrixCols=\count122
+\dotsspace@=\muskip10
+\c@parentequation=\count123
+\dspbrk@lvl=\count124
+\tag@help=\toks20
+\row@=\count125
+\column@=\count126
+\maxfields@=\count127
+\andhelp@=\toks21
+\eqnshift@=\dimen128
+\alignsep@=\dimen129
+\tagshift@=\dimen130
+\tagwidth@=\dimen131
+\totwidth@=\dimen132
+\lineht@=\dimen133
+\@envbody=\toks22
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+) ("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks24
+)
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count128
+))
+\Gin@req@height=\dimen134
+\Gin@req@width=\dimen135
+)
+\epsfxsize=\dimen136
+\epsfysize=\dimen137
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip48
+\subfigcapskip=\skip49
+\subfigcaptopadj=\dimen138
+\subfigbottomskip=\skip50
+\subfigcapmargin=\dimen139
+\subfiglabelskip=\skip51
+\c@subfigure=\count129
+\c@lofdepth=\count130
+\c@subtable=\count131
+\c@lotdepth=\count132
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip52
+\subfig@bottom=\skip53
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\calrsfs\calrsfs.sty"
+\symrsfscript=\mathgroup6
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\bbm\bbm.sty"
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\yhmath\yhmath.sty"
+Package: yhmath 
+\symyhlargesymbols=\mathgroup7
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 13.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 14.
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\harpoon\harpoon.sty"
+Package: harpoon 1994/11/02 Harpoon drawing package by Tobias Kuipers
+\argwd=\skip54
+\arght=\skip55
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\mathabx\mathabx.sty"
+Package: mathabx 2003/07/29 v0.0 Non-standard LaTeX package mathabx
+\symmatha=\mathgroup8
+\symmathb=\mathgroup9
+\symmathx=\mathgroup10
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\mathabx\mathabx.dcl"
+LaTeX Font Info:    Redeclaring math symbol \cdotp on input line 25.
+LaTeX Font Info:    Redeclaring math symbol \times on input line 33.
+LaTeX Font Info:    Redeclaring math symbol \div on input line 34.
+LaTeX Font Info:    Redeclaring math symbol \cdot on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \circ on input line 36.
+LaTeX Font Info:    Redeclaring math symbol \ast on input line 38.
+LaTeX Font Info:    Redeclaring math symbol \pm on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \mp on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \ltimes on input line 43.
+LaTeX Font Info:    Redeclaring math symbol \rtimes on input line 44.
+LaTeX Font Info:    Redeclaring math symbol \diamond on input line 45.
+LaTeX Font Info:    Redeclaring math symbol \bullet on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \star on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \amalg on input line 51.
+LaTeX Font Info:    Redeclaring math symbol \dotplus on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \square on input line 63.
+LaTeX Font Info:    Redeclaring math symbol \divideontimes on input line 71.
+LaTeX Font Info:    Redeclaring math symbol \bigstar on input line 75.
+LaTeX Font Info:    Redeclaring math symbol \equiv on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \sim on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \approx on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \simeq on input line 86.
+LaTeX Font Info:    Redeclaring math symbol \asymp on input line 89.
+LaTeX Font Info:    Redeclaring math symbol \nsim on input line 97.
+LaTeX Font Info:    Redeclaring math symbol \ncong on input line 100.
+LaTeX Font Info:    Redeclaring math symbol \risingdotseq on input line 118.
+LaTeX Font Info:    Redeclaring math symbol \fallingdotseq on input line 119.
+LaTeX Font Info:    Redeclaring math symbol \circeq on input line 125.
+LaTeX Font Info:    Redeclaring math symbol \eqcirc on input line 126.
+LaTeX Font Info:    Redeclaring math symbol \triangleq on input line 127.
+LaTeX Font Info:    Redeclaring math symbol \neg on input line 134.
+LaTeX Font Info:    Redeclaring math symbol \ll on input line 136.
+LaTeX Font Info:    Redeclaring math symbol \gg on input line 137.
+LaTeX Font Info:    Redeclaring math symbol \vdash on input line 139.
+LaTeX Font Info:    Redeclaring math symbol \dashv on input line 140.
+LaTeX Font Info:    Redeclaring math symbol \nvdash on input line 141.
+LaTeX Font Info:    Redeclaring math symbol \vDash on input line 143.
+LaTeX Font Info:    Redeclaring math symbol \nvDash on input line 145.
+LaTeX Font Info:    Redeclaring math symbol \Vdash on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \nVdash on input line 149.
+LaTeX Font Info:    Redeclaring math symbol \flat on input line 158.
+LaTeX Font Info:    Redeclaring math symbol \natural on input line 159.
+LaTeX Font Info:    Redeclaring math symbol \sharp on input line 160.
+LaTeX Font Info:    Redeclaring math symbol \infty on input line 161.
+LaTeX Font Info:    Redeclaring math symbol \propto on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \dagger on input line 163.
+LaTeX Font Info:    Redeclaring math symbol \ddagger on input line 164.
+LaTeX Font Info:    Redeclaring math symbol \between on input line 170.
+LaTeX Font Info:    Redeclaring math symbol \smile on input line 171.
+LaTeX Font Info:    Redeclaring math symbol \frown on input line 172.
+LaTeX Font Info:    Redeclaring math symbol \leftthreetimes on input line 174.
+LaTeX Font Info:    Redeclaring math symbol \rightthreetimes on input line 175.
+LaTeX Font Info:    Redeclaring math symbol \pitchfork on input line 176.
+LaTeX Font Info:    Redeclaring math symbol \nVDash on input line 182.
+LaTeX Font Info:    Redeclaring math symbol \Vvdash on input line 184.
+LaTeX Font Info:    Redeclaring math symbol \therefore on input line 189.
+LaTeX Font Info:    Redeclaring math symbol \because on input line 190.
+LaTeX Font Info:    Redeclaring math accent \ring on input line 191.
+LaTeX Font Info:    Redeclaring math symbol \measuredangle on input line 202.
+LaTeX Font Info:    Redeclaring math symbol \sphericalangle on input line 203.
+LaTeX Font Info:    Redeclaring math symbol \setminus on input line 218.
+LaTeX Font Info:    Redeclaring math symbol \mid on input line 222.
+LaTeX Font Info:    Redeclaring math symbol \forall on input line 279.
+LaTeX Font Info:    Redeclaring math symbol \complement on input line 280.
+LaTeX Font Info:    Redeclaring math symbol \partial on input line 281.
+LaTeX Font Info:    Redeclaring math symbol \exists on input line 284.
+LaTeX Font Info:    Redeclaring math symbol \nexists on input line 285.
+LaTeX Font Info:    Redeclaring math symbol \Finv on input line 286.
+LaTeX Font Info:    Redeclaring math symbol \Game on input line 287.
+LaTeX Font Info:    Redeclaring math symbol \emptyset on input line 288.
+LaTeX Font Info:    Redeclaring math symbol \top on input line 290.
+LaTeX Font Info:    Redeclaring math symbol \bot on input line 291.
+LaTeX Font Info:    Redeclaring math symbol \perp on input line 292.
+LaTeX Font Info:    Redeclaring math symbol \curlywedge on input line 296.
+LaTeX Font Info:    Redeclaring math symbol \curlyvee on input line 297.
+LaTeX Font Info:    Redeclaring math symbol \in on input line 299.
+LaTeX Font Info:    Redeclaring math symbol \owns on input line 300.
+LaTeX Font Info:    Redeclaring math symbol \cap on input line 312.
+LaTeX Font Info:    Redeclaring math symbol \cup on input line 313.
+LaTeX Font Info:    Redeclaring math symbol \uplus on input line 314.
+LaTeX Font Info:    Redeclaring math symbol \sqcap on input line 315.
+LaTeX Font Info:    Redeclaring math symbol \sqcup on input line 316.
+LaTeX Font Info:    Redeclaring math symbol \wedge on input line 318.
+LaTeX Font Info:    Redeclaring math symbol \vee on input line 320.
+LaTeX Font Info:    Redeclaring math symbol \barwedge on input line 327.
+LaTeX Font Info:    Redeclaring math symbol \veebar on input line 328.
+LaTeX Font Info:    Redeclaring math symbol \doublebarwedge on input line 329.
+LaTeX Font Info:    Redeclaring math symbol \doublecap on input line 331.
+LaTeX Font Info:    Redeclaring math symbol \doublecup on input line 333.
+LaTeX Font Info:    Redeclaring math symbol \subset on input line 344.
+LaTeX Font Info:    Redeclaring math symbol \supset on input line 345.
+LaTeX Font Info:    Redeclaring math symbol \subseteq on input line 348.
+LaTeX Font Info:    Redeclaring math symbol \supseteq on input line 349.
+LaTeX Font Info:    Redeclaring math symbol \nsubseteq on input line 350.
+LaTeX Font Info:    Redeclaring math symbol \nsupseteq on input line 351.
+LaTeX Font Info:    Redeclaring math symbol \subsetneq on input line 352.
+LaTeX Font Info:    Redeclaring math symbol \supsetneq on input line 353.
+LaTeX Font Info:    Redeclaring math symbol \varsubsetneq on input line 354.
+LaTeX Font Info:    Redeclaring math symbol \varsupsetneq on input line 355.
+LaTeX Font Info:    Redeclaring math symbol \subseteqq on input line 357.
+LaTeX Font Info:    Redeclaring math symbol \supseteqq on input line 358.
+LaTeX Font Info:    Redeclaring math symbol \nsubseteqq on input line 359.
+LaTeX Font Info:    Redeclaring math symbol \nsupseteqq on input line 360.
+LaTeX Font Info:    Redeclaring math symbol \subsetneqq on input line 361.
+LaTeX Font Info:    Redeclaring math symbol \supsetneqq on input line 362.
+LaTeX Font Info:    Redeclaring math symbol \varsubsetneqq on input line 363.
+LaTeX Font Info:    Redeclaring math symbol \varsupsetneqq on input line 364.
+LaTeX Font Info:    Redeclaring math symbol \Subset on input line 366.
+LaTeX Font Info:    Redeclaring math symbol \Supset on input line 367.
+LaTeX Font Info:    Redeclaring math symbol \sqsubseteq on input line 380.
+LaTeX Font Info:    Redeclaring math symbol \sqsupseteq on input line 381.
+LaTeX Font Info:    Redeclaring math symbol \triangleleft on input line 407.
+LaTeX Font Info:    Redeclaring math symbol \vartriangleleft on input line 408.
+LaTeX Font Info:    Redeclaring math symbol \triangleright on input line 409.
+LaTeX Font Info:    Redeclaring math symbol \vartriangleright on input line 410.
+LaTeX Font Info:    Redeclaring math symbol \ntriangleleft on input line 411.
+LaTeX Font Info:    Redeclaring math symbol \ntriangleright on input line 412.
+LaTeX Font Info:    Redeclaring math symbol \trianglelefteq on input line 413.
+LaTeX Font Info:    Redeclaring math symbol \trianglerighteq on input line 414.
+LaTeX Font Info:    Redeclaring math symbol \ntrianglelefteq on input line 415.
+LaTeX Font Info:    Redeclaring math symbol \ntrianglerighteq on input line 416.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangledown on input line 427.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangleleft on input line 428.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangleright on input line 429.
+LaTeX Font Info:    Redeclaring math symbol \nless on input line 437.
+LaTeX Font Info:    Redeclaring math symbol \ngtr on input line 438.
+LaTeX Font Info:    Redeclaring math symbol \leq on input line 439.
+LaTeX Font Info:    Redeclaring math symbol \geq on input line 441.
+LaTeX Font Info:    Redeclaring math symbol \nleq on input line 443.
+LaTeX Font Info:    Redeclaring math symbol \ngeq on input line 445.
+LaTeX Font Info:    Redeclaring math symbol \lneq on input line 451.
+LaTeX Font Info:    Redeclaring math symbol \gneq on input line 452.
+LaTeX Font Info:    Redeclaring math symbol \leqq on input line 453.
+LaTeX Font Info:    Redeclaring math symbol \geqq on input line 454.
+LaTeX Font Info:    Redeclaring math symbol \nleqq on input line 455.
+LaTeX Font Info:    Redeclaring math symbol \ngeqq on input line 456.
+LaTeX Font Info:    Redeclaring math symbol \lneqq on input line 457.
+LaTeX Font Info:    Redeclaring math symbol \gneqq on input line 458.
+LaTeX Font Info:    Redeclaring math symbol \lvertneqq on input line 459.
+LaTeX Font Info:    Redeclaring math symbol \gvertneqq on input line 460.
+LaTeX Font Info:    Redeclaring math symbol \eqslantless on input line 461.
+LaTeX Font Info:    Redeclaring math symbol \eqslantgtr on input line 462.
+LaTeX Font Info:    Redeclaring math symbol \lessgtr on input line 465.
+LaTeX Font Info:    Redeclaring math symbol \gtrless on input line 466.
+LaTeX Font Info:    Redeclaring math symbol \lesseqgtr on input line 467.
+LaTeX Font Info:    Redeclaring math symbol \gtreqless on input line 468.
+LaTeX Font Info:    Redeclaring math symbol \lesseqqgtr on input line 469.
+LaTeX Font Info:    Redeclaring math symbol \gtreqqless on input line 470.
+LaTeX Font Info:    Redeclaring math symbol \lesssim on input line 472.
+LaTeX Font Info:    Redeclaring math symbol \gtrsim on input line 473.
+LaTeX Font Info:    Redeclaring math symbol \lnsim on input line 476.
+LaTeX Font Info:    Redeclaring math symbol \gnsim on input line 477.
+LaTeX Font Info:    Redeclaring math symbol \lessapprox on input line 478.
+LaTeX Font Info:    Redeclaring math symbol \gtrapprox on input line 479.
+LaTeX Font Info:    Redeclaring math symbol \lnapprox on input line 482.
+LaTeX Font Info:    Redeclaring math symbol \gnapprox on input line 483.
+LaTeX Font Info:    Redeclaring math symbol \lessdot on input line 485.
+LaTeX Font Info:    Redeclaring math symbol \gtrdot on input line 486.
+LaTeX Font Info:    Redeclaring math symbol \lll on input line 488.
+LaTeX Font Info:    Redeclaring math symbol \ggg on input line 489.
+LaTeX Font Info:    Redeclaring math symbol \prec on input line 498.
+LaTeX Font Info:    Redeclaring math symbol \succ on input line 499.
+LaTeX Font Info:    Redeclaring math symbol \nprec on input line 500.
+LaTeX Font Info:    Redeclaring math symbol \nsucc on input line 501.
+LaTeX Font Info:    Redeclaring math symbol \preccurlyeq on input line 502.
+LaTeX Font Info:    Redeclaring math symbol \succcurlyeq on input line 503.
+LaTeX Font Info:    Redeclaring math symbol \preceq on input line 506.
+LaTeX Font Info:    Redeclaring math symbol \succeq on input line 507.
+LaTeX Font Info:    Redeclaring math symbol \npreceq on input line 508.
+LaTeX Font Info:    Redeclaring math symbol \nsucceq on input line 509.
+LaTeX Font Info:    Redeclaring math symbol \curlyeqprec on input line 512.
+LaTeX Font Info:    Redeclaring math symbol \curlyeqsucc on input line 513.
+LaTeX Font Info:    Redeclaring math symbol \precsim on input line 517.
+LaTeX Font Info:    Redeclaring math symbol \succsim on input line 518.
+LaTeX Font Info:    Redeclaring math symbol \precnsim on input line 521.
+LaTeX Font Info:    Redeclaring math symbol \succnsim on input line 522.
+LaTeX Font Info:    Redeclaring math symbol \precapprox on input line 523.
+LaTeX Font Info:    Redeclaring math symbol \succapprox on input line 524.
+LaTeX Font Info:    Redeclaring math symbol \precnapprox on input line 527.
+LaTeX Font Info:    Redeclaring math symbol \succnapprox on input line 528.
+LaTeX Font Info:    Redeclaring math symbol \leftarrow on input line 540.
+LaTeX Font Info:    Redeclaring math symbol \rightarrow on input line 542.
+LaTeX Font Info:    Redeclaring math symbol \nwarrow on input line 546.
+LaTeX Font Info:    Redeclaring math symbol \nearrow on input line 547.
+LaTeX Font Info:    Redeclaring math symbol \swarrow on input line 548.
+LaTeX Font Info:    Redeclaring math symbol \searrow on input line 549.
+LaTeX Font Info:    Redeclaring math symbol \leftrightarrow on input line 550.
+LaTeX Font Info:    Redeclaring math symbol \nleftarrow on input line 552.
+LaTeX Font Info:    Redeclaring math symbol \nrightarrow on input line 553.
+LaTeX Font Info:    Redeclaring math symbol \nleftrightarrow on input line 554.
+LaTeX Font Info:    Redeclaring math symbol \mapstochar on input line 557.
+LaTeX Font Info:    Redeclaring math symbol \leftharpoonup on input line 560.
+LaTeX Font Info:    Redeclaring math symbol \rightharpoonup on input line 561.
+LaTeX Font Info:    Redeclaring math symbol \leftharpoondown on input line 562.
+LaTeX Font Info:    Redeclaring math symbol \rightharpoondown on input line 563.
+LaTeX Font Info:    Redeclaring math symbol \upharpoonleft on input line 564.
+LaTeX Font Info:    Redeclaring math symbol \downharpoonleft on input line 565.
+LaTeX Font Info:    Redeclaring math symbol \upharpoonright on input line 566.
+LaTeX Font Info:    Redeclaring math symbol \restriction on input line 567.
+LaTeX Font Info:    Redeclaring math symbol \downharpoonright on input line 568.
+LaTeX Font Info:    Redeclaring math symbol \leftrightharpoons on input line 569.
+LaTeX Font Info:    Redeclaring math symbol \Leftarrow on input line 575.
+LaTeX Font Info:    Redeclaring math symbol \Rightarrow on input line 576.
+LaTeX Font Info:    Redeclaring math symbol \Leftrightarrow on input line 579.
+LaTeX Font Info:    Redeclaring math symbol \nLeftarrow on input line 581.
+LaTeX Font Info:    Redeclaring math symbol \nRightarrow on input line 582.
+LaTeX Font Info:    Redeclaring math symbol \nLeftrightarrow on input line 583.
+LaTeX Font Info:    Redeclaring math symbol \leftleftarrows on input line 593.
+LaTeX Font Info:    Redeclaring math symbol \rightrightarrows on input line 594.
+LaTeX Font Info:    Redeclaring math symbol \upuparrows on input line 595.
+LaTeX Font Info:    Redeclaring math symbol \downdownarrows on input line 596.
+LaTeX Font Info:    Redeclaring math symbol \leftrightarrows on input line 597.
+LaTeX Font Info:    Redeclaring math symbol \rightleftarrows on input line 598.
+LaTeX Font Info:    Redeclaring math symbol \rhook on input line 612.
+LaTeX Font Info:    Redeclaring math symbol \lhook on input line 613.
+LaTeX Font Info:    Redeclaring math symbol \diagup on input line 614.
+LaTeX Font Info:    Redeclaring math symbol \diagdown on input line 615.
+LaTeX Font Info:    Redeclaring math symbol \Lsh on input line 617.
+LaTeX Font Info:    Redeclaring math symbol \Rsh on input line 619.
+LaTeX Font Info:    Redeclaring math symbol \looparrowleft on input line 624.
+LaTeX Font Info:    Redeclaring math symbol \looparrowright on input line 626.
+LaTeX Font Info:    Redeclaring math symbol \curvearrowleft on input line 631.
+LaTeX Font Info:    Redeclaring math symbol \curvearrowright on input line 633.
+LaTeX Font Info:    Redeclaring math symbol \circlearrowleft on input line 641.
+LaTeX Font Info:    Redeclaring math symbol \circlearrowright on input line 642.
+LaTeX Font Info:    Redeclaring math symbol \rightsquigarrow on input line 645.
+LaTeX Font Info:    Redeclaring math symbol \leftrightsquigarrow on input line 646.
+LaTeX Font Info:    Redeclaring math symbol \oplus on input line 658.
+LaTeX Font Info:    Redeclaring math symbol \ominus on input line 659.
+LaTeX Font Info:    Redeclaring math symbol \otimes on input line 661.
+LaTeX Font Info:    Redeclaring math symbol \odot on input line 663.
+LaTeX Font Info:    Redeclaring math symbol \oslash on input line 675.
+LaTeX Font Info:    Redeclaring math symbol \boxplus on input line 683.
+LaTeX Font Info:    Redeclaring math symbol \boxminus on input line 684.
+LaTeX Font Info:    Redeclaring math symbol \boxtimes on input line 686.
+LaTeX Font Info:    Redeclaring math symbol \boxdot on input line 688.
+\mayacnter=\count133
+\mayacnta=\count134
+\mayacntb=\count135
+\mayacntc=\count136
+\mayawidth=\dimen140
+LaTeX Font Info:    Redeclaring math symbol \intop on input line 753.
+LaTeX Font Info:    Redeclaring math symbol \ointop on input line 760.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 842.
+LaTeX Info: Redefining \{ on input line 846.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 848.
+LaTeX Info: Redefining \} on input line 852.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 858.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 859.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 863.
+LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 865.
+LaTeX Font Info:    Redeclaring math delimiter \uparrow on input line 868.
+LaTeX Font Info:    Redeclaring math delimiter \downarrow on input line 869.
+LaTeX Font Info:    Redeclaring math delimiter \updownarrow on input line 870.
+LaTeX Font Info:    Redeclaring math delimiter \Uparrow on input line 871.
+LaTeX Font Info:    Redeclaring math delimiter \Downarrow on input line 872.
+LaTeX Font Info:    Redeclaring math delimiter \Updownarrow on input line 873.
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 880.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 881.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 882.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 883.
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 884.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 885.
+LaTeX Font Info:    Redeclaring math symbol \braceld on input line 903.
+LaTeX Font Info:    Redeclaring math symbol \bracerd on input line 905.
+LaTeX Font Info:    Redeclaring math symbol \bracelu on input line 907.
+LaTeX Font Info:    Redeclaring math symbol \braceru on input line 909.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 944.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 946.
+LaTeX Font Info:    Redeclaring math accent \wideparen on input line 949.
+))
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip56
+\LTright=\skip57
+\LTpre=\skip58
+\LTpost=\skip59
+\LTchunksize=\count137
+\LTcapwidth=\dimen141
+\LT@head=\box56
+\LT@firsthead=\box57
+\LT@foot=\box58
+\LT@lastfoot=\box59
+\LT@cols=\count138
+\LT@rows=\count139
+\c@LT@tables=\count140
+\c@LT@chunks=\count141
+\LT@p@ftn=\toks25
+) (8-BroniatowskiStummer.aux)
+\openout1 = `8-BroniatowskiStummer.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count142
+\scratchdimen=\dimen142
+\scratchbox=\box60
+\nofMPsegments=\count143
+\nofMParguments=\count144
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count145
+\MPscratchDim=\dimen143
+\MPnumerator=\count146
+\makeMPintoPDFobject=\count147
+\everyMPtoPDFconversion=\toks27
+) ("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO)
+
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 94.
+
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 94.
+
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OMS+rsfs on input line 94.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\calrsfs\omsrsfs.fd")
+LaTeX Font Info:    Try loading font information for OMX+yhex on input line 94.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\yhmath\omxyhex.fd"
+File: OMXyhex.fd 
+File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
+)
+LaTeX Font Info:    External font `yhcmex10' loaded for size
+(Font)              <10> on input line 94.
+LaTeX Font Info:    External font `yhcmex10' loaded for size
+(Font)              <7> on input line 94.
+LaTeX Font Info:    External font `yhcmex10' loaded for size
+(Font)              <5> on input line 94.
+LaTeX Font Info:    External font `yhcmex10' loaded for size
+(Font)              <9> on input line 94.
+LaTeX Font Info:    External font `yhcmex10' loaded for size
+(Font)              <6> on input line 94.
+[1
+
+{C:/Users/Frank Nielsen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3]
+Overfull \hbox (3.30717pt too wide) detected at line 395
+\OML/cmm/m/it/10 D[]\U/matha/m/n/10 p\OML/cmm/m/it/10 P; Q\U/matha/m/n/10 q \OT1/cmr/m/n/10 :\U/matha/m/n/10  [] \OML/c
+mm/m/it/10 d[]\U/matha/m/n/10 p\OML/cmm/m/it/10 p\U/matha/m/n/10 p\OML/cmm/m/it/10 x\U/matha/m/n/10 q\OML/cmm/m/it/10 ; 
+q\U/matha/m/n/10 p\OML/cmm/m/it/10 x\U/matha/m/n/10 qq  \OML/cmm/m/it/10 \U/matha/m/n/10 p\OML/cmm/m/it/10 x\U/matha/m
+/n/10 q  []  \OML/cmm/m/it/10 D[]\U/matha/m/n/10 p\OML/cmm/m/it/10 P; Q\U/matha/m/n/10 q \OT1/cmr/m/n/10 :\U/matha/m/n/1
+0  [] \OML/cmm/m/it/10 d[]\U/matha/m/n/10 p\OML/cmm/m/it/10 p\U/matha/m/n/10 p\OML/cmm/m/it/10 x\U/matha/m/n/10 q\OML/c
+mm/m/it/10 ; q\U/matha/m/n/10 p\OML/cmm/m/it/10 x\U/matha/m/n/10 qq \OT1/cmr/m/n/10 d\OML/cmm/m/it/10 \U/matha/m/n/10 p
+\OML/cmm/m/it/10 x\U/matha/m/n/10 q
+ []
+
+LaTeX Font Info:    Try loading font information for U+euf on input line 447.
+("C:\Users\Frank Nielsen\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [4]
+Overfull \hbox (3.20296pt too wide) in paragraph at lines 563--602
+\OT1/cmr/m/n/10 wise di-ver-gences $\OML/cmm/m/it/10 !  \U/matha/m/n/10 Ñ  \OML/cmm/m/it/10 d[]\U/matha/m/n/10 p\OML/cmm
+/m/it/10 p\U/matha/m/n/10 p\OML/cmm/m/it/10 x; !\U/matha/m/n/10 q\OML/cmm/m/it/10 ; q\U/matha/m/n/10 p\OML/cmm/m/it/10 x
+; !\U/matha/m/n/10 qq\OML/cmm/m/it/10 ;  !  \U/matha/m/n/10 Ñ  \OML/cmm/m/it/10 d[]\U/matha/m/n/10 p\OML/cmm/m/it/10 p\U
+/matha/m/n/10 p\OML/cmm/m/it/10 x; !\U/matha/m/n/10 q\OML/cmm/m/it/10 ; q\U/matha/m/n/10 p\OML/cmm/m/it/10 x; !\U/matha/
+m/n/10 qq$
+ []
+
+
+Overfull \hbox (2.50615pt too wide) in paragraph at lines 563--602
+\OT1/cmr/m/n/10 resp. $\OML/cmm/m/it/10 !   \U/matha/m/n/10 Ñ   \OML/cmm/m/it/10 D[] \U/matha/m/n/10 p\OML/cmm/m/it/10 P
+\U/matha/m/n/10 p\OML/cmm/m/it/10 !\U/matha/m/n/10 q\OML/cmm/m/it/10 ; Q\U/matha/m/n/10 p\OML/cmm/m/it/10 !\U/matha/m/n/
+10 qq  \OT1/cmr/m/n/10 :\U/matha/m/n/10   [][]  \OML/cmm/m/it/10 d[] \U/matha/m/n/10 p\OML/cmm/m/it/10 p\U/matha/m/n/10
+ p\OML/cmm/m/it/10 x; !\U/matha/m/n/10 q\OML/cmm/m/it/10 ; q\U/matha/m/n/10 p\OML/cmm/m/it/10 x; !\U/matha/m/n/10 qq \OT
+1/cmr/m/n/10 d\OML/cmm/m/it/10 \U/matha/m/n/10 p\OML/cmm/m/it/10 x\U/matha/m/n/10 q$\OT1/cmr/m/n/10 .
+ []
+
+[5]
+Overfull \hbox (4.72224pt too wide) in paragraph at lines 604--650
+[]\U/matha/m/n/10 rt\OML/cmm/m/it/10 ! \U/matha/m/n/10 P \OML/cmm/m/it/10 
+  \OT1/cmr/m/n/10 :  \OML/cmm/m/it/10 Y\U/matha/m/n/10 p\OML/cmm/m/it/10 !\U/matha/m/n/10 q P r\OML/cmm/m/it/10 x; x \U/
+matha/m/n/10   \OT1/cmr/m/n/10 d\OML/cmm/m/it/10 x\U/matha/m/n/10 ru$\OT1/cmr/m/n/10 , then $\OML/cmm/m/it/10 d[]\U/math
+a/m/n/10 p\OML/cmm/m/it/10 p\U/matha/m/n/10 p\OML/cmm/m/it/10 x\U/matha/m/n/10 q\OML/cmm/m/it/10 ; q\U/matha/m/n/10 p\OM
+L/cmm/m/it/10 x\U/matha/m/n/10 qq$\OT1/cmr/m/n/10 , $\OML/cmm/m/it/10 d[]\U/matha/m/n/10 p\OML/cmm/m/it/10 p\U/matha/m/n
+/10 p\OML/cmm/m/it/10 x\U/matha/m/n/10 q\OML/cmm/m/it/10 ; q\U/matha/m/n/10 p\OML/cmm/m/it/10 x\U/matha/m/n/10 qq$
+ []
+
+[6] [7]
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 815.
+
+
+LaTeX Font Warning: Command \Large invalid in math mode on input line 824.
+
+[8]
+Overfull \hbox (16.059pt too wide) in alignment at lines 952--1029
+[] [] 
+ []
+
+LaTeX Font Info:    Try loading font information for U+bbm on input line 1033.
+("C:\Program Files\MiKTeX 2.9\tex\latex\bbm\ubbm.fd"
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+)
+Overfull \hbox (16.059pt too wide) in alignment at lines 1029--1118
+[] [] 
+ []
+
+
+Overfull \hbox (16.059pt too wide) in alignment at lines 1118--1199
+[] [] 
+ []
+
+[9]
+Overfull \hbox (16.059pt too wide) in alignment at lines 1199--1285
+[] [] 
+ []
+
+
+Overfull \hbox (16.059pt too wide) in alignment at lines 1285--1289
+[] [] 
+ []
+
+[10]
+Overfull \hbox (2.6892pt too wide) in alignment at lines 1388--1402
+ [][][] []
+ []
+
+[11]
+Overfull \hbox (0.96095pt too wide) in alignment at lines 1547--1559
+ [][][] []
+ []
+
+
+Overfull \hbox (0.78679pt too wide) in paragraph at lines 1563--1583
+\OML/cmm/m/it/10 D[]\U/matha/m/n/10 p\OML/cmm/m/it/10 P; Q\U/matha/m/n/10 q$ \OT1/cmr/m/n/10 as $[][] [][][]\OML/cmm/m/i
+t/10 ; [][]\U/bbm/m/n/10 m[]\U/matha/m/n/10 p\OML/cmm/m/it/10 x\U/matha/m/n/10 q \OT1/cmr/m/n/10 d\OML/cmm/m/it/10 \U/m
+atha/m/n/10 p\OML/cmm/m/it/10 x\U/matha/m/n/10 q$ \OT1/cmr/m/n/10 at first glance (see
+ []
+
+[12] [13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 1829--1834
+
+ []
+
+
+Overfull \hbox (25.03563pt too wide) in alignment at lines 1834--1841
+ [][][] []
+ []
+
+
+Overfull \hbox (8.03325pt too wide) in paragraph at lines 1954--1965
+\OML/cmm/m/it/10  \U/matha/m/n/10  p\OML/cmm/m/it/10 ; M[]; M[]; \U/bbm/m/n/10 M[]\OML/cmm/m/it/10 ; \U/matha/m/n/10
+ q$ \OT1/cmr/m/n/10 by deal-ing with the first com-po-nent. For this, let $\OML/cmm/m/it/10 []\U/matha/m/n/10 ps\OML/cm
+m/m/it/10 a; b\U/matha/m/n/10 rq$
+ []
+
+[15]
+Overfull \hbox (5.53271pt too wide) in alignment at lines 1968--1982
+ [][][] []
+ []
+
+
+Overfull \hbox (6.68246pt too wide) in paragraph at lines 2009--2017
+\OT1/cmr/m/n/10 Formally, by defin-ing the in-te-gral func-tional $\OML/cmm/m/it/10 g[]\U/matha/m/n/10 p\OML/cmm/m/it/10
+ \U/matha/m/n/10 q \OT1/cmr/m/n/10 :\U/matha/m/n/10  [][] \OML/cmm/m/it/10 \U/matha/m/n/10 p\OML/cmm/m/it/10 \U/math
+a/m/n/10 p\OML/cmm/m/it/10 x\U/matha/m/n/10 qq  \U/bbm/m/n/10 m[]\U/matha/m/n/10 p\OML/cmm/m/it/10 x\U/matha/m/n/10 q \
+OT1/cmr/m/n/10 d\OML/cmm/m/it/10 \U/matha/m/n/10 p\OML/cmm/m/it/10 x\U/matha/m/n/10 q$
+ []
+
+[16]
+Overfull \hbox (10.31293pt too wide) in alignment at lines 2295--2327
+ [][][] []
+ []
+
+
+Overfull \hbox (4.91151pt too wide) in alignment at lines 2336--2417
+ [][][] []
+ []
+
+[17] [18]
+Overfull \hbox (1.0354pt too wide) in alignment at lines 2677--2785
+ [][][] []
+ []
+
+[19]
+Overfull \hbox (8.5782pt too wide) in paragraph at lines 2870--2879
+\OT1/cmr/bx/n/10 3.3.1  []$[]$, $[]$ for some (meas.)
+ []
+
+[20]
+Overfull \hbox (0.4634pt too wide) in alignment at lines 2921--2935
+ [][][] []
+ []
+
+[21]
+Overfull \hbox (1.48483pt too wide) in alignment at lines 3117--3253
+ [][][] []
+ []
+
+[22] [23]
+Overfull \hbox (10.49486pt too wide) in paragraph at lines 3531--3539
+\OT1/cmr/bx/n/10 3.3.1.2  $[]$, $[]$ for some (meas.)
+ []
+
+[24] [25]
+Overfull \hbox (4.52753pt too wide) in alignment at lines 3798--3835
+ [][][] []
+ []
+
+[26]
+Overfull \hbox (7.76pt too wide) in paragraph at lines 4075--4081
+\OT1/cmr/m/n/10 and hence from [] to-gether with $\OML/cmm/m/it/10 []\U/matha/m/n/10 p\OT1/cmr/m/n/10 1\U/matha/m/n/10 
+q  \OT1/cmr/m/n/10 0$, $\OML/cmm/m/it/10 []\U/matha/m/n/10 p\OT1/cmr/m/n/10 0\U/matha/m/n/10 q  \OT1/cmr/m/n/10 1$ (c
+f. []), $\OML/cmm/m/it/10 []\U/matha/m/n/10 p\OT1/cmr/m/n/10 1\U/matha/m/n/10 q 
+ []
+
+[27]
+Overfull \hbox (27.9767pt too wide) in alignment at lines 4149--4202
+ [][][] []
+ []
+
+
+Overfull \hbox (6.40575pt too wide) in paragraph at lines 4243--4251
+\OT1/cmr/m/n/10 which is called Pear-sons's chisquare di-ver-gence. Un-der the same con-straint $\U/matha/m/n/10 p\U/euf
+/m/n/10 P[] \U/matha/m/n/10 
+ []
+
+
+Overfull \hbox (15.84465pt too wide) in alignment at lines 4254--4280
+ [][][] []
+ []
+
+
+Overfull \hbox (1.18831pt too wide) in alignment at lines 4291--4318
+ [][][] []
+ []
+
+[28]
+Overfull \hbox (10.96384pt too wide) in paragraph at lines 4407--4418
+ \OT1/cmr/bx/n/10 3.3.1.3  []$[]$, $[]$
+ []
+
+[29] [30] [31]
+Overfull \hbox (4.1779pt too wide) in alignment at lines 4959--5047
+ [][][] []
+ []
+
+[32]
+Overfull \hbox (0.12956pt too wide) in alignment at lines 5116--5143
+ [][][] []
+ []
+
+
+Overfull \hbox (3.28871pt too wide) in alignment at lines 5162--5178
+ [][][] []
+ []
+
+[33]
+Overfull \hbox (12.0213pt too wide) in alignment at lines 5252--5291
+ [][][] []
+ []
+
+[34] [35] [36]
+Underfull \hbox (badness 10000) in paragraph at lines 5733--5740
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5741--5744
+
+ []
+
+[37]
+Overfull \hbox (9.02115pt too wide) in alignment at lines 5794--5802
+ [][][] []
+ []
+
+
+Overfull \hbox (10.51416pt too wide) in paragraph at lines 5845--5857
+\OT1/cmr/m/n/10 can e.g. take di-rectly the (fam-ily of) en-com-pass-ing di-ver-gences $\OML/cmm/m/it/10 D[]\U/matha/m/n
+/10 p\U/bbm/m/n/10 P\OML/cmm/m/it/10 ; \U/bbm/m/n/10 Q\U/matha/m/n/10 q$
+ []
+
+[38]
+Overfull \hbox (3.70683pt too wide) in alignment at lines 5966--5997
+ [][][] []
+ []
+
+[39] [40] [41] [42]
+Overfull \hbox (5.68663pt too wide) in alignment at lines 6476--6490
+ [][][] []
+ []
+
+
+Overfull \hbox (2.62556pt too wide) in alignment at lines 6536--6547
+ [][][] []
+ []
+
+[43]
+Overfull \hbox (8.42526pt too wide) in alignment at lines 6741--6757
+ [][][] []
+ []
+
+[44]
+Overfull \hbox (5.735pt too wide) in alignment at lines 6768--6789
+ [][][] []
+ []
+
+[45]
+Overfull \hbox (3.61743pt too wide) in alignment at lines 7017--7034
+ [][][] []
+ []
+
+[46]
+Overfull \hbox (10.41158pt too wide) in alignment at lines 7112--7156
+ [][][] []
+ []
+
+Missing character: There is no ´ in font cmr10!
+Missing character: There is no ´ in font cmr10!
+
+Overfull \hbox (4.91576pt too wide) in paragraph at lines 7201--7251
+\OT1/cmr/m/n/10 0  \U/matha/m/n/10   [][] [][] \OML/cmm/m/it/10 D[]\U/matha/m/n/10 p[][]\OML/cmm/m/it/10 ; [][]\U/matha
+/m/n/10 q$\OT1/cmr/m/n/10 , $\OML/cmm/m/it/10 []  \U/matha/m/n/10   [][] [][] \OML/cmm/m/it/10 D[]\U/matha/m/n/10 p[][
+]\OML/cmm/m/it/10 ; [][]\U/matha/m/n/10 q$\OT1/cmr/m/n/10 ,
+ []
+
+
+Overfull \hbox (26.51653pt too wide) in paragraph at lines 7201--7251
+\OT1/cmr/m/n/10 and in case of $[][]  \OML/cmm/m/it/10 D[]  \U/matha/m/n/10 p[][]\OML/cmm/m/it/10 ; [][]\U/matha/m/n/10 
+q     8$ \OT1/cmr/m/n/10 also $0  \U/matha/m/n/10   [][] [][]  \OML/cmm/m/it/10 D[]  \U/matha/m/n/10 p[][]\OML/cmm/m/it
+/10 ; [][]\U/matha/m/n/10 q$\OT1/cmr/m/n/10 ,
+ []
+
+[47] [48] [49]
+Overfull \hbox (15.83783pt too wide) in alignment at lines 7549--7570
+ [][][] []
+ []
+
+
+Overfull \hbox (2.481pt too wide) in alignment at lines 7621--7632
+ [][][] []
+ []
+
+[50] [51]
+Overfull \hbox (6.34978pt too wide) in alignment at lines 7816--7847
+ [][][] []
+ []
+
+
+Overfull \hbox (21.96579pt too wide) in alignment at lines 7858--7869
+ [][][] []
+ []
+
+Missing character: There is no – in font cmr9!
+[52]
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+
+Underfull \hbox (badness 1983) in paragraph at lines 8017--8020
+[]\OT1/cmr/m/n/9 Cliff, O.M., Prokopenko, M., Fitch, R.: An in-for-ma-tion cri-te-rion for in-
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 8017--8020
+\OT1/cmr/m/n/9 fer-ring cou-pling in dis-tributed dy-nam-i-cal sys-tems. Front. Robot. AI 3(71).
+ []
+
+[53]
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+ [54]
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+ [55]
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+Missing character: There is no – in font cmr9!
+ [56]
+Missing character: There is no – in font cmr9!
+ [57] (8-BroniatowskiStummer.aux) ) 
+Here is how much of TeX's memory you used:
+ 3964 strings out of 493323
+ 53530 string characters out of 3126541
+ 141327 words of memory out of 3000000
+ 7370 multiletter control sequences out of 15000+200000
+ 25268 words of font info for 94 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 39i,14n,33p,410b,304s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Frank Nielsen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi600\b
+bm6.pk> <C:\Users\Frank Nielsen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\yhmath\dpi600\yrcmex10.pk> <C:\Users\Fra
+nk Nielsen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi300\mathx10.pk> <C:\Users\Frank Nielsen\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi600\bbmbx10.pk> <C:\Users\Frank Nielsen\AppData\Local\MiKTeX\2.9\fonts\pk\l
+jfour\public\mathabx\dpi600\mathb10.pk> <C:\Users\Frank Nielsen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\
+dpi540\mathx10.pk> <C:\Users\Frank Nielsen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi600\matha6.pk> <C:
+\Users\Frank Nielsen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi600\bbm9.pk> <C:\Users\Frank Nielsen\AppData
+\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi600\bbm10.pk> <C:\Users\Frank Nielsen\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\public\bbm\dpi600\bbm5.pk> <C:\Users\Frank Nielsen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi600\bbm
+7.pk> <C:\Users\Frank Nielsen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi600\matha5.pk> <C:\Users\Frank 
+Nielsen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi420\mathx10.pk> <C:\Users\Frank Nielsen\AppData\Local
+\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi600\matha9.pk> <C:\Users\Frank Nielsen\AppData\Local\MiKTeX\2.9\fonts\pk\l
+jfour\public\mathabx\dpi600\mathx10.pk> <C:\Users\Frank Nielsen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\
+dpi600\matha7.pk> <C:\Users\Frank Nielsen\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi600\matha10.pk><C:/
+Users/Frank Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Frank Nielsen/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Frank Nielsen/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/Frank Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Frank Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb><C:/Users/Frank Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Use
+rs/Frank Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Frank Nielsen/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Frank Nielsen/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Frank Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmib10.pfb><C:/Users/Frank Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cme
+xtra/cmmib7.pfb><C:/Users/Frank Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/U
+sers/Frank Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Frank Nielsen/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Frank Nielsen/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Frank Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr9.pfb><C:/Users/Frank Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl
+10.pfb><C:/Users/Frank Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Fra
+nk Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/Frank Nielsen/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/Frank Nielsen/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/Frank Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/euler/eufm7.pfb><C:/Users/Frank Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symb
+ols/msbm10.pfb><C:/Users/Frank Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm5.pfb><
+C:/Users/Frank Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/Frank N
+ielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/Frank Nielsen/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/rsfs/rsfs5.pfb><C:/Users/Frank Nielsen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/rsfs/rsfs7.pfb>
+Output written on 8-BroniatowskiStummer.pdf (57 pages, 712019 bytes).
+PDF statistics:
+ 550 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

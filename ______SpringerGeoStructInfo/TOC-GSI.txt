@@ -1,0 +1,121 @@
+henmi@ism.ac.jp,  matsuzoe@nitech.ac.jp, S.R.Marsland@massey.ac.nz, gchirik1@jhu.edu, ohara@fuee.u-fukui.ac.jp,giovanni.pistone@carloalberto.org, luigi.montrucchio@carloalberto.org,stummer@math.fau.de, anna-lena.kisslinger@fau.de,tkleonardwong@gmail.com,salem.said@u-bordeaux.fr, yannick.berthoumieu@ims-bordeaux.fr,frederic.barbaresco@thalesgroup.com,junz@umich.edu, Jan.Naudts@uantwerpen.be, pmarriott@uwaterloo.ca ,Maroufy, Vahed.Maroufy@uth.tmc.edu 
+
+
+henmi@ism.ac.jp,  matsuzoe@nitech.ac.jp,
+S.R.Marsland@massey.ac.nz,
+gchirik1@jhu.edu, 
+ohara@fuee.u-fukui.ac.jp,
+giovanni.pistone@carloalberto.org,luigi.montrucchio@carloalberto.org,
+stummer@math.fau.de, anna-lena.kisslinger@fau.de,
+tkleonardwong@gmail.com,
+salem.said@u-bordeaux.fr, yannick.berthoumieu@ims-bordeaux.fr,
+frederic.barbaresco@thalesgroup.com,
+junz@umich.edu, Jan.Naudts@uantwerpen.be,
+
+Michel Broniatowski from Sorbonne UPMC Paris VI
+michel.broniatowski@courriel.upmc.fr. 
+
+----
+
+12 contributions  (200 pages)
+
+  241  11+17+50+32+11+40+15+13+52
+
+
+
+11 p -	Generalising Frailty Assumptions in Survival Analysis: a Geometric Approach
+Vahed Maroufy and Paul Marriott	
+ 
+17 p - "Information Geometry of non-parametric exponential models" 
+Luigi Montrucchio and Giovanni Pistone (Collegio Carlo Alberto, Italy)
+ 
+50 p - Warped Riemannian metrics for location-scale models
+Salem Said, Lionel Bombrun, Yannick Berthoumieu
+	
+32 p - Information-Theoretic Matrix Inequalities and Diffusion Processes on Unimodular Lie Groups
+Gregory S. Chirikjian
+
+32 p - Information geometry in portfolio theory 
+Ting-Kam Leonard Wong
+
+11 p - Rho-Tau Embedding of Statistical Models
+Jan Naudts and Jun Zhang
+
+40 p - Jean-Louis Koszul and the elementary structures of Information Geometry
+Barbaresco
+
+
+15 p - Conformal flattening on the probability simplex and its applications to Voronoi partitions and centroids.
+Ohara
+
+13 p -  Statistical Manifolds Admitting Torsion and Partially Flat Spaces
+Masayuki Henmi and Hiroshi Matsuzoe
+
+52 p - Some Universal Insights on Divergences for Statistics, Machine Learning and Artificial Intelligence
+
+----
+
+
+- Statistical manifolds admitting torsion induced from estimating functions
+Prof Henmi + Matsuzoe
+
+- Marsland, WEITZENBOCK SPACE
+
+- Title:  Information Theory and Diffusion Processes on Unimodular Lie Groups
+by Professor Chirikjian
+Abstract:
+
+Unimodular Lie groups admit natural generalizations of many of the core concepts on which classical 
+information-theoretic inequalities are built.  Specifically, they have the properties of shift-invariant integration, 
+an associative convolution operator, well-defined diffusion processes, and concepts of Entropy, Fisher information,
+Gaussian distribution, and Fourier transform. Equipped with these definitions, it is shown which inequalities from
+classical information theory generalize to this setting, and which do not.
+
+
+-Atsumi, survey
+
+Title:
+- A sequential structure of statistical manifolds and Hessian manifolds on deformed exponential families
+by Hiroshi Matsuzoe
+
+A deformed exponential family is a generalization of
+exponential family, and it plays an important role
+in anomalous statistics.
+It is known that a deformed exponential family
+naturally has two kinds of dualistic Hessian structures.
+In a recent study, it is showed that a deformed
+exponential family has a sequential structure of
+statistical manifolds.
+In this paper, we elucidate the relation between
+Hessian structures and the sequential structure
+of statistical manifolds on a deformed exponential family. 
+
+ 
+
+
+- New Data-Set-Size Asymptotics of Scaled Bregman Distances
+Wolfgang Stummer  Anna-Lena Kissilinger2
+30-40 pages
+
+- Information geometry in portfolio theory.
+Leonard Wong
+about 25-30 pages
+
+-  Warped Riemannian metrics for location-scale models (20 pages)
+authors : Salem Said, Lionel Bombrun, Yannick Berthoumieu
+
+- Legendre Structure of Information Geometry based on Covariant Souriau Lie Group Thermodynamics Model
+Frédéric Barbaresco
+
+
+- Statistical models under arbitrary monotone embeddings.
+Authors: Jan Naudts and Jun Zhang
+Abstract:
+The standard model of information geometry combines the Fisher-Rao metric
+with a one-parameter family of connections, which is obtained by modifying the
+conventional logarithmic embedding. In models belonging to a deformed exponential
+family both the exponential and the logarithmic embeddings are modified
+independently. This opens up the possibility to model both the local properties,
+expressed in the metric tensor, and the global properties reflected by the geodesics.
+
+Estimated length: 10 to 15 pages.

@@ -1,0 +1,27 @@
+Dear Contributor,
+(please forward to your co-authors)
+
+Let me first wish you a happy new year! 
+
+The peer-reviewed edited book entiled on "Geometric Structures of Information" has been formally approved by Springer.
+The book shall be published in November 2018 in the same collection as "Matrix Information Geometry", see 
+http://www.springer.com/fr/book/9783642302312
+
+Let me kindly remind you the important dates:
+- March 1st 2018: Submission due
+- 15th June 2018: Review feedback
+- 15th September 2018: Revised draft due
+- 15th October 2018: Acceptance notification
+- 15th November 2018: Camera-ready files due
+- March 1st 2019: Edited book published by Springer.
+
+Please use preferable the latex style package svmult.cls that you can download from
+https://www.springer.com/gp/authors-editors/book-authors-editors/latex-template/1006
+(contributed book)
+
+
+We are looking forward to receiving your contribution.
+
+Best regards, Frank Nielsen.
+
+----

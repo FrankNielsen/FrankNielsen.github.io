@@ -1,0 +1,64 @@
+
+treats devoted examine
+
+We list the following twelve contributed chapters that have been peer-reviewed and revised:
+
+\begin{enumerate}
+
+\item Naudts and Zhang present in their paper entitled ``Rho-Tau Embedding of Statistical Models'' 
+the $(\rho,\tau)$ embedding of statistical models (for any two increasing functions $\rho$ and $\tau$) 
+and discuss about the gauge freedom and the induced geometry.
+
+\item Montrucchio and Pistone studied a class of non-parametric deformed statistical models, its associated statistical divergence and the
+induced geometry in their paper ``A Class of Non-parametric Deformed Exponential
+Statistical Models.''
+
+\item Henmi and Matsuzoe survey and report recent results on statistical manifolds admitting torsion (SMAT) and precontrast functions,
+and show how to get this SMAT structure from an estimating function in their paper entitled ``Statistical Manifolds Admitting Torsion and
+Partially Flat Spaces.''
+
+\item Ohara studies the transformation on the probability simplex from a viewpoint of affine differential geometry 
+and provides some applications in his paper ``Conformal flattening on the probability simplex and its applications to Voronoi partitions and centroids.''
+
+\item Nielsen and Hadjeres introduce a sequence of computationally-friendly information-geometric dualistic manifolds approximating a computationally-untractable statistical manifold in their paper 
+``Monte Carlo Information-Geometric Structures.''
+
+\item Wong in his paper ``Information geometry in portfolio theory'' applies the
+principle of information geometry to financial problems.
+
+\item Maroufy and Marriott describe the use of information geometry for Cox regression in survival analysis in their paper entitled ``Generalising Frailty Assumptions in Survival
+Analysis: a Geometric Approach.''
+
+\item Broniatowski and Stummer present a unifying view of dissimilarities in their detailed paper
+``Some Universal Insights on Divergences for Statistics, Machine Learning and Artificial Intelligence.''
+
+\item Chirikjian studies information theory in interaction with Lie Groups in his paper called
+  ``Information-Theoretic Matrix Inequalities and Diffusion Processes on Unimodular Lie Groups.''
+
+\item Said, Bombrun and Berthoumieu proved that the Rao-Fisher
+information metric of any location-scale model is a warped Riemannian metric provided that the model is invariant
+under the action of some Lie group  in their paper ``Warped Riemannian metrics for location-scale models.''
+
+\item Nielsen and Sun propose to use the Hilbert geometry for modeling the probability simplex and the elliptope of correlation matrices in their paper entitled ``Clustering in Hilbert Geometry
+Two case studies: The Probability Simplex and
+the Correlation Elliptope.''
+
+\item Finally, Barbaresco presents an introduction on Koszul's pionneering work on homogeneous bounded domains 
+that has revealed itself as the elementary structures of information geometry in his paper 
+``Jean-Louis Koszul and the elementary structures of Information Geometry.''
+
+
+\end{enumerate}
+
+
+
+I wish to express my sincere appreciation to our referees listed in alphabetical order:
+
+
+Last but not least, I would like to thank Professor Hiroaki Kitano (President of Sony Computer Science Laboratories, Inc) 
+for his kind support and encouragements.
+
+Frank Nielsen,
+Tokyo, August 2018.
+
+

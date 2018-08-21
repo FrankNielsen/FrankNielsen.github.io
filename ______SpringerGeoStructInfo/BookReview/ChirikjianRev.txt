@@ -1,0 +1,18 @@
+fcp@snu.ac.kr
+rajenbhatia@gmail.com
+frederic.barbaresco@thalesgroup.com
+Xavier.Pennec@inria.fr
+pturaga@asu.edu
+
+
+fcp@snu.ac.kr,rajenbhatia@gmail.com,frederic.barbaresco@thalesgroup.com, (OK) Xavier.Pennec@inria.fr, (OK)  pturaga@asu.edu
+
+
+https://www.lix.polytechnique.fr/~nielsen/GSI2018/4-Chirikjian.pdf
+
+
+Frank C. Park, Seoul National University
+R. Bhatia
+Frédéric Barbaresco
+Xavier Pennec
+Pavan Turaga, Arizona State University

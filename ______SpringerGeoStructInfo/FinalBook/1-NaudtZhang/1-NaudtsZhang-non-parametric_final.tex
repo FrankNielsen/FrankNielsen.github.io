@@ -1,0 +1,889 @@
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for your "contribution" to a contributed volume
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[graybox]{svmult}
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+\usepackage{mathptmx}       % selects Times Roman as basic font
+\usepackage{helvet}         % selects Helvetica as sans-serif font
+\usepackage{courier}        % selects Courier as typewriter font
+\usepackage{type1cm}        % activate if the above 3 fonts are
+                            % not available on your system
+%
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+% see the list of further useful packages
+% in the Reference Guide
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{soul}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\beq}{\begin{eqnarray}}
+\newcommand{\eeq}{\end{eqnarray}}
+\newcommand{\B}{\mbox{B}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Rn}{\mathbb{R}^{n}}
+\newcommand{\Emu}{\mbox{E}_{\mu}}
+\newcommand{\Ep}{\mbox{E}_{p}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\M}{\mathfrak{M}}
+\newcommand{\id}{\mbox{id}}
+
+\newcommand{\Mo}{\mathbb M}
+\newcommand{\Eo}{\mathbb E}
+\newcommand{\Ro}{\mathbb R}
+\newcommand{\Io}{\mathbb I}
+
+\newcommand{\Ddiv}{\mathcal{D}}
+\newcommand{\Dfrechet}{d}
+
+\newcommand{\beginproof}{\par\strut\vskip 0.0cm\noindent{\bf Proof}\par}
+\renewcommand{\endproof}{\par\strut\hfill$\square$\par\vskip 0.2cm}
+
+
+\newcommand{\upd}{{\rm d}}
+
+
+\begin{document}
+
+\title*{Rho-Tau Embedding of Statistical Models} 
+ 
+\author{Jan Naudts and Jun Zhang}
+  \authorrunning{Naudts Zhang}
+\institute{Jan Naudts \at Universiteit Antwerpen, Antwerpen Belgium,
+\email{jan.naudts@uantwerpen.be}
+\and Jun Zhang \at University of Michigan, Ann Arbor, MI U.S.A.,
+\email{junz@umich.edu}
+}
+
+\maketitle  
+
+\abstract{ 
+Two strictly increasing functions $\rho$ and $\tau$ determine
+ the rho-tau embedding of a statistical model.
+The Riemannian metric tensor is derived from the rho-tau divergence.
+It depends only on the product $\rho'\tau'$ of the derivatives
+of $\rho$ and $\tau$. Hence, once the metric tensor is fixed
+still some freedom is left to manipulate the geometry.
+We call this the {\it gauge freedom}. A sufficient condition for the
+existence of a dually flat geometry is established. It is shown
+that, if the coordinates of a parametric model are affine
+then the rho-tau metric tensor is Hessian and the dual
+coordinates are affine as well. We illustrate our approach using models
+belonging to deformed exponential families,
+and give a
+simple and precise characterization for the rho-tau metric to become Hessian.
+}
+
+
+
+
+\section{Introduction}
+\label{sect:intro}
+
+A {\em statistical manifold} \cite{lauritzen1987a,amarinagaoka2000,AyJLS2017}
+is an abstract manifold $\Mo$ equipped with a Riemannian metric $g$ and an
+Amari-Chentsov tensor $T$. If the manifold is a smooth differentiable manifold
+then it can be realized \cite{LeHV2005} as a {\em statistical model}.
+
+Most studies of statistical models are based on the widely used logarithmic embedding of
+probability density functions. Here, more generally embeddings are considered.
+Recent work \cite{ZN17,NZ17,NZ18} unifies the formalism of rho-tau embeddings \cite{zhang2004a}
+with statistical models belonging to deformed exponential families \cite{NJ04}.
+The present exposition continues this investigation.  
+
+The notion of a statistical manifold has been generalized in the non-parametric 
+setting \cite{pistonesempi1995,pistonerogantin1999}
+to include Banach manifolds. The corresponding terminology is used here, although up to now
+only a few papers have combined non-parametric manifolds with deformed exponential families
+\cite{pistone2009,NNJ12,VigCav2013,MP17}.
+
+
+The rho-tau divergence is discussed in the next section. Eguchi \cite{eguchi1983,eguchi1985}
+proved under rather general conditions that, given a differentiable manifold,
+a divergence function defines a metric tensor and a pair of connections.
+These are derived in Section \ref{sect:tangent}, respectively Section \ref{sect:geometry}.
+Parametric statistical models are discussed in Section \ref{sect:param}, which
+discusses Hessian geometry, and Section \ref{sect:deform}, which deals with deformed
+exponential families.
+
+\section{The statistical manifold}
+
+The points of a given statistical manifold
+$\Mo$ are assumed to be random variables over some measure space
+$({\cal X}, \mu)$. 
+A random variable $X$ is defined as any measurable real function.
+The expectation, if it exists, is denoted $\Eo_\mu X$.
+Throughout the text it is assumed that the manifold is differentiable
+and that for each $X$ in $\Mo$ the tangent plane $T_X\Mo$ is well-defined.
+
+
+The derivative of a random variable is again a random variable.
+Therefore one can expect that
+the tangent vectors at a point $X$ of $\Mo$ are random variables with vanishing expectation value.
+Let us assume that these tangent vectors can be used as a local chart in the vicinity of the point $X$
+and that they belong to some Banach space $\cal B$.
+Then $\Mo$ is a  Banach manifold, provided a number of technical conditions are satisfied.
+
+In the simplest case the manifold $\Mo$ consists of all strictly positive probability distributions
+on a discrete set $\cal X$.
+These probability distributions can be considered as positive-valued random variables with expectation equal to 1.
+The space $\cal B$ of all random variables is a Banach space for instance for the $L^1$ norm.
+The manifold $\Mo$ is a Banach manifold.
+Our approach here is the same as that adopted in \cite {zhang13},
+where random variables are called $\chi$-functions,
+and functions of random variables are called $\chi$-functionals.
+
+In the more general situation the choice of an appropriate norm for the tangent vectors is not so simple.
+See the work of Pistone et all \cite{pistonesempi1995,pistonerogantin1999,pistone2009}.
+
+
+
+\section{Rho-tau divergence}
+\label{sect:rhotau}
+
+
+Given a strictly convex differentiable function $h$ and a pair of real-valued
+random variables $P$ and $Q$ the Bregman divergence \cite{bregman1967}
+is given by
+\beq
+\Ddiv (P,Q)&=&\Eo_\mu\left[ h(P)-h(Q)-(P-Q)h'(Q)\right],
+\label{div:breg}
+\eeq
+where $h'$ denotes the derivative of $h$.
+A generalization involving two strictly increasing real functions $\rho(u)$ and $\tau(u)$
+is proposed in \cite {zhang2004a}. For the sake of completeness the definition is repeated here.
+Throughout the text these functions $\rho$ and $\tau$ are assumed to be at least once,
+sometimes twice differentiable.
+
+
+There exists a strictly convex function $f$ with the property that $f'\circ \rho=\tau$.
+It is given by
+\be
+\label{div:f}
+f(u)=\int^{\rho^{-1}(u)} \tau(v)\upd \rho(v).
+\ee
+
+The convex conjugate function $f^*$ is therefore given by
+\be
+f^*(u)=\int^{\tau^{-1}(u)}\rho(v)\upd\tau(v),
+\label{div:fstar}
+\ee
+provided the lower boundary of the integrals is chosen appropriately.
+
+The original definition \cite{zhang2004a} of the rho-tau divergence can be written as
+\beq
+\Ddiv _{\rho,\tau}(P,Q)&=&\Eo_\mu\left[
+f(\rho(P))+f^*(\tau(Q))-\rho(P)\tau(Q)\right]
+\label{div:rhotaudivzhang}
+\eeq
+which is assumed to be $\le +\infty.$ The reformulation given below simplifies the proof of some of its properties.
+
+\begin{definition}
+Let be given two strictly increasing differentiable functions $\rho$ and $\tau$,
+defined on a common open interval $D$ in $\Ro$.
+The rho-tau divergence  of two random variables $P$ and $Q$ with values in $D$ is given by
+\be
+\Ddiv _{\rho,\tau}(P,Q)=\Eo_\mu\left(\int_Q^P\left[\tau(v)-\tau(Q)\right]\upd \rho(v)\right).
+\label{div:rhotaudiv}
+\ee
+\end{definition}
+
+This definition is equivalent to (\ref  {div:rhotaudivzhang}). To see this, split (\ref {div:rhotaudiv})
+into two parts.
+Use (\ref {div:f}) to write the former contribution as $\Eo_\mu f\circ\rho(P)-\Eo_\mu f\circ\rho(Q)$
+and the latter as $-\Eo_\mu\tau(Q)[\rho(P)-\rho(Q)]$. Use partial integration to prove
+that $f\circ\rho+f^*\circ\tau=\rho\tau$.
+This definition also generalizes (\ref {div:breg}). To see this take $I=f$, $\rho=\id$, and $\tau=I'$.
+
+Note that the integral in (\ref {div:rhotaudiv}) is a Stieltjes integral, which is well-defined because $\rho$ and $\tau$
+are strictly increasing functions. The result is non-negative. Hence, the $\mu$-expectation
+is either convergent or it diverges to $+\infty$.
+
+Let $P$ and $Q$ be two random variables with joint probability distribution $p(\zeta,\eta)$.
+Then (\ref {div:rhotaudiv}) can be written as
+\beq
+\Ddiv _{\rho,\tau}(P,Q)&=&\int p(\zeta,\eta)\upd\zeta\upd\eta\,
+\left(\int_\eta^\zeta\left[\tau(v)-\tau(\eta)\right]\upd \rho(v)\right)\cr
+&\le&
+\int p(\zeta,\eta)\upd\zeta\upd\eta\,|\tau(\zeta)-\tau(\eta)|\,|\rho(\zeta)-\rho(\eta)|\cr
+&\le&\left\{\Eo_\mu |\tau(P)-\tau(Q)|^2\Eo_\mu|\rho(P)-\rho(Q)|^2\right\}^{1/2}.
+\eeq
+To obtain the latter the Cauchy-Schwarz inequality is used.
+
+\begin{theorem}
+$\Ddiv _{\rho,\tau}(P,Q)\ge 0$ with equality if $P=Q$.
+If $\mu$ is faithful, i.e. $\Eo_\mu P=0$ implies $P=0$ for any non-negative $P$, then
+$\Ddiv _{\rho,\tau}(P,Q)=0$ implies $P=Q$.
+\end{theorem}
+
+\beginproof
+
+From (\ref {div:rhotaudiv}) it is immediately clear that $\Ddiv _{\rho,\tau}(P,Q)\ge 0$
+and $\Ddiv _{\rho,\tau}(P,P)=0$.
+Assume now that $\Ddiv _{\rho,\tau}(P,Q)=0$. 
+By assumption this implies that
+\be
+\int_Q^P\left[\tau(v)-\tau(Q)\right]\upd \rho(v)=0\quad\mu\mbox{-almost everywhere}.
+\nonumber
+\ee
+However, because $\tau$ and $\rho$ are strictly increasing the integral is strictly positive unless
+$P=Q$, $\mu$-almost everywhere.
+\endproof
+
+It can be easily verified that the rho-tau divergence satisfies the following generalized 
+Pythagorean equality for any three points $P,Q,R$
+$$
+\Ddiv _{\rho,\tau}(P,Q) + \Ddiv _{\rho,\tau}(Q,R) - \Ddiv _{\rho,\tau}(P,R) = \Eo_\mu \left\{ [\rho(P) - \rho(Q)] [ \tau(R) - \tau(Q)]    \right\} .
+$$
+
+The general expression for the rho-tau entropy is
+\be
+S_{\rho,\tau}(P)=-\Eo_\mu f(\rho(P))+\mbox{ constant}
+=-\Eo_\mu\int^P\tau(u)\upd\rho(u).
+\ee
+See for instance Section 2.6 of \cite{ZN17}. The function $f$ is a strictly convex function
+which, given $\rho$, can still be chosen arbitrarily and then determines $\tau$.
+The following identity holds
+\be
+\Ddiv _{\rho,\tau}(P,Q)=
+-S_{\rho,\tau}(P)+S_{\rho,\tau}(Q)-\Eo_\mu\left[\rho(P)-\rho(Q)\right]\tau(Q).
+\label{div:ent}
+\ee
+In \cite{ZN17, NZ18}, we also discuss rho-tau cross-entropy, as well as the notion of ``dual entropy'' arising out of rho-tau embedding. 
+
+Rho-tau divergence $\Ddiv _{\rho,\tau}(P,Q)$ is a special form of the more general divergence function
+$\Ddiv^{(\alpha)}_{f, \rho}(P,Q)$ arising out of convex analysis, see \cite{zhang2004a, zhang2005}:
+\beq
+\label{alpha_div}
+& &\Ddiv^{(\alpha)}_{f, \rho}(P,Q) 
+= \frac{4}{1-\alpha^{2}} \cr
+&\times&
+\Eo_\mu \left\{
+ \frac{1-\alpha}{2} f(\rho(P)) + \frac{1+\alpha}{2}
+f(\rho(Q)) -  f \left( \frac{1-\alpha}{2}
+\rho(P)+\frac{1+\alpha}{2} \rho(Q) \right) \right\} .\cr
+& &
+\eeq
+Clearly
+\begin{eqnarray*}
+ \lim_{\alpha \rightarrow 1}  \Ddiv^{(\alpha)}_{f, \rho}(P,Q) &=& 
+ \Ddiv_{\rho,\tau}(P,Q) = \Ddiv_{\tau,\rho}(Q,P); \\
+ \lim_{\alpha \rightarrow -1}  \Ddiv^{(\alpha)}_{f, \rho}(P,Q) &=& 
+ \Ddiv_{\rho,\tau}(Q,P) = \Ddiv_{\tau,\rho}(P,Q); 
+\end{eqnarray*}
+with $f^\prime \circ \rho = \tau$ 
+(and equivalent $(f^\ast)^\prime \circ \tau = \rho$, with $f^\ast$ denoting convex conjugate of $f$).  
+Though in $\Ddiv^{(\alpha)}_{f, \rho}(P,Q)$ the two free functions are $f$ 
+(a strictly convex function) and $\rho$ (a strictly monotone increasing function), as reflected in its subscripts,
+there is only notational difference from the $\rho, \tau$ specification of two function's choice. 
+This is because for $f, f^\ast, \rho, \tau$, a choice of any two functions 
+(one of which would have to be either $\rho$ or $\tau$) would specify the remaining two. See \cite{zhang2004a,zhang15}. 
+
+
+\section{Tangent vectors}
+\label{sect:tangent}
+
+The rho-tau divergence introduced above can be used to fix a Riemannian metric on the tangent planes
+of the statistical manifold $\Mo$.
+
+In the standard situation of the Fisher-Rao metric the point $P$ is a probability density function $p^\theta$,
+parametric with $\theta\in\Ro^n$. A short calculation gives
+\be
+\partial_j\Eo_\mu p^\theta Y=\big\langle\partial_j \log p^\theta,Y\big\rangle_\theta,
+\label{tangent:fr}
+\ee
+with $\langle X,Y\rangle_\theta=\Eo_\mu p^\theta XY$,
+and where  $\partial_j$ is an abbreviation for $\partial/\partial\theta^j$.
+The metric tensor is then given by 
+\be
+g_{ij}(\theta)
+=
+\langle \partial_i \log p^\theta,\partial_j \log p^\theta\rangle_\theta.
+\nonumber
+\ee
+The score variables $\partial_j \log p^\theta$ have vanishing expectation and span the tangent plane
+at the point $p^\theta$.
+
+These expressions are now generalized.
+Fix $P$ in $\Mo$.
+Make the assumption that there exists some open neighborhood $U$ of $P$ in $\Mo$
+and a one-to-one correspondence $\chi_P$ between elements $Q$ of $U$ and tangent vectors $X=\chi_P(Q)$ of $T_P\Mo$,
+satisfying $\chi_P(P)=0$.
+This map $\chi_P$ is used as a local chart centered at the point $P$.
+The directional derivative $\Dfrechet_X$ is then defined as
+$$\Dfrechet_X  P := \lim_{\epsilon \rightarrow 0}  \frac{\chi_P^{-1}(\epsilon X)-\chi^{-1}(0)}{\epsilon},$$
+and is assumed to exist for all $X\in T_P\Mo$. Here, we leave the topology unspecified.
+
+
+
+
+Now we take one of the two increasing functions $\rho$ and $\tau$, say $\rho$, to define a two-point
+correlation function $\Eo_\mu\rho(P)Y$, and the other function, $\tau$, 
+to act as a deformed logarithmic function replacing
+the logarithmic function which appears in the definition of the standard scores.
+The expression analogue to (\ref{tangent:fr}) now
+involves  derivatives of $\Eo_\mu\rho(P) Y$ and of $\tau(P)$. It becomes
+\be
+\Dfrechet_X\Eo_\mu\rho(P) Y=\big\langle \Dfrechet_X\tau(P),Y\big\rangle_P,
+\label{tangent:frgen}
+\ee
+with
+\be
+\left\langle X,Y\right\rangle_P=\Eo_\mu\frac{\rho'(P)}{\tau'(P)}XY.
+\nonumber
+\ee
+This relation should hold for any $P$ in $\Mo$ and $X$ in $T_P\Mo$, and for any random variable $Y$. 
+The metric tensor $g_{XY} \equiv g(X,Y)$ becomes
+\beq
+g_{XY}(P)
+&=&\big\langle \Dfrechet_X\tau(P),\Dfrechet_Y\tau(P)\big\rangle_P\cr
+&=&\Eo_\mu\rho'(P)\tau'(P)\Dfrechet_X P\Dfrechet_Y P.
+\label{tangent:gexpl}
+\eeq
+This metric tensor is related to the divergence function introduced in the previous
+section by
+\be
+\Dfrechet^{\mbox{\tiny P}}_Y\Dfrechet^{\mbox{\tiny Q}}_X \Ddiv _{\rho,\tau}(P,Q)
+\bigg|_{P=Q}
+=-g_{XY}(P),
+\nonumber
+\ee
+where $\Dfrechet^{\mbox{\tiny P}}$ is the derivative acting only on $P$ and 
+$\Dfrechet^{\mbox{\tiny Q}}$ acts only on $Q$. 
+See \cite{zhang13} for the derivation of the metric tensor in the form of
+(\ref{tangent:gexpl})
+for the non-parametric setting. 
+
+
+In the case of a model $p^\theta$
+which belongs to the exponential family the tangent plane can be identified with
+the coordinate space. The chart becomes $\chi_{p^\theta}(p^\zeta)=\zeta-\theta$ 
+so that
+$$d_\zeta p^\theta := \lim_{\epsilon \rightarrow 0}\frac 1\epsilon
+\left(p^{\theta+\epsilon(\zeta-\theta)}-p^\theta\right).$$
+If $(\zeta-\theta)_i=\delta_{i,j}$ then $d_\zeta p^\theta=\partial_jp^\theta$ follows and 
+(\ref {tangent:frgen}) reduces to (\ref {tangent:fr}).
+
+
+\section{Gauge freedom}
+\label{sect:gauge}
+
+
+From (\ref {tangent:gexpl}) it is clear that the metric tensor depends only
+on the product $\rho'\tau'$ and not on $\rho$ and $\tau$ separately.
+This  implies that once the metric tensor is fixed there remains one 
+function to be chosen freely, either the embedding $\rho$ or the 
+deformed logarithm $\tau$, keeping $\rho'\tau'$ fixed.
+This is what we call the gauge freedom of the rho-tau formalism.
+
+The notion of gauge freedom is common in Physics to mark the
+introduction of additional degrees of freedom which do not modify the model
+but control some of its appearances. Here, the Riemannian metric of the
+manifold is considered to be an essential feature while the different geometries
+such as the Riemannian geometry or Amari's dually flat geometries are attributes
+which give a further characterization.
+
+It is known for long that distinct choices of the divergence function
+can lead to the same metric tensor. The present formalism offers
+the opportunity to profit from this freedom. Quantities such as
+the divergence function, the entropy or the alpha-family
+of connections depend on the specific choice of both $\rho$ and $\tau$.
+This is illustrated further on.
+
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$\rho(u)$\,&$\tau(u)$\, &$(\rho'\tau')(u)$\, &$f(u)$\, &$f^*(u)$\,\\\hline
+ &  &  &  & \\
+$u$\,&$\log u$  &$\displaystyle \frac 1u$\, &$u[\log u-1]$\, &$e^u$\,\\
+ &  &  &  & \\
+$2\sqrt u$\,&$2\sqrt u$\, &$\displaystyle \frac 1u$\, &$\displaystyle \frac 12 u^2$\, &$\displaystyle \frac 12 u^2$\,\\
+ &  &  &  & \\
+$u$\,&$\log_q (u)$\, &$\displaystyle \frac 1{u^q}$\, 
+    &$\displaystyle \frac u{2-q}\left[\log_q(u)-1\right]$\, &$\frac 1{2-q}\left[\exp_q(u)\right]^{2-q}$\,\\
+ &  &  &  & \\
+$\rho(u)$\,&$\log_\rho(u)$\, &$\displaystyle \frac{\rho'}{\rho}(u)$\, &$u[\log u -1]$\, &$e^u$\,\\
+ &  &  &  & \\
+$u$\,&$\log_\phi(u)$\, &$\displaystyle\frac{1}{\phi(u)}$\,
+&$\displaystyle u\log_\phi(u)-\int_1^u\frac{v}{\phi(v)}\upd v$\,
+&$\displaystyle\int_1^{\exp_\phi(u)}\frac{v}{\phi(v)}\upd v$\, \\
+\hline
+\end{tabular}
+\caption{Examples of $\rho,\tau$ combinations}
+\end{center}
+\end{table}
+
+
+The simplest choice to fix the gauge is $\rho=\id$.
+Several classes generalizing Bregman divergences
+found in the literature, e.g. \cite{NJ04,ES06},
+belong to this case. The phi-divergence of \cite{NJ04} is obtained
+by choosing $\tau$ equal to the deformed logarithm $\log_\phi$ (see Section \ref {sect:deform}),
+the derivative of which is $1/\phi$. This implies $\rho'\tau'=1/\phi$,
+which is also the condition for the deformed metric tensor of \cite{NJ04}
+to be conformally equivalent with (\ref {tangent:gexpl}).
+The U-divergence of \cite{ES06} is obtained by taking $\tau$ equal to the
+inverse function of $U'$. These were discussed in detail in \cite{ZN17,NZ17,NZ18}.
+
+Also of interest is the gauge defined by $\rho(u)=1/\tau'(u)$.
+Let $\log_\rho$ be the corresponding deformed logarithm (see (\ref {deform:log}) below).
+It satisfies $\log_\rho(u)=\tau(u)-\tau(1)$. Hence, the entropy becomes
+\be
+S_{\rho,\tau}(P)=-\Eo_\mu\rho(P)\tau(P)+\Eo_\mu P+\mbox{ constant}.
+\nonumber\ee
+The divergence becomes
+\beq
+\Ddiv _{\rho,\tau}(P,Q)
+&=&
+\Eo_\mu\rho(P)\left[\log_\rho(P)-\log_\rho(Q)\right]-\Eo_\mu\left[P-Q\right].
+\nonumber
+\eeq
+This expression is an obvious generalization of the Kullback-Leibler divergence.
+
+
+\section{Induced geometry}
+\label{sect:geometry}
+
+A divergence function not only fixes a metric tensor by taking two derivatives,
+it also fixes a pair of torsion-free connections by taking an extra
+derivative w.r.t.~the first argument
+\cite{eguchi1983} \cite{eguchi1985}. In particular,
+the rho-tau-divergence  (\ref {div:rhotaudiv}) determines an alpha-family of
+connections \cite{zhang2004a,zhang13,NZ17}.
+
+A covariant derivative $\nabla_Z$ with respect to a vector field $Z$ is defined by
+\be
+\langle \nabla_Z\Dfrechet_X\tau(P),\Dfrechet_Y\tau(P)\rangle_P
+=
+-\Dfrechet^{\mbox{\tiny P}}_Z
+\Dfrechet^{\mbox{\tiny P}}_Y\Dfrechet^{\mbox{\tiny Q}}_X \Ddiv _{\rho,\tau}(P,Q)
+\bigg|_{Q=P}.
+\nonumber
+\ee
+A short calculation of the righthand side, with $\Ddiv _{\rho,\tau}$ defined by (\ref{div:rhotaudivzhang}), gives
+\beq
+\langle\nabla_Z\Dfrechet_X\tau(P),\Dfrechet_Y\tau(P)\rangle_P
+&=&
+\Eo_\mu \left[\Dfrechet_X\tau(P)\right]
+\,\Dfrechet_Z\Dfrechet_Y\rho(P).
+\nonumber
+\eeq
+Let $\nabla^{(1)}_Z=\nabla_Z$ and let $\nabla_Z^{(-1)}$ be the operator
+obtained by interchanging $\rho$ and $\tau$.
+This is
+\beq
+\langle\nabla_Z^{(-1)}\Dfrechet_X\tau(P),\Dfrechet_Y\tau(P)\rangle_P
+&=&
+\Eo_\mu \left[\Dfrechet_X\rho(P)\right]
+\,\Dfrechet_Z\Dfrechet_Y\tau(P)\cr
+&=&
+\langle \Dfrechet_X\tau(P)
+,\Dfrechet_Z\Dfrechet_Y\tau(P)\rangle_P.
+\label{ind:grad-1}
+\eeq
+This shows that $\nabla_Z^{(-1)}$ is the adjoint of $\Dfrechet_Z$ with respect to $g$.
+In addition one has
+\be
+\langle\nabla_Z^{(1)}\Dfrechet_X\tau(P),\Dfrechet_Y\tau(P)\rangle_P
++\langle\Dfrechet_X\tau(P),\nabla_Z^{(-1)}\Dfrechet_Y\tau(P)\rangle_P
+=\Dfrechet_Z\, g_{XY}(P).
+\label{ind:dual}
+\ee
+The latter expression shows that the connections $\nabla^{(1)}$
+and $\nabla^{(-1)}$ are the dual of each other with respect to $g$.
+The alpha-family of connections is then obtained by linear interpolation with $\alpha \in [-1,1]$
+\be \label{alpha_connect}
+\nabla^{(\alpha)}_Z=\frac{1+\alpha}{2}\nabla^{(1)}_Z+\frac{1-\alpha}{2}\nabla^{(-1)}_Z ,
+\ee
+such that the covariant derivatives $\nabla^{(\alpha)}$ and $\nabla^{(-\alpha)}$ are mutually dual. 
+In particular, $\nabla^{(0)}$ is self-dual and therefore coincides with the Levi-Civita
+connection. The family of $\alpha$-connections (\ref{alpha_connect}) is induced by the divergence function
+$\Ddiv^{(\alpha)}_{f, \rho}(P,Q)$ given by (\ref{alpha_div}), with corresponding $\alpha$-values. Furthermore, upon switching $\rho \leftrightarrow \tau$ in the divergence function, the designation of 1-connection vs (-1)-connection also switches. 
+
+From (\ref {ind:grad-1}) it is clear that the covariant derivative $\nabla_Z^{(-1)}$
+vanishes on the tangent plane when
+\be
+\langle \Dfrechet_X\tau(P)
+,\Dfrechet_Z\Dfrechet_Y\tau(P)\rangle_P=0
+\quad\mbox{ for all }X,Y\in T_P\Mo.
+\label{ind:flat}
+\ee
+If this holds for all $P$ in $\Mo$ then the 
+$\nabla^{(-1)}$-geometry is flat.
+This implies that the dual geometry $\nabla^{(1)}$ is also flat
+--- see Theorem 3.3 of \cite{amarinagaoka2000}.
+The interpretation of (\ref {ind:flat}) is that all second derivatives
+$\Dfrechet_Z\Dfrechet_Y\tau(P)$ are orthogonal to the tangent plane.
+
+\section{Parametric models}
+\label{sect:param}
+
+The previous sections deal with the geometry of arbitrary manifolds consisting of random variables,
+without caring whether they possess special properties. Now parametric models 
+with a Hessian metric $g$ are considered. 
+
+From here on the random variables of the manifold $\Mo$ are probability distribution functions $p^\theta$,
+labeled with coordinates $\theta$ belonging to some open convex subset $U$ of $\Ro^n$.
+The manifold is assumed to be differentiable. In particular, the $\theta^i$ are covariant coordinates
+and the assumption holds that the derivatives $\partial_ip^\theta\equiv\partial p^\theta/\partial\theta^i$
+form a basis for the tangent plane $T_\theta\Mo\equiv T_{p^\theta}\Mo$.
+The simplifications induced by this setting are that the tangent planes are finite-dimensional
+and that the dual coordinates belong again to $\Ro^n$. For general Banach manifolds
+both properties need not to hold.
+The assumptions imply that the
+metric tensor 
+\be
+g_{ij}(\theta)=\langle \partial_i\tau(p^\theta),\partial_j\tau(p^\theta)\rangle_\theta
+\nonumber
+\ee
+is a strictly positive-definite matrix.
+
+The metric $g$ of the manifold $\Mo$ is said to be Hessian if there exists a strictly convex function
+$\Phi(\theta)$ with the property that
+$g_{ij}(\theta)=\partial_i\partial_j\Phi(\theta)$. 
+See for instance \cite {shima2007}.
+Let $\Psi(\eta)$ denote the convex dual of $\Phi(\eta)$. This is
+\be
+\Psi(\eta)=\sup_{\theta}\{\langle\eta,\theta\rangle-\Phi(\theta):\,\theta\in U\}.
+\nonumber
+\ee
+Let $U^*$ denote the subset of $\Ro^n$ of $\eta$ for which the maximum is reached
+at some $\theta$ in $U$. This $\theta$ is unique and defines a bijection
+$\theta\mapsto\eta$ between $U$ and $U^*$. These $\eta$ are dual coordinates for the manifold $\Mo$.
+Conversely \cite{NZ17}, if there exist
+coordinates $\eta_i$ for which $g_{ij}(\theta)=\partial_j\eta_i$ then 
+the rho-tau metric tensor $g$ is Hessian.
+
+
+The condition (\ref {ind:flat}) for $\nabla^{(-1)}$ to vanish can now be written as
+\be
+\langle\partial_i\tau(p^\theta),\partial_k\partial_j\tau(p^\theta)\rangle_\theta=0,
+\quad\mbox{ for all }\theta\in U\mbox{ and for all }i,j,k.
+\label{ind:flat2}
+\ee
+
+\begin{theorem}
+Assume that the $\theta^i$ are affine coordinates such that $\nabla^{(-1)}=0$. 
+Then 
+\begin{description}
+ \item 1) the metric tensor $g$ is Hessian;
+ \item 2) the $\eta_i$ are affine coordinates for the $\nabla^{(1)}$-geometry.
+\end{description}
+ 
+\end{theorem}
+
+\beginproof
+
+1)
+The metric tensor (\ref {tangent:gexpl}) becomes
+$$
+g_{ij}(p^\theta)=\langle\partial_i\tau(p^\theta),\partial_j\tau(p^\theta)\rangle_\theta
+=\Eo_\mu \left(\partial_i\tau(p^\theta)\right)\partial_j\rho(p^\theta)
+=\Eo_\mu \left(\partial_j\tau(p^\theta)\right)\partial_i\rho(p^\theta).$$
+This implies
+$$
+\partial_kg_{ij}(p^\theta)=\Eo_\mu \left(\partial_k\partial_i\tau(p^\theta)\right)\partial_j\rho(p^\theta)
++\Eo_\mu \left(\partial_i\tau(p^\theta)\right)\partial_k\partial_j\rho(p^\theta),$$
+but also
+$$
+\partial_kg_{ij}(p^\theta)=
+\Eo_\mu \left(\partial_k\partial_j\tau(p^\theta)\right)\partial_i\rho(p^\theta)
++\Eo_\mu \left(\partial_j\tau(p^\theta)\right)\partial_k\partial_i\rho(p^\theta).$$
+These equations simplify by means of (\ref {ind:flat2}). The result is
+$$
+\partial_kg_{ij}(p^\theta)=
+\Eo_\mu \left(\partial_i\tau(p^\theta)\right)\partial_k\partial_j\rho(p^\theta)
+=\Eo_\mu \left(\partial_j\tau(p^\theta)\right)\partial_k\partial_i\rho(p^\theta).$$
+This implies that $\partial_k g_{ij}(\theta)=\partial_i g_{kj}(\theta)$.
+Hence there exist functions $\eta_j(\theta)$ such that
+$g_{ij}(\theta)=\partial_i\eta_j(\theta)$. As remarked above, it is proved in
+\cite{NZ17} that this suffices to conclude that the metric $g$ is Hessian.
+
+2)
+Let us show that
+\be
+\eta(t)=(1-t)\eta^{(1)}+t\eta^{(2)}.
+\label{geom:etaflat}
+\ee
+is a solution of the Euler-Lagrange equations
+\be
+\frac{\upd^2\,}{\upd t^2}\theta^i
++\Gamma^i_{km}
+\left(\frac{\upd\,}{\upd t}\theta^k\right)
+\left(\frac{\upd\,}{\upd t}\theta^m\right)
+=0.
+\label{geom:EulLagr}
+\ee
+Here, the $\Gamma^i_{km}$ are the coefficients of the connection $\Gamma^{(1)}$
+induced by the $\nabla^{(1)}$-geometry.
+They follow from
+\be
+\Gamma_{ij,k}=\partial_ig_{jk}(\theta).
+\label {geom:omega1}
+\ee
+One has
+\be
+\frac{\upd\,}{\upd t}\theta^i
+=\frac{\partial\theta^i}{\partial\eta_j}\frac{\upd\eta_j}{\upd t}
+=g^{ij}(\theta)\left[\eta^{(2)}_j-\eta^{(1)}_j\right]
+\nonumber
+\ee
+and
+\beq
+\frac{\upd^2\,}{\upd t^2}\theta^i
+&=&
+\frac{\upd\,}{\upd t}g^{ij}(\theta)\left[\eta^{(2)}_j-\eta^{(1)}_j\right]\cr
+&=&
+\left[\partial_kg^{ij}(\theta)\right]\frac{\upd\theta^k}{\upd t}\left[\eta^{(2)}_j-\eta^{(1)}_j\right]\cr
+&=&
+\left[\partial_kg^{ij}(\theta)\right]g^{kl}(\theta)
+\left[\eta^{(2)}_l-\eta^{(1)}_l\right]
+\left[\eta^{(2)}_j-\eta^{(1)}_j\right]\cr
+&=&
+\left[\partial_kg^{ij}(\theta)\right]g_{jm}(\theta)
+\left(\frac{\upd\,}{\upd t}\theta^k\right)
+\left(\frac{\upd\,}{\upd t}\theta^m\right).
+\nonumber
+\eeq
+The l.h.s.~of (\ref {geom:EulLagr}) becomes
+\be
+\mbox{l.h.s.}
+=
+\left\{
+\left[\partial_kg^{ij}(\theta)\right]g_{jm}(\theta)
++\Gamma^i_{km}
+\right\}
+\left(\frac{\upd\,}{\upd t}\theta^k\right)
+\left(\frac{\upd\,}{\upd t}\theta^m\right).
+\nonumber
+\ee
+This vanishes because (\ref {geom:omega1}) implies
+\be
+\Gamma^i_{km}=-\left[\partial_kg^{ij}(\theta)\right]g_{jm}(\theta).
+\nonumber
+\ee
+
+\endproof
+
+It is important to realize that the discussion in this section is generic for parametric models, without assuming particular parametric families.
+
+\section{The deformed exponential family}
+\label{sect:deform}
+
+A repeated measurement of $n$ independent random variables $F_1,\cdots,F_n$ results
+in a joint probability distribution $\pi(\zeta_1,\cdots,\zeta_n)$, which describes
+the probability that the true value of the measured data equals $\zeta$.
+ More generally, the model can be taken to be a deformed
+exponential family (Generalized Linear Model), obtained by using a deformed exponential
+function $\exp_\phi$.
+Following \cite{NJ04}, a deformed logarithm $\log_\phi$ is defined by
+\be
+\log_\phi(u)=\int_1^u\upd v\,\frac{1}{\phi(v)},
+\label{deform:log}
+\ee
+where $\phi(v)$ is strictly positive and integrable on the open interval $(0,+\infty)$.
+The deformed exponential function $\exp_\phi(u)$ is the inverse function of $\log_\phi(u)$.
+It is defined on the range $\cal R$ of $\log_\phi(u)$, but is 
+eventually extended with the value 0 if $u<{\cal R}$ and with the value $+\infty$
+if $u>{\cal R}$. 
+
+The expression for the probability density function then becomes
+\be \label{deform_phi}
+p^\theta(x)=\exp_\phi\left(\sum_{k=1}^n\theta^kF_k(x)-\alpha(\theta)\right).
+\ee
+The function $\alpha(\theta)$ serves to normalize $p^\theta$ and is assumed to exist
+within the open convex domain $U\subset\Ro^n$ in which the model is defined.
+One can show \cite{NJ04} that it is a convex function.
+However, in general it does not coincide with the potential $\Phi(\theta)$ of the previous section.
+The explanation is that {\em escort probabilities} come into play.
+Indeed, from 
+\be
+0=\partial_i\Eo_\mu p^\theta=\Eo_\mu\phi(p^\theta)\left[F_i-\partial_i\alpha\right]
+\nonumber
+\ee
+follows that
+\be
+\partial_i\alpha=\tilde \Eo_\theta F_i,
+\nonumber
+\ee
+with the escort expectation $\tilde\Eo_\theta$ defined by
+\be
+\tilde\Eo_\theta Y=\frac{\Eo_\mu\phi(p^\theta)Y}{\Eo_\mu\phi(p^\theta)}.
+\nonumber
+\ee
+Only in the non-deformed case, when $\phi(u)=u$, the escort  $\tilde\Eo_\theta$
+coincides with the model expectation $\Eo_\theta$. Then the dual coordinates
+$\eta_i$ satisfy $\eta_i=\Eo_\theta F_i=\partial_i\alpha(\theta)$.
+
+In general, the rho-tau metric tensor $g$ of the deformed exponential model is {\em not}
+Hessian.We have the following Theorem (see \cite{NZ18}) 
+
+\begin{theorem}
+With respect to the (deformed) $\phi$-exponential family $p^\theta$ obeying  (\ref{deform_phi}), the rho-tau metric tensor $g$ is Hessian if and only if 
+$$
+\rho'\tau'\phi=\id .
+$$ 
+\end{theorem}
+  
+In such a situation,  the rho-tau metric tensor is conformally equivalent
+with the metric tensor obtained by taking the Hessian of the normalization
+function $\alpha$; for the latter the potential $\Phi(\theta)$ is constructed in \cite{NJ04}. However, there still leaves a gauge freedom. The question is then whether one can choose $\rho$ and $\tau$ so that condition 
+(\ref {ind:flat}) for the dually flat geometry is satisfied.
+A sufficient condition is that $\rho=\id$ and $\tau=\log_\phi$. This is the rho-affine gauge. In this gauge both the $\theta^i$ and the $\eta_i$ coordinates are affine and the model has a dually flat structure.
+
+\vspace{0.1cm}
+
+\noindent {\bf Acknowledgement} \\
+The research reported here is supported by DARPA/ARO Grant W911NF-16-1-0383 (PI: Jun Zhang). 
+
+\section*{}
+\begin{thebibliography}{99}
+
+
+\bibitem{amarinagaoka2000}
+Amari, S., Nagaoka, H.: Methods of Information Geometry. AMS Monograph, 
+Oxford University Press, 2000. (Originally published in Japanese by Iwanami 
+Shoten, Tokyo, Japan, 1993.) 
+
+\bibitem{AyJLS2017}
+Ay N., Jost, J., L\^E, H.V., Schwachh\"ofer, L.:
+Information Geometry. (Springer, 2017)
+
+\bibitem{bregman1967}
+Bregman, L.M.: The relaxation method of finding the common point of convex sets 
+and its application to the solution of problems in convex programming. {\em USSR 
+Comput. Math. Phys.} {\bf 7}0, 200--217 (1967).
+
+\bibitem{eguchi1983}
+Eguchi, S.: Second order efficiency of minimum contrast estimators in a curved 
+exponential family. {\em Ann. Stat.} {\bf 11}, 793--803 (1983).
+
+\bibitem{eguchi1985}
+Eguchi, S.: A differential geometric approach to statistical inference on the 
+basis of contrast functionals. {\em Hiroshima Math. J.}  {\bf 15}, 
+341--391 (1985).
+
+\bibitem {ES06}
+Eguchi, S.:
+Information geometry and statistical pattern recognition.
+{\em Sugaku Expositions} (Amer. Math. Soc.) {\bf 19},  197--216 (2006) 
+(originally S{\rm \=u}gaku 56 (2004) 380  in Japanese).
+
+\bibitem{lauritzen1987a}
+Lauritzen, S.: Statistical manifolds. In {\em Differential Geometry in 
+Statistical Inference}; Amari, S., Barndorff-Nielsen, O., Kass, R., Lauritzen, 
+S., Rao, C.R., Eds.; IMS: Hayward, CA, USA,  Lecture Notes {\bf 10},  
+163--216 (1987).
+
+\bibitem{LeHV2005}
+L\^e, H.V.:
+Statistical manifolds are statistical models.
+{\em J. Geom.} {\bf  84}  83 -- 93 (2005).
+
+
+\bibitem{MP17} Montrucchio, L., Pistone, G.:
+Deformed exponential bundle: The linear growth case.
+In: {\em Geometric Science of Information,} 
+GSI 2017 LNCS proceedings,
+F. Nielsen and F. Barbaresco eds., (Springer, 2017), p. 239--246.
+
+\bibitem{NJ04}
+Naudts, J.:
+Estimators, escort probabilities, and phi-exponential families in statistical physics.
+{\em J. Ineq. Pure Appl. Math.} {\bf 5}, 102 (2004).
+
+\bibitem{NZ17}
+Naudts, J., Zhang, J.: Information geometry under monotone embedding. Part II: Geometry.
+in: {\em Geometric Science of Information,}
+GSI 2017 LNCS proceedings,
+F. Nielsen and F. Barbaresco eds., (Springer, 2017), p.215--222.
+
+\bibitem{NZ18}
+Naudts, J., Zhang J.:Information Geometry Under Monotone Embedding.
+{\em Information Geometry,} (under review). 
+
+\bibitem {NNJ12}
+Newton, N. J.:
+An infinite-dimensional statistical manifold modeled on Hilbert space.
+{\em J. Funct. Anal.} {\bf 263}, 1661--1681 (2012).
+
+\bibitem{pistonesempi1995}
+Pistone, G., Sempi, C.: An infinite dimensional geometric structure on the space 
+of all the probability measures equivalent to a given one. {\em Ann. Stat.} {\bf 33}, 1543--1561 (1995).
+
+\bibitem{pistonerogantin1999}
+Pistone G., Rogantin M.P.: The exponential statistical manifold: Mean parameters, 
+orthogonality and space transformations. {\em Bernoulli} {\bf 5}, 
+721--760 (1999).
+
+\bibitem{pistone2009}
+Pistone, G.: $\kappa$-exponential models from the geometrical viewpoint. 
+{\em Eur. Phys. J. B} {\bf 70}, 29--37 (2009).
+
+\bibitem{shima2007}
+Shima, H.: The Geometry of Hessian Structures.
+(World Scientific, 2007)
+
+
+\bibitem {VigCav2013}
+Vigelis, R.F., Cavalcante, C.C.:
+On $\phi$-families of probability distributions.
+{\em J. Theor. Probab.} {\bf 26}, 870--884 (2013).
+
+\bibitem{zhang2004a}
+Zhang, J.: Divergence function, duality, and convex analysis. {\em Neural 
+Comput.} {\bf 16}, 159--195 (2004).
+
+\bibitem{zhang2005}
+Zhang, J.:
+Referential duality and representational duality on statistical manifolds.
+In {\it Proceedings of the Second International Symposium on Information Geometry and Its Applications, Tokyo},
+Japan, 2005, pp. 58--67.
+
+\bibitem{zhang13}
+Zhang, J.: Nonparametric Information Geometry: From Divergence
+Function to Referential-Representational Biduality on
+Statistical Manifolds.
+{\em Entropy} {\bf 15} 1 (2013).
+
+\bibitem{zhang15}
+Zhang, J.: On monotone embedding in information geometry.
+{\em Entropy}  {\bf 17}, 4485--4499 (2015).
+
+\bibitem{ZN17}
+Zhang, J., Naudts, J.: Information geometry under monotone embedding. Part I: Divergence functions.
+in: {\em Geometric Science of Information,}
+GSI 2017 LNCS proceedings,
+F. Nielsen and F. Barbaresco eds., (Springer, 2017), p.205--214. 
+
+
+\end{thebibliography}
+
+
+\end{document}

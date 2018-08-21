@@ -1,0 +1,311 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{BregmanKmeans-2010}
+Ackermann, M.R., Bl{\"o}mer, J.: Bregman clustering for separable instances.
+\newblock In: Scandinavian Workshop on Algorithm Theory, pp. 212--223. Springer
+  (2010)
+
+\bibitem{IG-2016}
+Amari, S.i.: Information Geometry and Its Applications, \emph{Applied
+  Mathematical Sciences}, vol. 194.
+\newblock Springer Japan (2016)
+
+\bibitem{DivIG-2010}
+Amari, S.i., Cichocki, A.: Information geometry of divergence functions.
+\newblock Bulletin of the Polish Academy of Sciences: Technical Sciences
+  \textbf{58}(1), 183--195 (2010)
+
+\bibitem{FinslerCenter-2012}
+Arnaudon, M., Nielsen, F.: Medians and means in {F}insler geometry.
+\newblock LMS Journal of Computation and Mathematics \textbf{15}, 23--37 (2012)
+
+\bibitem{miniball-2013}
+Arnaudon, M., Nielsen, F.: On approximating the {R}iemannian $1$-center.
+\newblock Computational Geometry \textbf{46}(1), 93--104 (2013)
+
+\bibitem{kmeanspp-2007}
+Arthur, D., Vassilvitskii, S.: $k$-means++: The advantages of careful seeding.
+\newblock In: ACM-SIAM Symposium on Discrete Algorithms (SODA), pp. 1027--1035
+  (2007)
+
+\bibitem{Bachem-2016}
+Bachem, O., Lucic, M., Hassani, S.H., Krause, A.: Approximate $k$-means++ in
+  sublinear time.
+\newblock In: Proceedings of the Thirtieth AAAI Conference on Artificial
+  Intelligence, pp. 1459--1467 (2016)
+
+\bibitem{coreset-2017}
+Bachem, O., Lucic, M., Krause, A.: Scalable and distributed clustering via
+  lightweight coresets (2017).
+\newblock {arXiv}:1702.08248 [stat.ML]
+
+\bibitem{bc-2003}
+B\^{a}doiu, M., Clarkson, K.L.: Smaller core-sets for balls.
+\newblock In: ACM-SIAM Symposium on Discrete Algorithms (SODA), pp. 801--802
+  (2003)
+
+\bibitem{coreset-2008}
+B{\u{a}}doiu, M., Clarkson, K.L.: Optimal core-sets for balls.
+\newblock Computational Geometry \textbf{40}(1), 14--22 (2008)
+
+\bibitem{HGPolytope-2009}
+Bernig, A.: Hilbert geometry of polytopes.
+\newblock Archiv der Mathematik \textbf{92}(4), 314--324 (2009)
+
+\bibitem{CKM-2015}
+Bi, Y., Fan, B., Wu, F.: Beyond {M}ahalanobis metric: {C}ayley-{K}lein metric
+  learning.
+\newblock In: IEEE Conference on Computer Vision and Pattern Recognition
+  (CVPR), pp. 2339--2347 (2015)
+
+\bibitem{Brandenberg-2013}
+Brandenberg, R., K{\"o}nig, S.: No dimension-independent core-sets for
+  containment under homothetics.
+\newblock Discrete \& Computational Geometry \textbf{49}(1), 3--21 (2013)
+
+\bibitem{Busemann-2011}
+Busemann, H.: The Geometry of Geodesics, \emph{Pure and Applied Mathematics},
+  vol.~6.
+\newblock Elsevier Science (1955)
+
+\bibitem{IG-2014}
+Calin, O., Udriste, C.: Geometric Modeling in Probability and Statistics.
+\newblock Mathematics and Statistics. Springer International Publishing (2014)
+
+\bibitem{Cena-2002}
+Cena, A.: Geometric structures on the non-parametric statistical manifold.
+\newblock Ph.D. thesis, University of Milano (2002)
+
+\bibitem{cencov-2000}
+Cencov, N.N.: Statistical Decision Rules and Optimal Inference,
+  \emph{Translations of mathematical monographs}, vol.~53.
+\newblock American Mathematical Society (2000)
+
+\bibitem{ChapmanRobbins-1951}
+Chapman, D.G., Robbins, H.: Minimum variance estimation without regularity
+  assumptions.
+\newblock The Annals of Mathematical Statistics pp. 581--586 (1951)
+
+\bibitem{ClusteringSimplex-2008}
+Chaudhuri, K., McGregor, A.: Finding metric structure in information theoretic
+  clustering.
+\newblock In: Conference on Learning Theory (COLT), pp. 391--402 (2008)
+
+\bibitem{HilbertHarpe-1991}
+{de la Harpe}, P.: On {H}ilbert's metric for simplices.
+\newblock In: Geometric Group Theory, vol.~1, pp. 97--118. Cambridge Univ.
+  Press (1991)
+
+\bibitem{voronoi-2015}
+Deza, M., Sikiri{\'c}, M.D.: Voronoi polytopes for polyhedral norms on
+  lattices.
+\newblock Discrete Applied Mathematics \textbf{197}, 42--52 (2015)
+
+\bibitem{statinvar-2017}
+Dowty, J.G.: Chentsov's theorem for exponential families (2017).
+\newblock {arXiv}:1701.08895 [math.ST]
+
+\bibitem{sphericalkm-2015}
+Endo, Y., Miyamoto, S.: Spherical $k$-means++ clustering.
+\newblock In: Modeling Decisions for Artificial Intelligence, pp. 103--114.
+  Springer (2015)
+
+\bibitem{HilbertNormedSpace-2005}
+Foertsch, T., Karlsson, A.: Hilbert metrics and {M}inkowski norms.
+\newblock Journal of Geometry \textbf{83}(1-2), 22--31 (2005)
+
+\bibitem{kcenter-1985}
+Gonzalez, T.F.: Clustering to minimize the maximum intercluster distance.
+\newblock Theoretical Computer Science \textbf{38}, 293--306 (1985)
+
+\bibitem{Hammersley-1950}
+Hammersley, J.: On estimating restricted parameters.
+\newblock Journal of the Royal Statistical Society. Series B (Methodological)
+  \textbf{12}(2), 192--240 (1950)
+
+\bibitem{Hilbert-1895}
+Hilbert, D.: {\"U}ber die gerade linie als k{\"u}rzeste verbindung zweier
+  punkte.
+\newblock Mathematische Annalen \textbf{46}(1), 91--96 (1895)
+
+\bibitem{Hotelling-1930}
+Hotelling, H.: Spaces of statistical parameters.
+\newblock In: Bulletin AMS, vol.~36, p. 191 (1930)
+
+\bibitem{CS-2006}
+Jenssen, R., Principe, J.C., Erdogmus, D., Eltoft, T.: The {C}auchy-{S}chwarz
+  divergence and {P}arzen windowing: Connections to graph theory and mercer
+  kernels.
+\newblock Journal of the Franklin Institute \textbf{343}(6), 614--629 (2006)
+
+\bibitem{KassVos-1997}
+Kass, R.E., Vos, P.W.: Geometrical Foundations of Asymptotic Inference.
+\newblock Wiley Series in Probability and Statistics. Wiley-Interscience (1997)
+
+\bibitem{L1metricfdiv-2007}
+Khosravifard, M., Fooladivanda, D., Gulliver, T.A.: Confliction of the
+  convexity and metric properties in $f$-divergences.
+\newblock IEICE Transactions on Fundamentals of Electronics, Communications and
+  Computer Sciences \textbf{90}(9), 1848--1853 (2007)
+
+\bibitem{MinisumHypersphere-2011}
+K{\"o}rner, M.C.: Minisum hyperspheres, \emph{Springer Optimization and Its
+  Applications}, vol.~51.
+\newblock Springer New York (2011)
+
+\bibitem{VizTensor-2009}
+Laidlaw, D.H., Weickert, J.: Visualization and Processing of Tensor Fields:
+  Advances and Perspectives.
+\newblock Mathematics and Visualization. Springer-Verlag Berlin Heidelberg
+  (2009)
+
+\bibitem{MetricLearning-2002}
+Lebanon, G.: Learning {R}iemannian metrics.
+\newblock In: Conference on Uncertainty in Artificial Intelligence (UAI), pp.
+  362--369 (2002)
+
+\bibitem{BH-2014}
+Lemmens, B., Nussbaum, R.: {B}irkhoff’s version of {H}ilbert’s metric and
+  its applications in analysis.
+\newblock Handbook of Hilbert Geometry pp. 275--303 (2014)
+
+\bibitem{HilbertIsometry-2011}
+Lemmens, B., Walsh, C.: Isometries of polyhedral {H}ilbert geometries.
+\newblock Journal of Topology and Analysis \textbf{3}(02), 213--241 (2011)
+
+\bibitem{SeparableDivergence-2016}
+Liang, X.: A note on divergences.
+\newblock Neural Computation \textbf{28}(10), 2045--2062 (2016)
+
+\bibitem{smoothedBregmankMeans-2013}
+Manthey, B., R{\"o}glin, H.: Worst-case and smoothed analysis of $k$-means
+  clustering with {B}regman divergences.
+\newblock Journal of Computational Geometry \textbf{4}(1), 94--132 (2013)
+
+\bibitem{CRLB-2013}
+Nielsen, F.: Cram\'er-{R}ao lower bound and information geometry.
+\newblock In: Connected at Infinity {II}, pp. 18--37. Springer (2013)
+
+\bibitem{ApproximatingHyperbolicBall-2015}
+Nielsen, F., Hadjeres, G.: Approximating covering and minimum enclosing balls
+  in hyperbolic geometry.
+\newblock In: International Conference on Networked Geometric Science of
+  Information, pp. 586--594. Springer (2015)
+
+\bibitem{CayleyClassification-2016}
+Nielsen, F., Muzellec, B., Nock, R.: Classification with mixtures of curved
+  {M}ahalanobis metrics.
+\newblock In: IEEE International Conference on Image Processing (ICIP), pp.
+  241--245 (2016)
+
+\bibitem{LMNN-2016}
+Nielsen, F., Muzellec, B., Nock, R.: Large margin nearest neighbor
+  classification using curved {M}ahalanobis distances (2016).
+\newblock {arXiv}:1609.07082 [cs.LG]
+
+\bibitem{BregmanBall-2006}
+Nielsen, F., Nock, R.: On approximating the smallest enclosing {B}regman balls.
+\newblock In: Proceedings of the twenty-second annual symposium on
+  Computational geometry, pp. 485--486. ACM (2006)
+
+\bibitem{SEBB-2008}
+Nielsen, F., Nock, R.: On the smallest enclosing information disk.
+\newblock Information Processing Letters \textbf{105}(3), 93--97 (2008)
+
+\bibitem{BallML-2009}
+Nielsen, F., Nock, R.: Approximating smallest enclosing balls with applications
+  to machine learning.
+\newblock International Journal of Computational Geometry \& Applications
+  \textbf{19}(05), 389--414 (2009)
+
+\bibitem{tJ-2013}
+Nielsen, F., Nock, R.: Total {J}ensen divergences: Definition, properties and
+  $k$-means++ clustering (2013).
+\newblock {arXiv}:1309.7109 [cs.IT]
+
+\bibitem{MixedClustering-2014}
+Nielsen, F., Nock, R., Amari, S.i.: On clustering histograms with $k$-means by
+  using mixed $\alpha$-divergences.
+\newblock Entropy \textbf{16}(6), 3273--3301 (2014)
+
+\bibitem{HG-SoCG-2017}
+Nielsen, F., Shao, L.: On balls in a polygonal {H}ilbert geometry.
+\newblock In: 33st International Symposium on Computational Geometry (SoCG
+  2017). Schloss Dagstuhl--Leibniz-Zentrum fuer Informatik (2017)
+
+\bibitem{holder}
+Nielsen, F., Sun, K., Marchand-Maillet, S.: On {H}\"older projective
+  divergences.
+\newblock Entropy \textbf{19}(3) (2017)
+
+\bibitem{BregmanMinimax-2005}
+Nock, R., Nielsen, F.: Fitting the smallest enclosing {B}regman ball.
+\newblock In: ECML, pp. 649--656. Springer (2005)
+
+\bibitem{EnclosingPolytope-2004}
+Panigrahy, R.: Minimum enclosing polytope in high dimensions (2004).
+\newblock {arXiv}:cs/0407020 [cs.CG]
+
+\bibitem{FunkHilbert-2014}
+Papadopoulos, A., Troyanov, M.: From {F}unk to {H}ilbert geometry (2014).
+\newblock {arXiv}:1406.6983 [math.MG]
+
+\bibitem{Rao-1945}
+Rao, C.R.: Information and accuracy attainable in the estimation of statistical
+  parameters.
+\newblock Bull. Cal. Math. Soc. \textbf{37}(3), 81--91 (1945)
+
+\bibitem{Rao-reprint-1992}
+Rao, C.R.: Information and the accuracy attainable in the estimation of
+  statistical parameters.
+\newblock In: Breakthroughs in statistics, pp. 235--247. Springer (1992)
+
+\bibitem{VoronoiNorm-2012}
+Reem, D.: The geometric stability of {V}oronoi diagrams in normed spaces which
+  are not uniformly convex (2012).
+\newblock {arXiv}:1212.1094 [cs.CG]
+
+\bibitem{Richter-2011}
+Richter-Gebert, J.: Perspectives on projective geometry: A guided tour through
+  real and complex geometry.
+\newblock Springer-Verlag Berlin Heidelberg (2011)
+
+\bibitem{Saha-2011}
+Saha, A., Vishwanathan, S., Zhang, X.: New approximation algorithms for minimum
+  enclosing convex shapes.
+\newblock In: ACM-SIAM Symposium on Discrete Algorithms (SODA), pp. 1146--1160
+  (2011)
+
+\bibitem{LPtype-1992}
+Sharir, M., Welzl, E.: A combinatorial bound for linear programming and related
+  problems.
+\newblock STACS 92 pp. 567--579 (1992)
+
+\bibitem{FinslerIG-2016}
+Shen, Z.: Riemann-{F}insler geometry with applications to information geometry.
+\newblock Chinese Annals of Mathematics-Series B \textbf{27}(1), 73--94 (2006)
+
+\bibitem{HessianStructure-2007}
+Shima, H.: The Geometry of {H}essian Structures.
+\newblock World Scientific (2007)
+
+\bibitem{storyLM-2007}
+Stigler, S.M., et~al.: The epic story of maximum likelihood.
+\newblock Statistical Science \textbf{22}(4), 598--620 (2007)
+
+\bibitem{Vernicos-2004}
+Vernicos, C.: Introduction aux g{\'e}om{\'e}tries de {H}ilbert.
+\newblock S{\'e}minaire de th{\'e}orie spectrale et g{\'e}om{\'e}trie
+  \textbf{23}, 145--168 (2004)
+
+\bibitem{Welzl-1991}
+Welzl, E.: Smallest enclosing disks (balls and ellipsoids).
+\newblock New results and new trends in computer science pp. 359--370 (1991)
+
+\end{thebibliography}
