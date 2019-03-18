@@ -1,0 +1,132 @@
+% Frank.Nielsen@acm.org
+
+\documentclass{article}
+\usepackage{fullpage,amssymb,url,amsmath}
+\usepackage{graphicx}
+
+\def\st{\ :\ }
+\def\hcross{{h^\times}}
+ 
+\def\arctanh{\mathrm{arctanh}}
+
+\def\dx{\mathrm{d}x}
+\def\dy{\mathrm{d}y}
+
+\def\KL{\mathrm{KL}}
+\def\kl{\mathrm{kl}}
+\def\bbR{{\mathbb{R}}}
+
+\title{Cross-entropy, differential entropy and Kullback-Leibler divergence between Rayleigh distributions}
+\author{Frank Nielsen\\ {\tt Frank.Nielsen@acm.org}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We instantiate the generic formula of information-theoretic quantities~\cite{EF-2010} (cross-entropy, entropy and Kullback-Leibler divergence) for exponential families to the case of Rayleigh distributions.
+\end{abstract}
+
+A Rayleigh distribution of scale parameter $\sigma>0$ has probability density function:
+$$
+p_\sigma(x) = \frac{x}{\sigma^2} \exp \left( -\frac{x^2}{2\sigma^2} \right), \quad x\geq 0.
+$$
+
+The family  $\{p_\sigma(x) \st \sigma>0\}$ of Rayleigh distributions form a univariate {\em exponential family}~\cite{EF-2009} 
+$$
+\mathcal{E}=\left\{p_\theta(x)= \exp(t(x)\theta-F(\theta)+k(x)) \st \theta\in\Theta\right\}
+$$
+with the following canonical decomposition:
+natural parameter $\theta(\sigma)=-\frac{1}{2\sigma^2}$  (natural parameter space $\Theta=\bbR_{--}$),  sufficient statistic $t(x)=x^2$,
+ log-normalizer $F(\theta)=- \log (-2 \theta)$ ($F_\sigma(\sigma)=2\log\sigma$),  and {\em non-zero} auxiliary carrier term $k(x)=\log x$.
+
+
+The cross-entropy~\cite{EF-2010,CT-2012} $h^\times$ between two distributions $p_{\theta_1}$ and $p_{\theta_2}$ belonging to the same exponential family is
+\begin{eqnarray}
+h^\times(p_{\theta_1}:p_{\theta_2}) &=& -E_{p_{\theta_1}}[\log p_{\theta_2}] = -\int p_{\theta_1}(x)\log p_{\theta_2}(x) \dx,\\
+&=&  -\int p_{\theta_1}(x) (t(x)\theta_2-F(\theta_2)+k(x))\dx
+ = F(\theta_2)-\theta_2 F'(\theta_1)-E_{{\theta_1}}[k(x)],
+\end{eqnarray}
+since $\int p_{\theta_1}(x) t(x)\dx=F'(\theta_1)$.
+
+Consider the term 
+$$
+E_\theta[k(x)]=E_\sigma[k(x)]=E_\sigma[\log x]= \int_0^\infty \frac{x}{\sigma^2} \exp\left(-\frac{x^2}{2\sigma^2}\right) (\log x) \dx,
+$$
+and make the change of variable $y=\frac{x}{\sigma}$ with $\dy=\frac{\dx}{\sigma}$:
+$$
+E_\sigma[k(x)]=  \int_0^\infty   y  \exp\left(-\frac{y^2}{2}\right) (\log \sigma+\log y)   \dy
+$$
+
+Using the fact that $\int_0^\infty   y  \exp(-\frac{y^2}{2}) \dy =1$ 
+and $\int_0^\infty   (y \log y) \exp(-\frac{y^2}{2}) \dy = \frac{1}{2} (\log 2-\gamma)$ (using a computer algebra system\footnote{For example, using online Wolfram alpha.}, where $\gamma=-\int_0^\infty e^{-x}\log x \dx \simeq 0.577215664901532860606512090082$ is the {Euler-Mascheroni constant}), we find that
+
+\begin{equation}
+\boxed{E_\sigma[k(x)]=  \frac{1}{2}(\log 2-\gamma) +\log \sigma.}
+\end{equation}
+
+It follows that the cross-entropy between two Rayleigh distributions is
+\begin{eqnarray*}
+h^\times(p_{\sigma_1}:p_{\sigma_2}) &=& h^\times(p_{\theta(\sigma_1)}:p_{\theta(\sigma_2)}),
+\end{eqnarray*}
+
+\begin{equation}
+\boxed{h^\times(p_{\sigma_1}:p_{\sigma_2}) = 2\log \sigma_2 + \frac{\sigma_1^2}{\sigma_2^2}  - \frac{1}{2}(\log 2-\gamma) -\log \sigma_1}
+\end{equation}
+
+The Shannon's differential entropy~\cite{CT-2012} is the self cross-entropy:
+\begin{eqnarray*}
+h(p_{\sigma}) &=& h^\times(p_{\sigma}:p_{\sigma})=-\int p_{\theta}(x)\log p_{\theta}(x) \dx ,\\
+&=& F(\theta)-\theta F'(\theta)-E_{{\theta}}[k(x)],
+\end{eqnarray*}
+
+\begin{equation}
+\boxed{ h(p_{\sigma}) = 1+ \log \frac{\sigma}{\sqrt{2}}  + \frac{\gamma}{2}.}
+\end{equation}
+
+
+The Rayleigh distributions also form a scale family with density $p_{\sigma}(x)=\frac{1}{\sigma}f\left(\frac{x}{\sigma}\right)$, where
+$f(x)=x\exp(-\frac{x^2}{2})=p_1(x)$. The differential entropy of a scale density is $h(p_{\sigma})=h(p_{1})+\log \sigma$.
+Thus we check that $h(p_{1})=1 - \log{\sqrt{2}} +\frac{\gamma}{2} \simeq 0.94$.
+
+
+
+Notice that when $k(x)=0$, $E_{{\theta}}[k(x)]=0$, and $h(p_{\theta})=F(\theta)-\theta F'(\theta)=-F^*(\eta)$,
+ where $F^*(\eta)=\sup_{\theta\in\Theta} \{\theta\eta-F(\theta)\}$ is the Legendre convex conjugate and $\eta=F'(\theta)$ the dual moment parameterization.
+Thus $F^*(\eta)=-h(p_{\theta})$ is called the {\em negentropy} in the literature (but requires $k(x)=0$ like for the Gaussian family).
+
+
+The Kullback-Leibler divergence~\cite{CT-2012} is the difference between the cross-entropy and the entropy:
+\begin{eqnarray*}
+\KL(p_{\theta_1}:p_{\theta_2}) &=&  h^\times(p_{\theta_1}:p_{\theta_2}) - h(p_{\theta_1}) = \int p_{\theta_1}(x)\log \frac{p_{\theta_1}(x)}{p_{\theta_2}(x)} \dx,
+\end{eqnarray*}
+
+\begin{equation}
+\boxed{ \KL(p_{\theta_1}:p_{\theta_2}) = 2\log \frac{\sigma_2}{\sigma_1}+\frac{\sigma_1^2-\sigma_2^2}{\sigma_2^2}.}
+\end{equation}
+
+
+Notice that the Kullback-Leibler divergence $\KL(p_{\theta_1}:p_{\theta_2})$ between members of the same univariate exponential family amounts to compute the equivalent univariate Bregman divergence
+$B_F(\theta_2:\theta_1)$ with
+$$
+B_F(\theta_2:\theta_1)=F(\theta_2)-F(\theta_1)-(\theta_2-\theta_1) F'(\theta_1),
+$$
+with $F(\theta(\sigma))=2\log\sigma$ and $F'(\theta(\sigma))=-\frac{1}{\theta(\sigma)}=2\sigma^2$.
+
+
+
+\bibliographystyle{plain}
+\bibliography{RayleighBIB}
+
+
+\end{document}
+
+
+, and the  Kullback-Leibler divergence between distributions belonging to the same  {exponential family}~\cite{EF-2010} are
+
+\begin{eqnarray*}
+h^\times(p_{\theta_1}:p_{\theta_2}) &=& F(\theta_2)-\theta_2^\top \nabla F(\theta_1)-E_{\theta_1}[k(x)]\\
+h(p_{\theta_1}) &=& h^\times(p_{\theta_1}:p_{\theta_1}) = -F^*(\eta_1)-E_{\theta_1}[k(x)]\\
+\KL(p_{\theta_1}:p_{\theta_2}) &=&  h^\times(p_{\theta_1}:p_{\theta_2}) - h(p_{\theta_1}) = B_F(\theta_2:\theta_1),\\
+&=& F(\theta_2)-F(\theta_1)-(\theta_2-\theta_1)^\top\nabla F(\theta_1)
+\end{eqnarray*}
