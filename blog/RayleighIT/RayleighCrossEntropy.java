@@ -1,6 +1,9 @@
 // Frank@Nielsen@acm.org
 /*
 Cross-entropy, differential entropy and Kullback-Leibler divergence between Rayleigh distributions
+
+https://www.researchgate.net/publication/331768321_Cross-entropy_differential_entropy_and_Kullback-Leibler_divergence_between_Rayleigh_distributions
+
 https://franknielsen.github.io
 */
 
