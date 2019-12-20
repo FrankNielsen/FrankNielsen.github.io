@@ -1,0 +1,7 @@
+An algorithmic solution to calculate the atomic subsets consists in 
+considering all pairwise  subsets ${O}_{ij}=  \{{O}_{i}\cap {O}_{j},{O}_{i} - {O}_{j} ,
+{O}_{j} - {O}_{i}\}$.
+Define the universe $\mathcal{U}=\cup_{i,j} {O}_{ij}$ and 
+and 
+let ${E}_i=\{ O_{ij}\subset O_i \}$. Let $\mathcal{E}=\cup E_i$.
+Then we solve a minimum set cover problem on $(\mathcal{U},\mathcal{E})$.

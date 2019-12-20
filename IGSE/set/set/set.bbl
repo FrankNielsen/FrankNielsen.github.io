@@ -1,0 +1,129 @@
+\begin{thebibliography}{10}
+
+\bibitem{aIGI}
+S.~Amari.
+\newblock {\em Information Geometry and Its Applications}, volume 194 of {\em
+  Applied Mathematical Sciences}.
+\newblock Springer-Verlag, Berlin, 2016.
+
+\bibitem{partial}
+M.~A. {Bautista}, A.~{Sanakoyeu}, and B.~{Ommer}.
+\newblock Deep unsupervised similarity learning using partially ordered sets.
+\newblock In {\em 2017 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, pages 1923--1932, 2017.
+
+\bibitem{gauss}
+Aleksandar Bojchevski and Stephan Günnemann.
+\newblock Deep {G}aussian embedding of graphs: Unsupervised inductive learning
+  via ranking.
+\newblock In {\em ICLR}, 2018.
+
+\bibitem{mil}
+Marc-Andr Carbonneau, Veronika Cheplygina, Eric Granger, and Ghyslain Gagnon.
+\newblock Multiple instance learning.
+\newblock {\em Pattern Recogn.}, 77(C):329--353, 2018.
+
+\bibitem{crIGD}
+K.~M. {Carter}, R.~{Raich}, W.~G. {Finn}, and A.~O. {Hero,III}.
+\newblock Information-geometric dimensionality reduction.
+\newblock {\em IEEE Signal Processing Magazine}, 28(2):89--99, 2011.
+
+\bibitem{VennDiagram-2003}
+Stirling Chow and Frank Ruskey.
+\newblock Drawing area-proportional {V}enn and {E}uler diagrams.
+\newblock In {\em International Symposium on Graph Drawing}, pages 466--477.
+  Springer, 2003.
+
+\bibitem{sentense}
+Alexis Conneau, Douwe Kiela, Holger Schwenk, Lo{\"\i}c Barrault, and Antoine
+  Bordes.
+\newblock Supervised learning of universal sentence representations from
+  natural language inference data.
+\newblock In {\em Proceedings of the 2017 Conference on Empirical Methods in
+  Natural Language Processing}, pages 670--680, 2017.
+
+\bibitem{fimgauss}
+Sueli I.~R. Costa, Sandra~A. Santos, and João~E. Strapasson.
+\newblock Fisher information distance: a geometrical reading, 2012.
+\newblock arXiv:1210.2354 [stat.ME].
+
+\bibitem{glNSF}
+A.~Grover and J.~Leskovec.
+\newblock {Node2Vec}: Scalable feature learning for networks.
+\newblock In {\em KDD}, pages 855--864, 2016.
+
+\bibitem{hartley}
+R.~V.~L. Hartley.
+\newblock Transmission of information.
+\newblock {\em Bell System Technical Journal}, 7(3):535--563, 1928.
+
+\bibitem{attention}
+Maximilian Ilse, Jakub Tomczak, and Max Welling.
+\newblock Attention-based deep multiple instance learning.
+\newblock In {\em Proceedings of the 35th International Conference on Machine
+  Learning}, volume~80 of {\em Proceedings of Machine Learning Research}, pages
+  2127--2136. PMLR, 2018.
+
+\bibitem{adam}
+Diederik~P. Kingma and Jimmy Ba.
+\newblock Adam: A method for stochastic optimization.
+\newblock In {\em ICLR}, 2015.
+
+\bibitem{vae}
+Diederik~P. Kingma and Max Welling.
+\newblock Auto-encoding variational {B}ayes.
+\newblock In {\em ICLR}, 2014.
+
+\bibitem{word2vec}
+Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg~S Corrado, and Jeff Dean.
+\newblock Distributed representations of words and phrases and their
+  compositionality.
+\newblock In {\em Advances in Neural Information Processing Systems 26}, pages
+  3111--3119. Curran Associates, Inc., 2013.
+
+\bibitem{minka-2005}
+Tom Minka et~al.
+\newblock Divergence measures and message passing.
+\newblock Technical report, Technical report, Microsoft Research, 2005.
+
+\bibitem{JS-2019}
+Frank Nielsen.
+\newblock On the {Jensen-Shannon} symmetrization of distances relying on
+  abstract means.
+\newblock {\em Entropy}, 21(5):485, 2019.
+
+\bibitem{symBD-2009}
+Frank Nielsen and Richard Nock.
+\newblock Sided and symmetrized {B}regman centroids.
+\newblock {\em IEEE transactions on Information Theory}, 55(6):2882--2904,
+  2009.
+
+\bibitem{paDOL}
+B.~Perozzi, R.~Al-Rfou, and S.~Skiena.
+\newblock {DeepWalk}: Online learning of social representations.
+\newblock In {\em KDD}, pages 701--710, 2014.
+
+\bibitem{phd}
+Ke~Sun.
+\newblock {\em Information Geometry and Data Manifold Representations}.
+\newblock PhD thesis, Universit\'e de Gen\`eve, 2015.
+
+\bibitem{distregression}
+Zolt{{\'a}}n Szab{{\'o}}, Bharath~K. Sriperumbudur, Barnab{{\'a}}s
+  P{{\'o}}czos, and Arthur Gretton.
+\newblock Learning theory for distribution regression.
+\newblock {\em Journal of Machine Learning Research}, 17(152):1--40, 2016.
+
+\bibitem{deepsets}
+Manzil Zaheer, Satwik Kottur, Siamak Ravanbakhsh, Barnabas Poczos, Ruslan~R
+  Salakhutdinov, and Alexander~J Smola.
+\newblock Deep sets.
+\newblock In {\em Advances in Neural Information Processing Systems 30}, pages
+  3391--3401. Curran Associates, Inc., 2017.
+
+\bibitem{zjLWH}
+Dengyong Zhou, Jiayuan Huang, and Bernhard Sch\"{o}lkopf.
+\newblock Learning with hypergraphs: Clustering, classification, and embedding.
+\newblock In {\em NIPS 19}, pages 1601--1608. MIT Press, 2007.
+
+\end{thebibliography}

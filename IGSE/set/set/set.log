@@ -1,0 +1,1091 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.28)  12 DEC 2019 06:00
+entering extended mode
+**./set.tex
+(set.tex
+LaTeX2e <2019-10-01> patch level 3
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2019/10/25 v1.4k Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\size10.clo"
+File: size10.clo 2019/10/25 v1.4k Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/scalerel\scalerel.sty
+Package: scalerel 2016/12/29 v1.8 Routines for constrained scaling and stretching of objects, relative to a reference ob
+ject or in absolute terms
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\calc.sty"
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count88
+\calc@Bcount=\count89
+\calc@Adimen=\dimen103
+\calc@Bdimen=\dimen104
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count90
+\calc@Cskip=\skip45
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
+Package: graphics 2019/11/01 v1.3d Standard LaTeX Graphics (DPC,SPQR)
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen105
+\Gin@req@width=\dimen106
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count91
+)
+\thesrwidth=\skip46
+\thesrheight=\skip47
+\srblobheight=\skip48
+\srblobdepth=\skip49
+\mnxsrwidth=\skip50
+\LMex=\skip51
+\LMpt=\skip52
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/pgf/frontendlayer\tikz.sty
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/pgf/utilities\pgfrcs.sty
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks15
+\pgfutil@tempdima=\dimen107
+\pgfutil@tempdimb=\dimen108
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/utilities\pgfutil-common-lists.tex))
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/utilities\pgfutil-latex.def
+\pgfutil@abb=\box27
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/ms\everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/utilities\pgfrcs.code.tex
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2019/08/03 v3.1.4b (3.1.4b)
+))
+Package: pgf 2019/08/03 v3.1.4b (3.1.4b)
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/pgf/basiclayer\pgfcore.sty
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/pgf/systemlayer\pgfsys.sty
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/systemlayer\pgfsys.code.tex
+Package: pgfsys 2019/08/03 v3.1.4b (3.1.4b)
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks16
+\pgfkeys@temptoks=\toks17
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks18
+))
+\pgf@x=\dimen109
+\pgf@y=\dimen110
+\pgf@xa=\dimen111
+\pgf@ya=\dimen112
+\pgf@xb=\dimen113
+\pgf@yb=\dimen114
+\pgf@xc=\dimen115
+\pgf@yc=\dimen116
+\pgf@xd=\dimen117
+\pgf@yd=\dimen118
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count92
+\c@pgf@countb=\count93
+\c@pgf@countc=\count94
+\c@pgf@countd=\count95
+\t@pgf@toka=\toks19
+\t@pgf@tokb=\toks20
+\t@pgf@tokc=\toks21
+\pgf@sys@id@count=\count96
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/systemlayer\pgf.cfg
+File: pgf.cfg 2019/08/03 v3.1.4b (3.1.4b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/systemlayer\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2019/08/03 v3.1.4b (3.1.4b)
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2019/08/03 v3.1.4b (3.1.4b)
+)))
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfsyssoftpath@smallbuffer@items=\count97
+\pgfsyssoftpath@bigbuffer@items=\count98
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+))
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcore.code.tex
+Package: pgfcore 2019/08/03 v3.1.4b (3.1.4b)
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmath.code.tex
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathcalc.code.tex
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathutil.code.tex)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen119
+\pgfmath@count=\count99
+\pgfmath@box=\box28
+\pgfmath@toks=\toks22
+\pgfmath@stack@operand=\toks23
+\pgfmath@stack@operation=\toks24
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathfunctions.code.tex
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathfunctions.random.code.tex)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathfunctions.base.code.tex)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathfunctions.round.code.tex)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex)))
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count100
+))
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfint.code.tex)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@picminx=\dimen120
+\pgf@picmaxx=\dimen121
+\pgf@picminy=\dimen122
+\pgf@picmaxy=\dimen123
+\pgf@pathminx=\dimen124
+\pgf@pathmaxx=\dimen125
+\pgf@pathminy=\dimen126
+\pgf@pathmaxy=\dimen127
+\pgf@xx=\dimen128
+\pgf@xy=\dimen129
+\pgf@yx=\dimen130
+\pgf@yy=\dimen131
+\pgf@zx=\dimen132
+\pgf@zy=\dimen133
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@path@lastx=\dimen134
+\pgf@path@lasty=\dimen135
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@shorten@end@additional=\dimen136
+\pgf@shorten@start@additional=\dimen137
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfpic=\box29
+\pgf@hbox=\box30
+\pgf@layerbox@main=\box31
+\pgf@picture@serial@count=\count101
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgflinewidth=\dimen138
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@pt@x=\dimen139
+\pgf@pt@y=\dimen140
+\pgf@pt@temp=\dimen141
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfarrowsep=\dimen142
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@max=\dimen143
+\pgf@sys@shading@range@num=\count102
+\pgf@shadingcount=\count103
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfexternal@startupbox=\box32
+))
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)))
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfnodeparttextbox=\box33
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/modules\pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@nodesepstart=\dimen144
+\pgf@nodesepend=\dimen145
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2019/08/03 v3.1.4b (3.1.4b)
+))
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/pgf/utilities\pgffor.sty
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/pgf/utilities\pgfkeys.sty
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/utilities\pgfkeys.code.tex))
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmath.code.tex))
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/utilities\pgffor.code.tex
+Package: pgffor 2019/08/03 v3.1.4b (3.1.4b)
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/math\pgfmath.code.tex)
+\pgffor@iter=\dimen146
+\pgffor@skip=\dimen147
+\pgffor@stack=\toks25
+\pgffor@toks=\toks26
+))
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
+Package: tikz 2019/08/03 v3.1.4b (3.1.4b)
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgf@plot@mark@count=\count104
+\pgfplotmarksize=\dimen148
+)
+\tikz@lastx=\dimen149
+\tikz@lasty=\dimen150
+\tikz@lastxsaved=\dimen151
+\tikz@lastysaved=\dimen152
+\tikz@lastmovetox=\dimen153
+\tikz@lastmovetoy=\dimen154
+\tikzleveldistance=\dimen155
+\tikzsiblingdistance=\dimen156
+\tikz@figbox=\box34
+\tikz@figbox@bg=\box35
+\tikz@tempbox=\box36
+\tikz@tempbox@bg=\box37
+\tikztreelevel=\count105
+\tikznumberofchildren=\count106
+\tikznumberofcurrentchild=\count107
+\tikz@fig@count=\count108
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/modules\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfmatrixcurrentrow=\count109
+\pgfmatrixcurrentcolumn=\count110
+\pgf@matrix@numberofcolumns=\count111
+)
+\tikz@expandcount=\count112
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+))) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarysvg.path.code.t
+ex
+File: tikzlibrarysvg.path.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/libraries\pgflibrarysvg.path.code.tex
+File: pgflibrarysvg.path.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pgf/modules\pgfmoduleparser.code.tex
+File: pgfmoduleparser.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+\pgfparserdef@arg@count=\count113
+)
+\pgf@lib@svg@last@x=\dimen157
+\pgf@lib@svg@last@y=\dimen158
+\pgf@lib@svg@last@c@x=\dimen159
+\pgf@lib@svg@last@c@y=\dimen160
+\pgf@lib@svg@count=\count114
+\pgf@lib@svg@max@num=\count115
+)) (neurips_2019.sty
+Package: neurips_2019 2019/03/13 NeurIPS 2019 submission/camera-ready style file
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip53
+\bibsep=\skip54
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count116
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/iftex\ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/iftex\iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+))
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/iftex\ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count117
+\Gm@cntv=\count118
+\c@Gm@tempcnt=\count119
+\Gm@bindingoffset=\dimen161
+\Gm@wd@mp=\dimen162
+\Gm@odd@mp=\dimen163
+\Gm@even@mp=\dimen164
+\Gm@layoutwidth=\dimen165
+\Gm@layoutheight=\dimen166
+\Gm@layouthoffset=\dimen167
+\Gm@layoutvoffset=\dimen168
+\Gm@dimlist=\toks27
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.cfg"))
+\@neuripsabovecaptionskip=\skip55
+\@neuripsbelowcaptionskip=\skip56
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/url\url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2019/10/08 v1.6180339 publication quality tables
+\heavyrulewidth=\dimen169
+\lightrulewidth=\dimen170
+\cmidrulewidth=\dimen171
+\belowrulesep=\dimen172
+\belowbottomsep=\dimen173
+\aboverulesep=\dimen174
+\abovetopsep=\dimen175
+\cmidrulesep=\dimen176
+\cmidrulekern=\dimen177
+\defaultaddspace=\dimen178
+\@cmidla=\count120
+\@cmidlb=\count121
+\@aboverulesep=\dimen179
+\@belowrulesep=\dimen180
+\@thisruleclass=\count122
+\@lastruleclass=\count123
+\@thisrulewidth=\dimen181
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks28
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/units\nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip57
+\L@UnitsRaiseTextstyle=\skip58
+\L@UnitsRaiseScriptstyle=\skip59
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+))
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/microtype\microtype.sty
+Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
+\MT@toks=\toks29
+\MT@count=\count124
+LaTeX Info: Redefining \textls on input line 790.
+\MT@outer@kern=\dimen182
+LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
+\MT@listname@count=\count125
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/microtype\microtype-pdftex.def
+File: microtype-pdftex.def 2019/11/18 v2.7d Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
+\MT@outer@space=\skip60
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/microtype\microtype.cfg
+File: microtype.cfg 2019/11/18 v2.7d microtype main configuration file (RS)
+))
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/caption\subcaption.sty
+Package: subcaption 2019/09/01 v1.3a Sub-captions (AR)
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/caption\caption.sty
+Package: caption 2019/10/18 v3.4a Customizing captions (AR)
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/caption\caption3.sty
+Package: caption3 2019/09/09 v1.8e caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen183
+\captionmargin@=\dimen184
+\captionwidth=\dimen185
+\caption@tempdima=\dimen186
+\caption@indent=\dimen187
+\caption@parindent=\dimen188
+\caption@hangindent=\dimen189
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count126
+\c@continuedfloat=\count127
+)
+\c@subfigure=\count128
+\c@subtable=\count129
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/soul\soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks30
+\SOUL@lasttoken=\toks31
+\SOUL@cmds=\toks32
+\SOUL@buffer=\toks33
+\SOUL@token=\toks34
+\SOUL@spaceskip=\skip61
+\SOUL@ttwidth=\dimen190
+\SOUL@uldp=\dimen191
+\SOUL@ulht=\dimen192
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
+Package: amsmath 2019/11/16 v2.17d AMS math features
+\@mathmargin=\skip62
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks35
+\ex@=\dimen193
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen194
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count130
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count131
+\leftroot@=\count132
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count133
+\DOTSCASE@=\count134
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box38
+\strutbox@=\box39
+\big@size=\dimen195
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count135
+\c@MaxMatrixCols=\count136
+\dotsspace@=\muskip11
+\c@parentequation=\count137
+\dspbrk@lvl=\count138
+\tag@help=\toks36
+\row@=\count139
+\column@=\count140
+\maxfields@=\count141
+\andhelp@=\toks37
+\eqnshift@=\dimen196
+\alignsep@=\dimen197
+\tagshift@=\dimen198
+\tagwidth@=\dimen199
+\totwidth@=\dimen256
+\lineht@=\dimen257
+\@envbody=\toks38
+\multlinegap=\skip63
+\multlinetaggap=\skip64
+\mathdisplay@stack=\toks39
+LaTeX Info: Redefining \[ on input line 2858.
+LaTeX Info: Redefining \] on input line 2859.
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\bm.sty"
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/amscls\amsthm.sty"
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks40
+\thm@bodyfont=\toks41
+\thm@headfont=\toks42
+\thm@notefont=\toks43
+\thm@headpunct=\toks44
+\thm@preskip=\skip65
+\thm@postskip=\skip66
+\thm@headsep=\skip67
+\dth@everypar=\toks45
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/cite\chapterbib.sty
+\c@inputfile=\count142
+Package: chapterbib 2010/09/18  v 1.17
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\pifont.sty"
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\upzd.fd"
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\upsy.fd"
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
+Package: hyperref 2019/11/10 v7.00c Hypertext links for LaTeX
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/iftex\ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)))
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\pdfescape.sty"
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\hycolor.sty"
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\xcolor-patch.sty"
+Package: xcolor-patch 2016/05/16 xcolor patch
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\hopatch.sty"
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+)))
+("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\letltxmacro.sty"
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\auxhook.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen258
+\Hy@linkcounter=\count143
+\Hy@pagecounter=\count144
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
+File: pd1enc.def 2019/11/10 v7.00c Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\intcalc.sty"
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count145
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4535.
+Package hyperref Info: Link nesting OFF on input line 4540.
+Package hyperref Info: Hyper index ON on input line 4543.
+Package hyperref Info: Plain pages OFF on input line 4550.
+Package hyperref Info: Backreferencing OFF on input line 4555.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4788.
+\c@Hy@tempcnt=\count146
+LaTeX Info: Redefining \url on input line 5147.
+\XeTeXLinkMargin=\dimen259
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\bitset.sty"
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\bigintcalc.sty"
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count147
+\Field@Width=\dimen260
+\Fld@charsize=\dimen261
+Package hyperref Info: Hyper figures OFF on input line 6418.
+Package hyperref Info: Link nesting OFF on input line 6423.
+Package hyperref Info: Hyper index ON on input line 6426.
+Package hyperref Info: backreferencing OFF on input line 6433.
+Package hyperref Info: Link coloring OFF on input line 6438.
+Package hyperref Info: Link coloring with OCG OFF on input line 6443.
+Package hyperref Info: PDF/A mode OFF on input line 6448.
+LaTeX Info: Redefining \ref on input line 6488.
+LaTeX Info: Redefining \pageref on input line 6492.
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\atbegshi.sty"
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+)
+\Hy@abspage=\count148
+\c@Item=\count149
+\c@Hfootnote=\count150
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def"
+File: hpdftex.def 2019/11/10 v7.00c Hyperref driver for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\atveryend.sty"
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+)
+\Fld@listcount=\count151
+\c@bookmark@seq@number=\count152
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\uniquecounter.sty"
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip68
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/cleveref\cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `amsthm' support loaded on input line 3026.
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\xspace.sty"
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/algorithm2e\algorithm2e.sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count153
+\algocf@hangindent=\skip69
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count154
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/relsize\relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip70
+\skiplinenumber=\skip71
+\skiprule=\skip72
+\skiphlne=\skip73
+\skiptext=\skip74
+\skiplength=\skip75
+\algomargin=\skip76
+\skipalgocfslide=\skip77
+\algowidth=\dimen262
+\inoutsize=\dimen263
+\inoutindent=\dimen264
+\interspacetitleruled=\dimen265
+\interspacealgoruled=\dimen266
+\interspacetitleboxruled=\dimen267
+\algocf@ruledwidth=\skip78
+\algocf@inoutbox=\box40
+\algocf@inputbox=\box41
+\AlCapSkip=\skip79
+\AlCapHSkip=\skip80
+\algoskipindent=\skip81
+\algocf@nlbox=\box42
+\algocf@hangingbox=\box43
+\algocf@untilbox=\box44
+\algocf@skipuntil=\skip82
+\algocf@capbox=\box45
+\algocf@lcaptionbox=\skip83
+\algoheightruledefault=\skip84
+\algoheightrule=\skip85
+\algotitleheightruledefault=\skip86
+\algotitleheightrule=\skip87
+\c@algocfline=\count155
+\c@algocfproc=\count156
+\c@algocf=\count157
+\algocf@algoframe=\box46
+\algocf@algobox=\box47
+)
+\c@theorem=\count158
+\c@remark=\count159
+ (set.aux)
+\openout1 = `set.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 83.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ot1ptm.fd"
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count160
+\scratchdimen=\dimen268
+\scratchbox=\box48
+\nofMPsegments=\count161
+\nofMParguments=\count162
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count163
+\MPscratchDim=\dimen269
+\MPnumerator=\count164
+\makeMPintoPDFobject=\count165
+\everyMPtoPDFconversion=\toks47
+) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2019/11/24 v2.7 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 442.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 460.
+) ABD: EveryShipout initializing macros
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
+* v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=430.00462pt
+* \textheight=556.47656pt
+* \oddsidemargin=19.8752pt
+* \evensidemargin=19.8752pt
+* \topmargin=-13.87262pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(108.405pt, 397.48499pt, 108.40501pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43pt, 72.27pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=397.48499pt
+* \textheight=650.43pt
+* \oddsidemargin=36.13501pt
+* \evensidemargin=36.13501pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Info: Redefining \microtypecontext on input line 83.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+LaTeX Info: Redefining \showhyphens on input line 83.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/microtype\mt-ptm.cfg
+File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box49
+Package hyperref Info: Link coloring OFF on input line 83.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\refcount.sty"
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\gettitlestring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count166
+)
+LaTeX Info: Redefining \ref on input line 83.
+LaTeX Info: Redefining \pageref on input line 83.
+LaTeX Info: Redefining \nameref on input line 83.
+ (set.out) (set.out)
+\@outlinefile=\write4
+\openout4 = `set.out'.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 93.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 93.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 94.
+<setembedding.pdf, id=23, 392.48007pt x 116.7562pt>
+File: setembedding.pdf Graphic file (type pdf)
+<use setembedding.pdf>
+Package pdftex.def Info: setembedding.pdf  used on input line 118.
+(pdftex.def)             Requested size: 397.48499pt x 118.24704pt.
+ [1
+
+
+{C:/Users/Nielsen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./setembedding.pdf>]
+LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 164.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\omsptm.fd"
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 164.
+<operation.pdf, id=85, 1105.73097pt x 238.49101pt>
+File: operation.pdf Graphic file (type pdf)
+<use operation.pdf>
+Package pdftex.def Info: operation.pdf  used on input line 200.
+(pdftex.def)             Requested size: 397.48499pt x 85.72932pt.
+ [2]
+[3 <./operation.pdf>]
+Underfull \vbox (badness 1983) has occurred while \output is active []
+
+ [4] [5]
+<kl1.pdf, id=180, 529.01637pt x 521.55453pt>
+File: kl1.pdf Graphic file (type pdf)
+<use kl1.pdf>
+Package pdftex.def Info: kl1.pdf  used on input line 464.
+(pdftex.def)             Requested size: 190.79109pt x 188.1017pt.
+<js1.pdf, id=181, 529.01637pt x 522.35085pt>
+File: js1.pdf Graphic file (type pdf)
+<use js1.pdf>
+Package pdftex.def Info: js1.pdf  used on input line 468.
+(pdftex.def)             Requested size: 190.79109pt x 188.38889pt.
+<kl2.pdf, id=182, 529.01637pt x 521.55453pt>
+File: kl2.pdf Graphic file (type pdf)
+<use kl2.pdf>
+Package pdftex.def Info: kl2.pdf  used on input line 473.
+(pdftex.def)             Requested size: 190.79109pt x 188.1017pt.
+<js2.pdf, id=183, 529.01637pt x 521.55453pt>
+File: js2.pdf Graphic file (type pdf)
+<use js2.pdf>
+Package pdftex.def Info: js2.pdf  used on input line 477.
+(pdftex.def)             Requested size: 190.79109pt x 188.1017pt.
+<kl3.pdf, id=184, 529.01637pt x 521.55453pt>
+File: kl3.pdf Graphic file (type pdf)
+<use kl3.pdf>
+Package pdftex.def Info: kl3.pdf  used on input line 482.
+(pdftex.def)             Requested size: 190.79109pt x 188.1017pt.
+<js3.pdf, id=185, 529.01637pt x 521.55453pt>
+File: js3.pdf Graphic file (type pdf)
+<use js3.pdf>
+Package pdftex.def Info: js3.pdf  used on input line 486.
+(pdftex.def)             Requested size: 190.79109pt x 188.1017pt.
+
+
+LaTeX Warning: Float too large for page by 4.01227pt on input line 495.
+
+<kl4.pdf, id=186, 529.01637pt x 521.55453pt>
+File: kl4.pdf Graphic file (type pdf)
+<use kl4.pdf>
+Package pdftex.def Info: kl4.pdf  used on input line 503.
+(pdftex.def)             Requested size: 190.79109pt x 188.1017pt.
+<js4.pdf, id=187, 529.01637pt x 504.02pt>
+File: js4.pdf Graphic file (type pdf)
+<use js4.pdf>
+Package pdftex.def Info: js4.pdf  used on input line 507.
+(pdftex.def)             Requested size: 190.79109pt x 181.77776pt.
+<kl5.pdf, id=188, 529.01637pt x 521.55453pt>
+File: kl5.pdf Graphic file (type pdf)
+<use kl5.pdf>
+Package pdftex.def Info: kl5.pdf  used on input line 512.
+(pdftex.def)             Requested size: 190.79109pt x 188.1017pt.
+<js5.pdf, id=189, 529.01637pt x 521.55453pt>
+File: js5.pdf Graphic file (type pdf)
+<use js5.pdf>
+Package pdftex.def Info: js5.pdf  used on input line 516.
+(pdftex.def)             Requested size: 190.79109pt x 188.1017pt.
+(set.bbl [6]) [7] [8 <./kl1.pdf> <./js1.pdf
+
+pdfTeX warning: pdflatex.exe (file ./js1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./kl2.pdf
+
+pdfTeX warning: pdflatex.exe (file ./kl2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./js2.pdf
+
+pdfTeX warning: pdflatex.exe (file ./js2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./kl3.pdf
+
+pdfTeX warning: pdflatex.exe (file ./kl3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./js3.pdf
+
+pdfTeX warning: pdflatex.exe (file ./js3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [9 <./kl4.pdf> <./js4.pdf
+
+pdfTeX warning: pdflatex.exe (file ./js4.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./kl5.pdf
+
+pdfTeX warning: pdflatex.exe (file ./kl5.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./js5.pdf
+
+pdfTeX warning: pdflatex.exe (file ./js5.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 532.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 532.
+ (set.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 532.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 532.
+Package rerunfilecheck Info: File `set.out' has not changed.
+(rerunfilecheck)             Checksum: A22FD499B2102DFBBB5583B394A5B519;175.
+ ) 
+Here is how much of TeX's memory you used:
+ 24037 strings out of 492450
+ 451774 string characters out of 3129742
+ 558961 words of memory out of 3000000
+ 27702 multiletter control sequences out of 15000+200000
+ 36062 words of font info for 186 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 60i,15n,71p,816b,828s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on set.pdf (9 pages, 598072 bytes).
+PDF statistics:
+ 418 PDF objects out of 1000 (max. 8388607)
+ 50 named destinations out of 1000 (max. 500000)
+ 23137 words of extra memory for PDF output out of 24883 (max. 10000000)
+
