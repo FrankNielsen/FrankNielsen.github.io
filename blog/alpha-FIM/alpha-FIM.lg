@@ -1,15 +1,16 @@
 htfcss: cmti  font-style: italic;
-htfcss: cmtt font-family: monospace;
+htfcss: cmtt font-family: monospace,monospace;
 htfcss: cmmi font-style: italic;
 htfcss: cmmib font-style: italic; font-weight: bold;
 File: alpha-FIM.html
 File: alpha-FIM.css
 File: alpha-FIM.tmp
 Font_Class(1,"1"): <img  src="" alt="" class="%s-%dx-x-%x" />
-Css: p.noindent { text-indent: 0em }
-Css: td p.noindent { text-indent: 0em; margin-top:0em; }
-Css: p.nopar { text-indent: 0em; }
-Css: p.indent{ text-indent: 1.5em }
+Css: p{margin-top:0;margin-bottom:0}
+Css: p.indent{text-indent:0;}
+Css: p + p{margin-top:1em;}
+Css: p + div, p + pre {margin-top:1em;}
+Css: div + p, pre + p {margin-top:1em;}
 Css: @media print {div.crosslinks {visibility:hidden;}}
 Css: a img { border-top: 0; border-left: 0; border-right: 0; }
 Font_Css("4"): .small-caps{font-variant: small-caps; }
@@ -38,7 +39,7 @@ Css: .overline img{ border-top: 1px solid black; }
 Css: td.displaylines {text-align:center; white-space:nowrap;}
 Css: .centerline {text-align:center;}
 Css: .rightline {text-align:right;}
-Css: div.verbatim {font-family: monospace; white-space: nowrap; text-align:left; clear:both; }
+Css: div.verbatim {font-family: monospace,monospace; white-space: nowrap; text-align:left; clear:both; }
 Css: .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
 Css: div.fbox {display:table}
 Css: div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
@@ -71,18 +72,16 @@ Css: td.td01{ padding-left:0pt; padding-right:5pt; }
 Css: td.td10{ padding-left:5pt; padding-right:0pt; }
 Css: td.td11{ padding-left:5pt; padding-right:5pt; }
 Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
-Css: .hline hr, .cline hr{ height : 1px; margin:0px; }
+Css: .hline hr, .cline hr{ height : 0px; margin:0px; }
+Css: .hline td, .cline td{ padding: 0; }
+Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
 Css: .tabbing-right {text-align:right;}
-Css: span.TEX {letter-spacing: -0.125em; }
-Css: span.TEX span.E{ position:relative;top:0.5ex;left:-0.0417em;}
-Css: a span.TEX span.E {text-decoration: none; }
-Css: span.LATEX span.A{ position:relative; top:-0.5ex; left:-0.4em; font-size:85%;}
-Css: span.LATEX span.TEX{ position:relative; left: -0.4em; }
 Css: div.float, div.figure {margin-left: auto; margin-right: auto;}
 Css: div.float img {text-align:center;}
 Css: div.figure img {text-align:center;}
-Css: .marginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
-Css: .marginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+Css: .marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+Css: .marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+Css: .reversemarginpar{float:left;}
 Css: table.equation {width:100%;}
 Css: .equation td{text-align:center; }
 Css: td.equation { margin-top:1em; margin-bottom:1em; } 
@@ -124,7 +123,7 @@ Css: .equation td{text-align:center; }
 Css: .equation-star td{text-align:center; }
 Css: table.equation-star { width:100%; }
 Css: table.equation { width:100%; }
-Css: table.align, table.alignat, table.xalignat, table.xxalignat, table.flalign {width:100%; margin-left:5%; white-space: nowrap;}
+Css: table.align, table.alignat, table.xalignat, table.xxalignat, table.flalign {width:95%; margin-left:5%; white-space: nowrap;}
 Css: table.align-star, table.alignat-star, table.xalignat-star, table.flalign-star {margin-left:auto; margin-right:auto; white-space: nowrap;}
 Css: td.align-label { width:5%; text-align:center; }
 Css: td.align-odd { text-align:right; padding-right:0.3em;}
@@ -146,11 +145,13 @@ Css: div.gather-star {text-align:center;}
 --- needs --- alpha-FIM.idv[18] ==> alpha-FIM10x.png ---
 --- needs --- alpha-FIM.idv[19] ==> alpha-FIM11x.png ---
 --- needs --- alpha-FIM.idv[20] ==> alpha-FIM12x.png ---
---- needs --- alpha-FIM.idv[21] ==> alpha-FIM13x.png ---
---- needs --- alpha-FIM.idv[23] ==> alpha-FIM14x.png ---
---- needs --- alpha-FIM.idv[24] ==> alpha-FIM15x.png ---
---- needs --- alpha-FIM.idv[25] ==> alpha-FIM16x.png ---
---- needs --- alpha-FIM.idv[26] ==> alpha-FIM17x.png ---
+--- needs --- alpha-FIM.idv[22] ==> alpha-FIM13x.png ---
+--- needs --- alpha-FIM.idv[24] ==> alpha-FIM14x.png ---
+--- needs --- alpha-FIM.idv[25] ==> alpha-FIM15x.png ---
+--- needs --- alpha-FIM.idv[26] ==> alpha-FIM16x.png ---
+--- needs --- alpha-FIM.idv[27] ==> alpha-FIM17x.png ---
+--- needs --- alpha-FIM.idv[29] ==> alpha-FIM18x.png ---
+--- needs --- alpha-FIM.idv[30] ==> alpha-FIM19x.png ---
 --- characters ---
 Font("cmr","10","10","109")
 Font("cmr","8","8","100")
@@ -159,14 +160,14 @@ Font("cmmi","10","10","109")
 Font("cmmi","8","8","100")
 Font("cmmi","6","6","100")
 Font("cmsy","10","10","109")
---- needs --- alpha-FIM.idv[28] ==> cmsy10-58.png ---
+--- needs --- alpha-FIM.idv[32] ==> cmsy10-58.png ---
 Font("cmsy","8","8","100")
---- needs --- alpha-FIM.idv[29] ==> cmsy8-58.png ---
+--- needs --- alpha-FIM.idv[33] ==> cmsy8-58.png ---
 Font("cmsy","6","6","100")
 Font("cmex","10","10","109")
 Font("msbm","10","10","109")
 Font("cmr","17","17","100")
 Font("cmr","12","12","100")
 Font("cmmi","12","12","144")
-Font("cmtt","10","10","109")
+Font("cmtt","12","12","100")
 Font("cmti","10","10","109")

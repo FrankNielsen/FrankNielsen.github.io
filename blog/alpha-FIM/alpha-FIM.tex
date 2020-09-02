@@ -1,5 +1,8 @@
 % Frank.Nielsen@acm.org
 
+% Can we choose alpha so that the FIM is easier to calculate (eg. Cauchy).
+% meaning derivation are easier
+
 \documentclass[11pt]{article}
 \usepackage{fullpage,amssymb,amsmath,hyperref,url}
 
@@ -9,41 +12,44 @@
 \def\calX{\mathcal{X}}
 \def\bbR{\mathbb{R}}
 \def\Var{\mathrm{Var}}
+\def\leftsup#1{{}^{#1}}
 
 
 \title{The $\alpha$-representations of the Fisher Information Matrix\\ --- On equivalent expressions of the FIM ---}
-\date{19 September 2017}
-\author{Frank Nielsen}
+
+\date{19 September 2017\\ Revised September 2020}
+
+\author{Frank Nielsen\\ {\tt Frank.Nielsen@acm.org}}
 
 \begin{document}
 \maketitle
 
 
-This column is also available in pdf: filename \url{alpha-FIM.pdf} 
-\vskip 0.5cm
+%This column is also available in pdf: filename \url{alpha-FIM.pdf} 
+%\vskip 0.5cm
 
-The Fisher Information Matrix~\cite{IG-2014} (FIM) for a family of {\em parametric} probability models $\{p(x;\theta)\}_\theta$ 
-(densities $p(x;\theta)$ expressed with respect to a base measure $\nu$) indexed by
- a $D$-dimensional parameter vector $\theta\eqdef(\theta^1,\ldots,\theta^D)$  is originally defined by
+The {\em Fisher Information Matrix}~\cite{IG-2014} (FIM) for a family of {\em parametric} probability models $\{p(x;\theta)\}_{\theta\in\Theta}$ 
+(densities $p(x;\theta)$ expressed with respect to a positive base measure $\nu$) indexed by
+ a $D$-dimensional parameter vector $\theta\eqdef(\theta^1,\ldots,\theta^D)$  is historically defined by
 
 \begin{equation}\label{eq:FIM1}
-I(\theta) \eqdef (I_{ij}(\theta)),
-\quad I_{ij}(\theta) \eqdef E_{p(x;\theta)}[\partial_i l(x;\theta)\partial_j l(x;\theta)],
+I(\theta) \eqdef [I_{ij}(\theta)],
+\quad I_{ij}(\theta) \eqdef E_{p(x;\theta)}\left[\partial_i l(x;\theta)\partial_j l(x;\theta)\right],
 \end{equation}
-where $l(x;\theta)\eqdef\log p(x;\theta)$ is the log-likelihood function, and 
+where $l(x;\theta)\eqdef\log p(x;\theta)$ is the {\em log-likelihood function}, and 
 $\partial_i \eqnota \frac{\partial}{\partial\theta^i}$ (by notational convention).
-The FIM is a $D\times D$ positive semi-definite matrix for a $D$-order family.
+The FIM is a $D\times D$ positive semi-definite matrix for a $D$-order parametric family.
 
 The FIM  is a cornerstone in statistics and occurs in many places, like for example the celebrated
- Cram\'er-Rao lower bound~\cite{CR-2013} for an unbiased estimator $\hat\theta$
+ {\em Cram\'er-Rao lower bound}~\cite{CR-2013} for an unbiased estimator $\hat\theta$:
 $$
 \Var_{p(x;\theta)}[\hat{\theta}]\succeq I^{-1}(\theta),
 $$
-where $\succeq$ denotes the L\"owner ordering of positive semi-definite matrices: 
+where $\succeq$ denotes the L\"owner @artial ordering of positive semi-definite matrices: 
 $A\succeq B$  iff. $A-B\succ 0$ is  positive semi-definite.
-Another use of the FIM is in gradient descent method for deep learning using the natural gradient~\cite{RFIM-2017}.
+Another use of the FIM is in gradient descent method using the {\em natural gradient} (see~\cite{RFIM-2017}  for its use in deep learning).
 
-Yet, it is common to encounter  another equivalent expression of the FIM in the litterature~\cite{CR-2013,IG-2014}
+Yet, it is common to encounter another equivalent expression of the FIM in the literature~\cite{CR-2013,IG-2014}:
 
 \begin{equation}\label{eq:FIM0}
 I_{ij}'(\theta) \eqdef 4\int \partial_i\sqrt{p(x;\theta)}\partial_j\sqrt{p(x;\theta)}\dnu(x)
@@ -52,8 +58,8 @@ This form of the FIM is well-suited to prove that the FIM is always positive sem
 
 
 
-It turns out that one can define a family of equivalent representations of the FIM using the $\alpha$-embedding of the parametric family.
-We define the $\alpha$-representation of densities $l^{(\alpha)}(x;\theta):=k_\alpha(p(x;\theta))$ with
+It turns out that one can define a family of equivalent representations of the FIM using the {\em $\alpha$-embeddings} of the parametric family.
+We define the {\em $\alpha$-representation} of densities $l^{(\alpha)}(x;\theta):=k_\alpha(p(x;\theta))$ with
 
 
 \begin{equation}\label{eq:alphaembedding}
@@ -65,9 +71,9 @@ k_\alpha(u) \eqdef \left\{
 \right.
 \end{equation}
 
-The function $l^{(\alpha)}(x;\theta)$ is called the $\alpha$-likelihood function.
+The function $l^{(\alpha)}(x;\theta)$ is called the {\em $\alpha$-likelihood function}.
 
-The $\alpha$-representation of the FIM is
+The $\alpha$-representation of the FIM (or $\alpha$-FIM for short) is
 \begin{equation}\label{eq:FIMalpha}
 \boxed{I_{ij}^{(\alpha)}(\theta) \eqdef \int \partial_i l^{(\alpha)}(x;\theta)\partial_j l^{(-\alpha)}(x;\theta) \dnu(x)}
 \end{equation}
@@ -101,16 +107,14 @@ is called the square root representation.
 
 Note that $I_{ij}(\theta)=E[\partial_i l\partial_j l]=\int p\partial_i l\partial_j l\dnu(x)=\int \partial_i p\partial_j l\dnu(x)=I_{ij}^{(1)}(\theta)$ since $\partial_i l=\frac{\partial_i p}{p}$
 
-In information geometry~\cite{IG-2014}, $\{\partial_i l^{(\alpha)}\}_i$ plays the role of tangent vectors, the $\alpha$-scores.
+In information geometry~\cite{IG-2014}, $\{\partial_i l^{(\alpha)}\}_i$ plays the role of tangent vectors, the {\em $\alpha$-scores}.
 Geometrically speaking, the tangent plane $T_{p(x;\theta)}$ can be described using any $\alpha$-base. 
 The statistical manifold $M=\{p(x;\theta)\}_\theta$ is imbedded into the function space $\bbR^{\calX}$, where $\calX$ denotes the support of the densities.
 
-
-
-Under regular conditions~\cite{CR-2013,IG-2014}, the $\alpha$-representation of the FIM can further be rewritten as
-$$
+Under regular conditions~\cite{CR-2013,IG-2014}, the $\alpha$-representation of the FIM for $\alpha\not=-1$ can further be rewritten as
+\begin{equation}
 I_{ij}^{(\alpha)}(\theta)=  -\frac{2}{1+\alpha} \int p(x;\theta)^{\frac{1+\alpha}{2}} \partial_i\partial_j l^{(\alpha)}(x;\theta)\dnu(x).
-$$
+\end{equation}
 
 Since we have 
 $$
@@ -120,7 +124,7 @@ $$
 $$
 it follows that 
 $$
-I_{ij}^{(\alpha)}(\theta)= -\frac{2}{1+\alpha} \left(-I_{ij}^{(\alpha)}(\theta)+ \frac{1-\alpha}{2} I_{ij}^{(\alpha)}\right)=I_{ij}(\theta).
+I_{ij}^{(\alpha)}(\theta)= -\frac{2}{1+\alpha} \left(-I_{ij}(\theta)+ \frac{1-\alpha}{2} I_{ij}\right)=I_{ij}(\theta).
 $$
 
 
@@ -131,7 +135,7 @@ $$
 
 In particular, when the family is an exponential family~\cite{EF-2009} with cumulant function $F(\theta)$, we have
 $$
-I(\theta)=\nabla^2 F(\theta).
+I(\theta)=\nabla^2 F(\theta)\succ 0.
 $$
 
 Similarly, the coefficients of the $\alpha$-connection can be expressed using the $\alpha$-representation as
@@ -142,9 +146,20 @@ $$
 The Riemannian metric tensor $g_{ij}$ (a geometric object) can be expressed 
 in matrix form $I_{ij}^{(\alpha)}(\theta)$ using the $\alpha$-base, and this tensor is called the Fisher metric tensor.
 
+The FIM may further be represented using the more general $(\rho,\tau)$-monotone embeddings~\cite{naudts2018rho}:
+Let $\rho$ and $\tau$ be two strictly increasing functions, and $f$ a strictly convex function such that $f'(\rho(u))=\tau(u)$ (with $f^*$ denoting its convex conjugate).
+Let us write $p_\theta(x)=p(x;\theta)$. Then we have $\leftsup{\rho,\tau}g(\theta)=[\leftsup{\rho,\tau}g_{ij}(\theta)]_{ij}$ with
+\begin{eqnarray}
+\leftsup{\rho,\tau}g_{ij}(\theta) &=& \int \left(\partial_i\rho(p_\theta(x))\right)   \left(\partial_j\tau(p_\theta(x))\right) \dnu(x),\\
+&=& \int f''(\rho(p_\theta(x)))  \left(\partial_i\rho(p_\theta(x))\right) \left(\partial_j\rho(p_\theta(x))\right)\dnu(x),\\
+&=& \int (f^*)''(\tau(p_\theta(x))) \left(\partial_i\tau(p_\theta(x))\right) \left(\partial_j\tau(p_\theta(x))\right) \dnu(x),\\
+&=& \int \frac{1}{\rho'(p_\theta(x)) \tau'(p_\theta(x)) }  \left(\partial_i p_\theta(x) \right) \left(\partial_j p_\theta(x) \right)\dnu(x).
+\end{eqnarray} 
+
+This last equation shows that there is a gauge function freedom $\Psi(u):=\frac{1}{\rho'(u) \tau'(u) }$ when calculating the FIM.
 
 \vskip 1cm
-Initially created 19th September 2017 (last update \today).
+Initially created 19th September 2017 (last updated \today).
 
 \bibliographystyle{plain}
 \bibliography{alphaFIMBib}
