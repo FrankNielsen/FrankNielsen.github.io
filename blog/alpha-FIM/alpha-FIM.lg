@@ -151,8 +151,7 @@ Css: div.gather-star {text-align:center;}
 --- needs --- alpha-FIM.idv[26] ==> alpha-FIM16x.png ---
 --- needs --- alpha-FIM.idv[27] ==> alpha-FIM17x.png ---
 --- needs --- alpha-FIM.idv[29] ==> alpha-FIM18x.png ---
---- needs --- alpha-FIM.idv[30] ==> alpha-FIM19x.png ---
---- needs --- alpha-FIM.idv[31] ==> alpha-FIM20x.png ---
+--- needs --- alpha-FIM.idv[31] ==> alpha-FIM19x.png ---
 --- characters ---
 Font("cmr","10","10","109")
 Font("cmr","8","8","100")

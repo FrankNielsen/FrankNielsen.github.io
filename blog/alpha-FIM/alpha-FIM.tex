@@ -14,6 +14,8 @@
 \def\Var{\mathrm{Var}}
 \def\leftsup#1{{}^{#1}}
 
+\sloppy
+
 
 \title{The $\alpha$-representations of the Fisher Information Matrix\\ --- On gauge freedom of the FIM ---}
 
@@ -146,22 +148,26 @@ $$
 The Riemannian metric tensor $g_{ij}$ (a geometric object) can be expressed 
 in matrix form $I_{ij}^{(\alpha)}(\theta)$ using the $\alpha$-base, and this tensor is called the Fisher metric tensor.
 
-The FIM may further be represented using the more general $(\rho,\tau)$-monotone embeddings~\cite{naudts2018rho}:
+Gauge freedom of the Riemannian metric tensor has been investigated under the framework of  $(\rho,\tau)$-monotone embeddings~\cite{naudts2018rho} in information geometry:
 Let $\rho$ and $\tau$ be two strictly increasing functions, and $f$ a strictly convex function such that $f'(\rho(u))=\tau(u)$ (with $f^*$ denoting its convex conjugate).
-Let us write $p_\theta(x)=p(x;\theta)$. Then we have $\leftsup{\rho,\tau}g(\theta)=[\leftsup{\rho,\tau}g_{ij}(\theta)]_{ij}$ with
-\begin{eqnarray}
-\leftsup{\rho,\tau}g_{ij}(\theta) &=& \int \left(\partial_i\rho(p_\theta(x))\right)   \left(\partial_j\tau(p_\theta(x))\right) \dnu(x),\\
-&=& \int f''(\rho(p_\theta(x)))  \left(\partial_i\rho(p_\theta(x))\right) \left(\partial_j\rho(p_\theta(x))\right)\dnu(x),\\
-&=& \int (f^*)''(\tau(p_\theta(x))) \left(\partial_i\tau(p_\theta(x))\right) \left(\partial_j\tau(p_\theta(x))\right) \dnu(x),\\
-&=& \int \frac{1}{\rho'(p_\theta(x)) \tau'(p_\theta(x)) }  \left(\partial_i p_\theta(x) \right) \left(\partial_j p_\theta(x) \right)\dnu(x).
-\end{eqnarray} 
+Let us write $p_\theta(x)=p(x;\theta)$. 
 
-This last equation shows that there is a gauge function freedom $\Psi(u):=\frac{1}{\rho'(u) \tau'(u) }$ when calculating the FIM.
-
-The metric tensor can be derived~\cite{nielsen2018elementary} from the $(\rho,\tau)$-divergence:
+The $(\rho,\tau)$-metric tensor  $\leftsup{\rho,\tau}g(\theta)=[\leftsup{\rho,\tau}g_{ij}(\theta)]_{ij}$ can be derived~\cite{nielsen2018elementary} from the $(\rho,\tau)$-divergence:
 \begin{equation}
 D_{\rho,\tau}(p:q)=\int \left( f(\rho(p(x))) + f^*(\tau(q(x))) - \rho(p(x))\tau(q(x)) \right)  \dnu(x)
 \end{equation}
+
+We have: 
+\begin{eqnarray}
+\leftsup{\rho,\tau}g_{ij}(\theta) &=& \int \left(\partial_i\rho(p_\theta(x))\right)   \left(\partial_j\tau(p_\theta(x))\right) \dnu(x),\\
+&=& \int \rho'(p_\theta(x)) \tau'(p_\theta(x))  \left(\partial_i p_\theta(x) \right) \left(\partial_j p_\theta(x) \right)\dnu(x),\\
+&=& \int f''(\rho(p_\theta(x)))  \left(\partial_i\rho(p_\theta(x))\right) \left(\partial_j\rho(p_\theta(x))\right)\dnu(x),\\
+&=& \int (f^*)''(\tau(p_\theta(x))) \left(\partial_i\tau(p_\theta(x))\right) \left(\partial_j\tau(p_\theta(x))\right) \dnu(x).
+\end{eqnarray} 
+
+The second equation shows that there is a gauge function freedom $\rho'(u) \tau'(u)$ when calculating the  $(\rho,\tau)$-Riemannian metric.
+
+
 
 
 \vskip 1cm
