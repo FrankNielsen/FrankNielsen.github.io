@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=latex 2020.8.7)  2 SEP 2020 12:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=latex 2020.8.7)  2 SEP 2020 12:52
 entering extended mode
 **\makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx\HCode\def\HCod
 e##1{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.{\g
@@ -673,14 +673,15 @@ l. 142 Writing alpha-FIM.idv[18] (alpha-FIM17x.png)
  [7]
 l. 152 Writing alpha-FIM.idv[19] (alpha-FIM18x.png)
 l. 159 Writing alpha-FIM.idv[20] (alpha-FIM19x.png)
+l. 162 Writing alpha-FIM.idv[21] (alpha-FIM20x.png)
  (alpha-FIM.bbl [8]) [9] (alpha-FIM.aux) ) 
 Here is how much of TeX's memory you used:
- 9599 strings out of 492451
- 128627 string characters out of 3129770
- 342046 words of memory out of 3000000
- 13748 multiletter control sequences out of 15000+200000
+ 9602 strings out of 492451
+ 128507 string characters out of 3129770
+ 342034 words of memory out of 3000000
+ 13751 multiletter control sequences out of 15000+200000
  13075 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,10n,37p,810b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,10n,37p,810b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on alpha-FIM.dvi (9 pages, 35776 bytes).
+Output written on alpha-FIM.dvi (9 pages, 37120 bytes).

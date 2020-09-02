@@ -152,6 +152,7 @@ Css: div.gather-star {text-align:center;}
 --- needs --- alpha-FIM.idv[27] ==> alpha-FIM17x.png ---
 --- needs --- alpha-FIM.idv[29] ==> alpha-FIM18x.png ---
 --- needs --- alpha-FIM.idv[30] ==> alpha-FIM19x.png ---
+--- needs --- alpha-FIM.idv[31] ==> alpha-FIM20x.png ---
 --- characters ---
 Font("cmr","10","10","109")
 Font("cmr","8","8","100")
@@ -160,9 +161,9 @@ Font("cmmi","10","10","109")
 Font("cmmi","8","8","100")
 Font("cmmi","6","6","100")
 Font("cmsy","10","10","109")
---- needs --- alpha-FIM.idv[32] ==> cmsy10-58.png ---
+--- needs --- alpha-FIM.idv[33] ==> cmsy10-58.png ---
 Font("cmsy","8","8","100")
---- needs --- alpha-FIM.idv[33] ==> cmsy8-58.png ---
+--- needs --- alpha-FIM.idv[34] ==> cmsy8-58.png ---
 Font("cmsy","6","6","100")
 Font("cmex","10","10","109")
 Font("msbm","10","10","109")

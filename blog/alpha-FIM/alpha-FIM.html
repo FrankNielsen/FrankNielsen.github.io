@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/html4/loose.dtd">  
 <html > 
 <head><title>The &alpha;-representations of the Fisher Information Matrix
-&#8212; On equivalent expressions of the FIM &#8212;</title> 
+&#8212; On gauge freedom of the FIM &#8212;</title> 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
 <meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
@@ -18,7 +18,7 @@
                                                                                          
 
 <h2 class="titleHead">The &alpha;-representations of the Fisher Information Matrix<br />
-&#8212; On equivalent expressions of the FIM &#8212;</h2>
+&#8212; On gauge freedom of the FIM &#8212;</h2>
       <div class="author" ><span 
 class="cmr-12">Frank Nielsen</span>
 <br /><span 
@@ -101,7 +101,7 @@ class="cmsy-10x-x-109">&#x227B; </span>0 is
 positive semi-definite. Another use of the FIM is in gradient descent method using the <span 
 class="cmti-10x-x-109">natural gradient</span>
 (see&#x00A0;<span class="cite">[<a 
-href="#XRFIM-2017">5</a>]</span> for its use in deep learning).
+href="#XRFIM-2017">6</a>]</span> for its use in deep learning).
 <!--l. 52--><p class="indent" >   Yet, it is common to encounter another equivalent expression of the FIM in the literature&#x00A0;<span class="cite">[<a 
 href="#XCR-2013">3</a>,&#x00A0;<a 
 href="#XIG-2014">1</a>]</span>:
@@ -368,7 +368,7 @@ src="alpha-FIM15x.png" alt=" (1)           2
 Iij (&#x03B8;) = &minus; E [&nabla; logp(x;&#x03B8;)].
 " class="math-display" ></center>
 <!--l. 136--><p class="indent" >   In particular, when the family is an exponential family&#x00A0;<span class="cite">[<a 
-href="#XEF-2009">4</a>]</span> with cumulant function <span 
+href="#XEF-2009">5</a>]</span> with cumulant function <span 
 class="cmmi-10x-x-109">F</span>(<span 
 class="cmmi-10x-x-109">&#x03B8;</span>), we
 have
@@ -450,7 +450,21 @@ class="cmmi-10x-x-109">u</span>) := <img
 src="alpha-FIM19x.png" alt="---1----
 &rho;&prime;(u)&tau;&prime;(u)"  class="frac" align="middle"> when calculating the
 FIM.
-<!--l. 162--><p class="indent" >   Initially created 19th September 2017 (last updated September 2, 2020).
+<!--l. 161--><p class="indent" >   The metric tensor can be derived&#x00A0;<span class="cite">[<a 
+href="#Xnielsen2018elementary">4</a>]</span> from the (<span 
+class="cmmi-10x-x-109">&rho;,&tau;</span>)-divergence:
+   <table 
+class="equation"><tr><td><a 
+ id="x1-8r10"></a>
+   <center class="math-display" >
+<img 
+src="alpha-FIM20x.png" alt="            &int;
+D&rho;,&tau;(p : q) =  (f(&rho;(p(x)))+ f&lowast;(&tau;(q(x)))&minus; &rho;(p(x))&tau;(q(x )))d&nu; (x )
+" class="math-display" ></center></td><td class="equation-label">(10)</td></tr></table>
+<!--l. 164--><p class="nopar" >
+                                                                                         
+                                                                                         
+<!--l. 168--><p class="indent" >   Initially created 19th September 2017 (last updated September 2, 2020).
    <h3 class="likesectionHead"><a 
  id="x1-1000"></a>References</h3>
 <!--l. 1--><p class="noindent" >
@@ -466,8 +480,6 @@ class="cmti-10x-x-109">Geometric Modeling in Probability and Statistics</span>. 
  id="Xnaudts2018rho"></a>Jan  Naudts  and  Jun  Zhang.   Rho&#8211;tau  embedding  and  gauge  freedom  in  information
    geometry. <span 
 class="cmti-10x-x-109">Information geometry</span>, 1(1):79&#8211;115, 2018.
-                                                                                         
-                                                                                         
    </p>
    <p class="bibitem" ><span class="biblabel">
  [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
@@ -478,12 +490,19 @@ class="cmti-10x-x-109">arXiv:1301.3578</span>, 2013.
    </p>
    <p class="bibitem" ><span class="biblabel">
  [4]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xnielsen2018elementary"></a>Frank  Nielsen.   An  elementary  introduction  to  information  geometry.   <span 
+class="cmti-10x-x-109">arXiv  preprint</span>
+   <span 
+class="cmti-10x-x-109">arXiv:1808.08271</span>, 2018.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [5]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XEF-2009"></a>Frank Nielsen and Vincent Garcia. Statistical exponential families: A digest with flash cards.
    <span 
 class="cmti-10x-x-109">arXiv preprint arXiv:0911.4863</span>, 2009.
    </p>
    <p class="bibitem" ><span class="biblabel">
- [5]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ [6]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XRFIM-2017"></a>Ke&#x00A0;Sun and Frank Nielsen.  Relative Fisher information and natural gradient for learning
    large modular models.  In Doina Precup and Yee&#x00A0;Whye Teh, editors, <span 
 class="cmti-10x-x-109">Proceedings of the 34th</span>
