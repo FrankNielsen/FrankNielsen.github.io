@@ -1,0 +1,124 @@
+\documentclass{article}
+
+\usepackage{fullpage,url}
+
+\usepackage{color}
+\definecolor{lightgray}{gray}{0.75}
+
+\newcommand\greybox[1]{%
+  \vskip\baselineskip%
+  \par\noindent\colorbox{lightgray}{%
+    \begin{minipage}{0.95\textwidth}#1\end{minipage}%
+  }%
+  \vskip\baselineskip%
+}
+
+
+\title{Some contributions to the theory of distances}
+
+\author{Frank Nielsen\\ Sony Computer Science Laboratories Inc., Tokyo, Japan\\ E-mail:{\tt Frank.Nielsen@acm.org}}
+
+\def\KL{\mathrm{KL}}
+\def\inner#1#2{\langle #1,#2\rangle}
+\def\calX{\mathcal{X}}
+\def\dmu{\mathrm{d}\mu}
+
+\begin{document}
+
+\maketitle
+
+%%%
+\section{Calculating statistical distances, relative entropies, cross-entropies and entropies }
+%%%%
+
+\begin{itemize}
+
+\item {\bf Cumulant-free closed-form formulas for some common (dis)similarities between densities of an exponential family}  (\url{https://arxiv.org/abs/2003.02469})
+
+\greybox{
+Since the Jensen and Bregman convex generators $F(\theta)$ are defined modulo an {\it affine term}
+ $\inner{a}{\theta}+\mathrm{b}$ (i.e., $J_F(\theta_1:\theta_2)=J_G(\theta_1:\theta_2)$ and $B_F(\theta_1:\theta_2)=B_{G}(\theta_1:\theta_2)$ with $G(\theta)=F(\theta)+\inner{a}{\theta}+\mathrm{b}$), we can choose 
+the equivalent generator $G(\theta):=-\log p_\theta(x)=F(\theta)-\inner{t(x)}{\theta}-k(x)$, and express the Kullback-Leibler divergence, the  skewed Bhattacharrya divergences, the $\alpha$-divergences and many other statistical distances between densities of a natural exponential family $\left\{p_\theta(x)=1_{\calX}(x)\ \exp\left(\inner{t(x)}{\theta}-F(\theta)+k(x)\right)\right\}$ without {\it explicitly} using the log-normalizer $F(\theta)=\log \left(\int_{x\in\calX} \exp\left(\inner{t(x)}{\theta}+k(x)\right)\dmu(x)\right)$ of the exponential family.
+
+\noindent For example, the Bhattacharyya coefficient is expressed as:
+
+\begin{eqnarray*}
+\rho[p_{\theta_1},p_{\theta_2}]  &:=& \int_{x\in\calX} \sqrt{p_{\theta_1}(x)\ p_{\theta_2}(x)} \dmu(x),\\
+&=& \exp(-J_F(\theta_1:\theta_2)) = \exp(-J_{-\log p_\theta(\omega)}(\theta_1:\theta_2)), \quad\forall\ \omega\in\calX,\\
+&=& \frac{p_{\bar\theta}(\omega)}{\sqrt{p_{\theta_1}(\omega)p_{\theta_2}(\omega)}},\quad\forall\ \omega\in\calX,
+\end{eqnarray*}
+where $\bar\theta:=\frac{\theta_1+\theta_2}{2}$.
+For generic exponential families parameterized by $\lambda(\theta)$ (i.e., not in natural form), we need to explicit the mid-parameter 
+ $\bar\lambda:=\lambda(\bar\theta)$ from the {\it partial} factorization of the exponential family (the $\lambda$-mean corresponding to the $\theta$-mean).
+
+For the Kullback-Leibler divergence, using the fact that $D_\KL[p_{\theta_1}:p_{\theta_2}]=B_F[\theta_2:\theta_1]=B_G[\theta_2:\theta_1]$ (better written as $D_\KL^*[p_{\theta_2}:p_{\theta_1}]=B_F[\theta_2:\theta_1]$ where $D_\KL^*$ is the reverse divergence) with the equivalent generator $G(\theta)=-\log p_\theta(x)$, we get
+$$
+D_\KL[p_{\theta_1}:p_{\theta_2}] = 
+\log\left( \frac{p_{\theta_1}(\omega)}{p_{\theta_2}(\omega)} \right)
++ (\theta_2-\theta_1)^\top (t(\omega)-\nabla F(\theta_1)),\quad
+\forall\ \omega\in\calX.
+$$
+
+Choosing $\omega$ such that $t(\omega)=\nabla F(\theta_1)=E_{p_{\theta_1}}[t(x)]=:\eta_1$, 
+we express the KLD as a log density ratio: $D_\KL[p_{\theta_1}:p_{\theta_2}]=\log\left( \frac{p_{\theta_1}(\omega)}{p_{\theta_2}(\omega)} \right)$. In general we may need several $\omega_i$'s so that $\frac{1}{s}\sum_i t(\omega_i)=\nabla F(\theta_1)=\eta_1$.
+
+For example, we can write the KLD between two multivariate normal distributions as
+\begin{eqnarray*}
+D_\KL[p_{\mu_1,\Sigma_1}:p_{\mu_2,\Sigma_2}] &=& 
+\frac{1}{2d} \sum_{i=1}^{d}
+\left( \log\left( 
+\frac{p_{\mu_1,\Sigma_1}\left(\mu_1-\sqrt{d\lambda_i}e_i\right)}{p_{\mu_2,\Sigma_2}\left(\mu_1-\sqrt{d\lambda_i}e_i\right) }
+\right)
++
+\log\left( 
+\frac{p_{\mu_1,\Sigma_1}\left(\mu_1+\sqrt{d\lambda_i}e_i\right)}{p_{\mu_2,\Sigma_2}\left(\mu_1+\sqrt{d\lambda_i}e_i\right)} 
+  \right)
+	\right),
+\end{eqnarray*}
+where $[\sqrt{d\Sigma_1}]_{\cdot,i}=\sqrt{\lambda_i}e_i$ denotes the vector extracted from the $i$-th column 
+of the square root matrix of $d\Sigma_1$.
+}
+
+\end{itemize}
+
+\end{document}
+
+\item {\bf A note on Onicescu's informational energy and correlation coefficient in exponential families}
+
+
+Get closed-form expressions for exponential families with a natural parameter cone space
+
+\item {\bf On power chi expansions of $f$-divergences}. arXiv:1903.05818
+      {\bf On the chi square and higher-order chi distances for approximating $f$-divergences}, IEEE SPL 2013
+ f-divergence using higher order chi square divergences which have closed-form expressions for affine natural parameter space
+
+\item {\bf On the Kullback-Leibler divergence between location-scale densities}. arXiv:1904.10428  
+use the group structure of location-scale family paramaters. Highlight some geometric properties 
+
+
+\item {\bf A closed-form formula for the Kullback-Leibler divergence between Cauchy distributions}, arXiv:1905.10965  
+The KLD between Cauchy distributions is remarkably symmetric!
+
+\item {\bf MaxEnt Upper Bounds for the Differential Entropy of Univariate Continuous Distributions}. IEEE SPL 2017
+Å® Simple trick to bound the entropy of mixtures by a series of bounds using the entropy of maxent distributions
+
+\item {\bf  Patch Matching with Polynomial Exponential Families and Projective Divergences}. SISAP 2016: 109-116 $\gamma$-divergence are projective divergences (=invariant to scale) which can be applied to unnormalized densities, and tend to KLD!
+
+\item {\bf  Optimal transport vs. Fisher-Rao distance between copulas for clustering multivariate time series}. IEEE SSP 2016: 1-5
+Å® Which distance between dependent random-variables: Optimal transport compared with information geometry
+
+\item {\bf An Information-Geometric Characterization of Chernoff Information}. IEEE SPL, 2013
+Chernoff distance between exponential families are Bregman divergences. Can be calculated exactly for uni-order families
+
+\item {\bf On R?nyi and Tsallis entropies and divergences for exponential families}. arXiv: 1105.3259  
+{\bf A closed-form expression for the Sharma-Mittal entropy of exponential families}. Journal of Physics A: Math. and Theo., 2011
+\item {\bf  Entropies and cross-entropies of exponential families}. IEEE ICIP 2010 Å® with examples (Poisson, Rayleigh, etc.)
+
+\item {\bf Earth Mover Distance on superpixels}. IEEE ICIP 2010 Optimal transport with topological constraints
+
+\end{itemize}
+
+\bibliographystyle{plain}
+\bibliography{FrankNielsenDistancesBIB}
+
+\end{document}
