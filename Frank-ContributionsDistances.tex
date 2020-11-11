@@ -36,11 +36,17 @@
 \item {\bf Cumulant-free closed-form formulas for some common (dis)similarities between densities of an exponential family}  (\url{https://arxiv.org/abs/2003.02469})
 
 \greybox{
+The  Bregman and Jensen divergences are defined for a strictly convex generator $F$ by:
+\begin{eqnarray}
+B_F(\theta_1:\theta_2) &:=& F(\theta_1)-F(\theta_2)-(\theta_1-\theta_2)^\top \nabla F(\theta_2)\\
+J_F(\theta_1:\theta_2) &:=& \frac{F(\theta_1)+F(\theta_2)}{2} - F\left(\frac{\theta_1+\theta_2}{2}\right).
+\end{eqnarray}
+
 Since the Jensen and Bregman convex generators $F(\theta)$ are defined modulo an {\it affine term}
  $\inner{a}{\theta}+\mathrm{b}$ (i.e., $J_F(\theta_1:\theta_2)=J_G(\theta_1:\theta_2)$ and $B_F(\theta_1:\theta_2)=B_{G}(\theta_1:\theta_2)$ with $G(\theta)=F(\theta)+\inner{a}{\theta}+\mathrm{b}$), we can choose 
-the equivalent generator $G(\theta):=-\log p_\theta(x)=F(\theta)-\inner{t(x)}{\theta}-k(x)$, and express the Kullback-Leibler divergence, the  skewed Bhattacharrya divergences, the $\alpha$-divergences and many other statistical distances between densities of a natural exponential family $\left\{p_\theta(x)=1_{\calX}(x)\ \exp\left(\inner{t(x)}{\theta}-F(\theta)+k(x)\right)\right\}$ without {\it explicitly} using the log-normalizer $F(\theta)=\log \left(\int_{x\in\calX} \exp\left(\inner{t(x)}{\theta}+k(x)\right)\dmu(x)\right)$ of the exponential family.
+the equivalent generator $G(\theta):=-\log p_\theta(x)=F(\theta)-\inner{t(x)}{\theta}-k(x)$ (i.e., $a=-t(x)$) and $b=-k(x)$, and express the Kullback-Leibler divergence, the  skewed Bhattacharrya divergences, the $\alpha$-divergences and many other statistical distances between densities of a natural exponential family $\left\{p_\theta(x)=1_{\calX}(x)\ \exp\left(\inner{t(x)}{\theta}-F(\theta)+k(x)\right)\right\}$ without {\it explicitly} using the log-normalizer $F(\theta)=\log \left(\int_{x\in\calX} \exp\left(\inner{t(x)}{\theta}+k(x)\right)\dmu(x)\right)$ of the exponential family (also called cumulant function or log-partition function).
 
-\noindent For example, the Bhattacharyya coefficient is expressed as:
+\noindent For example, the {\em Bhattacharyya similarity coefficient} is expressed as:
 
 \begin{eqnarray*}
 \rho[p_{\theta_1},p_{\theta_2}]  &:=& \int_{x\in\calX} \sqrt{p_{\theta_1}(x)\ p_{\theta_2}(x)} \dmu(x),\\
@@ -62,6 +68,28 @@ $$
 Choosing $\omega$ such that $t(\omega)=\nabla F(\theta_1)=E_{p_{\theta_1}}[t(x)]=:\eta_1$, 
 we express the KLD as a log density ratio: $D_\KL[p_{\theta_1}:p_{\theta_2}]=\log\left( \frac{p_{\theta_1}(\omega)}{p_{\theta_2}(\omega)} \right)$. In general we may need several $\omega_i$'s so that $\frac{1}{s}\sum_i t(\omega_i)=\nabla F(\theta_1)=\eta_1$.
 
+Thus we get the three equivalent formula for the KLD between densities of an exponential family:
+\begin{eqnarray}
+D_\KL[p_{\lambda_1}:p_{\lambda_2}] &:=& \int_{x\in\calX} p_{\lambda_1}(x)\log\left(\frac{p_{\lambda_1}(x)}{p_{\lambda_2}(x)}\right) \dmu(x)\\ 
+&=& B_F(\theta(\lambda_2):\theta(\lambda_1))\quad\mbox{(require $F(\theta)$, $\nabla F(\theta)$)} \\
+&=& \log\left( \frac{p_{\lambda_1}(\omega)}{p_{\lambda_2}(\omega)} \right)
++ \left(\theta(\lambda_2)-\theta(\lambda_1)\right)^\top (t(\omega)-E_{p_{\lambda_1}}[t(x)]),\quad
+\mbox{$\forall\omega\in\calX$ (require $E_{p_{\lambda}}[t(x)]$)}\\
+&=& \frac{1}{s}\sum_{i=1}^s \log\left( \frac{p_{\lambda_1}(\omega_i)}{p_{\lambda_2}(\omega_i)} \right),\quad
+\mbox{(require $\frac{1}{s}\sum_{i=1}^s t(\omega_i)=E_{p_{\lambda_1}}[t(x)]$)}
+\end{eqnarray}
+
+The last formula bears some similarity with the Monte-Carlo stochastic approximation of the Kullback-Leibler divergence:
+\begin{eqnarray*}
+x_1,\ldots, x_n &\sim_{\mathrm{iid}}& p_{\lambda_1}\\
+\tilde{D}_{\KL,n}[p_{\lambda_1}:p_{\lambda_2}] &:=&  \frac{1}{n} \sum_{i=1}^n \log\left(\frac{p_{\lambda_1}(x_i)}{p_{\lambda_2}(x_i)}\right)\\ 
+\lim_{n\rightarrow\infty}  \tilde{D}_{\KL,n}[p_{\lambda_1}:p_{\lambda_2}] &=& D_\KL[p_{\lambda_1}:p_{\lambda_2}] \\
+\lim_{n\rightarrow\infty} \frac{1}{n} \sum_{i=1}^n t(x_i) = E_{p_{\lambda_1}}[t(x)]
+\end{eqnarray*}
+
+
+
+
 For example, we can write the KLD between two multivariate normal distributions as
 \begin{eqnarray*}
 D_\KL[p_{\mu_1,\Sigma_1}:p_{\mu_2,\Sigma_2}] &=& 
@@ -82,6 +110,8 @@ of the square root matrix of $d\Sigma_1$.
 \end{itemize}
 
 \end{document}
+
+
 
 \item {\bf A note on Onicescu's informational energy and correlation coefficient in exponential families}
 
