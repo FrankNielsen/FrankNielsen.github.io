@@ -1,0 +1,32 @@
+
+On the Hilbert geometry of some matrix spaces
+by Frank Nielsen
+
+Sony Computer Science Laboratories, Inc
+Tokyo, Japan
+https://franknielsen.github.io/
+
+Abstract:
+
+In this talk, we first present the dualistic structures of information geometry on the manifold of
+symmetric positive-definite matrices [1,2], and discuss some algorithmic aspects [1,2,3].
+We then study the Hilbert geometry induced by some bounded convex matrix spaces with applications: the elliptope of correlations matrices [4], and the Siegel disk domain [5].
+
+
+
+References:
+[1] Nielsen, Frank, and Richard Nock. "Sided and symmetrized Bregman centroids."
+IEEE transactions on Information Theory 55.6 (2009): 2882-2904.
+
+[2] Nielsen, Frank, and Rajendra Bhatia. Matrix information geometry.
+Heidelberg, Germany, Springer, 2013.
+
+[3] Arnaudon, Marc, and Frank Nielsen. "On approximating the Riemannian 1-center."
+Computational Geometry 46.1 (2013): 93-104.
+
+[4] Nielsen, Frank, and Ke Sun. "Clustering in Hilbert's projective geometry: The case studies of the probability simplex and the elliptope of correlation matrices."
+Geometric Structures of Information. Springer,  2019. 297-331.
+
+[5] Nielsen, Frank. "The Siegel–Klein Disk: Hilbert Geometry of the Siegel Disk Domain."
+Entropy 22.9 (2020): 1019.
+
