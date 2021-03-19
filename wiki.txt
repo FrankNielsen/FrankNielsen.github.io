@@ -1,0 +1,27 @@
+https://en.wikipedia.org/wiki/Cauchy_distribution
+
+Any [[f-divergence]] between two Cauchy distributions is symmetric and can be expressed as a function of the chi-squared divergence<ref>{{cite journal |last1=Nielsen |first1=Frank | 
+last2=Okamura |first2=Kazuki |year=2021| title=On $ f $-divergences between Cauchy distributions| arxiv=2101.12459 }}</ref>.
+Closed-form expression for the [[total variation]], [[Jensen–Shannon_divergence]], [[Hellinger distance]], etc are available. 
+
+
+------------------
+
+The Jensen-Shannon divergence can be generalized by consider mixtures with respect to a mean M<ref name="nielsenJS" />.
+The statistical M-mixture is 
+<math>
+M(P,Q) =  M(p(x),q(x))/Z_M(p,q),
+</math>
+where <math>Z_M</math> is the normalizing factor:
+<math>
+Z_M(p,q) =  \int M(p(x),q(x)) dx.
+</math>
+Then the generalized Jensen-Shannon divergence is
+:<math>{\rm JSD}_M(P \parallel Q)= \frac{1}{2}D(P \parallel M)+\frac{1}{2}D(Q \parallel M)</math>
+where <math>M=\frac{1}{2}(P+Q)</math>
+
+<ref name=nielsenJS>{{cite journal|last1=Nielsen|first1=Frank|
+title=	
+On the Jensen–Shannon symmetrization of distances relying on abstract means|year=2019|
+journal=Entropy| volume=21 |doi=10.3390/e21050485}}
+</ref>
