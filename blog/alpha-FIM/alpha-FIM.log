@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=latex 2020.8.7)  2 SEP 2020 19:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=latex 2021.4.14)  14 APR 2021 09:35
 entering extended mode
 **\makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx\HCode\def\HCod
 e##1{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.{\g
@@ -6,25 +6,26 @@ e##1{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.{\g
 umentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname te
 x4ht\endcsname{#1,html}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{\HC
 ode}{\documentstyle[tex4ht]}}}\makeatother\HCode .a.b.c.\input  alpha-FIM.tex
-(alpha-FIM.tex ("C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls"
-Document Class: article 2019/10/25 v1.4k Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\size11.clo"
-File: size11.clo 2019/10/25 v1.4k Standard LaTeX file (size option)
+ (alpha-FIM.tex
+(C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(C:\Program Files\MiKTeX 2.9\tex/latex/base\size11.clo
+File: size11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
-\c@part=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
-\abovecaptionskip=\skip41
-\belowcaptionskip=\skip42
-\bibindent=\dimen102
+\c@part=\count179
+\c@section=\count180
+\c@subsection=\count181
+\c@subsubsection=\count182
+\c@paragraph=\count183
+\c@subparagraph=\count184
+\c@figure=\count185
+\c@table=\count186
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\tex4ht.sty
-version 2019-03-18-15:24
+version 2021-01-02-13:53
 Package: tex4ht 
 --------------------------------------
 --- Note --- for _ at preamble, use the command line option `early_'
@@ -32,219 +33,229 @@ Package: tex4ht
 --------------------------------------
 --- Note --- for ^ at preamble, use the command line option `early^'
 --------------------------------------
-\tmp:toks=\toks14
+\tmp:toks=\toks15
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\usepackage.4ht
-version 2019-12-19-14:27
+version 2021-02-07-14:58
 ) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/preprint\fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
-\FP@margin=\skip43
+\FP@margin=\skip49
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks15
+\@emptytoks=\toks16
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
-Package: amsmath 2019/11/16 v2.17d AMS math features
-\@mathmargin=\skip44
+(C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
-\ex@=\dimen103
+\@emptytoks=\toks17
+\ex@=\dimen139
 ))
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen104
+\pmbraise@=\dimen140
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
+(C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count88
-LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count89
-\leftroot@=\count90
-LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count91
-\DOTSCASE@=\count92
-LaTeX Info: Redefining \ldots on input line 486.
-LaTeX Info: Redefining \dots on input line 489.
-LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box27
-\strutbox@=\box28
-\big@size=\dimen105
-LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count93
-\c@MaxMatrixCols=\count94
-\dotsspace@=\muskip10
-\c@parentequation=\count95
-\dspbrk@lvl=\count96
-\tag@help=\toks17
-\row@=\count97
-\column@=\count98
-\maxfields@=\count99
-\andhelp@=\toks18
-\eqnshift@=\dimen106
-\alignsep@=\dimen107
-\tagshift@=\dimen108
-\tagwidth@=\dimen109
-\totwidth@=\dimen110
-\lineht@=\dimen111
-\@envbody=\toks19
-\multlinegap=\skip45
-\multlinetaggap=\skip46
-\mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2858.
-LaTeX Info: Redefining \] on input line 2859.
+\inf@bad=\count187
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count188
+\leftroot@=\count189
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count190
+\DOTSCASE@=\count191
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count192
+\c@MaxMatrixCols=\count193
+\dotsspace@=\muskip16
+\c@parentequation=\count194
+\dspbrk@lvl=\count195
+\tag@help=\toks18
+\row@=\count196
+\column@=\count197
+\maxfields@=\count198
+\andhelp@=\toks19
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks20
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
-Package: hyperref 2019/11/10 v7.00c Hypertext links for LaTeX
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\hyperref-hooks.
+4ht) (C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds.sty"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/iftex\iftex.sty
-Package: iftex 2019/11/07 v1.0c TeX engine tests
+Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/pdftexcmds\pdftexcmds.st
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pdftexcmds\pdftexcmds.
+sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/infwarerr\infwarerr.st
 y
-Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
-)
- ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\infwarerr.sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
-)
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+) (C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks21
+\KV@toks@=\toks22
 )
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\kvsetkeys.sty"
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\etexcmds.sty"
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/iftex\ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-)))
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\kvdefinekeys.sty"
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/kvsetkeys\kvsetkeys.st
+y
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\pdfescape.sty"
-Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/kvdefinekeys\kvdefinek
+eys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\hycolor.sty"
-Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\xcolor-patch.sty"
-Package: xcolor-patch 2016/05/16 xcolor patch
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\hopatch.sty"
-Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
-)))
-("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\letltxmacro.sty"
-Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/pdfescape\pdfescape.st
+y
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\auxhook.sty"
-Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
-
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/letltxmacro\letltxmacro.
+sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 
 Package auxhook Warning: Cannot patch \document,
 (auxhook)                using \AtBeginDocument instead.
 
-) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.sty"
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen112
-\Hy@linkcounter=\count100
-\Hy@pagecounter=\count101
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
-File: pd1enc.def 2019/11/10 v7.00c Hyperref: PDFDocEncoding definition (HO)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen148
+\Hy@linkcounter=\count199
+\Hy@pagecounter=\count266
+(C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\intcalc.sty"
-Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+(C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
+nguages
 )
-\Hy@SavedSpaceFactor=\count102
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/00miktex\hyperref.cfg"
-File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 4409.
-Package hyperref Info: Hyper figures OFF on input line 4535.
-Package hyperref Info: Link nesting OFF on input line 4540.
-Package hyperref Info: Hyper index ON on input line 4543.
-Package hyperref Info: Plain pages OFF on input line 4550.
-Package hyperref Info: Backreferencing OFF on input line 4555.
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count267
+(C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\puenc.def
+File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4788.
-\c@Hy@tempcnt=\count103
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count268
 
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/url\url.sty
-\Urlmuskip=\muskip11
+\Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5147.
-\XeTeXLinkMargin=\dimen113
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen149
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\bitset.sty"
-Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\bigintcalc.sty"
-Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/bigintcalc\bigintcalc.
+sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count104
-\Field@Width=\dimen114
-\Fld@charsize=\dimen115
-\Field@toks=\toks22
-Package hyperref Info: Hyper figures OFF on input line 6418.
-Package hyperref Info: Link nesting OFF on input line 6423.
-Package hyperref Info: Hyper index ON on input line 6426.
-Package hyperref Info: backreferencing OFF on input line 6433.
-Package hyperref Info: Link coloring ON on input line 6436.
-Package hyperref Info: Link coloring with OCG OFF on input line 6443.
-Package hyperref Info: PDF/A mode OFF on input line 6448.
-LaTeX Info: Redefining \ref on input line 6488.
-LaTeX Info: Redefining \pageref on input line 6492.
-
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\atbegshi.sty"
-Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
-
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/iftex\ifpdf.sty
-Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
-))
-\Hy@abspage=\count105
+\Fld@menulength=\count269
+\Field@Width=\dimen150
+\Fld@charsize=\dimen151
+\Field@toks=\toks23
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing OFF on input line 6090.
+Package hyperref Info: Link coloring ON on input line 6093.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
+ (C:\Program Files\MiKTeX 2.9\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
+)
+\Hy@abspage=\count270
 
 
 Package hyperref Message: Stopped early.
 
 )
 Package hyperref Info: Driver: htex4ht.
- ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\htex4ht.def"
-File: htex4ht.def 2019/11/10 v7.00c Hyperref driver for TeX4ht
+ (C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\htex4ht.def
+File: htex4ht.def 2021-02-27 v7.00k Hyperref driver for TeX4ht
 Package hyperref Info: tex4ht is already loaded.
 )
+(C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/gettitlestring\gettitl
+estring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count271
+)
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\tex4ht.4ht
-version 2018-12-30-09:29
+version 2020-03-12-14:03
 --------------------------------------
 --- Note --- for additional information, use the command line option `info'
 --------------------------------------
@@ -253,28 +264,28 @@ version 2018-12-30-09:29
  TeX4ht info is available in the log file 
 ::::::::::::::::::::::::::::::::::::::::::
 ) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\tex4ht.sty
-version 2019-03-18-15:24
+version 2021-01-02-13:53
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\color.sty"
-Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+(C:\Program Files\MiKTeX 2.9\tex/latex/graphics\color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+(C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: dvips.def on input line 147.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\dvips.def"
+(C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\dvips.def
 File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\dvipsnam.def"
+(C:\Program Files\MiKTeX 2.9\tex/latex/graphics\dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
 --- needs --- tex4ht alpha-FIM ---
-\tmp:cnt=\count106
+\tmp:cnt=\count272
 \openout15 = `alpha-FIM.tmp'.
 
 (alpha-FIM.tmp)
-\tmp:dim=\skip47
+\tmp:dim=\skip53
 --------------------------------------
 --- Note --- for XML code, use the command line option `xml' or `xhtml'
 --------------------------------------
@@ -284,7 +295,7 @@ File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 
 
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 --------------------------------------
 --- Note --- to remove the <?xml version=...?> processing instruction use the c
 ommand line option `no-VERSION'
@@ -295,7 +306,7 @@ DOCTYPE'
 --------------------------------------
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
 )
 --------------------------------------
 --- Note --- for marking of the base font, use the command line option `fonts+'
@@ -314,7 +325,7 @@ version 2019-12-16-15:21
 --- Note --- for ^ of catcode 13, use the command line option `^13'
 --------------------------------------
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 --------------------------------------
 --- Note --- for alternative charset, use the command line option `charset=...'
 
@@ -364,10 +375,10 @@ on `imgdir:.../'
 --------------------------------------
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
 )
-\:tokwrite=\toks23
-\:tokpage=\toks24
+\:tokwrite=\toks24
+\:tokpage=\toks25
 --------------------------------------
 --- Note --- for back links to toc, use the command line option `sections+'
 --------------------------------------
@@ -381,25 +392,30 @@ version 2019-12-16-15:21
 \openout4 = `alpha-FIM.4tc'.
 
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
 ) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\latex.4ht
-version 2019-08-26-14:22
-LaTeX Info: Redefining \_ on input line 168.
+version 2021-02-06-14:21
+LaTeX Info: Redefining \_ on input line 173.
+LaTeX Info: Redefining \, on input line 791.
+LaTeX Info: Redefining \; on input line 792.
+LaTeX Info: Redefining \! on input line 793.
+LaTeX Info: Redefining \: on input line 794.
+LaTeX Info: Redefining \> on input line 795.
 --------------------------------------
 --- Note --- for links into captions, instead of float heads, use the command l
 ine option `refcaption'
 --------------------------------------
 
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
 ) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 --------------------------------------
 --- Note --- For mini tocs immediately aftter the header use the command line o
 ption `minitoc<'
@@ -439,7 +455,7 @@ style="width:\HColWidth"}}
 --------------------------------------
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
 --------------------------------------
 --- Note --- for pictorial eqnarray, use the command line option `pic-eqnarray'
 
@@ -462,13 +478,13 @@ he command line option `pic-m+' (not safe!!)
 version 2018-11-06-15:55
 
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
 )) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\article.4ht
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 --------------------------------------
 --- Note --- for automatic sectioning pagination, use the command line option `
 1', `2', `3', '4', '5', '6', or '7'
@@ -483,144 +499,147 @@ index=2)
 --------------------------------------
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
 )) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\amssymb.4ht
 version 2009-05-21-09:32
 
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
 )) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\amsfonts.4ht
 version 2009-05-21-09:32
 
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
 )) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\amsmath.4ht
 version 2019-12-29-14:17
-\tmp:muskip=\muskip12
+\tmp:muskip=\muskip18
 
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
+LaTeX Info: Redefining \[ on input line 503.
+LaTeX Info: Redefining \] on input line 503.
 )) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\amstext.4ht
 version 2009-05-21-09:32
 
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
 )) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\amsbsy.4ht
 version 2009-05-21-09:32
 
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
 )) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\amsopn.4ht
 version 2009-05-21-09:32
 
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
 )) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\hyperref.4ht
-version 2019-09-14-15:17
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
-Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\refcount.sty"
-Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
-)
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\gettitlestring.sty"
-Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
-)
-\c@section@level=\count107
-)
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\nameref.4ht
-version 2019-12-23-13:36
+version 2021-01-02-13:53
+LaTeX Info: Redefining \autoref on input line 88.
+\Hy@SectionHShift=\skip54
 
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
-))
-LaTeX Info: Redefining \autoref on input line 95.
-\Hy@SectionHShift=\skip48
- (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
-)
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
 )) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\pd1enc.4ht
 version 2009-05-21-09:32
 
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
 )) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\url.4ht
 version 2009-05-21-09:32
 
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 --------------------------------------
 --- Note --- for URL encoding within href use the command line option `url-enc'
 
 --------------------------------------
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
-)) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\color.4ht
+version 2021-01-30-14:17
+)) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\nameref.4ht
+version 2021-02-03-14:57
+
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
+)) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\color.4ht
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
+version 2021-02-14-13:56
+)
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
+version 2021-01-30-14:17
 )) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\dvips.4ht
 version 2009-05-21-09:32
 
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
 )) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\dvipsnam.4ht
 version 2009-05-21-09:32
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\dvipsnam.def")
+(C:\Program Files\MiKTeX 2.9\tex/latex/graphics\dvipsnam.def)
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
+version 2021-01-30-14:17
 )) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2020-01-24-14:39
+version 2021-02-14-13:56
 )
 (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2019-12-16-15:21
-)) (alpha-FIM.aux)
+version 2021-01-30-14:17
+))
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/l3backend\l3backend-dvip
+s.def
+File: l3backend-dvips.def 2021-03-18 L3 backend support: dvips
+\l__pdf_internal_box=\box49
+\g__pdf_backend_object_int=\count273
+\l__pdf_backend_content_box=\box50
+\l__pdf_backend_model_box=\box51
+\g__pdf_backend_annotation_int=\count274
+\g__pdf_backend_link_int=\count275
+\g__pdf_backend_link_sf_int=\count276
+) (alpha-FIM.aux)
 \openout1 = `alpha-FIM.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
@@ -628,7 +647,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
-\AtBeginShipoutBox=\box29
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 Package hyperref Info: Link coloring ON on input line 26.
 LaTeX Info: Redefining \ref on input line 26.
 LaTeX Info: Redefining \pageref on input line 26.
@@ -636,13 +656,12 @@ LaTeX Info: Redefining \nameref on input line 26.
 --- file alpha-FIM.css ---
 LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
 
- ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+ (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
 
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+(C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
@@ -654,8 +673,8 @@ l. 47 Writing alpha-FIM.idv[4] (alpha-FIM3x.png)
  [3]
 l. 56 Writing alpha-FIM.idv[5] (alpha-FIM4x.png)
 l. 67 Writing alpha-FIM.idv[6] (alpha-FIM5x.png)
-l. 79 Writing alpha-FIM.idv[7] (alpha-FIM6x.png)
  [4]
+l. 79 Writing alpha-FIM.idv[7] (alpha-FIM6x.png)
 l. 84 Writing alpha-FIM.idv[8] (alpha-FIM7x.png)
 l. 96 Writing alpha-FIM.idv[9] (alpha-FIM8x.png)
 l. 99 Writing alpha-FIM.idv[10] (alpha-FIM9x.png)
@@ -675,12 +694,12 @@ l. 156 Writing alpha-FIM.idv[19] (alpha-FIM18x.png)
 l. 161 Writing alpha-FIM.idv[20] (alpha-FIM19x.png)
  (alpha-FIM.bbl [8]) [9] (alpha-FIM.aux) ) 
 Here is how much of TeX's memory you used:
- 9602 strings out of 492451
- 128506 string characters out of 3129770
- 342034 words of memory out of 3000000
- 13751 multiletter control sequences out of 15000+200000
- 13075 words of font info for 51 fonts, out of 3000000 for 9000
+ 12378 strings out of 479296
+ 170719 string characters out of 2863330
+ 589897 words of memory out of 3000000
+ 29625 multiletter control sequences out of 15000+600000
+ 412865 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,10n,37p,810b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 77i,10n,99p,810b,567s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on alpha-FIM.dvi (9 pages, 36928 bytes).
+Output written on alpha-FIM.dvi (9 pages, 37264 bytes).

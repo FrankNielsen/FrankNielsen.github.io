@@ -11,6 +11,7 @@ Css: p.indent{text-indent:0;}
 Css: p + p{margin-top:1em;}
 Css: p + div, p + pre {margin-top:1em;}
 Css: div + p, pre + p {margin-top:1em;}
+Css: a { overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; hyphens: auto; }
 Css: @media print {div.crosslinks {visibility:hidden;}}
 Css: a img { border-top: 0; border-left: 0; border-right: 0; }
 Font_Css("4"): .small-caps{font-variant: small-caps; }
@@ -23,6 +24,7 @@ Css: center { margin-top:1em; margin-bottom:1em; }
 Css: td center { margin-top:0em; margin-bottom:0em; }
 Css: .Canvas { position:relative; }
 Css: img.math{vertical-align:middle;}
+Css: div.par-math-display, div.math-display{text-align:center;}
 Css: li p.indent { text-indent: 0em }
 Css: li p:first-child{ margin-top:0em; }
 Css: li p:last-child, li div:last-child { margin-bottom:0.5em; }
@@ -39,7 +41,7 @@ Css: .overline img{ border-top: 1px solid black; }
 Css: td.displaylines {text-align:center; white-space:nowrap;}
 Css: .centerline {text-align:center;}
 Css: .rightline {text-align:right;}
-Css: div.verbatim {font-family: monospace,monospace; white-space: nowrap; text-align:left; clear:both; }
+Css: pre.verbatim {font-family: monospace,monospace; text-align:left; clear:both; }
 Css: .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
 Css: div.fbox {display:table}
 Css: div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
@@ -99,6 +101,7 @@ Css: table.pmatrix {width:100%;}
 Css: span.bar-css {text-decoration:overline;}
 Css: img.cdots{vertical-align:middle;}
 Css: .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+Css: .chapterToc a, .chapterToc, .likechapterToc a, .likechapterToc, .appendixToc a, .appendixToc {line-height: 200%; font-weight:bold;}
 Css: .index-item, .index-subitem, .index-subsubitem {display:block}
 Css: div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
 Css: div.caption span.id{font-weight: bold; white-space: nowrap; }
@@ -107,7 +110,6 @@ Css: p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-b
 Css: p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
 Css: .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
 Css: .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
-Css: .quote {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; margin-right:1em; text-align:justify;}
 Css: .verse{white-space:nowrap; margin-left:2em}
 Css: div.maketitle {text-align:center;}
 Css: h2.titleHead{text-align:center;}
@@ -116,9 +118,9 @@ Css: div.author, div.date {text-align:center;}
 Css: div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
 Css: div.author{white-space: nowrap;}
 Font_Size: 11
-Css: .quotation {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; }
-Css: .abstract p {margin-left:5%; margin-right:5%;}
+Css: div.abstract p {margin-left:5%; margin-right:5%;}
 Css: div.abstract {width:100%;}
+Css: .abstracttitle{text-align:center;margin-bottom:1em;}
 Css: .equation td{text-align:center; }
 Css: .equation-star td{text-align:center; }
 Css: table.equation-star { width:100%; }

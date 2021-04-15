@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: JensenShannonDiv.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: plainnat.bst
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+Database file #1: JSDBIB.bib
+Warning--there's a number but no volume in WongYOU-1985
+You've used 17 entries,
+            2773 wiz_defined-function locations,
+            718 strings with 7818 characters,
+and the built_in function-call counts, 6849 in all, are:
+= -- 645
+> -- 266
+< -- 18
++ -- 95
+- -- 78
+* -- 468
+:= -- 1049
+add.period$ -- 63
+call.type$ -- 17
+change.case$ -- 75
+chr.to.int$ -- 17
+cite$ -- 35
+duplicate$ -- 368
+empty$ -- 639
+format.name$ -- 108
+if$ -- 1467
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 18
+newline$ -- 103
+num.names$ -- 68
+pop$ -- 152
+preamble$ -- 1
+purify$ -- 59
+quote$ -- 0
+skip$ -- 267
+stack$ -- 0
+substring$ -- 233
+swap$ -- 41
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 182
+warning$ -- 1
+while$ -- 67
+width$ -- 0
+write$ -- 245
+(There was 1 warning)

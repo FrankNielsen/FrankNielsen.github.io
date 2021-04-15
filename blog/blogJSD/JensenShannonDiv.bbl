@@ -1,0 +1,122 @@
+\begin{thebibliography}{17}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Deasy et~al.(2020)Deasy, Simidjievski, and Li{\`o}]{VIGJSD-2020}
+Jacob Deasy, Nikola Simidjievski, and Pietro Li{\`o}.
+\newblock {Constraining Variational Inference with Geometric Jensen-Shannon
+  Divergence}.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2020.
+
+\bibitem[Endres and Schindelin(2003)]{JSmetric-2003}
+Dominik~Maria Endres and Johannes~E Schindelin.
+\newblock A new metric for probability distributions.
+\newblock \emph{IEEE Transactions on Information theory}, 49\penalty0
+  (7):\penalty0 1858--1860, 2003.
+
+\bibitem[Fuglede and Topsoe(2004)]{JSmetric-2004}
+Bent Fuglede and Flemming Topsoe.
+\newblock {Jensen-Shannon divergence and Hilbert space embedding}.
+\newblock In \emph{International Symposium onInformation Theory, 2004. ISIT
+  2004. Proceedings.}, page~31. IEEE, 2004.
+
+\bibitem[Jeffreys(1946)]{Jeffreys-1946}
+Harold Jeffreys.
+\newblock An invariant form for the prior probability in estimation problems.
+\newblock \emph{Proceedings of the Royal Society of London. Series A.
+  Mathematical and Physical Sciences}, 186\penalty0 (1007):\penalty0 453--461,
+  1946.
+
+\bibitem[Kullback(1997)]{Kullback-1997}
+Solomon Kullback.
+\newblock \emph{Information theory and statistics}.
+\newblock Courier Corporation, 1997.
+
+\bibitem[Lee(2001)]{skewJS-2001}
+Lillian Lee.
+\newblock On the effectiveness of the skew divergence for statistical language
+  analysis.
+\newblock In \emph{Artificial Intelligence and Statistics (AISTATS)}, page
+  65–72, 2001.
+
+\bibitem[Lin(1991)]{JS-1991}
+Jianhua Lin.
+\newblock {Divergence measures based on the Shannon entropy}.
+\newblock \emph{IEEE Transactions on Information theory}, 37\penalty0
+  (1):\penalty0 145--151, 1991.
+
+\bibitem[Lin and Wong(1988)]{JW-1988}
+Jianhua Lin and SKM Wong.
+\newblock Approximation of discrete probability distributions based on a new
+  divergence measure.
+\newblock \emph{Congressus Numerantium (Winnipeg)}, 61:\penalty0 75--80, 1988.
+
+\bibitem[Nielsen(2010)]{nielsen2010family}
+Frank Nielsen.
+\newblock {A family of statistical symmetric divergences based on Jensen's
+  inequality}.
+\newblock \emph{arXiv preprint arXiv:1009.4004}, 2010.
+\newblock URL \url{https://arxiv.org/abs/1009.4004}.
+
+\bibitem[Nielsen(2019)]{JSsym-2019}
+Frank Nielsen.
+\newblock {On the Jensen–Shannon Symmetrization of Distances Relying on
+  Abstract Means}.
+\newblock \emph{Entropy}, 21\penalty0 (5), 2019.
+\newblock ISSN 1099-4300.
+\newblock \doi{10.3390/e21050485}.
+\newblock URL \url{https://www.mdpi.com/1099-4300/21/5/485}.
+
+\bibitem[Nielsen(2020)]{nielsen2020generalization}
+Frank Nielsen.
+\newblock {On a Generalization of the Jensen–Shannon Divergence and the
+  Jensen–Shannon Centroid}.
+\newblock \emph{Entropy}, 22\penalty0 (2), 2020.
+\newblock ISSN 1099-4300.
+\newblock \doi{10.3390/e22020221}.
+\newblock URL \url{https://www.mdpi.com/1099-4300/22/2/221}.
+
+\bibitem[Nielsen(2021)]{vJSD-2021}
+Frank Nielsen.
+\newblock {On a Variational Definition for the Jensen-Shannon Symmetrization of
+  Distances Based on the Information Radius}.
+\newblock \emph{Entropy}, 23\penalty0 (4), 2021.
+\newblock ISSN 1099-4300.
+\newblock \doi{10.3390/e23040464}.
+\newblock URL \url{https://www.mdpi.com/1099-4300/23/4/464}.
+
+\bibitem[Nielsen and Nock(2009)]{SBD-2009}
+Frank Nielsen and Richard Nock.
+\newblock {Sided and symmetrized Bregman centroids}.
+\newblock \emph{IEEE transactions on Information Theory}, 55\penalty0
+  (6):\penalty0 2882--2904, 2009.
+
+\bibitem[Nielsen and Okamura(2021)]{CauchyJSD-2021}
+Frank Nielsen and Kazuki Okamura.
+\newblock On $f$-divergences between cauchy distributions.
+\newblock \emph{arXiv:2101.12459}, 2021.
+
+\bibitem[R{\'e}nyi et~al.(1961)]{Renyi-1961}
+Alfr{\'e}d R{\'e}nyi et~al.
+\newblock On measures of entropy and information.
+\newblock In \emph{Proceedings of the Fourth Berkeley Symposium on Mathematical
+  Statistics and Probability, Volume 1: Contributions to the Theory of
+  Statistics}. The Regents of the University of California, 1961.
+
+\bibitem[Sibson(1969)]{Sibson-1969}
+Robin Sibson.
+\newblock Information radius.
+\newblock \emph{Zeitschrift f{\"u}r Wahrscheinlichkeitstheorie und verwandte
+  Gebiete}, 14\penalty0 (2):\penalty0 149--160, 1969.
+
+\bibitem[Wong and You(1985)]{WongYOU-1985}
+Andrew~KC Wong and Manlai You.
+\newblock Entropy and distance of random graphs with application to structural
+  pattern recognition.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, \penalty0 (5):\penalty0 599--609, 1985.
+
+\end{thebibliography}
