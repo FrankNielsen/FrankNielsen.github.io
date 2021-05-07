@@ -1,0 +1,200 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage,url,amssymb}
+\usepackage{amsmath,listings}
+
+\usepackage{blkarray}
+ 
+ \def\supleft#1{\ ^{#1}}
+\def\bbR{\mathbb{R}}
+\def\calX{\mathcal{X}}
+
+
+ 
+
+\def\dq{\mathrm{d}q}
+\def\dy{\mathrm{d}y}
+\def\dx{\mathrm{d}x}
+\def\dmu{\mathrm{d}\mu}
+\def\dnu{\mathrm{d}\nu}
+\def\KL{\mathrm{KL}}
+\def\leftsup#1{{}^{#1}}
+\def\calX{\mathcal{X}}
+\def\bbR{\mathbb{R}}
+\def\bbC{\mathbb{C}}
+\def\bbD{\mathbb{D}}
+\def\arctanh{\mathrm{arctanh}}
+\def\mattwotwo#1#2#3#4{\left[\begin{array}{ll}#1 & #2 \cr #3 & #4\end{array}\right]}
+\def\st{\ : \ }
+\def\Conv{\mathrm{Conv}}
+\def\Cone{\mathrm{Conv}}
+\def\Extr{\mathrm{Extr}}
+\def\Dir{\mathrm{Dir}}
+\def\tr{\mathrm{tr}}
+\def\barZ{\bar{Z}}
+\def\vec{\mathrm{vec}}
+\def\Cov{\mathhrm{Cov}}
+\def\inner#1#2{\langle #1,#2\rangle}
+\def\diag{\mathrm{diag}}
+\def\Bhat{\mathrm{Bhat}}
+
+\def\vectwo#1#2{\left[\begin{array}{c}#1\cr #2\end{array}\right]}
+\def\JS{\mathrm{JS}}
+\def\calX{\mathcal{X}}
+\def\calN{\mathcal{N}}
+\def\calC{\mathcal{C}}
+
+\def\calP{\mathcal{P}}
+\def\calQ{\mathcal{Q}}
+
+
+\def\calF{\mathcal{F}}
+\def\Var{\mathrm{Var}}
+\def\calL{\mathcal{L}}
+\def\dz{\mathrm{d}z}
+\def\Im{\mathrm{Im}}
+\def\Re{\mathrm{Re}}
+\def\FR{\mathrm{FR}}
+\def\SL{\mathrm{SL}}
+\def\vol{\mathrm{vol}}
+\def\bbB{\mathbb{B}}
+\def\ds{\mathrm{d}s}
+
+\def\deta{\mathrm{d}\eta}
+\def\dtheta{\mathrm{d}\theta}
+
+\def\Cramer{{\mbox{Cram\'er}}}
+
+\def\Szekely{{\mbox{Sz\'ekely}}}
+
+\def\iid{\mathrm{iid}}
+
+\def\Hyv{\mathrm{Hyv}}
+
+\def\PEF{\mathrm{PEF}}
+\def\Nor{\mathrm{Nor}}
+
+\def\arccosh{\mathrm{arccosh}}
+\def\cosh{\mathrm{cosh}}
+
+\lstset{
+  basicstyle=\small,
+  breaklines=true
+}
+
+\title{A closed-form expression of geodesics in the Klein model of hyperbolic geometry}
+
+\author{Frank Nielsen\\ Sony Computer Science Laboratories Inc.\\ Tokyo, Japan} 
+\date{April 2021}
+
+\begin{document}
+\maketitle
+
+Hyperbolic geometry~\cite{cannon1997hyperbolic} is more and more often used in machine learning and computer vision, specially to embed and process hierarchical structures (e.g.,~\cite{suris2021hyperfuture,shimizu2020hyperbolic}).
+The five main models of hyperbolic geometry~\cite{cannon1997hyperbolic} are the Poincar\'e upper space model, the Poincar\'e ball model, the Beltrami hemisphere model, the Lorentz hyperboloid model, and the Klein ball model.
+These models yield metric spaces $(\bbD,d)$ where $\bbD$ denotes the domain of the model and $d(\cdot,\cdot)$ denotes the  hyperbolic distance, a metric distance.
+These metric spaces are said geodesic because there exists a map $\gamma(p,q;\alpha)$ such that
+$$
+d\left(\gamma(p,q;s),\gamma(p,q;t)\right) = |s-t|\ d(p,q),\quad \forall p,q\in\bbD,\quad \forall s,t\in [0,1].
+$$
+
+A closed-form expression of the geodesics in the hyperbolic Poincar\'e ball model can be expressed
+using M\"obius operations in the M\"obius ball gyrovector space~\cite{PoincareGeodesics-2001,shimizu2020hyperbolic}.
+
+In this note, we report a closed-form expression of the geodesics in the Klein ball model of arbitrary dimension.
+Although the Klein ball model (K) is not conformal (except at the origin), the trace of  geodesics 
+$\Gamma_K(p,q)=\{(1-\alpha)p+\alpha q\ :\ \alpha\in [0,1]\}$ (called pregeodesics)
+are straight line segments making it convenient for robust geometric computing (e.g., Klein hyperbolic Voronoi diagram~\cite{HVD-2010,nielsen2012hyperbolic}).
+Once a structure is computed in the Klein model, it can be converted into the other models (e.g.,~\cite{HVD-2014}).
+
+Let $\bbB_n=\{ x\in\bbR^n\ :\  x^\top x<1\}$ be the $n$-dimensional unit open ball centered at the origin.
+The Klein distance $d_K(p,q)$ between point $p$ and $q$ in $\bbB_n$ (hyperbolic geometry with curvature $\kappa=-1$) is
+$$
+d_K(p,q)=  \arccosh \left( \frac{1-p^\top q}{\sqrt{(1-p^\top p)}\sqrt{(1-q^\top q)}} \right).
+$$
+
+Thus we seek a parameterization 
+\begin{equation}
+\gamma_K(p,q;\alpha)= (1-u(\alpha)) p + u(\alpha)q
+\end{equation}
+so that 
+$$
+d_K\left(\gamma_K(p,q;s),\gamma_K(p,q;t)\right) = |s-t|\ d_K(p,q).
+$$
+
+In particular, when $s=0$ and $t=\alpha$, we shall have
+$$
+d_K\left(p,(1-u(\alpha)) p + u(\alpha)q\right)=\alpha d_K(p,q).
+$$
+
+This latter equation amounts to solve for $u(\alpha)$ in the equation:
+$$
+\frac{a-b u(\alpha)}{\sqrt{a(a-2b u(\alpha)+c u(\alpha)^2)}}-d(\alpha)=0,
+$$
+where
+\begin{eqnarray*}
+a &=& 1-p^\top p,\\
+b &=& p^\top (q-p),\\
+c &=& (q-p)^\top (q-p) ,\\
+d(\alpha) &=& \cosh(\alpha d_K(p,q))
+\end{eqnarray*}
+
+Using symbolic calculations, we find the following solution:
+\begin{equation}
+u(\alpha) = \frac{   ad(\alpha) \sqrt{(ac+b^2)  (d(\alpha)^2-1)} +a b (1-d(\alpha)^2)}{a c d(\alpha)^2 + b^2}.
+\end{equation}
+
+Thus we get in closed-form the Klein geodesics $\gamma_K$ (albeit a large formula) such that
+$$
+d_K(\gamma(p,q;s),\gamma(p,q;t))= |s-t|\ d_K(p,q).
+$$
+
+The snippet code below implements in {\sc Maxima}\footnote{\url{https://maxima.sourceforge.io/}} the  geodesics in the Klein model with a test set.
+
+\begin{lstlisting}
+dKlein(p,q):=acosh((1-p.q)/(sqrt((1-p.p)*(1-q.q))));
+
+u(p,q,alpha):= ((1-p.p)*cosh(alpha* dKlein(p,q))*sqrt(((1-p.p)*((q-p).(q-p))+(p.(q-p))**2)*  (cosh(alpha* dKlein(p,q))
+**2-1)) +(1-p.p)* (p.(q-p))* (1-cosh(alpha* dKlein(p,q))**2))/((1-p.p)* ((q-p).(q-p)) * cosh(alpha* dKlein(p,q))**2 + (p.(q-p))**2);
+
+gammaKlein(p,q,alpha):=(1-u(p,q,alpha))*p+u(p,q,alpha)*q;
+
+/* Test */
+p: [0.5, 0.2];
+q: [0.1, -0.3];
+
+/* 1st test for Klein geodesics */
+alpha:random(1.0);
+alpha*dKlein(p,q);
+dKlein(p,gammaKlein(p,q,alpha));
+
+/* 2nd test for Klein geodesics */
+s:random(1.0);
+t:random(1.0);
+dKlein(gammaKlein(p,q,s),gammaKlein(p,q,t));
+abs(s-t)*dKlein(p,q);
+\end{lstlisting} 
+
+To illustrate the use of these Klein geodesics, consider computing the smallest enclosing ball of a finite point set 
+$\calP=\{p_1,\ldots,p_m\}$ in hyperbolic geometry~\cite{ArnaudonNielsen-2012}. 
+The closed-form expression of the Klein geodesic, allows to bypass the use of hyperbolic translations from/to the ball origin as this was used  in~\cite{NielsenHadjeres-2015}.
+The algorithm for calculating an approximation of the hyperbolic smallest enclosing ball is:
+\begin{itemize}
+\item Initialize $c_1=p_1$
+\item Repeat $t$ times: Let $c_{i+1}=\gamma_K\left(c_i,p_{f_i},\frac{1}{i+1}\right)$ where $p_{f_i}$ is the farthest point of $\calP$ to $c_i$.
+That is, we have $f_i=\arg\max_{j\in\{1,\ldots, m\}} d_K(c_i,p_j)$.
+\end{itemize}
+
+The algorithm is proven to converge in~\cite{ArnaudonNielsen-2012} (i.e., $\lim_{t\rightarrow\infty} c_t=\arg \min_c \max_{i\in\{1,\ldots,m\}} d_K(p_i,c)$) since the hyperbolic geometry is a Hadamard space. 
+
+\vskip 0.5cm
+\noindent Additional material is available online at \url{https://franknielsen.github.io/KleinGeodesics/}
+
+\bibliographystyle{plain}
+\bibliography{ClosedFormKleinGeodesicsBIB}
+
+
+\end{document}
+
+
+
+ 

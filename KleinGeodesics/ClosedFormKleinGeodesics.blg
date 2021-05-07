@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: ClosedFormKleinGeodesics.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 28 items.
+Database file #1: ClosedFormKleinGeodesicsBIB.bib
+Warning--empty booktitle in suris2021hyperfuture
+You've used 9 entries,
+            2118 wiz_defined-function locations,
+            556 strings with 5623 characters,
+and the built_in function-call counts, 3197 in all, are:
+= -- 322
+> -- 142
+< -- 3
++ -- 55
+- -- 46
+* -- 203
+:= -- 519
+add.period$ -- 29
+call.type$ -- 9
+change.case$ -- 49
+chr.to.int$ -- 0
+cite$ -- 10
+duplicate$ -- 131
+empty$ -- 256
+format.name$ -- 46
+if$ -- 685
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 9
+newline$ -- 48
+num.names$ -- 18
+pop$ -- 57
+preamble$ -- 1
+purify$ -- 40
+quote$ -- 0
+skip$ -- 99
+stack$ -- 0
+substring$ -- 194
+swap$ -- 35
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 36
+warning$ -- 1
+while$ -- 33
+width$ -- 10
+write$ -- 99
+(There was 1 warning)

@@ -1,0 +1,169 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage,url,amssymb}
+\usepackage{amsmath}
+
+\usepackage{blkarray}
+ 
+ \def\supleft#1{\ ^{#1}}
+\def\bbR{\mathbb{R}}
+\def\calX{\mathcal{X}}
+
+
+%\title{On estimating the Kullback-Leibler divergence between two densities with computationally intractable normalization factors}
+
+%\author{Frank Nielsen}
+
+%\date{March 2020}
+
+%\maketitle
+
+\def\dq{\mathrm{d}q}
+\def\dy{\mathrm{d}y}
+\def\dx{\mathrm{d}x}
+\def\dmu{\mathrm{d}\mu}
+\def\dnu{\mathrm{d}\nu}
+\def\KL{\mathrm{KL}}
+\def\leftsup#1{{}^{#1}}
+\def\calX{\mathcal{X}}
+\def\bbR{\mathbb{R}}
+\def\bbC{\mathbb{C}}
+\def\bbD{\mathbb{D}}
+\def\arctanh{\mathrm{arctanh}}
+\def\mattwotwo#1#2#3#4{\left[\begin{array}{ll}#1 & #2 \cr #3 & #4\end{array}\right]}
+\def\st{\ : \ }
+\def\Conv{\mathrm{Conv}}
+\def\Cone{\mathrm{Conv}}
+\def\Extr{\mathrm{Extr}}
+\def\Dir{\mathrm{Dir}}
+\def\tr{\mathrm{tr}}
+\def\barZ{\bar{Z}}
+\def\vec{\mathrm{vec}}
+\def\Cov{\mathhrm{Cov}}
+\def\inner#1#2{\langle #1,#2\rangle}
+\def\diag{\mathrm{diag}}
+\def\Bhat{\mathrm{Bhat}}
+
+\def\vectwo#1#2{\left[\begin{array}{c}#1\cr #2\end{array}\right]}
+\def\JS{\mathrm{JS}}
+\def\calX{\mathcal{X}}
+\def\calN{\mathcal{N}}
+\def\calC{\mathcal{C}}
+
+\def\calP{\mathcal{P}}
+\def\calQ{\mathcal{Q}}
+
+
+\def\calF{\mathcal{F}}
+\def\Var{\mathrm{Var}}
+\def\calL{\mathcal{L}}
+\def\dz{\mathrm{d}z}
+\def\Im{\mathrm{Im}}
+\def\Re{\mathrm{Re}}
+\def\FR{\mathrm{FR}}
+\def\SL{\mathrm{SL}}
+\def\vol{\mathrm{vol}}
+
+\def\ds{\mathrm{d}s}
+
+\def\deta{\mathrm{d}\eta}
+\def\dtheta{\mathrm{d}\theta}
+
+\def\Cramer{{\mbox{Cram\'er}}}
+
+\def\Szekely{{\mbox{Sz\'ekely}}}
+
+\def\iid{\mathrm{iid}}
+
+\def\Hyv{\mathrm{Hyv}}
+
+\def\PEF{\mathrm{PEF}}
+\def\Nor{\mathrm{Nor}}
+
+\begin{document}
+
+
+\def\arccosh{\mathrm{arccosh}}
+\def\cosh{\mathrm{cosh}}
+
+%%%
+\section{Klein geodesics (constant speed parameterized by arclengths)}
+%%%%
+
+%%% see code KleinGeodesic.java
+The Klein pregeodesics are straight line segments clipped to the disk domain and can thus
+ be easily parameterized by linear interpolation: 
+$$
+\Gamma(p,q)=\{(1-\alpha)p+\alpha q\ :\ \alpha\in [0,1]\}.
+$$
+
+% $R=\sqrt{\frac{1}{-\kappa}}$ 
+
+The Klein metric distance $d_K(p,q)$ between point $p$ and $q$ in the unit disk centered at the origin with curvature $-1$ is
+$$
+d_K(p,q)=\sqrt{-\kappa }\ \arccosh \left( \frac{1-p^\top q}{\sqrt{(1-p^\top p)}\sqrt{(1-q^\top q)}} \right).
+$$
+
+ 
+
+To get the matching between $(1-\alpha)p+\alpha q$ and $(1-c(\alpha))p+ c(\alpha)q$, 
+we need to solve for $\alpha$ in the equation:
+$$
+\frac{a-b\alpha}{\sqrt{a(a-2b\alpha+c\alpha^2)}}-d(\alpha)=0,
+$$
+with
+\begin{eqnarray*}
+a &=& 1-p^\top p,\\
+b &=& p^\top (q-p),\\
+c &=& (q-p)^\top (q-p) ,\\
+d(\alpha) &=& \cosh(\alpha d_K(p,q))
+\end{eqnarray*}
+
+Using symbolic calculations, we find the following solution:
+%$$
+%c(\alpha) = \frac{\sqrt{a^3 c d(\alpha)^4 - a^3 c d(\alpha)^2 + a^2 b^2 d(\alpha)^4 - a^2 b^2 d(\alpha)^2} - a b d(\alpha)^2 + a b}{a c d(\alpha)^2 + b^2}.
+%$$
+
+
+$$
+c(\alpha) = \frac{   ad(\alpha) \sqrt{(ac+b^2)  (d(\alpha)^2-1)} +a b (1-d(\alpha)^2)}{a c d(\alpha)^2 + b^2}.
+$$
+
+Thus we get in closed-form the Klein geodesics (albeit a large formula).
+
+We check that we have
+$$
+d_K(\gamma(p,q;s),\gamma(p,q;t))= |s-t|\ d_K(p,q),\quad \forall s,t\in [0,1].
+$$
+
+
+Extend to Cayley-Klein geometries.
+
+Program: {\tt KleinGeodesic.java}
+ 
+\end{document}
+
+To get the Klein geodesics by arclength parameterization, we write
+$$
+d_K(p,\gamma(p,q;\alpha))=\alpha d(p,q)
+$$ 
+with the remapping $\gamma(p,q;\alpha)=(1-c(\alpha))p+ c(\alpha)q$ for some function $c(\alpha)$.
+
+Let $\inner{x}{y}=x^\top y$ denote the Euclidean inner product (dot product) and $\|x\|=\sqrt{\inner{x}{x}}$ the Euclidean norm inducing the Euclidean distance $\|x-y\|$.
+
+
+
+W.l.o.g., we may assume $p=0$ (otherwise, apply a M\"obius transformation to set $p$ to the origin), and we get
+$$
+c(\alpha) = \frac{1}{\|q\|} \sqrt{1-\frac{1}{\cosh(\alpha d(0,q))^2}}.
+$$
+
+Notice that when $\alpha=1$, we have $\cosh(\alpha d(0,q))^2=\frac{1}{1-\|q\|^2}$, and therefore $c(1)=1$ as expected.
+
+Thus the Klein geodesics from the origin $p=0$ are parameterized by:
+$$
+\frac{q}{\|p\|}\sqrt{1-\frac{1}{\cosh(\alpha d(0,q))^2}}.
+$$
+and we have
+$$
+d(p,\gamma(p,q;\alpha)) = \alpha\ d(0,q),\quad \forall \alpha\in(0,1).
+$$

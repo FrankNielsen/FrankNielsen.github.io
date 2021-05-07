@@ -1,0 +1,55 @@
+\begin{thebibliography}{1}
+
+\bibitem{ArnaudonNielsen-2012}
+Marc Arnaudon and Frank Nielsen.
+\newblock {On approximating the Riemannian $1$-center}.
+\newblock {\em Computational Geometry}, 46(1):93--104, 2013.
+
+\bibitem{PoincareGeodesics-2001}
+Graciela~S Birman and Abraham~A Ungar.
+\newblock {The hyperbolic derivative in the Poincar{\'e} ball model of
+  hyperbolic geometry}.
+\newblock {\em Journal of mathematical analysis and applications},
+  254(1):321--333, 2001.
+
+\bibitem{cannon1997hyperbolic}
+James~W Cannon, William~J Floyd, Richard Kenyon, Walter~R Parry, et~al.
+\newblock Hyperbolic geometry.
+\newblock {\em Flavors of geometry}, 31:59--115, 1997.
+
+\bibitem{NielsenHadjeres-2015}
+Frank Nielsen and Ga{\"e}tan Hadjeres.
+\newblock Approximating covering and minimum enclosing balls in hyperbolic
+  geometry.
+\newblock In {\em International Conference on Geometric Science of
+  Information}, pages 586--594. Springer, 2015.
+
+\bibitem{HVD-2010}
+Frank Nielsen and Richard Nock.
+\newblock {Hyperbolic Voronoi diagrams made easy}.
+\newblock In {\em 2010 International Conference on Computational Science and
+  Its Applications}, pages 74--80. IEEE, 2010.
+
+\bibitem{nielsen2012hyperbolic}
+Frank Nielsen and Richard Nock.
+\newblock {The hyperbolic Voronoi diagram in arbitrary dimension}.
+\newblock {\em arXiv preprint arXiv:1210.8234}, 2012.
+
+\bibitem{HVD-2014}
+Frank Nielsen and Richard Nock.
+\newblock {Visualizing hyperbolic Voronoi diagrams}.
+\newblock In {\em Proceedings of the thirtieth annual symposium on
+  Computational geometry}, pages 90--91, 2014.
+
+\bibitem{shimizu2020hyperbolic}
+Ryohei Shimizu, Yusuke Mukuta, and Tatsuya Harada.
+\newblock Hyperbolic neural networks++.
+\newblock {\em Proceedings of the International Conference on Learning
+  Representation}, 2021.
+
+\bibitem{suris2021hyperfuture}
+D\'idac Sur\'is, Ruoshi Liu, and Carl Vondrick.
+\newblock Learning the predictability of the future.
+\newblock 2021.
+
+\end{thebibliography}
