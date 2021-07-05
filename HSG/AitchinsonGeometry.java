@@ -7,7 +7,7 @@
 - "Clustering in Hilbert simplex geometry"
 https://arxiv.org/abs/1704.00454
 
-- "Clustering in Hilbert’s Projective Geometry:
+- "Clustering in Hilbert Projective Geometry:
 The Case Studies of the Probability Simplex and
 the Elliptope of Correlation Matrices."
 
