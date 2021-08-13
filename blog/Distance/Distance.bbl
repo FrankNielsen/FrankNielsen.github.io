@@ -1,0 +1,74 @@
+\begin{thebibliography}{10}
+
+\bibitem{BasuPowerDivergence-1998}
+Ayanendranath Basu, Ian~R Harris, Nils~L Hjort, and MC~Jones.
+\newblock Robust and efficient estimation by minimising a density power
+  divergence.
+\newblock {\em Biometrika}, 85(3):549--559, 1998.
+
+\bibitem{MinDistance-2019}
+Ayanendranath Basu, Hiroyuki Shioya, and Chanseok Park.
+\newblock {\em Statistical inference: the minimum distance approach}.
+\newblock Chapman and Hall/CRC, 2019.
+
+\bibitem{gammadivergence-2008}
+Hironori Fujisawa and Shinto Eguchi.
+\newblock Robust parameter estimation with a small bias against heavy
+  contamination.
+\newblock {\em Journal of Multivariate Analysis}, 99(9):2053--2081, 2008.
+
+\bibitem{jenssen2006cauchy}
+Robert Jenssen, Jose~C Principe, Deniz Erdogmus, and Torbj{\o}rn Eltoft.
+\newblock {The Cauchy--Schwarz divergence and Parzen windowing: Connections to
+  graph theory and Mercer kernels}.
+\newblock {\em Journal of the Franklin Institute}, 343(6):614--629, 2006.
+
+\bibitem{gammadivergence-2001}
+MC~Jones, Nils~Lid Hjort, Ian~R Harris, and Ayanendranath Basu.
+\newblock A comparison of related density-based minimum divergence estimators.
+\newblock {\em Biometrika}, 88(3):865--873, 2001.
+
+\bibitem{kampa2011closed}
+Kittipat Kampa, Erion Hasanbelliu, and Jose~C Principe.
+\newblock {Closed-form Cauchy-Schwarz PDF divergence for mixture of Gaussians}.
+\newblock In {\em The 2011 International Joint Conference on Neural Networks},
+  pages 2578--2585. IEEE, 2011.
+
+\bibitem{nielsen2012closed}
+Frank Nielsen.
+\newblock Closed-form information-theoretic divergences for statistical
+  mixtures.
+\newblock In {\em Proceedings of the 21st International Conference on Pattern
+  Recognition (ICPR)}, pages 1723--1726. IEEE, 2012.
+
+\bibitem{nielsen2021fast}
+Frank Nielsen.
+\newblock {Fast approximations of the Jeffreys divergence between univariate
+  Gaussian mixture models via exponential polynomial densities}.
+\newblock {\em arXiv preprint arXiv:2107.05901}, 2021.
+
+\bibitem{PMPEF-2016}
+Frank Nielsen and Richard Nock.
+\newblock Patch matching with polynomial exponential families and projective
+  divergences.
+\newblock In {\em International Conference on Similarity Search and
+  Applications}, pages 109--116. Springer, 2016.
+
+\bibitem{nielsen2019clustering}
+Frank Nielsen and Ke~Sun.
+\newblock {Clustering in Hilbert's projective geometry: The case studies of the
+  probability simplex and the elliptope of correlation matrices}.
+\newblock In {\em Geometric Structures of Information}, pages 297--331.
+  Springer, 2019.
+
+\bibitem{HolderDivergence-2017}
+Frank Nielsen, Ke~Sun, and St{\'e}phane Marchand-Maillet.
+\newblock On h{\"o}lder projective divergences.
+\newblock {\em Entropy}, 19(3):122, 2017.
+
+\bibitem{PhiPowerDivergence-2021}
+Souvik Ray, Subrata Pal, Sumit~Kumar Kar, and Ayanendranath Basu.
+\newblock Characterizing the functional density power divergence class.
+\newblock {\em arXiv preprint arXiv:2105.06094}, 2021.
+
+\end{thebibliography}

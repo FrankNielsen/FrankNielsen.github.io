@@ -1,0 +1,153 @@
+% Frank.Nielsen@acm.org
+
+\documentclass[11pt]{article}
+\usepackage{fullpage,amssymb,amsmath,hyperref,url}
+
+\def\eqdef{:=}
+\def\eqnota{:=:}
+\def\dmu{\mathrm{d}\mu}
+\def\dnu{\mathrm{d}\nu}
+\def\calX{\mathcal{X}}
+\def\calE{\mathcal{E}}
+\def\bbR{\mathbb{R}}
+\def\Var{\mathrm{Var}}
+\def\KL{\mathrm{KL}}
+\def\CS{\mathrm{CS}}
+\def\calS{\mathcal{S}}
+
+
+\title{Dissimilarities, divergences, and distances}
+
+\date{13th August 2021}
+
+\author{Frank Nielsen\\ Sony Computer Science Laboratories Inc\\ Tokyo, Japan}
+
+\begin{document}
+\maketitle
+
+This is a working document which will be frequently updated with materials concerning the discrepancy between two distributions.
+
+%%%
+\section{Statistical distances between densities with computationally intractable normalizers}
+%%%%
+
+Consider a density $p(x)=\frac{\tilde p(x)}{Z_p}$ where $\tilde p(x)$ is an unnormalized {\em computable} density 
+and $Z_p=\int p(x) \dmu(x)$ the {\em computationally intractable} normalizer (also called in statistical physics the partition function or free energy).
+A statistical distance $D[p_1:p_2]$ between two densities $p_1(x)=\frac{\tilde p_1(x)}{Z_{p_1}}$ and $p_2(x)=\frac{\tilde p_2(x)}{Z_{p_2}}$ with computationally intractable normalizers $Z_{p_1}$ and $Z_{p_2}$ is said {\em projective} (or two-sided {\em homogeneous}) if and only if
+$$
+\forall \lambda_1>0,\lambda_2>0,\quad D[p_1:p_2]=D[\lambda_1p_1:\lambda_2 p_2].
+$$
+In particular, letting $\lambda_1=Z_{p_1}$ and $\lambda_2=Z_{p_2}$, we have
+$$
+D[p_1:p_2]=D[\tilde{p}_1:\tilde{p}_2].
+$$
+Notice that the rhs. does not rely on the computationally intractable normalizers.
+These projective distances are useful in statistical inference based on minimum distance estimators~\cite{MinDistance-2019} (see next Section).
+
+
+Here are a few statistical projective distances:
+
+\begin{itemize}
+\item {\bf $\gamma$-divergences} ($\gamma>0$)~\cite{gammadivergence-2001,gammadivergence-2008}:
+$$
+D_{\gamma}[p:q]:=\log \left(\int_{\mathbb{R}} q^{\alpha+1}\right)-\left(1+\frac{1}{\alpha}\right) \log \left(\int_{\mathbb{R}} q^{\alpha} p\right)+\frac{1}{\alpha} \log \left(\int_{\mathbb{R}} p^{\alpha+1}\right),\quad \gamma\geq 0
+$$
+
+When $\gamma\rightarrow 0$, we have~\cite{gammadivergence-2008} $D_{\gamma}[p:q]=D_\KL[p:q]$, the Kullback-Leibler divergence (KLD).
+For example, we can estimate the KLD between two densities of an exponential-polynomial family by Monte Carlo stochastic integration of the $\gamma$-divergence for a small value of $\gamma$~\cite{PMPEF-2016}.
+
+The $\gamma$-divergences (projective, Bregman-type) and the density power divergence~\cite{BasuPowerDivergence-1998} (non-projective, Bregman-type divergence):
+$$
+D_{\alpha}^\mathrm{dpd}[p:q]:=\int_{\mathbb{R}} q^{\alpha+1}-\left(1+\frac{1}{\alpha}\right) \int_{\mathbb{R}} q^{\alpha} p+\frac{1}{\alpha} \int_{\mathbb{R}} p^{\alpha+1},\quad \alpha\geq 0,
+$$
+can be encapsulated into the family of $\Phi$-power divergences~\cite{PhiPowerDivergence-2021} (functional density power divergence class):
+$$
+D_{\phi, \alpha}[p:q]:=\phi\left(\int_{\mathbb{R}} q^{\alpha+1}\right)-\left(1+\frac{1}{\alpha}\right) \phi\left(\int_{\mathbb{R}} q^{\alpha} p\right)+\frac{1}{\alpha} \phi\left(\int_{\mathbb{R}} p^{\alpha+1}\right),\quad \alpha\geq 0,
+$$
+where $\phi(e^x)$ convex and strictly increasing, $\phi$ continuous and twice continously differentiable with finite second order derivatives.
+We have $D_{\phi,0}[p:q]=\phi'(1)\int_{\mathbb{R}} p(x)\log\frac{p(x)}{q(x)}\dmu(x)=\phi'(1)D_\KL[p:q]$.
+
+\item {\bf Cauchy-Schwarz divergence}~\cite{jenssen2006cauchy} (CSD, projective)
+$$
+D_\CS[p:q]=-\log \left( \frac{\int p(x) q(x) \dmu(x)}{\sqrt{\int p(x)^{2}  \dmu(x) \int q(x)^{2}  \dmu(x)}} \right) = D_\CS[\lambda_1 p:\lambda_2 q], \forall \lambda_1>0,\lambda_2>0,
+$$
+and {\bf H\"older divergences}~\cite{HolderDivergence-2017} (HD, projective, which generalizes the CSD):
+%$$
+%D_{\alpha, \sigma, \tau}^{\mbox{H\"older}}[p:q]=-\log \left(\frac{\int_{\mathcal{X}} p(x)^{\sigma} q(x)^{\tau} \mathrm{d} x}{\left(\int_{\mathcal{X}} p(x)^{\alpha \sigma} \mathrm{d} x\right)^{\frac{1}{\alpha}}\left(\int_{\mathcal{X}} q(x)^{\beta \tau} \mathrm{d} x\right)^{\frac{1}{\beta}}}\right), \quad \frac{1}{\alpha}+\frac{1}{\beta}=1,\alpha\beta>0.
+%$$
+$$
+D_{\alpha, \gamma}^{\mbox{H\"older}}[p:q]=
+-\log \left(\frac{\int_{\mathcal{X}} p(x)^{\gamma / \alpha} q(x)^{\gamma / \beta} \mathrm{d} x}{\left(\int_{\mathcal{X}} p(x)^{\gamma} \mathrm{d} x\right)^{1 / \alpha}\left(\int_{\mathcal{X}} q(x)^{\gamma} \mathrm{d} x\right)^{1 / \beta}}\right),\quad \frac{1}{\alpha}+\frac{1}{\beta}=1 .
+$$
+We have
+$$
+\forall \lambda_1>0, \lambda_2>0, D_{\alpha, \gamma}^{\mbox{H\"older}}[\lambda_1 p:\lambda_2 q]= D_{\alpha, \gamma}^{\mbox{H\"older}}[p:q],
+$$
+and
+$$
+D_{2,2}^{\mbox{H\"older}}[p:q]=D_\CS[p:q].
+$$
+
+H\"older divergences between two densities $p_{\theta_p}$ and $p_{\theta_q}$ of an exponential family with cumulant function $F(\theta)$ is available in closed-form~\cite{HolderDivergence-2017}:
+$$
+D_{\alpha, \gamma}^{\mbox{H\"older}}[p:q]=\frac{1}{\alpha} F\left(\gamma \theta_{p}\right)+\frac{1}{\beta} F\left(\gamma \theta_{q}\right)-F\left(\frac{\gamma}{\alpha} \theta_{p}+\frac{\gamma}{\beta} \theta_{q}\right)
+$$
+
+%$$
+%D_{\alpha, \sigma, \tau}^{\mbox{H\"older}}[p_{\theta_p}: p_{\theta_q}]=\frac{1}{\alpha} F\left(\alpha \sigma \theta_{p}\right)+\frac{1}{\beta} F\left(\beta \tau \theta_{q}\right)-F\left(\sigma \theta_{p}+\tau \theta_{q}\right).
+%$$
+
+The CSD is available in closed-form between mixtures of an exponential family with a conic natural parameter~\cite{nielsen2012closed}: This includes the case of Gaussian mixture models~\cite{kampa2011closed}.
+%$$
+%D_{\alpha, \sigma, \tau}^{\mathrm{H}}(p: q)=\frac{1}{\alpha} F\left(\alpha \sigma \theta_{p}\right)+\frac{1}{\beta} F\left(\beta \tau \theta_{q}\right)-F\left(\sigma \theta_{p}+\tau \theta_{q}\right).
+%$$
+
+\item {\bf Hilbert distance}~\cite{nielsen2019clustering} (projective): Consider two probability mass functions $p=(p_1,\ldots, p_d)$ and $q=(q_1,\ldots,q_d)$ of the $d$-dimensional probability simplex. Then the Hilbert distance is
+$$
+D^{\mbox{Hilbert}}[p:q]=\log \left( \frac{\max _{i\in\{1,\ldots, d\}} \frac{p_{i}}{q_{i}}}{\min _{j\in\{1,\ldots, d\}} \frac{p_{j}}{q_{j}}}\right).
+$$
+We have 
+$$
+\forall \lambda_1>0, \lambda_2>0, D^{\mbox{Hilbert}}[\lambda_1 p:\lambda_2 q]= D^{\mbox{Hilbert}}[p:q].
+$$
+
+
+\end{itemize}
+
+
+%%%
+\section{Statistical distances between empirical distributions and densities with computationally intractable normalizers}
+%%%
+
+When estimating the parameter $\hat\theta$ for a parametric family of distributions $\{p_\theta\}$ from i.i.d. observations $\calS=\{x_1,\ldots,x_n\}$, we can define a minimum distance estimator:
+$$
+\hat\theta=\arg\min_\theta D[p_\calS:p_\theta],
+$$
+where $p_\calS=\frac{1}{n}\sum_{i=1}^n \delta_{x_i}$ is the empirical distribution (normalized).
+Thus we need only a right-sided projective divergence to estimate models with computationally intractable normalizers.
+
+
+
+\begin{itemize}
+	\item {\bf Hyv\"arinen divergence}~\cite{} (also called {\bf Fisher divergence}):
+	$$
+	D^{\mbox{Hyv\"arinen}}\left[p: p_{\theta}\right]:=\frac{1}{2} \int\left\|\nabla_{x} \log p(x)-\nabla_{x} \log p_{\theta}(x)\right\|^{2}\, p(x) \mathrm{d} x.
+	$$
+	The Hyvarinen divergence has been extended for order-$\alpha$ Hyvarinen divergences~\cite{nielsen2021fast} (for $\alpha>0$):
+	$$
+	D^{\mbox{Hyv\"arinen}}_{\alpha}[p: q]:=\frac{1}{2} \int p(x)^{\alpha} \left(\nabla_{x} \log p(x)-\nabla_{x} \log q(x)\right)^{2} \mathrm{d} x, \quad \alpha>0 .
+	$$
+	
+\end{itemize}
+
+\vskip 0.5cm
+This column is also available in pdf: filename \url{Distance.pdf} 
+\vskip 0.5cm
+
+
+\vskip 1cm
+Initially created 13th August 2021 (last updated \today).
+
+\bibliographystyle{plain}
+\bibliography{DistanceBib}
+\end{document}

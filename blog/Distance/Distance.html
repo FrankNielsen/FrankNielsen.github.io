@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Dissimilarities, divergences, and distances</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="Distance.tex"> 
+<link rel="stylesheet" type="text/css" href="Distance.css"> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+
+<h2 class="titleHead">Dissimilarities, divergences, and distances</h2>
+             <div class="author" ><span 
+class="cmr-12">Frank Nielsen</span>
+<br /><span 
+class="cmr-12">Sony Computer Science Laboratories Inc</span>
+<br />             <span 
+class="cmr-12">Tokyo, Japan</span></div><br />
+<div class="date" ><span 
+class="cmr-12">13th August 2021</span></div>
+   </div>
+<!--l. 28--><p class="indent" >   This is a working document which will be frequently updated with materials concerning the
+discrepancy between two distributions.
+   <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-10001"></a>Statistical distances between densities with computationally intractable normalizers</h3>
+<!--l. 34--><p class="noindent" >Consider a density <span 
+class="cmmi-10x-x-109">p</span>(<span 
+class="cmmi-10x-x-109">x</span>) = <img 
+src="Distance0x.png" alt="&#x02DC;p(x)
+Zp"  class="frac" align="middle"> where <img 
+src="Distance1x.png" alt="&#x02DC;p"  class="tilde" > (<span 
+class="cmmi-10x-x-109">x</span>) is an unnormalized <span 
+class="cmti-10x-x-109">computable </span>density and <span 
+class="cmmi-10x-x-109">Z</span><sub><span 
+class="cmmi-8">p</span></sub> = <span 
+class="cmex-10x-x-109">&#x222B;</span>
+  <span 
+class="cmmi-10x-x-109">p</span>(<span 
+class="cmmi-10x-x-109">x</span>)d<span 
+class="cmmi-10x-x-109">&#x03BC;</span>(<span 
+class="cmmi-10x-x-109">x</span>)
+the <span 
+class="cmti-10x-x-109">computationally intractable </span>normalizer (also called in statistical physics the partition function or free
+energy). A statistical distance <span 
+class="cmmi-10x-x-109">D</span>[<span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmr-8">1</span></sub> : <span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmr-8">2</span></sub>] between two densities <span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmr-8">1</span></sub>(<span 
+class="cmmi-10x-x-109">x</span>) = <img 
+src="Distance2x.png" alt="&#x02DC;p1(x)
+Zp1"  class="frac" align="middle"> and <span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmr-8">2</span></sub>(<span 
+class="cmmi-10x-x-109">x</span>) = <img 
+src="Distance3x.png" alt="&#x02DC;p2(x)
+ Zp2"  class="frac" align="middle"> with
+computationally intractable normalizers <span 
+class="cmmi-10x-x-109">Z</span><sub><span 
+class="cmmi-8">p</span><sub><span 
+class="cmr-6">1</span></sub></sub> and <span 
+class="cmmi-10x-x-109">Z</span><sub><span 
+class="cmmi-8">p</span><sub><span 
+class="cmr-6">2</span></sub></sub> is said <span 
+class="cmti-10x-x-109">projective </span>(or two-sided <span 
+class="cmti-10x-x-109">homogeneous</span>) if and
+only if
+   <div class="math-display" >
+<img 
+src="Distance4x.png" alt="&#x2200;&#x03BB;1 &#x003E; 0,&#x03BB;2 &#x003E; 0,  D[p1 : p2] = D [&#x03BB;1p1 : &#x03BB;2p2].
+" class="math-display" ></div>
+<!--l. 40--><p class="indent" >   In particular, letting <span 
+class="cmmi-10x-x-109">&#x03BB;</span><sub><span 
+class="cmr-8">1</span></sub> = <span 
+class="cmmi-10x-x-109">Z</span><sub><span 
+class="cmmi-8">p</span><sub><span 
+class="cmr-6">1</span></sub></sub> and <span 
+class="cmmi-10x-x-109">&#x03BB;</span><sub><span 
+class="cmr-8">2</span></sub> = <span 
+class="cmmi-10x-x-109">Z</span><sub><span 
+class="cmmi-8">p</span><sub><span 
+class="cmr-6">2</span></sub></sub>, we have
+   <div class="math-display" >
+<img 
+src="Distance5x.png" alt="D [p1 : p2] = D[&#x02DC;p1 : &#x02DC;p2].
+" class="math-display" ></div>
+<!--l. 44--><p class="indent" >   Notice that the rhs. does not rely on the computationally intractable normalizers. These projective
+distances are useful in statistical inference based on minimum distance estimators&#x00A0;<span class="cite">[<a 
+href="#XMinDistance-2019">2</a>]</span> (see next
+Section).
+<!--l. 48--><p class="indent" >   Here are a few statistical projective distances:
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="cmmi-10x-x-109">&#x03B3;</span><span 
+class="cmbx-10x-x-109">-divergences </span>(<span 
+class="cmmi-10x-x-109">&#x03B3; &#x003E; </span>0)&#x00A0;<span class="cite">[<a 
+href="#Xgammadivergence-2001">5</a>,&#x00A0;<a 
+href="#Xgammadivergence-2008">3</a>]</span>:
+<div class="math-display" >
+<img 
+src="Distance6x.png" alt="              (&#x222B;      )   (     1)    ( &#x222B;     )   1    (&#x222B;      )
+D &#x03B3;[p : q] := log   q&#x03B1;+1  -   1+  -- log    q&#x03B1;p   + --log     p&#x03B1;+1  ,  &#x03B3; &#x2265; 0
+                 &#x211D;              &#x03B1;        &#x211D;        &#x03B1;       &#x211D;
+" class="math-display" ></div>
+     <!--l. 56--><p class="noindent" >When <span 
+class="cmmi-10x-x-109">&#x03B3; </span><span 
+class="cmsy-10x-x-109">&#x2192; </span>0, we have&#x00A0;<span class="cite">[<a 
+href="#Xgammadivergence-2008">3</a>]</span> <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmmi-8">&#x03B3;</span></sub>[<span 
+class="cmmi-10x-x-109">p </span>: <span 
+class="cmmi-10x-x-109">q</span>] = <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmr-8">KL</span></sub>[<span 
+class="cmmi-10x-x-109">p </span>: <span 
+class="cmmi-10x-x-109">q</span>], the Kullback-Leibler divergence (KLD).
+     For example, we can estimate the KLD between two densities of an exponential-polynomial
+     family by Monte Carlo stochastic integration of the <span 
+class="cmmi-10x-x-109">&#x03B3;</span>-divergence for a small value of <span 
+class="cmmi-10x-x-109">&#x03B3;</span>&#x00A0;<span class="cite">[<a 
+href="#XPMPEF-2016">9</a>]</span>.
+     <!--l. 59--><p class="noindent" >The  <span 
+class="cmmi-10x-x-109">&#x03B3;</span>-divergences  (projective,  Bregman-type)  and  the  density  power  divergence&#x00A0;<span class="cite">[<a 
+href="#XBasuPowerDivergence-1998">1</a>]</span>
+     (non-projective, Bregman-type divergence):
+<div class="math-display" >
+<img 
+src="Distance7x.png" alt="             &#x222B;        (      ) &#x222B;          &#x222B;
+Ddp&#x03B1;d[p : q] := q&#x03B1;+1 -   1+  1-    q&#x03B1;p+  1-  p&#x03B1;+1,   &#x03B1; &#x2265; 0,
+              &#x211D;             &#x03B1;   &#x211D;       &#x03B1;  &#x211D;
+" class="math-display" ></div>
+     <!--l. 63--><p class="noindent" >can be encapsulated into the family of &#x03A6;-power divergences&#x00A0;<span class="cite">[<a 
+href="#XPhiPowerDivergence-2021">12</a>]</span> (functional density power
+     divergence class):
+                                                                                         
+                                                                                         
+<div class="math-display" >
+<img 
+src="Distance8x.png" alt="              ( &#x222B;      )   (      )  ( &#x222B;     )      ( &#x222B;     )
+                   &#x03B1;+1          1-        &#x03B1;      1-      &#x03B1;+1
+D &#x03D5;,&#x03B1;[p : q] := &#x03D5;  &#x211D;q      -  1 + &#x03B1;   &#x03D5;   &#x211D;q p   + &#x03B1;&#x03D5;    &#x211D;p     ,  &#x03B1; &#x2265;  0,
+" class="math-display" ></div>
+     <!--l. 67--><p class="noindent" >where <span 
+class="cmmi-10x-x-109">&#x03D5;</span>(<span 
+class="cmmi-10x-x-109">e</span><sup><span 
+class="cmmi-8">x</span></sup>) convex and strictly increasing, <span 
+class="cmmi-10x-x-109">&#x03D5; </span>continuous and twice continously differentiable
+     with finite second order derivatives. We have <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmmi-8">&#x03D5;,</span><span 
+class="cmr-8">0</span></sub>[<span 
+class="cmmi-10x-x-109">p </span>:  <span 
+class="cmmi-10x-x-109">q</span>]  =  <span 
+class="cmmi-10x-x-109">&#x03D5;</span><span 
+class="cmsy-10x-x-109">&#x2032;</span>(1)<span 
+class="cmex-10x-x-109">&#x222B;</span>
+ <sub><span 
+class="msbm-10x-x-80">&#x211D;</span></sub><span 
+class="cmmi-10x-x-109">p</span>(<span 
+class="cmmi-10x-x-109">x</span>)log <img 
+src="Distance9x.png" alt="p(x)
+q(x)"  class="frac" align="middle">d<span 
+class="cmmi-10x-x-109">&#x03BC;</span>(<span 
+class="cmmi-10x-x-109">x</span>)  =
+     <span 
+class="cmmi-10x-x-109">&#x03D5;</span><span 
+class="cmsy-10x-x-109">&#x2032;</span>(1)<span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmr-8">KL</span></sub>[<span 
+class="cmmi-10x-x-109">p </span>: <span 
+class="cmmi-10x-x-109">q</span>].
+     </li>
+     <li class="itemize"><span 
+class="cmbx-10x-x-109">Cauchy-Schwarz divergence</span>&#x00A0;<span class="cite">[<a 
+href="#Xjenssen2006cauchy">4</a>]</span> (CSD, projective)
+<div class="math-display" >
+<img 
+src="Distance10x.png" alt="                (                           )
+                        &#x222B; p(x )q(x)d&#x03BC; (x)
+DCS[p : q] = - log( &#x2218;-&#x222B;---------&#x222B;-----------)  = DCS [&#x03BB;1p : &#x03BB;2q],&#x2200;&#x03BB;1 &#x003E; 0,&#x03BB;2 &#x003E; 0,
+                      p(x)2d&#x03BC;(x)  q(x)2d&#x03BC;(x)
+" class="math-display" ></div>
+     <!--l. 74--><p class="noindent" >and <span 
+class="cmbx-10x-x-109">H</span><span 
+class="cmbx-10x-x-109">ölder divergences</span>&#x00A0;<span class="cite">[<a 
+href="#XHolderDivergence-2017">11</a>]</span> (HD, projective, which generalizes the CSD):
+<div class="math-display" >
+<img 
+src="Distance11x.png" alt="                    (       &#x222B;     &#x03B3;&#x2215;&#x03B1;    &#x03B3;&#x2215;&#x03B2;        )
+DH ¨older[p : q] = - log (&#x222B;----X-p(x))--q((&#x222B;x)---dx--)---  ,  1-+  1-= 1.
+ &#x03B1;,&#x03B3;                      p(x)&#x03B3;dx 1&#x2215;&#x03B1;    q(x)&#x03B3;dx 1&#x2215;&#x03B2;     &#x03B1;    &#x03B2;
+                        X              X
+" class="math-display" ></div>
+     <!--l. 82--><p class="noindent" >We have
+                                                                                         
+                                                                                         
+<div class="math-display" >
+<img 
+src="Distance12x.png" alt="&#x2200; &#x03BB;1 &#x003E; 0,&#x03BB;2 &#x003E; 0,DH ¨older[&#x03BB;1p : &#x03BB;2q] = DH ¨older[p : q],
+                 &#x03B1;,&#x03B3;                 &#x03B1;,&#x03B3;
+" class="math-display" ></div>
+     <!--l. 86--><p class="noindent" >and
+<div class="math-display" >
+<img 
+src="Distance13x.png" alt="  H¨older
+D 2,2    [p : q] = DCS [p : q].
+" class="math-display" ></div>
+     <!--l. 91--><p class="noindent" >Hölder divergences between two densities <span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">&#x03B8;</span><sub><span 
+class="cmmi-6">p</span></sub></sub> and <span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">&#x03B8;</span><sub><span 
+class="cmmi-6">q</span></sub></sub> of an exponential family with cumulant
+     function <span 
+class="cmmi-10x-x-109">F</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) is available in closed-form&#x00A0;<span class="cite">[<a 
+href="#XHolderDivergence-2017">11</a>]</span>:
+<div class="math-display" >
+<img 
+src="Distance14x.png" alt="  H ¨older        1          1            ( &#x03B3;     &#x03B3;  )
+D &#x03B1;,&#x03B3;   [p : q] = &#x03B1;-F (&#x03B3;&#x03B8;p)+ &#x03B2;-F (&#x03B3;&#x03B8;q)- F &#x03B1;&#x03B8;p + &#x03B2;&#x03B8;q
+" class="math-display" ></div>
+     <!--l. 100--><p class="noindent" >The CSD is available in closed-form between mixtures of an exponential family with a conic
+     natural parameter&#x00A0;<span class="cite">[<a 
+href="#Xnielsen2012closed">7</a>]</span>: This includes the case of Gaussian mixture models&#x00A0;<span class="cite">[<a 
+href="#Xkampa2011closed">6</a>]</span>.
+     </li>
+     <li class="itemize"><span 
+class="cmbx-10x-x-109">Hilbert distance</span>&#x00A0;<span class="cite">[<a 
+href="#Xnielsen2019clustering">10</a>]</span> (projective): Consider two probability mass functions <span 
+class="cmmi-10x-x-109">p </span>= (<span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-10x-x-109">,</span><span 
+class="cmmi-10x-x-109">&#x2026;</span><span 
+class="cmmi-10x-x-109">,p</span><sub><span 
+class="cmmi-8">d</span></sub>)
+     and <span 
+class="cmmi-10x-x-109">q </span>= (<span 
+class="cmmi-10x-x-109">q</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-10x-x-109">,</span><span 
+class="cmmi-10x-x-109">&#x2026;</span><span 
+class="cmmi-10x-x-109">,q</span><sub><span 
+class="cmmi-8">d</span></sub>) of the <span 
+class="cmmi-10x-x-109">d</span>-dimensional probability simplex. Then the Hilbert distance is
+                                                                                         
+                                                                                         
+<div class="math-display" >
+<img 
+src="Distance15x.png" alt="                   (               )
+  Hilbert             maxi&#x2208; {1,...,d} pqii
+D       [p : q] = log------------pj-  .
+                     minj&#x2208;{1,...,d} qj
+" class="math-display" ></div>
+     <!--l. 109--><p class="noindent" >We have
+<div class="math-display" >
+<img 
+src="Distance16x.png" alt="&#x2200;&#x03BB;1 &#x003E; 0,&#x03BB;2 &#x003E; 0,DHilbert[&#x03BB;1p : &#x03BB;2q] = DHilbert [p : q].
+" class="math-display" ></div>
+     </li></ul>
+<!--l. 119--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-20002"></a>Statistical distances between empirical distributions and densities with computationally
+intractable normalizers</h3>
+<!--l. 122--><p class="noindent" >When estimating the parameter <img 
+src="Distance17x.png" alt="&#x02C6;&#x03B8;"  class="circ" > for a parametric family of distributions <span 
+class="cmsy-10x-x-109">{</span><span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">&#x03B8;</span></sub><span 
+class="cmsy-10x-x-109">} </span>from i.i.d. observations
+<span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-53.png" alt="S" class="10-109x-x-53" /> </span>= <span 
+class="cmsy-10x-x-109">{</span><span 
+class="cmmi-10x-x-109">x</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-10x-x-109">,</span><span 
+class="cmmi-10x-x-109">&#x2026;</span><span 
+class="cmmi-10x-x-109">,x</span><sub><span 
+class="cmmi-8">n</span></sub><span 
+class="cmsy-10x-x-109">}</span>, we can define a minimum distance estimator:
+   <div class="math-display" >
+<img 
+src="Distance18x.png" alt=" &#x02C6;
+&#x03B8; = argmin&#x03B8; D [pS : p&#x03B8;],
+" class="math-display" ></div>
+<!--l. 126--><p class="indent" >   where <span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmsy-8"><img 
+src="cmsy8-53.png" alt="S" class="8x-x-53" /></span></sub> = <img 
+src="Distance19x.png" alt="1n"  class="frac" align="middle"> <span 
+class="cmex-10x-x-109">&#x2211;</span>
+   <sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">n</span></sup><span 
+class="cmmi-10x-x-109">&#x03B4;</span><sub><span 
+class="cmmi-8">x</span><sub><span 
+class="cmmi-6">i</span></sub></sub> is the empirical distribution (normalized). Thus we need only a right-sided
+projective divergence to estimate models with computationally intractable normalizers.
+                                                                                         
+                                                                                         
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="cmbx-10x-x-109">Hyv</span><span 
+class="cmbx-10x-x-109">ärinen divergence</span>&#x00A0;<span class="cite">[]</span> (also called <span 
+class="cmbx-10x-x-109">Fisher divergence</span>):
+<div class="math-display" >
+<img 
+src="Distance20x.png" alt="                       &#x222B;
+DHyv  ¨arinen [p : p&#x03B8;] := 1 &#x2225;&#x2207;x logp(x) - &#x2207;x log p&#x03B8;(x)&#x2225;2 p(x)dx.
+                     2
+" class="math-display" ></div>
+     <!--l. 136--><p class="noindent" >The  Hyvarinen  divergence  has  been  extended  for  order-<span 
+class="cmmi-10x-x-109">&#x03B1; </span>Hyvarinen  divergences&#x00A0;<span class="cite">[<a 
+href="#Xnielsen2021fast">8</a>]</span>  (for
+     <span 
+class="cmmi-10x-x-109">&#x03B1; &#x003E; </span>0):
+<div class="math-display" >
+<img 
+src="Distance21x.png" alt="                     &#x222B;
+ Hyv ¨arinen         1-     &#x03B1;                         2
+D&#x03B1;         [p : q] := 2  p(x ) (&#x2207;x log p(x)- &#x2207;x logq(x)) dx,   &#x03B1; &#x003E; 0.
+" class="math-display" ></div>
+     </li></ul>
+<!--l. 144--><p class="indent" >   This column is also available in pdf: filename <a 
+href="Distance.pdf" class="url" ><span 
+class="cmtt-10x-x-109">Distance.pdf</span></a>
+<!--l. 149--><p class="indent" >   Initially created 13th August 2021 (last updated August 13, 2021).
+<!--l. 1--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-30002"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+    <div class="thebibliography">
+    <p class="bibitem" ><span class="biblabel">
+  [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XBasuPowerDivergence-1998"></a>Ayanendranath Basu, Ian&#x00A0;R Harris, Nils&#x00A0;L Hjort, and MC&#x00A0;Jones.  Robust and efficient
+    estimation by minimising a density power divergence. <span 
+class="cmti-10x-x-109">Biometrika</span>, 85(3):549&#8211;559, 1998.
+                                                                                         
+                                                                                         
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XMinDistance-2019"></a>Ayanendranath  Basu,  Hiroyuki  Shioya,  and  Chanseok  Park.   <span 
+class="cmti-10x-x-109">Statistical inference: the</span>
+    <span 
+class="cmti-10x-x-109">minimum distance approach</span>. Chapman and Hall/CRC, 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xgammadivergence-2008"></a>Hironori Fujisawa and Shinto Eguchi.   Robust parameter estimation with a small bias
+    against heavy contamination. <span 
+class="cmti-10x-x-109">Journal of Multivariate Analysis</span>, 99(9):2053&#8211;2081, 2008.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [4]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xjenssen2006cauchy"></a>Robert  Jenssen,  Jose&#x00A0;C  Principe,  Deniz  Erdogmus,  and  Torbjørn  Eltoft.      The
+    Cauchy&#8211;Schwarz divergence and Parzen windowing: Connections to graph theory and Mercer
+    kernels. <span 
+class="cmti-10x-x-109">Journal of the Franklin Institute</span>, 343(6):614&#8211;629, 2006.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [5]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xgammadivergence-2001"></a>MC&#x00A0;Jones, Nils&#x00A0;Lid Hjort, Ian&#x00A0;R Harris, and Ayanendranath Basu.   A comparison of
+    related density-based minimum divergence estimators. <span 
+class="cmti-10x-x-109">Biometrika</span>, 88(3):865&#8211;873, 2001.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [6]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xkampa2011closed"></a>Kittipat Kampa, Erion Hasanbelliu, and Jose&#x00A0;C Principe.  Closed-form Cauchy-Schwarz
+    PDF divergence for mixture of Gaussians.  In <span 
+class="cmti-10x-x-109">The 2011 International Joint Conference on</span>
+    <span 
+class="cmti-10x-x-109">Neural Networks</span>, pages 2578&#8211;2585. IEEE, 2011.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [7]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xnielsen2012closed"></a>Frank  Nielsen.   Closed-form  information-theoretic  divergences  for  statistical  mixtures.
+    In <span 
+class="cmti-10x-x-109">Proceedings of the 21st International Conference on Pattern Recognition (ICPR)</span>, pages
+    1723&#8211;1726. IEEE, 2012.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [8]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xnielsen2021fast"></a>Frank Nielsen. Fast approximations of the Jeffreys divergence between univariate Gaussian
+    mixture models via exponential polynomial densities. <span 
+class="cmti-10x-x-109">arXiv preprint arXiv:2107.05901</span>, 2021.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [9]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XPMPEF-2016"></a>Frank Nielsen and Richard Nock.  Patch matching with polynomial exponential families
+    and projective divergences. In <span 
+class="cmti-10x-x-109">International Conference on Similarity Search and Applications</span>,
+    pages 109&#8211;116. Springer, 2016.
+                                                                                         
+                                                                                         
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [10]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xnielsen2019clustering"></a>Frank Nielsen and Ke&#x00A0;Sun. Clustering in Hilbert&#8217;s projective geometry: The case studies
+    of the probability simplex and the elliptope of correlation matrices.  In <span 
+class="cmti-10x-x-109">Geometric Structures</span>
+    <span 
+class="cmti-10x-x-109">of Information</span>, pages 297&#8211;331. Springer, 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [11]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XHolderDivergence-2017"></a>Frank Nielsen, Ke&#x00A0;Sun, and Stéphane Marchand-Maillet. On hölder projective divergences.
+    <span 
+class="cmti-10x-x-109">Entropy</span>, 19(3):122, 2017.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [12]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XPhiPowerDivergence-2021"></a>Souvik Ray, Subrata Pal, Sumit&#x00A0;Kumar Kar, and Ayanendranath Basu.  Characterizing
+    the functional density power divergence class. <span 
+class="cmti-10x-x-109">arXiv preprint arXiv:2105.06094</span>, 2021.
+</p>
+    </div>
+    
+</body></html> 
+
+                                                                                         
+
+
