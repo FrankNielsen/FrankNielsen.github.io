@@ -17,6 +17,11 @@ Hironori Fujisawa and Shinto Eguchi.
   contamination.
 \newblock {\em Journal of Multivariate Analysis}, 99(9):2053--2081, 2008.
 
+\bibitem{hyvarinen2005estimation}
+Aapo Hyv{\"a}rinen and Peter Dayan.
+\newblock Estimation of non-normalized statistical models by score matching.
+\newblock {\em Journal of Machine Learning Research}, 6(4), 2005.
+
 \bibitem{jenssen2006cauchy}
 Robert Jenssen, Jose~C Principe, Deniz Erdogmus, and Torbj{\o}rn Eltoft.
 \newblock {The Cauchy--Schwarz divergence and Parzen windowing: Connections to
