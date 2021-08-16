@@ -8,11 +8,13 @@
 .cmmi-8{font-size:72%;font-style: italic;}
 .cmmi-6{font-size:54%;font-style: italic;}
 .cmsy-8{font-size:72%;}
+.cmsy-6{font-size:54%;}
 .msbm-10x-x-80{font-size:72%;}
 .cmtt-10x-x-109{font-family: monospace,monospace;}
 .cmmi-10x-x-109{font-style: italic;}
 .cmsy-10x-x-109{}
 .cmex-10x-x-109{}
+.msbm-10x-x-109{}
 .cmti-10x-x-109{ font-style: italic;}
 .cmbx-10x-x-109{ font-weight: bold;}
 p{margin-top:0;margin-bottom:0}

@@ -11,6 +11,24 @@ Ayanendranath Basu, Hiroyuki Shioya, and Chanseok Park.
 \newblock {\em Statistical inference: the minimum distance approach}.
 \newblock Chapman and Hall/CRC, 2019.
 
+\bibitem{VIGJSD-2020}
+Jacob Deasy, Nikola Simidjievski, and Pietro Li{\`o}.
+\newblock {Constraining Variational Inference with Geometric Jensen-Shannon
+  Divergence}.
+\newblock In {\em Advances in Neural Information Processing Systems}, 2020.
+
+\bibitem{JSmetric-2003}
+Dominik~Maria Endres and Johannes~E Schindelin.
+\newblock A new metric for probability distributions.
+\newblock {\em IEEE Transactions on Information theory}, 49(7):1858--1860,
+  2003.
+
+\bibitem{JSmetric-2004}
+Bent Fuglede and Flemming Topsoe.
+\newblock {Jensen-Shannon divergence and Hilbert space embedding}.
+\newblock In {\em International Symposium onInformation Theory, 2004. ISIT
+  2004. Proceedings.}, page~31. IEEE, 2004.
+
 \bibitem{gammadivergence-2008}
 Hironori Fujisawa and Shinto Eguchi.
 \newblock Robust parameter estimation with a small bias against heavy
@@ -21,6 +39,12 @@ Hironori Fujisawa and Shinto Eguchi.
 Aapo Hyv{\"a}rinen and Peter Dayan.
 \newblock Estimation of non-normalized statistical models by score matching.
 \newblock {\em Journal of Machine Learning Research}, 6(4), 2005.
+
+\bibitem{Jeffreys-1946}
+Harold Jeffreys.
+\newblock An invariant form for the prior probability in estimation problems.
+\newblock {\em Proceedings of the Royal Society of London. Series A.
+  Mathematical and Physical Sciences}, 186(1007):453--461, 1946.
 
 \bibitem{jenssen2006cauchy}
 Robert Jenssen, Jose~C Principe, Deniz Erdogmus, and Torbj{\o}rn Eltoft.
@@ -39,6 +63,41 @@ Kittipat Kampa, Erion Hasanbelliu, and Jose~C Principe.
 \newblock In {\em The 2011 International Joint Conference on Neural Networks},
   pages 2578--2585. IEEE, 2011.
 
+\bibitem{Kullback-1997}
+Solomon Kullback.
+\newblock {\em Information theory and statistics}.
+\newblock Courier Corporation, 1997.
+
+\bibitem{skewJS-2001}
+Lillian Lee.
+\newblock On the effectiveness of the skew divergence for statistical language
+  analysis.
+\newblock In {\em Artificial Intelligence and Statistics (AISTATS)}, page
+  65?72, 2001.
+
+\bibitem{JS-1991}
+Jianhua Lin.
+\newblock {Divergence measures based on the Shannon entropy}.
+\newblock {\em IEEE Transactions on Information theory}, 37(1):145--151, 1991.
+
+\bibitem{JW-1988}
+Jianhua Lin and SKM Wong.
+\newblock Approximation of discrete probability distributions based on a new
+  divergence measure.
+\newblock {\em Congressus Numerantium (Winnipeg)}, 61:75--80, 1988.
+
+\bibitem{mclachlan1988mixture}
+Geoffrey~J McLachlan and Kaye~E Basford.
+\newblock {\em {Mixture models: Inference and applications to clustering}},
+  volume~38.
+\newblock M. Dekker New York, 1988.
+
+\bibitem{nielsen2010family}
+Frank Nielsen.
+\newblock {A family of statistical symmetric divergences based on Jensen's
+  inequality}.
+\newblock {\em arXiv preprint arXiv:1009.4004}, 2010.
+
 \bibitem{nielsen2012closed}
 Frank Nielsen.
 \newblock Closed-form information-theoretic divergences for statistical
@@ -46,11 +105,54 @@ Frank Nielsen.
 \newblock In {\em Proceedings of the 21st International Conference on Pattern
   Recognition (ICPR)}, pages 1723--1726. IEEE, 2012.
 
+\bibitem{JSsym-2019}
+Frank Nielsen.
+\newblock {On the Jensen?Shannon Symmetrization of Distances Relying on
+  Abstract Means}.
+\newblock {\em Entropy}, 21(5), 2019.
+
+\bibitem{StatMinkGMM-2019}
+Frank Nielsen.
+\newblock {The statistical Minkowski distances: Closed-form formula for
+  Gaussian mixture models}.
+\newblock In {\em International Conference on Geometric Science of
+  Information}, pages 359--367. Springer, 2019.
+
+\bibitem{nielsen2020generalization}
+Frank Nielsen.
+\newblock {On a Generalization of the Jensen?Shannon Divergence and the
+  Jensen?Shannon Centroid}.
+\newblock {\em Entropy}, 22(2), 2020.
+
 \bibitem{nielsen2021fast}
 Frank Nielsen.
 \newblock {Fast approximations of the Jeffreys divergence between univariate
   Gaussian mixture models via exponential polynomial densities}.
 \newblock {\em arXiv preprint arXiv:2107.05901}, 2021.
+
+\bibitem{JeffreysGMMPEF-2021}
+Frank Nielsen.
+\newblock Fast approximations of the jeffreys divergence between univariate
+  gaussian mixture models via exponential polynomial densities.
+\newblock {\em arXiv preprint arXiv:2107.05901}, 2021.
+
+\bibitem{vJSD-2021}
+Frank Nielsen.
+\newblock {On a Variational Definition for the Jensen-Shannon Symmetrization of
+  Distances Based on the Information Radius}.
+\newblock {\em Entropy}, 23(4), 2021.
+
+\bibitem{nielsen2021dually}
+Frank Nielsen.
+\newblock {The dually flat information geometry of the mixture family of two
+  prescribed Cauchy components}.
+\newblock {\em arXiv preprint arXiv:2104.13801}, 2021.
+
+\bibitem{SBD-2009}
+Frank Nielsen and Richard Nock.
+\newblock {Sided and symmetrized Bregman centroids}.
+\newblock {\em IEEE transactions on Information Theory}, 55(6):2882--2904,
+  2009.
 
 \bibitem{PMPEF-2016}
 Frank Nielsen and Richard Nock.
@@ -58,6 +160,44 @@ Frank Nielsen and Richard Nock.
   divergences.
 \newblock In {\em International Conference on Similarity Search and
   Applications}, pages 109--116. Springer, 2016.
+
+\bibitem{wmixtures-2018}
+Frank Nielsen and Richard Nock.
+\newblock On the geometry of mixtures of prescribed distributions.
+\newblock In {\em IEEE International Conference on Acoustics, Speech and Signal
+  Processing (ICASSP)}, pages 2861--2865. IEEE, 2018.
+
+\bibitem{CauchyJSD-2021}
+Frank Nielsen and Kazuki Okamura.
+\newblock On $f$-divergences between cauchy distributions.
+\newblock {\em arXiv:2101.12459}, 2021.
+
+\bibitem{nielsen2021f}
+Frank Nielsen and Kazuki Okamura.
+\newblock {On $f$-divergences between Cauchy distributions}.
+\newblock {\em arXiv preprint arXiv:2101.12459}, 2021.
+
+\bibitem{LSE-MM1D-2016}
+Frank Nielsen and Ke~Sun.
+\newblock Guaranteed bounds on information-theoretic measures of univariate
+  mixtures using piecewise log-sum-exp inequalities.
+\newblock {\em Entropy}, 18(12):442, 2016.
+
+\bibitem{alphadiv-2017}
+Frank Nielsen and Ke~Sun.
+\newblock Combinatorial bounds on the $\alpha$-divergence of univariate mixture
+  models.
+\newblock In {\em 2017 {IEEE} International Conference on Acoustics, Speech and
+  Signal Processing, {ICASSP} 2017, New Orleans, LA, USA, March 5-9, 2017},
+  pages 4476--4480. {IEEE}, 2017.
+
+\bibitem{TVmixture-2018}
+Frank Nielsen and Ke~Sun.
+\newblock {Guaranteed Deterministic Bounds on the total variation distance
+  between univariate mixtures}.
+\newblock In {\em 28th {IEEE} International Workshop on Machine Learning for
+  Signal Processing, {MLSP} 2018, Aalborg, Denmark, September 17-20, 2018},
+  pages 1--6. {IEEE}, 2018.
 
 \bibitem{nielsen2019clustering}
 Frank Nielsen and Ke~Sun.
@@ -68,12 +208,51 @@ Frank Nielsen and Ke~Sun.
 
 \bibitem{HolderDivergence-2017}
 Frank Nielsen, Ke~Sun, and St{\'e}phane Marchand-Maillet.
-\newblock On h{\"o}lder projective divergences.
+\newblock {On H{\"o}lder projective divergences}.
 \newblock {\em Entropy}, 19(3):122, 2017.
+
+\bibitem{pearson1894contributions}
+Karl Pearson.
+\newblock Contributions to the mathematical theory of evolution.
+\newblock {\em Philosophical Transactions of the Royal Society of London. A},
+  185:71--110, 1894.
 
 \bibitem{PhiPowerDivergence-2021}
 Souvik Ray, Subrata Pal, Sumit~Kumar Kar, and Ayanendranath Basu.
 \newblock Characterizing the functional density power divergence class.
 \newblock {\em arXiv preprint arXiv:2105.06094}, 2021.
+
+\bibitem{Renyi-1961}
+Alfr{\'e}d R{\'e}nyi et~al.
+\newblock On measures of entropy and information.
+\newblock In {\em Proceedings of the Fourth Berkeley Symposium on Mathematical
+  Statistics and Probability, Volume 1: Contributions to the Theory of
+  Statistics}. The Regents of the University of California, 1961.
+
+\bibitem{Comix-2016}
+Olivier Schwander, St{\'{e}}phane Marchand{-}Maillet, and Frank Nielsen.
+\newblock {Comix: Joint estimation and lightspeed comparison of mixture
+  models}.
+\newblock In {\em 2016 {IEEE} International Conference on Acoustics, Speech and
+  Signal Processing, {ICASSP} 2016, Shanghai, China, March 20-25, 2016}, pages
+  2449--2453. {IEEE}, 2016.
+
+\bibitem{Sibson-1969}
+Robin Sibson.
+\newblock Information radius.
+\newblock {\em Zeitschrift f{\"u}r Wahrscheinlichkeitstheorie und verwandte
+  Gebiete}, 14(2):149--160, 1969.
+
+\bibitem{KLnotanalytic-2004}
+Sumio Watanabe, Keisuke Yamazaki, and Miki Aoyagi.
+\newblock Kullback information of normal mixture is not an analytic function.
+\newblock {\em IEICE technical report. Neurocomputing}, 104(225):41--46, 2004.
+
+\bibitem{WongYOU-1985}
+Andrew~KC Wong and Manlai You.
+\newblock Entropy and distance of random graphs with application to structural
+  pattern recognition.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  (5):599--609, 1985.
 
 \end{thebibliography}

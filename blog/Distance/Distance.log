@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=latex 2021.4.14)  13 AUG 2021 19:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=latex 2021.4.14)  16 AUG 2021 17:39
 entering extended mode
 **\makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx\HCode\def\HCod
 e##1{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.{\g
@@ -631,80 +631,145 @@ File: l3backend-dvips.def 2021-03-18 L3 backend support: dvips
 ) (Distance.aux)
 \openout1 = `Distance.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-Package hyperref Info: Link coloring ON on input line 25.
-LaTeX Info: Redefining \ref on input line 25.
-LaTeX Info: Redefining \pageref on input line 25.
-LaTeX Info: Redefining \nameref on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+Package hyperref Info: Link coloring ON on input line 42.
+LaTeX Info: Redefining \ref on input line 42.
+LaTeX Info: Redefining \pageref on input line 42.
+LaTeX Info: Redefining \nameref on input line 42.
 --- file Distance.css ---
  [1
 
 ] [2]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
 
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
 
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-l. 34 Writing Distance.idv[1] (Distance0x.png)
-l. 34 Writing Distance.idv[2] (Distance1x.png)
-l. 36 Writing Distance.idv[3] (Distance2x.png)
-l. 36 Writing Distance.idv[4] (Distance3x.png)
-l. 37 Writing Distance.idv[5] (Distance4x.png)
-l. 41 Writing Distance.idv[6] (Distance5x.png)
- [3]
-l. 52 Writing Distance.idv[7] (Distance6x.png)
-l. 60 Writing Distance.idv[8] (Distance7x.png)
-l. 64 Writing Distance.idv[9] (Distance8x.png)
+) (Distance.4ct)
+[3]
+l. 59 Writing Distance.idv[1] (Distance0x.png)
+l. 59 Writing Distance.idv[2] (Distance1x.png)
+l. 61 Writing Distance.idv[3] (Distance2x.png)
+l. 61 Writing Distance.idv[4] (Distance3x.png)
+l. 62 Writing Distance.idv[5] (Distance4x.png)
+l. 66 Writing Distance.idv[6] (Distance5x.png)
+l. 77 Writing Distance.idv[7] (Distance6x.png)
  [4]
-l. 68 Writing Distance.idv[10] (Distance9x.png)
-l. 71 Writing Distance.idv[11] (Distance10x.png)
-l. 78 Writing Distance.idv[12] (Distance11x.png)
-l. 83 Writing Distance.idv[13] (Distance12x.png)
+l. 85 Writing Distance.idv[8] (Distance7x.png)
+l. 89 Writing Distance.idv[9] (Distance8x.png)
+l. 93 Writing Distance.idv[10] (Distance9x.png)
+l. 96 Writing Distance.idv[11] (Distance10x.png)
  [5]
-l. 87 Writing Distance.idv[14] (Distance13x.png)
-l. 92 Writing Distance.idv[15] (Distance14x.png)
-l. 106 Writing Distance.idv[16] (Distance15x.png)
+l. 103 Writing Distance.idv[12] (Distance11x.png)
+l. 108 Writing Distance.idv[13] (Distance12x.png)
+l. 112 Writing Distance.idv[14] (Distance13x.png)
  [6]
-l. 110 Writing Distance.idv[17] (Distance16x.png)
-l. 122 Writing Distance.idv[18] (Distance17x.png)
-l. 123 Writing Distance.idv[19] (Distance18x.png)
-l. 126 Writing Distance.idv[20] (Distance19x.png)
+l. 117 Writing Distance.idv[15] (Distance14x.png)
+l. 131 Writing Distance.idv[16] (Distance15x.png)
+l. 135 Writing Distance.idv[17] (Distance16x.png)
+ [7]
+l. 140 Writing Distance.idv[18] (Distance17x.png)
+l. 153 Writing Distance.idv[19] (Distance18x.png)
+l. 154 Writing Distance.idv[20] (Distance19x.png)
+l. 157 Writing Distance.idv[21] (Distance20x.png)
+l. 160 Writing Distance.idv[22] (Distance21x.png)
+ [8]
+l. 169 Writing Distance.idv[23] (Distance22x.png)
+l. 173 Writing Distance.idv[24] (Distance23x.png)
+l. 188 Writing Distance.idv[25] (Distance24x.png)
+ [9]
+l. 191 Writing Distance.idv[26] (Distance25x.png)
+l. 191 Writing Distance.idv[27] (Distance26x.png)
+l. 192 Writing Distance.idv[28] (Distance27x.png)
+l. 197 Writing Distance.idv[29] (Distance28x.png)
+l. 202 Writing Distance.idv[30] (Distance29x.png)
+ [10]
+l. 209 Writing Distance.idv[31] (Distance30x.png)
+l. 213 Writing Distance.idv[32] (Distance31x.png)
+l. 218 Writing Distance.idv[33] (Distance32x.png)
+ [11]
+l. 222 Writing Distance.idv[34] (Distance33x.png)
+l. 227 Writing Distance.idv[35] (Distance34x.png)
+l. 232 Writing Distance.idv[36] (Distance35x.png)
+l. 232 Writing Distance.idv[37] (Distance36x.png)
+l. 239 Writing Distance.idv[38] (Distance37x.png)
+ [12]
+l. 244 Writing Distance.idv[39] (Distance38x.png)
+l. 258 Writing Distance.idv[40] (Distance39x.png)
+ [13]
+l. 263 Writing Distance.idv[41] (Distance40x.png)
+l. 266 Writing Distance.idv[42] (Distance41x.png)
+l. 266 Writing Distance.idv[43] (Distance42x.png)
+l. 266 Writing Distance.idv[44] (Distance43x.png)
+l. 269 Writing Distance.idv[45] (Distance44x.png)
+l. 273 Writing Distance.idv[46] (Distance45x.png)
+ [14]
+l. 277 Writing Distance.idv[47] (Distance46x.png)
+l. 285 Writing Distance.idv[48] (Distance47x.png)
+l. 290 Writing Distance.idv[49] (Distance48x.png)
+l. 294 Writing Distance.idv[50] (Distance49x.png)
+ [15]
+l. 300 Writing Distance.idv[51] (Distance50x.png)
+l. 304 Writing Distance.idv[52] (Distance51x.png)
+ [16]
+l. 309 Writing Distance.idv[53] (Distance52x.png)
+l. 316 Writing Distance.idv[54] (Distance53x.png)
+l. 320 Writing Distance.idv[55] (Distance54x.png)
+l. 323 Writing Distance.idv[56] (Distance55x.png)
+ [17]
+l. 332 Writing Distance.idv[57] (Distance56x.png)
+l. 337 Writing Distance.idv[58] (Distance57x.png)
+ [18]
+l. 344 Writing Distance.idv[59] (Distance58x.png)
+l. 354 Writing Distance.idv[60] (Distance59x.png)
+l. 361 Writing Distance.idv[61] (Distance60x.png)
 
-[7]
-l. 133 Writing Distance.idv[21] (Distance20x.png)
-l. 137 Writing Distance.idv[22] (Distance21x.png)
- (Distance.bbl [8] [9]) [10] (Distance.aux) ) 
+[19]
+l. 378 Writing Distance.idv[62] (Distance61x.png)
+l. 382 Writing Distance.idv[63] (Distance62x.png)
+ [20]
+l. 400 Writing Distance.idv[64] (Distance63x.png)
+l. 403 Writing Distance.idv[65] (Distance64x.png)
+l. 403 Writing Distance.idv[66] (Distance65x.png)
+l. 406 Writing Distance.idv[67] (Distance66x.png)
+l. 413 Writing Distance.idv[68] (Distance67x.png)
+ [21]
+l. 448 Writing Distance.idv[69] (Distance68x.png)
+ [22]
+l. 454 Writing Distance.idv[70] (Distance69x.png)
+l. 458 Writing Distance.idv[71] (Distance70x.png)
+ (Distance.bbl [23] [24] [25] [26] [27]) [28] [29]
+(Distance.aux) ) 
 Here is how much of TeX's memory you used:
- 12401 strings out of 479296
- 171179 string characters out of 2863330
- 588827 words of memory out of 3000000
- 29647 multiletter control sequences out of 15000+600000
- 411690 words of font info for 58 fonts, out of 8000000 for 9000
+ 12563 strings out of 479296
+ 173766 string characters out of 2863330
+ 591117 words of memory out of 3000000
+ 29807 multiletter control sequences out of 15000+600000
+ 411997 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,7n,99p,828b,625s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 77i,9n,99p,1129b,711s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Distance.dvi (10 pages, 39592 bytes).
+Output written on Distance.dvi (29 pages, 115104 bytes).

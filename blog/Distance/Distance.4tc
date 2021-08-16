@@ -1,4 +1,12 @@
 \expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
-\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-10001}{QQ2-1-1}{Statistical distances between densities with computationally intractable normalizers}}{3}\relax 
-\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-20002}{QQ2-1-2}{Statistical distances between empirical distributions and densities with computationally intractable normalizers}}{7}\relax 
-\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-30002}{QQ2-1-3}{References}}{8}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{Contents}}{3}\relax 
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-20001}{QQ2-1-2}{Statistical distances between densities with computationally intractable normalizers}}{4}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-30002}{QQ2-1-3}{Statistical distances between empirical distributions and densities with computationally intractable normalizers}}{8}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-40003}{QQ2-1-4}{The Jensen-Shannon divergence and some generalizations}}{9}\relax 
+\doTocEntry\tocsubsection{3.1}{\csname a:TocLink\endcsname{1}{x1-50003.1}{QQ2-1-5}{Origins of the Jensen-Shannon divergence}}{10}\relax 
+\doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-60003.2}{QQ2-1-6}{Some extensions of the Jensen-Shannon divergence}}{13}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-70004}{QQ2-1-7}{Statistical distances between mixtures}}{20}\relax 
+\doTocEntry\tocsubsection{4.1}{\csname a:TocLink\endcsname{1}{x1-80004.1}{QQ2-1-8}{Approximating and/or fast statistical distances between mixtures}}{20}\relax 
+\doTocEntry\tocsubsection{4.2}{\csname a:TocLink\endcsname{1}{x1-90004.2}{QQ2-1-9}{Bounding statistical distances between mixtures}}{22}\relax 
+\doTocEntry\tocsubsection{4.3}{\csname a:TocLink\endcsname{1}{x1-100004.3}{QQ2-1-10}{Newly designed statistical distances yielding closed-form formula for mixtures}}{22}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-110004.3}{QQ2-1-11}{References}}{23}\relax 

@@ -141,23 +141,72 @@ Css: div.gather-star {text-align:center;}
 --- needs --- Distance.idv[4] ==> Distance2x.png ---
 --- needs --- Distance.idv[5] ==> Distance3x.png ---
 --- needs --- Distance.idv[6] ==> Distance4x.png ---
---- needs --- Distance.idv[8] ==> Distance5x.png ---
+--- needs --- Distance.idv[7] ==> Distance5x.png ---
 --- needs --- Distance.idv[9] ==> Distance6x.png ---
 --- needs --- Distance.idv[10] ==> Distance7x.png ---
---- needs --- Distance.idv[12] ==> Distance8x.png ---
---- needs --- Distance.idv[13] ==> Distance9x.png ---
+--- needs --- Distance.idv[11] ==> Distance8x.png ---
+--- needs --- Distance.idv[12] ==> Distance9x.png ---
 --- needs --- Distance.idv[14] ==> Distance10x.png ---
 --- needs --- Distance.idv[15] ==> Distance11x.png ---
---- needs --- Distance.idv[17] ==> Distance12x.png ---
+--- needs --- Distance.idv[16] ==> Distance12x.png ---
 --- needs --- Distance.idv[18] ==> Distance13x.png ---
 --- needs --- Distance.idv[19] ==> Distance14x.png ---
---- needs --- Distance.idv[21] ==> Distance15x.png ---
---- needs --- Distance.idv[22] ==> Distance16x.png ---
+--- needs --- Distance.idv[20] ==> Distance15x.png ---
+--- needs --- Distance.idv[21] ==> Distance16x.png ---
 --- needs --- Distance.idv[23] ==> Distance17x.png ---
 --- needs --- Distance.idv[24] ==> Distance18x.png ---
 --- needs --- Distance.idv[25] ==> Distance19x.png ---
---- needs --- Distance.idv[27] ==> Distance20x.png ---
+--- needs --- Distance.idv[26] ==> Distance20x.png ---
 --- needs --- Distance.idv[28] ==> Distance21x.png ---
+--- needs --- Distance.idv[29] ==> Distance22x.png ---
+--- needs --- Distance.idv[30] ==> Distance23x.png ---
+--- needs --- Distance.idv[32] ==> Distance24x.png ---
+--- needs --- Distance.idv[33] ==> Distance25x.png ---
+--- needs --- Distance.idv[34] ==> Distance26x.png ---
+--- needs --- Distance.idv[35] ==> Distance27x.png ---
+--- needs --- Distance.idv[36] ==> Distance28x.png ---
+--- needs --- Distance.idv[38] ==> Distance29x.png ---
+--- needs --- Distance.idv[39] ==> Distance30x.png ---
+--- needs --- Distance.idv[40] ==> Distance31x.png ---
+--- needs --- Distance.idv[41] ==> Distance32x.png ---
+--- needs --- Distance.idv[43] ==> Distance33x.png ---
+--- needs --- Distance.idv[45] ==> Distance34x.png ---
+--- needs --- Distance.idv[46] ==> Distance35x.png ---
+--- needs --- Distance.idv[47] ==> Distance36x.png ---
+--- needs --- Distance.idv[49] ==> Distance37x.png ---
+--- needs --- Distance.idv[51] ==> Distance38x.png ---
+--- needs --- Distance.idv[53] ==> Distance39x.png ---
+--- needs --- Distance.idv[55] ==> Distance40x.png ---
+--- needs --- Distance.idv[57] ==> Distance41x.png ---
+--- needs --- Distance.idv[58] ==> Distance42x.png ---
+--- needs --- Distance.idv[59] ==> Distance43x.png ---
+--- needs --- Distance.idv[60] ==> Distance44x.png ---
+--- needs --- Distance.idv[62] ==> Distance45x.png ---
+--- needs --- Distance.idv[63] ==> Distance46x.png ---
+--- needs --- Distance.idv[64] ==> Distance47x.png ---
+--- needs --- Distance.idv[65] ==> Distance48x.png ---
+--- needs --- Distance.idv[67] ==> Distance49x.png ---
+--- needs --- Distance.idv[68] ==> Distance50x.png ---
+--- needs --- Distance.idv[70] ==> Distance51x.png ---
+--- needs --- Distance.idv[72] ==> Distance52x.png ---
+--- needs --- Distance.idv[73] ==> Distance53x.png ---
+--- needs --- Distance.idv[75] ==> Distance54x.png ---
+--- needs --- Distance.idv[76] ==> Distance55x.png ---
+--- needs --- Distance.idv[78] ==> Distance56x.png ---
+--- needs --- Distance.idv[80] ==> Distance57x.png ---
+--- needs --- Distance.idv[82] ==> Distance58x.png ---
+--- needs --- Distance.idv[84] ==> Distance59x.png ---
+--- needs --- Distance.idv[85] ==> Distance60x.png ---
+--- needs --- Distance.idv[87] ==> Distance61x.png ---
+--- needs --- Distance.idv[88] ==> Distance62x.png ---
+--- needs --- Distance.idv[90] ==> Distance63x.png ---
+--- needs --- Distance.idv[91] ==> Distance64x.png ---
+--- needs --- Distance.idv[92] ==> Distance65x.png ---
+--- needs --- Distance.idv[93] ==> Distance66x.png ---
+--- needs --- Distance.idv[94] ==> Distance67x.png ---
+--- needs --- Distance.idv[96] ==> Distance68x.png ---
+--- needs --- Distance.idv[98] ==> Distance69x.png ---
+--- needs --- Distance.idv[100] ==> Distance70x.png ---
 --- characters ---
 Font("cmr","10","10","109")
 Font("cmr","17","17","100")
@@ -167,12 +216,20 @@ Font("cmr","6","6","100")
 Font("cmmi","8","8","100")
 Font("cmmi","6","6","100")
 Font("cmsy","8","8","100")
---- needs --- Distance.idv[30] ==> cmsy8-53.png ---
+--- needs --- Distance.idv[102] ==> cmsy8-53.png ---
+Font("cmsy","6","6","100")
 Font("msbm","10","10","80")
 Font("cmtt","10","10","109")
 Font("cmmi","10","10","109")
 Font("cmsy","10","10","109")
---- needs --- Distance.idv[31] ==> cmsy10-53.png ---
+--- needs --- Distance.idv[103] ==> cmsy10-58.png ---
+--- needs --- Distance.idv[104] ==> cmsy10-53.png ---
+--- needs --- Distance.idv[105] ==> cmsy10-50.png ---
+--- needs --- Distance.idv[106] ==> cmsy10-46.png ---
+--- needs --- Distance.idv[107] ==> cmsy10-45.png ---
+--- needs --- Distance.idv[108] ==> cmsy10-44.png ---
 Font("cmex","10","10","109")
+Font("msbm","10","10","109")
 Font("cmti","10","10","109")
+Font("tcrm","1095","10","100")
 Font("cmbx","10","10","109")

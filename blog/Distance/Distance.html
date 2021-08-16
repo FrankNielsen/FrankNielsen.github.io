@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
   "http://www.w3.org/TR/html4/loose.dtd">  
 <html > 
-<head><title>Dissimilarities, divergences, and distances</title> 
+<head><title>Discrepancies, dissimilarities, divergences, and distances</title> 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
 <meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
 <meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
@@ -16,25 +16,58 @@
                                                                                          
                                                                                          
 
-<h2 class="titleHead">Dissimilarities, divergences, and distances</h2>
-             <div class="author" ><span 
+<h2 class="titleHead">Discrepancies, dissimilarities, divergences, and distances</h2>
+              <div class="author" ><span 
 class="cmr-12">Frank Nielsen</span>
 <br /><span 
-class="cmr-12">Sony Computer Science Laboratories Inc</span>
-<br />             <span 
+class="cmr-12">Sony Computer Science Laboratories Inc.</span>
+<br />              <span 
 class="cmr-12">Tokyo, Japan</span></div><br />
 <div class="date" ><span 
-class="cmr-12">13th August 2021</span></div>
+class="cmr-12">13th August 2021, updated August 16, 2021</span></div>
    </div>
-<!--l. 28--><p class="indent" >   This is a working document which will be frequently updated with materials concerning the
+<!--l. 45--><p class="indent" >   This is a working document which will be frequently updated with materials concerning the
 discrepancy between two distributions.
+<!--l. 47--><p class="indent" >   This document is also available in the PDF <a 
+href="Distance.pdf" class="url" ><span 
+class="cmtt-10x-x-109">Distance.pdf</span></a>
+<!--l. 50--><p class="indent" >   There are many other acronyms used in the literature for referencing a dissimilarity; For example, the
+following 5 D&#8217;s: Discrepancies, deviations, dissimilarities, divergences, and distances.
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Contents</h3>
+   <div class="tableofcontents">
+   &#x00A0;<span class="sectionToc" >1 <a 
+href="#x1-20001" id="QQ2-1-2">Statistical distances between densities with computationally
+intractable normalizers</a></span>
+<br />   &#x00A0;<span class="sectionToc" >2 <a 
+href="#x1-30002" id="QQ2-1-3">Statistical distances between empirical distributions and densities
+with computationally intractable normalizers</a></span>
+<br />   &#x00A0;<span class="sectionToc" >3 <a 
+href="#x1-40003" id="QQ2-1-4">The Jensen-Shannon divergence and some generalizations</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.1 <a 
+href="#x1-50003.1" id="QQ2-1-5">Origins of the Jensen-Shannon divergence</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.2 <a 
+href="#x1-60003.2" id="QQ2-1-6">Some extensions of the Jensen-Shannon divergence</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4 <a 
+href="#x1-70004" id="QQ2-1-7">Statistical distances between mixtures</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.1 <a 
+href="#x1-80004.1" id="QQ2-1-8">Approximating and/or fast statistical distances between mixtures</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.2 <a 
+href="#x1-90004.2" id="QQ2-1-9">Bounding statistical distances between mixtures</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.3 <a 
+href="#x1-100004.3" id="QQ2-1-10">Newly designed statistical distances yielding closed-form formula
+for mixtures</a></span>
+   </div>
+                                                                                         
+                                                                                         
+<!--l. 56--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
- id="x1-10001"></a>Statistical distances between densities with computationally intractable normalizers</h3>
-<!--l. 34--><p class="noindent" >Consider a density <span 
+ id="x1-20001"></a>Statistical distances between densities with computationally intractable normalizers</h3>
+<!--l. 59--><p class="noindent" >Consider a density <span 
 class="cmmi-10x-x-109">p</span>(<span 
 class="cmmi-10x-x-109">x</span>) = <img 
-src="Distance0x.png" alt="&#x02DC;p(x)
-Zp"  class="frac" align="middle"> where <img 
+src="Distance0x.png" alt="&#x02DC;p(Zx)
+ p"  class="frac" align="middle"> where <img 
 src="Distance1x.png" alt="&#x02DC;p"  class="tilde" > (<span 
 class="cmmi-10x-x-109">x</span>) is an unnormalized <span 
 class="cmti-10x-x-109">computable </span>density and <span 
@@ -78,7 +111,7 @@ only if
 <img 
 src="Distance4x.png" alt="&#x2200;&#x03BB;1 &#x003E; 0,&#x03BB;2 &#x003E; 0,  D[p1 : p2] = D [&#x03BB;1p1 : &#x03BB;2p2].
 " class="math-display" ></div>
-<!--l. 40--><p class="indent" >   In particular, letting <span 
+<!--l. 65--><p class="indent" >   In particular, letting <span 
 class="cmmi-10x-x-109">&#x03BB;</span><sub><span 
 class="cmr-8">1</span></sub> = <span 
 class="cmmi-10x-x-109">Z</span><sub><span 
@@ -91,30 +124,31 @@ class="cmmi-8">p</span><sub><span
 class="cmr-6">2</span></sub></sub>, we have
    <div class="math-display" >
 <img 
-src="Distance5x.png" alt="D [p1 : p2] = D[&#x02DC;p1 : &#x02DC;p2].
+src="Distance5x.png" alt="D [p : p ] = D[&#x02DC;p : &#x02DC;p ].
+    1  2       1   2
 " class="math-display" ></div>
-<!--l. 44--><p class="indent" >   Notice that the rhs. does not rely on the computationally intractable normalizers. These projective
+<!--l. 69--><p class="indent" >   Notice that the rhs. does not rely on the computationally intractable normalizers. These projective
 distances are useful in statistical inference based on minimum distance estimators&#x00A0;<span class="cite">[<a 
 href="#XMinDistance-2019">2</a>]</span> (see next
 Section).
-<!--l. 48--><p class="indent" >   Here are a few statistical projective distances:
+<!--l. 73--><p class="indent" >   Here are a few statistical projective distances:
      <ul class="itemize1">
      <li class="itemize"><span 
 class="cmmi-10x-x-109">&#x03B3;</span><span 
 class="cmbx-10x-x-109">-divergences </span>(<span 
 class="cmmi-10x-x-109">&#x03B3; &#x003E; </span>0)&#x00A0;<span class="cite">[<a 
-href="#Xgammadivergence-2001">6</a>,&#x00A0;<a 
-href="#Xgammadivergence-2008">3</a>]</span>:
+href="#Xgammadivergence-2001">10</a>,&#x00A0;<a 
+href="#Xgammadivergence-2008">6</a>]</span>:
 <div class="math-display" >
 <img 
-src="Distance6x.png" alt="              (&#x222B;      )   (     1)    ( &#x222B;     )   1    (&#x222B;      )
-D &#x03B3;[p : q] := log   q&#x03B1;+1  -   1+  -- log    q&#x03B1;p   + --log     p&#x03B1;+1  ,  &#x03B3; &#x2265; 0
+src="Distance6x.png" alt="              (&#x222B;      )   (      )    ( &#x222B;     )        (&#x222B;      )
+D &#x03B3;[p : q] := log   q&#x03B1;+1  -   1+  1- log    q&#x03B1;p   + 1-log     p&#x03B1;+1  ,  &#x03B3; &#x2265; 0
                  &#x211D;              &#x03B1;        &#x211D;        &#x03B1;       &#x211D;
 " class="math-display" ></div>
-     <!--l. 56--><p class="noindent" >When <span 
+     <!--l. 81--><p class="noindent" >When <span 
 class="cmmi-10x-x-109">&#x03B3; </span><span 
 class="cmsy-10x-x-109">&#x2192; </span>0, we have&#x00A0;<span class="cite">[<a 
-href="#Xgammadivergence-2008">3</a>]</span> <span 
+href="#Xgammadivergence-2008">6</a>]</span> <span 
 class="cmmi-10x-x-109">D</span><sub><span 
 class="cmmi-8">&#x03B3;</span></sub>[<span 
 class="cmmi-10x-x-109">p </span>: <span 
@@ -127,29 +161,27 @@ class="cmmi-10x-x-109">q</span>], the Kullback-Leibler divergence (KLD).
      family by Monte Carlo stochastic integration of the <span 
 class="cmmi-10x-x-109">&#x03B3;</span>-divergence for a small value of <span 
 class="cmmi-10x-x-109">&#x03B3;</span>&#x00A0;<span class="cite">[<a 
-href="#XPMPEF-2016">10</a>]</span>.
-     <!--l. 59--><p class="noindent" >The  <span 
-class="cmmi-10x-x-109">&#x03B3;</span>-divergences  (projective,  Bregman-type)  and  the  density  power  divergence&#x00A0;<span class="cite">[<a 
-href="#XBasuPowerDivergence-1998">1</a>]</span>
-     (non-projective, Bregman-type divergence):
+href="#XPMPEF-2016">27</a>]</span>.
+     <!--l. 84--><p class="noindent" >The <span 
+class="cmmi-10x-x-109">&#x03B3;</span>-divergences (projective, Bregman-type=Cross-entropy-entropy) and the density power
+     divergence&#x00A0;<span class="cite">[<a 
+href="#XBasuPowerDivergence-1998">1</a>]</span> (non-projective, Bregman-type divergence):
 <div class="math-display" >
 <img 
 src="Distance7x.png" alt="             &#x222B;        (      ) &#x222B;          &#x222B;
-Ddp&#x03B1;d[p : q] := q&#x03B1;+1 -   1+  1-    q&#x03B1;p+  1-  p&#x03B1;+1,   &#x03B1; &#x2265; 0,
-              &#x211D;             &#x03B1;   &#x211D;       &#x03B1;  &#x211D;
+  dpd            &#x03B1;+1         1-     &#x03B1;    1-   &#x03B1;+1
+D &#x03B1; [p : q] := &#x211D;q   -   1+  &#x03B1;   &#x211D; q p+  &#x03B1;  &#x211D;p    ,  &#x03B1; &#x2265; 0,
 " class="math-display" ></div>
-     <!--l. 63--><p class="noindent" >can be encapsulated into the family of &#x03A6;-power divergences&#x00A0;<span class="cite">[<a 
-href="#XPhiPowerDivergence-2021">13</a>]</span> (functional density power
+     <!--l. 88--><p class="noindent" >can be encapsulated into the family of &#x03A6;-power divergences&#x00A0;<span class="cite">[<a 
+href="#XPhiPowerDivergence-2021">37</a>]</span> (functional density power
      divergence class):
-                                                                                         
-                                                                                         
 <div class="math-display" >
 <img 
-src="Distance8x.png" alt="              ( &#x222B;      )   (      )  ( &#x222B;     )      ( &#x222B;     )
-                   &#x03B1;+1          1-        &#x03B1;      1-      &#x03B1;+1
-D &#x03D5;,&#x03B1;[p : q] := &#x03D5;  &#x211D;q      -  1 + &#x03B1;   &#x03D5;   &#x211D;q p   + &#x03B1;&#x03D5;    &#x211D;p     ,  &#x03B1; &#x2265;  0,
+src="Distance8x.png" alt="              ( &#x222B;      )   (    1 )  ( &#x222B;     )   1  ( &#x222B;     )
+D &#x03D5;,&#x03B1;[p : q] := &#x03D5;   q&#x03B1;+1   -  1 + --  &#x03D5;    q&#x03B1;p   + -&#x03D5;     p&#x03B1;+1  ,  &#x03B1; &#x2265;  0,
+                 &#x211D;              &#x03B1;       &#x211D;        &#x03B1;     &#x211D;
 " class="math-display" ></div>
-     <!--l. 67--><p class="noindent" >where <span 
+     <!--l. 92--><p class="noindent" >where <span 
 class="cmmi-10x-x-109">&#x03D5;</span>(<span 
 class="cmmi-10x-x-109">e</span><sup><span 
 class="cmmi-8">x</span></sup>) convex and strictly increasing, <span 
@@ -181,40 +213,39 @@ class="cmmi-10x-x-109">q</span>].
      </li>
      <li class="itemize"><span 
 class="cmbx-10x-x-109">Cauchy-Schwarz divergence</span>&#x00A0;<span class="cite">[<a 
-href="#Xjenssen2006cauchy">5</a>]</span> (CSD, projective)
+href="#Xjenssen2006cauchy">9</a>]</span> (CSD, projective)
+                                                                                         
+                                                                                         
 <div class="math-display" >
 <img 
 src="Distance10x.png" alt="                (                           )
-                        &#x222B; p(x )q(x)d&#x03BC; (x)
-DCS[p : q] = - log( &#x2218;-&#x222B;---------&#x222B;-----------)  = DCS [&#x03BB;1p : &#x03BB;2q],&#x2200;&#x03BB;1 &#x003E; 0,&#x03BB;2 &#x003E; 0,
+                        &#x222B;
+DCS[p : q] = - log( &#x2218;-&#x222B;---p(x-)q(x)&#x222B;d&#x03BC;-(x)-----)  = DCS [&#x03BB;1p : &#x03BB;2q],&#x2200;&#x03BB;1 &#x003E; 0,&#x03BB;2 &#x003E; 0,
                       p(x)2d&#x03BC;(x)  q(x)2d&#x03BC;(x)
 " class="math-display" ></div>
-     <!--l. 74--><p class="noindent" >and <span 
+     <!--l. 99--><p class="noindent" >and <span 
 class="cmbx-10x-x-109">H</span><span 
 class="cmbx-10x-x-109">ölder divergences</span>&#x00A0;<span class="cite">[<a 
-href="#XHolderDivergence-2017">12</a>]</span> (HD, projective, which generalizes the CSD):
+href="#XHolderDivergence-2017">35</a>]</span> (HD, projective, which generalizes the CSD):
 <div class="math-display" >
 <img 
 src="Distance11x.png" alt="                    (       &#x222B;     &#x03B3;&#x2215;&#x03B1;    &#x03B3;&#x2215;&#x03B2;        )
-DH ¨older[p : q] = - log (&#x222B;----X-p(x))--q((&#x222B;x)---dx--)---  ,  1-+  1-= 1.
- &#x03B1;,&#x03B3;                      p(x)&#x03B3;dx 1&#x2215;&#x03B1;    q(x)&#x03B3;dx 1&#x2215;&#x03B2;     &#x03B1;    &#x03B2;
+DH ¨older[p : q] = - log-------X-p(x-)--q(x)---dx------  ,  1-+  1-= 1.
+ &#x03B1;,&#x03B3;                  (&#x222B;  p(x)&#x03B3;dx)1&#x2215;&#x03B1;(&#x222B;  q(x)&#x03B3;dx)1&#x2215;&#x03B2;     &#x03B1;    &#x03B2;
                         X              X
 " class="math-display" ></div>
-     <!--l. 82--><p class="noindent" >We have
-                                                                                         
-                                                                                         
+     <!--l. 107--><p class="noindent" >We have
 <div class="math-display" >
 <img 
-src="Distance12x.png" alt="&#x2200; &#x03BB;1 &#x003E; 0,&#x03BB;2 &#x003E; 0,DH ¨older[&#x03BB;1p : &#x03BB;2q] = DH ¨older[p : q],
-                 &#x03B1;,&#x03B3;                 &#x03B1;,&#x03B3;
+src="Distance12x.png" alt="                 H ¨older              H ¨older
+&#x2200; &#x03BB;1 &#x003E; 0,&#x03BB;2 &#x003E; 0,D &#x03B1;,&#x03B3;  [&#x03BB;1p : &#x03BB;2q] = D &#x03B1;,&#x03B3;  [p : q],
 " class="math-display" ></div>
-     <!--l. 86--><p class="noindent" >and
+     <!--l. 111--><p class="noindent" >and
 <div class="math-display" >
 <img 
-src="Distance13x.png" alt="  H¨older
-D 2,2    [p : q] = DCS [p : q].
+src="Distance13x.png" alt="DH2¨o,2lder[p : q] = DCS [p : q].
 " class="math-display" ></div>
-     <!--l. 91--><p class="noindent" >Hölder divergences between two densities <span 
+     <!--l. 116--><p class="noindent" >Hölder divergences between two densities <span 
 class="cmmi-10x-x-109">p</span><sub><span 
 class="cmmi-8">&#x03B8;</span><sub><span 
 class="cmmi-6">p</span></sub></sub> and <span 
@@ -224,20 +255,21 @@ class="cmmi-6">q</span></sub></sub> of an exponential family with cumulant
      function <span 
 class="cmmi-10x-x-109">F</span>(<span 
 class="cmmi-10x-x-109">&#x03B8;</span>) is available in closed-form&#x00A0;<span class="cite">[<a 
-href="#XHolderDivergence-2017">12</a>]</span>:
+href="#XHolderDivergence-2017">35</a>]</span>:
 <div class="math-display" >
 <img 
-src="Distance14x.png" alt="  H ¨older        1          1            ( &#x03B3;     &#x03B3;  )
-D &#x03B1;,&#x03B3;   [p : q] = &#x03B1;-F (&#x03B3;&#x03B8;p)+ &#x03B2;-F (&#x03B3;&#x03B8;q)- F &#x03B1;&#x03B8;p + &#x03B2;&#x03B8;q
+src="Distance14x.png" alt="                1          1            ( &#x03B3;     &#x03B3;  )
+DH&#x03B1;,¨o&#x03B3;lder[p : q] =-F (&#x03B3;&#x03B8;p)+ --F (&#x03B3;&#x03B8;q)- F   -&#x03B8;p + -&#x03B8;q
+                &#x03B1;          &#x03B2;              &#x03B1;     &#x03B2;
 " class="math-display" ></div>
-     <!--l. 100--><p class="noindent" >The CSD is available in closed-form between mixtures of an exponential family with a conic
+     <!--l. 125--><p class="noindent" >The CSD is available in closed-form between mixtures of an exponential family with a conic
      natural parameter&#x00A0;<span class="cite">[<a 
-href="#Xnielsen2012closed">8</a>]</span>: This includes the case of Gaussian mixture models&#x00A0;<span class="cite">[<a 
-href="#Xkampa2011closed">7</a>]</span>.
+href="#Xnielsen2012closed">18</a>]</span>: This includes the case of Gaussian mixture models&#x00A0;<span class="cite">[<a 
+href="#Xkampa2011closed">11</a>]</span>.
      </li>
      <li class="itemize"><span 
 class="cmbx-10x-x-109">Hilbert distance</span>&#x00A0;<span class="cite">[<a 
-href="#Xnielsen2019clustering">11</a>]</span> (projective): Consider two probability mass functions <span 
+href="#Xnielsen2019clustering">34</a>]</span> (projective): Consider two probability mass functions <span 
 class="cmmi-10x-x-109">p </span>= (<span 
 class="cmmi-10x-x-109">p</span><sub><span 
 class="cmr-8">1</span></sub><span 
@@ -254,27 +286,46 @@ class="cmmi-10x-x-109">&#x2026;</span><span
 class="cmmi-10x-x-109">,q</span><sub><span 
 class="cmmi-8">d</span></sub>) of the <span 
 class="cmmi-10x-x-109">d</span>-dimensional probability simplex. Then the Hilbert distance is
-                                                                                         
-                                                                                         
 <div class="math-display" >
 <img 
-src="Distance15x.png" alt="                   (               )
-  Hilbert             maxi&#x2208; {1,...,d} pqii
-D       [p : q] = log------------pj-  .
-                     minj&#x2208;{1,...,d} qj
+src="Distance15x.png" alt="                 (             pi)
+ Hilbert            maxi-&#x2208;{1,...,d}-qi
+D      [p : q] = log minj &#x2208;{1,...,d} pj .
+                               qj
 " class="math-display" ></div>
-     <!--l. 109--><p class="noindent" >We have
+     <!--l. 134--><p class="noindent" >We have
 <div class="math-display" >
 <img 
-src="Distance16x.png" alt="&#x2200;&#x03BB;1 &#x003E; 0,&#x03BB;2 &#x003E; 0,DHilbert[&#x03BB;1p : &#x03BB;2q] = DHilbert [p : q].
+src="Distance16x.png" alt="                 Hilbert              Hilbert
+&#x2200;&#x03BB;1 &#x003E; 0,&#x03BB;2 &#x003E; 0,D       [&#x03BB;1p : &#x03BB;2q] = D      [p : q].
 " class="math-display" ></div>
+                                                                                         
+                                                                                         
+     <!--l. 139--><p class="noindent" >The Hilbert projective simplex distance can be extended to the cone of positive-definite
+     matrices&#x00A0;<span class="cite">[<a 
+href="#Xnielsen2019clustering">34</a>]</span> (and its subspace of correlation matrices called the elliptope) as follows:
+<div class="math-display" >
+<img 
+src="Distance17x.png" alt="                   (         - 1)
+DHilbert[P : Q ] = log &#x03BB;max(P-Q-)- ,
+                     &#x03BB;min(PQ -1)
+" class="math-display" ></div>
+     <!--l. 143--><p class="noindent" >where  <span 
+class="cmmi-10x-x-109">&#x03BB;</span><sub><span 
+class="cmr-8">max</span></sub>(<span 
+class="cmmi-10x-x-109">X</span>)  and  <span 
+class="cmmi-10x-x-109">&#x03BB;</span><sub><span 
+class="cmr-8">min</span></sub>(<span 
+class="cmmi-10x-x-109">X</span>)  denote  the  largest  and  smallest  eigenvalue  of  matrix  <span 
+class="cmmi-10x-x-109">X</span>,
+     respectively.
      </li></ul>
-<!--l. 119--><p class="noindent" >
+<!--l. 150--><p class="noindent" >
    <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
- id="x1-20002"></a>Statistical distances between empirical distributions and densities with computationally
+ id="x1-30002"></a>Statistical distances between empirical distributions and densities with computationally
 intractable normalizers</h3>
-<!--l. 122--><p class="noindent" >When estimating the parameter <img 
-src="Distance17x.png" alt="&#x02C6;&#x03B8;"  class="circ" > for a parametric family of distributions <span 
+<!--l. 153--><p class="noindent" >When estimating the parameter <img 
+src="Distance18x.png" alt="&#x02C6;&#x03B8;"  class="circ" > for a parametric family of distributions <span 
 class="cmsy-10x-x-109">{</span><span 
 class="cmmi-10x-x-109">p</span><sub><span 
 class="cmmi-8">&#x03B8;</span></sub><span 
@@ -289,17 +340,18 @@ class="cmmi-10x-x-109">,</span><span
 class="cmmi-10x-x-109">&#x2026;</span><span 
 class="cmmi-10x-x-109">,x</span><sub><span 
 class="cmmi-8">n</span></sub><span 
-class="cmsy-10x-x-109">}</span>, we can define a minimum distance estimator:
+class="cmsy-10x-x-109">}</span>, we can define a minimum distance estimator (MDE):
    <div class="math-display" >
 <img 
-src="Distance18x.png" alt=" &#x02C6;
-&#x03B8; = argmin&#x03B8; D [pS : p&#x03B8;],
+src="Distance19x.png" alt="&#x03B8;&#x02C6;= argmin D [pS : p&#x03B8;],
+         &#x03B8;
 " class="math-display" ></div>
-<!--l. 126--><p class="indent" >   where <span 
+<!--l. 157--><p class="indent" >   where <span 
 class="cmmi-10x-x-109">p</span><sub><span 
 class="cmsy-8"><img 
 src="cmsy8-53.png" alt="S" class="8x-x-53" /></span></sub> = <img 
-src="Distance19x.png" alt="1n"  class="frac" align="middle"> <span 
+src="Distance20x.png" alt="1
+n"  class="frac" align="middle"> <span 
 class="cmex-10x-x-109">&#x2211;</span>
    <sub><span 
 class="cmmi-8">i</span><span 
@@ -308,49 +360,1132 @@ class="cmmi-8">n</span></sup><span
 class="cmmi-10x-x-109">&#x03B4;</span><sub><span 
 class="cmmi-8">x</span><sub><span 
 class="cmmi-6">i</span></sub></sub> is the empirical distribution (normalized). Thus we need only a right-sided
-projective divergence to estimate models with computationally intractable normalizers.
+projective divergence to estimate models with computationally intractable normalizers. For example, the
+Maximum Likelihood Estimator (MLE) is a MDE wrt. the KLD:
+   <div class="math-display" >
                                                                                          
                                                                                          
+<img 
+src="Distance21x.png" alt="&#x03B8;&#x02C6;MLE  = argmin DKL [pS : p&#x03B8;].
+            &#x03B8;
+" class="math-display" ></div>
+<!--l. 163--><p class="indent" >   It is thus interesting to study the impact of the choice of the distance <span 
+class="cmmi-10x-x-109">D </span>to the properties of the
+corresponding estimator (e.g., <span 
+class="cmmi-10x-x-109">&#x03B3;</span>-divergences yields provably robust estimators&#x00A0;<span class="cite">[<a 
+href="#Xgammadivergence-2008">6</a>]</span>).
      <ul class="itemize1">
      <li class="itemize"><span 
 class="cmbx-10x-x-109">Hyv</span><span 
 class="cmbx-10x-x-109">ärinen divergence</span>&#x00A0;<span class="cite">[<a 
-href="#Xhyvarinen2005estimation">4</a>]</span> (also called <span 
+href="#Xhyvarinen2005estimation">7</a>]</span> (also called <span 
 class="cmbx-10x-x-109">Fisher divergence</span>):
 <div class="math-display" >
 <img 
-src="Distance20x.png" alt="                       &#x222B;
+src="Distance22x.png" alt="                       &#x222B;
 DHyv  ¨arinen [p : p&#x03B8;] := 1 &#x2225;&#x2207;x logp(x) - &#x2207;x log p&#x03B8;(x)&#x2225;2 p(x)dx.
                      2
 " class="math-display" ></div>
-     <!--l. 136--><p class="noindent" >The  Hyvarinen  divergence  has  been  extended  for  order-<span 
-class="cmmi-10x-x-109">&#x03B1; </span>Hyvarinen  divergences&#x00A0;<span class="cite">[<a 
-href="#Xnielsen2021fast">9</a>]</span>  (for
+     <!--l. 172--><p class="noindent" >The Hyvarinen divergence has been extended for order-<span 
+class="cmmi-10x-x-109">&#x03B1; </span>Hyvarinen divergences&#x00A0;<span class="cite">[<a 
+href="#Xnielsen2021fast">22</a>]</span> (for
      <span 
 class="cmmi-10x-x-109">&#x03B1; &#x003E; </span>0):
 <div class="math-display" >
 <img 
-src="Distance21x.png" alt="                     &#x222B;
- Hyv ¨arinen         1-     &#x03B1;                         2
-D&#x03B1;         [p : q] := 2  p(x ) (&#x2207;x log p(x)- &#x2207;x logq(x)) dx,   &#x03B1; &#x003E; 0.
+src="Distance23x.png" alt="                     &#x222B;
+DHyv ¨arinen[p : q] := 1  p(x )&#x03B1; (&#x2207;  log p(x)- &#x2207;  logq(x))2dx,   &#x03B1; &#x003E; 0.
+ &#x03B1;                  2           x           x
 " class="math-display" ></div>
      </li></ul>
-<!--l. 144--><p class="indent" >   This column is also available in pdf: filename <a 
-href="Distance.pdf" class="url" ><span 
-class="cmtt-10x-x-109">Distance.pdf</span></a>
-<!--l. 149--><p class="indent" >   Initially created 13th August 2021 (last updated August 13, 2021).
+<!--l. 180--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-40003"></a>The Jensen-Shannon divergence and some generalizations</h3>
+                                                                                         
+                                                                                         
+<!--l. 183--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">3.1   </span> <a 
+ id="x1-50003.1"></a>Origins of the Jensen-Shannon divergence</h4>
+<!--l. 186--><p class="noindent" >Let (<span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-58.png" alt="X" class="10-109x-x-58" /></span><span 
+class="cmmi-10x-x-109">,</span><span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-46.png" alt="F" class="10-109x-x-46" /></span><span 
+class="cmmi-10x-x-109">,&#x03BC;</span>) be a measure space, and (<span 
+class="cmmi-10x-x-109">w</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-10x-x-109">,P</span><sub><span 
+class="cmr-8">1</span></sub>)<span 
+class="cmmi-10x-x-109">,</span><span 
+class="cmmi-10x-x-109">&#x2026;</span><span 
+class="cmmi-10x-x-109">,</span>(<span 
+class="cmmi-10x-x-109">w</span><sub><span 
+class="cmmi-8">n</span></sub><span 
+class="cmmi-10x-x-109">,P</span><sub><span 
+class="cmmi-8">n</span></sub>) be <span 
+class="cmmi-10x-x-109">n </span>weighted probability measures dominated
+by a measure <span 
+class="cmmi-10x-x-109">&#x03BC; </span>(with <span 
+class="cmmi-10x-x-109">w</span><sub><span 
+class="cmmi-8">i</span></sub> <span 
+class="cmmi-10x-x-109">&#x003E; </span>0 and <span 
+class="cmex-10x-x-109">&#x2211;</span>
+  <span 
+class="cmmi-10x-x-109">w</span><sub><span 
+class="cmmi-8">i</span></sub> = 1). Denote by <span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-50.png" alt="P" class="10-109x-x-50" /> </span>:= <span 
+class="cmsy-10x-x-109">{</span>(<span 
+class="cmmi-10x-x-109">w</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-10x-x-109">,p</span><sub><span 
+class="cmr-8">1</span></sub>)<span 
+class="cmmi-10x-x-109">,</span><span 
+class="cmmi-10x-x-109">&#x2026;</span><span 
+class="cmmi-10x-x-109">,</span>(<span 
+class="cmmi-10x-x-109">w</span><sub><span 
+class="cmmi-8">n</span></sub><span 
+class="cmmi-10x-x-109">,p</span><sub><span 
+class="cmmi-8">n</span></sub>)<span 
+class="cmsy-10x-x-109">} </span>the set of their
+weighted Radon-Nikodym densities <span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">i</span></sub> = <img 
+src="Distance24x.png" alt="dPi
+d&#x03BC;"  class="frac" align="middle"> with respect to <span 
+class="cmmi-10x-x-109">&#x03BC;</span>.
+<!--l. 190--><p class="indent" >   A <span 
+class="cmti-10x-x-109">statistical divergence </span><span 
+class="cmmi-10x-x-109">D</span>[<span 
+class="cmmi-10x-x-109">p </span>: <span 
+class="cmmi-10x-x-109">q</span>] is a measure of dissimilarity between two densities <span 
+class="cmmi-10x-x-109">p </span>and <span 
+class="cmmi-10x-x-109">q </span>(i.e., a
+2-point distance) such that <span 
+class="cmmi-10x-x-109">D</span>[<span 
+class="cmmi-10x-x-109">p </span>: <span 
+class="cmmi-10x-x-109">q</span>] <span 
+class="cmsy-10x-x-109">&#x2265; </span>0 with equality if and only if <span 
+class="cmmi-10x-x-109">p</span>(<span 
+class="cmmi-10x-x-109">x</span>) = <span 
+class="cmmi-10x-x-109">q</span>(<span 
+class="cmmi-10x-x-109">x</span>) <span 
+class="cmmi-10x-x-109">&#x03BC;</span>-almost everywhere. A
+<span 
+class="cmti-10x-x-109">statistical diversity index </span><span 
+class="cmmi-10x-x-109">D</span>(<span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-50.png" alt="P" class="10-109x-x-50" /></span>) is a measure of variation of the weighted densities in <span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-50.png" alt="P" class="10-109x-x-50" /> </span>related to a
+measure of centrality, i.e., a <span 
+class="cmmi-10x-x-109">n</span>-point distance which generalizes the notion of 2-point distance when
+<span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-50.png" alt="P" class="10-109x-x-50" /></span><sub><span 
+class="cmr-8">2</span></sub>(<span 
+class="cmmi-10x-x-109">p,q</span>) := <span 
+class="cmsy-10x-x-109">{</span>(<img 
+src="Distance25x.png" alt="12"  class="frac" align="middle"><span 
+class="cmmi-10x-x-109">,p</span><sub><span 
+class="cmr-8">1</span></sub>)<span 
+class="cmmi-10x-x-109">,</span>(<img 
+src="Distance26x.png" alt="12"  class="frac" align="middle"><span 
+class="cmmi-10x-x-109">,p</span><sub><span 
+class="cmr-8">2</span></sub>)<span 
+class="cmsy-10x-x-109">}</span>:
+   <div class="math-display" >
+<img 
+src="Distance27x.png" alt="D [p : q] := D (P2(p,q)).
+" class="math-display" ></div>
+<!--l. 196--><p class="indent" >   The fundamental measure of dissimilarity in information theory is the <span 
+class="cmmi-10x-x-109">I</span><span 
+class="cmti-10x-x-109">-divergence </span>(also called the
+<span 
+class="cmti-10x-x-109">Kullback-Leibler divergence</span>, KLD, see Equation&#x00A0;(2.5) page 5&#x00A0;of&#x00A0;<span class="cite">[<a 
+href="#XKullback-1997">12</a>]</span>):
+   <div class="math-display" >
+<img 
+src="Distance28x.png" alt="             &#x222B;         ( p(x))
+DKL  [p : q] :=  p(x)log  q(x)  d&#x03BC;(x).
+              X
+" class="math-display" ></div>
+<!--l. 201--><p class="indent" >   The KLD is asymmetric (hence the delimiter notation &#8220;:&#8221; instead of &#8216;,&#8217;) but can be symmetrized by
+defining the Jeffreys <span 
+class="cmmi-10x-x-109">J</span><span 
+class="cmti-10x-x-109">-divergence </span>(Jeffreys divergence, denoted by <span 
+class="cmmi-10x-x-109">I</span><sub><span 
+class="cmr-8">2</span></sub> in Equation (1) in 1946&#8217;s
+paper&#x00A0;<span class="cite">[<a 
+href="#XJeffreys-1946">8</a>]</span>):
+   <div class="math-display" >
+<img 
+src="Distance29x.png" alt="                                  &#x222B;                 (    )
+DJ [p,q] := DKL [p : q]+ DKL [q : p] = (p(x) - q(x )) log p(x)  d &#x03BC;(x).
+                                   X                 q(x)
+" class="math-display" ></div>
+<!--l. 205--><p class="indent" >   Although symmetric, any positive power of Jeffreys divergence fails to satisfy the triangle inequality:
+That is, <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmmi-8">J</span></sub><sup><span 
+class="cmmi-8">&#x03B1;</span></sup> is never a metric distance for any <span 
+class="cmmi-10x-x-109">&#x03B1; &#x003E; </span>0, and furthermore <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmmi-8">J</span></sub><sup><span 
+class="cmmi-8">&#x03B1;</span></sup> cannot be upper
+bounded.
+<!--l. 208--><p class="indent" >   In 1991, Lin proposed the asymmetric <span 
+class="cmmi-10x-x-109">K</span><span 
+class="cmti-10x-x-109">-divergence </span>(Equation (3.2) in&#x00A0;<span class="cite">[<a 
+href="#XJS-1991">14</a>]</span>):
+   <div class="math-display" >
+<img 
+src="Distance30x.png" alt="                [        ]
+DK [p : q] := DKL p : p-+-q ,
+                      2
+" class="math-display" ></div>
+<!--l. 212--><p class="indent" >   and defined the <span 
+class="cmmi-10x-x-109">L</span><span 
+class="cmti-10x-x-109">-divergence </span>by analogy to Jeffreys&#8217;s symmetrization of the KLD (Equation (3.4)
+in&#x00A0;<span class="cite">[<a 
+href="#XJS-1991">14</a>]</span>):
+   <div class="math-display" >
+<img 
+src="Distance31x.png" alt="DL [p,q] = DK [p : q]+ DK [q : p].
+" class="math-display" ></div>
+<!--l. 217--><p class="indent" >   By noticing that
+   <div class="math-display" >
+<img 
+src="Distance32x.png" alt="            [     ]
+             p-+-q
+DL [p,q] = 2h   2    - (h[p]+ h[q]),
+" class="math-display" ></div>
+<!--l. 221--><p class="indent" >   where <span 
+class="cmmi-10x-x-109">h </span>denotes Shannon entropy (Equation (3.14) in&#x00A0;<span class="cite">[<a 
+href="#XJS-1991">14</a>]</span>), Lin coined the (skewed) <span 
+class="cmti-10x-x-109">Jensen-Shannon</span>
+<span 
+class="cmti-10x-x-109">divergence </span>between two weighted densities (1 <span 
+class="cmsy-10x-x-109">- </span><span 
+class="cmmi-10x-x-109">&#x03B1;,p</span>) and (<span 
+class="cmmi-10x-x-109">&#x03B1;,q</span>) for <span 
+class="cmmi-10x-x-109">&#x03B1; </span><span 
+class="cmsy-10x-x-109">&#x2208; </span>(0<span 
+class="cmmi-10x-x-109">,</span>1) as follows (Equation (4.1)
+in&#x00A0;<span class="cite">[<a 
+href="#XJS-1991">14</a>]</span>):
+                                                                                         
+                                                                                         
+   <table 
+class="equation"><tr><td><a 
+ id="x1-5001r1"></a>
+   <div class="math-display" >
+<img 
+src="Distance33x.png" alt="DJS,&#x03B1;[p,q] = h[(1- &#x03B1;)p + &#x03B1;q]- (1 - &#x03B1;)h[p]- &#x03B1;h[q].
+" class="math-display" ></div>
+   </td><td class="equation-label">(1)</td></tr></table>
+<!--l. 224--><p class="nopar" >
+<!--l. 226--><p class="indent" >   Finally, Lin defined the <span 
+class="cmti-10x-x-109">generalized Jensen-Shannon divergence </span>(Equation (5.1) in&#x00A0;<span class="cite">[<a 
+href="#XJS-1991">14</a>]</span>) for a finite
+weighted set of densities:
+   <div class="math-display" >
+<img 
+src="Distance34x.png" alt="           [       ]
+            &#x2211;          &#x2211;
+DJS [P ] = h    wipi  -    wih [pi].
+             i          i
+" class="math-display" ></div>
+<!--l. 230--><p class="indent" >   This generalized Jensen-Shannon divergence is nowadays called the <span 
+class="cmti-10x-x-109">Jensen-Shannon diversity</span>
+<span 
+class="cmti-10x-x-109">index</span>.
+<!--l. 232--><p class="indent" >   To contrast with the Jeffreys&#8217; divergence, the Jensen-Shannon divergence (JSD) <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmr-8">JS</span></sub> := <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmr-8">JS</span><span 
+class="cmmi-8">,</span><img 
+src="Distance35x.png" alt="12"  class="frac" align="middle"></sub> is upper
+bounded by log 2 (does not require the densities to have the same support), and <img 
+src="Distance36x.png" alt="&#x221A;DJS--"  class="sqrt" > is a metric
+distance&#x00A0;<span class="cite">[<a 
+href="#XJSmetric-2003">4</a>,&#x00A0;<a 
+href="#XJSmetric-2004">5</a>]</span>. Lin cited precursor work&#x00A0;<span class="cite">[<a 
+href="#XWongYOU-1985">42</a>,&#x00A0;<a 
+href="#XJW-1988">15</a>]</span> yielding definition of the Jensen-Shannon divergence:
+The Jensen-Shannon divergence of Eq.&#x00A0;<a 
+href="#x1-5001r1">1<!--tex4ht:ref: eq:JSh --></a> is the so-called &#8220;increments of entropy&#8221; defined in (19) and (20)
+of&#x00A0;<span class="cite">[<a 
+href="#XWongYOU-1985">42</a>]</span>.
+<!--l. 237--><p class="indent" >   The Jensen-Shannon diversity index was also obtained very differently by Sibson in 1969 when he
+defined the <span 
+class="cmti-10x-x-109">information radius</span>&#x00A0;<span class="cite">[<a 
+href="#XSibson-1969">40</a>]</span> of order <span 
+class="cmmi-10x-x-109">&#x03B1; </span>using Rényi <span 
+class="cmmi-10x-x-109">&#x03B1;</span>-means and Rényi <span 
+class="cmmi-10x-x-109">&#x03B1;</span>-entropies&#x00A0;<span class="cite">[<a 
+href="#XRenyi-1961">38</a>]</span>. In
+particular, the information radius IR<sub><span 
+class="cmr-8">1</span></sub> of order 1 of a weighted set <span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-50.png" alt="P" class="10-109x-x-50" /> </span>of densities is a diversity index
+obtained by solving the following variational optimization problem:
+   <table 
+class="equation"><tr><td><a 
+ id="x1-5002r2"></a>
+                                                                                         
+                                                                                         
+   <div class="math-display" >
+<img 
+src="Distance37x.png" alt="              n
+IR [P ] := min &#x2211;  w D   [p  : c].
+  1        c      i  KL  i
+              i=1
+" class="math-display" ></div>
+   </td><td class="equation-label">(2)</td></tr></table>
+<!--l. 241--><p class="nopar" >
+<!--l. 243--><p class="indent" >   Sibson solved a more general optimization problem, and obtained the following expression (term <span 
+class="cmmi-10x-x-109">K</span><sub><span 
+class="cmr-8">1</span></sub> in
+Corollary 2.3&#x00A0;<span class="cite">[<a 
+href="#XSibson-1969">40</a>]</span>):
+   <div class="math-display" >
+<img 
+src="Distance38x.png" alt="           [       ]
+            &#x2211;          &#x2211;
+IR1 [P ] = h    wipi  -    wih [pi] := DJS[P ].
+             i          i
+" class="math-display" ></div>
+<!--l. 247--><p class="indent" >   Thus Eq.&#x00A0;<a 
+href="#x1-5002r2">2<!--tex4ht:ref: eq:Sibson --></a> is a variational definition of the Jensen-Shannon divergence.
+<!--l. 250--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">3.2   </span> <a 
+ id="x1-60003.2"></a>Some extensions of the Jensen-Shannon divergence</h4>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="cmbx-10x-x-109">Skewing the JSD.</span>
+     <!--l. 257--><p class="noindent" >The <span 
+class="cmmi-10x-x-109">K</span>-divergence of Lin can be skewed with a scalar parameter <span 
+class="cmmi-10x-x-109">&#x03B1; </span><span 
+class="cmsy-10x-x-109">&#x2208; </span>(0<span 
+class="cmmi-10x-x-109">,</span>1) to give
+     <table 
+class="equation"><tr><td><a 
+ id="x1-6001r3"></a>
+<div class="math-display" >
+<img 
+src="Distance39x.png" alt="DK, &#x03B1;[p : q] := DKL [p : (1- &#x03B1; )p+ &#x03B1;q].
+" class="math-display" ></div>
+     </td><td class="equation-label">(3)</td></tr></table>
+     <!--l. 260--><p class="nopar" >
+     Skewing parameter <span 
+class="cmmi-10x-x-109">&#x03B1; </span>was first studied in&#x00A0;<span class="cite">[<a 
+href="#XskewJS-2001">13</a>]</span> (2001, see Table&#x00A0;2 of&#x00A0;<span class="cite">[<a 
+href="#XskewJS-2001">13</a>]</span>). We proposed to unify
+     the Jeffreys divergence with the Jensen-Shannon divergence as follows (Equation 19
+     in&#x00A0;<span class="cite">[<a 
+href="#Xnielsen2010family">17</a>]</span>):
+     <table 
+class="equation"><tr><td><a 
+ id="x1-6002r4"></a>
+<div class="math-display" >
+<img 
+src="Distance40x.png" alt="DJ  [p : q] := DK,&#x03B1;-[p-: q]+-DK,-&#x03B1;[q-: p].
+ K,&#x03B1;                   2
+" class="math-display" ></div>
+     </td><td class="equation-label">(4)</td></tr></table>
+     <!--l. 265--><p class="nopar" >
+     When <span 
+class="cmmi-10x-x-109">&#x03B1; </span>= <img 
+src="Distance41x.png" alt="1
+2"  class="frac" align="middle">, we have <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmmi-8">K,</span><img 
+src="Distance42x.png" alt="12"  class="frac" align="middle"></sub><sup><span 
+class="cmmi-8">J</span></sup> = <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmr-8">JS</span></sub>, and when <span 
+class="cmmi-10x-x-109">&#x03B1; </span>= 1, we get <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmmi-8">K,</span><span 
+class="cmr-8">1</span></sub><sup><span 
+class="cmmi-8">J</span></sup> = <img 
+src="Distance43x.png" alt="1
+2"  class="frac" align="middle"><span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmmi-8">J</span></sub>.
+     <!--l. 268--><p class="noindent" >Notice that
+<div class="math-display" >
+<img 
+src="Distance44x.png" alt="  &#x03B1;,&#x03B2;
+D JS [p;q] := (1- &#x03B2; )DKL [p : (1- &#x03B1; )p + &#x03B1;q]+ &#x03B2;DKL [q : (1- &#x03B1;)p+ &#x03B1;q ]
+" class="math-display" ></div>
+     <!--l. 272--><p class="noindent" >amounts to calculate
+<div class="math-display" >
+<img 
+src="Distance45x.png" alt="h&#x00D7;[(1- &#x03B2; )p + &#x03B2;q : (1- &#x03B1; )p+ &#x03B1;q ]- ((1 - &#x03B2;)h[p]+ &#x03B2;h[q])
+" class="math-display" ></div>
+     <!--l. 276--><p class="noindent" >where
+<div class="math-display" >
+<img 
+src="Distance46x.png" alt="          &#x222B;
+  &#x00D7;
+h  [p,q] :=    - p (x )log q(x)d&#x03BC;(x)
+" class="math-display" ></div>
+     <!--l. 280--><p class="noindent" >denotes the <span 
+class="cmti-10x-x-109">cross-entropy</span>. By choosing <span 
+class="cmmi-10x-x-109">&#x03B1; </span>= <span 
+class="cmmi-10x-x-109">&#x03B2;</span>, we have <span 
+class="cmmi-10x-x-109">h</span><sup><span 
+class="cmsy-8">&#x00D7;</span></sup>[(1<span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmmi-10x-x-109">&#x03B2;</span>)<span 
+class="cmmi-10x-x-109">p</span>+<span 
+class="cmmi-10x-x-109">&#x03B2;q </span>: (1<span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmmi-10x-x-109">&#x03B1;</span>)<span 
+class="cmmi-10x-x-109">p</span>+<span 
+class="cmmi-10x-x-109">&#x03B1;q</span>] = <span 
+class="cmmi-10x-x-109">h</span>[(1<span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmmi-10x-x-109">&#x03B1;</span>)<span 
+class="cmmi-10x-x-109">p</span>+<span 
+class="cmmi-10x-x-109">&#x03B1;q</span>],
+     and thus recover the skewed Jensen-Shannon divergence of Eq.&#x00A0;<a 
+href="#x1-5001r1">1<!--tex4ht:ref: eq:JSh --></a>.
+     <!--l. 284--><p class="noindent" >In&#x00A0;<span class="cite">[<a 
+href="#Xnielsen2020generalization">21</a>]</span> (2020), we considered a positive <span 
+class="cmti-10x-x-109">skewing vector </span><span 
+class="cmmi-10x-x-109">&#x03B1; </span><span 
+class="cmsy-10x-x-109">&#x2208; </span>[0<span 
+class="cmmi-10x-x-109">,</span>1]<sup><span 
+class="cmmi-8">k</span></sup> and a unit positive weight <span 
+class="cmmi-10x-x-109">w</span>
+     belonging to the standard simplex &#x0394;<sub><span 
+class="cmmi-8">k</span></sub>, and defined the following <span 
+class="cmti-10x-x-109">vector-skewed Jensen-Shannon</span>
+     <span 
+class="cmti-10x-x-109">divergence</span>: <div class="eqnarray">
+<div class="math-display" >
+<img 
+src="Distance47x.png" alt="               &#x2211;k
+D&#x03B1;J,Sw[p : q] :=     DKL [(1 - &#x03B1;i)p+ &#x03B1;iq : (1 - ¯&#x03B1;)p + ¯&#x03B1;q],               (5)
+               i=1
+                                 &#x2211;k
+           =   h[(1- &#x03B1;¯)p + ¯&#x03B1;q]-     h[(1- &#x03B1;i)p+&#x03B1;iq],                (6)
+                                 i=1
+" class="math-display" ></div>
+     <!--l. 288--><p class="noindent" ></div>where <span class="bar-css"><span 
+class="cmmi-10x-x-109">&#x03B1;</span></span> = <span 
+class="cmex-10x-x-109">&#x2211;</span>
+  <sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">k</span></sup><span 
+class="cmmi-10x-x-109">w</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">&#x03B1;</span><sub><span 
+class="cmmi-8">i</span></sub>. The divergence <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmr-8">JS</span></sub><sup><span 
+class="cmmi-8">&#x03B1;,w</span></sup> generalizes the (scalar) skew Jensen-Shannon
+     divergence when <span 
+class="cmmi-10x-x-109">k </span>= 1, and is a Ali-Silvey-Csiszár <span 
+class="cmmi-10x-x-109">f</span>-divergence upper bounded by log <img 
+src="Distance48x.png" alt="¯&#x03B1;(11- ¯&#x03B1;)"  class="frac" align="middle">&#x00A0;<span class="cite">[<a 
+href="#Xnielsen2020generalization">21</a>]</span>.
+     </li>
+     <li class="itemize"><span 
+class="cmbx-10x-x-109">A priori mid-density</span>. The JSD can be interpreted as the total divergence of the densities to the
+     <span 
+class="cmti-10x-x-109">mid-density</span> <span class="bar-css"><span 
+class="cmmi-10x-x-109">p</span></span> = <span 
+class="cmex-10x-x-109">&#x2211;</span>
+  <sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">n</span></sup><span 
+class="cmmi-10x-x-109">w</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">i</span></sub>, a statistical mixture:
+                                                                                         
+                                                                                         
+<div class="math-display" >
+<img 
+src="Distance49x.png" alt="         &#x2211;n                      &#x2211;n
+DJS [P ] =   wiDKL  [pi : ¯p] = h[¯p]-  wih [pi].
+         i=1                     i=1
+" class="math-display" ></div>
+     <!--l. 297--><p class="noindent" >Unfortunately, the JSD between two Gaussian densities is not known in closed form because of the
+     definite integral of a log-sum term (i.e., <span 
+class="cmmi-10x-x-109">K</span>-divergence between a density and a mixture density <span class="bar-css"><span 
+class="cmmi-10x-x-109">p</span></span>).
+     For the special case of the Cauchy family, a closed-form formula&#x00A0;<span class="cite">[<a 
+href="#XCauchyJSD-2021">29</a>]</span> for the JSD between two
+     Cauchy densities was obtained. Thus we may choose a <span 
+class="cmti-10x-x-109">geometric mixture distribution</span>&#x00A0;<span class="cite">[<a 
+href="#XJSsym-2019">19</a>]</span> instead of
+     the ordinary arithmetic mixture <span class="bar-css"><span 
+class="cmmi-10x-x-109">p</span></span>. More generally, we can choose any weighted mean <span 
+class="cmmi-10x-x-109">M</span><sub><span 
+class="cmmi-8">&#x03B1;</span></sub> (say, the
+     geometric mean, or the harmonic mean, or any other power mean) and define a generalization of the
+     <span 
+class="cmmi-10x-x-109">K</span>-divergence of Equation&#x00A0;<a 
+href="#x1-6001r3">3<!--tex4ht:ref: eq:divK --></a>:
+     <table 
+class="equation"><tr><td><a 
+ id="x1-6004r7"></a>
+<div class="math-display" >
+<img 
+src="Distance50x.png" alt="DM &#x03B1; [p : q] := D [p : (pq) ],
+  K            K       M &#x03B1;
+" class="math-display" ></div>
+     </td><td class="equation-label">(7)</td></tr></table>
+     <!--l. 302--><p class="nopar" >
+     where
+<div class="math-display" >
+<img 
+src="Distance51x.png" alt="(pq)M &#x03B1;(x) := M-&#x03B1;(p(x),q(x))
+               ZM &#x03B1;(p : q)
+" class="math-display" ></div>
+     <!--l. 307--><p class="noindent" >is a statistical <span 
+class="cmmi-10x-x-109">M</span>-mixture with <span 
+class="cmmi-10x-x-109">Z</span><sub><span 
+class="cmmi-8">M</span><sub><span 
+class="cmmi-6">&#x03B1;</span></sub></sub>(<span 
+class="cmmi-10x-x-109">p,q</span>) denoting the normalizing coefficient:
+                                                                                         
+                                                                                         
+<div class="math-display" >
+<img 
+src="Distance52x.png" alt="            &#x222B;
+
+ZM &#x03B1;(p : q) =  M &#x03B1;(p(x ),q(x))d&#x03BC;(x)
+" class="math-display" ></div>
+     <!--l. 312--><p class="noindent" >so that <span 
+class="cmex-10x-x-109">&#x222B;</span>
+ (<span 
+class="cmmi-10x-x-109">pq</span>)<sub><span 
+class="cmmi-8">M</span><sub><span 
+class="cmmi-6">&#x03B1;</span></sub></sub>(<span 
+class="cmmi-10x-x-109">x</span>)d<span 
+class="cmmi-10x-x-109">&#x03BC;</span>(<span 
+class="cmmi-10x-x-109">x</span>) = 1. These <span 
+class="cmmi-10x-x-109">M</span>-mixtures are well-defined provided the convergence of the
+     definite integrals.
+     <!--l. 315--><p class="noindent" >Then we define a generalization of the JSD&#x00A0;<span class="cite">[<a 
+href="#XJSsym-2019">19</a>]</span> termed (<span 
+class="cmmi-10x-x-109">M</span><sub><span 
+class="cmmi-8">&#x03B1;</span></sub><span 
+class="cmmi-10x-x-109">,N</span><sub><span 
+class="cmmi-8">&#x03B2;</span></sub>)<span 
+class="cmti-10x-x-109">-Jensen-Shannon divergence </span>as
+     follows:
+     <table 
+class="equation"><tr><td><a 
+ id="x1-6005r8"></a>
+<div class="math-display" >
+<img 
+src="Distance53x.png" alt="  M&#x03B1;,N&#x03B2;
+D JS   [p : q ] := N &#x03B2; (DK [p : (pq)M&#x03B1;],DK [q : (pq)M &#x03B1;]) ,
+" class="math-display" ></div>
+     </td><td class="equation-label">(8)</td></tr></table>
+     <!--l. 318--><p class="nopar" >
+     where <span 
+class="cmmi-10x-x-109">N</span><sub><span 
+class="cmmi-8">&#x03B2;</span></sub> is yet another weighted mean to average the two <span 
+class="cmmi-10x-x-109">M</span><sub><span 
+class="cmmi-8">&#x03B1;</span></sub>-<span 
+class="cmmi-10x-x-109">K</span>-divergences. We have
+     <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmr-8">JS</span></sub> = <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmr-8">JS</span></sub><sup><span 
+class="cmmi-8">A,A</span></sup> where <span 
+class="cmmi-10x-x-109">A</span>(<span 
+class="cmmi-10x-x-109">a,b</span>) = <img 
+src="Distance54x.png" alt="a+b
+ 2"  class="frac" align="middle"> is the arithmetic mean. The geometric JSD yields a closed-form
+     formula between two multivariate Gaussians, and has been used in deep learning&#x00A0;<span class="cite">[<a 
+href="#XVIGJSD-2020">3</a>]</span>. More
+     generally, we may consider the Jensen-Shannon symmetrization of an arbitrary distance <span 
+class="cmmi-10x-x-109">D</span>
+     as
+     <table 
+class="equation"><tr><td><a 
+ id="x1-6006r9"></a>
+<div class="math-display" >
+<img 
+src="Distance55x.png" alt="DJMS ,N  [p : q] := N &#x03B2; (D [p : (pq)M&#x03B1;],D [q : (pq)M&#x03B1;]).
+   &#x03B1;  &#x03B2;
+" class="math-display" ></div>
+                                                                                         
+                                                                                         
+     </td><td class="equation-label">(9)</td></tr></table>
+     <!--l. 325--><p class="nopar" >
+     </li>
+     <li class="itemize"><span 
+class="cmbx-10x-x-109">A posteriori mid-density</span>. We consider a generalization of Sibson&#8217;s information radius&#x00A0;<span class="cite">[<a 
+href="#XSibson-1969">40</a>]</span>. Let
+     <span 
+class="cmmi-10x-x-109">S</span><sub><span 
+class="cmmi-8">w</span></sub>(<span 
+class="cmmi-10x-x-109">a</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-10x-x-109">,</span><span 
+class="cmmi-10x-x-109">&#x2026;</span><span 
+class="cmmi-10x-x-109">,a</span><sub><span 
+class="cmmi-8">n</span></sub>) denote a generic weighted mean of <span 
+class="cmmi-10x-x-109">n </span>positive scalars <span 
+class="cmmi-10x-x-109">a</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-10x-x-109">,</span><span 
+class="cmmi-10x-x-109">&#x2026;</span><span 
+class="cmmi-10x-x-109">,a</span><sub><span 
+class="cmmi-8">n</span></sub>, with weight
+     vector <span 
+class="cmmi-10x-x-109">w </span><span 
+class="cmsy-10x-x-109">&#x2208; </span>&#x0394;<sub><span 
+class="cmmi-8">n</span></sub>. Then we define the <span 
+class="cmmi-10x-x-109">S</span><span 
+class="cmti-10x-x-109">-variational Jensen-Shannon diversity index</span>&#x00A0;<span class="cite">[<a 
+href="#XvJSD-2021">24</a>]</span>
+     as
+     <table 
+class="equation"><tr><td><a 
+ id="x1-6007r10"></a>
+<div class="math-display" >
+<img 
+src="Distance56x.png" alt="DSw (P ) := min Sw (DKL [p1 : c],DKL [pn : c]) .
+  vJS        c
+" class="math-display" ></div>
+     </td><td class="equation-label">(10)</td></tr></table>
+     <!--l. 334--><p class="nopar" >
+     When <span 
+class="cmmi-10x-x-109">S</span><sub><span 
+class="cmmi-8">w</span></sub> = <span 
+class="cmmi-10x-x-109">A</span><sub><span 
+class="cmmi-8">w</span></sub> (with <span 
+class="cmmi-10x-x-109">A</span><sub><span 
+class="cmmi-8">w</span></sub>(<span 
+class="cmmi-10x-x-109">a</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-10x-x-109">,</span><span 
+class="cmmi-10x-x-109">&#x2026;</span><span 
+class="cmmi-10x-x-109">,a</span><sub><span 
+class="cmmi-8">n</span></sub>) = <span 
+class="cmex-10x-x-109">&#x2211;</span>
+  <sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">n</span></sup><span 
+class="cmmi-10x-x-109">w</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">a</span><sub><span 
+class="cmmi-8">i</span></sub> the arithmetic weighted mean), we recover the
+     ordinary Jensen-Shannon diversity index. More generally, we define the <span 
+class="cmmi-10x-x-109">S</span><span 
+class="cmti-10x-x-109">-Jensen-Shannon index of</span>
+     <span 
+class="cmti-10x-x-109">an arbitrary distance </span><span 
+class="cmmi-10x-x-109">D </span>as
+     <table 
+class="equation"><tr><td><a 
+ id="x1-6008r11"></a>
+<div class="math-display" >
+<img 
+src="Distance57x.png" alt="DvJS (P) :=  minSw (D [p1 : c],...,D [pn : c]).
+  Sw         c
+" class="math-display" ></div>
+     </td><td class="equation-label">(11)</td></tr></table>
+     <!--l. 339--><p class="nopar" >
+     When <span 
+class="cmmi-10x-x-109">n </span>= 2, this yields a Jensen-Shannon-symmetrization of distance <span 
+class="cmmi-10x-x-109">D</span>.
+     <!--l. 342--><p class="noindent" >The variational optimization defining the JSD can also be constrained to a (parametric) family of
+     densities <span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-44.png" alt="D" class="10-109x-x-44" /></span>, thus defining the (<span 
+class="cmmi-10x-x-109">S,</span><span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-44.png" alt="D" class="10-109x-x-44" /></span>)<span 
+class="cmti-10x-x-109">-relative Jensen-Shannon diversity index</span>:
+     <table 
+class="equation"><tr><td><a 
+ id="x1-6009r12"></a>
+                                                                                         
+                                                                                         
+<div class="math-display" >
+<img 
+src="Distance58x.png" alt="DSw,D (P ) := min Sw (DKL [p1 : c],...,DKL [pn : c]).
+  vJS        c&#x2208;D
+" class="math-display" ></div>
+     </td><td class="equation-label">(12)</td></tr></table>
+     <!--l. 346--><p class="nopar" >
+     <!--l. 349--><p class="noindent" >The relative Jensen-Shannon divergences are useful for clustering applications: Let <span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">&#x03B8;</span><sub><span 
+class="cmr-6">1</span></sub></sub> and <span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">&#x03B8;</span><sub><span 
+class="cmr-6">2</span></sub></sub> be
+     two densities of an exponential family <span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-45.png" alt="E" class="10-109x-x-45" /> </span>with cumulant function <span 
+class="cmmi-10x-x-109">F</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>). Then the <span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-45.png" alt="E" class="10-109x-x-45" /></span>-relative
+     Jensen-Shannon divergence is the Bregman information of <span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-50.png" alt="P" class="10-109x-x-50" /></span><sub><span 
+class="cmr-8">2</span></sub>(<span 
+class="cmmi-10x-x-109">p,q</span>) for the conjugate function
+     <span 
+class="cmmi-10x-x-109">F</span><sup><span 
+class="cmsy-8">*</span></sup>(<span 
+class="cmmi-10x-x-109">&#x03B7;</span>) = <span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmmi-10x-x-109">h</span>[<span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">&#x03B8;</span></sub>] (with <span 
+class="cmmi-10x-x-109">&#x03B7; </span>= <span 
+class="cmsy-10x-x-109">&#x2207;</span><span 
+class="cmmi-10x-x-109">F</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>)). The <span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-45.png" alt="E" class="10-109x-x-45" /></span>-relative JSD amounts to a <span 
+class="cmti-10x-x-109">Jensen divergence </span>for
+     <span 
+class="cmmi-10x-x-109">F</span><sup><span 
+class="cmsy-8">*</span></sup>:
+     <!--l. 354--><p class="noindent" ><div class="eqnarray">
+<div class="math-display" >
+<img 
+src="Distance59x.png" alt="DvJS [p  ,p  ] =   min 1-{DKL [p   : p ]+ DKL [p : p ]},              (13)
+      &#x03B8;1  &#x03B8;2       &#x03B8;  2        &#x03B8;1   &#x03B8;         &#x03B8;2   &#x03B8;
+                      1-
+              =   mi&#x03B8;n 2 {BF [&#x03B8; : &#x03B8;1]+ BF [&#x03B8; : &#x03B8;2]},                  (14)
+                      1
+              =   mi&#x03B7;n 2-{BF *[&#x03B7;1 : &#x03B7;]+ BF *[&#x03B7;2 : &#x03B7;]},                 (15)
+                    *        *
+              =   F--(&#x03B7;1)+-F--(&#x03B7;2) - F*(&#x03B7;*),                         (16)
+                         2
+              =:  JF *(&#x03B7;1,&#x03B7;2),                                       (17)
+" class="math-display" ></div>
+     <!--l. 360--><p class="noindent" ></div>since <span 
+class="cmmi-10x-x-109">&#x03B7;</span><sup><span 
+class="cmsy-8">*</span></sup> := <img 
+src="Distance60x.png" alt="&#x03B7;1+&#x03B7;2
+  2"  class="frac" align="middle"> (a right-sided <span 
+class="cmti-10x-x-109">Bregman centroid</span>&#x00A0;<span class="cite">[<a 
+href="#XSBD-2009">26</a>]</span>).
+     </li></ul>
+                                                                                         
+                                                                                         
+<!--l. 371--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">4   </span> <a 
+ id="x1-70004"></a>Statistical distances between mixtures</h3>
+<!--l. 374--><p class="noindent" >Pearson&#x00A0;<span class="cite">[<a 
+href="#Xpearson1894contributions">36</a>]</span> first considered a unimodal Gaussian mixture of two components for modeling distributions
+crabs in 1894. Statistical mixtures&#x00A0;<span class="cite">[<a 
+href="#Xmclachlan1988mixture">16</a>]</span> like the Gaussian mixture models (GMMs) are often
+met in information sciences, and therefore it is important to assess their dissimilarities. Let
+<span 
+class="cmmi-10x-x-109">m</span>(<span 
+class="cmmi-10x-x-109">x</span>) = <span 
+class="cmex-10x-x-109">&#x2211;</span>
+  <sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">k</span></sup><span 
+class="cmmi-10x-x-109">w</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">i</span></sub>(<span 
+class="cmmi-10x-x-109">x</span>) and <span 
+class="cmmi-10x-x-109">m</span><span 
+class="cmsy-10x-x-109">&#x2032;</span>(<span 
+class="cmmi-10x-x-109">x</span>) = <span 
+class="cmex-10x-x-109">&#x2211;</span>
+<sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">k</span><span 
+class="cmsy-8">&#x2032;</span></sup><span 
+class="cmmi-10x-x-109">w</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmsy-10x-x-109">&#x2032;</span><span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmsy-10x-x-109">&#x2032;</span>(<span 
+class="cmmi-10x-x-109">x</span>) be two finite statistical mixtures. The KLD between
+two GMMs <span 
+class="cmmi-10x-x-109">m </span>and <span 
+class="cmmi-10x-x-109">m</span><span 
+class="cmsy-10x-x-109">&#x2032; </span>is not analytic&#x00A0;<span class="cite">[<a 
+href="#XKLnotanalytic-2004">41</a>]</span> because of the log-sum terms:
+   <div class="math-display" >
+<img 
+src="Distance61x.png" alt="              &#x222B;
+          &#x2032;              m-(x)-
+DKL [m : m ] =  m (x)log m &#x2032;(x)dx.
+" class="math-display" ></div>
+<!--l. 381--><p class="indent" >   However, the KLD between two GMMs with the same prescribed components <span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">i</span></sub>(<span 
+class="cmmi-10x-x-109">x</span>) = <span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmsy-10x-x-109">&#x2032;</span>(<span 
+class="cmmi-10x-x-109">x</span>) = <span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">&#x03BC;</span><sub><span 
+class="cmmi-6">i</span></sub><span 
+class="cmmi-8">,</span><span 
+class="cmr-8">&#x03A3;</span><sub><span 
+class="cmmi-6">i</span></sub></sub>(<span 
+class="cmmi-10x-x-109">x</span>)
+(i.e., <span 
+class="cmmi-10x-x-109">k </span>= <span 
+class="cmmi-10x-x-109">k</span><span 
+class="cmsy-10x-x-109">&#x2032;</span>, and only the normalized positive weights may differ) is provably a Bregman divergence&#x00A0;<span class="cite">[<a 
+href="#Xwmixtures-2018">28</a>]</span>
+for the differential negentropy <span 
+class="cmmi-10x-x-109">F</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>):
+   <div class="math-display" >
+<img 
+src="Distance62x.png" alt="DKL [m (&#x03B8;) : m (&#x03B8;&#x2032;)] = BF (&#x03B8;,&#x03B8;&#x2032;),
+" class="math-display" ></div>
+<!--l. 385--><p class="indent" >   where <span 
+class="cmmi-10x-x-109">m</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) = <span 
+class="cmex-10x-x-109">&#x2211;</span>
+  <sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">k</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup><span 
+class="cmmi-10x-x-109">w</span><sub><span 
+class="cmmi-8">i</span></sub><span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">i</span></sub>(<span 
+class="cmmi-10x-x-109">x</span>) + (1 <span 
+class="cmsy-10x-x-109">-</span><span 
+class="cmex-10x-x-109">&#x2211;</span>
+  <sub><span 
+class="cmmi-8">i</span><span 
+class="cmr-8">=1</span></sub><sup><span 
+class="cmmi-8">k</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sup><span 
+class="cmmi-10x-x-109">w</span><sub><span 
+class="cmmi-8">i</span></sub>)<span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">k</span></sub>(<span 
+class="cmmi-10x-x-109">x</span>) and <span 
+class="cmmi-10x-x-109">F</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) = <span 
+class="cmex-10x-x-109">&#x222B;</span>
+  <span 
+class="cmmi-10x-x-109">m</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>)log <span 
+class="cmmi-10x-x-109">m</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>)d<span 
+class="cmmi-10x-x-109">x</span>. The family
+<span 
+class="cmsy-10x-x-109">{</span><span 
+class="cmmi-10x-x-109">m</span><sub><span 
+class="cmmi-8">&#x03B8;</span></sub> <span 
+class="cmmi-10x-x-109">&#x00A0;&#x03B8; </span><span 
+class="cmsy-10x-x-109">&#x2208; </span>&#x0394;<sub><span 
+class="cmmi-8">k</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sub><sup><span 
+class="cmsy-8">&#x2218;</span></sup><span 
+class="cmsy-10x-x-109">} </span>is called a mixture family in information geometry, where &#x0394;<sub><span 
+class="cmmi-8">k</span><span 
+class="cmsy-8">-</span><span 
+class="cmr-8">1</span></sub><sup><span 
+class="cmsy-8">&#x2218;</span></sup> denotes the
+(<span 
+class="cmmi-10x-x-109">k </span><span 
+class="cmsy-10x-x-109">- </span>1)-dimensional open standard simplex. However, <span 
+class="cmmi-10x-x-109">F</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) is usually not available in closed-form
+because of the log-sum integral. In some special cases like the mixture of two prescribed Cauchy
+distributions, we get a closed-form formula for the KLD, JSD, etc.&#x00A0;<span class="cite">[<a 
+href="#Xnielsen2021f">30</a>,&#x00A0;<a 
+href="#Xnielsen2021dually">25</a>]</span>. Thus when dealing
+with mixtures (like GMMs), we either need efficient approximating (<span 
+class="tcrm-1095">§</span><a 
+href="#x1-80004.1">4.1<!--tex4ht:ref: sec:mix:approx --></a>), bounding (<span 
+class="tcrm-1095">§</span><a 
+href="#x1-90004.2">4.2<!--tex4ht:ref: sec:mix:bound --></a>)
+KLD techniques, or new distances (<span 
+class="tcrm-1095">§</span><a 
+href="#x1-100004.3">4.3<!--tex4ht:ref: sec:mix:newdist --></a>) that yields closed-form formula between mixture
+densities.
+<!--l. 395--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">4.1   </span> <a 
+ id="x1-80004.1"></a>Approximating and/or fast statistical distances between mixtures</h4>
+                                                                                         
+                                                                                         
+     <ul class="itemize1">
+     <li class="itemize">The Jeffreys divergence (JD) <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmmi-8">J</span></sub>[<span 
+class="cmmi-10x-x-109">m,m</span><span 
+class="cmsy-10x-x-109">&#x2032;</span>] = <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmr-8">KL</span></sub>[<span 
+class="cmmi-10x-x-109">m </span>: <span 
+class="cmmi-10x-x-109">m</span><span 
+class="cmsy-10x-x-109">&#x2032;</span>]+<span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmr-8">KL</span></sub>[<span 
+class="cmmi-10x-x-109">m</span><span 
+class="cmsy-10x-x-109">&#x2032; </span>: <span 
+class="cmmi-10x-x-109">m</span>] between two (Gaussian)
+     MMs is not available in closed-form, and can be estimated using Monte Carlo integration as
+<div class="math-display" >
+<img 
+src="Distance63x.png" alt="                                       (       )
+ &#x02C6;Ss     &#x2032;    1&#x2211;s   (m(xi)--m-&#x2032;(xi))-     m-(xi)-
+D J [m, m ] :=  s    2 m(xi)+ m &#x2032;(xi) log   m&#x2032;(xi) ,
+               i=1
+" class="math-display" ></div>
+     <!--l. 403--><p class="noindent" >where <span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-53.png" alt="S" class="10-109x-x-53" /></span><sub><span 
+class="cmmi-8">s</span></sub> = <span 
+class="cmsy-10x-x-109">{</span><span 
+class="cmmi-10x-x-109">x</span><sub><span 
+class="cmr-8">1</span></sub><span 
+class="cmmi-10x-x-109">,</span><span 
+class="cmmi-10x-x-109">&#x2026;</span><span 
+class="cmmi-10x-x-109">,x</span><sub><span 
+class="cmmi-8">s</span></sub><span 
+class="cmsy-10x-x-109">} </span>are <span 
+class="cmmi-10x-x-109">s </span>IID samples from the mid mixture <span 
+class="cmmi-10x-x-109">m</span><sub><span 
+class="cmr-8">12</span></sub>(<span 
+class="cmmi-10x-x-109">x</span>) := <img 
+src="Distance64x.png" alt="12"  class="frac" align="middle">(<span 
+class="cmmi-10x-x-109">m</span>(<span 
+class="cmmi-10x-x-109">x</span>) + <span 
+class="cmmi-10x-x-109">m</span><span 
+class="cmsy-10x-x-109">&#x2032;</span>(<span 
+class="cmmi-10x-x-109">x</span>))
+     (with lim<sub><span 
+class="cmmi-8">s</span><span 
+class="cmsy-8">&#x2192;&#x221E;</span></sub><img 
+src="Distance65x.png" alt="D&#x02C6;"  class="circ" ><sub><span 
+class="cmmi-8">J</span></sub><sup><span 
+class="cmsy-8"><img 
+src="cmsy8-53.png" alt="S" class="8x-x-53" /></span><sub><span 
+class="cmmi-6">s</span></sub></sup>[<span 
+class="cmmi-10x-x-109">m,m</span><span 
+class="cmsy-10x-x-109">&#x2032;</span>] = <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmmi-8">J</span></sub>[<span 
+class="cmmi-10x-x-109">m,m</span><span 
+class="cmsy-10x-x-109">&#x2032;</span>]). In&#x00A0;<span class="cite">[<a 
+href="#XJeffreysGMMPEF-2021">23</a>]</span>, the mixtures <span 
+class="cmmi-10x-x-109">m </span>and <span 
+class="cmmi-10x-x-109">m</span><span 
+class="cmsy-10x-x-109">&#x2032; </span>are converted into
+     densities of an exponential-polynomial family. The JD between densities <span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">&#x03B8;</span></sub> and <span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">&#x03B8;</span><span 
+class="cmsy-8">&#x2032;</span></sub> of an
+     exponential family with cumulant function <span 
+class="cmmi-10x-x-109">F </span>is available in closed-form:
+<div class="math-display" >
+<img 
+src="Distance66x.png" alt="              &#x2032;       &#x2032;
+DJ[p&#x03B8;,p&#x03B8;&#x2032;] = (&#x03B8; - &#x03B8;)&#x22C5;(&#x03B7; - &#x03B7;),
+" class="math-display" ></div>
+     <!--l. 409--><p class="noindent" >with <span 
+class="cmmi-10x-x-109">&#x03B7; </span>= <span 
+class="cmsy-10x-x-109">&#x2207;</span><span 
+class="cmmi-10x-x-109">F</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) and <span 
+class="cmmi-10x-x-109">&#x03B8; </span>= <span 
+class="cmsy-10x-x-109">&#x2207;</span><span 
+class="cmmi-10x-x-109">F</span><sup><span 
+class="cmsy-8">*</span></sup>(<span 
+class="cmmi-10x-x-109">&#x03B7;</span>), where <span 
+class="cmmi-10x-x-109">F</span><sup><span 
+class="cmsy-8">*</span></sup> denotes the convex conjugate. Any smooth
+     density <span 
+class="cmmi-10x-x-109">r </span>(includes a mixture <span 
+class="cmmi-10x-x-109">r </span>= <span 
+class="cmmi-10x-x-109">m</span>) is converted into close densities <span 
+class="cmmi-10x-x-109">p</span><sub><span 
+class="cmmi-8">&#x03B8;</span><sub><span 
+class="cmmi-6">r</span></sub><sup><span 
+class="cmr-6">MLE</span></sup></sub>  and <span 
+class="cmmi-10x-x-109">p</span><sup><span 
+class="cmmi-8">&#x03B7;</span><sub><span 
+class="cmmi-6">r</span></sub><sup><span 
+class="cmr-6">SME</span></sup></sup>
+     of a exponential-polynomial family using extensions of the Maximum Likelihood Estimator
+     (MLE) and Score Matching Estimator (SME). Then JD between mixtures is approximated
+     as follows
+<div class="math-display" >
+<img 
+src="Distance67x.png" alt="        &#x2032;     &#x2032;SME    SME     &#x2032;MLE     MLE
+DJ [m, m ] &#x2243; (&#x03B8;    - &#x03B8;   ) &#x22C5;(&#x03B7;    - &#x03B7;    ).
+" class="math-display" ></div>
+                                                                                         
+                                                                                         
+     </li>
+     <li class="itemize">Given  a  finite  set  of  mixtures  <span 
+class="cmsy-10x-x-109">{</span><span 
+class="cmmi-10x-x-109">m</span><sub><span 
+class="cmmi-8">i</span></sub>(<span 
+class="cmmi-10x-x-109">x</span>)<span 
+class="cmsy-10x-x-109">} </span>sharing  the  same  components  (e.g.,  points  on  a
+     mixture family manifold), we precompute the KLD between pairwise components to obtain
+     fast approximation of the KLD <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmr-8">KL</span></sub>[<span 
+class="cmmi-10x-x-109">m</span><sub><span 
+class="cmmi-8">i</span></sub> : <span 
+class="cmmi-10x-x-109">m</span><sub><span 
+class="cmmi-8">j</span></sub>] between any two mixtures <span 
+class="cmmi-10x-x-109">m</span><sub><span 
+class="cmmi-8">i</span></sub> and <span 
+class="cmmi-10x-x-109">m</span><sub><span 
+class="cmmi-8">j</span></sub>, see&#x00A0;<span class="cite">[<a 
+href="#XComix-2016">39</a>]</span>.
+     </li></ul>
+<!--l. 426--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">4.2   </span> <a 
+ id="x1-90004.2"></a>Bounding statistical distances between mixtures</h4>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="cmbx-10x-x-109">Log-Sum-Exp bounds</span>: In&#x00A0;<span class="cite">[<a 
+href="#XLSE-MM1D-2016">31</a>,&#x00A0;<a 
+href="#Xalphadiv-2017">32</a>]</span>, we lower and upper bound the cross-entropy between
+     mixtures using the fact that the log-sum term log <span 
+class="cmmi-10x-x-109">m</span>(<span 
+class="cmmi-10x-x-109">x</span>) and be interpreted as a LSE function.
+     We then compute lower envelopes and upper envelopes of density functions using technique
+     of computational geometry to report deterministic lower and upper bounds on the KLD and
+     <span 
+class="cmmi-10x-x-109">&#x03B1;</span>-divergences. These bounds are said combinatorial because we decompose the support into
+     elementary intervals. Bounds between the Total Variation Distance (TVD) between univariate
+     mixtures are reported in&#x00A0;<span class="cite">[<a 
+href="#XTVmixture-2018">33</a>]</span>.
+     </li></ul>
+<!--l. 442--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">4.3   </span> <a 
+ id="x1-100004.3"></a>Newly designed statistical distances yielding closed-form formula for mixtures</h4>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="cmbx-10x-x-109">Statistical Minkowski distances</span>&#x00A0;<span class="cite">[<a 
+href="#XStatMinkGMM-2019">20</a>]</span>: Consider the Lebesgue space
+<div class="math-display" >
+<img 
+src="Distance68x.png" alt="         {        &#x222B;                   }
+                           &#x03B1;
+L&#x03B1;(&#x03BC;) :=   f &#x2208; F :   X |f(x)| d&#x03BC;(x) &#x003C; &#x221E;
+" class="math-display" ></div>
+     <!--l. 451--><p class="noindent" >for <span 
+class="cmmi-10x-x-109">&#x03B1; </span><span 
+class="cmsy-10x-x-109">&#x2265; </span>1, where <span 
+class="msbm-10x-x-109">F </span>denotes the set of all real-valued measurable functions defined on the support <span 
+class="cmsy-10x-x-109"><img 
+src="cmsy10-58.png" alt="X" class="10-109x-x-58" /></span>.
+     Minkowski&#8217;s inequality writes as <span 
+class="cmsy-10x-x-109">&#x2225;</span><span 
+class="cmmi-10x-x-109">p </span>+ <span 
+class="cmmi-10x-x-109">q</span><span 
+class="cmsy-10x-x-109">&#x2225;</span><sub><span 
+class="cmmi-8">&#x03B1;</span></sub> <span 
+class="cmsy-10x-x-109">&#x2264;&#x2225;</span><span 
+class="cmmi-10x-x-109">p</span><span 
+class="cmsy-10x-x-109">&#x2225;</span><sub><span 
+class="cmmi-8">&#x03B1;</span></sub> + <span 
+class="cmsy-10x-x-109">&#x2225;</span><span 
+class="cmmi-10x-x-109">q</span><span 
+class="cmsy-10x-x-109">&#x2225;</span><sub><span 
+class="cmmi-8">&#x03B1;</span></sub> for <span 
+class="cmmi-10x-x-109">&#x03B1; </span><span 
+class="cmsy-10x-x-109">&#x2208; </span>[1<span 
+class="cmmi-10x-x-109">,</span><span 
+class="cmsy-10x-x-109">&#x221E;</span>). The statistical Minkowski
+     difference distance between <span 
+class="cmmi-10x-x-109">p,q </span><span 
+class="cmsy-10x-x-109">&#x2208; </span><span 
+class="cmmi-10x-x-109">L</span><sub><span 
+class="cmmi-8">&#x03B1;</span></sub>(<span 
+class="cmmi-10x-x-109">&#x03BC;</span>) is defined as
+     <table 
+class="equation"><tr><td><a 
+ id="x1-10001r18"></a>
+                                                                                         
+                                                                                         
+<div class="math-display" >
+<img 
+src="Distance69x.png" alt="DMinkowski[p,q] := &#x2225;p&#x2225;&#x03B1; + &#x2225;q&#x2225;&#x03B1; - &#x2225;p+ q&#x2225;&#x03B1; &#x2265; 0.
+  &#x03B1;
+" class="math-display" ></div>
+     </td><td class="equation-label">(18)</td></tr></table>
+     <!--l. 456--><p class="nopar" >
+     The statistical Minkowski log-ratio distance is defined by:
+     <table 
+class="equation"><tr><td><a 
+ id="x1-10002r19"></a>
+<div class="math-display" >
+<img 
+src="Distance70x.png" alt="LMinkowski[p,q] := - log -&#x2225;p-+-q&#x2225;&#x03B1;--&#x2265;  0.
+ &#x03B1;                    &#x2225;p&#x2225;&#x03B1; + &#x2225;q&#x2225; &#x03B1;
+" class="math-display" ></div>
+     </td><td class="equation-label">(19)</td></tr></table>
+     <!--l. 460--><p class="nopar" >
+     These statistical Minkowski distances are symmetric, and <span 
+class="cmmi-10x-x-109">L</span><sub><span 
+class="cmmi-8">&#x03B1;</span></sub>[<span 
+class="cmmi-10x-x-109">p,q</span>] is scale-invariant. For even
+     integers <span 
+class="cmmi-10x-x-109">&#x03B1; </span><span 
+class="cmsy-10x-x-109">&#x2265; </span>2, <span 
+class="cmmi-10x-x-109">D</span><sub><span 
+class="cmmi-8">&#x03B1;</span></sub><sup><span 
+class="cmr-8">Minkowski</span></sup>[<span 
+class="cmmi-10x-x-109">m </span>: <span 
+class="cmmi-10x-x-109">m</span><span 
+class="cmsy-10x-x-109">&#x2032;</span>] is available in closed-form.
+     </li>
+     <li class="itemize">We show that the Cauchy-Schwarz divergence (CSD), the quadratic Jensen-Rényi divergence (JRD),
+     and the total square Distance (TSD) between two GMMs, and more generally two mixtures of
+     exponential families, can be obtained in closed-form in&#x00A0;<span class="cite">[<a 
+href="#Xnielsen2012closed">18</a>]</span>.</li></ul>
+<!--l. 482--><p class="noindent" >Initially created 13th August 2021 (last updated August 16, 2021).
 <!--l. 1--><p class="noindent" >
    <h3 class="likesectionHead"><a 
- id="x1-30002"></a>References</h3>
+ id="x1-110004.3"></a>References</h3>
 <!--l. 1--><p class="noindent" >
+                                                                                         
+                                                                                         
     <div class="thebibliography">
     <p class="bibitem" ><span class="biblabel">
   [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XBasuPowerDivergence-1998"></a>Ayanendranath Basu, Ian&#x00A0;R Harris, Nils&#x00A0;L Hjort, and MC&#x00A0;Jones.  Robust and efficient
     estimation by minimising a density power divergence. <span 
 class="cmti-10x-x-109">Biometrika</span>, 85(3):549&#8211;559, 1998.
-                                                                                         
-                                                                                         
     </p>
     <p class="bibitem" ><span class="biblabel">
   [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
@@ -361,31 +1496,61 @@ class="cmti-10x-x-109">minimum distance approach</span>. Chapman and Hall/CRC, 2
     </p>
     <p class="bibitem" ><span class="biblabel">
   [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XVIGJSD-2020"></a>Jacob  Deasy,  Nikola  Simidjievski,  and  Pietro  Liò.   Constraining  Variational  Inference
+    with Geometric Jensen-Shannon Divergence.  In <span 
+class="cmti-10x-x-109">Advances in Neural Information Processing</span>
+    <span 
+class="cmti-10x-x-109">Systems</span>, 2020.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [4]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XJSmetric-2003"></a>Dominik&#x00A0;Maria  Endres  and  Johannes&#x00A0;E  Schindelin.    A  new  metric  for  probability
+    distributions. <span 
+class="cmti-10x-x-109">IEEE Transactions on Information theory</span>, 49(7):1858&#8211;1860, 2003.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [5]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XJSmetric-2004"></a>Bent  Fuglede  and  Flemming  Topsoe.    Jensen-Shannon  divergence  and  Hilbert  space
+    embedding. In <span 
+class="cmti-10x-x-109">International Symposium onInformation Theory, 2004. ISIT 2004. Proceedings.</span>,
+    page&#x00A0;31. IEEE, 2004.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [6]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="Xgammadivergence-2008"></a>Hironori Fujisawa and Shinto Eguchi.   Robust parameter estimation with a small bias
     against heavy contamination. <span 
 class="cmti-10x-x-109">Journal of Multivariate Analysis</span>, 99(9):2053&#8211;2081, 2008.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [4]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+  [7]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="Xhyvarinen2005estimation"></a>Aapo Hyvärinen and Peter Dayan.  Estimation of non-normalized statistical models by
     score matching. <span 
 class="cmti-10x-x-109">Journal of Machine Learning Research</span>, 6(4), 2005.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [5]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+  [8]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XJeffreys-1946"></a>Harold  Jeffreys.   An  invariant  form  for  the  prior  probability  in  estimation  problems.
+    <span 
+class="cmti-10x-x-109">Proceedings of the Royal Society of London. Series A. Mathematical and Physical Sciences</span>,
+    186(1007):453&#8211;461, 1946.
+    </p>
+                                                                                         
+                                                                                         
+    <p class="bibitem" ><span class="biblabel">
+  [9]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="Xjenssen2006cauchy"></a>Robert  Jenssen,  Jose&#x00A0;C  Principe,  Deniz  Erdogmus,  and  Torbjørn  Eltoft.      The
     Cauchy&#8211;Schwarz divergence and Parzen windowing: Connections to graph theory and Mercer
     kernels. <span 
 class="cmti-10x-x-109">Journal of the Franklin Institute</span>, 343(6):614&#8211;629, 2006.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [6]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ [10]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="Xgammadivergence-2001"></a>MC&#x00A0;Jones, Nils&#x00A0;Lid Hjort, Ian&#x00A0;R Harris, and Ayanendranath Basu.   A comparison of
     related density-based minimum divergence estimators. <span 
 class="cmti-10x-x-109">Biometrika</span>, 88(3):865&#8211;873, 2001.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [7]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ [11]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="Xkampa2011closed"></a>Kittipat Kampa, Erion Hasanbelliu, and Jose&#x00A0;C Principe.  Closed-form Cauchy-Schwarz
     PDF divergence for mixture of Gaussians.  In <span 
 class="cmti-10x-x-109">The 2011 International Joint Conference on</span>
@@ -393,48 +1558,230 @@ class="cmti-10x-x-109">The 2011 International Joint Conference on</span>
 class="cmti-10x-x-109">Neural Networks</span>, pages 2578&#8211;2585. IEEE, 2011.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [8]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ [12]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XKullback-1997"></a>Solomon Kullback. <span 
+class="cmti-10x-x-109">Information theory and statistics</span>. Courier Corporation, 1997.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [13]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XskewJS-2001"></a>Lillian Lee.  On the effectiveness of the skew divergence for statistical language analysis.
+    In <span 
+class="cmti-10x-x-109">Artificial Intelligence and Statistics (AISTATS)</span>, page 65?72, 2001.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [14]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XJS-1991"></a>Jianhua Lin. Divergence measures based on the Shannon entropy. <span 
+class="cmti-10x-x-109">IEEE Transactions on</span>
+    <span 
+class="cmti-10x-x-109">Information theory</span>, 37(1):145&#8211;151, 1991.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [15]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XJW-1988"></a>Jianhua Lin and SKM Wong.  Approximation of discrete probability distributions based
+    on a new divergence measure. <span 
+class="cmti-10x-x-109">Congressus Numerantium (Winnipeg)</span>, 61:75&#8211;80, 1988.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [16]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xmclachlan1988mixture"></a>Geoffrey&#x00A0;J McLachlan and Kaye&#x00A0;E Basford.  <span 
+class="cmti-10x-x-109">Mixture models: Inference and applications</span>
+    <span 
+class="cmti-10x-x-109">to clustering</span>, volume&#x00A0;38. M. Dekker New York, 1988.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [17]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xnielsen2010family"></a>Frank Nielsen. A family of statistical symmetric divergences based on Jensen&#8217;s inequality.
+    <span 
+class="cmti-10x-x-109">arXiv preprint arXiv:1009.4004</span>, 2010.
+                                                                                         
+                                                                                         
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [18]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="Xnielsen2012closed"></a>Frank  Nielsen.   Closed-form  information-theoretic  divergences  for  statistical  mixtures.
     In <span 
 class="cmti-10x-x-109">Proceedings of the 21st International Conference on Pattern Recognition (ICPR)</span>, pages
     1723&#8211;1726. IEEE, 2012.
     </p>
     <p class="bibitem" ><span class="biblabel">
-  [9]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ [19]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XJSsym-2019"></a>Frank Nielsen. On the Jensen?Shannon Symmetrization of Distances Relying on Abstract
+    Means. <span 
+class="cmti-10x-x-109">Entropy</span>, 21(5), 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [20]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XStatMinkGMM-2019"></a>Frank Nielsen.   The statistical Minkowski distances: Closed-form formula for Gaussian
+    mixture models.   In <span 
+class="cmti-10x-x-109">International Conference on Geometric Science of Information</span>, pages
+    359&#8211;367. Springer, 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [21]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xnielsen2020generalization"></a>Frank  Nielsen.     On  a  Generalization  of  the  Jensen?Shannon  Divergence  and  the
+    Jensen?Shannon Centroid. <span 
+class="cmti-10x-x-109">Entropy</span>, 22(2), 2020.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [22]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="Xnielsen2021fast"></a>Frank Nielsen. Fast approximations of the Jeffreys divergence between univariate Gaussian
     mixture models via exponential polynomial densities. <span 
 class="cmti-10x-x-109">arXiv preprint arXiv:2107.05901</span>, 2021.
     </p>
-                                                                                         
-                                                                                         
     <p class="bibitem" ><span class="biblabel">
- [10]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ [23]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XJeffreysGMMPEF-2021"></a>Frank Nielsen. Fast approximations of the jeffreys divergence between univariate gaussian
+    mixture models via exponential polynomial densities. <span 
+class="cmti-10x-x-109">arXiv preprint arXiv:2107.05901</span>, 2021.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [24]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XvJSD-2021"></a>Frank Nielsen.  On a Variational Definition for the Jensen-Shannon Symmetrization of
+    Distances Based on the Information Radius. <span 
+class="cmti-10x-x-109">Entropy</span>, 23(4), 2021.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [25]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xnielsen2021dually"></a>Frank Nielsen. The dually flat information geometry of the mixture family of two prescribed
+    Cauchy components. <span 
+class="cmti-10x-x-109">arXiv preprint arXiv:2104.13801</span>, 2021.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [26]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XSBD-2009"></a>Frank  Nielsen  and  Richard  Nock.   Sided  and  symmetrized  Bregman  centroids.   <span 
+class="cmti-10x-x-109">IEEE</span>
+    <span 
+class="cmti-10x-x-109">transactions on Information Theory</span>, 55(6):2882&#8211;2904, 2009.
+                                                                                         
+                                                                                         
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [27]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XPMPEF-2016"></a>Frank Nielsen and Richard Nock.  Patch matching with polynomial exponential families
     and projective divergences. In <span 
 class="cmti-10x-x-109">International Conference on Similarity Search and Applications</span>,
     pages 109&#8211;116. Springer, 2016.
     </p>
     <p class="bibitem" ><span class="biblabel">
- [11]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ [28]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xwmixtures-2018"></a>Frank Nielsen and Richard Nock. On the geometry of mixtures of prescribed distributions.
+    In <span 
+class="cmti-10x-x-109">IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</span>, pages
+    2861&#8211;2865. IEEE, 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [29]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XCauchyJSD-2021"></a>Frank  Nielsen  and  Kazuki  Okamura.   On  <span 
+class="cmmi-10x-x-109">f</span>-divergences  between  cauchy  distributions.
+    <span 
+class="cmti-10x-x-109">arXiv:2101.12459</span>, 2021.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [30]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xnielsen2021f"></a>Frank Nielsen and Kazuki Okamura.   On <span 
+class="cmmi-10x-x-109">f</span>-divergences between Cauchy distributions.
+    <span 
+class="cmti-10x-x-109">arXiv preprint arXiv:2101.12459</span>, 2021.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [31]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XLSE-MM1D-2016"></a>Frank  Nielsen  and  Ke&#x00A0;Sun.   Guaranteed  bounds  on  information-theoretic  measures  of
+    univariate mixtures using piecewise log-sum-exp inequalities. <span 
+class="cmti-10x-x-109">Entropy</span>, 18(12):442, 2016.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [32]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xalphadiv-2017"></a>Frank  Nielsen  and  Ke&#x00A0;Sun.   Combinatorial  bounds  on  the  <span 
+class="cmmi-10x-x-109">&#x03B1;</span>-divergence  of  univariate
+    mixture models.   In <span 
+class="cmti-10x-x-109">2017 IEEE International Conference on Acoustics, Speech and Signal</span>
+    <span 
+class="cmti-10x-x-109">Processing, ICASSP 2017, New Orleans, LA, USA, March 5-9, 2017</span>, pages 4476&#8211;4480. IEEE,
+    2017.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [33]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XTVmixture-2018"></a>Frank  Nielsen  and  Ke&#x00A0;Sun.   Guaranteed  Deterministic  Bounds  on  the  total  variation
+    distance between univariate mixtures.   In <span 
+class="cmti-10x-x-109">28th IEEE International Workshop on Machine</span>
+    <span 
+class="cmti-10x-x-109">Learning for Signal Processing, MLSP 2018, Aalborg, Denmark, September 17-20, 2018</span>, pages
+    1&#8211;6. IEEE, 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [34]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="Xnielsen2019clustering"></a>Frank Nielsen and Ke&#x00A0;Sun. Clustering in Hilbert&#8217;s projective geometry: The case studies
     of the probability simplex and the elliptope of correlation matrices.  In <span 
 class="cmti-10x-x-109">Geometric Structures</span>
     <span 
 class="cmti-10x-x-109">of Information</span>, pages 297&#8211;331. Springer, 2019.
+                                                                                         
+                                                                                         
     </p>
     <p class="bibitem" ><span class="biblabel">
- [12]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
- id="XHolderDivergence-2017"></a>Frank Nielsen, Ke&#x00A0;Sun, and Stéphane Marchand-Maillet. On hölder projective divergences.
-    <span 
+ [35]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XHolderDivergence-2017"></a>Frank  Nielsen,  Ke&#x00A0;Sun,  and  Stéphane  Marchand-Maillet.     On  Hölder  projective
+    divergences. <span 
 class="cmti-10x-x-109">Entropy</span>, 19(3):122, 2017.
     </p>
     <p class="bibitem" ><span class="biblabel">
- [13]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ [36]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xpearson1894contributions"></a>Karl  Pearson.   Contributions  to  the  mathematical  theory  of  evolution.   <span 
+class="cmti-10x-x-109">Philosophical</span>
+    <span 
+class="cmti-10x-x-109">Transactions of the Royal Society of London. A</span>, 185:71&#8211;110, 1894.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [37]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
  id="XPhiPowerDivergence-2021"></a>Souvik Ray, Subrata Pal, Sumit&#x00A0;Kumar Kar, and Ayanendranath Basu.  Characterizing
     the functional density power divergence class. <span 
 class="cmti-10x-x-109">arXiv preprint arXiv:2105.06094</span>, 2021.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [38]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XRenyi-1961"></a>Alfréd Rényi et&#x00A0;al. On measures of entropy and information. In <span 
+class="cmti-10x-x-109">Proceedings of the Fourth</span>
+    <span 
+class="cmti-10x-x-109">Berkeley Symposium on Mathematical Statistics and Probability, Volume 1: Contributions to</span>
+    <span 
+class="cmti-10x-x-109">the Theory of Statistics</span>. The Regents of the University of California, 1961.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [39]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XComix-2016"></a>Olivier  Schwander,  Stéphane  Marchand-Maillet,  and  Frank  Nielsen.    Comix:  Joint
+    estimation  and  lightspeed  comparison  of  mixture  models.    In  <span 
+class="cmti-10x-x-109">2016  IEEE  International</span>
+    <span 
+class="cmti-10x-x-109">Conference  on  Acoustics,  Speech  and  Signal  Processing,  ICASSP  2016,  Shanghai,  China,</span>
+    <span 
+class="cmti-10x-x-109">March 20-25, 2016</span>, pages 2449&#8211;2453. IEEE, 2016.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [40]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XSibson-1969"></a>Robin Sibson. Information radius. <span 
+class="cmti-10x-x-109">Zeitschrift f</span><span 
+class="cmti-10x-x-109">ür Wahrscheinlichkeitstheorie und verwandte</span>
+    <span 
+class="cmti-10x-x-109">Gebiete</span>, 14(2):149&#8211;160, 1969.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [41]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XKLnotanalytic-2004"></a>Sumio Watanabe, Keisuke Yamazaki, and Miki Aoyagi.  Kullback information of normal
+    mixture is not an analytic function. <span 
+class="cmti-10x-x-109">IEICE technical report. Neurocomputing</span>, 104(225):41&#8211;46,
+    2004.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [42]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XWongYOU-1985"></a>Andrew&#x00A0;KC  Wong  and  Manlai  You.    Entropy  and  distance  of  random  graphs  with
+    application to structural pattern recognition.  <span 
+class="cmti-10x-x-109">IEEE Transactions on Pattern Analysis and</span>
+    <span 
+class="cmti-10x-x-109">Machine Intelligence</span>, (5):599&#8211;609, 1985.
 </p>
     </div>
+                                                                                         
+                                                                                         
     
 </body></html> 
 
