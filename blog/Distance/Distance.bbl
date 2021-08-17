@@ -172,11 +172,6 @@ Frank Nielsen and Kazuki Okamura.
 \newblock On $f$-divergences between cauchy distributions.
 \newblock {\em arXiv:2101.12459}, 2021.
 
-\bibitem{nielsen2021f}
-Frank Nielsen and Kazuki Okamura.
-\newblock {On $f$-divergences between Cauchy distributions}.
-\newblock {\em arXiv preprint arXiv:2101.12459}, 2021.
-
 \bibitem{LSE-MM1D-2016}
 Frank Nielsen and Ke~Sun.
 \newblock Guaranteed bounds on information-theoretic measures of univariate
@@ -242,6 +237,14 @@ Robin Sibson.
 \newblock Information radius.
 \newblock {\em Zeitschrift f{\"u}r Wahrscheinlichkeitstheorie und verwandte
   Gebiete}, 14(2):149--160, 1969.
+
+\bibitem{JRGMM-2009}
+Fei Wang, Tanveer Syeda-Mahmood, Baba~C Vemuri, David Beymer, and Anand
+  Rangarajan.
+\newblock {Closed-form Jensen-R\'enyi divergence for mixture of Gaussians and
+  applications to group-wise shape registration}.
+\newblock In {\em International Conference on Medical Image Computing and
+  Computer-Assisted Intervention}, pages 648--655. Springer, 2009.
 
 \bibitem{KLnotanalytic-2004}
 Sumio Watanabe, Keisuke Yamazaki, and Miki Aoyagi.

@@ -8,43 +8,43 @@ Database file #1: DistanceBib.bib
 Warning--there's a number but no volume in WongYOU-1985
 You've used 42 entries,
             2118 wiz_defined-function locations,
-            757 strings with 11583 characters,
-and the built_in function-call counts, 13853 in all, are:
-= -- 1425
-> -- 526
-< -- 12
-+ -- 211
-- -- 166
-* -- 861
-:= -- 2238
-add.period$ -- 137
+            760 strings with 11814 characters,
+and the built_in function-call counts, 14171 in all, are:
+= -- 1460
+> -- 541
+< -- 13
++ -- 217
+- -- 172
+* -- 887
+:= -- 2275
+add.period$ -- 138
 call.type$ -- 42
-change.case$ -- 205
+change.case$ -- 208
 chr.to.int$ -- 0
 cite$ -- 43
-duplicate$ -- 597
-empty$ -- 1153
-format.name$ -- 166
-if$ -- 2992
+duplicate$ -- 610
+empty$ -- 1177
+format.name$ -- 172
+if$ -- 3070
 int.to.chr$ -- 0
 int.to.str$ -- 42
 missing$ -- 45
 newline$ -- 213
 num.names$ -- 84
-pop$ -- 222
+pop$ -- 228
 preamble$ -- 1
-purify$ -- 166
+purify$ -- 169
 quote$ -- 0
-skip$ -- 439
+skip$ -- 449
 stack$ -- 0
-substring$ -- 885
-swap$ -- 158
-text.length$ -- 12
+substring$ -- 917
+swap$ -- 168
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 162
 warning$ -- 1
-while$ -- 141
+while$ -- 144
 width$ -- 44
-write$ -- 464
+write$ -- 466
 (There was 1 warning)

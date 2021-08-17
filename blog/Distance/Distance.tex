@@ -385,7 +385,7 @@ $$
 where $m(\theta)=\sum_{i=1}^{k-1} w_ip_i(x)+(1-\sum_{i=1}^{k-1} w_i)p_k(x)$ and
 $F(\theta)=\int m(\theta)\log m(\theta)\dx$. The family $\{m_\theta\: \ \theta\in\Delta_{k-1}^\circ\}$ is called a mixture family in information geometry, where $\Delta_{k-1}^\circ$ denotes the $(k-1)$-dimensional open standard simplex.
 However, $F(\theta)$ is usually not available in closed-form because of the log-sum integral.
-In some special cases like the mixture of two prescribed Cauchy distributions, we get a closed-form formula for the KLD, JSD, etc.~\cite{nielsen2021f,nielsen2021dually}.
+In some special cases like the mixture of two prescribed Cauchy distributions, we get a closed-form formula for the KLD, JSD, etc.~\cite{CauchyJSD-2021,nielsen2021dually}.
 Thus when dealing with mixtures (like GMMs), we either need efficient approximating  (\S\ref{sec:mix:approx}), bounding (\S\ref{sec:mix:bound}) KLD techniques, or new distances (\S\ref{sec:mix:newdist}) that yields closed-form formula between mixture densities.
 
 % , or estimating (\S\ref{sec:mix:est})
@@ -462,7 +462,7 @@ These statistical Minkowski distances are symmetric, and $L_\alpha[p,q]$ is scal
 For even integers $\alpha\geq 2$, $D_\alpha^{\mathrm{Minkowski}}[m:m']$ is available in closed-form.
 
 
-\item We show that the Cauchy-Schwarz divergence (CSD), the quadratic Jensen-R\'enyi divergence (JRD), and the total square Distance (TSD) between two GMMs, and more generally two mixtures of exponential families, can be obtained in closed-form in~\cite{nielsen2012closed}.
+\item We show that the Cauchy-Schwarz divergence (CSD), the quadratic Jensen-R\'enyi divergence~\cite{JRGMM-2009} (JRD), and the total square Distance (TSD) between two GMMs, and more generally two mixtures of exponential families, can be obtained in closed-form in~\cite{nielsen2012closed}.
 \end{itemize}
 
 
