@@ -7,6 +7,7 @@
 \def\bbF{\mathbb{F}}
 \def\eqdef{:=}
 \def\eqnota{:=:}
+\def\calY{\mathcal{Y}}
 \def\dmu{\mathrm{d}\mu}
 \def\dnu{\mathrm{d}\nu}
 \def\calX{\mathcal{X}}
@@ -29,28 +30,178 @@
 \def\IR{\mathrm{IR}}
 \def\SME{\mathrm{SME}}
 \def\MLE{\mathrm{MLE}}
+\def\dtheta{\mathrm{d}\theta}
+\def\Cauchy{\mathrm{Cauchy}}
 
 \sloppy
 
 
-\title{Discrepancies, dissimilarities, divergences, and distances}
+\title{Discrepancies, dissimilarities, divergences, distances, and diversities}
+%\title{Distances and diversities}
 
-\date{13th August 2021, updated \today}
+
+\date{August 2021. Last updated \today}
 
 \author{Frank Nielsen\\ Sony Computer Science Laboratories Inc.\\ Tokyo, Japan}
 
 \begin{document}
 \maketitle
 
-This is a working document which will be frequently updated with materials concerning the discrepancy between two distributions.
+This is a {\em working document} which will be (hopefully frequently) updated with materials concerning the discrepancies between two distributions/parameters or the diversities of a set of distributions/parameters.
+There are many synonyms in the literature to measure the difference between two objects: 
+Discrepancies, deviations, dissimilarities, divergences, distances. 
+Diversities generalize distances by measuring the centrality notion of a set of objects instead of two objects.
+
 \vskip 0.5cm
-This document is also available in the PDF \url{Distance.pdf} 
+This document is also available in PDF: \url{Distance.pdf} 
 \vskip 0.5cm
 
 There are many other acronyms used in the literature for referencing a dissimilarity; For example, the following $5$ D's:
-Discrepancies, deviations, dissimilarities, divergences, and distances.
+Discrepancies, deviations/deviances, dissimilarities, divergences, and distances.
+
+% Deviations (signed, Hilbert distance), dissimilarities (non-neg), divergences (smooth), distances (metric)
+
 
 \tableofcontents
+
+%%%
+\section{Bregman divergences and Jensen divergences}
+%%%%
+
+\subsection{Ordinary Bregman and skewed Jensen divergences}
+
+\subsection{Relationships with statistical distances between densities of an exponential family}
+
+\subsection{Generalizations of Bregman and Jensen divergences}
+
+
+
+
+%%%
+\section{Invariant {\protect $f$-divergences}}
+%%%%
+
+A $f$-divergence~\cite{Morimoto-1963,EN-PhD-Csiszar-1967,fdiv-AliSilvey-1966,Csiszar-1972} $I_f[p:q]$ is a dissimilarity measure between probability distributions defined for a convex generator $f(u)$:
+$$
+I_f[p:q]=\int p(x) f\left(\frac{q(x)}{p(x)}\right) \dmu(x).
+$$
+Using Jensen's inequality, we have $I_f[p:q]\geq f(1)$. Thus we ask for generators satisfying $f(1)=0$.
+Moreover, in order to have $I_f[p:q]=0$ iff. $p=q$ ($\mu$-almost everywhere), we require $f(u)$ to be strictly convex at $1$.
+The $f$-divergences include many well-known statistical distances listed with their generators: % in Table~\table{tab:fdiv}.
+
+%\begin{table}
+\begin{center}
+$
+\begin{array}{lll}
+\text{$f$-divergence } & \text{Formula $I_f[p:q]$} & \text{generator $f(u)$}\\
+\hline\hline
+\text{Total variation (metric)} & \frac{1}{2}\int |p(x)-q(x)| \dmu(x) & \frac{1}{2} |u-1| \\
+\text{Squared Hellinger} & \int (\sqrt{p(x)}-\sqrt{q(x)})^2 \dmu(x) & (\sqrt{u}-1)^2\\
+\text{Pearson $\chi^2_P$}  &  \int \frac{(q(x)-p(x))^2}{p(x)} \dmu(x) & (u-1)^2\\
+\text{Neyman $\chi^2_N$}  &  \int \frac{(p(x)-q(x))^2}{q(x)} \dmu(x) & \frac{(1-u)^2}{u}\\
+\text{Kullback-Leibler} & \int p(x)\log \frac{p(x)}{q(x)} \dmu(x) & -\log u\\
+\text{reverse Kullback-Leibler} & \int q(x)\log \frac{q(x)}{p(x)} \dmu(x) & u\log u \\
+\text{Jeffreys divergence} &\int (p(x)-q(x))\log\frac{p(x)}{q(x)} \dmu(x) & (u-1)\log u\\
+\text{$\alpha$-divergence} &  \frac{4}{1-\alpha^2} (1-\int p^{\frac{1-\alpha}{2}}(x) q^{1+\alpha}(x) \dmu(x))  & \frac{4}{1-\alpha^2}(1-u^{\frac{1+\alpha}{2}})\\ 
+\text{Jensen-Shannon} & \frac{1}{2}\int (p(x)\log \frac{2p(x)}{p(x)+q(x)} +  q(x)\log \frac{2q(x)}{p(x)+q(x)})\dmu(x) 
+&  -(u+1)\log \frac{1+u}{2} + u\log u\\
+\end{array}
+$
+\end{center}
+
+%\caption{Common $f$-divergences $I_f$ with their corresponding generators. \label{tab:fdiv}}
+%\end{table}
+
+ 
+
+
+Two $f$-divergences $I_{f_1}$ and $I_{f_2}$ are equivalent iff. $f_1(u)=f_2(u)+\lambda (u-1)$ for any $\lambda\in\bbR$.
+A symmetric $f$-divergence is bounded (e.g., the Jensen-Shannon divergence or the total variation) iff. $f(0)<\infty$. 
+The Jeffreys divergence is an unbounded $f$-divergence.
+The dual $f$-divergence ${I_f}^*[p:q]:=I_f[p:q]$ is a $f$-divergence for the dual generator $f^*(u)= u f\left(\frac{1}{u}\right)$ (or conjugate generator).
+Thus symmetric $f$-divergences (e.g., the Jeffreys divergence, Hellinger divergence, or the Jensen-Shannon divergence) satisfies the functional equality $f(u)=uf(1/u)$.
+The $f$-divergences are joint convex and satisfies the information monotonicity property:
+$I_f[p_{|\calY}:q_{|\calY}]\leq I_f[p:q]$ for any partition $\calY$ of $\calX$ (see lumping~\cite{TutorialCsiszar-2004}).
+A statistical divergence is said separable iff. it can be rewritten as $D[p:q]=\int D_1(p(x):q(x)) \dmu(x)$, where $D_1$ is a scalar divergence. The $f$-divergences are the only divergences which are separable and satisfies the information information monotonicity~\cite{IG-2016} (except the ``curious case''~\cite{fdivBinaryAlphabet-2014} of binary alphabets $\calX$).
+A $f$-divergence is said standard~\cite{IG-2016} when $f''(1)=1$. 
+The local Taylor expansion~\cite{CharacterizationDiv-1998} of $I_f[p_{\theta_1}:p_{\theta_2}]$-divergences between two parametric divergences is related to the Fisher information matrix $I(\theta)=E_{p_\theta}\left[\nabla \log p_\theta(x) (\nabla \log p_\theta(x))^\top\right]$ as follows:
+$$
+I_f[p_{\theta_1}:p_{\theta_2}]=\frac{1}{2}(\theta_2-\theta_1)^\top I_\theta(\theta_1)(\theta_2-\theta_1)+o(\|(\theta_2-\theta_1\|^2).
+$$ 
+Thus we have $I_f[p_{\theta}:p_{\theta+\dtheta}]=\frac{1}{2}\dtheta^\top I(\theta) \dtheta$ for a standard $f$-divergence (with $f''(1)=1$).
+The following metric distance $D^\Mah_Q$ is called the Mahalanobis distance~\cite{Mahalanobis-1936}\footnote{Mahalanobis defined that distance for $Q=\Sigma^{-1}\succ 0$, the inverse of a covariance matrix.}:
+$$
+D^\Mah_Q(\theta_1,\theta_2)=\sqrt{(\theta_2-\theta_1)^\top Q(\theta_2-\theta_1)}.
+$$
+The  Mahalanobis distance generalizes the Euclidean distance (expressed in the Cartesian coordinate system) using $Q=I$, the identity matrix.
+When $\Sigma=\diag(\sigma_{11}^2,\ldots, \sigma_{DD}^2)$ with $\sigma_{ii}=\sigma_i^2$, we have
+$$
+D^\Mah_{\Sigma^{-1}}(\theta_1,\theta_2)=\sum_{i=1}^D \frac{(\theta_2^i-\theta_1^i)^2}{\sigma_{i}^2}.
+$$
+
+Thus we have $I_f[p_{\theta_1}:p_{\theta_2}]=\frac{1}{2}D^\Mah_{I_\theta(\theta_1)}(\theta_1,\theta_2)^2+o(\|(\theta_2-\theta_1\|^2)$.
+For $\theta_1=\theta$ and $\theta_2=\theta+\dtheta$, the half squared Mahalanobis distance can be interpreted as the squared Riemannian infinitesimal length element: $I_f[p_{\theta}:p_{\theta+\dtheta}]=\frac{1}{2}\dtheta^\top I_\theta(\theta) \dtheta=\ds_\theta^2$.
+
+A $f$-divergence between any two densities $p_{\theta_1}$ and $p_{\theta_2}$ can be expressed as a Taylor series~\cite{fdivCauchy-2021} when $\frac{p_{\theta_2}(x)}{p_{\theta_1}(x)} < 1+r_f$ 
+where $r_f$ is the convergence radius of the analytic generator $f\in C^\omega$ and $\frac{p_{\theta_1}}{p_{\theta_2}}\leq C$:
+$$
+I_f[p_{\theta_1} : p_{\theta_2}] = \sum_{n=2}^{\infty} a_n \int_{X}  \left( \frac{p_{\theta_2}(x)}{p_{\theta_1}(x)} - 1 \right)^n p_{\theta_1}(x) \dmu(x).
+$$
+Otherwise, the Taylor series diverge.
+
+By introducing the higher-order chi divergences~\cite{fdivchiorder-2013} 
+$$
+D_{\chi,n}[p:q]=\int \frac{\left(p(x)-q(x)\right)^n}{(q(x))^{n-1}(x)} \dmu(x)
+$$
+which are proper divergences for even integers and only pseudo-distances for odd orders, we rewrite the Taylor series of $f$-divergences as:
+$$
+I_f[p_{\theta_1} : p_{\theta_2}] = \sum_{n=2}^{\infty} a_n D_{\chi,n}[p_{\theta_1} : p_{\theta_2}].
+$$
+
+The higher-order chi divergences~\cite{fdivchiorder-2013} between densities of an exponential family are available in closed-form provided that the natural parameter space is affine (e.g., isotropic Gaussian family or Poisson family).
+
+To illustrate the Taylor series, consider the Poisson family, and let us express the Taylor series for the Jensen-Shannon divergence
+(generator $f_\JS(u)=-(u+1)\log \frac{1+u}{2} + u\log u$) between two Poisson distributions with parameters $\lambda_1=0.6$ and $\lambda_2=0.3$.
+We have the higher-order chi divergences between Poisson distributions expressed in closed-form as follows~\cite{fdivchiorder-2013}:
+$$
+D_{\chi,k}[p_{\lambda_1}:p_{\lambda_2}]=\sum_{j=0}^k (-1)^{k-j} {k \choose j} e^{\lambda_1^{1-j} \lambda_2^{j} - ((1-j)\lambda_1 +  j\lambda_2)}
+$$
+
+Furthermore, $\frac{p_{\lambda_1}(x)}{p_{\lambda_2}(x)}=\frac{\lambda_1^k e^{-\lambda_1}}{\lambda_2^k e^{-\lambda_2}}<C$
+
+
+We have
+$$
+I_f[p:q]\sim \frac{f''(1)}{2}D_{\chi^2_N}[p:q],
+$$ 
+where $D_{\chi^2}[p:q]=\int \frac{(p(x)-q(x))^2}{q(x)} \dmu(x)$ is the chi-squared divergence.
+Therefore, we have
+\begin{equation}
+D_\KL[p:q]\sim \frac{1}{2}D_{\chi^2}[p:q].
+\end{equation}
+
+
+On the finite-dimensional probability simplex, the Kullback-Leibler divergence is the only statistical divergence which belongs to both the $f$-divergences and the Bregman divergences~\cite{AlphaUnique-2009}. When considering the $f$-divergences to positive measures, the intersection of the $f$-divergences and the Bregman divergences are the $\alpha$-divergences~\cite{AlphaUnique-2009}. 
+
+For the parametric family of Cauchy distributions, the $f$-divergences are always symmetric and can be expressed as a function of the chi-squared divergence~\cite{fdivCauchy-2021}:
+$$
+I_f[p_{l_1,s_1}^\Cauchy:p_{l_2,s_2}^\Cauchy]=I_f[p_{l_2,s_2}^\Cauchy:p_{l_1,s_1}^\Cauchy]=h_f(D_{\chi^2}[p_{l_1,s_1}^\Cauchy:p_{l_2,s_2}^\Cauchy]),
+$$
+where
+$$
+D_{\chi^2}[p_{l_1,s_1}^\Cauchy:p_{l_2,s_2}^\Cauchy]=\frac{(l_2-l_1)^2+(s_2-s_1)^2}{2s_1s_2}
+$$
+and
+$$
+p_{l,s}^\Cauchy(x) := \frac{1}{\pi s\left(1+\left(\frac{x-l}{s}\right)^2\right)}=\frac{s}{\pi (s^2+(x-l)^2)}.
+$$
+
+
+%%%
+\section{Distances and means}
+%%%%
+
+
 
 %%%
 \section{Statistical distances between densities with computationally intractable normalizers}

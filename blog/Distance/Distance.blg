@@ -6,45 +6,45 @@ The style file: plain.bst
 Reallocating 'name_of_file' (item size: 1) to 12 items.
 Database file #1: DistanceBib.bib
 Warning--there's a number but no volume in WongYOU-1985
-You've used 42 entries,
+You've used 53 entries,
             2118 wiz_defined-function locations,
-            760 strings with 11814 characters,
-and the built_in function-call counts, 14171 in all, are:
-= -- 1460
-> -- 541
+            833 strings with 13756 characters,
+and the built_in function-call counts, 17521 in all, are:
+= -- 1804
+> -- 669
 < -- 13
-+ -- 217
-- -- 172
-* -- 887
-:= -- 2275
-add.period$ -- 138
-call.type$ -- 42
-change.case$ -- 208
++ -- 271
+- -- 212
+* -- 1124
+:= -- 2841
+add.period$ -- 172
+call.type$ -- 53
+change.case$ -- 259
 chr.to.int$ -- 0
-cite$ -- 43
-duplicate$ -- 610
-empty$ -- 1177
-format.name$ -- 172
-if$ -- 3070
+cite$ -- 54
+duplicate$ -- 732
+empty$ -- 1455
+format.name$ -- 212
+if$ -- 3755
 int.to.chr$ -- 0
-int.to.str$ -- 42
-missing$ -- 45
-newline$ -- 213
-num.names$ -- 84
-pop$ -- 228
+int.to.str$ -- 53
+missing$ -- 58
+newline$ -- 268
+num.names$ -- 106
+pop$ -- 271
 preamble$ -- 1
-purify$ -- 169
+purify$ -- 211
 quote$ -- 0
-skip$ -- 449
+skip$ -- 529
 stack$ -- 0
-substring$ -- 917
-swap$ -- 168
+substring$ -- 1181
+swap$ -- 179
 text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 162
+type$ -- 202
 warning$ -- 1
-while$ -- 144
-width$ -- 44
-write$ -- 466
+while$ -- 182
+width$ -- 55
+write$ -- 585
 (There was 1 warning)

@@ -1,5 +1,24 @@
 \begin{thebibliography}{10}
 
+\bibitem{fdiv-AliSilvey-1966}
+Syed~Mumtaz Ali and Samuel~D Silvey.
+\newblock A general class of coefficients of divergence of one distribution
+  from another.
+\newblock {\em Journal of the Royal Statistical Society: Series B
+  (Methodological)}, 28(1):131--142, 1966.
+
+\bibitem{AlphaUnique-2009}
+Shun-Ichi Amari.
+\newblock $\alpha$-divergence is unique, belonging to both $f$-divergence and
+  {B}regman divergence classes.
+\newblock {\em IEEE Transactions on Information Theory}, 55(11):4925--4931,
+  2009.
+
+\bibitem{IG-2016}
+Shun-ichi Amari.
+\newblock {\em Information Geometry and Its Applications}.
+\newblock Applied Mathematical Sciences. Springer Japan, 2016.
+
 \bibitem{BasuPowerDivergence-1998}
 Ayanendranath Basu, Ian~R Harris, Nils~L Hjort, and MC~Jones.
 \newblock Robust and efficient estimation by minimising a density power
@@ -10,6 +29,28 @@ Ayanendranath Basu, Ian~R Harris, Nils~L Hjort, and MC~Jones.
 Ayanendranath Basu, Hiroyuki Shioya, and Chanseok Park.
 \newblock {\em Statistical inference: the minimum distance approach}.
 \newblock Chapman and Hall/CRC, 2019.
+
+\bibitem{CharacterizationDiv-1998}
+JM~Corcuera and Federica Giummol{\`e}.
+\newblock A characterization of monotone and regular divergences.
+\newblock {\em Annals of the Institute of Statistical Mathematics},
+  50(3):433--450, 1998.
+
+\bibitem{EN-PhD-Csiszar-1967}
+Imre Csisz{\'a}r.
+\newblock Information-type measures of difference of probability distributions
+  and indirect observation.
+\newblock {\em studia scientiarum Mathematicarum Hungarica}, 2:229--318, 1967.
+
+\bibitem{Csiszar-1972}
+Imre Csisz{\'a}r.
+\newblock A class of measures of informativity of observation channels.
+\newblock {\em Periodica Mathematica Hungarica}, 2(1-4):191--213, 1972.
+
+\bibitem{TutorialCsiszar-2004}
+Imre Csisz{\'a}r and Paul~C Shields.
+\newblock {\em {Information theory and statistics: A tutorial}}.
+\newblock Now Publishers Inc, 2004.
 
 \bibitem{VIGJSD-2020}
 Jacob Deasy, Nikola Simidjievski, and Pietro Li{\`o}.
@@ -52,6 +93,12 @@ Robert Jenssen, Jose~C Principe, Deniz Erdogmus, and Torbj{\o}rn Eltoft.
   graph theory and Mercer kernels}.
 \newblock {\em Journal of the Franklin Institute}, 343(6):614--629, 2006.
 
+\bibitem{fdivBinaryAlphabet-2014}
+Jiantao Jiao, Thomas~A Courtade, Albert No, Kartik Venkat, and Tsachy Weissman.
+\newblock Information measures: the curious case of the binary alphabet.
+\newblock {\em IEEE Transactions on Information Theory}, 60(12):7616--7626,
+  2014.
+
 \bibitem{gammadivergence-2001}
 MC~Jones, Nils~Lid Hjort, Ian~R Harris, and Ayanendranath Basu.
 \newblock A comparison of related density-based minimum divergence estimators.
@@ -91,6 +138,11 @@ Geoffrey~J McLachlan and Kaye~E Basford.
 \newblock {\em {Mixture models: Inference and applications to clustering}},
   volume~38.
 \newblock M. Dekker New York, 1988.
+
+\bibitem{Morimoto-1963}
+Tetsuzo Morimoto.
+\newblock {Markov processes and the $H$-theorem}.
+\newblock {\em Journal of the Physical Society of Japan}, 18(3):328--331, 1963.
 
 \bibitem{nielsen2010family}
 Frank Nielsen.
@@ -154,6 +206,12 @@ Frank Nielsen and Richard Nock.
 \newblock {\em IEEE transactions on Information Theory}, 55(6):2882--2904,
   2009.
 
+\bibitem{fdivchiorder-2013}
+Frank Nielsen and Richard Nock.
+\newblock On the chi square and higher-order chi distances for approximating
+  $f$-divergences.
+\newblock {\em IEEE Signal Processing Letters}, 21(1):10--13, 2013.
+
 \bibitem{PMPEF-2016}
 Frank Nielsen and Richard Nock.
 \newblock Patch matching with polynomial exponential families and projective
@@ -166,6 +224,11 @@ Frank Nielsen and Richard Nock.
 \newblock On the geometry of mixtures of prescribed distributions.
 \newblock In {\em IEEE International Conference on Acoustics, Speech and Signal
   Processing (ICASSP)}, pages 2861--2865. IEEE, 2018.
+
+\bibitem{fdivCauchy-2021}
+Frank Nielsen and Kazuki Okamura.
+\newblock {On $f$-divergences between Cauchy distributions}.
+\newblock {\em arXiv preprint arXiv:2101.12459}, 2021.
 
 \bibitem{CauchyJSD-2021}
 Frank Nielsen and Kazuki Okamura.
