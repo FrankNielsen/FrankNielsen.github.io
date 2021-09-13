@@ -7,7 +7,8 @@
 
 import processing.pdf.*;
 
-boolean toggleAnimation=true;
+boolean toggleAnimation=false;//true;
+boolean anim=false;
 
 double cx, cy;
 double f1x, f1y, f2x, f2y;
@@ -22,10 +23,25 @@ double rb;
 
 double angletouch;
 
+double  speedx, speedy;
+double aniso=0.35;
+double   speedr;
+double   thetaspeed;
+double minr=10;
+double maxr=60;
+
+int W=512;
+
+int H=W;
+double offset=180;
+double maxx=W-offset;
+double maxy=H-offset;
+double minx=offset;
+double miny=offset;
+
 int nb=1000;
 
-int W=800;
-int H=W;
+
 
 double touchx1, touchy1, touchx2, touchy2;
 
@@ -109,6 +125,22 @@ void drawCircle(double cx, double cy, double r, int nb)
  
 }
 
+void Update()
+{ if (a<b) {double tmp; tmp=a;a=b;b=tmp;}
+  c=Math.sqrt(a*a-b*b);
+  
+  theta=Math.random()*2.0*Math.PI;
+  
+  
+  f1x=cx+c*Math.cos(theta);
+  f1y=cy+c*Math.sin(theta);  
+  f2x=cx-c*Math.cos(theta);
+  f2y=cy-c*Math.sin(theta); 
+  
+  ra=a-c;}
+
+
+
 void Initialize()
 {
   int i;
@@ -122,18 +154,13 @@ void Initialize()
   
   //b=a; //circle
   
-  if (a<b) {double tmp; tmp=a;a=b;b=tmp;}
-  c=Math.sqrt(a*a-b*b);
-  
-  theta=Math.random()*2.0*Math.PI;
-  
-  
-  f1x=cx+c*Math.cos(theta);
-  f1y=cy+c*Math.sin(theta);  
-  f2x=cx-c*Math.cos(theta);
-  f2y=cy-c*Math.sin(theta); 
-  
-  ra=a-c;
+   speedx=0.0003* Math.random(); 
+   speedy=0.0003* Math.random();
+    speedr=0.0003*Math.random();
+   
+    thetaspeed=0.0003*Math.random();
+    
+    Update();
    
 }
 
@@ -152,30 +179,22 @@ void draw()
 {
   int i;
   background(255);
-  stroke(0);
-  noFill();
-
-
-  push();
-  translate((float)cx, (float)cy);
-  push();
-  rotate((float)theta);
-  ellipse(0, 0, (float)(2.0*a), (float)(2.0*b));
-  pop();
-
-  pop();
+  
+  
+  
 
 
   //drawEllipse(cx, cy, a, b, theta, 100);
   
-  stroke(0,0,255);
-  line((float)f1x,(float)f1y,(float)f2x,(float)f2y);
-  
-  stroke(0,255,0);
-   ellipse((float)f1x, (float)f1y, 5, 5);
-   ellipse((float)f2x, (float)f2y, 5, 5);
+ 
   
   stroke(255,0,0);
+  
+  stroke(0,255,0);
+  
+  for(t=0;t<=1;t+=0.1)
+  {
+  
   double xx=t*f1x+(1-t)*f2x;
    double yy=t*f1y+(1-t)*f2y;
    ellipse((float)xx,(float)yy,5,5);
@@ -187,7 +206,24 @@ void draw()
    
   // double rr=ra;
    
-   drawCircle(xx,yy,rr,100);
+  // drawCircle(xx,yy,rr,100);
+   
+     push();
+  translate((float)xx, (float)yy);
+  push();
+ // rotate((float)theta);
+  ellipse(0, 0, (float)(2*rr), (float)(2*rr));
+  pop();
+  pop();
+
+  }
+    stroke(0,0,255);
+  line((float)f1x,(float)f1y,(float)f2x,(float)f2y);
+  
+  stroke(0,255,0);
+   ellipse((float)f1x, (float)f1y, 5, 5);
+   ellipse((float)f2x, (float)f2y, 5, 5);
+   
    
    /*
    double px,py;
@@ -196,12 +232,24 @@ void draw()
       py=cy+b*Math.sin(angletouch)*Math.cos(theta)+a*Math.cos(angletouch)*Math.sin(theta);
       ellipse((float)px,(float)yy,5,5);
      */  
+     /*
       stroke(255,0,255);
       ellipse((float)touchx1,(float)touchy1,5,5);
        ellipse((float)touchx2,(float)touchy2,5,5);
+     */
+     
+     stroke(0);
+  noFill();
+  push();
+  translate((float)cx, (float)cy);
+  push();
+  rotate((float)theta);
+  ellipse(0, 0, (float)(2.0*a), (float)(2.0*b));
+  pop();
+  pop();
      
       
-  if (toggleAnimation) update();
+  if (toggleAnimation) animate();
 }
 
 void update()
@@ -209,6 +257,33 @@ void update()
  t=t+dt;if ((t>1)||(t<0)) dt=-dt;  
 }
 
+
+
+
+
+void animate()
+{
+  int i;
+
+  
+    cx=cx+speedx;
+    cy=cy+speedy;
+    a=a+aniso*speedr;
+    b=b+speedr;
+    theta =theta +thetaspeed;
+
+    if (theta>2.0*Math.PI) theta-=2.0*Math.PI;
+
+    if (a>maxr) speedr=-speedr;
+    if (b<minr) speedr=-speedr;
+    if (cx>maxx) speedx=-speedx;
+    if (cy>maxy) speedy=-speedy;
+    if (cx<minx) speedx=-speedx;
+  
+    if (cy<miny) speedy= -speedy;
+
+    Update();
+  }
 
 
 void keyPressed() {

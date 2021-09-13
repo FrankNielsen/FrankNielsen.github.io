@@ -1,14 +1,15 @@
 \contentsline {section}{\numberline {1}Bregman divergences and Jensen divergences}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Ordinary Bregman and Jensen divergences}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Distances between densities of an exponential family}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.1}Ordinary Bregman and skewed Jensen divergences}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Relationships with statistical distances between densities of an exponential family}{2}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Generalizations of Bregman and Jensen divergences}{2}{subsection.1.3}%
 \contentsline {section}{\numberline {2}Invariant {$f$-divergences}}{2}{section.2}%
-\contentsline {section}{\numberline {3}Statistical distances between densities with computationally intractable normalizers}{4}{section.3}%
-\contentsline {section}{\numberline {4}Statistical distances between empirical distributions and densities with computationally intractable normalizers}{6}{section.4}%
-\contentsline {section}{\numberline {5}The Jensen-Shannon divergence and some generalizations}{6}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Origins of the Jensen-Shannon divergence}{6}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Some extensions of the Jensen-Shannon divergence}{8}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Statistical distances between mixtures}{10}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Approximating and/or fast statistical distances between mixtures}{11}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Bounding statistical distances between mixtures}{11}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Newly designed statistical distances yielding closed-form formula for mixtures}{11}{subsection.6.3}%
+\contentsline {section}{\numberline {3}Distances and means}{4}{section.3}%
+\contentsline {section}{\numberline {4}Statistical distances between densities with computationally intractable normalizers}{4}{section.4}%
+\contentsline {section}{\numberline {5}Statistical distances between empirical distributions and densities with computationally intractable normalizers}{6}{section.5}%
+\contentsline {section}{\numberline {6}The Jensen-Shannon divergence and some generalizations}{7}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Origins of the Jensen-Shannon divergence}{7}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Some extensions of the Jensen-Shannon divergence}{8}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Statistical distances between mixtures}{11}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Approximating and/or fast statistical distances between mixtures}{11}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Bounding statistical distances between mixtures}{12}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Newly designed statistical distances yielding closed-form formula for mixtures}{12}{subsection.7.3}%

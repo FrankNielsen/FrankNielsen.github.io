@@ -65,15 +65,36 @@ Discrepancies, deviations/deviances, dissimilarities, divergences, and distances
 \tableofcontents
 
 %%%
-\section{Bregman divergences and Jensen divergences}
+\section{Jensen divergences and Bregman divergences }
 %%%%
 
-\subsection{Ordinary Bregman and skewed Jensen divergences}
+
+
+\begin{figure}%
+\centering
+\includegraphics[width=0.75\columnwidth]{FigIpe-skewJS.pdf} 
+
+ 
+\caption{Skewed Jensen divergences visualized as vertical convexity gaps.}%
+\label{fig:JendenDiv}
+\end{figure}
+
+%%%
+\subsection{Skewed Jensen and Bregman divergences}
+%%%
+
+$$
+\lim_{\alpha\rightarrow 0} \mathrm{sJ}_{F,\alpha}(\theta_1:\theta_2)=B_F(\theta_1:\theta_2)
+$$
+
+$$
+\lim_{\alpha\rightarrow 1} \mathrm{sJ}_{F,\alpha}(\theta_1:\theta_2)=B_F(\theta_2:\theta_1)
+$$
 
 
 
 If $\alpha<0$ or $\alpha>1$, we can measure the gap $F((1-\alpha)\theta_1+\alpha\theta_2)-((1-\alpha) F(\theta_1)+\alpha F(\theta_2))=-J_F(\theta_1,\theta_2)\geq 0$.
-See Figure~\ref{}
+See Figure~\ref{fig:JendenDiv}
 Thus we can define the scaled $\alpha$-skew Jensen divergence for $\alpha\in\bbR\backslash\{0,1\}$ as:
 $$
 \sJ_F(\theta_1:\theta_2)=\frac{1}{\alpha(1-\alpha)}J_F(\theta_1:\theta_2)\geq 0.

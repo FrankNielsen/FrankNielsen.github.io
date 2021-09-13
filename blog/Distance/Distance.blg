@@ -5,46 +5,47 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
 Reallocating 'name_of_file' (item size: 1) to 12 items.
 Database file #1: DistanceBib.bib
+Warning--empty booktitle in Mahalanobis-1936
 Warning--there's a number but no volume in WongYOU-1985
-You've used 53 entries,
+You've used 54 entries,
             2118 wiz_defined-function locations,
-            833 strings with 13756 characters,
-and the built_in function-call counts, 17521 in all, are:
-= -- 1804
-> -- 669
+            839 strings with 13900 characters,
+and the built_in function-call counts, 17755 in all, are:
+= -- 1825
+> -- 676
 < -- 13
-+ -- 271
-- -- 212
-* -- 1124
-:= -- 2841
-add.period$ -- 172
-call.type$ -- 53
-change.case$ -- 259
++ -- 274
+- -- 214
+* -- 1133
+:= -- 2880
+add.period$ -- 175
+call.type$ -- 54
+change.case$ -- 263
 chr.to.int$ -- 0
-cite$ -- 54
-duplicate$ -- 732
-empty$ -- 1455
-format.name$ -- 212
-if$ -- 3755
+cite$ -- 56
+duplicate$ -- 745
+empty$ -- 1481
+format.name$ -- 214
+if$ -- 3806
 int.to.chr$ -- 0
-int.to.str$ -- 53
-missing$ -- 58
-newline$ -- 268
-num.names$ -- 106
-pop$ -- 271
+int.to.str$ -- 54
+missing$ -- 59
+newline$ -- 273
+num.names$ -- 108
+pop$ -- 280
 preamble$ -- 1
-purify$ -- 211
+purify$ -- 214
 quote$ -- 0
-skip$ -- 529
+skip$ -- 535
 stack$ -- 0
-substring$ -- 1181
-swap$ -- 179
+substring$ -- 1186
+swap$ -- 180
 text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 202
-warning$ -- 1
-while$ -- 182
-width$ -- 55
-write$ -- 585
-(There was 1 warning)
+type$ -- 206
+warning$ -- 2
+while$ -- 184
+width$ -- 56
+write$ -- 595
+(There were 2 warnings)
