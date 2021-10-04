@@ -44,7 +44,7 @@ D_\KL[P_{\theta}:Q_{\theta'}] =
 F_\calQ(\theta')+F_\calP^*(\eta)-E_{P_{\theta}}[t_\calQ(x)]\cdot\theta' +E_{P_{\theta}}[k_\calP(x)-k_\calQ(x)].
 \end{equation}
 
-When $\calP=\calQ$ (and $F=F_\calP=F\calQ$), we recover the reverse Fenchel-Young divergence which corresponds to the reverse Bregman divergence:
+When $\calP=\calQ$ (and $F=F_\calP=F_\calQ$), we recover the reverse Fenchel-Young divergence which corresponds to the reverse Bregman divergence:
 $$
 D_\KL[P_{\theta}:P_{\theta'}]=F(\theta')+F^*(\eta)-\eta\cdot\theta'=:Y_{F,F^*}(\theta':\eta)=Y_{F^*,F}(\eta:\theta').
 $$
@@ -68,7 +68,7 @@ cumulant function & $F_\calP(\theta)=\exp(\theta)$ & $F_\calQ(\theta)=-\log(1-\e
                   & $F_\calP(\lambda)=\lambda$ & $F_\calQ(p)=-\log(p)$\\
 auxiliary measure term & $k_\calP(x)=-\log x!$ & $k_\calQ(x)=0$\\
 moment parameter $\eta=E[t(x)]$ & $\eta=\lambda$ & $\eta=\frac{e^\theta}{1-e^\theta}=\frac{1}{p}-1$\\
-negentropy (convex conjugate) & $F^*_\calP(\theta(\lambda))=\lambda\log\lambda-\lambda$ & $F^*_\calQ(\theta(p))=(1-\frac{1}{p})\log(1-p)+\log p$\\
+negentropy (convex conjugate) & $F^*_\calP(\eta(\lambda))=\lambda\log\lambda-\lambda$ & $F^*_\calQ(\eta(p))=\left(1-\frac{1}{p}\right)\log(1-p)+\log p$\\
 ($F^*(\eta)=\theta\cdot\eta-F(\theta)$)
 \end{tabular}
 \caption{Canonical decomposition of the Poisson and the geometric discrete exponential families.}\label{tab:comparison}
@@ -111,13 +111,13 @@ Evaluating the above code, we get:
 Thus we have the KLD between a Poisson pmf $p_\lambda$ and a geometric pmf $q_p$ is equal to
 \begin{eqnarray}
 D_\KL[P_\lambda: Q_p] &=&F_\calQ(\theta')+F_\calP^*(\eta)-E_{P_{\theta}}[t_\calQ(x)]\cdot\theta' +E_{P_{\theta}}[k_\calP(x)-k_\calQ(x)],\\
-&=&-\log p+\lambda\log\lambda-\lambda(1+p)-E_{P_\lambda}[\log x!]
+&=&-\log p+\lambda\log\lambda-\lambda\log(1-p)-E_{P_\lambda}[\log x!]
 \end{eqnarray}
 
 Since $E_{p_\lambda}[-\log x!]=-\sum_{k=0}^\infty e^{-\lambda} \frac{\lambda^k\log(k!)}{k!}$, we have
 $$
 \boxed{
-D_\KL[P_\lambda: Q_p]=-\log p+\lambda\log\lambda-\lambda-\lambda \log(1-p)-\sum_{k=0}^\infty e^{-\lambda} \frac{\lambda^k\log(k!)}{k!}}
+D_\KL[P_\lambda: Q_p]=-\log p+\lambda\log \frac{\lambda}{1-p}-\lambda-\sum_{k=0}^\infty e^{-\lambda} \frac{\lambda^k\log(k!)}{k!}}
 $$
 
 We check in {\sc Maxima} the above formula:
