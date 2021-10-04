@@ -1,0 +1,4 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\toclot{1}{\csname a:TocLink\endcsname{1}{x1-31}{}{\ignorespaces Canonical decomposition of the Poisson and the geometric discrete exponential families.}}{table}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-2}{References}}{11}\relax 
+\par 

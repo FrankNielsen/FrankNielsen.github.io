@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>The Kullback-Leibler divergence between a Poisson distribution and a geometric distribution</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="KLPoissonGeometricDistributions.tex"> 
+<link rel="stylesheet" type="text/css" href="KLPoissonGeometricDistributions.css"> 
+</head><body 
+>
+   <div class="maketitle">
+
+
+
+<h2 class="titleHead">The Kullback-Leibler divergence between a Poisson distribution
+and a geometric distribution</h2>
+      <div class="author" ><span 
+class="cmr-12">Frank Nielsen</span>
+<br /><span 
+class="cmtt-12">Frank.Nielsen@acm.org</span></div><br />
+<div class="date" ><span 
+class="cmr-12">October 4, 2021</span></div>
+   </div>
+   <div 
+class="abstract" 
+>
+   <h3 class="abstracttitle">
+<span 
+class="cmbx-9">Abstract</span>
+</h3>
+     <!--l. 29--><p class="noindent" ><span 
+class="cmr-9">This note illustrates how to apply the generic formula of the Kullback-Leibler divergence between two</span>
+     <span 
+class="cmr-9">densities of two different exponential families</span><span 
+class="cmr-9">&#x00A0;</span><span class="cite"><span 
+class="cmr-9">[</span><a 
+href="#Xnielsen2021variational"><span 
+class="cmr-9">2</span></a><span 
+class="cmr-9">]</span></span><span 
+class="cmr-9">.</span>
+</div>
+<!--l. 32--><p class="indent" >   This column is also available as the file <a 
+href="KLPoissonGeometricDistributions.pdf" class="url" ><span 
+class="cmtt-10">KLPoissonGeometricDistributions.pdf</span></a>.
+<!--l. 35--><p class="indent" >   It is well-known that the Kullback-Leibler between two densities <span 
+class="cmmi-10">P</span><sub><span 
+class="cmmi-7">&#x03B8;</span><sub><span 
+class="cmr-5">1</span></sub></sub> and <span 
+class="cmmi-10">P</span><sub><span 
+class="cmmi-7">&#x03B8;</span><sub><span 
+class="cmr-5">2</span></sub></sub> of the same exponential family
+amounts to a reverse Bregman divergence between the corresponding natural parameters for the Bregman generator
+set to the cumulant function <span 
+class="cmmi-10">F</span>(<span 
+class="cmmi-10">&#x03B8;</span>)&#x00A0;<span class="cite">[<a 
+href="#Xbanerjee2005clustering">1</a>]</span>:
+   <div class="math-display" >
+<img 
+src="KLPoissonGeometricDistributions0x.png" alt="DKL [P&#x03B8;  : P&#x03B8;] = BF *(&#x03B8;1 : &#x03B8;2) = BF (&#x03B8;2 : &#x03B8;1) := F (&#x03B8;2) - F(&#x03B8;1)- (&#x03B8;2 - &#x03B8;1)&#x22C5;&#x2207;F (&#x03B8;1).
+      1    2
+" class="math-display" ></div>
+<!--l. 40--><p class="indent" >   The following formula for the Kullback-Leibler divergence (KLD) between two densities <span 
+class="cmmi-10">P</span><sub><span 
+class="cmmi-7">&#x03B8;</span></sub> and <span 
+class="cmmi-10">Q</span><sub><span 
+class="cmmi-7">&#x03B8;</span><span 
+class="cmsy-7">&#x2032;</span></sub> of two
+different exponential families <span 
+class="cmsy-10"><img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" /> </span>(with cumulant function <span 
+class="cmmi-10">F</span><sub><span 
+class="cmsy-7"><img 
+src="cmsy7-50.png" alt="P" class="7x-x-50" /></span></sub>) and <span 
+class="cmsy-10"><img 
+src="cmsy10-51.png" alt="Q" class="10x-x-51" /> </span>(with cumulant function <span 
+class="cmmi-10">F</span><sub><span 
+class="cmsy-7"><img 
+src="cmsy7-51.png" alt="Q" class="7x-x-51" /></span></sub>) was reported
+in&#x00A0;<span class="cite">[<a 
+href="#Xnielsen2021variational">2</a>]</span> (Proposition&#x00A0;5):
+   <table 
+class="equation"><tr><td><a 
+ id="x1-2r1"></a>
+
+   <div class="math-display" >
+<img 
+src="KLPoissonGeometricDistributions1x.png" alt="DKL [P&#x03B8; : Q &#x03B8;&#x2032;] = FQ (&#x03B8;&#x2032;)+ F *(&#x03B7; )- EP [tQ(x)]&#x22C5;&#x03B8;&#x2032; + EP [kP (x )- kQ(x)].
+                       P        &#x03B8;             &#x03B8;
+" class="math-display" ></div>
+   </td><td class="equation-label">(1)</td></tr></table>
+<!--l. 45--><p class="nopar" >
+<!--l. 47--><p class="indent" >   When <span 
+class="cmsy-10"><img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" /> </span>= <span 
+class="cmsy-10"><img 
+src="cmsy10-51.png" alt="Q" class="10x-x-51" /> </span>(and <span 
+class="cmmi-10">F </span>= <span 
+class="cmmi-10">F</span><sub><span 
+class="cmsy-7"><img 
+src="cmsy7-50.png" alt="P" class="7x-x-50" /></span></sub> = <span 
+class="cmmi-10">F</span><span 
+class="cmsy-10"><img 
+src="cmsy10-51.png" alt="Q" class="10x-x-51" /></span>), we recover the reverse Fenchel-Young divergence which corresponds to the
+reverse Bregman divergence:
+   <div class="math-display" >
+<img 
+src="KLPoissonGeometricDistributions2x.png" alt="D   [P : P &#x2032;] = F (&#x03B8;&#x2032;)+ F*(&#x03B7;)- &#x03B7;&#x22C5;&#x03B8;&#x2032; =: Y *(&#x03B8;&#x2032; : &#x03B7;) = Y * (&#x03B7; : &#x03B8;&#x2032;).
+  KL  &#x03B8;   &#x03B8;                         F,F          F ,F
+" class="math-display" ></div>
+<!--l. 52--><p class="indent" >   Consider the KLD between a Poisson probability mass function (pmf) and a geometric pmf. The canonical
+decomposition of the Poisson and geometric pmfs are summarized in Table&#x00A0;<a 
+href="#x1-31">1<!--tex4ht:ref: tab:comparison --></a>.
+   <div class="table">
+
+<!--l. 58--><p class="indent" >   <a 
+ id="x1-31"></a><hr class="float"><div class="float" 
+>
+
+<div class="tabular"> <table id="TBL-2" class="tabular" 
+ 
+><colgroup id="TBL-2-1g"><col 
+id="TBL-2-1"><col 
+id="TBL-2-2"><col 
+id="TBL-2-3"></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-2-1-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-1-1"  
+class="td11">                         </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-1-2"  
+class="td11">Poisson family <span 
+class="cmsy-10"><img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" />    </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-1-3"  
+class="td11">Geometric family <span 
+class="cmsy-10"><img 
+src="cmsy10-51.png" alt="Q" class="10x-x-51" />          </span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-2-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-2-1"  
+class="td11">support                               </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-2-2"  
+class="td11"><span 
+class="msbm-10">&#x2115; </span><span 
+class="cmsy-10">&#x222A;{</span>0<span 
+class="cmsy-10">}         </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-2-3"  
+class="td11"><span 
+class="msbm-10">&#x2115; </span><span 
+class="cmsy-10">&#x222A;{</span>0<span 
+class="cmsy-10">}                 </span></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-3-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-3-1"  
+class="td11">base measure                       </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-3-2"  
+class="td11">counting measure         </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-3-3"  
+class="td11">counting measure                           </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-4-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-4-1"  
+class="td11">ordinary parameter               </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-4-2"  
+class="td11">rate <span 
+class="cmmi-10">&#x03BB; &#x003E; </span>0                  </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-4-3"  
+class="td11">success probability <span 
+class="cmmi-10">p </span><span 
+class="cmsy-10">&#x2208; </span>(0<span 
+class="cmmi-10">,</span>1)            </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-5-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-5-1"  
+class="td11">pmf                                    </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-5-2"  
+class="td11"><img 
+src="KLPoissonGeometricDistributions3x.png" alt=" x
+&#x03BB;x!"  class="frac" align="middle"> exp(<span 
+class="cmsy-10">-</span><span 
+class="cmmi-10">&#x03BB;</span>)                </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-5-3"  
+class="td11">(1 <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">p</span>)<sup><span 
+class="cmmi-7">x</span></sup><span 
+class="cmmi-10">p                                </span></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-6-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-6-1"  
+class="td11">sufficient statistic                  </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-6-2"  
+class="td11"><span 
+class="cmmi-10">t</span><sub><span 
+class="cmsy-7"><img 
+src="cmsy7-50.png" alt="P" class="7x-x-50" /></span></sub>(<span 
+class="cmmi-10">x</span>) = <span 
+class="cmmi-10">x                </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-6-3"  
+class="td11"><span 
+class="cmmi-10">t</span><sub><span 
+class="cmsy-7"><img 
+src="cmsy7-51.png" alt="Q" class="7x-x-51" /></span></sub>(<span 
+class="cmmi-10">x</span>) = <span 
+class="cmmi-10">x                               </span></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-7-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-7-1"  
+class="td11">natural parameter                 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-7-2"  
+class="td11"><span 
+class="cmmi-10">&#x03B8;</span>(<span 
+class="cmmi-10">&#x03BB;</span>) = log <span 
+class="cmmi-10">&#x03BB;             </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-7-3"  
+class="td11"><span 
+class="cmmi-10">&#x03B8;</span>(<span 
+class="cmmi-10">p</span>) = log(1 <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">p</span>)                            </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-8-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-8-1"  
+class="td11">cumulant function                 </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-8-2"  
+class="td11"><span 
+class="cmmi-10">F</span><sub><span 
+class="cmsy-7"><img 
+src="cmsy7-50.png" alt="P" class="7x-x-50" /></span></sub>(<span 
+class="cmmi-10">&#x03B8;</span>) = exp(<span 
+class="cmmi-10">&#x03B8;</span>)           </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-8-3"  
+class="td11"><span 
+class="cmmi-10">F</span><sub><span 
+class="cmsy-7"><img 
+src="cmsy7-51.png" alt="Q" class="7x-x-51" /></span></sub>(<span 
+class="cmmi-10">&#x03B8;</span>) = <span 
+class="cmsy-10">-</span>log(1 <span 
+class="cmsy-10">-</span> exp(<span 
+class="cmmi-10">&#x03B8;</span>))               </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-9-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-9-1"  
+class="td11">                          </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-9-2"  
+class="td11"><span 
+class="cmmi-10">F</span><sub><span 
+class="cmsy-7"><img 
+src="cmsy7-50.png" alt="P" class="7x-x-50" /></span></sub>(<span 
+class="cmmi-10">&#x03BB;</span>) = <span 
+class="cmmi-10">&#x03BB;               </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-9-3"  
+class="td11"><span 
+class="cmmi-10">F</span><sub><span 
+class="cmsy-7"><img 
+src="cmsy7-51.png" alt="Q" class="7x-x-51" /></span></sub>(<span 
+class="cmmi-10">p</span>) = <span 
+class="cmsy-10">-</span>log(<span 
+class="cmmi-10">p</span>)                           </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-10-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-10-1"  
+class="td11">auxiliary measure term          </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-10-2"  
+class="td11"><span 
+class="cmmi-10">k</span><sub><span 
+class="cmsy-7"><img 
+src="cmsy7-50.png" alt="P" class="7x-x-50" /></span></sub>(<span 
+class="cmmi-10">x</span>) = <span 
+class="cmsy-10">-</span>log <span 
+class="cmmi-10">x</span>!          </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-10-3"  
+class="td11"><span 
+class="cmmi-10">k</span><sub><span 
+class="cmsy-7"><img 
+src="cmsy7-51.png" alt="Q" class="7x-x-51" /></span></sub>(<span 
+class="cmmi-10">x</span>) = 0                                     </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-11-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-11-1"  
+class="td11">moment parameter <span 
+class="cmmi-10">&#x03B7; </span>= <span 
+class="cmmi-10">E</span>[<span 
+class="cmmi-10">t</span>(<span 
+class="cmmi-10">x</span>)]</td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-11-2"  
+class="td11"><span 
+class="cmmi-10">&#x03B7; </span>= <span 
+class="cmmi-10">&#x03BB;                    </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-11-3"  
+class="td11"><span 
+class="cmmi-10">&#x03B7; </span>= <img 
+src="KLPoissonGeometricDistributions4x.png" alt="-e&#x03B8;&#x03B8;
+1-e"  class="frac" align="middle"> = <img 
+src="KLPoissonGeometricDistributions5x.png" alt="1
+p"  class="frac" align="middle"> <span 
+class="cmsy-10">- </span>1                           </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-12-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-12-1"  
+class="td11">negentropy (convex conjugate) </td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-12-2"  
+class="td11"><span 
+class="cmmi-10">F</span><sub><span 
+class="cmsy-7"><img 
+src="cmsy7-50.png" alt="P" class="7x-x-50" /></span></sub><sup><span 
+class="cmsy-7">*</span></sup>(<span 
+class="cmmi-10">&#x03B8;</span>(<span 
+class="cmmi-10">&#x03BB;</span>)) = <span 
+class="cmmi-10">&#x03BB;</span>log <span 
+class="cmmi-10">&#x03BB; </span><span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03BB;</span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-2-12-3"  
+class="td11"><span 
+class="cmmi-10">F</span><sub><span 
+class="cmsy-7"><img 
+src="cmsy7-51.png" alt="Q" class="7x-x-51" /></span></sub><sup><span 
+class="cmsy-7">*</span></sup>(<span 
+class="cmmi-10">&#x03B8;</span>(<span 
+class="cmmi-10">p</span>)) = (1 <span 
+class="cmsy-10">-</span><img 
+src="KLPoissonGeometricDistributions6x.png" alt="1
+p"  class="frac" align="middle">)log(1 <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">p</span>) + log <span 
+class="cmmi-10">p</span></td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-13-"><td  style="white-space:nowrap; text-align:left;" id="TBL-2-13-1"  
+class="td11">(<span 
+class="cmmi-10">F</span><sup><span 
+class="cmsy-7">*</span></sup>(<span 
+class="cmmi-10">&#x03B7;</span>) = <span 
+class="cmmi-10">&#x03B8; </span><span 
+class="cmsy-10">&#x22C5; </span><span 
+class="cmmi-10">&#x03B7; </span><span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">F</span>(<span 
+class="cmmi-10">&#x03B8;</span>))            </td></tr></table>
+</div>
+<br /> <div class="caption" 
+><span class="id">Table&#x00A0;1: </span><span  
+class="content">Canonical decomposition of the Poisson and the geometric discrete exponential families.</span></div><!--tex4ht:label?: x1-31 -->
+
+   </div><hr class="endfloat" />
+   </div>
+<!--l. 77--><p class="indent" >   Thus we calculate the KLD between two geometric distributions <span 
+class="cmmi-10">Q</span><sub><span 
+class="cmmi-7">p</span><sub><span 
+class="cmr-5">1</span></sub></sub> and <span 
+class="cmmi-10">Q</span><sub><span 
+class="cmmi-7">p</span><sub><span 
+class="cmr-5">2</span></sub></sub> as <div class="eqnarray">
+   <div class="math-display" >
+<img 
+src="KLPoissonGeometricDistributions7x.png" alt="DKL [Qp1 : Qp2] =  BFQ (&#x03B8;(p2) : &#x03B8;(p1)),
+               =  FQ (&#x03B8;(p2))- FQ(&#x03B8;(p1))- (&#x03B8;(p2)- &#x03B8;(p1))&#x03B7;(p1),
+" class="math-display" ></div>
+<!--l. 81--><p class="indent" >   </div>
+<!--l. 83--><p class="indent" >   That is, we have
+   <div class="math-display" >
+<img 
+src="KLPoissonGeometricDistributions8x.png" alt="|------------------(---)--(------)----------|
+|                    p1        -1     1-- p1|
+|DKL [Qp1 : Qp2] = log p2 -  1- p1  log1 - p2 .
+--------------------------------------------
+" class="math-display" ></div>
+<!--l. 88--><p class="indent" >   The following code in <span 
+class="cmcsc-10">M<span 
+class="small-caps">a</span><span 
+class="small-caps">x</span><span 
+class="small-caps">i</span><span 
+class="small-caps">m</span><span 
+class="small-caps">a</span> </span>(<a 
+href="https://maxima.sourceforge.io/" class="url" ><span 
+class="cmtt-10">https://maxima.sourceforge.io/</span></a>) check the above formula.
+
+   <pre class="verbatim" id="verbatim-1">
+Geometric(x,p):=((1-p)**x)*p;
+nbterms:50;
+KLGeometricSeries(p1,p2):=sum((Geometric(x,p1)*log(Geometric(x,p1)/Geometric(x,p2))),x,0,nbterms);
+KLGeometricFormula(p1,p2):=log(p1/p2)-log((1-p2)/(1-p1))*((1/p1)-1);
+p1:0.2;
+p2:0.6;
+float(KLGeometricSeries(p1,p2));
+float(KLGeometricFormula(p1,p2));
+</pre>
+<!--l. 99--><p class="nopar" >
+<!--l. 102--><p class="indent" >   Evaluating the above code, we get:
+
+   <pre class="verbatim" id="verbatim-2">
+(%o7) 1.673553688712277
+(%o8) 1.673976433571672
+</pre>
+<!--l. 107--><p class="nopar" >
+<!--l. 111--><p class="indent" >   Thus we have the KLD between a Poisson pmf <span 
+class="cmmi-10">p</span><sub><span 
+class="cmmi-7">&#x03BB;</span></sub> and a geometric pmf <span 
+class="cmmi-10">q</span><sub><span 
+class="cmmi-7">p</span></sub> is equal to <div class="eqnarray">
+   <div class="math-display" >
+<img 
+src="KLPoissonGeometricDistributions9x.png" alt="DKL [P &#x03BB; : Qp ] = FQ (&#x03B8;&#x2032;)+ F *P(&#x03B7;)- EP&#x03B8;[tQ(x)]&#x22C5;&#x03B8;&#x2032; + EP&#x03B8;[kP (x )- kQ(x)],         (2)
+             =  - logp+ &#x03BB; log&#x03BB; - &#x03BB;(1+ p)- E  [log x!]                        (3)
+                                          P&#x03BB;
+" class="math-display" ></div>
+<!--l. 115--><p class="indent" >   </div>
+<!--l. 117--><p class="indent" >   Since <span 
+class="cmmi-10">E</span><sub><span 
+class="cmmi-7">p</span><sub><span 
+class="cmmi-5">&#x03BB;</span></sub></sub>[<span 
+class="cmsy-10">-</span>log <span 
+class="cmmi-10">x</span>!] = <span 
+class="cmsy-10">-</span><span 
+class="cmex-10">&#x2211;</span>
+  <sub><span 
+class="cmmi-7">k</span><span 
+class="cmr-7">=0</span></sub><sup><span 
+class="cmsy-7">&#x221E;</span></sup><span 
+class="cmmi-10">e</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmmi-7">&#x03BB;</span></sup><img 
+src="KLPoissonGeometricDistributions10x.png" alt="&#x03BB;klog(k!)
+   k!"  class="frac" align="middle">, we have
+   <div class="math-display" >
+<img 
+src="KLPoissonGeometricDistributions11x.png" alt="|---------------------------------------------&#x221E;&#x2211;------k-------|
+|DKL [P &#x03BB; : Qp ] = - logp +&#x03BB; log &#x03BB;- &#x03BB; - &#x03BB;log(1 - p) - e- &#x03BB;&#x03BB;-log(k!)
+|                                            k=0       k!    |
+-------------------------------------------------------------
+" class="math-display" ></div>
+<!--l. 123--><p class="indent" >   We check in <span 
+class="cmcsc-10">M<span 
+class="small-caps">a</span><span 
+class="small-caps">x</span><span 
+class="small-caps">i</span><span 
+class="small-caps">m</span><span 
+class="small-caps">a</span> </span>the above formula:
+
+   <pre class="verbatim" id="verbatim-3">
+Poisson(x,lambda):=(lambda**x)*exp(-lambda)/x!;
+KLseries(lambda,p):=sum((Poisson(x,lambda)*log(Poisson(x,lambda)/Geometric(x,p))),x,0,nbterms);
+KLformula(lambda,p):=-log(p)+lambda*log(lambda)-lambda-lambda*log(1-p)
+-sum(exp(-lambda)*(lambda**x)*log(x!)/x!,x,0,nbterms);
+lambda:5.6;
+p:0.3;
+float(KLseries(lambda,p));
+float(KLformula(lambda,p));
+</pre>
+<!--l. 135--><p class="nopar" >
+<!--l. 138--><p class="indent" >   Evaluating the above code, we get
+
+   <pre class="verbatim" id="verbatim-4">
+(%o14) 0.9378529269681795
+(%o15) 0.9378529269681785
+</pre>
+<!--l. 143--><p class="nopar" >
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+   <div class="thebibliography">
+   <p class="bibitem" ><span class="biblabel">
+ [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xbanerjee2005clustering"></a>Arindam Banerjee, Srujana Merugu, Inderjit&#x00A0;S Dhillon, Joydeep Ghosh, and John Lafferty. Clustering
+   with Bregman divergences. <span 
+class="cmti-10">Journal of machine learning research</span>, 6(10), 2005.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xnielsen2021variational"></a>Frank Nielsen.  On a Variational Definition for the Jensen-Shannon Symmetrization of Distances
+   Based on the Information Radius. <span 
+class="cmti-10">Entropy</span>, 23(4):464, 2021.
+</p>
+   </div>
+    
+</body></html> 
+
+
+

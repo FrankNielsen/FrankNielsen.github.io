@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{banerjee2005clustering}
+Arindam Banerjee, Srujana Merugu, Inderjit~S Dhillon, Joydeep Ghosh, and John
+  Lafferty.
+\newblock {Clustering with Bregman divergences}.
+\newblock {\em Journal of machine learning research}, 6(10), 2005.
+
+\bibitem{nielsen2021variational}
+Frank Nielsen.
+\newblock {On a Variational Definition for the Jensen-Shannon Symmetrization of
+  Distances Based on the Information Radius}.
+\newblock {\em Entropy}, 23(4):464, 2021.
+
+\end{thebibliography}

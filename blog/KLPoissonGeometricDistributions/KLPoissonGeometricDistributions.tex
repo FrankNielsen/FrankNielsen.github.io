@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage{fullpage,amssymb,amsmath,url}
+
+\def\bbN{\mathbb{N}}
+\def\calC{\mathcal{C}}
+\def\calP{\mathcal{P}}
+\def\calQ{\mathcal{Q}}
+\def\calF{\mathcal{F}}
+\def\bbR{\mathbb{R}}
+\def\bbF{\mathbb{F}}
+\def\SEB{\mathrm{SEB}}
+\def\ceil#1{\lceil #1\rceil}
+\def\eps{\epsilon}
+\def\inner#1#2{\langle #1,#2\rangle}
+\def\KL{\mathrm{KL}}
+
+%\title{Kernelized Smallest Enclosing Ball  Coresets for  Support Vector Clustering}
+
+\title{The Kullback-Leibler divergence between a Poisson distribution and a geometric distribution}
+
+\author{Frank Nielsen\\ {\tt Frank.Nielsen@acm.org}}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note illustrates how to apply the generic formula of the Kullback-Leibler divergence between two densities of two different exponential families~\cite{nielsen2021variational}.
+\end{abstract}
+
+This column is also available as the file \url{KLPoissonGeometricDistributions.pdf}.\vskip 0.3cm
+
+
+It is well-known that the Kullback-Leibler between two densities $P_{\theta_1}$ and $P_{\theta_2}$ of the same exponential family amounts to a reverse Bregman divergence between the corresponding natural parameters for the Bregman generator set to the cumulant function $F(\theta)$~\cite{banerjee2005clustering}:
+$$
+D_\KL[P_{\theta_1}:P_{\theta_2}] = {B_F}^*(\theta_1:\theta_2)= B_F(\theta_2:\theta_1):=F(\theta_2)-F(\theta_1)-(\theta_2-\theta_1)\cdot \nabla F(\theta_1). 
+$$
+
+The following formula for the Kullback-Leibler divergence (KLD) between two densities $P_{\theta}$ and $Q_{\theta'}$ of two different exponential families $\calP$ (with cumulant function $F_\calP$) and $\calQ$ (with cumulant function $F_\calQ$) was reported in~\cite{nielsen2021variational} (Proposition~5):
+
+\begin{equation}
+D_\KL[P_{\theta}:Q_{\theta'}] = 
+F_\calQ(\theta')+F_\calP^*(\eta)-E_{P_{\theta}}[t_\calQ(x)]\cdot\theta' +E_{P_{\theta}}[k_\calP(x)-k_\calQ(x)].
+\end{equation}
+
+When $\calP=\calQ$ (and $F=F_\calP=F\calQ$), we recover the reverse Fenchel-Young divergence which corresponds to the reverse Bregman divergence:
+$$
+D_\KL[P_{\theta}:P_{\theta'}]=F(\theta')+F^*(\eta)-\eta\cdot\theta'=:Y_{F,F^*}(\theta':\eta)=Y_{F^*,F}(\eta:\theta').
+$$
+
+Consider the KLD between a Poisson probability mass function (pmf) and a geometric pmf.
+The canonical decomposition of the Poisson and geometric pmfs are summarized in Table~\ref{tab:comparison}.
+
+
+
+\begin{table}
+\centering
+\begin{tabular}{lll}
+ & Poisson family $\calP$ & Geometric family $\calQ$ \\ \hline
+support & $\bbN \cup\{0\}$&   $\bbN \cup\{0\}$\\
+base measure & counting measure  & counting measure\\
+ordinary parameter & rate $\lambda>0$ & success probability $p\in (0,1)$ \\
+pmf & $ \frac{\lambda^x}{x!} \exp(-\lambda)$  & $(1-p)^x p$\\
+sufficient statistic & $t_\calP(x)=x$ & $t_\calQ(x)=x$\\
+natural parameter & $\theta(\lambda)=\log\lambda$ & $\theta(p)=\log(1-p)$\\
+cumulant function & $F_\calP(\theta)=\exp(\theta)$ & $F_\calQ(\theta)=-\log(1-\exp(\theta))$\\
+                  & $F_\calP(\lambda)=\lambda$ & $F_\calQ(p)=-\log(p)$\\
+auxiliary measure term & $k_\calP(x)=-\log x!$ & $k_\calQ(x)=0$\\
+moment parameter $\eta=E[t(x)]$ & $\eta=\lambda$ & $\eta=\frac{e^\theta}{1-e^\theta}=\frac{1}{p}-1$\\
+negentropy (convex conjugate) & $F^*_\calP(\theta(\lambda))=\lambda\log\lambda-\lambda$ & $F^*_\calQ(\theta(p))=(1-\frac{1}{p})\log(1-p)+\log p$\\
+($F^*(\eta)=\theta\cdot\eta-F(\theta)$)
+\end{tabular}
+\caption{Canonical decomposition of the Poisson and the geometric discrete exponential families.}\label{tab:comparison}
+\end{table}
+
+Thus we calculate the KLD between two geometric distributions $Q_{p_1}$ and $Q_{p_2}$ as
+\begin{eqnarray*}
+D_\KL[Q_{p_1}:Q_{p_2}]&=&B_{F_\calQ}(\theta(p_2):\theta(p_1)),\\
+&=& F_\calQ(\theta(p_2))-F_\calQ(\theta(p_1))-(\theta(p_2)-\theta(p_1))\eta(p_1),\\
+\end{eqnarray*}
+
+That is, we have
+$$
+\boxed{D_\KL[Q_{p_1}:Q_{p_2}]=\log\left(\frac{p_1}{p_2}\right)-\left(1-\frac{1}{p_1}\right)\log \frac{1-p_1}{1-p_2}}.
+$$
+
+The following code in {\sc Maxima} (\url{https://maxima.sourceforge.io/}) check the above formula.
+{\footnotesize
+\begin{verbatim}
+Geometric(x,p):=((1-p)**x)*p;
+nbterms:50;
+KLGeometricSeries(p1,p2):=sum((Geometric(x,p1)*log(Geometric(x,p1)/Geometric(x,p2))),x,0,nbterms);
+KLGeometricFormula(p1,p2):=log(p1/p2)-log((1-p2)/(1-p1))*((1/p1)-1);
+p1:0.2;
+p2:0.6;
+float(KLGeometricSeries(p1,p2));
+float(KLGeometricFormula(p1,p2));
+\end{verbatim}
+}
+
+Evaluating the above code, we get:
+{\footnotesize
+\begin{verbatim}
+(%o7)	1.673553688712277
+(%o8)	1.673976433571672
+\end{verbatim}
+}
+
+
+Thus we have the KLD between a Poisson pmf $p_\lambda$ and a geometric pmf $q_p$ is equal to
+\begin{eqnarray}
+D_\KL[P_\lambda: Q_p] &=&F_\calQ(\theta')+F_\calP^*(\eta)-E_{P_{\theta}}[t_\calQ(x)]\cdot\theta' +E_{P_{\theta}}[k_\calP(x)-k_\calQ(x)],\\
+&=&-\log p+\lambda\log\lambda-\lambda(1+p)-E_{P_\lambda}[\log x!]
+\end{eqnarray}
+
+Since $E_{p_\lambda}[-\log x!]=-\sum_{k=0}^\infty e^{-\lambda} \frac{\lambda^k\log(k!)}{k!}$, we have
+$$
+\boxed{
+D_\KL[P_\lambda: Q_p]=-\log p+\lambda\log\lambda-\lambda-\lambda \log(1-p)-\sum_{k=0}^\infty e^{-\lambda} \frac{\lambda^k\log(k!)}{k!}}
+$$
+
+We check in {\sc Maxima} the above formula:
+
+{\footnotesize
+\begin{verbatim}
+Poisson(x,lambda):=(lambda**x)*exp(-lambda)/x!;
+KLseries(lambda,p):=sum((Poisson(x,lambda)*log(Poisson(x,lambda)/Geometric(x,p))),x,0,nbterms);
+KLformula(lambda,p):=-log(p)+lambda*log(lambda)-lambda-lambda*log(1-p)
+-sum(exp(-lambda)*(lambda**x)*log(x!)/x!,x,0,nbterms);
+lambda:5.6;
+p:0.3;
+float(KLseries(lambda,p));
+float(KLformula(lambda,p));
+\end{verbatim}
+}
+
+Evaluating the above code, we get
+{\footnotesize
+\begin{verbatim}
+(%o14)	0.9378529269681795
+(%o15)	0.9378529269681785
+\end{verbatim}
+}
+
+
+\bibliographystyle{plain}
+\bibliography{KLBib}
+
+\end{document}
