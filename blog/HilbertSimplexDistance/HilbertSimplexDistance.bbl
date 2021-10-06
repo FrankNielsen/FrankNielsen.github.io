@@ -1,0 +1,39 @@
+\begin{thebibliography}{1}
+
+\bibitem{amari2016information}
+Shun-ichi Amari.
+\newblock {\em Information geometry and its applications}, volume 194.
+\newblock Springer, 2016.
+
+\bibitem{birkhoff1957extensions}
+Garrett Birkhoff.
+\newblock {Extensions of Jentzsch's theorem}.
+\newblock {\em Transactions of the American Mathematical Society},
+  85(1):219--227, 1957.
+
+\bibitem{bushell1973projective}
+PJ~Bushell.
+\newblock On the projective contraction ratio for positive linear mappings.
+\newblock {\em Journal of the London Mathematical Society}, 2(2):256--258,
+  1973.
+
+\bibitem{erb2021information}
+Ionas Erb and Nihat Ay.
+\newblock The information-geometric perspective of compositional data analysis.
+\newblock In {\em Advances in Compositional Data Analysis}, pages 21--43.
+  Springer, 2021.
+
+\bibitem{jiao2014information}
+Jiantao Jiao, Thomas~A Courtade, Albert No, Kartik Venkat, and Tsachy Weissman.
+\newblock Information measures: the curious case of the binary alphabet.
+\newblock {\em IEEE Transactions on Information Theory}, 60(12):7616--7626,
+  2014.
+
+\bibitem{nielsen2019clustering}
+Frank Nielsen and Ke~Sun.
+\newblock {Clustering in Hilbert's projective geometry: The case studies of the
+  probability simplex and the elliptope of correlation matrices}.
+\newblock In {\em Geometric Structures of Information}, pages 297--331.
+  Springer, 2019.
+
+\end{thebibliography}

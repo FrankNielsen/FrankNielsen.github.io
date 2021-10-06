@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Hilbert&#8217;s simplex distance:
+A non-separable information monotone distance</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="HilbertSimplexDistance.tex"> 
+<link rel="stylesheet" type="text/css" href="HilbertSimplexDistance.css"> 
+</head><body 
+>
+   <div class="maketitle">
+
+
+
+<h2 class="titleHead">Hilbert&#8217;s simplex distance:<br />
+A non-separable information monotone distance</h2>
+      <div class="author" ><span 
+class="cmr-12">Frank Nielsen</span>
+<br /><span 
+class="cmtt-12">Frank.Nielsen@acm.org</span></div><br />
+<div class="date" ><span 
+class="cmr-12">October 6, 2021</span></div>
+   </div>
+   <div 
+class="abstract" 
+>
+   <h3 class="abstracttitle">
+<span 
+class="cmbx-9">Abstract</span>
+</h3>
+     <!--l. 33--><p class="noindent" ><span 
+class="cmr-9">This note shows that the Hilbert&#8217;s metric distance in the probability simplex is a non-separable distance</span>
+     <span 
+class="cmr-9">which satisfies the information monotonicity.</span>
+</div>
+<!--l. 36--><p class="indent" >   Consider the open cone <span 
+class="msbm-10">&#x211D;</span><sub><span 
+class="cmr-7">++</span></sub><sup><span 
+class="cmmi-7">d</span></sup> of positive measures (i.e., histograms with <span 
+class="cmmi-10">d </span>positive bins) with its open
+probability simplex subset &#x0394;<sub><span 
+class="cmmi-7">d</span></sub> = <span 
+class="cmsy-10">{</span>(<span 
+class="cmmi-10">x</span><sub><span 
+class="cmr-7">1</span></sub><span 
+class="cmmi-10">,</span><span 
+class="cmmi-10">&#x2026;</span><span 
+class="cmmi-10">,x</span><sub><span 
+class="cmmi-7">d</span></sub>) <span 
+class="cmsy-10">&#x2208; </span><span 
+class="msbm-10">&#x211D;</span><sub><span 
+class="cmr-7">+</span></sub><sup><span 
+class="cmmi-7">d</span></sup><span 
+class="cmmi-10">&#x00A0; </span>: <span 
+class="cmmi-10">&#x00A0;</span><span 
+class="cmex-10">&#x2211;</span>
+  <sub><span 
+class="cmmi-7">i</span><span 
+class="cmr-7">=1</span></sub><sup><span 
+class="cmmi-7">d</span></sup><span 
+class="cmmi-10">x</span><sub><span 
+class="cmmi-7">i</span></sub> = 1<span 
+class="cmsy-10">}</span>.
+<!--l. 39--><p class="indent" >   The <span 
+class="cmmi-10">f</span>-divergence&#x00A0;<span class="cite">[<a 
+href="#Xamari2016information">1</a>]</span> between <span 
+class="cmmi-10">p,q </span><span 
+class="cmsy-10">&#x2208; </span>&#x0394;<sub><span 
+class="cmmi-7">d</span></sub> is defined for a convex function <span 
+class="cmmi-10">f</span>(<span 
+class="cmmi-10">u</span>) such that <span 
+class="cmmi-10">f</span>(1) = 0 and <span 
+class="cmmi-10">f</span>(<span 
+class="cmmi-10">u</span>) strictly
+convex at 1 by:
+   <div class="math-display" >
+<img 
+src="HilbertSimplexDistance0x.png" alt="          &#x2211;d
+If[p : q] := p[i]f(q[i]&#x2215;p[i]) &#x2265; 0.
+          i=1
+" class="math-display" ></div>
+<!--l. 43--><p class="indent" >   For example, the Kullback-Leibler divergence is a <span 
+class="cmmi-10">f</span>-divergence for <span 
+class="cmmi-10">f</span>(<span 
+class="cmmi-10">u</span>) = <span 
+class="cmsy-10">-</span>log <span 
+class="cmmi-10">u</span>.
+<!--l. 45--><p class="indent" >   All <span 
+class="cmmi-10">f</span>-divergences are separable by construction: That is, they can be expressed as sum of coordinate-wise scalar
+divergences: Here, <span 
+class="cmmi-10">I</span><sub><span 
+class="cmmi-7">f</span></sub>[<span 
+class="cmmi-10">p </span>: <span 
+class="cmmi-10">q</span>] := <span 
+class="cmex-10">&#x2211;</span>
+  <sub><span 
+class="cmmi-7">i</span><span 
+class="cmr-7">=1</span></sub><sup><span 
+class="cmmi-7">d</span></sup><span 
+class="cmmi-10">i</span><sub><span 
+class="cmmi-7">f</span></sub>(<span 
+class="cmmi-10">p</span>[<span 
+class="cmmi-10">i</span>] : <span 
+class="cmmi-10">q</span>[<span 
+class="cmmi-10">i</span>]), where <span 
+class="cmmi-10">i</span><sub><span 
+class="cmmi-7">f</span></sub> is a scalar <span 
+class="cmmi-10">f</span>-divergence. Moreover, <span 
+class="cmmi-10">f</span>-divergences are
+information monotone: That is, let <span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> </span>= <span 
+class="cmsy-10">{</span><span 
+class="cmmi-10">X</span><sub><span 
+class="cmr-7">1</span></sub><span 
+class="cmmi-10">,</span><span 
+class="cmmi-10">&#x2026;</span><span 
+class="cmmi-10">,X</span><sub><span 
+class="cmmi-7">m</span></sub><span 
+class="cmsy-10">} </span>be a partition of <span 
+class="cmsy-10">{</span>1<span 
+class="cmmi-10">,</span><span 
+class="cmmi-10">&#x2026;</span><span 
+class="cmmi-10">,n</span><span 
+class="cmsy-10">} </span>into <span 
+class="cmmi-10">m </span><span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">n </span>pairwise disjoint subsets
+<span 
+class="cmmi-10">X</span><sub><span 
+class="cmmi-7">i</span></sub>&#8217;s. For <span 
+class="cmmi-10">p </span><span 
+class="cmsy-10">&#x2208; </span>&#x0394;<sub><span 
+class="cmmi-7">n</span></sub>, let <span 
+class="cmmi-10">p</span><sub><span 
+class="cmsy-7">|<img 
+src="cmsy7-58.png" alt="X" class="7x-x-58" /></span></sub><span 
+class="cmsy-10">&#x2208; </span>&#x0394;<sub><span 
+class="cmmi-7">m</span></sub> denote the induced probability mass function with <span 
+class="cmmi-10">p</span><sub><span 
+class="cmsy-7">|<img 
+src="cmsy7-58.png" alt="X" class="7x-x-58" /></span></sub>(<span 
+class="cmmi-10">i</span>) = <span 
+class="cmex-10">&#x2211;</span>
+  <sub><span 
+class="cmmi-7">j</span><span 
+class="cmsy-7">&#x2208;</span><span 
+class="cmmi-7">X</span><sub><span 
+class="cmmi-5">i</span></sub></sub><span 
+class="cmmi-10">p</span>(<span 
+class="cmmi-10">i</span>). Then we
+have
+
+   <div class="math-display" >
+<img 
+src="HilbertSimplexDistance1x.png" alt="If[p|X : q|X ] &#x2264; If[p : q], &#x2200;X
+" class="math-display" ></div>
+<!--l. 54--><p class="indent" >   Moreoever, it can be shown that the only separable divergences satisfying this partition inequality are
+<span 
+class="cmmi-10">f</span>-divergences&#x00A0;<span class="cite">[<a 
+href="#Xamari2016information">1</a>]</span> when <span 
+class="cmmi-10">n &#x003E; </span>2. The special curious binary case <span 
+class="cmmi-10">n </span>= 2 is dealt in&#x00A0;<span class="cite">[<a 
+href="#Xjiao2014information">5</a>]</span>.
+<!--l. 56--><p class="indent" >   Now, consider the non-separable Hilbert distance in the probability simplex&#x00A0;<span class="cite">[<a 
+href="#Xnielsen2019clustering">6</a>]</span>:
+   <div class="math-display" >
+<img 
+src="HilbertSimplexDistance2x.png" alt="                maxi-piqi-
+DHilbert[p,q] = log mini pi.
+                    qi
+" class="math-display" ></div>
+<!--l. 60--><p class="indent" >   This dissimilarity measure is a projective distance on <span 
+class="msbm-10">&#x211D;</span><sub><span 
+class="cmr-7">++</span></sub><sup><span 
+class="cmmi-7">d</span></sup> (Hilbert&#8217;s projective distance) because we have
+<span 
+class="cmmi-10">D</span><sub><span 
+class="cmr-7">Hilbert</span></sub>[<span 
+class="cmmi-10">&#x03BB;p,&#x03BB;</span><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmmi-10">q</span>] = <span 
+class="cmmi-10">D</span><sub><span 
+class="cmr-7">Hilbert</span></sub>[<span 
+class="cmmi-10">p,q</span>] for any <span 
+class="cmmi-10">&#x03BB;,&#x03BB;</span><span 
+class="cmsy-10">&#x2032; </span><span 
+class="cmmi-10">&#x003E; </span>0. However, the Hilbert distance is a metric distance on
+&#x0394;<sub><span 
+class="cmmi-7">d</span></sub>.
+<!--l. 64--><p class="indent" >   We state the main theorem:
+   <div class="newtheorem">
+<!--l. 66--><p class="noindent" ><span class="head">
+<span 
+class="cmbx-10">Theorem</span><span 
+class="cmbx-10">&#x00A0;1</span> </span><span 
+class="cmti-10">The Hilbert distance on the probability simplex is an information monotone non-separable</span>
+<span 
+class="cmti-10">distance.</span>
+   </div>
+<!--l. 68--><p class="indent" >
+<!--l. 70--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-1000"></a><span 
+class="cmbx-10">Proof:</span></span>
+   We can represent the coarse-graining mapping <span 
+class="cmmi-10">p</span><img 
+src="HilbertSimplexDistance3x.png" alt="&#x21A6;&#x2192;"  class="mapsto" ><span 
+class="cmmi-10">p</span><sub><span 
+class="cmsy-7">|<img 
+src="cmsy7-58.png" alt="X" class="7x-x-58" /></span></sub> by a linear application with a <span 
+class="cmmi-10">m </span><span 
+class="cmsy-10">&#x00D7; </span><span 
+class="cmmi-10">n </span>matrix <span 
+class="cmmi-10">A </span>with
+columns summing up to one (i.e., positive column-stochastic matrix):
+   <div class="math-display" >
+<img 
+src="HilbertSimplexDistance4x.png" alt="p|X = A&#x00D7; p.
+" class="math-display" ></div>
+
+<!--l. 76--><p class="indent" >   For example, the partition <span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> </span>= <span 
+class="cmsy-10">{</span><span 
+class="cmmi-10">X</span><sub><span 
+class="cmr-7">1</span></sub> = <span 
+class="cmsy-10">{</span>1<span 
+class="cmmi-10">,</span>2<span 
+class="cmsy-10">}</span><span 
+class="cmmi-10">,X</span><sub><span 
+class="cmr-7">2</span></sub> = <span 
+class="cmsy-10">{</span>3<span 
+class="cmmi-10">,</span>4<span 
+class="cmsy-10">}} </span>(with <span 
+class="cmmi-10">n </span>= 4 and <span 
+class="cmmi-10">m </span>= 2) is represented by the
+matrix
+   <div class="math-display" >
+<img 
+src="HilbertSimplexDistance5x.png" alt="    [            ]
+A =   1  1  0  0  .
+      0  0  1  1
+" class="math-display" ></div>
+<!--l. 81--><p class="indent" >   Now, a key property of Hilbert distance is Birkhoff&#8217;s contraction mapping theorem&#x00A0;<span class="cite">[<a 
+href="#Xbirkhoff1957extensions">2</a>,&#x00A0;<a 
+href="#Xbushell1973projective">3</a>]</span>:
+   <div class="math-display" >
+<img 
+src="HilbertSimplexDistance6x.png" alt="                   ( 1     )
+DHilbert[Ap,Aq] &#x2264; tanh 4&#x0394; (A )  DHilbert[p,q],
+" class="math-display" ></div>
+<!--l. 85--><p class="indent" >   where &#x0394;(<span 
+class="cmmi-10">A</span>) is called the projective diameter of the positive mapping <span 
+class="cmmi-10">A</span>:
+   <div class="math-display" >
+<img 
+src="HilbertSimplexDistance7x.png" alt="&#x0394; (A ) = sup{DHilbert[Ap,Aq] : p,q &#x2208; &#x211D;d++ }.
+" class="math-display" ></div>
+<!--l. 91--><p class="indent" >   Since 0 <span 
+class="cmsy-10">&#x2264;</span> tanh(<span 
+class="cmmi-10">x</span>) <span 
+class="cmsy-10">&#x2264; </span>1 for <span 
+class="cmmi-10">x </span><span 
+class="cmsy-10">&#x2265; </span>0, we get the property that Hilbert distance on the probability simplex is an
+information monotone non-separable distance:
+   <div class="math-display" >
+<img 
+src="HilbertSimplexDistance8x.png" alt="DHilbert[p|X,q|X ] &#x2264; DHilbert[p,q]
+" class="math-display" ></div>
+
+                                                                                        <span 
+class="msam-10">&#x25A1;</span>
+<!--l. 97--><p class="indent" >   Another example of non-separable information monotone distance is Aitchison&#8217;s distance on the probability
+simplex&#x00A0;<span class="cite">[<a 
+href="#Xerb2021information">4</a>]</span> (using for compositional data analysis).
+<!--l. 1--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-2000"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+   <div class="thebibliography">
+   <p class="bibitem" ><span class="biblabel">
+ [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xamari2016information"></a>Shun-ichi Amari. <span 
+class="cmti-10">Information geometry and its applications</span>, volume 194. Springer, 2016.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xbirkhoff1957extensions"></a>Garrett Birkhoff.  Extensions of Jentzsch&#8217;s theorem.  <span 
+class="cmti-10">Transactions of the American Mathematical</span>
+   <span 
+class="cmti-10">Society</span>, 85(1):219&#8211;227, 1957.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xbushell1973projective"></a>PJ&#x00A0;Bushell. On the projective contraction ratio for positive linear mappings. <span 
+class="cmti-10">Journal of the London</span>
+   <span 
+class="cmti-10">Mathematical Society</span>, 2(2):256&#8211;258, 1973.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [4]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xerb2021information"></a>Ionas Erb and Nihat Ay.  The information-geometric perspective of compositional data analysis.  In
+   <span 
+class="cmti-10">Advances in Compositional Data Analysis</span>, pages 21&#8211;43. Springer, 2021.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [5]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xjiao2014information"></a>Jiantao Jiao, Thomas&#x00A0;A Courtade, Albert No, Kartik Venkat, and Tsachy Weissman.  Information
+   measures:  the  curious  case  of  the  binary  alphabet.    <span 
+class="cmti-10">IEEE  Transactions  on  Information  Theory</span>,
+   60(12):7616&#8211;7626, 2014.
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+ [6]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xnielsen2019clustering"></a>Frank Nielsen and Ke&#x00A0;Sun.  Clustering in Hilbert&#8217;s projective geometry: The case studies of the
+   probability simplex and the elliptope of correlation matrices.  In <span 
+class="cmti-10">Geometric Structures of Information</span>,
+   pages 297&#8211;331. Springer, 2019.
+</p>
+   </div>
+    
+</body></html> 
+
+
+

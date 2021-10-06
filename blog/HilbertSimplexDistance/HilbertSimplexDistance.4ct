@@ -1,0 +1,4 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\tocparagraph{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{Proof:}}{4}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-2000}{QQ2-1-2}{References}}{6}\relax 
+\par 
