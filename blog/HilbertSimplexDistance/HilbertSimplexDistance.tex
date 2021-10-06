@@ -34,7 +34,7 @@ This note shows that the Hilbert's metric distance in the probability simplex is
 \end{abstract}
 
 Consider the open cone $\bbR_{++}^d$ of positive measures (i.e., histograms with $d$ positive bins) with its open probability simplex subset 
-$\Delta_d=\{(x_1,\ldots,x_d)\in\bbR_+^d\ :\ \sum_{i=1}^d  x_i=1\}$.
+$\Delta_d=\{(x_1,\ldots,x_d)\in\bbR_+^d\ :\ \sum_{i=1}^d  x_i=1\}$. A point in $\Delta_d$ represents a multinoulli distribution (categorical distribution).
 
 The $f$-divergence~\cite{amari2016information} between $p,q\in\Delta_d$ is defined for a convex function $f(u)$ such that $f(1)=0$ and $f(u)$ strictly convex at $1$ by:
 $$
@@ -46,12 +46,12 @@ All $f$-divergences are separable by construction:
 That is, they can be expressed as sum of coordinate-wise scalar divergences: Here, $I_f[p:q]:=\sum_{i=1}^d i_{f}(p[i]:q[i])$, where $i_f$ is a scalar $f$-divergence.
 Moreover, $f$-divergences are information monotone: 
 That is, let $\calX=\{X_1,\ldots, X_m\}$ be a partition of $\{1,\ldots, n\}$ into $m\leq n$ pairwise disjoint subsets $X_i$'s.
-For $p\in\Delta_n$, let $p_{|\calX}\in\Delta_m$ denote the induced probability mass function with $p_{|\calX}(i)=\sum_{j\in X_i} p[i]$.
+For $p\in\Delta_n$, let $p_{|\calX}\in\Delta_m$ denote the induced probability mass function with $p_{|\calX}[i]=\sum_{j\in X_i} p[i]$.
 Then we have
 $$
 I_f[p_{|\calX}:q_{|\calX}]\leq I_f[p:q], \quad\forall\calX
 $$ 
-Moreever, it can be shown that the only separable divergences satisfying this partition inequality are $f$-divergences~\cite{amari2016information} when $n>2$. The special curious binary case $n=2$ is dealt in~\cite{jiao2014information}.
+Moreover, it can be shown that the only separable divergences satisfying this partition inequality are $f$-divergences~\cite{amari2016information} when $n>2$. The special curious binary case $n=2$ is dealt in~\cite{jiao2014information}.
 
 Now, consider the non-separable Hilbert distance in the probability simplex~\cite{nielsen2019clustering}:
 $$
