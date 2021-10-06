@@ -46,16 +46,16 @@ All $f$-divergences are separable by construction:
 That is, they can be expressed as sum of coordinate-wise scalar divergences: Here, $I_f[p:q]:=\sum_{i=1}^d i_{f}(p[i]:q[i])$, where $i_f$ is a scalar $f$-divergence.
 Moreover, $f$-divergences are information monotone: 
 That is, let $\calX=\{X_1,\ldots, X_m\}$ be a partition of $\{1,\ldots, n\}$ into $m\leq n$ pairwise disjoint subsets $X_i$'s.
-For $p\in\Delta_n$, let $p_{|\calX}\in\Delta_m$ denote the induced probability mass function with $p_{|\calX}(i)=\sum_{j\in X_i} p(i)$.
+For $p\in\Delta_n$, let $p_{|\calX}\in\Delta_m$ denote the induced probability mass function with $p_{|\calX}(i)=\sum_{j\in X_i} p[i]$.
 Then we have
 $$
 I_f[p_{|\calX}:q_{|\calX}]\leq I_f[p:q], \quad\forall\calX
 $$ 
-Moreoever, it can be shown that the only separable divergences satisfying this partition inequality are $f$-divergences~\cite{amari2016information} when $n>2$. The special curious binary case $n=2$ is dealt in~\cite{jiao2014information}.
+Moreever, it can be shown that the only separable divergences satisfying this partition inequality are $f$-divergences~\cite{amari2016information} when $n>2$. The special curious binary case $n=2$ is dealt in~\cite{jiao2014information}.
 
 Now, consider the non-separable Hilbert distance in the probability simplex~\cite{nielsen2019clustering}:
 $$
-D_\Hilbert[p,q]=\log \frac{\max_i \frac{p_i}{q_i}}{\min_i \frac{p_i}{q_i}}. 
+D_\Hilbert[p,q]=\log \frac{\max_{i\in [d]} \frac{p_i}{q_i}}{\min_{i\in [d]} \frac{p_i}{q_i}}. 
 $$
 This dissimilarity measure is a projective distance on $\bbR^d_{++}$ (Hilbert's projective distance) because 
 we have $D_\Hilbert[\lambda p,\lambda' q]=D_\Hilbert[p,q]$ for any $\lambda,\lambda'>0$.
@@ -90,8 +90,10 @@ $$
 
 Since $0\leq \tanh(x)\leq 1$ for $x\geq 0$, we get the property that  Hilbert distance on the probability simplex is an information monotone non-separable distance:
 $$
-D_\Hilbert[p_{|\calX},q_{|\calX}]\leq D_\Hilbert[p,q]
+D_\Hilbert[p_{|\calX},q_{|\calX}]\leq D_\Hilbert[p,q].
 $$
+
+Notice that this holds for positive matrices and thus it includes the case of real matrix coefficients encoding deterministic Markov kernels.
 \end{proof}
 
 Another example of non-separable information monotone distance is Aitchison's distance on the probability simplex~\cite{erb2021information} (using for compositional data analysis).
