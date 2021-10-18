@@ -1,0 +1,1 @@
+htlatex HilbertSimplexDistance.tex

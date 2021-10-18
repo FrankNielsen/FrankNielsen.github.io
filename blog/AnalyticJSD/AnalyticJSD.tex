@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{fullpage,amssymb,amsmath,url}
+\newenvironment{proof}{\paragraph{Proof:}}{\hfill$\square$}
+\newtheorem{theorem}{Theorem}
+\def\bbN{\mathbb{N}}
+\def\calC{\mathcal{C}}
+\def\calP{\mathcal{P}}
+\def\calQ{\mathcal{Q}}
+\def\calF{\mathcal{F}}
+\def\bbR{\mathbb{R}}
+\def\bbF{\mathbb{F}}
+\def\SEB{\mathrm{SEB}}
+\def\ceil#1{\lceil #1\rceil}
+\def\eps{\epsilon}
+\def\inner#1#2{\langle #1,#2\rangle}
+\def\KL{\mathrm{KL}}
+\def\bbR{\mathbb{R}}
+\def\calX{\mathcal{X}}
+\def\Hilbert{\mathrm{Hilbert}}
+
+ 
+\title{Some analytic formula for the Jensen-Shannon divergence between continuous parametric densities}
+
+\author{Frank Nielsen\\ {\tt Frank.Nielsen@acm.org}}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note presents some analytic formula for the Jensen-Shannon divergence between parametric densities.
+\end{abstract}
+
+Consider the half-normal distribution with probability density function on support $(0,\infty)$:
+$$
+p_\sigma(x)=\frac{1}{\sigma}\sqrt{\frac{2}{\pi}}\exp(-\frac{x^2}{2\sigma^2})
+$$
+
+Exponential family with $\theta=\frac{1}{\sigma^2}$.
+
+
+Thus we have for $\sigma_1>\sigma_2$
+
+$$
+\frac{\sigma_2}{\sigma_1}\leq \frac{p_{\sigma_1}(x)}{p_{\sigma_2}(x)} \leq 
+$$
+
+$$
+D_\KL[p_{\sigma_1}:p_{\sigma_2}] = \frac{1}{2}\left( 
+\frac{\sigma_1^2}{\sigma_2^2}-\log \frac{\sigma_1^2}{\sigma_2^2}-1)
+\right)
+$$
+ 
+Itakura-Saito divergence
+
+$Y=|X|$ follows $HN(\sigma)$ for $X\sim N(0,\sigma^2)$
+
+Bias corrected MLE
+
+\bibliographystyle{plain}
+\bibliography{AnalyticJSDBIB}
+
+\end{document}
