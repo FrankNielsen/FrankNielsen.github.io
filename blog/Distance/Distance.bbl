@@ -274,6 +274,12 @@ Frank Nielsen, Ke~Sun, and St{\'e}phane Marchand-Maillet.
 \newblock {On H{\"o}lder projective divergences}.
 \newblock {\em Entropy}, 19(3):122, 2017.
 
+\bibitem{otto2000generalization}
+Felix Otto and C{\'e}dric Villani.
+\newblock {Generalization of an inequality by Talagrand and links with the
+  logarithmic Sobolev inequality}.
+\newblock {\em Journal of Functional Analysis}, 173(2):361--400, 2000.
+
 \bibitem{pearson1894contributions}
 Karl Pearson.
 \newblock Contributions to the mathematical theory of evolution.
@@ -305,6 +311,12 @@ Robin Sibson.
 \newblock Information radius.
 \newblock {\em Zeitschrift f{\"u}r Wahrscheinlichkeitstheorie und verwandte
   Gebiete}, 14(2):149--160, 1969.
+
+\bibitem{sriperumbudur2017density}
+Bharath Sriperumbudur, Kenji Fukumizu, Arthur Gretton, Aapo Hyv{\"a}rinen, and
+  Revant Kumar.
+\newblock Density estimation in infinite dimensional exponential families.
+\newblock {\em Journal of Machine Learning Research}, 18, 2017.
 
 \bibitem{JRGMM-2009}
 Fei Wang, Tanveer Syeda-Mahmood, Baba~C Vemuri, David Beymer, and Anand

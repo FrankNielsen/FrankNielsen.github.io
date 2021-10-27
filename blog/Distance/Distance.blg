@@ -7,45 +7,45 @@ Reallocating 'name_of_file' (item size: 1) to 12 items.
 Database file #1: DistanceBib.bib
 Warning--empty booktitle in Mahalanobis-1936
 Warning--there's a number but no volume in WongYOU-1985
-You've used 54 entries,
+You've used 56 entries,
             2118 wiz_defined-function locations,
-            839 strings with 13900 characters,
-and the built_in function-call counts, 17755 in all, are:
-= -- 1825
-> -- 676
+            849 strings with 14289 characters,
+and the built_in function-call counts, 18425 in all, are:
+= -- 1890
+> -- 717
 < -- 13
-+ -- 274
-- -- 214
-* -- 1133
-:= -- 2880
-add.period$ -- 175
-call.type$ -- 54
-change.case$ -- 263
++ -- 290
+- -- 228
+* -- 1185
+:= -- 2999
+add.period$ -- 181
+call.type$ -- 56
+change.case$ -- 276
 chr.to.int$ -- 0
-cite$ -- 56
-duplicate$ -- 745
-empty$ -- 1481
-format.name$ -- 214
-if$ -- 3806
+cite$ -- 58
+duplicate$ -- 766
+empty$ -- 1525
+format.name$ -- 228
+if$ -- 3938
 int.to.chr$ -- 0
-int.to.str$ -- 54
-missing$ -- 59
-newline$ -- 273
-num.names$ -- 108
-pop$ -- 280
+int.to.str$ -- 56
+missing$ -- 61
+newline$ -- 283
+num.names$ -- 112
+pop$ -- 289
 preamble$ -- 1
-purify$ -- 214
+purify$ -- 225
 quote$ -- 0
-skip$ -- 535
+skip$ -- 551
 stack$ -- 0
-substring$ -- 1186
-swap$ -- 180
+substring$ -- 1221
+swap$ -- 182
 text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 206
+type$ -- 214
 warning$ -- 2
-while$ -- 184
-width$ -- 56
-write$ -- 595
+while$ -- 190
+width$ -- 58
+write$ -- 617
 (There were 2 warnings)

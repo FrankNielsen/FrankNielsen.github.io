@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.5)  9 SEP 2021 14:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.5)  23 OCT 2021 10:46
 entering extended mode
 **./Distance.tex
 (Distance.tex
@@ -278,19 +278,46 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (Distance.toc)
+) (Distance.toc [1
+
+{C:/Users/Nielsen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
 \tf@toc=\write4
 \openout4 = `Distance.toc'.
 
- [1
-
-{C:/Users/Nielsen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-
-LaTeX Warning: Reference `' on page 2 undefined on input line 85.
 
 ! Undefined control sequence.
-l.88 \sJ
-        _F(\theta_1:\theta_2)=\frac{1}{\alpha(1-\alpha)}J_F(\theta_1:\theta_...
+l.81 \includegraphics
+                     [width=0.75\columnwidth]{FigIpe-skewJS.pdf}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.81 \includegraphics[width=0.75\columnwidth]
+                                             {FigIpe-skewJS.pdf}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.81 \includegraphics[width=0.75\columnwidth]
+                                             {FigIpe-skewJS.pdf}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+l.106 \sJ
+         _F(\theta_1:\theta_2)=\frac{1}{\alpha(1-\alpha)}J_F(\theta_1:\theta...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -299,20 +326,20 @@ and I'll forget about whatever was undefined.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 100.
+(hyperref)                removing `math shift' on input line 118.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 100.
+(hyperref)                removing `math shift' on input line 118.
 
 
-Overfull \hbox (19.36928pt too wide) in paragraph at lines 113--129
+Overfull \hbox (19.36928pt too wide) in paragraph at lines 131--147
  []$ 
  []
 
 [2]
 ! Undefined control sequence.
-l.151 The following metric distance $D^\Mah
+l.169 The following metric distance $D^\Mah
                                            _Q$ is called the Mahalanobis dis...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -323,7 +350,7 @@ and I'll forget about whatever was undefined.
 ! Missing { inserted.
 <to be read again> 
                    _
-l.151 The following metric distance $D^\Mah_
+l.169 The following metric distance $D^\Mah_
                                             Q$ is called the Mahalanobis dis...
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -333,7 +360,7 @@ so that I will find a matching right brace soon.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.151 The following metric distance $D^\Mah_Q$
+l.169 The following metric distance $D^\Mah_Q$
                                                is called the Mahalanobis dis...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -341,11 +368,8 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-
-LaTeX Warning: Citation `Mahalanobis-1936' on page 3 undefined on input line 151.
-
 ! Undefined control sequence.
-l.153 D^\Mah
+l.171 D^\Mah
             _Q(\theta_1,\theta_2)=\sqrt{(\theta_2-\theta_1)^\top Q(\theta_2-...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -356,7 +380,7 @@ and I'll forget about whatever was undefined.
 ! Missing { inserted.
 <to be read again> 
                    _
-l.153 D^\Mah_
+l.171 D^\Mah_
              Q(\theta_1,\theta_2)=\sqrt{(\theta_2-\theta_1)^\top Q(\theta_2-...
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -366,7 +390,7 @@ so that I will find a matching right brace soon.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.154 $
+l.172 $
        $
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -375,7 +399,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 ! Undefined control sequence.
-l.156 When $\Sigma=\diag
+l.174 When $\Sigma=\diag
                         (\sigma_{11}^2,\ldots, \sigma_{DD}^2)$ with $\sigma_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -384,7 +408,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.158 D^\Mah
+l.176 D^\Mah
             _{\Sigma^{-1}}(\theta_1,\theta_2)=\sum_{i=1}^D \frac{(\theta_2^i...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -395,7 +419,7 @@ and I'll forget about whatever was undefined.
 ! Missing { inserted.
 <to be read again> 
                    _
-l.158 D^\Mah_
+l.176 D^\Mah_
              {\Sigma^{-1}}(\theta_1,\theta_2)=\sum_{i=1}^D \frac{(\theta_2^i...
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -405,7 +429,7 @@ so that I will find a matching right brace soon.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.159 $
+l.177 $
        $
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -414,7 +438,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 ! Undefined control sequence.
-l.161 ...\theta_1}:p_{\theta_2}]=\frac{1}{2}D^\Mah
+l.179 ...\theta_1}:p_{\theta_2}]=\frac{1}{2}D^\Mah
                                                   _{I_\theta(\theta_1)}(\the...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -425,7 +449,7 @@ and I'll forget about whatever was undefined.
 ! Missing { inserted.
 <to be read again> 
                    _
-l.161 ...theta_1}:p_{\theta_2}]=\frac{1}{2}D^\Mah_
+l.179 ...theta_1}:p_{\theta_2}]=\frac{1}{2}D^\Mah_
                                                   {I_\theta(\theta_1)}(\thet...
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -435,7 +459,7 @@ so that I will find a matching right brace soon.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.161 ...,\theta_2)^2+o(\|(\theta_2-\theta_1\|^2)$
+l.179 ...,\theta_2)^2+o(\|(\theta_2-\theta_1\|^2)$
                                                   .
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -444,7 +468,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 ! Undefined control sequence.
-l.162 ...\dtheta^\top I_\theta(\theta) \dtheta=\ds
+l.180 ...\dtheta^\top I_\theta(\theta) \dtheta=\ds
                                                   _\theta^2$.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -456,66 +480,91 @@ and I'll forget about whatever was undefined.
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 186.
+(amsmath)                 on input line 204.
 
-[4] [5] [6] [7] [8] [9] [10] [11] (Distance.bbl [12] [13] [14]
-Underfull \hbox (badness 2903) in paragraph at lines 174--178
+[4] [5] [6]
+
+LaTeX Warning: Citation `otto2000generalization' on page 7 undefined on input line 356.
+
+
+LaTeX Warning: Citation `sriperumbudur2017density' on page 7 undefined on input line 365.
+
+! Undefined control sequence.
+l.368 ...\int_0^\infty D_{\mathrm{Fisher}}[p*\calN
+                                                  (0,\lambda I):q*\calN(0,\l...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.368 ...hrm{Fisher}}[p*\calN(0,\lambda I):q*\calN
+                                                  (0,\lambda I)]\, \dlambda,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.368 ...ambda I):q*\calN(0,\lambda I)]\, \dlambda
+                                                  ,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.370 where $(f*g)(x)=\int f(y)g(x-y)\dy
+                                        $ denotes the convolution of densties.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[7] [8] [9] [10] [11] [12] (Distance.bbl [13] [14]
+Underfull \hbox (badness 2903) in paragraph at lines 179--183
 []\OT1/cmr/m/n/10.95 Frank Nielsen.  On a Gen-er-al-iza-tion of the Jensen?Shannon Di-ver-gence and the
  []
 
-[15]) [16] (Distance.aux)
+[15] [16]) [17] (Distance.aux)
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `Distance.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Distance.out':
-(rerunfilecheck)             Before: 9D7FF88885E791D0B41A28E73FB72555;4785
-(rerunfilecheck)             After:  CFC14FF090246B849A6B9B5CEDA73164;5132.
+Package rerunfilecheck Info: File `Distance.out' has not changed.
+(rerunfilecheck)             Checksum: AA359D2A9CFF83A5849936A71CA361D6;5084.
  ) 
 Here is how much of TeX's memory you used:
- 8364 strings out of 479295
- 121601 string characters out of 2863305
- 427210 words of memory out of 3000000
- 25630 multiletter control sequences out of 15000+600000
+ 8369 strings out of 479295
+ 121728 string characters out of 2863305
+ 429395 words of memory out of 3000000
+ 25636 multiletter control sequences out of 15000+600000
  416488 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,12n,74p,678b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{equation.5.4} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.5.3} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.5.2} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.6.3} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.2} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.1} has been referenced but does not exist, replaced by a fixed one
-
- <C:\Users\Nielsen\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cmextra/cmex8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Distance.pdf (16 pages, 387313 bytes).
+ <C:\Users\Nielsen\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cmextra/cmex8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Distance.pdf (17 pages, 391222 bytes).
 PDF statistics:
- 425 PDF objects out of 1000 (max. 8388607)
- 109 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 431 PDF objects out of 1000 (max. 8388607)
+ 108 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
