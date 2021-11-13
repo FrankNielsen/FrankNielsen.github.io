@@ -676,6 +676,63 @@ For even integers $\alpha\geq 2$, $D_\alpha^{\mathrm{Minkowski}}[m:m']$ is avail
 %
 %$q$-divergences between $q$-exponential family densities
 
+
+
+
+\begin{table}
+\centering
+
+%\begin{tabular}{llll}
+%Information & definition & mean & divergence \\
+ %$(M,D)$-information     & $I_{M,D}[p,q]=\min_c \{M(D[p:c],D[q:c])\}$ & $M$ & $D$\\  \hline\hline
+%Information radius of order $1$ & $I_{A,\KL}[p,q]=\frac{1}{2}D_\KL[p:\frac{p+q}{2}]+\frac{1}{2}D_\KL[q:\frac{p+q}{2}]$ &  $A(a,b)=\frac{a+b}{2}$ & $D$\\
+%aka Jensen-Shannon divergence & \\
+%Information radius of order $\alpha$ & $I_{M_\alpha^R,D_{\alpha}^R}[p,q]=\frac{\alpha}{\alpha-1}\log_2 \int_\calX \left(\frac{ p(x)^\alpha+ q(x)^\alpha}{2}\right)^{\frac{1}{\alpha}} \dmu(x)$ & $M_\alpha^R(a,b)=\frac{1}{\alpha-1}\log_2\left(\frac{2^{(\alpha-1)a}+2^{(\alpha-1)b}}{2}\right)$ & $D_\alpha^R[p:q]=\frac{1}{\alpha-1}\log_2\left( \int_\calX p(x)^\alpha q(x)^{1-\alpha}\dmu(x)\right)$\\
+%aka Sibson's information radius & & R\'enyi $\alpha$-mean & R\'enyi $\alpha$-divergence\\ 
+%\end{tabular}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{l|l}
+ $(M,D)$-information & Definition $I_{M,D}[p,q]:=\min_c \{M(D[p:c],D[q:c])\}$ \\
+ \hline\hline
+Information radius of order $1$ & $I_{A,\KL}[p,q]=\frac{1}{2}D_\KL[p:\frac{p+q}{2}]+\frac{1}{2}D_\KL[q:\frac{p+q}{2}]$\\
+aka Jensen-Shannon divergence & \\
+Information radius of order $\alpha$ & $I_{M_\alpha^R,D_{\alpha}^R}[p,q]=\frac{\alpha}{\alpha-1}\log_2 \int_\calX \left(\frac{ p(x)^\alpha+ q(x)^\alpha}{2}\right)^{\frac{1}{\alpha}} \dmu(x)$\\
+aka Sibson's information radius & \\  \hline
+Bregman information & $I_{A,B_F}(\theta_1,\theta_2)=\frac{1}{2}B_F(\theta_1:\frac{\theta_1+\theta_2}{2})+\frac{1}{2}B_F(\theta_2:\frac{\theta_1+\theta_2}{2})$\\
+skewed Jensen–Bregman divergence &  $I_{A_\beta,B_F}(\theta_1:\theta_2)=(1-\beta)B_F(\theta_1:(1-\beta)\theta_1+\beta\theta_2)+\beta B_F(\theta_2:(1-\beta)\theta_1+\beta\theta_2)$\\ \hline
+Chernoff minimax discrimination & $I_{\mathrm{max},D_\KL^*}[p,q]=\min_c \max\{D_\KL[c:p],D_\KL[c:q]\}$\\ \hline
+Amari's $\alpha$-risk & $I_{A,D_\alpha}[p,q]=\frac{1}{2}D_\alpha[p:(pq)_\alpha^A]+\frac{1}{2}D_\alpha[q:(pq)_\alpha^A]$\\ \hline
+Annealing geometric paths $(pq)_{G_\beta}$ & minimizer of $I_{G_\beta,D_\KL^*}[p:q]$ \\ \hline
+\end{tabular}
+
+\vskip 0.5cm
+
+\begin{tabular}{ll}
+arithmetic mean & $A(a,b)=\frac{a+b}{2}$\\
+weighted arithmetic mean & $A_\beta(a,b)=(1-\beta)a+\beta b$\\
+geometric mean & $G_\beta(a,b)=a^{1-\beta}b^\beta$\\
+maximum (mean) & $\mathrm{MAX}(a,b)=\max\{a,b\}$\\
+R\'enyi's $\alpha$-mean & $M_\alpha^R(a,b)=\frac{1}{\alpha-1}\log_2\left(\frac{2^{(\alpha-1)a}+2^{(\alpha-1)b}}{2}\right)$\\
+Amari's $\alpha$-integration & $(pq)_\alpha^A(x)\propto f_\alpha^{-1}(\frac{1}{2}f_\alpha(p(x))+ \frac{1}{2}f_\alpha(q(x)))$, $\alpha$-representation $f_\alpha(u)=\frac{2}{1-\alpha}u^{\frac{1-\alpha}{2}}$\\
+$M$-mixture  & $(pq)_{M_\beta}(x)\propto M_\beta(p(x),q(x))$
+\end{tabular}
+
+\vskip 0.5cm
+
+\begin{tabular}{ll}
+Kullback-Leibler divergence & $D_\KL[p:q]=\int_\calX p(x)\log\frac{p(x)}{q(x)}\dmu(x)$ \\
+reverse Kullback-Leibler divergence & $D_\KL^*[p:q]=\int_\calX q(x)\log\frac{q(x)}{p(x)}\dmu(x)=D_\KL[q:p]$ \\
+R\'enyi's $\alpha$-divergence & $D_\alpha^R[p:q]=\frac{1}{\alpha-1}\log_2\left( \int_\calX p(x)^\alpha q(x)^{1-\alpha}\dmu(x)\right)$\\
+Amari's $\alpha$-divergence & 
+$D_\alpha^A[p:q]=\frac{4}{1-\alpha^2}(1-\int_\calX p(x)^{\frac{1-\alpha}{2}}q(x)^{\frac{1+\alpha}{2}}\dmu(x))$
+\end{tabular}
+
+\caption{Examples of information radius measures as variational abstract mean divergences.}
+\end{table}
+
+
+
 \vskip 1cm
 Initially created 13th August 2021 (last updated \today).
 

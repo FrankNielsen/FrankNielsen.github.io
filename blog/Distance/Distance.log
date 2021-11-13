@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.5)  23 OCT 2021 10:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.5)  12 NOV 2021 10:06
 entering extended mode
 **./Distance.tex
 (Distance.tex
@@ -483,12 +483,6 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                 on input line 204.
 
 [4] [5] [6]
-
-LaTeX Warning: Citation `otto2000generalization' on page 7 undefined on input line 356.
-
-
-LaTeX Warning: Citation `sriperumbudur2017density' on page 7 undefined on input line 365.
-
 ! Undefined control sequence.
 l.368 ...\int_0^\infty D_{\mathrm{Fisher}}[p*\calN
                                                   (0,\lambda I):q*\calN(0,\l...
@@ -525,29 +519,33 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[7] [8] [9] [10] [11] [12] (Distance.bbl [13] [14]
+[7] [8] [9] [10] [11] [12]
+Overfull \hbox (96.9196pt too wide) in paragraph at lines 695--708
+ [][] 
+ []
+
+
+Overfull \hbox (38.89276pt too wide) in paragraph at lines 711--720
+ [][] 
+ []
+
+(Distance.bbl [13] [14] [15]
 Underfull \hbox (badness 2903) in paragraph at lines 179--183
 []\OT1/cmr/m/n/10.95 Frank Nielsen.  On a Gen-er-al-iza-tion of the Jensen?Shannon Di-ver-gence and the
  []
 
-[15] [16]) [17] (Distance.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+[16] [17]) [18] (Distance.aux)
 Package rerunfilecheck Info: File `Distance.out' has not changed.
 (rerunfilecheck)             Checksum: AA359D2A9CFF83A5849936A71CA361D6;5084.
  ) 
 Here is how much of TeX's memory you used:
- 8369 strings out of 479295
- 121728 string characters out of 2863305
- 429395 words of memory out of 3000000
+ 8371 strings out of 479295
+ 121742 string characters out of 2863305
+ 429487 words of memory out of 3000000
  25636 multiletter control sequences out of 15000+600000
  416488 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,12n,74p,678b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,12n,74p,678b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\Nielsen\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Program Files/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
@@ -562,9 +560,9 @@ sfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Distance.pdf (17 pages, 391222 bytes).
+Output written on Distance.pdf (18 pages, 398950 bytes).
 PDF statistics:
- 431 PDF objects out of 1000 (max. 8388607)
- 108 named destinations out of 1000 (max. 500000)
+ 440 PDF objects out of 1000 (max. 8388607)
+ 110 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

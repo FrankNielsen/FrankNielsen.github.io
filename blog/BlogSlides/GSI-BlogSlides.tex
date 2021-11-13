@@ -43,6 +43,27 @@
 \end{frame}
 
 
+\begin{frame}{Aitchison distance vs Hilbert simplex distance}
+
+\begin{itemize}
+	\item Aitchison distance:
+	
+\begin{eqnarray*}
+\rho_{\mathrm{Aitchison}}(p,q) &=& \sqrt{\sum_{i=1}^d \left( \log \frac{p^i}{G(p)}-\log \frac{q^i}{G(q)} \right)^2}\\
+&=& \left\|\log\frac{p}{G(p)}-\log\frac{q}{G(p)}\right\|_2
+\end{eqnarray*}
+where $G(p)=\left(\prod_{i=1}^d p^i\right)^{\frac{1}{d}}=\exp\left(\frac{1}{d}\sum_{i=1}^d \log p^i\right)$ is the geometric mean of coordinates
+
+\item Hilbert simplex distance: 
+\begin{eqnarray*}
+\rho_{\mathrm{Hilbert}}(p,q) &=&  \log \frac{\max _{i\in\{1,\ldots, d\}} \frac{p_{i}}{q_{i}}}{\min _{j\in\{1,\ldots, d\}} \frac{p_{j}}{q_{j}}}\\
+&=& \left\|\log\frac{p}{G(p)}-\log\frac{q}{G(q)} \right\|_{\mathrm{var}}
+\end{eqnarray*}
+where $\|\cdot\|_{\mathrm{var}}$ denotes the variation norm: $\|x\|_{\mathrm{var}}:= (\max_i x_i)-(\min_i x_i)$
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}{Geometry of Hamming spaces}
 \end{frame}
 
