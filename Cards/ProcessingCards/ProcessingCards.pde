@@ -20,7 +20,7 @@ for (File someFile : someFolderList) {
 }
 
 
-println("#count (=number of cards):"+count);
+println("detected #count (=number of cards):"+count);
 
 // shuffle the deck
 int perm, nbperm=1000;
@@ -35,7 +35,7 @@ for (  perm=0; perm<nbperm; perm++)
   cardfilename[jj]=tmp;
 }
 
-int maxcount=461;
+int maxcount=count-1;
 int i;
 String initcard="<h1>List of cards</h1>\n Click on a card and then browse the previous card or the following card from the current card.<BR>There are at most 25 cards per page<BR>The card order is random (at HTML compile time).<ul>"; 
 String allcardshtml=initcard;
@@ -47,7 +47,7 @@ String prevfile, nextfile;
 String metahtml="";
 
 int page =0;
-int maxpage=18;
+int maxpage=(int)(count/25)+1;
 
 for (i=0; i<count; i++)
 {
@@ -67,8 +67,8 @@ htmlstr="<center><A HREF=\""+cardfilename[i]+"\" target=\"_blank\"><IMG SRC=\""
    //<A HREF=\""+prevfile+"\">prev</A> next </center>";
    */
 
-  htmlstr="<center><A HREF=\"card-"+i+".html\" target=\"_blank\"><IMG SRC=\""+cardfilename[i]
-    +"\" width=\"60%\" height=\"60%\" border=\"3\"></A>(#"+i+")<BR> <A HREF=\""
+  htmlstr="<center><A HREF=\""+cardfilename[i]+"\" target=\"_blank\"><IMG SRC=\""+cardfilename[i]
+    +"\" width=\"60%\"  border=\"3\"></A>(#"+i+")<BR> <A HREF=\""
     +prevfile+"\">prev</A> &nbsp;&nbsp;&nbsp;<A HREF=\""+nextfile+"\">next</A></center>\n";
 
   filenamehtml=yourPath+"/card-"+i+".html";
@@ -80,7 +80,7 @@ print("saving file "+filenamehtml+" "+cardfilename[i]+"\n");
   
   
   allcardshtml+="<LI><center><A HREF=\"card-"+i+".html\" target=\"_blank\"><IMG SRC=\""+cardfilename[i]
-    +"\" width=\"60%\" height=\"60%\" border=\"3\"></A>("+i+")</LI>\n";
+    +"\" width=\"60%\" border=\"3\"></A>("+i+")</LI>\n";
   
   
 //  "<LI><A HREF=\""+filenamehtml+"\" target=\"_blank\"><IMG SRC=\""+cardfilename[i]+"\" width=\"30%\" height=\"30%\" border=\"3\"></HREF></LI>\n\n";
@@ -99,7 +99,7 @@ print("saving file "+filenamehtml+" "+cardfilename[i]+"\n");
     filenamehtml=yourPath+"/index"+page+".html";
     
  
-    filenamehtml=yourPath+"/index"+page+".html";
+  
     
        page++;
     
@@ -111,6 +111,30 @@ print("saving file "+filenamehtml+" "+cardfilename[i]+"\n");
     allcardshtml=initcard;
   }
 }
+
+
+
+// last card
+    println("flush a card page");
+    allcardshtml+="</ul><BR> <A HREF=\"index"
+      +(page-1)
+      +".html\">Previous card page</A>&nbsp;&nbsp;&nbsp; <A HREF=\"index"+(page+1)
+      +".html\">Next card page</A>"; 
+      
+    filenamehtml=yourPath+"/index"+page+".html";
+    
+ 
+  
+    
+       page++;
+    
+    strfile[0]=allcardshtml;
+    saveStrings(filenamehtml, strfile);
+    
+    metahtml=metahtml+allcardshtml;
+    
+    allcardshtml=initcard;
+    
 
 println(count);
 
