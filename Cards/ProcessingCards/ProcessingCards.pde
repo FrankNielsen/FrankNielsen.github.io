@@ -37,7 +37,7 @@ for (  perm=0; perm<nbperm; perm++)
 
 int maxcount=count-1;
 int i;
-String initcard="<h1>List of cards</h1>\n Click on a card and then browse the previous card or the following card from the current card.<BR>There are at most 25 cards per page<BR>The card order is random (at HTML compile time).<ul>"; 
+String initcard="<h1>List of cards</h1>\n <A HREF=\"researchcards-Nov2021-smallsize.pdf\" target=\"_blank\">The full card deck</A> (PDF, 37 MB)<BR>Click on a card and then browse the previous card or the following card from the current card.<BR>There are at most 25 cards per page<BR>The card order is random (at HTML compile time).<ul>"; 
 String allcardshtml=initcard;
 
 String htmlstr;
@@ -47,7 +47,9 @@ String prevfile, nextfile;
 String metahtml="";
 
 int page =0;
-int maxpage=(int)(count/25)+1;
+int maxpage=(int)(count/25);
+
+println("max page:"+maxpage);
 
 for (i=0; i<count; i++)
 {
@@ -68,19 +70,19 @@ htmlstr="<center><A HREF=\""+cardfilename[i]+"\" target=\"_blank\"><IMG SRC=\""
    */
 
   htmlstr="<center><A HREF=\""+cardfilename[i]+"\" target=\"_blank\"><IMG SRC=\""+cardfilename[i]
-    +"\" width=\"60%\"  border=\"3\"></A>(#"+i+")<BR> <A HREF=\""
+    +"\" width=\"35%\"  border=\"3\"></A>(#"+i+")<BR> <A HREF=\""
     +prevfile+"\">prev</A> &nbsp;&nbsp;&nbsp;<A HREF=\""+nextfile+"\">next</A></center>\n";
 
   filenamehtml=yourPath+"/card-"+i+".html";
   //filenamehtml="card-"+i+".html";
 
-print("saving file "+filenamehtml+" "+cardfilename[i]+"\n");
+//print("saving file "+filenamehtml+" "+cardfilename[i]+"\n");
   strfile[0]=htmlstr;
   saveStrings(filenamehtml, strfile);
   
   
   allcardshtml+="<LI><center><A HREF=\"card-"+i+".html\" target=\"_blank\"><IMG SRC=\""+cardfilename[i]
-    +"\" width=\"60%\" border=\"3\"></A>("+i+")</LI>\n";
+    +"\" width=\"30%\" border=\"3\"></A>("+i+")</LI>\n";
   
   
 //  "<LI><A HREF=\""+filenamehtml+"\" target=\"_blank\"><IMG SRC=\""+cardfilename[i]+"\" width=\"30%\" height=\"30%\" border=\"3\"></HREF></LI>\n\n";
@@ -90,10 +92,13 @@ print("saving file "+filenamehtml+" "+cardfilename[i]+"\n");
 
 // flush at set of 25 cards
   if (((i+1)%25)==0) {
+    int prevpage=page-1, nextpage=page+1;
+    if (prevpage<0) prevpage=maxpage;
+    if (nextpage>maxpage) nextpage=0;
     println("flush a card page");
     allcardshtml+="</ul><BR> <A HREF=\"index"
-      +(page-1)
-      +".html\">Previous card page</A>&nbsp;&nbsp;&nbsp; <A HREF=\"index"+(page+1)
+      +(prevpage)
+      +".html\">Previous card page</A>&nbsp;&nbsp;&nbsp; <A HREF=\"index"+(nextpage)
       +".html\">Next card page</A>"; 
       
     filenamehtml=yourPath+"/index"+page+".html";
@@ -116,10 +121,7 @@ print("saving file "+filenamehtml+" "+cardfilename[i]+"\n");
 
 // last card
     println("flush a card page");
-    allcardshtml+="</ul><BR> <A HREF=\"index"
-      +(page-1)
-      +".html\">Previous card page</A>&nbsp;&nbsp;&nbsp; <A HREF=\"index"+(page+1)
-      +".html\">Next card page</A>"; 
+    allcardshtml+="</ul><BR> <A HREF=\"index0.html\">Previous card page</A>&nbsp;&nbsp;&nbsp; <A HREF=\"index0.html\">Next card page</A>"; 
       
     filenamehtml=yourPath+"/index"+page+".html";
     
