@@ -1,0 +1,23 @@
+Interaction in file HVDPD.pde
+double click with processing to open all files
+
+and transformations also in Complex.java
+
+keys:
+1-8 for viz mode
+
+'a' for animation
+
+ if (key=='1') mode=modeKLEIN;
+  if (key=='3') mode=modePOINCARE;
+  if (key=='5') mode=modeUPPER;
+  if (key=='2') mode=modePD;
+  if (key=='4') mode=modeKLEINPOINCARE;
+  
+Shift+left click: translation
+
+---
+
+Choose mode 3 for Poincare dist and
+press 't' for hyperbolic translation from current mouse position to origin
+'r' for rotation.
