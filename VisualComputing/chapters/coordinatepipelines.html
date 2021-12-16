@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+        "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Coordinate pipelines | Visual Computing: Geometry, Graphics, and Vision</TITLE>
+</head>
+<body>
+
+
+
+<H1>Chapter 3: Coordinate Pipelines.</H1>
+
+
+<UL>
+
+<LI> <A HREF="../programs/casting.cpp">casting.cpp</A>: Sample program which shows how to cast Euclidean into projective points and vice-versa.
+
+<P>
+
+
+<LI> <A HREF="../programs/segmentintersection-projective.cpp">segmentintersection-projective.cpp</A>: Compute the potential intersection point of two line segments using the cross-product: cross-product for 
+ defining supporting lines and cross-product of the line vectors for determining the intersection projective point 
+(require OpenGL(R)). 
+<A HREF="../programs/segdonotintersect.png">snapshot1 PNG</A> 
+<A HREF="../programs/segdointersect.png">snapshot2 PNG</A>
+ 
+<P>
+
+<LI> <A HREF="../programs/PolygonTransform.cpp">PolygonTransform.cpp</A>: 2D polygon transformations (rotations, symmetries, shears, etc.). Require OpenGL(R).
+<A HREF="../programs/polygontransform-1.png">snapshot1 PNG</A> 
+<A HREF="../programs/polygontransform-2.png">snapshot2 PNG</A>
+<A HREF="../programs/polygontransform-3.png">snapshot3 PNG</A> 
+
+<P>
+
+<LI> <A HREF="../programs/3dtransformations.cpp">3dtransformations.cpp</A>: 3D mesh transformations (rotations, symmetries, shears, etc.). Require OpenGL(R).
+Require the Stanford bunny mesh in the include file <A HREF="../programs/bunny.h">bunny.h</A>.
+<A HREF="../programs/meshtransform-1.png">snapshot1 PNG</A> 
+<A HREF="../programs/meshtransform-2.png">snapshot2 PNG</A>
+<A HREF="../programs/meshtransform-3.png">snapshot3 PNG</A> 
+<BR>
+The 3D bunny model is courtesy of (c) <A HREF="http://graphics.stanford.edu/data/3Dscanrep/">The Stanford 3D scanning repository</A>, Marc Levoy.
+
+<P>
+
+<LI> <A HREF="../programs/rotation-by-quaternion.cpp">rotation-by-quaternion.cpp</A>: Sample program that shows how to use quaternion arithmetic for performing rotations
+around some given axis. Require OpenGL(R)
+<A HREF="../programs/quatforrot-1.png">snapshot1 PNG</A> 
+<A HREF="../programs/quatforrot-2.png">snapshot2 PNG</A>
+
+<P>
+
+<LI> <A HREF="../programs/isometricprojection.cpp">isometricprojection.cpp</A>: Choosing the view direction and hence the projection plane for getting an isometric projection of cube(s). Require OpenGL(R)
+<A HREF="../programs/isometricprojection.png">snapshot PNG</A> 
+
+<P>
+
+<LI><A HREF="../programs/openglviewport.cpp">openglviewport.cpp</A>: Render several views onto a same device display using viewport mappings. Require OpenGL(R)
+<A HREF="../programs/openglviewport.png">snapshot PNG</A> 
+
+
+<P>
+
+<LI><A HREF="../programs/Unperspective.cpp">Unperspective.cpp</A>: 
+Rectify an input perspective image so that the planar surface (eg., sign, etc.) looks as if taken from front position.
+You need the input image <A HREF="../programs/newcourt.ppm">newcourt.ppm</A>.
+Result image is called  <A HREF="../programs/unperspective-newcourt.ppm">unperspective-newcourt.ppm</A> 
+
+
+<P>
+
+<LI><A HREF="../programs/BlendHomography.cpp">BlendHomography.cpp</A>: 
+Match two perspective images by an homography related a common planar surface (book cover).
+You need the input image <A HREF="../programs/bookcovers1.ppm">bookcovers1.ppm</A> and <A HREF="../programs/bookcovers2.ppm">bookcovers2.ppm</A>.
+Result image is called  <A HREF="../programs/blendhomography.ppm">blendhomography.ppm</A> 
+
+
+<P>
+
+<LI><A HREF="../programs/logpolartransform.cpp">logpolartransform.cpp</A>: 
+Log-polar transform on a source image.
+You need the input image <A HREF="../programs/cambridge512.ppm">cambridge512.ppm</A>.
+Result image is called  <A HREF="../programs/logpolar.ppm">logpolar.ppm</A> 
+
+
+<P>
+
+<LI><A HREF="../programs/sphericalmapping.cpp">sphericalmapping.cpp</A>: 
+Spherical mapping (theta-phi) of an image (with given field of view).
+You need the input image <A HREF="../programs/normal120deg.ppm">normal120deg.ppm</A>.
+Result image is called  <A HREF="../programs/sphericalimage.ppm">sphericalimage.ppm</A> 
+
+<P>
+
+<LI><A HREF="../programs/lineconics.cpp">lineconics.cpp</A>: 
+An easy way to rasterize conics, line conics and dual conics.
+Result image is called  <A HREF="../programs/draw.ppm">draw.ppm</A> 
+
+<P>
+
+<LI><A HREF="../programs/plucker.cpp">plucker.cpp</A>: 
+A sample program using Plucker coordinates of lines to answer incidence or intersection test of lines.
+Define the dot product of Plucker lines.
+
+<P>
+
+<LI><A HREF="../programs/radialdistortion.cpp">radialdistortion.cpp</A>: 
+A simple interactive interface for visualizing the radial distortion. Require OpenGL(R).
+<A HREF="../programs/radialdistortion.png">snapshot PNG</A> 
+
+
+<P>
+
+<LI><A HREF="../programs/checkerboard.cpp">checkerboard.cpp</A>: 
+Create a checkerboard image, save this image into <A HREF="../programs/checkerboard.ppm">checkerboard.ppm</A> and display a textured quad. Require OpenGL(R).
+<A HREF="../programs/checkerboarddemo.png">snapshot PNG</A> 
+
+
+
+<P>
+
+<LI><A HREF="../programs/spheremap.cpp">spheremap.cpp</A>: 
+Reflection mapping using a sphere map environment image and the Utah teapot. Require OpenGL(R).
+You need this sphere map image: <A HREF="../programs/mirrorball512.ppm">mirrorball512.ppm</A>.
+<A HREF="../programs/spheremap.png">snapshot PNG</A> 
+
+
+<P>
+
+<LI><A HREF="../programs/latlong2spherical.cpp">latlong2spherical.cpp</A>: 
+Environment map conversion procedure using generic pixel-to-ray and ray-to-pixel primitives.
+You need this equirectangular environment map image: <A HREF="../programs/latlong.ppm">latlong.ppm</A>.
+The output is a spherical mirror ball image <A HREF="../programs/spherical.ppm">spherical.ppm</A> that you can also use in the former
+OpenGL(R) reflection mapping program.
+
+
+
+
+
+<br>&nbsp
+<br>Last updated, May 2005.
+
+</body>
+</html>
