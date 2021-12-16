@@ -1,0 +1,52 @@
+Supremum/Infimum and Nonlinear Averaging of Positive Definite Symmetric Matrices
+Jes\'us Angulo
+3-33
+The {R}iemannian Mean of Positive Matrices
+Rajendra Bhatia
+35-51
+The Geometry of Low-Rank {K}alman Filters
+Silv\`ere Bonnabel and Rodolphe Sepulchre
+53-68
+KV Cohomology in Information Geometry
+Michel Nguiffo Boyom and Paul Mirabeau Byande
+69-92
+Derivatives of Multilinear Functions of Matrices
+Priyanka Grover
+93-109
+Jensen Divergence-Based Means of SPD Matrices
+Frank Nielsen and Meizhu Liu and Baba C. Vemuri
+111-122
+Exponential Barycenters of the Canonical {C}artan Connection and Invariant Means on {L}ie Groups
+Xavier Pennec and Vincent Arsigny
+123-166
+Medians and Means in {R}iemannian Geometry: Existence, Uniqueness and Computation
+Marc Arnaudon and Fr\'ed\'eric Barbaresco and Le Yang
+169-197
+Information Geometry of Covariance Matrix: {C}artan-{S}iegel Homogeneous Bounded Domains, {M}ostow/{B}erger Fibration and {F}r\'echet Median
+Fr\'ed\'eric Barbaresco
+199-255
+On the Use of Matrix Information Geometry for Polarimetric {SAR} Image Classification
+Pierre Formont and Jean-Philippe Ovarlez and Fr\'ed\'eric Pascal
+257-276
+Doppler Information Geometry for Wake Turbulence Monitoring
+Zhongxun Liu and Fr\'ed\'eric Barbaresco
+277-290
+Review of the Application of Matrix Information Theory in Video Surveillance
+M. K. Bhuyan and T. Malathi
+293-321
+Comparative Evaluation of Symmetric {SVD} Algorithms for Real-Time Face and Eye Tracking
+Tapan Pradhan and Aurobinda Routray and Bibek Kabi
+323-340
+Real-Time Detection of Overlapping Sound Events with Non-Negative Matrix Factorization
+Arnaud Dessein and Arshia Cont and Guillaume Lemaitre
+341-371
+Mining Matrix Data with {B}regman Matrix Divergences for Portfolio Selection
+Richard Nock and Brice Magdalou and Eric Briys and Frank Nielsen
+373-402
+Learning Mixtures by Simplifying Kernel Density Estimators
+Olivier Schwander and Frank Nielsen
+403-426
+Particle Filtering on {R}iemannian Manifolds. Application to Covariance Matrices Tracking
+Hichem Snoussi
+427-449
+

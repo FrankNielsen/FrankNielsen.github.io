@@ -1,0 +1,180 @@
+\begin{thebibliography}{18}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Nielsen and Bhatia(2012)]{MIG-2012}
+Frank Nielsen and Rajendra Bhatia, editors.
+\newblock \emph{Matrix Information Geometry (Revised Invited Papers)}, 2012.
+  Springer.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9}.
+
+\bibitem[Angulo(2012)]{MIG2012-Chapter1}
+Jes\'us Angulo.
+\newblock Supremum/infimum and nonlinear averaging of positive definite
+  symmetric matrices.
+\newblock In Frank Nielsen and Rajendra Bhatia, editors, \emph{Matrix
+  Information Geometry}, pages 3--33, 2012.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9_1}.
+\newblock URL \url{http://www.informationgeometry.org/MIG/}.
+
+\bibitem[Bhatia(2012)]{MIG2012-Chapter2}
+Rajendra Bhatia.
+\newblock The {R}iemannian mean of positive matrices.
+\newblock In Frank Nielsen and Rajendra Bhatia, editors, \emph{Matrix
+  Information Geometry}, pages 35--51, 2012.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9_2}.
+\newblock URL \url{http://www.informationgeometry.org/MIG/}.
+
+\bibitem[Bonnabel and Sepulchre(2012)]{MIG2012-Chapter3}
+Silv\`ere Bonnabel and Rodolphe Sepulchre.
+\newblock The geometry of low-rank {K}alman filters.
+\newblock In Frank Nielsen and Rajendra Bhatia, editors, \emph{Matrix
+  Information Geometry}, pages 53--68, 2012.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9_3}.
+\newblock URL \url{http://www.informationgeometry.org/MIG/}.
+
+\bibitem[Boyom and Byande(2012)]{MIG2012-Chapter4}
+Michel~Nguiffo Boyom and Paul~Mirabeau Byande.
+\newblock {KV} cohomology in information geometry.
+\newblock In Frank Nielsen and Rajendra Bhatia, editors, \emph{Matrix
+  Information Geometry}, pages 69--92, 2012.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9_4}.
+\newblock URL \url{http://www.informationgeometry.org/MIG/}.
+
+\bibitem[Grover(2012)]{MIG2012-Chapter5}
+Priyanka Grover.
+\newblock Derivatives of multilinear functions of matrices.
+\newblock In Frank Nielsen and Rajendra Bhatia, editors, \emph{Matrix
+  Information Geometry}, pages 93--109, 2012.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9_5}.
+\newblock URL \url{http://www.informationgeometry.org/MIG/}.
+
+\bibitem[Nielsen et~al.(2012)Nielsen, Liu, and Vemuri]{MIG2012-Chapter6}
+Frank Nielsen, Meizhu Liu, and Baba~C. Vemuri.
+\newblock Jensen divergence-based means of {SPD} matrices.
+\newblock In Frank Nielsen and Rajendra Bhatia, editors, \emph{Matrix
+  Information Geometry}, pages 111--122, 2012.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9_6}.
+\newblock URL \url{http://www.informationgeometry.org/MIG/}.
+
+\bibitem[Pennec and Arsigny(2012)]{MIG2012-Chapter7}
+Xavier Pennec and Vincent Arsigny.
+\newblock Exponential barycenters of the canonical {C}artan connection and
+  invariant means on {L}ie groups.
+\newblock In Frank Nielsen and Rajendra Bhatia, editors, \emph{Matrix
+  Information Geometry}, pages 123--166, 2012.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9_7}.
+\newblock URL \url{http://www.informationgeometry.org/MIG/}.
+
+\bibitem[Arnaudon et~al.(2012)Arnaudon, Barbaresco, and Yang]{MIG2012-Chapter8}
+Marc Arnaudon, Fr\'ed\'eric Barbaresco, and Le~Yang.
+\newblock Medians and means in {R}iemannian geometry: Existence, uniqueness and
+  computation.
+\newblock In Frank Nielsen and Rajendra Bhatia, editors, \emph{Matrix
+  Information Geometry}, pages 169--197, 2012.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9_8}.
+\newblock URL \url{http://www.informationgeometry.org/MIG/}.
+
+\bibitem[Barbaresco(2012)]{MIG2012-Chapter9}
+Fr\'ed\'eric Barbaresco.
+\newblock Information geometry of covariance matrix: {C}artan-{S}iegel
+  homogeneous bounded domains, {M}ostow/{B}erger fibration and {F}r\'echet
+  median.
+\newblock In Frank Nielsen and Rajendra Bhatia, editors, \emph{Matrix
+  Information Geometry}, pages 199--255, 2012.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9_9}.
+\newblock URL \url{http://www.informationgeometry.org/MIG/}.
+
+\bibitem[Formont et~al.(2012)Formont, Ovarlez, and Pascal]{MIG2012-Chapter10}
+Pierre Formont, Jean-Philippe Ovarlez, and Fr\'ed\'eric Pascal.
+\newblock On the use of matrix information geometry for polarimetric {SAR}
+  image classification.
+\newblock In Frank Nielsen and Rajendra Bhatia, editors, \emph{Matrix
+  Information Geometry}, pages 257--276, 2012.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9_10}.
+\newblock URL \url{http://www.informationgeometry.org/MIG/}.
+
+\bibitem[Liu and Barbaresco(2012)]{MIG2012-Chapter11}
+Zhongxun Liu and Fr\'ed\'eric Barbaresco.
+\newblock Doppler information geometry for wake turbulence monitoring.
+\newblock In Frank Nielsen and Rajendra Bhatia, editors, \emph{Matrix
+  Information Geometry}, pages 277--290, 2012.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9_11}.
+\newblock URL \url{http://www.informationgeometry.org/MIG/}.
+
+\bibitem[Bhuyan and Malathi(2012)]{MIG2012-Chapter12}
+M.~K. Bhuyan and T.~Malathi.
+\newblock Review of the application of matrix information theory in video
+  surveillance.
+\newblock In Frank Nielsen and Rajendra Bhatia, editors, \emph{Matrix
+  Information Geometry}, pages 293--321, 2012.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9_12}.
+\newblock URL \url{http://www.informationgeometry.org/MIG/}.
+
+\bibitem[Pradhan et~al.(2012)Pradhan, Routray, and Kabi]{MIG2012-Chapter13}
+Tapan Pradhan, Aurobinda Routray, and Bibek Kabi.
+\newblock Comparative evaluation of symmetric {SVD} algorithms for real-time
+  face and eye tracking.
+\newblock In Frank Nielsen and Rajendra Bhatia, editors, \emph{Matrix
+  Information Geometry}, pages 323--340, 2012.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9_13}.
+\newblock URL \url{http://www.informationgeometry.org/MIG/}.
+
+\bibitem[Dessein et~al.(2012)Dessein, Cont, and Lemaitre]{MIG2012-Chapter14}
+Arnaud Dessein, Arshia Cont, and Guillaume Lemaitre.
+\newblock Real-time detection of overlapping sound events with non-negative
+  matrix factorization.
+\newblock In Frank Nielsen and Rajendra Bhatia, editors, \emph{Matrix
+  Information Geometry}, pages 341--371, 2012.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9_14}.
+\newblock URL \url{http://www.informationgeometry.org/MIG/}.
+
+\bibitem[Nock et~al.(2012)Nock, Magdalou, Briys, and
+  Nielsen]{MIG2012-Chapter15}
+Richard Nock, Brice Magdalou, Eric Briys, and Frank Nielsen.
+\newblock Mining matrix data with {B}regman matrix divergences for portfolio
+  selection.
+\newblock In Frank Nielsen and Rajendra Bhatia, editors, \emph{Matrix
+  Information Geometry}, pages 373--402, 2012.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9_15}.
+\newblock URL \url{http://www.informationgeometry.org/MIG/}.
+
+\bibitem[Schwander and Nielsen(2012)]{MIG2012-Chapter16}
+Olivier Schwander and Frank Nielsen.
+\newblock Learning mixtures by simplifying kernel density estimators.
+\newblock In Frank Nielsen and Rajendra Bhatia, editors, \emph{Matrix
+  Information Geometry}, pages 403--426, 2012.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9_16}.
+\newblock URL \url{http://www.informationgeometry.org/MIG/}.
+
+\bibitem[Snoussi(2012)]{MIG2012-Chapter17}
+Hichem Snoussi.
+\newblock Particle filtering on {R}iemannian manifolds. {A}pplication to
+  covariance matrices tracking.
+\newblock In Frank Nielsen and Rajendra Bhatia, editors, \emph{Matrix
+  Information Geometry}, pages 427--449, 2012.
+\newblock ISBN 978-3-642-30231-2.
+\newblock \doi{978-3-642-30232-9_17}.
+\newblock URL \url{http://www.informationgeometry.org/MIG/}.
+
+\end{thebibliography}

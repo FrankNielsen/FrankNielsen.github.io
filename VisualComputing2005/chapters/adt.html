@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+        "http://www.w3.org/TR/REC-html40/strict.dtd">
+
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Abstract Data Structures | Visual Computing: Geometry, Graphics, and Vision</TITLE>
+</head>
+<body>
+
+
+
+<H1>Chapter 2: Abstract Data Structures.</H1>
+
+
+<UL>
+
+<LI> <A HREF="../programs/fibonacci.cpp">Fibonacci.cpp</A>: Compute the first elements of Fibonacci series with or without pointer arithmetic.
+
+<P>
+
+<LI>  <A HREF="../programs/indexremapping.cpp">indexremapping.cpp</A>: Conversions between 1D and 2D array indices of arrays.
+
+<P>
+
+<LI> <A HREF="../programs/multidim-indexremapping.cpp">multidim-indexremapping.cpp</A>: Conversions between 1D and dD array indices of arrays.
+
+<P>
+
+<LI> <A HREF="../programs/linkedlist.cpp">linkedlist.cpp</A>: Simple templated linked list class.
+
+<P>
+
+<LI> <A HREF="../programs/areafloodfill.cpp">areafloodfill.cpp</A>: Area flood-filling using a queue.
+Input image <A HREF="../programs/fillex.ppm">fillex.ppm</A>  (Result is written in <A HREF="../programs/floodfill-result.ppm">floodfill-result.ppm</A>)
+
+
+<P>
+
+<LI> <A HREF="../programs/genericdictionary.cpp">genericdictionary.cpp</A>:
+This short program shows how to overload the less than comparison operator to get a generic dictionary. 
+Two segments defining the diagonals of a square are created. We associate to them two line equations.
+Depending on the position of the sweep line, we show that seg1 is below or above seg2.
+
+
+
+<P>
+
+<LI> <A HREF="../programs/ShamosHoey.cpp">ShamosHoey.cpp</A>:
+Detect whether a set of line segments intersect or not.
+Implement in a STL fashion a simple but optimal algorithm 
+ to detect whether there exists an intersection point among a set of n segments in O(n log n) time.
+<A HREF="../programs/linesegmentdetect-1.png">Snapshot 1 PNG</A>,
+<A HREF="../programs/linesegmentdetect-2.png">Snapshot 2 PNG</A> and
+<A HREF="../programs/linesegmentdetect-3.png">Snapshot 3 PNG</A>.
+
+<P>
+
+
+<LI> <A HREF="../programs/srg.cpp">srg.cpp</A>: Statistical region growing segmentation using the union-find data structure of Tarjan.
+Call srg.exe srg-source.ppm.
+Input image <A HREF="../programs/srg-source.ppm">srg-source.ppm</A>  (Result is written in <A HREF="../programs/srg-output.ppm">srg-output.ppm</A>)
+
+<P>
+
+<LI> <A HREF="../programs/priorityqueue-stl.cpp">priorityqueue-stl.cpp</A>: Priority queue in C++ STL  (sample program)
+
+<P>
+
+<LI> <A HREF="../programs/hashing-stl.cpp">hashing-stl.cpp</A>: 1D Hashing in C++ STL  (sample program)
+
+<P>
+
+<LI> <A HREF="../programs/traits-numerics.cpp">traits-numerics.cpp</A>: Traits class concept using the numerics class in C++
+
+<P>
+
+<LI> <A HREF="../programs/traits-geometrykernel.cpp">traits-geometrykernel.cpp</A>:  Geometric traits class are useful for encapsulating the geometric kernel and the predicates of algorithms.
+The code computes the convex hull of a point set using Andrew's algorithm (traits adapted from the class notes of Lutz Kettner). (This code is not robust. See chapter Robustness for more.) 
+Require OpenGL, see <A HREF="../programs/geotraits-convexhull.png">snapshot (PNG)</A>.
+
+</UL>
+
+
+
+<br>&nbsp
+<br>Last updated, May 2005.
+
+</body>
+</html>
