@@ -1,0 +1,147 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"-->
+<!--DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Test</title>
+
+ <script type="text/javascript">
+  function get_rules() {
+    if (document.styleSheets[0].rules) return document.styleSheets[0].rules;
+    if (document.styleSheets[0].cssRules) return document.styleSheets[0].cssRules;
+    return null;
+  }
+  var rules=get_rules();
+  var show=new Object(); show.abstract=0; show.hindsight=0;
+  function toggle_all(id) {
+    show[id]=1-show[id];
+    var str=(show[id]?"block":"none");
+    var ps=document.body.getElementsByTagName("p");
+    for (var i=0;i<ps.length;i++) {
+      var e=ps[i]; if (e.className==id) e.style.display=str;
+    }
+  }
+  function get_p(root,className) {
+    var ps=root.getElementsByTagName("p");
+    for (var i=0;i<ps.length;i++) {
+      var e=ps[i]; if (e.className==className) return e;
+    }
+    return null;
+  }
+  function toggle(id) {
+    var row=document.getElementById(id);
+    var str=(get_p(row,"abstract").style.display=="block" &&
+             get_p(row,"hindsight").style.display=="block" ? "none" : "block");
+    get_p(row,"abstract").style.display=str;
+    get_p(row,"hindsight").style.display=str;
+  }
+  function get_rule(name) {
+    // see http://www.hunlock.com/blogs/Totally_Pwn_CSS_with_Javascript
+    for (var i=0;i<rules.length;i++) {
+      var e=rules[i]; if (e.selectorText==name) return e;
+    }
+    return null;
+  }
+  function init() {
+    // Cannot do toggle_all() here because document is not yet fully loaded.
+    if (!rules) return;
+    get_rule(".abstract").style.display="none";
+    get_rule(".hindsight").style.display="none";
+    get_rule(".checkboxes").style.display="inline";
+  }
+  init();
+</script>
+</head>
+
+
+<body>
+
+<h1>ESSAI</h1>
+
+<p class="checkboxline">
+  <span class="checkboxes">
+  <input type="checkbox" onclick="toggle_all('abstract')"/><span class="abstractCheck">all abstracts</span>
+   &nbsp;
+  <input type="checkbox" onclick="toggle_all('hindsight')"/><span class="hindsightCheck">all hindsights</span>
+  </span>
+  &nbsp;&nbsp;
+  <span style="font-size:100%">See <a href="#copyr">copyrights</a> below.</span>
+
+</p>
+
+
+
+<tr id="factorimage">
+<td class="lcell"><a name="factorimage"></a>
+<img class="thumbnail" src="thumbnails/factorimage.red.jpg" width="240" height="116" alt=""/></td>
+<td class="rcell">
+<p class="title">Factoring repeated content within and among images.</p>
+<p class="authors">
+H. <a href="http://www.cc.gatech.edu/~whmin">Wang</a>,
+Y. <a href="http://research.microsoft.com/~ywexler/">Wexler</a>,
+E. <a href="http://research.microsoft.com/~eyalofek/">Ofek</a>,
+H. <a href="http://research.microsoft.com/~hoppe/">Hoppe</a>.
+
+</p>
+<p class="pub"><cite>SIGGRAPH 2008</cite>.</p>
+<p class="links">
+<a href="javascript:toggle('factorimage')">[info]</a>
+<a href="factorimage.pdf">[paper]</a>
+</p>
+<p class="abstract">
+  We reduce transmission bandwidth and memory space for images by factoring their repeated content. A
+  transform map and a condensed epitome are created such that all image blocks can be reconstructed from
+  transformed epitome patches. The transforms may include affine deformation and color scaling to account for
+  perspective and tonal variations across the image. The factored representation allows efficient
+  random-access through a simple indirection, and can therefore be used for real-time texture mapping without
+  expansion in memory. Our scheme is orthogonal to traditional image compression, in the sense that the
+  epitome is amenable to further compression such as DXT. Moreover it allows a new mode of progressivity,
+  whereby generic features appear before unique detail. Factoring is also effective across a collection of
+  images, particularly in the context of image-based rendering. Eliminating redundant content lets us include
+  textures that are several times as large in the same memory space.
+</p>
+<p class="hindsight">
+  No hindsights yet.
+
+</p>
+</td></tr>
+
+<tr id="smg">
+<td class="lcell"><a name="smg"></a>
+<img class="thumbnail" src="thumbnails/smg.red.jpg" width="240" height="123" alt=""/></td>
+<td class="rcell">
+<p class="title">Streaming multigrid for gradient-domain operations on large images.</p>
+<p class="authors">
+M. <a href="http://www.cs.jhu.edu/~misha/">Kazhdan</a>,
+H. <a href="http://research.microsoft.com/~hoppe/">Hoppe</a>.
+</p>
+<p class="pub"><cite>SIGGRAPH 2008</cite>.</p>
+
+<p class="links">
+<a href="javascript:toggle('smg')">[info]</a>
+<a href="smg.pdf">[paper]</a>
+<!--<a href="http://www.cs.jhu.edu/~misha/Streaming2DMultiGrid/supp.zip?">[megapixel results]</a>-->
+<a href="http://www.cs.jhu.edu/~misha/Streaming2DMultiGrid/StJames/15/StJames.html">[3.3G-pixel results]</a>
+<a href="http://www.cs.jhu.edu/~misha/Streaming2DMultiGrid/">[web page - soon]</a>
+</p>
+<p class="abstract">
+  We introduce a new tool to solve the large linear systems arising from gradient-domain image
+  processing. Specifically, we develop a streaming multigrid solver, which needs just two sequential passes
+  over out-of-core data. This fast solution is enabled by a combination of three techniques: (1) use of
+  second-order finite elements (rather than traditional finite differences) to reach sufficient accuracy in a
+  single V-cycle, (2) temporally blocked relaxation, and (3) multi-level streaming to pipeline the restriction
+  and prolongation phases into single streaming passes. A key contribution is the extension of the B-spline
+  finite-element method to be compatible with the forward-difference gradient representation commonly used
+  with images. Our streaming solver is also efficient for in-memory images, due to its fast convergence and
+  excellent cache behavior. Remarkably, it can outperform spatially adaptive solvers that exploit
+  application-specific knowledge. We demonstrate seamless stitching and tone-mapping of gigapixel images in
+  about an hour on a notebook PC.
+</p>
+<p class="hindsight">
+  No hindsights yet.
+
+</p>
+</td></tr>
+
+</table>
+

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simpleviewergallery maxImageWidth="640" maxImageHeight="480" textColor="0xFFFFFF" frameColor="0xFFFFFF"
+ frameWidth="20" stagePadding="40" navPadding="40" thumbnailColumns="5" thumbnailRows="5" 
+ navPosition="left" vAlign="center" hAlign="center" title="ETVC'08 LIX Colloquium                                               Right-click image to open in full size" 
+ enableRightClickOpen="true" backgroundImagePath="" imagePath="" thumbPath="">
+<image>
+	<filename>ETVC08-BabaVEMURI.JPG</filename>
+	<caption>Baba VEMURI</caption>
+</image>
+
+<image>
+	<filename>ETVC08-CordeliSCHMID.JPG</filename>
+	<caption>Cordelia SCHMID</caption>
+</image>
+
+
+<image>
+	<filename>ETVC08-DimitriMETAXAS.JPG</filename>
+	<caption>Dimitri METAXAS</caption>
+</image>
+
+<image>
+	<filename>ETVC08-FrancisBACH.JPG</filename>
+	<caption>Francis BACH</caption>
+</image>
+
+<image>
+	<filename>ETVC08-FredericBARBARESCO.JPG</filename>
+	<caption>Frederic BARBARESCO</caption>
+</image>
+
+<image>
+	<filename>ETVC08-HiroshiMATSUZOE.JPG</filename>
+	<caption>Hiroshi MATSUZOE</caption>
+</image>
+
+<image>
+	<filename>ETVC08-JeanDanielBOISSONNAT.JPG</filename>
+	<caption>Jean-Daniel BOISSONNAT</caption>
+</image>
+
+<image>
+	<filename>ETVC08-JeanMarcSTEYAERT.JPG</filename>
+	<caption>Jean-Marc STEYAERT</caption>
+</image>
+
+<image>
+	<filename>ETVC08-JunZHANG.JPG</filename>
+	<caption>Jun ZHANG</caption>
+</image>
+
+<image>
+	<filename>ETVC08-LeonidasGUIBAS.JPG</filename>
+	<caption>Leonidas GUIBAS</caption>
+</image>
+
+<image>
+	<filename>ETVC08-MarkusGROSS.JPG</filename>
+	<caption>Markus GROSS</caption>
+</image>
+
+<image>
+	<filename>ETVC08-MartinVETTERLI.JPG</filename>
+	<caption>Martin VETTERLI</caption>
+</image>
+
+<image>
+	<filename>ETVC08-MichelBARLAUD.JPG</filename>
+	<caption>Michel BARLAUD</caption>
+</image>
+
+<image>
+	<filename>ETVC08-NikosPARAGIOS.JPG</filename>
+	<caption>Nikos PARAGIOS</caption>
+</image>
+
+<image>
+	<filename>ETVC08-PascalFUA.JPG</filename>
+	<caption>Pascal FUA</caption>
+</image>
+
+<image>
+	<filename>ETVC08-RameshRASKAR.JPG</filename>
+	<caption>Ramesh RASKAR</caption>
+</image>
+
+
+<image>
+	<filename>ETVC08-RichardNOCK.JPG</filename>
+	<caption>Richard NOCK</caption>
+</image>
+
+<image>
+	<filename>ETVC08-Shun-ichiAMARI.JPG</filename>
+	<caption>Shun-ichi AMARI</caption>
+</image>
+
+<image>
+	<filename>ETVC08-StephaneMALLAT.JPG</filename>
+	<caption>Stephane MALLAT</caption>
+</image>
+
+<image>
+	<filename>ETVC08-SureshVENKATSUBRAMANIAN.JPG</filename>
+	<caption>Suresh VENKATSUBRAMANIAN</caption>
+</image>
+
+<image>
+	<filename>ETVC08-SylvainLAZARD.JPG</filename>
+	<caption>Sylvain LAZARD</caption>
+</image>
+
+<image>
+	<filename>ETVC08-TetsuoASANO.JPG</filename>
+	<caption>Tetsuo ASANO</caption>
+</image>
+
+<image>
+	<filename>ETVC08-XavierPENNEC.JPG</filename>
+	<caption>Xavier PENNEC</caption>
+</image>
+
+
+<image>
+	<filename>ETVC08-XiaotinYIN.JPG</filename>
+	<caption>Xiaotin YIN</caption>
+</image>
+
+
+</simpleviewergallery>
