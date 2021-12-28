@@ -18,20 +18,49 @@ A statistical model can either be
 </ul>
 </p>
 <p style="background-color:#ffccee;"> 
-The <b>Fisher-Rao manifolds</b> of a statistical parametric model is a Riemannian manifold equipped with the <b>Fisher information metric</b> and the geodesic length called the <b>Rao's distance</b>.
-More generally, Amari proposed the <b>dualistic structure</b> of IG which consists of a pair of torsion-free affine connections coupled to the Fisher metric.
-Given a dualistic structure, we can build generically a one-parameter family of dualistric structures, called the <b>alpha-geometry</b>.
+The <b>Fisher-Rao manifold</b> of a statistical parametric model is a Riemannian manifold equipped
+ with the <b>Fisher information metric</b>.
+ The geodesic length on a Fisher-Rao manifold is called <b>Rao's distance</b> [Hotelling 1930][Rao 1945].
+More generally, Amari proposed the <b>dualistic structure</b> of IG which consists 
+of a pair of torsion-free affine connections coupled to the Fisher metric [Amari 1980's].
+Given a dualistic structure, we can build generically a one-parameter family of
+ dualistic information-geometric structures, 
+called the <b>α-geometry</b>.
 When both connections are flat, the space is said <b>dually flat</b>: 
-For example, the Amari's ±1-structures of <b>exponential families</b> and <b>mixture families</b> are dually flat spaces.
-Geodesics are defined as autoparallel curves with respect to a connection.
-Eguchi showed how to build from a smooth distortion (originally called contrast function) a dualistic structure: The <b>information geometry of divergences</b>.
-The information geometry of <b>Bregman divergences</b> yields   dually flat spaces, <b>Hessian manifolds</b> 
-(with metric tensor a Hessian metric).
-Since geometric structures shape spaces, these information-geometric structures can also be used in non-statistical contexts too like interior point methods with barrier functions in optimization or time-series models, etc.
+For example, the Amari's ±1-structures of <b>exponential families</b> and <b>mixture families</b> 
+are examples of dually flat spaces.
+In differential geometry, geodesics are defined as autoparallel curves with respect to a connection.
+When using the default Levi-Civita metric connection derived from the Fisher metric on Fisher-Rao manifolds, 
+we get locally Rao's distance minimizing geodesics.
+Eguchi showed how to build from a smooth distortion (originally called a contrast function) 
+a dualistic structure: The <b>information geometry of divergences</b> [Eguchi 1982].
+The information geometry of <b>Bregman divergences</b> yields dually flat spaces, special cases of <b>Hessian manifolds</b> 
+(equipped with a metric tensor being a Hessian metric).
+Since geometric structures shape spaces independently of applications, 
+these pure information-geometric Fisher-Rao/α-structures can also be used in 
+non-statistical contexts too: For example, for analyzing interior point methods with barrier functions in optimization, or for studying time-series models, etc.
+</p>
+
+<p style="background-color: #f2e6ff;">
+<b>Statistical divergences</b> between parametric statistical models amount to 
+<b>parameter divergences</b> on which we can use the Eguchi's divergence information geometry 
+to get a dualistic structure.
+A <b>projective divergence</b> is a divergence which is invariant by independent rescaling of its parameters.
+A statistical projective divergence is thus useful for estimating computationally intractable statistical models (eg., gamma divergences or singly-sided projective Hyvärinen divergence).
+A <b>conformal divergence</b> is a divergence scaled by a conformal factor which may depend on one or two of its arguments.
+The metric tensor obtained from Eguchi's information divergence of a conformal divergence 
+is a <b>conformal metric</b> of the metric obtained from the divergence, hence its name.
+By analogy to total least squares vs least squares, a
+ <b>total divergence</b> is a divergence which is invariant wrt. to rotations (eg., total Bregman divergences).
+ An important property of divergences on the probability simplex is to be <b>monotone</b> by coarse-graining.
+ That is, merging bins and considering reduced histograms should give a distance less or equal than the distance on the full resolution histograms.
+ This <b>information monotonicity<b> property holds for f-divergences, 
+ Hilbert log cross-ratio distance, or Aitchison distance for example.
+ Some statistical divergences are upper <b>bounded</b> (eg., Jensen-Shannon divergences) while others are not (eg., Jeffreys' divergence).
 </p>
 
 
-<h2><u>Tutorials and surveys</u></h2>
+<h2><u>Information geometry: Tutorials and surveys</u></h2>
 
 <ul>
 <li><IMG SRC="new.png"><A HREF="https://www.ams.org/journals/notices/202201/rnoti-p36.pdf" target="_blank">The Many Faces of Information Geometry</A>, AMS Notices (9 pages), 2022.
@@ -199,7 +228,7 @@ Approximating Covering and Minimum Enclosing Balls in Hyperbolic Geometry
 <h1>Some applications of information geometry</h1>
 
 
-<h2>Natural gradient</h2>
+<h2><u>Natural gradient</u></h2>
 
 <ul>
 <li><A HREF="https://proceedings.mlr.press/v139/lin21e.html" target="_blank">
@@ -210,7 +239,7 @@ Relative Fisher Information and Natural Gradient for Learning Large Modular Mode
 
 </ul>
 
-<h2>Clustering</h2>
+<h2><u>Centers and clustering</u></h2>
 
 <ul>
 <li><A HREF="https://arxiv.org/abs/1311.5125" target="_blank">
@@ -232,7 +261,7 @@ https://www.mdpi.com/1099-4300/16/6/3273</A>, Entropy 2014
 
 </ul>
 
-<h2>Other applications</h2>
+<h2><u>Miscellaneous applications</u></h2>
 
 <ul>
 <li><A HREF="https://proceedings.mlr.press/v161/masrani21a.html" target="_blank">
@@ -249,7 +278,7 @@ An Information-Geometric Characterization of Chernoff Information
 
 <h1>Dissimilarities, distances, divergences and diversities</h1>
 
-<h2>Jensen-Shannon divergence</h2>
+<h2><u>Jensen-Shannon divergence</u></h2>
 
 <ul>
 
@@ -265,7 +294,7 @@ On the Jensen-Shannon Symmetrization of Distances Relying on Abstract Means</A>,
 
 </ul>
 
-<h2>f-divergences</h2>
+<h2><u>f-divergences</u></h2>
 
 <ul>
 <li><A HREF="https://arxiv.org/abs/2101.12459" target="_blank">
@@ -291,18 +320,18 @@ Total Bregman divergence and its applications to DTI analysis</A>, IEEE Transact
 
 </ul>
 
-<h2>Projective divergences</h2>
+<h2><u>Projective divergences</u></h2>
 <ul>
 <li><A HREF="https://www.mdpi.com/1099-4300/19/3/122" target="_blank">
 On Hölder Projective Divergences</A>, Entropy 2017, 19(3), 122
 
 <li><A HREF="https://www.researchgate.net/publication/312697428_Patch_Matching_with_Polynomial_Exponential_Families_and_Projective_Divergences" target="_blank">
 Patch Matching with Polynomial Exponential Families and Projective Divergences</A>, SISAP 2016
-(<b>gamma divergence</b>)
+(projective <b>gamma divergence</b>)
 
 </ul>
 
-<h2>Optimal transport</h2>
+<h2><u>Optimal transport/Wasserstein distances</u></h2>
 Earth mover distances (EMD), Wasserstein distances
 
 <ul>
@@ -325,7 +354,7 @@ Earth Mover Distance on superpixels</A>, IEEE ICIP 2010
 
 </ul>
 
-<h2>Shannon, Rényi, Tsallis, Sharmal-Mittal entropies, cross-entropies and divergences</h2>
+<h2><u>Shannon, Rényi, Tsallis, Sharmal-Mittal entropies, cross-entropies and divergences</u></h2>
 
 <ul>
 
@@ -343,7 +372,7 @@ Entropies and cross-entropies of exponential families</A>, IEEE ICIP 2010
 
 </ul>
 
-<h2>Chernoff information</h2>
+<h2><u>Chernoff information</u></h2>
 
 
 <ul>
@@ -364,7 +393,7 @@ Hypothesis Testing, Information Divergence and Computational Geometry
 </ul>
  
 
-<h2>Divergences between mixtures</h2>
+<h2><u>Divergences between mixtures</u></h2>
  
 <ul>
 
@@ -401,7 +430,7 @@ Closed-form information-theoretic divergences for statistical mixtures</A>, ICPR
 
   
 <hr>
-<h1>Books</h1>
+<h1>Edited books and proceedings</h1>
 
  	<ul>
    <li><A HREF="https://www.springer.com/us/book/9783030025199" target="_blank">Geometric Structures of Information</A>, Springer 2019
@@ -412,13 +441,15 @@ For Image and Signal Processing</A>, Springer 2017
    <li><A HREF="https://www.springer.com/la/book/9783642302312" target="_blank">Matrix Information Geometry</A>, Springer 2013
    
   
- <li><A HREF="https://www.springer.com/la/book/9783642008252" target="_blank">ETVC 2008</A>
+ <li>Proceedings: <A HREF="https://www.springer.com/la/book/9783642008252" target="_blank">ETVC 2008</A>
   <A HREF="https://www.springer.com/la/book/9783642400193" target="_blank">GSI'13</A>
    <A HREF="https://www.springer.com/us/book/9783319250397" target="_blank">GSI'15</A>
     <A HREF="https://www.springer.com/jp/book/9783319684444" target="_blank">GSI'17</A>
   <A HREF="https://www.springer.com/jp/book/9783030269791" target="_blank">GSI'19</A>
   
    </ul>
+<hr>
+Home page of <A HREF="https://franknielsen.github.io/GSI/" target="_blank">Geometric Science of Information</A>
 <hr>
 December 2021.
     </body>
