@@ -16,8 +16,6 @@ A statistical model can either be
 (eg., family of Gaussian mixture models) or 
 <li>non-parametric (family of mutually absolutely continuous smooth densities).
 </ul>
-A parametric statistical model is said <b>regular</b> when the Fisher information matrix is positive-definite (and well-defined).
-Otherwise, the statistical model is irregular (eg., infinite Fisher information and semi-positive definite Fisher information when the model is not identifiable).
 </p>
 <p style="background-color:#ffccee;"> 
 The <b>Fisher-Rao manifold</b> of a statistical parametric model is a Riemannian manifold equipped
@@ -28,21 +26,19 @@ of a pair of torsion-free affine connections coupled to the Fisher metric [Amari
 Given a dualistic structure, we can build generically a one-parameter family of
  dualistic information-geometric structures, 
 called the <b>α-geometry</b>.
-When both connections are flat, the information-geometric space is said <b>dually flat</b>: 
+When both connections are flat, the space is said <b>dually flat</b>: 
 For example, the Amari's ±1-structures of <b>exponential families</b> and <b>mixture families</b> 
-are famous examples of dually flat spaces in information geometry.
-In differential geometry, <b>geodesics</b> are defined as autoparallel curves with respect to a connection.
+are examples of dually flat spaces.
+In differential geometry, geodesics are defined as autoparallel curves with respect to a connection.
 When using the default Levi-Civita metric connection derived from the Fisher metric on Fisher-Rao manifolds, 
-we get  Rao's distance which are locally minimizing geodesics.
-Eguchi showed how to build from any smooth distortion (originally called a contrast function) 
+we get locally Rao's distance minimizing geodesics.
+Eguchi showed how to build from a smooth distortion (originally called a contrast function) 
 a dualistic structure: The <b>information geometry of divergences</b> [Eguchi 1982].
-The information geometry of <b>Bregman divergences</b> yields dually flat spaces:
-It is a special cases of <b>Hessian manifolds</b> which are differentiable manifolds 
-equipped with a metric tensor being a Hessian metric and a flat connection [Shima 2007].
-Since geometric structures scaffold spaces independently of any applications, 
-these pure information-geometric Fisher-Rao structure and α-structures of statistical models 
-can also be used in  non-statistical contexts too: 
-For example, for analyzing interior point methods with barrier functions in optimization, or for studying time-series models, etc.
+The information geometry of <b>Bregman divergences</b> yields dually flat spaces, special cases of <b>Hessian manifolds</b> 
+(equipped with a metric tensor being a Hessian metric).
+Since geometric structures shape spaces independently of applications, 
+these pure information-geometric Fisher-Rao/α-structures can also be used in 
+non-statistical contexts too: For example, for analyzing interior point methods with barrier functions in optimization, or for studying time-series models, etc.
 </p>
 
 <p style="background-color: #f2e6ff;">
@@ -50,8 +46,7 @@ For example, for analyzing interior point methods with barrier functions in opti
 <b>parameter divergences</b> on which we can use the Eguchi's divergence information geometry 
 to get a dualistic structure.
 A <b>projective divergence</b> is a divergence which is invariant by independent rescaling of its parameters.
-A statistical projective divergence is thus useful for estimating computationally 
-intractable statistical models (eg., gamma divergences, Cauchy-Schwarz and Hölder divergences, or singly-sided projective Hyvärinen divergence).
+A statistical projective divergence is thus useful for estimating computationally intractable statistical models (eg., gamma divergences or singly-sided projective Hyvärinen divergence).
 A <b>conformal divergence</b> is a divergence scaled by a conformal factor which may depend on one or two of its arguments.
 The metric tensor obtained from Eguchi's information divergence of a conformal divergence 
 is a <b>conformal metric</b> of the metric obtained from the divergence, hence its name.
@@ -90,54 +85,16 @@ The 4-parameter Bregman identity is also explained</p>
 
 <li><A HREF="https://arxiv.org/abs/1301.3578" target="_blank">Cramér-Rao Lower Bound and Information Geometry</A>, Connected at Infinity II: On the work of Indian mathematicians (R. Bhatia and C.S. Rajan, Eds.), special volume of Texts and Readings In Mathematics (TRIM), Hindustan Book Agency, 2013
 <p>A description of the pathbreaking paper of Calyampudi Radhakrishna Rao (1945): "Information and the accuracy attainable in the estimation of statistical parameters", 1945.</p>
-
-
-<li><A HREF="https://arxiv.org/abs/0911.4863" target="_blank">
-Statistical exponential families: A digest with flash cards</A>, 2009
-
-
-<li><A HREF="https://www.researchgate.net/publication/262236656_Pattern_Learning_and_Recognition_on_Statistical_Manifolds_An_Information-Geometric_Review" target="_blank">
-Pattern Learning and Recognition on Statistical Manifolds: An Information-Geometric Review</A>, SIMBAD 2013
-
 </ul>
 
 
-<h2><u>Fisher-Rao manifolds</u> (Riemannian manifolds and Hamadard manifolds)</h2>
+<h2><u>Fisher-Rao manifolds</u></h2>
 <ul>
-
-<li>Fisher-Rao manifold of the categorical distributions
-
-<p>Fisher-Rao manifold of the categorical distributions can be isometrically embedded on the positive orthant of the sphere of radius 2 in 
-Euclidean space. Rao distance   thus corresponds to the length of great circle arc, and relaxing the embedded distributions to positive measures, we get twice the Hellinger divergence.
- (<A HREF="https://arxiv.org/abs/2104.13801" target="_blank">explanation</A>)
-</p>
-
-<li><A HREF="https://proceedings.mlr.press/v70/sun17b.html" target="_blank">
-Relative Fisher Information and Natural Gradient for Learning Large Modular Models</A>, ICML 2017
-<p>Dynamic geometry with relative Fisher information metric</p>
-
 <li><A HREF="https://hal.archives-ouvertes.fr/hal-00560187/document" target="_blank">On Approximating the Riemannian 1-Center
 </A>,  Computational Geometry, 2013.
 <p>Approximating the smallest enclosing Riemannian ball by a simple iterative algorithm which proves the existence of coresets. Applications to Hadamard manifolds (hyperbolic geometry and Riemannian manifold of symmetric positive-definite matrices equipped with the trace metric.</p>
 
-
-<li><A HREF="https://www.researchgate.net/publication/322997672_GLSR-VAE_Geodesic_latent_space_regularization_for_variational_autoencoder_architectures" target="_blank">
-GLSR-VAE: Geodesic latent space regularization for variational autoencoder architectures 
-</A>, IEEE SSCI 2017: 1-7
-
 </ul>
-
-<h2><u>Cones</u></h2>
-
-<ul>
-<li>
-<A HREF="https://arxiv.org/abs/1604.01592" target="_blank">
-Fast (1+ε)-approximation of the Löwner extremal matrices of high-dimensional symmetric matrices
-</A>
-</li>
-
-</ul>
-
 
 <h2><u>Finsler manifolds</u></h2>
 Finsler manifolds are proposed to model irregular parametric statistical models (where Fisher information can be infinite)
@@ -159,40 +116,21 @@ Generalize the paraboloid lifting transform of Euclidean geometry to potentials 
 by the convex Bregman generators.
 </p>
 
-<li><A HREF="https://www.researchgate.net/publication/220983330_Visualizing_bregman_voronoi_diagrams" target="_blank">
-Visualizing Bregman Voronoi diagrams</A>, SoCG 2007: 121-122
-
-
-<li><A HREF="https://www.researchgate.net/publication/335159741_Geometry_and_Fixed-Rate_Quantization_in_Riemannian_Metric_Spaces_Induced_by_Separable_Bregman_Divergences" target="_blank">
-Geometry and Fixed-Rate Quantization in Riemannian Metric Spaces Induced by Separable Bregman Divergences
-</A>, GSI 2019
-
 <li><A HREF="https://hal.archives-ouvertes.fr/hal-00488441/document" target="_blank">
 https://www.researchgate.net/publication/221112384_Fitting_the_Smallest_Enclosing_Bregman_Ball</A>, ECML 2005
 
-<li>Bregman proximity data-structures and queries 
-[<A HREF="https://franknielsen.github.io/BregmanProximity/" target="_blank">web page</A>]:
-
-<ul>
 <li><A HREF="https://www.researchgate.net/publication/224576849_Bregman_Vantage_Point_Trees_for_Efficient_Nearest_Neighbor_Queries" target="_blank">
 Bregman Vantage Point Trees for Efficient Nearest Neighbor Queries</A>, ICME 2009.
 
 <li><A HREF="https://www.researchgate.net/publication/29605999_Tailored_Bregman_Ball_Trees_for_Effective_Nearest_Neighbors" target="_blank">
 Tailored Bregman Ball Trees for Effective Nearest Neighbors</A>, Euro CG 2010.
-</ul>
 
 <li><A HREF="https://www.researchgate.net/publication/266542408_Mining_Matrix_Data_with_Bregman_Matrix_Divergences_for_Portfolio_Selection" target="_blank">
 Mining Matrix Data with Bregman Matrix Divergences for Portfolio Selection</A>
 
-<li><A HREF="https://www.researchgate.net/publication/222403585_On_the_smallest_enclosing_information_disk" target="_blank">
-On the smallest enclosing information disk</A>,
- Inf. Process. Lett. 105(3): 93-97 (2008)
-
-
-
 </ul>
 
-<h2><u>Exponential families</u> and <u>Mixture families</u></h2>
+<h2><u>Exponential families</u></h2>
 Continuous or discrete exponential families
 <ul>
 <li><IMG SRC="new.png"><A HREF="https://arxiv.org/abs/2109.14920" target="_blank">
@@ -203,31 +141,21 @@ to appear as "The Kullback-Leibler divergence between lattice Gaussian distribut
 <li><A HREF="https://arxiv.org/abs/2104.10548" target="_blank">
 A note on some information-theoretic divergences between Zeta distributions</A>
 
-<li><A HREF="https://www.researchgate.net/publication/329073090_Monte_Carlo_Information-Geometric_Structures" target="_blank">
-Monte Carlo Information-Geometric Structures</A>, Geometric Structures of Information, Springer 2019
-
-<li>k-MLE:
-</ul>
-
 <li><A HREF="https://www.researchgate.net/publication/314884662_Online_k-MLE_for_Mixture_Modeling_with_Exponential_Families" target="_blank">
-Online k-MLE for Mixture Modeling with Exponential Families</A>, GSI 2015
+Online k-MLE for Mixture Modeling with Exponential Families</A>
 
 <li><A HREF="https://arxiv.org/abs/1203.5181" target="_blank">
 k-MLE: A fast algorithm for learning statistical mixture models</A>, IEEE ICASSP 2012
 
-<li><A HREF="https://www.researchgate.net/publication/261845618_Fast_Learning_of_Gamma_Mixture_Models_with_k-MLE" target="_blank">
-Fast Learning of Gamma Mixture Models with k-MLE</A>, SIMBAD 2013: 235-249
-
-<li><A HREF="https://www.researchgate.net/publication/261342740_K-MLE_for_mixtures_of_generalized_Gaussians" target="_blank">
-k-MLE for mixtures of generalized Gaussians</A>,
- ICPR 2012: 2825-2828
-
-</ul>
-
 <li><A HREF="https://www.researchgate.net/publication/223932258_Simplification_and_hierarchical_representations_of_mixtures_of_exponential_families" target="_blank">
 Simplification and hierarchical representations of mixtures of exponential families</A>,
 Signal Process. 90(12): 3197-3212 (2010)
- 
+</ul>
+
+
+<h2><u>Mixture families</u></h2>
+
+<ul>
 <li><IMG SRC="new.png"><A HREF="https://arxiv.org/abs/2104.13801" target="_blank">
 The analytic dually flat space of the statistical mixture family of two prescribed distinct Cauchy components</A>
 
@@ -235,13 +163,7 @@ The analytic dually flat space of the statistical mixture family of two prescrib
 On the Geometry of Mixtures of Prescribed Distributions</A>, IEEE ICASSP 2018
 </ul>
 
-<h2><u>Information geometry of deformed exponential families</u></h2>
-<p>q-deformed exponential families, q-Gaussians, etc.</p>
 
-<ul>
-<li><A HREF="https://www.mdpi.com/1099-4300/22/7/713" target="_blank">
-On Voronoi Diagrams on the Information-Geometric Cauchy Manifolds</A>, Entropy 2020, 22(7), 713
-</ul>
 
 <h2><u>Information geometry of singular statistical models</u></h2>
 
@@ -298,16 +220,6 @@ Classification in the Siegel Space for Vectorial Autoregressive Data</A>, GSI 20
 
 <li><A HREF="https://www.researchgate.net/publication/24165620_Hyperbolic_Voronoi_Diagrams_Made_Easy" target="_blank">
  Hyperbolic Voronoi Diagrams Made Easy</A>, ICCSA 2010
- 
- <li><A HREF="https://www.researchgate.net/publication/261118968_Model_centroids_for_the_simplification_of_Kernel_Density_estimators" target="_blank">
- Model centroids for the simplification of Kernel Density estimators</A>,
- ICASSP 2012: 737-740
- 
- 
- <li><A HREF="https://www.researchgate.net/publication/266656391_Visualizing_hyperbolic_Voronoi_diagrams" target="_blank">
- Visualizing hyperbolic Voronoi diagrams</A>,
- SoCG 2014: 90
-
 
 <li><A HREF="https://www.researchgate.net/publication/317299570_Approximating_Covering_and_Minimum_Enclosing_Balls_in_Hyperbolic_Geometry
 " target="_blank">
@@ -346,14 +258,9 @@ https://www.researchgate.net/publication/224460161_Sided_and_Symmetrized_Bregman
 <li><A HREF="https://arxiv.org/abs/1403.2485" target="_blank">
 Optimal Interval Clustering: Application to Bregman Clustering and Statistical Mixture Learning</A>, IEEE SPL 2014
 
-<li><A HREF="https://www.researchgate.net/publication/258792133_Jeffreys_Centroids_A_Closed-Form_Expression_for_Positive_Histograms_and_a_Guaranteed_Tight_Approximation_for_Frequency_Histograms" target="_blank">
-Jeffreys Centroids: A Closed-Form Expression for Positive Histograms and a Guaranteed 
-Tight Approximation for Frequency Histograms
-</A>, IEEE Signal Process. Lett. 20(7): 657-660 (2013)
-
 
 <li><A HREF="https://www.mdpi.com/1099-4300/16/6/3273" target="_blank">
-On Clustering Histograms with k-Means by Using Mixed α-Divergences</A>, Entropy 2014
+https://www.mdpi.com/1099-4300/16/6/3273</A>, Entropy 2014
 
 </ul>
 
@@ -367,22 +274,6 @@ q-Paths: Generalizing the geometric annealing path using power means</A>, UAI 20
 <li><A HREF="https://www.researchgate.net/publication/258791961_An_Information-Geometric_Characterization_of_Chernoff_Information" target="_blank">
 An Information-Geometric Characterization of Chernoff Information
 </A>, IEEE SPL 2013
-
-<li><A HREF="https://www.mdpi.com/1099-4300/20/3/203" target="_blank">
-Computational Information Geometry for Binary Classification of High-Dimensional Random Tensors</A>,  Entropy 20(3): 203 (2018)
-
-
-<li>
-<A HREF="https://www.researchgate.net/publication/317722830_Information_geometry_metric_for_random_signal_detection_in_large_random_sensing_systems" target="_blank">
-Information geometry metric for random signal detection in large random sensing systems
-</A>,
-ICASSP 2017: 4471-4475
-
-<li><A HREF="https://www.researchgate.net/publication/262321274_Information-geometric_lenses_for_multiple_focicontexts_interfaces" target="_blank">
-Information-geometric lenses for multiple foci+contexts interfaces</A>,
- SIGGRAPH ASIA Technical Briefs 2013: 18:1-18:4
-
-
 
 </ul>
 
@@ -404,11 +295,6 @@ On a Generalization of the Jensen-Shannon Divergence and the Jensen–Shannon Ce
 <li><A HREF="https://www.mdpi.com/1099-4300/21/5/485" target="_blank">
 On the Jensen-Shannon Symmetrization of Distances Relying on Abstract Means</A>, Entropy 2019
 
-<li><A HREF="https://www.researchgate.net/publication/46586313_A_family_of_statistical_symmetric_divergences_based_on_Jensen%27sinequality" target="_blank">
-A family of statistical symmetric divergences based on Jensen's inequality</A>,
- 2010. 
-
-
 </ul>
 
 <h2><u>f-divergences</u></h2>
@@ -420,56 +306,6 @@ On f-divergences between Cauchy distributions</A>
 <li><A HREF="https://arxiv.org/abs/1309.3029" target="_blank">
 On the Chi square and higher-order Chi distances for approximating f-divergences</A>
 </ul>
-
-
-<h2><u>Bregman divergences and some generalizations</u></h2>
-  <ul>
-<li><A HREF="https://www.researchgate.net/publication/353240484_Computing_Statistical_Divergences_with_Sigma_Points" target="_blank">
-Computing Statistical Divergences with Sigma Points</A>, GSI 2021
-
-
-<li><A HREF="https://www.researchgate.net/publication/352775033_Quasiconvex_Jensen_Divergences_and_Quasiconvex_Bregman_Divergences"
- target="_blank">
-Quasiconvex Jensen Divergences and Quasiconvex Bregman Divergences</A>, SPIGL 2021
-
-<li><A HREF="https://www.researchgate.net/publication/317352866_Generalizing_Skew_Jensen_Divergences_and_Bregman_Divergences_With_Comparative_Convexity"
- target="_blank">
-Generalizing Skew Jensen Divergences and Bregman Divergences With Comparative Convexity</A>,  IEEE Signal Process. Lett. 24(8): 1123-1127 (2017)
-
-
-<li><A HREF="https://www.researchgate.net/publication/221415886_Reranking_with_Contextual_Dissimilarity_Measures_from_Representational_Bregman_k-Means" target="_blank">
-Reranking with Contextual Dissimilarity Measures from Representational Bregman k-Means</A>,
- VISAPP (1) 2010: 118-123
-
-<li><A HREF="https://www.researchgate.net/publication/26820510_Bregman_Divergences_and_Surrogates_for_Learning" target="_blank">
-Bregman Divergences and Surrogates for Learning</A>,
- IEEE Trans. Pattern Anal. Mach. Intell. 31(11): 2048-2059 (2009)
-
-<li><A HREF="https://www.researchgate.net/publication/220939537_The_Dual_Voronoi_Diagrams_with_Respect_to_Representational_Bregman_Divergences" target="_blank">
-The Dual Voronoi Diagrams with Respect to Representational Bregman Divergences</A>,
-ISVD 2009: 71-78
-
-</ul>
-  
-  <h2><u>Jensen divergences and some generalizations</u></h2>
-  
-  
-  <ul>
-<li><A HREF="https://www.researchgate.net/publication/325653707_The_Chord_Gap_Divergence_and_a_Generalization_of_the_Bhattacharyya_Distance" target="_blank">
-  The Chord Gap Divergence and a Generalization of the Bhattacharyya Distance</A>, IEEE  ICASSP 2018
-  
-  
-  <li><A HREF="https://www.researchgate.net/publication/220110288_Skew_Jensen-Bregman_Voronoi_Diagrams" target="_blank">
-  Skew Jensen-Bregman Voronoi Diagrams</A>,
-  Trans. Comput. Sci. 14: 102-128 (2011)
-
-<li><A HREF="https://www.researchgate.net/publication/220939617_Jensen-Bregman_Voronoi_Diagrams_and_Centroidal_Tessellations" target="_blank">
-Jensen-Bregman Voronoi Diagrams and Centroidal Tessellations</A>,
- ISVD 2010: 56-65
-
-
-  </ul>
-  
   
 <h2>Conformal divergences</h2>
 <ul>
@@ -485,11 +321,6 @@ Total Bregman Divergence and its Applications to Shape Retrieval</A>, CVPR 2010
 <li><A HREF="https://www.researchgate.net/publication/47449618_Total_Bregman_Divergence_and_Its_Applications_to_DTI_Analysis" target="_blank">
 Total Bregman divergence and its applications to DTI analysis</A>, IEEE Transactions on Medical Imaging 30(2):475-83, 2011
 
-<li><A HREF="https://www.researchgate.net/publication/221830074_Shape_Retrieval_Using_Hierarchical_Total_Bregman_Soft_Clustering" target="_blank">
-Shape Retrieval Using Hierarchical Total Bregman Soft Clustering</A>,
-IEEE Trans. Pattern Anal. Mach. Intell. 34(12): 2407-2419 (2012)
-
-
 </ul>
 
 <h2><u>Projective divergences</u></h2>
@@ -503,25 +334,16 @@ Patch Matching with Polynomial Exponential Families and Projective Divergences</
 
 </ul>
 
-<h2><u>Optimal transport/Wasserstein distances/Sinkhorn distances</u></h2>
+<h2><u>Optimal transport/Wasserstein distances</u></h2>
 Earth mover distances (EMD), Wasserstein distances
 
 <ul>
-
-<li><A HREF="https://www.researchgate.net/publication/328040454_Sinkhorn_AutoEncoders" target="_blank">
-Sinkhorn AutoEncoders</A>, UAI 2019
-
-
 <li><A HREF="https://arxiv.org/abs/1812.08113" target="_blank">
 On The Chain Rule Optimal Transport Distance</A>
 
 
 <li><A HREF="https://arxiv.org/abs/1609.04495" target="_blank">
 Tsallis Regularized Optimal Transport and Ecological Inference</A>, AAAI 2017
-
-<li><A HREF="https://www.researchgate.net/publication/350102151_Clustering_Patterns_Connecting_COVID-19_Dynamics_and_Human_Mobility_Using_Optimal_Transport
-" target="_blank">
-Clustering Patterns Connecting COVID-19 Dynamics and Human Mobility Using Optimal Transport</A>, March 2021, Sankhya B 83(S1)
 
 <li><A HREF="https://arxiv.org/abs/1509.08144" target="_blank">
 Optimal copula transport for clustering multivariate time series</A>
@@ -539,11 +361,6 @@ Earth Mover Distance on superpixels</A>, IEEE ICIP 2010
 
 <ul>
 
-<li><A HREF="https://www.researchgate.net/publication/313541109_MaxEnt_Upper_Bounds_for_the_Differential_Entropy_of_Univariate_Continuous_Distributions" target="_blank">
-MaxEnt Upper Bounds for the Differential Entropy of Univariate Continuous Distributions</A>,
- IEEE Signal Process. Lett. 24(4): 402-406 (2017)
-
-
 <li><A HREF="https://arxiv.org/abs/1112.4221" target="_blank">
 A closed-form expression for the Sharma-Mittal entropy of exponential families</A>,
 Journal of Physics A: Mathematical and Theoretical 45.3 (2011).
@@ -555,11 +372,6 @@ On Rényi and Tsallis entropies and divergences for exponential families</A>
 <li><A HREF="https://www.researchgate.net/publication/221126408_Entropies_and_cross-entropies_of_exponential_families" target="_blank">
 Entropies and cross-entropies of exponential families</A>, IEEE ICIP 2010
 </li>
-
-<li><A HREF="https://www.researchgate.net/publication/221304784_Texture_Regimes_for_Entropy-Based_Multiscale_Image_Analysis" target="_blank">
-Texture Regimes for Entropy-Based Multiscale Image Analysis</A>, ECCV (3) 2010: 692-705
-
-
 
 </ul>
 
@@ -582,47 +394,9 @@ Hypothesis Testing, Information Divergence and Computational Geometry
 </A>, GSI 2013
 
 </ul>
-
-<h2><u>Other dissimilarities</u></h2>
-
-<ul>
-
-<li><A HREF="https://arxiv.org/abs/2003.13199" target="_blank">
-A note on Onicescu's informational energy and correlation coefficient in exponential families
-</A>
-
-<li><A HREF="https://arxiv.org/abs/1709.00740" target="_blank">
-Deep rank-based transposition-invariant distances on musical sequences
-</A>
-
-<li><A HREF="https://www.researchgate.net/publication/313074448_Quantifying_the_Invariance_and_Robustness_of_Permutation-Based_Indexing_Schemes" target="_blank">
-Quantifying the Invariance and Robustness of Permutation-Based Indexing Schemes
-</A>, SISAP 2016: 79-92
-
-
- </ul>
  
- 
- 
- <h2><u>Loss functions and proper scoring rules</u></h2>
- 
-<ul>
-<li><A HREF="https://proceedings.mlr.press/v48/patrini16.html" target="_blank">
-Loss factorization, weakly supervised learning and label noise robustness</a>, ICML 2016: 708-717
 
-
-
-<li><A HREF="https://www.researchgate.net/publication/269846855_Gentle_Nearest_Neighbors_Boosting_over_Proper_Scoring_Rules" target="_blank">
-Gentle Nearest Neighbors Boosting over Proper Scoring Rules</A>,
- IEEE Trans. Pattern Anal. Mach. Intell. 37(1): 80-93 (2015)
-
-
-
-</ul> 
-
-
-
-<h2><u>Divergences between statistical mixtures</u></h2>
+<h2><u>Divergences between mixtures</u></h2>
  
 <ul>
 
@@ -641,11 +415,6 @@ Guaranteed Deterministic Bounds on the total variation Distance between univaria
 Comix: Joint estimation and lightspeed comparison of mixture models
 </A>
 
-<li><A HREF="Bag-of-Components: An Online Algorithm for Batch Learning of Mixture Models" target="_blank">
-Bag-of-Components: An Online Algorithm for Batch Learning of Mixture Models</A>,
- GSI 2015
-
-
 <li><A HREF="https://www.mdpi.com/1099-4300/18/12/442" target="_blank">
 Guaranteed Bounds on Information-Theoretic Measures of Univariate Mixtures Using Piecewise Log-Sum-Exp Inequalities
 </a>, Entropy 2016, 18(12), 442
@@ -662,26 +431,11 @@ Closed-form information-theoretic divergences for statistical mixtures</A>, ICPR
 
 </ul>
 
-
-
-
   
 <hr>
 <h1>Edited books and proceedings</h1>
 
  	<ul>
-	
-	<li><A HREF="https://www.elsevier.com/books/geometry-and-statistics/nielsen/978-0-323-91345-4" target="_blank">
-Handbook of Geometry and Statistics</A>, Elsevier 2022
-	
-	
-	<li>
-	<A HREF="https://link.springer.com/book/10.1007/978-3-030-65459-7" target="_blank">
-	Progress in Information Geometry: Theory and Applications
-</A>, Springer 2021
-  
-  
-  
    <li><A HREF="https://www.springer.com/us/book/9783030025199" target="_blank">Geometric Structures of Information</A>, Springer 2019
    <li><A HREF="https://www.springer.com/fr/book/9783319470566" target="_blank">Computational Information Geometry
 For Image and Signal Processing</A>, Springer 2017
