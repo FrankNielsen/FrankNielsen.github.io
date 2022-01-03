@@ -1,0 +1,65 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage,amssymb,amsmath,amsthm,url,graphicx}
+
+\def\Cauchy{\mathrm{Cauchy}}
+
+\title{The harmonic mean of two independent Cauchy distributions is a Cauchy distribution}
+
+\author{Frank Nielsen}
+\date{December 2021}
+
+\begin{document}
+
+\maketitle
+
+Consider $C_1\sim\Cauchy(l_1,s_1)$ and $C_2\sim\Cauchy(l_2,s_2)$ two independent Cauchy distributions.
+Then their harmonic mean 
+$$
+C_{12}=\frac{1}{\frac{1}{2}\frac{1}{C_1}+\frac{1}{2}\frac{1}{C_2}}=\frac{2\, C_1C_2}{C_1+C_2}
+$$
+follows a Cauchy distribution.
+The proof is based on the following properties of Cauchy distributions:
+\begin{itemize}
+	\item Let $C\sim\Cauchy(l,s)$ then $\frac{1}{C}\sim\Cauchy\left(\frac{l}{l^2+s^2},\frac{s}{l^2+s^2}\right)$.
+	
+	\item Let $C\sim\Cauchy(l,s)$ then $\lambda C\sim\Cauchy(\lambda l,\lambda s)$.
+	
+	\item Let $C_1\sim\Cauchy(l_1,s_1)$ and $C_2\sim\Cauchy(l_2,s_2)$ be two independent Cauchy distributions.
+Then $C_1+C_2\sim\Cauchy(l_1+l_2,s_1+s_2)$.
+\end{itemize}
+
+It follows that $C_{12}\sim\Cauchy(l_{12},s_{12})$ with
+
+$$
+l_{12}=2\frac{(l_1s_2^2+l_2s_1^2+l_1l_2^2+l_1^2l_2)}{(l_1+l_2)^2+(s_1+s_2)^2},
+\quad
+s_{12}=2\frac{(s_1s_2^2+(s_1^2+l_1^2)s_2+l_2^2s_1)}{(l_1+l_2)^2+(s_1+s_2)^2}.
+$$
+
+The following code below in R illustrates the result:
+{\small
+\begin{verbatim}
+# install.packages("univariateML")
+library("univariateML")
+n <- 100000
+l1 <- 1.5
+s1 <- 1
+l2 <- 2
+s2 <- 3
+x1 <- rcauchy(n,l1,s1)
+x2 <- rcauchy(n,l2,s2)
+h12<- 2*x1*x2/(x1+x2)
+mlcauchy(h12)
+#l12
+2*(l1*s2*s2+l2*s1*s1+l1*l2*l2+l1*l1*l2)/((s1+s2)*(s1+s2)+(l1+l2)*(l1+l2))
+#s12
+2*(s1*s2*s2+(s1*s1+l1*l1)*s2+l2*l2*s1)/((s1+s2)*(s1+s2)+(l1+l2)*(l1+l2))
+\end{verbatim}
+}
+
+
+ 
+%\bibliographystyle{plain}
+%\bibliography{NGDBib.bib}
+
+\end{document}

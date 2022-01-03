@@ -1,0 +1,17 @@
+# install.packages("univariateML") # Frank.Nielsen@acm.org
+# The Harmonic mean of two independent Cauchy distributions (l1,s1) and (l2,s2) is a Cauchy distribution (l12,s12)
+library("univariateML")
+n <- 100000
+l1 <- 1.5
+s1 <- 1
+l2 <- 2
+s2 <- 3
+x1 <- rcauchy(n,l1,s1)
+x2 <- rcauchy(n,l2,s2)
+h12<- 2*x1*x2/(x1+x2)
+mlcauchy(h12)
+#l12
+2*(l1*s2*s2+l2*s1*s1+l1*l2*l2+l1*l1*l2)/((s1+s2)*(s1+s2)+(l1+l2)*(l1+l2))
+#s12
+2*(s1*s2*s2+(s1*s1+l1*l1)*s2+l2*l2*s1)/((s1+s2)*(s1+s2)+(l1+l2)*(l1+l2))
+# Running the above script, we get [1] 1.840708  [1] 1.610619
