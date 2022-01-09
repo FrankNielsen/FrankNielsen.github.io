@@ -1,48 +1,48 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: HarmonicMeanIndependentCauchyDistributions.aux
-I found no \citation commands---while reading file HarmonicMeanIndependentCauchyDistributions.aux
-I found no \bibdata command---while reading file HarmonicMeanIndependentCauchyDistributions.aux
-I found no \bibstyle command---while reading file HarmonicMeanIndependentCauchyDistributions.aux
-You've used 0 entries,
-            0 wiz_defined-function locations,
-            83 strings with 558 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+Database file #1: HarmonicMeanCauchyBIB.bib
+You've used 1 entry,
+            2118 wiz_defined-function locations,
+            504 strings with 4212 characters,
+and the built_in function-call counts, 335 in all, are:
+= -- 34
+> -- 7
 < -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
++ -- 3
+- -- 2
+* -- 26
+:= -- 60
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
+cite$ -- 1
+duplicate$ -- 11
+empty$ -- 30
+format.name$ -- 2
+if$ -- 66
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 8
+num.names$ -- 2
+pop$ -- 2
+preamble$ -- 1
+purify$ -- 3
 quote$ -- 0
-skip$ -- 0
+skip$ -- 7
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 36
+swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 4
 warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 3 error messages)
+while$ -- 4
+width$ -- 2
+write$ -- 13

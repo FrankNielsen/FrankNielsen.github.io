@@ -12,15 +12,20 @@
 
 \maketitle
 
+\begin{abstract}
+In this note, we prove the well-known fact~\cite{menon1962characterization} that the Harmonic mean of two Cauchy distributions is a Cauchy distribution.
+\end{abstract}
+
 Consider $C_1\sim\Cauchy(l_1,s_1)$ and $C_2\sim\Cauchy(l_2,s_2)$ two independent Cauchy distributions.
-Then their harmonic mean 
+Then their harmonic mean defined by
 $$
 C_{12}=\frac{1}{\frac{1}{2}\frac{1}{C_1}+\frac{1}{2}\frac{1}{C_2}}=\frac{2\, C_1C_2}{C_1+C_2}
 $$
 follows a Cauchy distribution.
-The proof is based on the following properties of Cauchy distributions:
+
+The proof is based on the following three properties of Cauchy distributions:
 \begin{itemize}
-	\item Let $C\sim\Cauchy(l,s)$ then $\frac{1}{C}\sim\Cauchy\left(\frac{l}{l^2+s^2},\frac{s}{l^2+s^2}\right)$.
+	\item Let $C\sim\Cauchy(l,s)$ then $\frac{1}{C}\sim\Cauchy\left(\frac{l}{l^2+s^2},\frac{s}{l^2+s^2}\right)=\frac{1}{l^2+s^2}\Cauchy(l,s)$.
 	
 	\item Let $C\sim\Cauchy(l,s)$ then $\lambda C\sim\Cauchy(\lambda l,\lambda s)$.
 	
@@ -57,9 +62,22 @@ mlcauchy(h12)
 \end{verbatim}
 }
 
+More generally, Menon~\cite{menon1962characterization} (\S 3) proved that for $n$ independent Cauchy distributions $C_i\sim \Cauchy(l_i,s_i)$, we have:
+$$
+H=\frac{1}{\sum_{i=1}^n \frac{1}{C_i}}\sim \Cauchy\left(\frac{l}{l^2+s^2},\frac{s}{l^2+s^2}\right),
+$$
+with
+\begin{eqnarray*}
+l &=& \sum_{i=1}^n \frac{l_i}{l_i^2+s_i^2},\\
+s &=& \sum_{i=1}^n \frac{s_i}{l_i^2+s_i^2}.
+\end{eqnarray*}
 
+Thus the harmonic mean of $n$ independent Cauchy distributions $C_i$'s is a Cauchy distribution  $\Cauchy\left(\frac{nl}{l^2+s^2},\frac{ns}{l^2+s^2}\right)$.
+
+\vskip 0.5cm
+\noindent{\bf Acknowledgments.} The author is indebted to Professor Kazuki Okamura (Shizuoka University, Japan) who pointed out reference~\cite{menon1962characterization}.
  
-%\bibliographystyle{plain}
-%\bibliography{NGDBib.bib}
+\bibliographystyle{plain}
+\bibliography{HarmonicMeanCauchyBIB}
 
 \end{document}
