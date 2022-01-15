@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>
+Generator: Gaussian mixture model(GMM)/Mixture of Gaussians(MoG)
+</TITLE>
+</HEAD>
+<BODY BGCOLOR="FFFFFF">
+
+The most famous statistical mixture consists of the family of Gaussian mixtures.<BR>
+In the literature, they bear the names of
+<UL>
+<LI> GMMs: Gaussian mixture models, or
+<LI> MoGs: Mixtures of Gaussians.
+</UL>
+
+The applet below generates random GMMs 
+(<b>k</b> components in <b>d</b> dimension with separability factor <b>epsilon</b>) 
+according to the <A HREF="http://en.wikipedia.org/wiki/Wishart_distribution">Wishart distribution</A> as follows:
+
+<UL>
+
+<LI> The weights <b>w[i]</b> are drawn uniformly from <b>[0,1]</b> (and renormalized so that they sum up to 1),
+
+<LI> The means <b>mu[i]</b> are also sampled from a uniform distribution in <b>[0,1]</b>,
+
+<LI> The variance-covariance matrix <b>Sigma[i]</b> (positive definite matrix) is computed as <b>A A^T</b> where the elements are drawn 
+from a normal distribution N(0,1) of unit variance centered at zero. 
+The matrix elements are scaled by a factor <b>epsilon</b>. 
+A smaller value of <b>epsilon</b> separates more the components of the Gaussians.
+
+</UL>
+
+
+
+<CENTER>
+
+<APPLET
+	code	= "GMMGenerator.class"
+	width	= "700"
+	height	= "500"
+	>
+</APPLET>
+</CENTER>
+<HR>
+Frank Nielsen, September 2008.
+</BODY>
+</HTML>

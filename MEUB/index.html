@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>MEUB: MaxEnt Upper Bounds for the differential entropy of Gaussian Mixture Models</title>
+</head>
+<body>
+
+
+<H1>MaxEnt upper bounds for the differential entropy of mixtures</H1>
+ 
+ 
+ <p>Rationale: 
+ It is well-known that the Gaussian distribution maximizes the entropy among all continuous distributions of prescribed variance.
+ Since we know the closed-form formula for the entropy of a Gaussian, we thus obtain a MaxEnt Upper Bound (MEUB) 
+ of the entropy of ANY continuous distribution (including mixtures like Gaussian Mixture Models, GMMs):<BR>
+ 
+ <img src="MEUB-V.png"><BR>
+ 
+ 
+Similarly, we report the closed-form formula for the Absolute Monomial Exponential Families (AMEFs) with density:<BR>
+ <img src="H-AMEF.png"><BR>
+
+ It follows that we get the collection of MaxEnt Upper Bounds (MEUBs):<BR>
+ 
+ <img src="MEUB.png"><BR>
+ For l=2, we get the variance bound.<BR>
+ 
+ For zero-centered GMM, we have:
+<BR>
+ <img src="MEUB1-0GMM.png"><BR>
+ </p>
+ 
+ 
+ <hr>
+ Download <A HREF="HGMMMEF-v0.1.zip">Java code</A>
+ <hr>
+ 
+ Properties:
+ <ul>
+ <li>For a fixed parameter value, the entropy of AMEF decreased with l.
+ 
+ <pre>
+ plot log(2)+log(gamma(1/l))-log(l)+(1/l)(1+log(l))+(1/l)*log(10), l=1 to 10
+ </pre>
+  <img src="plotHl.png"><BR>
+ 
+ </ul>
+ 
+<HR>
+Last updated, November 2016.
+
+ 
+  </body>
+
+</html>
+

@@ -1,0 +1,273 @@
+\form#0:\[ f(x; \mathbf{\Theta}) = \exp \left( \langle t(x), \mathbf{\Theta} \rangle - F(\mathbf{\Theta}) + k(x) \right) \]
+\form#1:$ \mathbf{\Theta} $
+\form#2:$\mathbf{\Lambda} = p \in [0,1]$
+\form#3:$\mathbf{\Theta} = \theta \in R^+$
+\form#4:$ \mathbf{H} = \eta \in [0,1] $
+\form#5:$ F( \mathbf{\Theta} ) $
+\form#6:$ \mathbf{\Theta} = \theta $
+\form#7:$ F(\mathbf{\Theta}) = \log \left( 1 + \exp \theta \right) $
+\form#8:$ \nabla F ( \mathbf{\Theta} )$
+\form#9:$ \nabla F( \mathbf{\Theta} ) = \frac{\exp \theta}{1 + \exp \theta} $
+\form#10:$ G(\mathbf{H})$
+\form#11:$ \mathbf{H} = \eta $
+\form#12:$ G(\mathbf{H}) = \log \left( \frac{\eta}{1-\eta} \right) \eta - \log \left( \frac{1}{1-\eta} \right) $
+\form#13:$ \nabla G (\mathbf{H})$
+\form#14:$ \nabla G( \mathbf{H} ) = \log \left( \frac{\eta}{1-\eta} \right) $
+\form#15:$ t(x)$
+\form#16:$ t(x) = x $
+\form#17:$ k(x) $
+\form#18:$ k(x) = 0 $
+\form#19:$ \mathbf{\Lambda} = p $
+\form#20:$ \mathbf{\Theta} = \log \left( \frac{p}{1-p} \right) $
+\form#21:$ \mathbf{\Lambda} = \frac{\exp\theta}{1+\exp\theta} $
+\form#22:$ \mathbf{H} = p $
+\form#23:$ \mathbf{H} = \eta$
+\form#24:$ \mathbf{\Lambda} = \eta $
+\form#25:$ f(x;p) $
+\form#26:$ f(x;p) = p^x (1-p)^{1-x} \mbox{ for } x \in \{0,1\} $
+\form#27:$ \mathbf{\Lambda}_1 $
+\form#28:$ \mathbf{\Lambda}_2 $
+\form#29:$ D_{\mathrm{KL}}(f_1\|f_2) = \log \left( \frac{1-p_1}{1-p_2} \right) - p_1 \log \left( \frac{p_2(1-p_1)}{p_1(1-p_2)} \right) $
+\form#30:$ n $
+\form#31:$\mathbf{\Lambda} = p \in [0,1] $
+\form#32:$\mathbf{\Theta} = \theta \in R $
+\form#33:$ \mathbf{H} = \eta \in [0,1]^+ $
+\form#34:$ F(\mathbf{\Theta}) = n \log (1 + \exp \theta) - \log (n!) $
+\form#35:$ \nabla F( \mathbf{\Theta} ) = \frac{n \exp \theta}{1 + \exp \theta} $
+\form#36:$ G(\mathbf{H}) = \eta \log \left( \frac{\eta}{n-\eta} \right) - n \log\left( \frac{n}{n-\eta} \right) $
+\form#37:$ \nabla G( \mathbf{H} ) = \log \left( \frac{\eta}{n-\eta} \right) $
+\form#38:$ k(x) = - \log (x! (n-x)!) $
+\form#39:$ \mathbf{\Lambda} = \frac{\exp \theta}{1 + \exp \theta} $
+\form#40:$ \mathbf{H} = np $
+\form#41:$ \mathbf{\Lambda} = \frac{\eta}{n} $
+\form#42:$ f(x;p) = \frac{n!}{x!(n-x)!} p^x (1-p)^{n-x} $
+\form#43:$ D_{\mathrm{KL}}(f_1\|f_2) = n (1-p_1) \log \left( \frac{1-p_1}{1-p_2} \right) + n p_1 \log \left( \frac{p_1}{p_2} \right) $
+\form#44:$ \mathbf{\Theta}$
+\form#45:$ F(\mathbf{\Theta}) $
+\form#46:$ \nabla F( \mathbf{\Theta} ) $
+\form#47:$ div F $
+\form#48:$ \mathbf{\Theta}_P$
+\form#49:$ \mathbf{\Theta}_Q$
+\form#50:$ div F( \mathbf{\Theta}_P \| \mathbf{\Theta}_Q ) = F(\mathbf{\Theta}_P) - F(\mathbf{\Theta}_Q) - \langle \mathbf{\Theta}_P-\mathbf{\Theta}_Q , \nabla F(\mathbf{\Theta}_Q) \rangle$
+\form#51:$ \mathbf{H} $
+\form#52:$ G(\mathbf{H}) $
+\form#53:$ \nabla G(\mathbf{H}) $
+\form#54:$ div G $
+\form#55:$ \mathbf{H}_P$
+\form#56:$ \mathbf{H}_Q$
+\form#57:$ div G( \mathbf{H}_P \| \mathbf{H}_Q ) = G(\mathbf{H}_P) - G(\mathbf{H}_Q) - \langle \mathbf{H}_P-\mathbf{H}_Q , \nabla G(\mathbf{H}_Q) \rangle$
+\form#58:$ t(x) $
+\form#59:$ \mathbf{\Lambda} $
+\form#60:$ f(x;\mathbf{\Theta}) $
+\form#61:$ f(x) = \exp \left( \langle \mathbf{\Theta} \ , \ t(x) \rangle - F(\mathbf{\Theta}) + k(x) \right) $
+\form#62:$ \mathbf{\Theta}_1$
+\form#63:$ \mathbf{\Theta}_2$
+\form#64:$ BD( \mathbf{\Theta_1} \| \mathbf{\Theta_2} ) = F(\mathbf{\Theta_1}) - F(\mathbf{\Theta_2}) - \langle \mathbf{\Theta_1} - \mathbf{\Theta_2} , \nabla F(\mathbf{\Theta_2}) \rangle $
+\form#65:$ \mathbf{\Lambda}_P $
+\form#66:$ \mathbf{\Lambda}_Q $
+\form#67:$ D_{\mathrm{KL}}(f_P\|f_Q) $
+\form#68:$ \alpha $
+\form#69:$ \nabla G \left( (1-\alpha) \nabla F (\mathbf{\Theta}_1) + \alpha \nabla F (\mathbf{\Theta}_2) \right) $
+\form#70:$ \mathbf{\Lambda}$
+\form#71:$\mathbf{\Lambda} = \sigma \in R^+$
+\form#72:$\mathbf{\Theta} = \theta \in R^-$
+\form#73:$ \mathbf{H} = \eta \in R^+ $
+\form#74:$ F(\mathbf{\Theta}) = \log \left( -\frac{2}{\theta} \right) $
+\form#75:$ \nabla F( \mathbf{\Theta} ) = -\frac{1}{\theta} $
+\form#76:$ G(\mathbf{H}) = - \log \eta $
+\form#77:$ \nabla G(\mathbf{H}) = -\frac{1}{\eta} $
+\form#78:$ t(x) = |x| $
+\form#79:$ \mathbf{\Lambda} = \sigma $
+\form#80:$ \mathbf{\Theta} = -\frac{1}{\sigma} $
+\form#81:$ \mathbf{\Lambda} = -\frac{1}{\theta} $
+\form#82:$ \mathbf{H} = \sigma $
+\form#83:$ f(x;\sigma) $
+\form#84:$ f(x;\sigma) = \frac{1}{ 2 \sigma } \exp \left( - \frac{|x|}{\sigma} \right) $
+\form#85:$ D_{\mathrm{KL}}(f_P\|f_Q) = \log \left( \frac{\sigma_Q}{\sigma_P} \right) + \frac{\sigma_P - \sigma_Q}{\sigma_Q} $
+\form#86:$f$
+\form#87:$n$
+\form#88:$x \in R^d$
+\form#89:\[ f(x) = \sum_{i=1}^n \alpha_i f_i(x)\]
+\form#90:$\alpha_i \in [0,1]$
+\form#91:$i^{\textrm{th}}$
+\form#92:$f_i$
+\form#93:$\sum_{i=1}^n \alpha_i=1$
+\form#94:$ f(x) $
+\form#95:$ \alpha_i $
+\form#96:$ \sum_{i=1}^n \alpha_i = 1 $
+\form#97:$ D_{\mathrm{KL}}(f\|g)$
+\form#98:$ n$
+\form#99:$\mathbf{\Lambda} = (p_1,\cdots,p_k) \in [0,1]^k$
+\form#100:$\mathbf{\Theta} = (\theta_1,\cdots,\theta_{k-1}) \in R^{k-1}$
+\form#101:$ \mathbf{H} = (\eta_1,\cdots,\eta_{k-1}) \in [0,n]^{k-1} $
+\form#102:$ \mathbf{\Theta} = (\theta_1, \cdots, \theta_{k-1}) $
+\form#103:$ F(\mathbf{\Theta}) = n \log \left( 1 + \sum_{i=1}^{k-1} \exp \theta_i \right) - \log n! $
+\form#104:$ \nabla F( \mathbf{\Theta} ) = \left( \frac{n \exp \theta_i}{1 + \sum_{j=1}^{k-1} \exp \theta_j} \right)_i $
+\form#105:$ \mathbf{H} = (\eta_1, \cdots, \eta_{k-1}) $
+\form#106:$ G(\mathbf{H}) = \left( \sum_{i=1}^{k-1} \eta_i \log \eta_i \right) + \left( n - \sum_{i=1}^{k-1} \eta_i \right) \log \left( n - \sum_{i=1}^{k-1} \eta_i \right) $
+\form#107:$ \nabla G( \mathbf{H} ) = \left( \log \left( \frac{\eta_i}{n - \sum_{j=1}^{k-1} \eta_j} \right) \right)_i $
+\form#108:$ t(x) = (x_1, \cdots, x_{k-1}) $
+\form#109:$ k(x) = - \sum_{i=1}^{k} \log x_i ! $
+\form#110:$ \mathbf{\Lambda} = (p_1, \cdots, p_k)$
+\form#111:$ \mathbf{\Theta} = \left( \log \left( \frac{p_i}{p_k} \right) \right)_i $
+\form#112:$ \mathbf{\Theta} = ( \theta_1, \cdots, \theta_{k-1} )$
+\form#113:$ \mathbf{\Lambda} = \begin{cases} p_i = \frac{\exp \theta_i}{1 + \sum_{j=1}^{k-1}(\exp \theta_j)} & \mbox{if $i<k$}\\ p_k = \frac{1}{1 + \sum_{j=1}^{k-1}(\exp \theta_j)} \end{cases} $
+\form#114:$ \mathbf{\Lambda} = ( p_1, \cdots, p_k )$
+\form#115:$ \mathbf{H} = \left( n p_i \right)_i$
+\form#116:$ \mathbf{H} = (\eta_1, \cdots, \eta_{k-1})$
+\form#117:$ \mathbf{\Lambda} = \begin{cases} p_i = \frac{\eta_i}{n} & \mbox{if $i<k$}\\ p_k = \frac{n - \sum_{j=1}^{k-1} \eta_j}{n} \end{cases}$
+\form#118:$ f(x_1,\cdots,x_k;p_1,\cdots,p_k,n) = \frac{n!}{x_1! \cdots x_k!} p_1^{x_1} \cdots p_k^{x_k} $
+\form#119:$ \mathbf{\Lambda}_\alpha $
+\form#120:$ \mathbf{\Lambda}_\beta $
+\form#121:$ D_{\mathrm{KL}}(f_1\|f_2) = n p_{\alpha,k} \log \frac{p_{\alpha,k}}{p_{\beta,k}} - n \sum_{i=1}^{k-1} p_{\alpha,i} \log \frac{p_{\beta,i}}{p_{\alpha,i}} $
+\form#122:$\mathbf{\Lambda} = ( \mu , \Sigma ) \mbox{ with } \mu \in \mathds{R}^d \mbox{ and } \Sigma \succ 0$
+\form#123:$\mathbf{\Theta} = ( \theta , \Theta )$
+\form#124:$\mathbf{H} = ( \eta , H )$
+\form#125:$ \mathbf{\Theta} = ( \theta , \Theta ) $
+\form#126:$ F(\mathbf{\Theta})=\frac{1}{4} \mathrm{tr}(\Theta^{-1}\theta\theta^T) - \frac{1}{2} \log \det\Theta + \frac{d}{2} log \pi $
+\form#127:$ \nabla F( \mathbf{\Theta} ) = \left( \frac{1}{2} \Theta^{-1} \theta , -\frac{1}{2} \Theta^{-1} -\frac{1}{4} (\Theta^{-1} \theta)(\Theta^{-1} \theta)^T \right) $
+\form#128:$ \mathbf{H} = ( \eta , H ) $
+\form#129:$ G(\mathbf{H}) = - \frac{1}{2} \log \left( 1 + \eta^T H^{-1} \eta \right) - \frac{1}{2} \log \det (-H) - \frac{d}{2} \log (2 \pi e) $
+\form#130:$ \nabla G(\mathbf{H}) = \left( -( H + \eta \eta^T )^{-1} \eta , -\frac{1}{2} ( H + \eta \eta^T )^{-1} \right) $
+\form#131:$ t(x) = (x , -x x^\top) $
+\form#132:$ \mathbf{\Lambda} = ( \mu , \Sigma ) $
+\form#133:$ \mathbf{\Theta} = \left( \Sigma^{-1} \mu , \frac{1}{2} \Sigma^{-1} \right)$
+\form#134:$ \mathbf{\Theta} = ( \theta , \Theta )$
+\form#135:$ \mathbf{\Lambda} = \left( \frac{1}{2} \Theta^{-1} \theta , \frac{1}{2} \Theta^{-1} \right) $
+\form#136:$ \mathbf{H} = \left( \mu , - (\Sigma + \mu \mu^T) \right) $
+\form#137:$ \mathbf{H} = ( \eta , H )$
+\form#138:$ \mathbf{\Lambda} = \left( \eta , - (H + \eta \eta^T) \right) $
+\form#139:$ f(x;\mu,\Sigma) $
+\form#140:$ f(x;\mu,\Sigma) = \frac{1}{ (2\pi)^{d/2} |\Sigma|^{1/2} } \exp \left( - \frac{(x-\mu)^T \Sigma^{-1}(x-\mu)}{2} \right) \mbox{ for } x \in \mathds{R}^d $
+\form#141:$ D_{\mathrm{KL}}(f_P \| f_Q) = \frac{1}{2} \left( \log \left( \frac{\det \Sigma_Q}{\det \Sigma_P} \right) + \mathrm{tr} \left( \Sigma_Q^{-1} \Sigma_P \right) + ( \mu_Q - \mu_P )^\top \Sigma_Q^{-1} ( \mu_Q - \mu_P ) - d \right) $
+\form#142:$\Sigma=$
+\form#143:$\mathbf{\Lambda} = \mu \mbox{ with } \mu \in \mathds{R}^d $
+\form#144:$\mathbf{\Theta} = \theta $
+\form#145:$\mathbf{H} = \eta $
+\form#146:$ F(\mathbf{\theta}) = \frac{1}{2} \theta^\top\theta + \frac{d}{2}\log 2\pi $
+\form#147:$ \nabla F( \mathbf{\Theta} ) = \theta $
+\form#148:$ F(\mathbf{\theta})= \frac{1}{2} \eta^\top\eta + \frac{d}{2}\log 2\pi $
+\form#149:$ \nabla G(\mathbf{H}) = \eta $
+\form#150:$ k(x) = -\frac{1}{2}x^\top x $
+\form#151:$ \mathbf{\Lambda} = \mu $
+\form#152:$ \mathbf{\Theta} = \mu $
+\form#153:$ \mathbf{\Lambda} = \theta $
+\form#154:$ \mathbf{H} = \mu $
+\form#155:$ f(x;\mu) $
+\form#156:$ f(x;\mu) = \frac{1}{ (2\pi)^{d/2} } \exp \left( - \frac{(x-\mu)^T (x-\mu)}{2} \right) \mbox{ for } x \in \mathds{R}^d $
+\form#157:$ D_{\mathrm{KL}}(f_P \| f_Q) = \frac{1}{2} ( \mu_Q - \mu_P )^\top( \mu_Q - \mu_P ) $
+\form#158:$ \lambda $
+\form#159:$ \lambda p $
+\form#160:$ \langle p , q \rangle $
+\form#161:$ m_1 $
+\form#162:$ m_2 $
+\form#163:$ m_1 + m_2 $
+\form#164:$ v_1 $
+\form#165:$ m_1 - m_2 $
+\form#166:$ m $
+\form#167:$ \lambda m$
+\form#168:$ tr(m_1 . m_2^\top) $
+\form#169:$ m_1 m_2$
+\form#170:$ v $
+\form#171:$ m . v$
+\form#172:$ m^{-1} $
+\form#173:$ m^\top $
+\form#174:$ \det (m)$
+\form#175:$ tr (m)$
+\form#176:$ \mathcal{U}(0,1)$
+\form#177:$ L $
+\form#178:$ LL^T$
+\form#179:$ m = L L^T$
+\form#180:$ m_1 = m_2 $
+\form#181:$\mathbf{\Lambda} = \lambda \in R^+$
+\form#182:$\mathbf{\Theta} = \theta \in R$
+\form#183:$ \mathbf{H} = \eta \in R^+$
+\form#184:$ F(\mathbf{\Theta}) = \exp \theta $
+\form#185:$ \nabla F( \mathbf{\Theta} ) = \exp \theta $
+\form#186:$ G(\mathbf{H}) = \eta \log \eta - \eta $
+\form#187:$ \nabla G( \mathbf{H} ) = \log \eta $
+\form#188:$ k(x) = - \log (x!) $
+\form#189:$ \mathbf{\Lambda} = \lambda $
+\form#190:$ \mathbf{\Theta} = \log \lambda $
+\form#191:$ \mathbf{\Lambda} = \exp \theta $
+\form#192:$ \mathbf{H} = \lambda $
+\form#193:$ f(x;\lambda) $
+\form#194:$ f(x;\lambda) = \frac{\lambda^x \exp(-\lambda)}{x!} $
+\form#195:$ D_{\mathrm{KL}}(f_P\|f_Q) = \lambda_Q - \lambda_P \left( 1 + \log \left( \frac{\lambda_Q}{\lambda_P} \right) \right) $
+\form#196:$ v_2 $
+\form#197:$ v_1 + v_2 $
+\form#198:$ v_1 - v_2 $
+\form#199:$ \lambda . v$
+\form#200:$ v_1^\top . v_2 $
+\form#201:$ v . v^\top $
+\form#202:$ v = (x_1, x_2, \cdots )$
+\form#203:$ \sum_i x_i = 1 $
+\form#204:$ v_1 = v_2 $
+\form#205:$ \|v\|_2 $
+\form#206:$ (v_1, m_1) $
+\form#207:$ (v_2, m_2) $
+\form#208:$ ( v_1 + v_2, m_1 + m_2 ) $
+\form#209:$ ( v_1 - v_2, m_1 - m_2 ) $
+\form#210:$ (v,m) $
+\form#211:$ ( \lambda v , \lambda m ) $
+\form#212:$ ( v_1 , m_1 ) $
+\form#213:$ ( v_2 , m_2 ) $
+\form#214:$ \langle v_1,v_2 \rangle + \langle m_1,m_2 \rangle $
+\form#215:$ ( v , m ) $
+\form#216:$ (v_1 , m_1) $
+\form#217:$ (v_2 , m_2) $
+\form#218:$ \mathbf{\Lambda} = \sigma^2 \in \mathds{R}^+ $
+\form#219:$ \mathbf{\Theta} = \theta \in \mathds{R}^- $
+\form#220:$ \mathbf{H} = \eta \in \mathds{R}^+ $
+\form#221:$ F(\mathbf{\theta}) = - \log (-2 \theta) $
+\form#222:$ \nabla F(\mathbf{\theta}) = -\frac{1}{\theta} $
+\form#223:$ G(\mathbf{\eta}) = - \log \eta $
+\form#224:$ \nabla G(\mathbf{\eta}) = -\frac{1}{\eta} $
+\form#225:$ t(x) = x^2 $
+\form#226:$ k(x) = \log x $
+\form#227:$ \mathbf{\Lambda} = \sigma^2 $
+\form#228:$ \mathbf{\Theta} = -\frac{1}{2 \sigma^2} $
+\form#229:$ \mathbf{\Lambda} = -\frac{1}{2\theta} $
+\form#230:$ \mathbf{H} = 2 \sigma^2 $
+\form#231:$ \mathbf{\Lambda} = \frac{\eta}{2} $
+\form#232:$ f(x;\sigma^2) = \frac{x}{\sigma^2} \exp \left( -\frac{x^2}{2\sigma^2} \right) $
+\form#233:$ D_{\mathrm{KL}}(f_P \| f_Q) = \log \left( \frac{\sigma_Q^2}{\sigma_P^2} \right) + \frac{ \sigma_P^2 - \sigma_Q^2 }{\sigma_Q^2} $
+\form#234:$\mathbf{\Lambda} = ( \mu , \sigma^2 ) \in R \times R^+$
+\form#235:$\mathbf{\Theta} = ( \theta_1 , \theta_2 ) \in R \times R^-$
+\form#236:$ \mathbf{H} = ( \eta_1 , \eta_2 ) \in R \times R^+$
+\form#237:$ \mathbf{\Theta} = ( \theta_1 , \theta_2 ) $
+\form#238:$ F(\mathbf{\Theta}) = -\frac{\theta_1^2}{4\theta_2} + \frac{1}{2} \log \left( -\frac{\pi}{\theta_2} \right) $
+\form#239:$ \nabla F(\mathbf{\Theta}) = \left( -\frac{\theta_1}{2 \theta_2} , -\frac{1}{2 \theta_2} + \frac{\theta_1^2}{4 \theta_2^2} \right) $
+\form#240:$ \mathbf{H} = ( \eta_1 , \eta_2 ) $
+\form#241:$ G(\mathbf{H}) = - \frac{1}{2} \log ( \eta_1^2 - \eta_2 ) $
+\form#242:$ \mathbf{H} = ( \eta_1 , \eta_2) $
+\form#243:$ \nabla G(\mathbf{H}) = \left( -\frac{\eta_1}{\eta_1^2-\eta_2} , \frac{1}{2 (\eta_1^2-\eta_2)} \right) $
+\form#244:$ t(x) = (x , x^2) $
+\form#245:$ \mathbf{\Lambda} = ( \mu , \sigma^2 )$
+\form#246:$ \mathbf{\Theta} = \left( \frac{\mu}{\sigma^2} , -\frac{1}{2\sigma^2} \right) $
+\form#247:$ \mathbf{\Theta} = ( \theta_1 , \theta_2 )$
+\form#248:$ \mathbf{\Lambda} = \left( -\frac{\theta_1}{2 \theta_2} , -\frac{1}{2 \theta_2} \right) $
+\form#249:$ \mathbf{H} = \left( \mu , \sigma^2 + \mu^2 \right) $
+\form#250:$ \mathbf{H} = ( \eta_1 , \eta_2 )$
+\form#251:$ \mathbf{\Lambda} = \left( \eta_1 , \eta_2 - \eta_1^2 \right) $
+\form#252:$ \mu $
+\form#253:$ \sigma $
+\form#254:$ \mu + \sigma \sqrt{ -2 \log ( x ) } \cos (2 \pi x) $
+\form#255:$ x \in \mathcal{U}(0,1)$
+\form#256:$ \sqrt{ -2 \log ( x ) } \cos (2 \pi x) $
+\form#257:$ f(x;\mu,\sigma^2) $
+\form#258:$ f(x;\mu,\sigma^2) = \frac{1}{ \sqrt{2\pi \sigma^2} } \exp \left( - \frac{(x-\mu)^2}{ 2 \sigma^2} \right) $
+\form#259:$ D_{\mathrm{KL}}(f_P\|f_Q) = \frac{1}{2} \left( 2 \log \frac{\sigma_Q}{\sigma_P} + \frac{\sigma_P^2}{\sigma_Q^2} + \frac{(\mu_Q-\mu_P)^2}{\sigma_Q^2} -1\right) $
+\form#260:$ \sigma^2 $
+\form#261:$\mathbf{\Lambda} = \mu \in R$
+\form#262:$ \mathbf{H} = \eta \in R$
+\form#263:$ \sigma^2$
+\form#264:$\sigma^2=1$
+\form#265:$ F(\mathbf{\Theta}) = \frac{\sigma^2 \theta^2 + \log(2 \pi \sigma^2)}{2} $
+\form#266:$ \nabla F( \mathbf{\Theta} ) = \sigma^2 \theta $
+\form#267:$ G(\mathbf{H}) = \frac{\eta^2}{2 \sigma^2} $
+\form#268:$ \nabla G( \mathbf{H} ) = \frac{\eta}{\sigma^2} $
+\form#269:$ k(x) = -\frac{x^2}{2 \sigma^2} $
+\form#270:$ \mathbf{\Theta} = \frac{\mu}{\sigma^2} $
+\form#271:$ \mathbf{\Lambda} = \theta \sigma^2 $
+\form#272:$ D_{\mathrm{KL}}(f_P\|f_Q) = \frac{(\mu_Q-\mu_P)^2}{2\sigma^2} $

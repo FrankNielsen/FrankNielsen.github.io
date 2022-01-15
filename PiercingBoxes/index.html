@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript (Firefox) demo: Fast stabbing of boxes in high dimensions, Theoretical Computer Science 246(1-2): 53-72 (2000)</title>
+  </head>
+  <body>
+		<script src="processing.js"></script> 
+		
+		<H1>Fast stabbing of boxes in high dimensions</h1>
+		This page describes the implementation (Java, Processing sketch v3, and Javascript via processing.js) of the paper:<br>
+		<A HREF="2000-J-TCS-StabbingBoxes.pdf" target="_blank">pdf</A> Fast stabbing of boxes in high dimensions, 
+		Theoretical Computer Science 246(1-2): 53-72 (2000)
+		<BR>
+pdf screenshots:		<A HREF="stabbing-snapshot-1.pdf" target="_blank">stabbing-snapshot-1.pdf</A>
+<A HREF="stabbing-snapshot-2.pdf" target="_blank">stabbing-snapshot-2.pdf</A>
+<A HREF="stabbing-snapshot-3.pdf" target="_blank">stabbing-snapshot-3.pdf</A>
+		<BR>
+		This work has then been extended to c-oriented polygons in<BR>
+		<A HREF="2001-J-TCS-PiercingOrientedPolygons.pdf" target="_blank">pdf</A> On point covers of c-oriented polygons. Theoretical Computer Science 263(1-2): 17-29 (2001). 
+		<br>
+		and in practice several heuristics have been compared (epsilon-nets, etc.):<br>
+		<A HREF="2001-J-TCS-PiercingOrientedPolygons.pdf" target="_blank">pdf</A> Combinatorial optimization algorithms for radio network planning. Theor. Comput. Sci. 263(1-2): 235-245 (2001)
+		
+	
+		
+		<HR>
+		
+		The Javascript demo has been tested on <b>Firefox browser</b> (it is processing program ran using processing.js).<BR>
+		If the program does not run, you can see a <A HREF="snapshot-stabbingboxes.png" target="_blank">snapshot <IMG SRC="snapshot-stabbingboxes.png" width=100></A><BR>
+		Mouse left-click+drag for adding a box or select from the menu for adding many random boxes
+		<BR>
+		
+		The heuristics compute in output-sensitive time an approximation of :
+<ul>
+<li>Non-overlapping boxes: A <b>maximum independent set</b> of axis-parallel rectangles  (also called isothetic d-dimensional boxes, independent set into k pairwise non-connected vertices)
+<li>Stabbing/Piercing/Covering boxes: A <b>minimum clique cover</b> of axis-parallel rectangles (vertices of a graph can be partitioned into k cliques)
+</ul>
+without computing the intersection graph (that would require quadratic time).
+<BR>
+
+
+
+
+		<div style="text-align: center;">
+			<canvas data-processing-sources="StabbingPiercingBoxes-WEB.pde" width="800"  width="500"  style="outline:none;-webkit-tap-highlight-color: rgba(0,0,0,0);"></canvas>
+		</div>
+		
+		
+		<ul>
+<li>The Java applet source code <A HREF="StabbingPiercingBoxes.java" target="_blank">StabbingPiercingBoxes.java</A>.
+The applet can be run online from <A HREF="https://www.lix.polytechnique.fr/~nielsen/StabbingBoxes/run.html" target="_blank">here</A>  (You need a Java plug-in in your browser)
+</li>
+<li>The processing source code <A HREF="StabbingPiercingBoxes.pde" target="_blank">pde</A>. 
+By pressing the 'p' key, you can save in pdf format (this functionality does not work from Javascript).
+Here are some pdfs produced from the processing sketch:  
+<A HREF="stabbing-snapshot-1.pdf" target="_blank">stabbing-snapshot-1.pdf</A>
+<A HREF="stabbing-snapshot-2.pdf" target="_blank">stabbing-snapshot-2.pdf</A>
+<A HREF="stabbing-snapshot-3.pdf" target="_blank">stabbing-snapshot-3.pdf</A>
+
+</li>
+<li>Fast stabbing of boxes in high dimensions. Theoretical Computer Science 246(1-2): 53-72 (2000).
+ <A HREF="2000-J-TCS-StabbingBoxes.pdf" target="_blank">pdf</A>
+</li>
+
+<li>On point covers of c-oriented polygons. Theoretical Computer Science 263(1-2): 17-29 (2001). 
+<A HREF="2001-J-TCS-PiercingOrientedPolygons.pdf" target="_blank">pdf</A>
+</li>
+		
+		<li>Combinatorial optimization algorithms for radio network planning. Theor. Comput. Sci. 263(1-2): 235-245 (2001)
+		<A HREF="2001-J-TCS-PiercingOrientedPolygons.pdf" target="_blank">pdf</A>		
+</li>
+		
+		</ul>
+		
+		<HR>
+Original Java applet program by Frank Nielsen (1996-1998), with processing code v3 adapted by <A HREF="http://perso.eleves.ens-rennes.fr/~achatali/"  target="_blank">Antoine Chatalic</A> (2015). <BR>
+(C) 2015 Frank Nielsen, All rights reserved.		
+  </body>
+</html>

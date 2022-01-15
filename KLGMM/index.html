@@ -1,0 +1,73 @@
+<H1>Kullback-Leibler divergence of mixtures/Differential Entropy of mixtures</H1>
+<b>Guaranteed bounds on the Kullback-Leibler divergence of univariate
+  mixtures using piecewise log-sum-exp inequalities</b> (<A HREF="https://arxiv.org/abs/1606.05850">arxiv 1606.05850</A>)<BR>
+  
+by Frank Nielsen and Ke Sun<BR>
+
+<HR>
+Information-theoretic measures such as the entropy, cross-entropy and the KullbackLeibler
+divergence between two mixture models is a core primitive in many signal processing
+tasks. Since the Kullback-Leibler divergence of mixtures provably does not admit a
+closed-form formula, it is in practice either estimated using costly Monte-Carlo stochastic
+integration, approximated, or bounded using various techniques. We present a fast and
+generic method that builds algorithmically closed-form lower and upper bounds on the entropy,
+the cross-entropy and the Kullback-Leibler divergence of mixtures. We illustrate the
+versatile method by reporting on our experiments for approximating the Kullback-Leibler
+divergence between univariate exponential mixtures, Gaussian mixtures, Rayleigh mixtures,
+and Gamma mixtures.
+<HR>
+<H2>Python source code</H2>
+Download the Python code for reproducible research:
+<A HREF="klmm.tar.gz">klmm.tar.gz</A>
+<HR>
+<H2>Differential Entropy</H2>
+For the Shannon entropy, the shell command produces the following pdf results:<BR>
+<A HREF="entropy_gmm1.pdf" TARGET="_blank">entropy_gmm1.pdf</A>
+<A HREF="entropy_gmm2.pdf" TARGET="_blank">entropy_gmm2.pdf</A>
+<A HREF="entropy_gmm3.pdf" TARGET="_blank">entropy_gmm3.pdf</A>
+<A HREF="entropy_gmm4.pdf" TARGET="_blank">entropy_gmm4.pdf</A>
+<A HREF="entropy_gmm5.pdf" TARGET="_blank">entropy_gmm5.pdf</A>
+<A HREF="entropy_gmm6.pdf" TARGET="_blank">entropy_gmm6.pdf</A>
+<BR>
+<H2>Kullback-Leibler divergence of mixtures</H2>
+<IMG SRC="KLGMMbounds.png"><BR>
+For the Kullback-Leibler divergence, the shell command produces the following pdf results:<BR>
+<A HREF="kl_gmm1_gmm2.pdf" TARGET="_blank">kl_gmm1_gmm2.pdf</A>
+<A HREF="kl_rmm1_rmm2.pdf" TARGET="_blank">kl_rmm1_rmm2.pdf</A>
+<A HREF="kl_emm1_emm2.pdf" TARGET="_blank">kl_emm1_emm2.pdf</A>
+<A HREF="kl_gamm1_gamm2.pdf" TARGET="_blank">kl_gamm1_gamm2.pdf</A><BR>
+Combinatorial descriptions of the lower and upper envelopes are written in text files *.envelope.<BR>
+
+For example, for the GMM1 data set file <code>gmm1</code> (positive weights alpha are renormalized to one by the software) :
+<pre>
+# alpha mu sigma
+0.5   -5   1
+1     -2 0.5
+2      5 0.3
+2     10 0.5
+0.5   15 0.4
+3     25 0.5
+1     30   2
+</pre>
+We get the combinatorial support intervals followed by the indices of the component for the upper and lower envelopes as below
+(file <code>gmm1.envelope</code>): 
+<pre>
+# start end upper lower
+-inf -40.000000 0 6
+-40.000000 -25.020076 1 6
+-25.020076 -24.968606 1 5
+-24.968606 -3.219053 1 4
+-3.219053 1.219053 2 4
+1.219053 2.615495 1 4
+2.615495 6.890300 6 4
+6.890300 11.489828 3 4
+11.489828 12.824402 3 2
+12.824402 15.525749 5 2
+15.525749 17.548493 5 6
+17.548493 22.905116 0 6
+22.905116 26.428217 4 6
+26.428217 inf 0 6
+</pre>
+
+<HR>
+Last updated, August 2016, v2 arxiv.

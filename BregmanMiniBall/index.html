@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript (Firefox) demo: Smallest Enclosing Bregman Ball (2005-2008)</title>
+  </head>
+  <body>
+		<script src="processing.js"></script> 
+
+		
+		<h1>Smallest Enclosing Bregman Ball</h1>
+		
+		This page provides goodies for the paper		
+		<A HREF="SmallestEnclosingInformationDisk-IPL2008.pdf" target="_blank">pdf</A> 
+On the smallest enclosing information disk. Information Processing Letters 105(3): 93-97 (2008)
+
+		<HR>
+Disclaimer: Source codes below are provided to the academic community  
+for reproducible research with no guarantee or whatsoever (run at your own risk in sandboxes)
+		<HR>
+		
+		<center>
+		<img src="SmallestEnclosingItakuraSaitoBall.png">
+		</center><BR>
+		Interactive recording of a session:<BR>
+		<center>
+		<iframe width="420" height="315" src="https://www.youtube.com/embed/cfWmDcqr3_0" frameborder="0" allowfullscreen></iframe>
+		</center>
+		
+			Online Demo in Javascript (warning: time consuming for rastering the Bregman ball, please be patient!):
+		<BR>
+		Tip! Select divergence for the popping-up menu my keeping left mouse click button down and scrolling.
+		Here is the 
+		<A HREF="MiniBBall4Javascript.pde" target="_blank">modified processing file MiniBBall4Javascript.pde</A> to make it work with processing.js
+		<BR>
+			<div style="text-align: center;">
+			<canvas data-processing-sources="MiniBBall4Javascript.pde" width="400"  width="400" 
+			style="outline:none;-webkit-tap-highlight-color: rgba(0,0,0,0);">
+			</canvas>
+		</div>
+		
+		
+		<ul>
+		<li><A HREF="SmallestEnclosingBregmanBall-Euclidean.pdf" target="_blank">Euclidean distance</A> 
+		(equivalent to squared Euclidean Bregman divergence for the minimax optimization problem)
+		
+				<li><A HREF="SmallestEnclosingBregmanBall-Mahalanobis.pdf" target="_blank">Mahalanobis distance</A>
+(equivalent to squared Mahalanobis Bregman divergence for the minimax optimization problem)		
+		
+		
+		<li><A HREF="SmallestEnclosingBregmanBall-extendedKullbackLeibler.pdf" target="_blank">extended Kullback-Leibler divergence</A> (eKL)
+		
+		<li><A HREF="SmallestEnclosingBregmanBall-Itakura-Saito.pdf" target="_blank">Itakura-Saito divergence</A> (IS)
+		
+	<li><A HREF="SmallestEnclosingBregmanBall-Logistic.pdf" target="_blank">Logistic (loss) divergence</A>  
+	
+<li><A HREF="SmallestEnclosingBregmanBall-Exponential.pdf" target="_blank">Exponential (loss) divergence</A>  
+	
+<li><A HREF="SmallestEnclosingBregmanBall-Csiszar.pdf" target="_blank">Csiszar divergence</A> (alpha=0.5) 
+			
+		</ul>
+		
+		<h2>Demo, movies</h2>
+		<ul>
+		<li>
+		Demo <A HREF="SmallestEnclosingBregmanBall.avi" target="_blank">movie</A>  
+		
+		<li><A HREF="http://wwww.processing.org" target="_blank">Processing</A> v3  
+		<A HREF="MiniBBallPDE.pde" target="_blank">source code MiniBBallPDE.pde</A>   (need to be run in Java mode)<BR>
+		A processing source code with Itakura-Saito divergence hard-coded as the Bregman divergence: 
+		<A HREF="MiniBBallItakuraSaitoPDE.pde" target="_blank">MiniBBallItakuraSaitoPDE.pde</A>
+		<BR>
+		The processing sketch uses Point/PointSet classes and derived classes from a generic class BregmanDivergence (by overriding methods).
+Therefore it cannot be run now with processing.js in Javascript mode. 
+We fixed this problem above by adding dummy args in functions.
+<A HREF="MiniBBall4Javascript.pde" target="_blank">Modified processing file MiniBBall4Javascript.pde</A>	
+	
+		<li>older Java applet source code <A HREF="MiniBBall.java" target="_blank">MiniBBall.java</A> 
+		</ul>
+		
+		<!--
+		Online Demo in Javascript:<BR>
+			<div style="text-align: center;">
+			<canvas data-processing-sources="MiniBBallItakuraSaitoPDE.pde" width="512"  width="512" 
+			style="outline:none;-webkit-tap-highlight-color: rgba(0,0,0,0);">
+			</canvas>
+		</div>
+		
+		-->
+		
+
+<HR>
+<h2>Related papers</h2>
+
+
+<ul>
+<li><A HREF="SmallestEnclosingInformationDisk-IPL2008.pdf" target="_blank">pdf</A> 
+On the smallest enclosing information disk. Inf. Process. Lett. 105(3): 93-97 (2008)
+
+
+<li><A HREF="ApproximatingSmallestEnclosingBregmanBall-SOCG2006.pdf" target="_blank">pdf</A> 
+On approximating the smallest enclosing Bregman Balls. ACM Symposium on Computational Geometry 2006: 485-486
+<A HREF="https://www.youtube.com/watch?v=ROdWANRAYHQ" target="_blank">video</A> (6 min.)
+
+<li><A HREF="FittingSmallestEnclosingBregmanBall-ECML2005.pdf" target="_blank">pdf</A>  
+Fitting the Smallest Enclosing Bregman Ball. ECML 2005: 649-656
+
+
+</ul>	
+		
+		
+		<HR>
+Original Java applet program by Frank Nielsen (2006), with processing code v3 adapted by <A HREF="http://perso.eleves.ens-rennes.fr/~achatali/"  target="_blank">Antoine Chatalic</A> (2015). <BR>
+(C) 2015 Frank Nielsen, All rights reserved.		
+  </body>
+</html>
+

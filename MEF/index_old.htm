@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+	<!-- HEAD -->
+	<head>
+		<title>jMEF</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="theme.css" />
+		<link rel="icon" type="image/png" href="favicon.png" />   
+	</head>
+
+
+	<!-- BODY -->
+	<body>
+		<div id="divGlobal">
+			
+			
+			<!-- Header -->
+			<div id="divHeader">
+				<h1>jMEF</h1>
+				<h2>A Java library to create, process and manage mixtures of exponential families</h2>
+
+			</div>		
+
+
+			<!-- Content -->
+
+			<div id="divContent">
+			
+				<div class="divCenter">
+					<img src="mef.png" alt="Mixture of Exponential Families" />
+				</div>
+
+				<h1>What are exponential families?</h1>
+
+				An <a href="http://en.wikipedia.org/wiki/Exponential_family" class="aLink">exponential family</a> is a generic set of probability distributions that admit the following canonical distribution:<br/><br/>
+								
+				<div class="divCenter">
+					<img src="expfamfor100dpi.png" alt="Formula" />
+				</div>
+
+<p>Exponential families are characterized by the log normalizer function <i>F</i>, and include the following well-known distributions:<br/>
+Gaussian (generic, isotropic Gaussian, diagonal Gaussian, rectified Gaussian or Wald distributions, lognormal), Poisson, Bernoulli, binomial, multinomial, Laplacian, Gamma (incl. chi-squared), Beta, exponential, Wishart, Dirichlet, Rayleigh, probability simplex, 
+negative binomial distribution, Weibull, von Mises, Pareto distributions, skew logistic, etc.<br/>
+All corresponding formula of the canonical decomposition are given in the <a href="doc/annotated.html" class="aLink">documentation</a>
+
+<br/>
+
+Mixtures of exponential families provide a generic framework for handling Gaussian mixture models (GMMs also called MoGs for mixture of Gaussians), mixture of Poisson distributions, and Laplacian mixture models as well.
+</p>				
+				
+				<h1>What is jMEF?</h1>
+				<p>
+					jMEF is a Java cross-platform library developped by <a href="http://www.lix.polytechnique.fr/~garciav" class="aLink">Vincent Garcia</a> and
+					<a href="http://www.lix.polytechnique.fr/~nielsen" class="aLink">Frank Nielsen</a>. jMEF allows one to:
+				</p>
+				<ul>
+					<li>create and manage <a href="http://en.wikipedia.org/wiki/Mixture_model" class="aLink">mixture</a> of <a href="http://en.wikipedia.org/wiki/Exponential_family" class="aLink">exponential families</a> (MEF for short),</li>
+
+					<li>estimate the parameters of a MEF using Bregman soft clustering (equivalent by duality to the Expectation-Maximization algorithm),</li>
+					<li>simplify MEFs using Bregman hard clustering (k-means algorithm in natural parameter space),</li>
+					<li>define a hierachical MEF using Bregman <a href="http://en.wikipedia.org/wiki/Cluster_analysis#Hierarchical_clustering" class="aLink">hierarchical clustering</a>,</li>
+					<li>automatically retrieve the <i>optimal</i> number of components in the mixture using the hierarchical MEF structure.</li>
+
+				</ul>
+
+				
+				A quick overview with <A HREF="jMEFflyer.pdf">slides</A>.<BR>
+				A tutorial for the <A HREF="matlab/jMEF_matlab.html">Matlab interface</A>
+				
+				
+				<h1>Download jMEF and on line documentation</h1>
+				<p>
+					<a href="jMEF.jar"       class="aDownload">Download jMEF (jar)</a>
+					<a href="jMEF.zip"       class="aDownload">Download jMEF (sources)</a>
+					<a href="doc/index.html" class="aDownload">Documentation</a>
+					<a href="LICENSE.txt"    class="aDownload">License.txt</a><br/>
+
+				</p>
+
+				
+
+				<h1>Related bibliography</h1>
+				<ol>
+					<li>
+						Vincent Garcia, Frank Nielsen, and Richard Nock<br/>
+						<b><a href="Garcia_2009_ACCV.pdf" class="aLink">Levels of details for Gaussian mixture models</a></b><br/>
+						<i>In Proceedings of the Asian Conference on Computer Vision</i>, Xi'an, China, September 2009<br/><br/>
+					</li>
+					<li>
+						Frank Nielsen, and Vincent Garcia<br/>
+						<b><a href="http://arxiv.org/abs/0911.4863" class="aLink">Statistical exponential families: A digest with flash cards</a></b><br/>
+						<i>arXiV, http://arxiv.org/abs/0911.4863</i>, November 2009<br/><br/>
+					</li>
+					<li>
+						Frank Nielsen and Richard Nock<br/>
+						<b><a href="http://www.lix.polytechnique.fr/Labo/Frank.Nielsen/SidedandSymmetrizedBregmanCentroids.pdf" class="aLink">Sided and symmetrized Bregman centroids</a></b><br/>
+						<i>IEEE Transactions on Information Theory, 2009, 55, 2048-2059</i><br/><br/>
+					</li>
+					<li>
+						Frank Nielsen, Jean-Daniel Boissonnat and Richard Nock<br/>
+						<b><a href="ftp://ftp-sop.inria.fr/geometrica/boissonnat/Papers/bregman.pdf" class="aLink">On Bregman Voronoi diagrams</a></b><br/>
+						<i>ACM-SIAM Symposium on Data Mining, 2007, 746-755</i><br/><br/>
+					</li>
+					<li>
+						A. Banerjee, S. Merugu, I. Dhillon, and J. Ghosh<br/>
+
+						<b><a href="Banerjee_2005_JMLR.pdf" class="aLink">Clustering with Bregman divergences</a></b><br/>
+						<i>Journal of Machine Learning Research, 2005, 6, 234-245</i><br/><br/>
+					</li>
+				</ol>
+
+				
+				
+				<h1>Tutorials</h1>
+				
+				
+				<h2>Bregman soft clustering</h2>
+
+				
+				<p>
+				This tutorial reports the experiment  proposed by Banerjee et al. in [5].
+				We create three 1-dimensional datasets of 1000 sample each, based on mixture models
+				of Gaussian, Poisson and Binomial distributions, respectively. All the mixture models had three
+				components with means centered at 10, 20 and 40, respectively. The standard deviation <i>s</i> of
+				the Gaussian densities was set to 5 and the number of trials <i>N</i> of the Binomial distribution was set
+				to 100 so as to make the three models somewhat similar to each other, in the sense that the variance
+				is approximately the same for all three models.
+				For each dataset, we estimate the parameters of three mixture models of Gaussian, Poisson and Binomial 
+				distributions using the proposed Bregman soft clustering implementation.
+				The quality of the clustering was measured in terms of the normalized <a href="http://en.wikipedia.org/wiki/Mutual_information" class="aLink">mutual information</a> (Strehl and Ghosh, 2002)
+				between the predicted clusters and original clusters (based on the actual generating mixture component).
+				The results were averaged over 100 trials. This tutorial needs an additional file (k-means).
+				</p>
+
+				<a class="aDownload" href="Tutorial1.java">Download tutorial</a>
+
+				<a class="aDownload" href="Tools.zip">Download additionnal files</a>
+				
+				
+				<h2>Parameter estimation of a mixture of Gaussian</h2>
+				
+				<p>
+				This tutorial consists in the following steps:
+				</p>
+				<ol>
+
+					<li>We define a mixture <i>f</i> of univariate Gaussians of <i>n</i> components (e.g. <i>n=3</i>).</li>
+
+					<li>We draw <i>m</i> points from <i>f</i> (e.g. <i>m=1000</i>).</li>
+
+					<li>We estimate the parameters of a mixture <i>f<sub>1</sub></i> of univariate Gaussians of <i>n</i> components using a classical expectation-maximization (EM) algorithm.</li>
+
+					<li>We estimate the parameters of a mixture <i>f<sub>2</sub></i> of univariate Gaussians of <i>n</i> components using the Bregman soft clustering implementation (based on the duality of regular exponential families with regular Bregman divergences).</li>
+
+				</ol>
+				<p>
+				We then check that the estimated mixtures <i>f<sub>1</sub></i> and <i>f<sub>2</sub></i> are similar.
+				This tutorial needs additional files.
+				</p>
+
+				<a class="aDownload" href="Tutorial2.java">Download tutorial</a>
+
+				<a class="aDownload" href="Tools.zip">Download additionnal files</a>
+				
+				
+				<h2>Mixture model simplification with an application to image segmentation</h2>
+				
+				<p>
+				This tutorial consists in the following steps:
+				</p>
+				<ol>
+					<li>Read an image file.</li>
+
+					<li>
+						Load the correponding mixture of Gaussians (depending on the image and on the desired  number number of components <i>n</i>) from a file.
+						If the mixture doesn't exist yet, the mixture is estimated from the pixels of the image using Bregman soft clustering,
+						and the mixture is saved in an output file.
+					</li>
+					<li>Compute the image segmentation from the initial mixture model and save the segmentation result in an output file.</li>
+					<li>Simplify the mixture model in a mixture of <i>m</i> components.</li>
+					<li>Compute the corresponding image segmentation and save the segmentation result in an output file.</li>
+
+				</ol>
+				<p>
+				This tutorial needs additional files.
+				</p>
+				<a class="aDownload" href="Tutorial3.java">Download tutorial</a>
+				<a class="aDownload" href="Tools.zip">Download additionnal files</a>
+				
+				<br/><br/>
+				<table>
+
+					<caption>Fig. 1 - Application of mixture model simplification to image segmentation.</caption>
+					<tr>
+						<td><img src="Baboon_Simp_032_001.png" alt="Baboon" /></td>
+						<td><img src="Baboon_Simp_032_002.png" alt="Baboon" /></td>
+						<td><img src="Baboon_Simp_032_004.png" alt="Baboon" /></td>
+						<td><img src="Baboon_Simp_032_008.png" alt="Baboon" /></td>
+						<td><img src="Baboon_Simp_032_016.png" alt="Baboon" /></td>
+						<td><img src="Baboon_Simp_032_032.png" alt="Baboon" /></td>
+
+					</tr>
+					<tr>
+						<td><i>m</i>=1</td>
+						<td><i>m</i>=2</td>
+						<td><i>m</i>=4</td>
+
+						<td><i>m</i>=8</td>
+
+						<td><i>m</i>=16</td>
+						<td><i>m</i>=32</td>
+					</tr>
+				</table>
+
+				
+				
+				<h2>Hierarchical mixture models with an application to image segmentation</h2>
+				
+				<p>
+
+				This tutorial consists in the following steps:
+				</p>
+				<ol>
+					<li>Read an image file.</li>
+					<li>
+						Load the correponding mixture of Gaussians (depending on the image and on the  desired  number of components <i>n</i>) from a file.
+						If the mixture doesn't exist yet, the mixture is estimated from the RGB pixels of the image using Bregman soft clustering,
+						and the mixture is saved in an output file.
+					</li>
+
+					<li>Compute the image segmentation from the initial mixture model and save the segmentation in an output file.</li>
+
+					<li>Compute a hierachical mixture model from the initial mixture model.</li>
+					<li>Extract a simpler mixture model of <i>m</i> components from the hierachical mixture model.</li>
+					<li>Compute the corresponding image segmentation and save the segmentation result in an output file.</li>
+				</ol>
+
+				<p>
+					Note that the hierachical mixture model allows to automatically extract the <i>optimal</i> number of components in the mixture model.
+					To do this, use the method <code>getOptimalMixtureModel(t)</code> instead of <code>getPrecision(m)</code> in the tutorial.
+					This tutorial needs additionnal files.
+				</p>
+
+				<a class="aDownload" href="Tutorial4.java">Download tutorial</a>
+				<a class="aDownload" href="Tools.zip">Download additional files</a>
+
+				
+				<br/><br/>
+				<table>
+					<caption>Fig. 2 - Application of hierarchical mixture models to image segmentation.</caption>
+					<tr>
+						<td><img src="Lena_Hier_Sym_032_001.png" alt="Lena" /></td>
+						<td><img src="Lena_Hier_Sym_032_002.png" alt="Lena" /></td>
+						<td><img src="Lena_Hier_Sym_032_004.png" alt="Lena" /></td>
+						<td><img src="Lena_Hier_Sym_032_008.png" alt="Lena" /></td>
+						<td><img src="Lena_Hier_Sym_032_016.png" alt="Lena" /></td>
+						<td><img src="Lena_Hier_Sym_032_032.png" alt="Lena" /></td>
+					</tr>
+					<tr>
+						<td><i>m</i>=1</td>
+
+						<td><i>m</i>=2</td>
+
+						<td><i>m</i>=4</td>
+						<td><i>m</i>=8</td>
+						<td><i>m</i>=16</td>
+						<td><i>m</i>=32</td>
+
+					</tr>
+				</table>				
+				
+				<h2>Statistical images</h2>
+				
+				<p>
+				For this tutorial, we consider an input image as a set of pixels in a 5-dimensional space (color information RGB + position information XY).
+				The mixture of Gaussians <i>f</i> is learnt from the set of pixels using the Bregman soft clustering algorithm. Then, we create two images (see Fig.3):
+				</p>
+				<ol>
+					<li>Each Gaussian is represented by an ellipse illustrating the mean (color + position) and the variance-covariance matrix (ellipse shape) (see row 2, Fig. 3).</li>
+					<li>Draw random points from <i>f</i> until at least 20 points per pixels have been drawn. Then, the color value of the statistical image pixel
+					at the position <i>(X,Y)</i> is the average color value of the drawn points at the same position (see row 3, Fig. 3).</li>
+				</ol>
+				<p>
+				The proposed tutorial shows that the image structure can be captured into a mixture of Gaussians. The image is then represented by a small
+				set of parameters (in comparison to the number of pixels) which is well adapted to applications such as color <a href="http://en.wikipedia.org/wiki/Image_retrieval" class="aLink">image retrieval</a>. Considering an
+				input image represented by its mixture of Gaussians, it is then trivial to retrieve, in a image database, a set of images have a similar color organization.
+				This tutorial needs additionnal files.
+				</p>
+
+				<a class="aDownload" href="Tutorial5.java">Download tutorial</a>
+				<a class="aDownload" href="Tools.zip">Download additional files</a>
+				
+				
+				<br/><br/>
+				<table>
+					<caption>Fig. 3 - Statistical images.</caption>
+					<tr>
+						<td>Original<br/>images</td>
+						<td><img src="Baboon.png" alt="Lena" /></td>
+						<td><img src="Lena.png" alt="Lena" /></td>
+						<td><img src="Shanty.png" alt="Lena" /></td>
+						<td><img src="Colormap.png" alt="Lena" /></td>
+					</tr>
+					<tr>
+						<td>Gaussian<br/>representation</td>
+						<td><img src="S_Baboon_ell_032.png" alt="Lena" /></td>
+						<td><img src="S_Lena_ell_032.png" alt="Lena" /></td>
+						<td><img src="S_Shanty_ell_032.png" alt="Lena" /></td>
+						<td><img src="S_Colormap_ell_032.png" alt="Lena" /></td>
+					</tr>
+					<tr>
+						<td>Statistical<br/>images</td>
+						<td><img src="S_Baboon_dist_032.png" alt="Lena" /></td>
+						<td><img src="S_Lena_dist_032.png" alt="Lena" /></td>
+						<td><img src="S_Shanty_dist_032.png" alt="Lena" /></td>
+						<td><img src="S_Colormap_dist_032.png" alt="Lena" /></td>
+					</tr>
+				</table>
+				
+				
+				
+				
+				<h1>How to contribute to jMEF?</h1>
+				
+				<p>
+					Please send requests, comments or criticisms to <a href="http://www.lix.polytechnique.fr/~garciav" class="aLink">Vincent Garcia</a> and
+					<a href="http://www.lix.polytechnique.fr/~nielsen" class="aLink">Frank Nielsen</a>.
+					If you would like to add a particular distribution to the exponential family, send us:
+				</p>
+				<ul>
+					<li> A TeX file describing the various formula corresponding to that exponential family,</li>
+					<li> A corresponding Java file implementing those formula.</li>
+				</ul>
+				<p>
+					We give as an example the files corresponding to the multivariate Gaussian distributions:<br/>
+					<a href="MultivariateGaussian.java" class="aLink">MultivariateGaussian.java</a> and 
+					<a href="MultivariateGaussian.tex" class="aLink">MultivariateGaussian.tex</a>.
+				</p>
+				
+				
+				<h1>MIT License</h1>
+				<p>
+					THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+					IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+					FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+					AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+					LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+					OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+					THE SOFTWARE.
+				</p>
+
+				See details about <a href="http://www.opensource.org/licenses/mit-license.php" class="aLink">MIT license</a>.
+
+				
+			</div>
+
+
+			<!-- footer -->			
+			<div id="divFooter">
+				<p>
+					The content on this site is licensed under a MIT License.
+				</p>
+			</div>			
+			
+		</div>
+
+		<!-- Start of StatCounter Code -->
+		<script type="text/javascript">
+			var sc_project=5232247; 
+			var sc_invisible=1; 
+			var sc_partition=59; 
+			var sc_click_stat=1; 
+			var sc_security="8b6778e5"; 
+		</script>
+
+		<script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+		<noscript>
+			<div class="statcounter">
+				<a title="wordpress stat" class="statcounter" href="http://www.statcounter.com/wordpress.org/">
+					<img class="statcounter" src="http://c.statcounter.com/5232247/0/8b6778e5/1/" alt="wordpress stat" />
+				</a>
+			</div>
+		</noscript>
+		
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 
+  <title>SSSC-AM: A Unified Framework for Video Co-Segmentation by Structured Sparse Subspace Clustering 
+with Appearance and Motion Features</title>
+ 
+</head>
+<body>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; line-height: 28.0px; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Cosegmentation via Structured Sparse Subspace Clustering with Appearance and Motion Features</b></span></h1>
+<p class="p2"><span class="s1"><b>SSSC-AM: A Unified Framework for Video Co-Segmentation by Structured Sparse Subspace Clustering 
+with Appearance and Motion Features</b> (<a href="https://arxiv.org/abs/1603.04139" target="_blank"><span class="s2">arxiv 1603.04139</span></a>)</span></p>
+<p class="p2"><span class="s1">by Junlin Yao and Frank Nielsen</span></p>
+<p class="p3"><span class="s1"></span><br></p>Video co-segmentation refers to the task of jointly segmenting common objects appearing in a given group of videos. In practice, high-dimensional data such as videos can be conceptually thought as being drawn from a union of subspaces corresponding to categories rather than from a smooth manifold. Therefore, segmenting data into respective subspaces — subspace clustering — finds widespread applications in computer vision, including co-segmentation. In this work, we present a novel unified video co-segmentation framework inspired by the recent Structured Sparse Subspace Clustering (S3C) based on the self-expressiveness model. Our method yields more consistent segmentation results. In order to improve the detectability of motion features with missing trajectories due to occlusion or tracked points moving out of frames, we add an extra-dimensional signature to the motion trajectories. Moreover, we reformulate the S3C algorithm by adding the affine subspace constraint in order to make it more suitable to segment rigid motions lying in affine subspaces of dimension at most 3. Our experiments on MOViCS dataset demonstrate the effectiveness of our framework.<p class="p2"><span class="s1">
+</span></p>
+<p class="p3"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Python source code</b></span></h2>
+<p class="p2"><span class="s1">Download the Python code for reproducible research: <a href="sssc_amf.zip" target="_blank"><span class="s2">sssc_amf.zip</span></a></span></p>
+<p class="p3"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; line-height: 22.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Cosegmentation</b></span></h2>
+<p class="p2"><span class="s1">Download the MOViCS dataset from 
+<a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/software-and-datasets" target="_blank"><span class="s2">http://www.d2.mpi-inf.mpg.de/datasets</span></a>.</span> To conduct preprocessing, run <a href="http://people.csail.mit.edu/jchang7/code/TSP/TSP_2015-01-12.tar.gz"><span class="s2">Temporal Superpixel code</span></a>.</span> After obtaining superpixels, save preprocessing results (.mat files) in the same folder of the datasets. Then run cosegmentation.py with appropriate parameter setting.</p><p class="p2"><span class="s1">Some experimental results are shown as follows:</span></p>
+<p class="p5"><span class="s3"><a href="chickenNew.pdf" target="_blank">chickenNew.pdf</a></span>
+<span class="s4"> <a href="chicken_on_turtle.pdf" target="_blank"><span class="s5">chicken_on_turtle.pdf</span></a>
+<span class="Apple-converted-space"> </span></span></p>
+<hr>
+Frank Nielsen, October 2016.
+</body>
+</html>

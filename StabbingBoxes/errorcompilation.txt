@@ -1,0 +1,32 @@
+警告: [options] ブートストラップ・クラスパスが-source 1.4と一緒に設定されていません
+警告: [options] ソース値1.4は廃止されていて、今後のリリースで削除される予定です
+警告: [options] ターゲット値1.4は廃止されていて、今後のリリースで削除される予定です
+警告: [options] 廃止されたオプションについての警告を表示しないようにするには、-Xlint:オプションを使用します。
+StabbingPiercingBoxes.java:58: 警告: [deprecation] Componentのaction(Event,Object)は非推奨になりました
+    public boolean action(Event event, Object obj)
+                   ^
+StabbingPiercingBoxes.java:180: 警告: [deprecation] Componentのaction(Event,Object)は非推奨になりました
+            return super.action(event, obj);
+                        ^
+StabbingPiercingBoxes.java:228: 警告: [deprecation] ComponentのmouseDown(Event,int,int)は非推奨になりました
+    public boolean mouseDown(Event event, int i, int j)
+                   ^
+StabbingPiercingBoxes.java:239: 警告: [deprecation] ComponentのmouseDrag(Event,int,int)は非推奨になりました
+    public boolean mouseDrag(Event event, int i, int j)
+                   ^
+StabbingPiercingBoxes.java:274: 警告: [deprecation] ComponentのmouseEnter(Event,int,int)は非推奨になりました
+    public boolean mouseEnter(Event event, int i, int j)
+                   ^
+StabbingPiercingBoxes.java:280: 警告: [deprecation] ComponentのmouseMove(Event,int,int)は非推奨になりました
+    public boolean mouseMove(Event event, int i, int j)
+                   ^
+StabbingPiercingBoxes.java:286: 警告: [deprecation] ComponentのmouseUp(Event,int,int)は非推奨になりました
+    public boolean mouseUp(Event event, int i, int j)
+                   ^
+StabbingPiercingBoxes.java:392: 警告: [deprecation] Componentのaction(Event,Object)は非推奨になりました
+    public boolean action(Event event, Object obj)
+                   ^
+StabbingPiercingBoxes.java:396: 警告: [deprecation] Dialogのhide()は非推奨になりました
+            hide();
+            ^
+警告13個

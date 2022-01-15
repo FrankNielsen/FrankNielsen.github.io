@@ -1,0 +1,89 @@
+\section{Multivariate Gaussian distribution}
+
+\begin{tabular}{|c|c|}
+	\hline
+	%
+	PDF expression  & $f(x;\mu,\Sigma) = \frac{1}{ (2\pi)^{d/2} |\Sigma|^{1/2} } \exp \left( - \frac{(x-\mu)^T \Sigma^{-1}(x-\mu)}{2} \right) \mbox{ for } x \in \mathds{R}^d $ \\
+	%
+	\hline
+	\hline
+	%
+	Kullback-Leibler divergence &
+	\begin{tabular}{rl}
+	$D_{\mathrm{KL}}(f_P \| f_Q)$ & = $\frac{1}{2} \left( \log \left( \frac{\det \Sigma_Q}{\det \Sigma_P} \right)
+	+ \mathrm{tr} \left( \Sigma_Q^{-1} \Sigma_P \right) \right) $ \\
+	& $+ \frac{1}{2} \left( ( \mu_Q - \mu_P )^\top \Sigma_Q^{-1} ( \mu_Q - \mu_P ) - d \right)$
+	\end{tabular}
+	\\
+	%
+	\hline
+	%
+	MLE &
+	\\
+	%
+	\hline
+	\hline
+	%
+	Source parameters  & $\mathbf{\Lambda} = ( \mu , \Sigma ) \mbox{ with } \mu \in \mathds{R}^d \mbox{ and } \Sigma \succ 0  $ \\
+	%
+	\hline
+	%
+	Natural parameters & $\mathbf{\Theta} = ( \theta , \Theta )$ \\
+	%
+	\hline
+	%
+	Expectation parameters & $\mathbf{H} = ( \eta , H )$ \\
+	%
+	\hline
+	\hline
+	%
+	$\mathbf{\Lambda} \rightarrow \mathbf{\Theta}$ & $\mathbf{\Theta} = \left( \Sigma^{-1} \mu , \frac{1}{2} \Sigma^{-1} \right)$ \\
+	%
+	\hline
+	%
+	$\mathbf{\Theta} \rightarrow \mathbf{\Lambda}$ & $ \mathbf{\Lambda} = \left( \frac{1}{2} \Theta^{-1} \theta ,  \frac{1}{2} \Theta^{-1} \right) $  \\
+	%
+	\hline
+	%
+	$\mathbf{\Lambda} \rightarrow \mathbf{H}$ & $\mathbf{H} = \left( \mu , - (\Sigma + \mu \mu^T) \right)$ \\
+	%
+	\hline
+	%
+	$\mathbf{H} \rightarrow \mathbf{\Lambda}$ & $ \mathbf{\Lambda} = \left( \eta , - (H + \eta \eta^T) \right) $  \\
+	%
+	\hline
+	%
+	$\mathbf{\Theta} \rightarrow \mathbf{H}$ & $ \mathbf{H} = \nabla F( \mathbf{\Theta} ) $  \\
+	%
+	\hline
+	%
+	$\mathbf{H} \rightarrow \mathbf{\Theta}$ & $ \mathbf{\Theta} = \nabla G( \mathbf{H} ) $  \\
+	%
+	\hline
+	\hline
+	%
+	Log normalizer & $ F(\mathbf{\Theta})=\frac{1}{4} \mathrm{tr}(\Theta^{-1}\theta\theta^T) - \frac{1}{2} \log \det\Theta + \frac{d}{2} log \pi$  \\
+	%
+	\hline
+	%
+	Gradient log normalizer & $ \nabla F( \mathbf{\Theta} ) = \left( \frac{1}{2} \Theta^{-1} \theta , -\frac{1}{2} \Theta^{-1} -\frac{1}{4} (\Theta^{-1} \theta)(\Theta^{-1} \theta)^T \right) $  \\
+	%
+	\hline
+	%
+	G & $ G(\mathbf{H}) = - \frac{1}{2} \log \left( 1 + \eta^T H^{-1} \eta \right) - \frac{1}{2} \log \det (-H) - \frac{d}{2} \log (2 \pi e) $  \\
+	%
+	\hline
+	%
+	Gradient G & $ \nabla G(\mathbf{H}) = \left( -( H + \eta \eta^T )^{-1} \eta , -\frac{1}{2} ( H + \eta \eta^T )^{-1}  \right) $  \\
+	%
+	\hline
+	\hline
+	%
+	Sufficient statistics & $ t(x) = (x , -x x^T) $  \\
+	%
+	\hline
+	%
+	Carrier measure & $ k(x) = 0 $  \\
+	%
+	\hline
+\end{tabular}
