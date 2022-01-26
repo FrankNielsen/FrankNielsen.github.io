@@ -7,7 +7,7 @@
 <h1>Information geometry and divergences</h1>
 
 <p> <!-- style="background-color:#ffccee;"> -->
-Historically, <b>Information Geometry</b> (IG) aimed at unravelling the geometric structures 
+Historically, <b>Information Geometry</b> (IG, <A HREF="#tutorials" target="_blank">tutorials</A>) aimed at unravelling the geometric structures 
 of families of probability distributions called the <b>statistical models</b>.<BR>
 A statistical model can either be
 <ul>
@@ -20,7 +20,7 @@ A parametric statistical model is said <b>regular</b> when the Fisher informatio
 Otherwise, the statistical model is irregular (eg., infinite Fisher information and semi-positive definite Fisher information when the model is not identifiable).
 </p>
 <p style="background-color:#ffccee;"> 
-The <b>Fisher-Rao manifold</b> of a statistical parametric model is a Riemannian manifold equipped
+The <b><a href="#FisherRao" target="_blank">Fisher-Rao manifold</a></b> of a statistical parametric model is a Riemannian manifold equipped
  with the <b>Fisher information metric</b>.
  The geodesic length on a Fisher-Rao manifold is called <b>Rao's distance</b> [Hotelling 1930][Rao 1945].
 More generally, Amari proposed the <b>dualistic structure</b> of IG which consists 
@@ -36,7 +36,7 @@ When using the default Levi-Civita metric connection derived from the Fisher met
 we get  Rao's distance which are locally minimizing geodesics.
 Eguchi showed how to build from any smooth distortion (originally called a contrast function) 
 a dualistic structure: The <b>information geometry of divergences</b> [Eguchi 1982].
-The information geometry of <b>Bregman divergences</b> yields dually flat spaces:
+The information geometry of <b><A HREF="#HessianMfd" target="_blank">Bregman divergences</A></b> yields dually flat spaces:
 It is a special cases of <b>Hessian manifolds</b> which are differentiable manifolds 
 equipped with a metric tensor being a Hessian metric and a flat connection [Shima 2007].
 Since geometric structures scaffold spaces independently of any applications, 
@@ -46,13 +46,13 @@ For example, for analyzing interior point methods with barrier functions in opti
 </p>
 
 <p style="background-color: #f2e6ff;">
-<b>Statistical divergences</b> between parametric statistical models amount to 
+<b><A HREF="#dissimilarity" target="_blank">Statistical divergences</a></b> between parametric statistical models amount to 
 <b>parameter divergences</b> on which we can use the Eguchi's divergence information geometry 
 to get a dualistic structure.
-A <b>projective divergence</b> is a divergence which is invariant by independent rescaling of its parameters.
+A <b><A HREF="#projDiv" target="_blank">projective divergence</a></b> is a divergence which is invariant by independent rescaling of its parameters.
 A statistical projective divergence is thus useful for estimating computationally 
 intractable statistical models (eg., gamma divergences, Cauchy-Schwarz and Hölder divergences, or singly-sided projective Hyvärinen divergence).
-A <b>conformal divergence</b> is a divergence scaled by a conformal factor which may depend on one or two of its arguments.
+A <b><A HREF="#confDiv" target="_blank">conformal divergence</a></b> is a divergence scaled by a conformal factor which may depend on one or two of its arguments.
 The metric tensor obtained from Eguchi's information divergence of a conformal divergence 
 is a <b>conformal metric</b> of the metric obtained from the divergence, hence its name.
 By analogy to total least squares vs least squares, a
@@ -62,13 +62,13 @@ By analogy to total least squares vs least squares, a
  This <b>information monotonicity</b> property holds for f-divergences (called invariant divergences in information geometry), 
  Hilbert log cross-ratio distance, or Aitchison distance for example.
  Some statistical divergences are upper <b>bounded</b> (eg., Jensen-Shannon divergences) while others are not (eg., Jeffreys' divergence).
-<b>Optimal transport</b> distances require a <b>ground base distance</b> on the sample space.
-A <b>diversity index</b> generalizes a <b>two-point distance</b> to a family of parameters/distributions.
+<b><A HREF="#OT" target="_blank">Optimal transport</a></b> distances require a <b>ground base distance</b> on the sample space.
+A <b><A HREF="#JD" target="_blank">diversity index</a></b> generalizes a <b>two-point distance</b> to a family of parameters/distributions.
 It usually measures the dispersion around a center point (eg., like variance measures the dispersion around the centroid).
 </p>
 
 
-<h2><u>Information geometry: Tutorials and surveys</u></h2>
+<h2 id="tutorials"><u>Information geometry: Tutorials and surveys</u></h2>
 
 <ul>
 <li><IMG SRC="new.png"><A HREF="https://www.ams.org/journals/notices/202201/rnoti-p36.pdf" target="_blank">The Many Faces of Information Geometry</A>, AMS Notices (9 pages), 2022.
@@ -147,7 +147,7 @@ SRC="CARD-SIMBAD2013.png"
 </ul>
 
 
-<h2><u>Fisher-Rao manifolds</u> (Riemannian manifolds and Hamadard manifolds)</h2>
+<h2 id="FisherRao"><u>Fisher-Rao manifolds</u> (Riemannian manifolds and Hamadard manifolds)</h2>
 <ul>
 
 <li>Fisher-Rao manifold of the categorical distributions
@@ -180,8 +180,14 @@ SRC="PoincareVorHyperbolicDelaunayComplex.gif"
 </ul>
 
 
-
-
+<li><IMG SRC="new.png"><A HREF="https://arxiv.org/abs/2111.15090" target="_blank">
+A Geometric Modeling of Occam's Razor in Deep Learning</A>
+<p>Degenerates metric and lightlike Fisher-Rao manifolds</p>
+<center>
+<A HREF="https://arxiv.org/abs/2111.15090" target="_blank"><IMG 
+SRC="NCard-LightlikeManifoldFIM.png"
+ width="25%" border="3"></A>
+</center>
 
 
 
@@ -203,7 +209,7 @@ SRC="Visual-GLSR-VAE.png"
 
 </ul>
 
-<h2><u>Cones</u></h2>
+<h2 id ="cone"><u>Cones</u></h2>
 
 <ul>
 <li>
@@ -215,7 +221,7 @@ Fast (1+ε)-approximation of the Löwner extremal matrices of high-dimensional s
 </ul>
 
 
-<h2><u>Finsler manifolds</u></h2>
+<h2 id="Finsler"><u>Finsler manifolds</u></h2>
 Finsler manifolds are proposed to model irregular parametric statistical models (where Fisher information can be infinite)
 <ul>
 <li>
@@ -224,7 +230,7 @@ Medians and means in Finsler geometry</A>, LMS Journal of Computation and Mathem
 </ul>
 
 
-<h2><u>Bregman manifolds/Hessian manifolds</u></h2>
+<h2 id="HessianMfd"><u>Bregman manifolds/Hessian manifolds</u></h2>
  
 <ul>
 <li><A HREF="https://hal.archives-ouvertes.fr/hal-00488441/document" target="_blank">
@@ -275,7 +281,7 @@ On the smallest enclosing information disk</A>,
 
 </ul>
 
-<h2><u>Exponential families</u> and <u>Mixture families</u></h2>
+<h2 id="EFMF"><u>Exponential families</u> and <u>Mixture families</u></h2>
 Continuous or discrete exponential families
 
 
@@ -352,7 +358,7 @@ On Voronoi Diagrams on the Information-Geometric Cauchy Manifolds</A>, Entropy 2
 </ul>
 
 
-<h2><u>Information geometry of the probability simplex</u></h2>
+<h2 id="ProbaSimplex"><u>Information geometry of the probability simplex</u></h2>
 
 <u>
 
@@ -370,7 +376,7 @@ Bruhat-Tits space<BR>
 
 </u>
 
-<h2><u>Information geometry of singular statistical models</u></h2>
+<h2 id="SingularModel"><u>Information geometry of singular statistical models</u></h2>
 
 <li><IMG SRC="new.png"><A HREF="https://arxiv.org/abs/2111.15090" target="_blank">
 A Geometric Modeling of Occam's Razor in Deep Learning</A>
@@ -382,7 +388,7 @@ Towards Modeling and Resolving Singular Parameter Spaces using Stratifolds</A>, 
 </ul>
 
 
-<h2><u>Geometry of time series and correlations/dependences</u></h2>
+<h2 id="GeoTS"><u>Geometry of time series and correlations/dependences</u></h2>
 
 <ul>
 
@@ -416,7 +422,7 @@ Clustering Financial Time Series: How Long Is Enough?</A>,
 </ul>
 
 
-<h2><u>Hilbert geometry</u></h2>
+<h2 id="GeoHilbert"><u>Hilbert geometry</u></h2>
 Hilbert geometry are induced by a bounded convex open domain.
 Hilbert geometry generalize the Klein model of hyperbolic geometry and the Cayley-Klein geometry
 Beware that Hilbert geometry are never Hilbert spaces! 
@@ -434,7 +440,7 @@ Beware that Hilbert geometry are never Hilbert spaces!
 </ul>
 
  
-<h2><u>Hyperbolic geometry and geometry of Siegel domains</u></h2>
+<h2 id="hyperbolic"><u>Hyperbolic geometry and geometry of Siegel domains</u></h2>
 <ul>
 
 <li><A HREF="https://www.mdpi.com/1099-4300/22/9/1019" target="_blank">
@@ -473,10 +479,10 @@ Approximating Covering and Minimum Enclosing Balls in Hyperbolic Geometry
 
 </ul>
 
-<h1>Some applications of information geometry</h1>
+<h1 id="applications">Some applications of information geometry</h1>
 
 
-<h2><u>Natural gradient</u></h2>
+<h2 id="natgrad"><u>Natural gradient</u></h2>
 
 <ul>
 <li><A HREF="https://proceedings.mlr.press/v139/lin21e.html" target="_blank">
@@ -487,7 +493,7 @@ Relative Fisher Information and Natural Gradient for Learning Large Modular Mode
 
 </ul>
 
-<h2><u>Centers and clustering</u></h2>
+<h2 id="clustering"><u>Centers and clustering</u></h2>
 
 <ul>
 <li><A HREF="https://arxiv.org/abs/1311.5125" target="_blank">
@@ -522,7 +528,7 @@ On Clustering Histograms with k-Means by Using Mixed α-Divergences</A>, Entropy
 
 </ul>
 
-<h2><u>Miscellaneous applications</u></h2>
+<h2 id="miscapp"><u>Miscellaneous applications</u></h2>
 
 <ul>
 <li><A HREF="https://proceedings.mlr.press/v161/masrani21a.html" target="_blank">
@@ -553,9 +559,9 @@ Information-geometric lenses for multiple foci+contexts interfaces</A>,
 
  
 
-<h1>Dissimilarities, distances, divergences and diversities</h1>
+<h1 id="dissimilarity">Dissimilarities, distances, divergences and diversities</h1>
 
-<h2><u>Jensen-Shannon divergence</u></h2>
+<h2 id="JSD"><u>Jensen-Shannon divergence</u></h2>
 
 <ul>
 
@@ -576,7 +582,7 @@ A family of statistical symmetric divergences based on Jensen's inequality</A>,
 
 </ul>
 
-<h2><u>f-divergences</u></h2>
+<h2 id="fdiv"><u>f-divergences</u></h2>
 
 <ul>
 <li><A HREF="https://arxiv.org/abs/2101.12459" target="_blank">
@@ -598,7 +604,7 @@ ICASSP 2011: 2100-2103
 </ul>
 
 
-<h2><u>Bregman divergences and some generalizations</u></h2>
+<h2 id="BD"><u>Bregman divergences and some generalizations</u></h2>
   <ul>
 <li><A HREF="https://www.researchgate.net/publication/353240484_Computing_Statistical_Divergences_with_Sigma_Points" target="_blank">
 Computing Statistical Divergences with Sigma Points</A>, GSI 2021
@@ -627,7 +633,7 @@ ISVD 2009: 71-78
 
 </ul>
   
-  <h2><u>Jensen divergences and some generalizations</u></h2>
+  <h2 id="JD"><u>Jensen divergences and some generalizations</u></h2>
   
   
   <ul>
@@ -650,7 +656,7 @@ Jensen-Bregman Voronoi Diagrams and Centroidal Tessellations</A>,
   </ul>
   
   
-<h2>Conformal divergences</h2>
+<h2 id="confDiv">Conformal divergences</h2>
 <ul>
 <li><A HREF="https://arxiv.org/abs/1311.5125" target="_blank">
 On conformal divergences and their population minimizers</A>, IEEE Transactions Information Theory, 62.1 (2015): 527-538
@@ -671,7 +677,7 @@ IEEE Trans. Pattern Anal. Mach. Intell. 34(12): 2407-2419 (2012)
 
 </ul>
 
-<h2><u>Projective divergences</u></h2>
+<h2 id="projDiv"><u>Projective divergences</u></h2>
 <ul>
 <li><A HREF="https://www.mdpi.com/1099-4300/19/3/122" target="_blank">
 On Hölder Projective Divergences</A>, Entropy 2017, 19(3), 122
@@ -682,7 +688,7 @@ Patch Matching with Polynomial Exponential Families and Projective Divergences</
 
 </ul>
 
-<h2><u>Optimal transport/Wasserstein distances/Sinkhorn distances</u></h2>
+<h2 id="OT"><u>Optimal transport/Wasserstein distances/Sinkhorn distances</u></h2>
 Earth mover distances (EMD), Wasserstein distances
 
 <ul>
@@ -714,7 +720,7 @@ Earth Mover Distance on superpixels</A>, IEEE ICIP 2010
 
 </ul>
 
-<h2><u>Shannon, Rényi, Tsallis, Sharmal-Mittal entropies, cross-entropies and divergences</u></h2>
+<h2 id="entropy"><u>Shannon, Rényi, Tsallis, Sharmal-Mittal entropies, cross-entropies and divergences</u></h2>
 
 <ul>
 
@@ -742,7 +748,7 @@ Texture Regimes for Entropy-Based Multiscale Image Analysis</A>, ECCV (3) 2010: 
 
 </ul>
 
-<h2><u>Chernoff information</u></h2>
+<h2 id="Chernoff"><u>Chernoff information</u></h2>
 
 
 <ul>
@@ -762,7 +768,7 @@ Hypothesis Testing, Information Divergence and Computational Geometry
 
 </ul>
 
-<h2><u>Other dissimilarities</u></h2>
+<h2 id="miscDiv"><u>Other dissimilarities</u></h2>
 
 <ul>
 
@@ -783,7 +789,7 @@ Quantifying the Invariance and Robustness of Permutation-Based Indexing Schemes
  
  
  
- <h2><u>Loss functions and proper scoring rules</u></h2>
+ <h2 id="lossScore"><u>Loss functions and proper scoring rules</u></h2>
  
 <ul>
 <li><A HREF="https://proceedings.mlr.press/v48/patrini16.html" target="_blank">
@@ -801,7 +807,7 @@ Gentle Nearest Neighbors Boosting over Proper Scoring Rules</A>,
 
 
 
-<h2><u>Divergences between statistical mixtures</u></h2>
+<h2 id="divStatMix"><u>Divergences between statistical mixtures</u></h2>
  
 <ul>
 
@@ -881,7 +887,7 @@ For Image and Signal Processing</A>, Springer 2017
 <hr>
 Home page of <A HREF="https://franknielsen.github.io/GSI/" target="_blank">Geometric Science of Information</A>
 <hr>
-December 2021.
+January 2022.
     </body>
 </html>
 
