@@ -51,7 +51,7 @@ For example, for analyzing interior point methods with barrier functions in opti
 to get a dualistic structure.
 A <b><A HREF="#projDiv" target="_blank">projective divergence</a></b> is a divergence which is invariant by independent rescaling of its parameters.
 A statistical projective divergence is thus useful for estimating computationally 
-intractable statistical models (eg., gamma divergences, Cauchy-Schwarz and Hölder divergences, or singly-sided projective Hyvärinen divergence).
+intractable statistical models (eg., gamma divergences, Cauchy-Schwarz divergence and Hölder divergences, or singly-sided projective Hyvärinen divergence).
 A <b><A HREF="#confDiv" target="_blank">conformal divergence</a></b> is a divergence scaled by a conformal factor which may depend on one or two of its arguments.
 The metric tensor obtained from Eguchi's information divergence of a conformal divergence 
 is a <b>conformal metric</b> of the metric obtained from the divergence, hence its name.
@@ -59,14 +59,47 @@ By analogy to total least squares vs least squares, a
  <b>total divergence</b> is a divergence which is invariant wrt. to rotations (eg., total Bregman divergences).
  An important property of divergences on the probability simplex is to be <b>monotone</b> by coarse-graining.
  That is, merging bins and considering reduced histograms should give a distance less or equal than the distance on the full resolution histograms.
- This <b>information monotonicity</b> property holds for f-divergences (called invariant divergences in information geometry), 
+ This <b>information monotonicity</b> property holds for <a href="#fdiv" target="_blank">f-divergences</A> (called invariant divergences in information geometry), 
  Hilbert log cross-ratio distance, or Aitchison distance for example.
- Some statistical divergences are upper <b>bounded</b> (eg., Jensen-Shannon divergences) while others are not (eg., Jeffreys' divergence).
+ Some statistical divergences are upper <b>bounded</b>
+ (eg., <a href="#JSD" target="_blank">Jensen-Shannon divergence</A>) while others are not (eg., Jeffreys' divergence).
 <b><A HREF="#OT" target="_blank">Optimal transport</a></b> distances require a <b>ground base distance</b> on the sample space.
 A <b><A HREF="#JD" target="_blank">diversity index</a></b> generalizes a <b>two-point distance</b> to a family of parameters/distributions.
-It usually measures the dispersion around a center point (eg., like variance measures the dispersion around the centroid).
+It usually measures the dispersion around a center point (eg., like variance measures 
+the dispersion around the <a href="#clustering" target="_blank">centroid</A>).
 </p>
 
+
+<p>
+Browsing geometric structures:
+[<a href="#tutorials" target="_blank">tutorials</A>]
+[<a href="#FisherRao" target="_blank">Fisher-Rao manifolds</A>]
+[<a href="#cone" target="_blank">Cones</A>]
+[<a href="#Finsler" target="_blank">Finsler manifolds</A>]
+[<a href="#HessianMfd" target="_blank">Hessian manifolds</A>]
+[<a href="#EFMF" target="_blank">Exponential families and mixture families</A>]
+[<a href="#ProbaSimplex" target="_blank">Categorical distributions/probability simplex</A>]
+[<a href="#geoTS" target="_blank">Time series</A>]
+[<a href="#geoHilbert" target="_blank">Hilbert geometry</A>]
+[<a href="#hyperbolic" target="_blank">Hyperbolic geometry and Siegel spaces</A>]
+[<a href="#applications" target="_blank">Applications</A>]
+[<a href="#natgrad" target="_blank">Natural gradient</A>]
+[<a href="#clustering" target="_blank">centroids and clustering</A>]
+[<a href="#miscapp" target="_blank">Miscellaneous applications</A>] 
+</p>
+
+<p>
+Browsing [<a href="#dissimilarity" target="_blank">Dissimilarities</A>]:
+[<a href="#JSD" target="_blank">Jensen-Shannon divergence</A>]
+[<a href="#fdiv" target="_blank">f-divergences</A>]
+[<a href="#JD" target="_blank">Bregman divergences</A>]
+[<a href="#BD" target="_blank">Jensen divergences</A>]
+[<a href="#confDiv" target="_blank">conformal divergences</A>]
+[<a href="#projDiv" target="_blank">projective divergences</A>]
+[<a href="#OT" target="_blank">optimal transport</A>]
+[<a href="#entropy" target="_blank">entropies</A>]
+[<a href="#Chernoff" target="_blank">Chernoff information</A>]
+</p>
 
 <h2 id="tutorials"><u>Information geometry: Tutorials and surveys</u></h2>
 
@@ -142,6 +175,10 @@ Pattern Learning and Recognition on Statistical Manifolds: An Information-Geomet
 SRC="CARD-SIMBAD2013.png"
  width="25%" border="3"></A>
 </center>
+
+
+
+<li><A HREF="Note-LegendreTransformation.pdf" target="_blank">Legendre transformation and information geometry</A>, memo, 2010
 
 
 </ul>
