@@ -1,19 +1,17 @@
-<a href="#tutorials" target="_blank">tutorials</A>
-<a href="#FisherRao" target="_blank">Fisher-Rao manifolds</A>
-<a href="#cone" target="_blank">Cones</A>
-<a href="#Finsler" target="_blank">Finsler manifolds</A>
-<a href="#HessianMfd" target="_blank">Hessian manifolds</A>
-<a href="#EFMF" target="_blank">Exponential families and mixture families</A>
-<a href="#ProbaSimplex" target="_blank">Categorical distributions/probability simplex</A>
-<a href="#geoTS" target="_blank">Time series</A>
-<a href="#geoHilbert" target="_blank">Hilbert geometry</A>
-<a href="#hyperbolic" target="_blank">Hyperbolic geometry and Siegel spaces</A>
-
-
-<a href="#applications" target="_blank">Applications</A>
-<a href="#natgrad" target="_blank">Natural gradient</A>
-<a href="#clustering" target="_blank">centroids and clustering</A>
-<a href="#miscapp" target="_blank">Miscellaneous applications</A>
+[<a href="#tutorials" target="_blank">tutorials</A>]
+[<a href="#FisherRao" target="_blank">Fisher-Rao manifolds</A>]
+[<a href="#cone" target="_blank">Cones</A>]
+[<a href="#Finsler" target="_blank">Finsler manifolds</A>]
+[<a href="#HessianMfd" target="_blank">Hessian manifolds</A>]
+[<a href="#EFMF" target="_blank">Exponential families and mixture families</A>]
+[<a href="#ProbaSimplex" target="_blank">Categorical distributions/probability simplex</A>]
+[<a href="#geoTS" target="_blank">Time series</A>]
+[<a href="#geoHilbert" target="_blank">Hilbert geometry</A>]
+[<a href="#hyperbolic" target="_blank">Hyperbolic geometry and Siegel spaces</A>]
+[<a href="#applications" target="_blank">Applications</A>]
+[<a href="#natgrad" target="_blank">Natural gradient</A>]
+[<a href="#clustering" target="_blank">centroids and clustering</A>]
+[<a href="#miscapp" target="_blank">Miscellaneous applications</A>]
 
 
 
