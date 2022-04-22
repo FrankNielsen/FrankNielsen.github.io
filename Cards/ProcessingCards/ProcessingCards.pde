@@ -3,7 +3,7 @@ String [] cardfilename=new String[800];
 int count=0;
 //String yourPath = "C:/Travail/AllCards13Nov2021";
 
-String yourPath = "C:/Travail/WWWGitHubFrankNIELSEN/FrankNielsen.github.io/Cards";
+String yourPath = "C:/Travail/WWWGitHubFrankNIELSEN/FrankNielsen.github.io/Cards/NCardBooks";
 File someFolder = new File(yourPath);
 File[] someFolderList = someFolder.listFiles();
 
@@ -37,7 +37,12 @@ for (  perm=0; perm<nbperm; perm++)
 
 int maxcount=count-1;
 int i;
-String initcard="<h1>List of cards</h1>\n <A HREF=\"researchcards-Nov2021-smallsize.pdf\" target=\"_blank\">The full card deck</A> (PDF, 37 MB)<BR>Click on a card and then browse the previous card or the following card from the current card.<BR>There are at most 25 cards per page<BR>The card order is random (at HTML compile time).<ul>"; 
+//String initcard="<h1>List of cards</h1>\n <A HREF=\"researchcards-Nov2021-smallsize.pdf\" target=\"_blank\">The full card deck</A> (PDF, 37 MB)<BR>Click on a card and then browse the previous card or the following card from the current card.<BR>There are at most 25 cards per page<BR>The card order is random (at HTML compile time).<ul>"; 
+
+
+String initcard="<h1>List of cards</h1>\nClick on a card and then browse the previous card or the following card from the current card.<BR>There are at most 25 cards per page<BR>The card order is random (at HTML compile time).<ul>"; 
+
+
 String allcardshtml=initcard;
 
 String htmlstr;
