@@ -1,6 +1,9 @@
 \documentclass{beamer}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amsthm}
+\usepackage{xcolor}
+\usepackage{comment}
+\definecolor{red}{RGB}{255,0,0}
 
  
 
@@ -9,6 +12,8 @@
 \def\myframepart#1{\begin{frame}\begin{center}{\Huge \bf #1}\end{center}\end{frame}}
   
 \DeclareMathOperator*{\argmin}{arg\,min}
+
+\setbeamersize{text margin left=0pt,text margin right=0pt}
 
 
 \newtheorem{lem}{Lemma}
@@ -19,6 +24,8 @@
 \def\textred#1{#1}
 \def\textblue#1{#1}
  \def\map{\mathrm{MAP}}
+\def\calX{\mathcal{X}}
+\def\dmu{\mathrm{d}\mu}
 
 \usetheme{default}
 \usefonttheme{structurebold}
@@ -42,6 +49,51 @@
 \titlepage
 \end{frame}
 
+\begin{comment}
+Updated https://arxiv.org/abs/2204.10952
+- $f$-divergences between densities of a multivariate location family amount to an increasing function of their Mahalanobis distance, multivariate $f$-div = univariate $f$-div (=> fast Monte Carlo estimations)
+- $f$-div between densities of a multivariate scale family is a spectral matrix divergence
+\end{comment}
+
+
+\begin{frame}{$f$-divergences between location-scale families}
+
+\begin{itemize}
+	\item Multivariate 
+	location-scale family with standard density $p(x)$:
+	\textcolor{red}{$
+p_{\mu, \Sigma}(x) := |\Sigma|^{-1/2} \,  p\left(\Sigma^{-1/2}(x-\mu)\right), x \in \mathbb{R}^d, \textcolor{blue}{p(x)=\tilde{p}(\|x^2\|)}
+$}   (include multivariate normal distributions, multivariate Cauchy distributions) 
+\item $f$-divergence between $P,Q\ll\mu$ for strictly convex generator $f\in C^2$ with $f(1)=0$:
+$
+I_f(P:Q):=\int_\calX p\, f\left(\frac{q}{p}\right) \dmu
+$ (include KL divergence)
+
+\item  
+$\textcolor{red}{I_f \left(p_{\mu_1, \Sigma} : p_{\mu_2, \Sigma} \right)= h_f \left( \Delta_\Sigma^2(\mu_1,\mu_2) \right)}$ where
+\textcolor{blue}{$\Delta_\Sigma^2(\mu_1,\mu_2) := (\mu_2-\mu_1)^\top\, \Sigma^{-1} (\mu_2-\mu_1)$} for strictly increasing $h_f$ (Mahalanobis distance $\Delta_\Sigma$)\\
+Preserve relative comparisons:\\
+$I_f(p_{\mu_1, \Sigma} : p_{\mu_2, \Sigma})<I_f(p_{\mu_1', \Sigma} : p_{\mu_2', \Sigma}) \Leftrightarrow 
+\Delta_\Sigma^2(\mu_1,\mu_2) < \Delta_\Sigma^2(\mu_1',\mu_2')
+$ \\
+{\footnotesize $\Rightarrow$ Voronoi diagrams, minimum enclosing ball, $k$-center clustering {\bf independent} of $f$}
+
+\item Since $\Delta_\Sigma^2(\mu_1,\mu_2)=\Delta_{1}(0,\Delta_\Sigma^2(\mu_1,\mu_2))$, multivariate $f$-div. amounts to univariate $f$-div ($\rightarrow$ fast Monte Carlo estimations: eg., Jensen-Shannon div.):
+\textcolor{red}{$I_f[p_{\mu_1,\Sigma},p_{\mu_2,\Sigma}] = I_f \left[p_{0,1},p_{\Delta_\Sigma(\mu_1,\mu_2),1}\right]$}
+
+\item Spectral matrix $f$-divergences for multivariate scale families:
+\textcolor{red}{$I_f[p_{\mu,\Sigma_1}:p_{\mu,\Sigma_2}]=E_f(|1-\lambda_1|,\ldots,|1-\lambda_d|)$}, 
+where $E_f(\cdot)$ is a $d$-variate totally symmetric function and $\lambda_i\in \mathrm{sp}(\Sigma_2\Sigma_1^{-1})$. 
+\hfill
+{\bf \textcolor{green}{[arXiv:2204.10952]}}
+\end{itemize}
+
+
+\end{frame}
+
+\end{document}
+
+%%%
 
 \begin{frame}{Aitchison distance vs Hilbert simplex distance}
 
