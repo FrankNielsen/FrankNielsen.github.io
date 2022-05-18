@@ -6,22 +6,40 @@
 
 
 <body>
+<script src="processing.js"></script> 
+
 <h1>Geometric combinatorial optimization</h1>
 
 
 <p>
 I am interested in geometric combinatorial optimization, specially geometric Set Cover Problems (SCPs) or 
-Hitting Set Problems (HSPs).
-Those problems are NP-hard: For example, stabbing or piercing a set of isothetic boxes or finding maximum independent set of geometric graphs.
+Hitting Set Problems (HSPs).  Geometrically speaking, we want to pierce or stab a set of objects with the minimum number of points, or dually
+ cover a set of points by a minimum number copy of a geometric shape.<BR>
+ <center><IMG SRC="snapshot-stabbingboxes.png" WIDTH="50%"><BR>
+ Caption: Piercing a set of axis-parallel rectangles with red points (Minimum Set Cover). 
+ Getting an independent set of pairwise non-intersecting axis-parallel blue rectangles (Maximum Independent Set).<BR>
+ Dynamic geometric combinatorial optimization problems:<BR>
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/IAZeHj1eVQw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center><BR>
+Those problems are NP-hard: For example, stabbing/piercing a set of isothetic boxes or finding maximum independent set of geometric graphs.
 A recent breakthrough was obtained by Joseph S. B. Mitchell 
-<A HREF="https://arxiv.org/abs/2101.00326" target="_blank">here</A>.
+<A HREF="https://arxiv.org/abs/2101.00326" target="_blank">here</A> (2021).
+I am interested in <A HREF="https://www.researchgate.net/publication/220983643_On_Piercing_Sets_of_Objects" target="_blank">Helly</A>, Gallai, and Hadwiger numbers as well.
 </p>
 
+
+Interactive demo:<BR>
+Mouse left-click + drag to input rectangles. Then click on pierce button<BR>
+<div style="text-align: center;">
+			<canvas data-processing-sources="StabbingPiercingBoxes-WEB.pde" width="800"  width="500"  style="outline:none;-webkit-tap-highlight-color: rgba(0,0,0,0);"></canvas>
+		</div>
+		
 
 <!--
 <li><A HREF="" target="_blank"></A>
 -->
 
+<h2>Related publications</h2>
 <ul>
 <li><A HREF="https://www.researchgate.net/publication/29615608_Combinatorial_Optimization_Algorithms_for_Radio_Network_Planning" target="_blank">Combinatorial optimization algorithms for radio network planning</A>,
  Theor. Comput. Sci. 263(1-2): 235-245 (2001)
