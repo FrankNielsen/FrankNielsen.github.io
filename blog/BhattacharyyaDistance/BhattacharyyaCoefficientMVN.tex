@@ -1,0 +1,109 @@
+% Frank.Nielsen@acm.org
+ 
+
+\documentclass[11pt]{article}
+\usepackage{fullpage,amssymb,amsmath,hyperref,url}
+
+\def\eqdef{:=}
+\def\eqnota{:=:}
+\def\dmu{\mathrm{d}\mu}
+\def\dnu{\mathrm{d}\nu}
+\def\calX{\mathcal{X}}
+\def\bbR{\mathbb{R}}
+\def\Var{\mathrm{Var}}
+\def\leftsup#1{{}^{#1}}
+\def\KL{\mathrm{KL}}
+\def\Bhat{\mathrm{Bhat}}
+
+\sloppy
+
+
+\title{Easily calculating and programming the skew Bhattacharyya coefficients and related divergences}
+
+\date{\today}
+
+\author{Frank Nielsen\\ {\tt Frank.Nielsen@acm.org}}
+
+\begin{document}
+\maketitle
+
+
+The $\alpha$-skew Bhattacharyya coefficient~\cite{BR-2011} (for $\alpha\in(0,1)$ is a similarity measure defined by
+$$
+\rho_\alpha[p:q]=\int p^\alpha(x)q^{1-\alpha}(x) \dmu(x)=\rho_{-\alpha}[q:p].
+$$
+We have $0<\rho_\alpha[p:q]\leq 1$.
+
+The Bhattacharyya coefficient can be used to define dissimilarities like the $\alpha$-skew Bhattacharyya distances:
+$$
+D_{\Bhat}[p:q]=-\log \rho_\alpha[p:q],
+$$
+or the $\alpha$-divergences for $\alpha\in\bbR$:
+$$
+D_\alpha[p:q]=\left\{
+\begin{array}{ll}
+\frac{4}{1-\alpha^2}\left(1-\rho_{\frac{1-\alpha}{2}}(p:q)\right), & \alpha\not\in\{-1,1\}\\
+D_\KL[p:q], & \alpha=-1\\
+D_\KL[q:p], & \alpha=1.
+\end{array}
+\right.,
+$$
+where $D_\KL$ denotes the Kullback-Leibler divergence:
+$$
+D_\KL(p:q)=\int p(x)\log\left(\frac{p(x)}{q(x)}\right) \dmu(x).
+$$
+
+We shall consider the $\alpha$-Bhattacharyya coefficient between multivariate Gaussian distributions with the same covariance matrix,
+where the probability density of a multivariate Gaussian distribution $p_{\mu,\Sigma}(x)$ with mean $\mu\in\bbR^d$ and covariance matrix $\Sigma$ is:
+$$
+p_{\mu,\Sigma}(x)=\frac{1}{\sqrt{\det(2\pi\Sigma)}}\, \exp\left(-\frac{1}{2}(x-\mu)^\top \Sigma^{-1} (x-\mu)\right). 
+$$
+It is  reported in ~\cite{pardo2018statistical} (page 46):
+$$
+\rho_\alpha[p_{\mu,\Sigma_1}:p_{\mu,\Sigma_2}]=\frac{\lvert\Sigma_1\rvert^{\frac{1-\alpha}{2}}\, \lvert\Sigma_2\rvert^{\frac{\alpha}{2}}}{
+\lvert (1-\alpha)\Sigma_1+\alpha\Sigma_2\rvert^{\frac{1}{2}}}.
+$$
+
+We give the following calculation recipe in~\cite{CF-2020}:
+
+\begin{itemize}
+	\item Since $\rho_\alpha[p_{\theta_1}:p_{\theta_2}]=\exp(-J_{F,\alpha}(\theta_1:\theta_2))$ for densities $p_\theta(x)=\exp(\theta^\top t(x)-F(\theta)+k(x))$ belonging to an exponential family (where $J_{F,\alpha}$ is a skew Jensen divergence) 
+	and since $J_{F,\alpha}=J_{G,\alpha}$ for $G(\theta)=F(\theta)+a^\top\theta+b$, let us choose $G(\theta)=-\log p_\theta(x)$.
+	Furthermore, the densities are parameterized by their usual parameters $\lambda$ which may differ from their natural parameters $\theta$. 
+	Thus we have
+	$$
+	\rho_\alpha[p_{\theta_1}:p_{\theta_2}]=\frac{p_{\lambda_\alpha}(\omega)}{p_{\lambda_1}(\omega)^\alpha\, p_{\lambda_2}(\omega)^{1-\alpha}},\quad\forall\omega\in\bbR^d,
+	$$
+	where $\lambda_\alpha=\lambda((1-\alpha)\theta_1+\alpha\theta_2)$.
+	
+	\item To get $\lambda_\alpha$, let us write $p_{\lambda_1}^\alpha(\omega) p_{\lambda_2}^{1-\alpha}(\omega)\propto \exp(\lambda_\alpha^\top t(\omega))$.
+	Thus we do not need to explicitly calculate the log-normalizer $F(\theta)$ to get $\lambda_\alpha$.
+\end{itemize}
+
+For the $\alpha$-Bhattacharyya coefficient  between same-mean Gaussian distributions, let us choose $\omega=\mu$ so that
+$$
+p_{\mu,\Sigma}(\mu)=\frac{1}{\sqrt{\det(2\pi\Sigma)}}.
+$$
+
+Therefore
+$$
+p_{\mu,\Sigma_1}(\mu)^\alpha p_{\mu,\Sigma_2}(\mu)^{1-\alpha}=\frac{1}{\sqrt{(2\pi I)} |\Sigma_1|^\alpha |\Sigma_2|^{1-\alpha}}.
+$$
+Hence 
+$$
+\Sigma_\alpha=
+$$
+
+Overall, we have
+$$
+...
+$$
+
+
+
+\bibliographystyle{plain}
+\bibliography{Bhattacharyya }
+\end{document}
+
+
+ 
