@@ -12,3 +12,11 @@ solalpha: solve(eq,alpha)$
 alphastar:rhs(solalpha[1]);
 ChernoffInformation: KLD(mualpha(mu1,v1,mu2,v2,alphastar),varalpha(v1,v2,alphastar),mu1,v1)$
 print("Chernoff information=")$ratsimp(ChernoffInformation);
+
+mu1:0;mu2:0;
+v1:1;v2:s;
+eq: (theta1(mu1,v1)-theta1(mu2,v2))*mualpha(mu1,v1,mu2,v2,alpha)+(theta2(mu1,v1)-theta2(mu2,v2))*(mualpha(mu1,v1,mu2,v2,alpha)**2+varalpha(v1,v2,alpha))-F(theta1(mu1,v1),theta2(mu1,v1))+F(theta1(mu2,v2),theta2(mu2,v2));
+solalpha: solve(eq,alpha)$
+alphastar:rhs(solalpha[1]);
+ChernoffInformation: KLD(mualpha(mu1,v1,mu2,v2,alphastar),varalpha(v1,v2,alphastar),mu1,v1)$
+print("Chernoff information=")$ratsimp(ChernoffInformation);
