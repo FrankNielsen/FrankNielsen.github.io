@@ -6,11 +6,11 @@
 
 <card>
 <visual>
-TCard-bBfunctionalGenEntropy.png
+RCard-BifunctionalGenEntropy.png
 </visual>
 <description>
-Generalization of Shannon entropy from smooth monotone functions f and g with f o g^{-1} strictly convex.
-Generalized Kullback-Leibler divergence as cross-entropy minus entropy.
+Generalizing Shannon entropy with two smooth monotone functions f and g with f o g^{-1} strictly convex.
+Get generalized Kullback-Leibler divergence as cross-entropy minus entropy.
 When f(x)=x and g(x)=log(x), f o g^{-1} =exp(x), recover Shannon's entropy.
 https://arxiv.org/abs/2001.09660
 </description>
