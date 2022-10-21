@@ -2,6 +2,16 @@
 <Portfolio>
 
 
+<card>
+<visual>
+RCard-scaledJensenBregmanDivs.png
+</visual>
+<description>
+Get Bregman divergence and reverse Bregman divergence by taking limits of scaled α-skew Jensen divergences. Scaled α-skew Jensen divergences are defined for **any  α in R\{0,1}**, measures the vertical gap between the convex function and a linear function.
+https://arxiv.org/abs/1004.5049
+</description>
+</card>
+
 
 
 <card>
