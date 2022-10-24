@@ -4,6 +4,19 @@
 
 <card>
 <visual>
+RCard-ZetaLogConvex.png
+</visual>
+<description>
+Proof that Riemann zeta function is log-convex on (1, infinity):   zeta distributions form an exponential family with log-normalizer log zeta function, hence strictly convex, and voila: zeta is log-convex! 
+@AnalysisFact
+@JohnDCook
+https://franknielsen.github.io/ZetaParetoExpFam/
+</description>
+</card>
+
+
+<card>
+<visual>
 RCard-scaledJensenBregmanDivs.png
 </visual>
 <description>
