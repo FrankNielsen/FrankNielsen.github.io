@@ -2,6 +2,36 @@
 <Portfolio>
 
 
+
+
+
+<card>
+<visual>
+VisualizingRiemannCurvatureTensor.gif
+</visual>
+<description>
+Visualizing Riemann R(a,b) curvature tensor via parallel transport wrt connection ∇. 
+R measures the noncommutativity of the covariant derivative ∇  or how a vector v  change when parallel transported around an infinitesimal loop defined by a and b.
+https://mdpi.com/1099-4300/22/10/1100
+</description>
+<thread>
+Images gif courtesy of http://images.math.cnrs.fr/Visualiser-la-courbure.html
+</thread>
+</card>
+
+
+
+<card>
+<visual>
+RCard-KLDSigmaPoints.jpg
+</visual>
+<description>
+New method to calculate the Kullback-Leibler divergence between densities of an exponential family (normals, etc.) by expressing the KLD as an averaged sum of log density ratio at *sigma points*. Bypass integral calculations and use of Bregman generators 
+https://tinyurl.com/KLSigmaPoints
+</description>
+</card>
+
+
 <card>
 <visual>
 RCard-ZetaLogConvex.png
