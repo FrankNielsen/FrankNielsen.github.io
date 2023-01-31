@@ -1,0 +1,78 @@
+\begin{thebibliography}{10}
+
+\bibitem{Ahidar-2019}
+Adil Ahidar-Coutrix, Thibaut Le~Gouic, and Quentin Paris.
+\newblock Convergence rates for empirical barycenters in metric spaces:
+  curvature, convexity and extendable geodesics.
+\newblock {\em Probability Theory and Related Fields}, pages 1--46, 2019.
+
+\bibitem{IG-2016}
+Shun-ichi Amari.
+\newblock {\em Information Geometry and Its Applications}.
+\newblock Applied Mathematical Sciences. Springer Japan, 2016.
+
+\bibitem{IGDiv-2010}
+Shun-ichi Amari and Andrzej Cichocki.
+\newblock Information geometry of divergence functions.
+\newblock {\em Bulletin of the polish academy of sciences. Technical sciences},
+  58(1):183--195, 2010.
+
+\bibitem{BD-2005}
+Arindam Banerjee, Srujana Merugu, Inderjit~S Dhillon, and Joydeep Ghosh.
+\newblock Clustering with {B}regman divergences.
+\newblock {\em Journal of machine learning research}, 6(Oct):1705--1749, 2005.
+
+\bibitem{BVD-2010}
+Jean-Daniel Boissonnat, Frank Nielsen, and Richard Nock.
+\newblock Bregman {V}oronoi diagrams.
+\newblock {\em Discrete \& Computational Geometry}, 44(2):281--307, 2010.
+
+\bibitem{Bregman-1967}
+Lev~M Bregman.
+\newblock The relaxation method of finding the common point of convex sets and
+  its application to the solution of problems in convex programming.
+\newblock {\em USSR computational mathematics and mathematical physics},
+  7(3):200--217, 1967.
+
+\bibitem{Frechet-1948}
+Maurice Fr{\'e}chet.
+\newblock Les {\'e}l{\'e}ments al{\'e}atoires de nature quelconque dans un
+  espace distanci{\'e}.
+\newblock {\em Annales de l'institut Henri Poincar{\'e}}, 10(4):215--310, 1948.
+
+\bibitem{EIG-2018}
+Frank Nielsen.
+\newblock An elementary introduction to information geometry.
+\newblock Technical report, arXiv preprint, 2018.
+\newblock arxiv:1808.08271.
+
+\bibitem{GeodesicTriangles-2019}
+Frank Nielsen.
+\newblock On geodesic triangles with right angles in a dually flat space.
+\newblock Technical report, arXiv preprint, 2019.
+\newblock arXiv:1910.03935.
+
+\bibitem{GenJS-2020}
+Frank Nielsen.
+\newblock On a generalization of the {J}ensen--{S}hannon divergence and the
+  {J}ensen--{S}hannon centroid.
+\newblock {\em Entropy}, 22(2):221, 2020.
+
+\bibitem{BVD-2007}
+Frank Nielsen, Jean-Daniel Boissonnat, and Richard Nock.
+\newblock Bregman {V}oronoi diagrams: Properties, algorithms and applications.
+\newblock {\em arXiv preprint arXiv:0709.2196}, 2007.
+
+\bibitem{SBD-2009}
+Frank Nielsen and Richard Nock.
+\newblock Sided and symmetrized {B}regman centroids.
+\newblock {\em IEEE transactions on Information Theory}, 55(6):2882--2904,
+  2009.
+
+\bibitem{InformationRadius-1969}
+Robin Sibson.
+\newblock Information radius.
+\newblock {\em Zeitschrift f{\"u}r {W}ahrscheinlichkeitstheorie und verwandte
+  {G}ebiete}, 14(2):149--160, 1969.
+
+\end{thebibliography}

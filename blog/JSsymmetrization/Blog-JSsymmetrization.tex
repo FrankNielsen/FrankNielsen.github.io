@@ -1,0 +1,93 @@
+%\documentclass[11pt]{article}
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage[numbers]{natbib}
+\usepackage{hyperref}
+
+\title{Jensen-Shannon symmetrization of dissimilarities}
+
+\author{Frank Nielsen\\ Sony Computer Science Laboratories Inc.\\ Tokyo, Japan}
+
+ 
+
+\def\calE{\mathcal{E}}
+\def\calD{\mathcal{D}}
+\def\calX{\mathcal{X}}
+\def\calF{\mathcal{F}}
+\def\calP{\mathcal{P}}
+\def\dmu{\mathrm{d}\mu}
+\def\KL{\mathrm{KL}}
+\def\JS{\mathrm{JS}}
+\def\vJS{\mathrm{vJS}}
+\def\IR{\mathrm{IR}}
+
+%\def\cite#1{\citep{#1}}
+
+\begin{document}
+\maketitle
+
+$$
+D_\JS(p,q)=\frac{1}{2}\left(D_\KL\left(p:\frac{p+q}{2}\right)+D_\KL\left(q:\frac{p+q}{2}\right)\right).
+$$
+
+$$
+D_\JS(p,q) = H\left(\frac{p+q}{2}\right)-\frac{H(p)+H(q)}{2}\geq 0
+$$
+
+$$
+I_f(p:q)=\int pf(q/p)\dmu
+$$
+
+$$
+D^\JS(p,q):=\frac{1}{2}\left(D\left(p:\frac{p+q}{2}\right)+D\left(q:\frac{p+q}{2}\right)\right)
+$$
+
+$$
+D=D_\KL
+$$
+
+$$
+D_\JS(p,q)=\frac{1}{2}\left(D_\KL\left(p:\frac{p+q}{2}\right)+D_\KL\left(q:\frac{p+q}{2}\right)\right).
+$$
+
+$$
+D=I_f
+$$
+
+
+$$
+I_f^\JS(p,q):=\frac{1}{2}\left(I_f\left(p:\frac{p+q}{2}\right)+I_f\left(q:\frac{p+q}{2}\right)\right)=I_{f^\JS}(p:q)
+$$
+
+
+$$
+D_{\chi^2}^\JS(p,q)=\frac{1}{2}\left(D_{\chi^2}^{\mathrm{Neyman}}\left(p:\frac{p+q}{2}\right)+D_{\chi^2}^{\mathrm{Neyman}}\left(q:\frac{p+q}{2}\right)\right) = \int \frac{(p-q)^2}{p+q}\dmu =I_{f_{\mathrm{Neyman}}^\JS}(p:q)
+$$
+
+
+$$
+D_{\chi^2}^{\mathrm{Neyman}}(p,q)=\int \frac{(p-q)^2}{p} d\mu
+$$
+
+$$
+f_{\mathrm{Neyman}}(u)=(u-1)^2
+$$
+
+$$
+f_{\mathrm{Neyman}}^\JS(u)=\frac{(u-1)^2}{u}
+$$
+ 
+$$
+f_\KL\rightarrow f_\JS(u)=f_\KL^\JS(u)=-((1+u)/2)\log((1+u)/2)+(u/2)\log(u)
+$$
+
+$$
+f^\JS(u):=\frac{1+u}{4}\left( f\left(\frac{2u}{1+u} + f\left(\frac{2}{1+u}\right)\right)
+$$
+ 
+\end{document}
+ 
+
+
+
+\end{document}

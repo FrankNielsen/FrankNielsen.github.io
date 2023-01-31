@@ -1,0 +1,263 @@
+% C:\Travail\SVN-Acreuser\2020\ProcesssingCodeFrank\MahalanobisPDE
+\documentclass[11pt]{article}
+\usepackage{amssymb,url,hyperref,fullpage}
+
+\newtheorem{example}{Example}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newenvironment{proof}{\paragraph{Proof:}}{\hfill$\square$}
+\sloppy
+
+\title{Corrigendum and addendum to:\\
+``Sided and symmetrized Bregman centroids''\\ IEEE Transactions on Information Theory 55.6 (2009): 2882-2904.}
+
+\author{Frank Nielsen \and Richard Nock}
+\date{July 2020}
+
+\def\bbG{\mathbb{G}}
+\def\bbR{\mathbb{R}}
+\def\calP{\mathcal{P}}
+\def\eqdef{:=}
+
+\begin{document}
+
+
+\maketitle
+
+\begin{abstract}
+We correct and extend the results presented in~\protect\cite{SBD-2009}.
+\end{abstract}
+
+%%%%
+\section{Dissimilarities, dual centroids, and dual information radii}
+%%%%%
+
+Let $D(P:Q)$ denote the {\em dissimilarity} between two points $P$ and $Q$ of a space $\bbG$ such that $D(P:Q)\geq 0$ with equality if and only if $P=Q$.
+By analogy with the notion of Fr\'echet barycenters in metric spaces~\cite{Frechet-1948}, we define the {\em $D$-barycenters}
+ or {\em $D$-centroid} $C_D(\calP)$ of a weighted point set
+ $\calP=\{P_1,\ldots, P_n\}$ with respect to $D$ as
+\begin{equation}
+C_D(\calP) := \arg \min_{X\in\bbG}  \sum_{i=1}^n w_i D(P_i:X),
+\end{equation}
+where $w_i>0$ and $\sum_{i=1}^n w_i=1$ (i.e., $w$ belongs to the $(n-1)$-dimensional standard simplex $\Delta_{n-1}$).
+The centroids are special cases of barycenters obtained for the uniform weighting $w_i=\frac{1}{n}$.
+Notice that $C_D(\calP)$ is generally a subset of points of $\bbG$, and may not necessarily exist nor be unique.
+For example, the centroid of two antipodal points on the unit Euclidean sphere is a great circle.
+In Riemannian geometry, other notions of barycenters have been defined~\cite{Ahidar-2019}: Karcher local barycenters, exponential barycenters, etc.
+
+Since $D$ may be asymmetric $D(P:Q)\not =D(Q:P)$ (oriented dissimilarity, hence the delimiter notation ``:''), 
+we define the {\em dual dissimilarity} $D^*(P:Q):=D(Q:P)$, and the {\em dual $D$-barycenter} or {\em left-sided $D$-barycenter}:
+\begin{eqnarray}
+{C_D}^*(\calP) &:=& \arg \min_{X\in\bbG}  \sum_{i=1}^n w_i D(X:P_i),\\
+&=& \arg \min_{X\in\bbG}  \sum_{i=1}^n w_i D^*(P_i:X),\\
+&=& C_{D^*}(\calP).
+\end{eqnarray}
+Notice that the dual of the dual dissimilarity is the original (primal) dissimilarity: ${D^*}^*=D$ (involutive property of duality).
+
+Let $C_D(\calP)$ be the primal $D$-barycenter ({\em right-sided $D$-barycenter}) and ${C_D}^*(\calP)$  be the dual $D$-barycenter (left-sided $D$-barycenter).
+The dual $D$-barycenter with respect to $D$ amounts to the (primal) $D^*$-barycenter for the dual dissimilarity $D^*$.
+When $D$ is the squared Euclidean distance, both primal and dual centroids coincide to the center of mass.
+
+The (primal) {\em information radius}~\cite{InformationRadius-1969} is defined by
+\begin{equation}
+I_D(\calP) :=  \sum_{i=1}^n w_i D(P_i:C),\quad C\in C_D(\calP),
+\end{equation}
+while the {\em dual information radius} is defined by
+\begin{equation}
+{I_D}^*(\calP) :=  \sum_{i=1}^n w_i D(C:P_i),\quad C\in {C_D}^*(\calP).
+\end{equation}
+
+In general, we have ${I_D}^*(\calP)\not ={I_{D^*}}(\calP)$ because the left-sided and right-sided centroids may not coincide.
+(They coincide by default when the dissimilarity is symmetric.)
+The information radius for the squared Euclidean distance represents the variance of the point set.
+
+%%%%
+\section{Bregman centroids and Bregman information}
+%%%%
+
+Let $F(\theta)$ be a strictly convex and differentiable real-valued function for $\theta\in\Theta$, where $\Theta\subset \bbR^D$ denotes the  open parameter space.
+We define the {\em Bregman divergence}~\cite{Bregman-1967} with respect to generator $F$ as:
+\begin{equation}
+B_F(\theta:\theta'):=F(\theta)-F(\theta')-(\theta-\theta')^\top \nabla F(\theta'),
+\end{equation}
+for $\theta,\theta'\in \Theta$.
+
+Bregman divergences are canonical smooth dissimilarities of {\em dually flat space} in information geometry~\cite{IG-2016,EIG-2018}:
+That is,  we can build a canonical Bregman divergence from any dually flat space, and a Bregman divergence yields a dually flat space~\cite{IGDiv-2010}.
+In a dually flat space (or {\em Bregman manifold}~\cite{GeodesicTriangles-2019}), the dissimilarity between two points $P$ and $Q$ is expressed by
+\begin{equation}
+D_F(P:Q)\eqdef B_F(\theta(P):\theta(Q)), 
+\end{equation}
+where $\theta(\cdot)$ is a {\em global (affine) coordinate system} used to define the {\em potential function} $F(\theta)$, see~\cite{IG-2016,EIG-2018}.
+The dual divergence amounts to a dual Bregman divergence $B_{F^*}$ as follows:
+\begin{equation}
+D^*_F(P:Q)= D(Q:P)=B_F(\theta(Q):\theta(P)) = B_{F^*}(\eta(P):\eta(Q)) = D_{F^*}(P:Q), 
+\end{equation}
+where $F^*$ is the Legendre-Fenchel convex conjugate~\cite{GeodesicTriangles-2019}, and $\eta(\theta)=\nabla F(\theta)$ the dual affine global coordinate system~\cite{IG-2016,EIG-2018}.
+We can introduce the {\em Legendre-Fenchel divergence} from the dual potential functions $F$ and $F^*$ as follows:
+\begin{equation}
+A_F(\theta:\eta')\eqdef F(\theta)+F^*(\eta')-\theta^\top\eta'\geq 0
+\end{equation}
+with equality if and only if $\eta'=\nabla F(\theta)$, or equivalently $\theta=\nabla F^*(\eta')$.
+
+Thus, in a Bregman manifold, we have the dual divergences that can be expressed using the dual coordinate systems either by Bregman divergences or by Legendre-Fenchel divergences as follows:
+\begin{eqnarray}
+D_F(P:Q) &=&  B_F(\theta(P):\theta(Q)) = A_{F}(\theta(P):\eta(Q)) =: {D_F}^*(Q:P),\\
+{D_F}^*(P:Q) &=& B_{F^*}(\eta(P):\eta(Q)) = A_{F^*}(\eta(P):\theta(Q))=: D_F(Q:P).
+\end{eqnarray}
+
+
+\begin{theorem}{Theorem 3.1 and Theorem 3.2 of~\cite{SBD-2009}}
+Let $\theta_i=\theta(P_i)$ and $\eta_i=\eta(P_i)$ be the primal and dual coordinates of point $P_i$ for $P_i\in\calP=\{P_1,\ldots,P_n\}$.
+Let $\bar\theta=\sum_{i=1}^n w_i \theta_i$ and $\bar\eta=\sum_{i=1}^n w_i \eta_i$ denote the center of mass in the primal $\theta$-coordinate system and dual $\eta$-coordinate system, respectively.
+The right-sided Bregman centroid $C_{D_F}(\calP)$ and  the left-sided Bregman centroid ${C_{D_F}}^*(\calP)$ exist and are both unique, 
+and we have $\theta(C_{D_F}(\calP))=\bar{\theta}$ and $\eta({C_{D_F}}^*(\calP))=\bar\eta$.
+\end{theorem}
+
+\begin{proof}
+We have
+\begin{eqnarray}
+C_{D_F}(\calP) &=& \arg\min_{X\in\bbG} \sum_{i=1}^n w_i D_F(P_i:X),\\
+&=& \arg\min_{X\in\bbG} \sum_{i=1}^n w_i A_{F}(\theta_i:\eta(X)),\\
+&=& \arg\min_{X\in\bbG} E(X)=(\sum_{i=1}^n w_i F(\theta_i)) + F^*(\eta(X)) - \bar\theta^\top \eta(X).
+\end{eqnarray}
+A point $X\in C_{D_F}(\calP)$ if and only if $\nabla_{\eta(X)}=0$: 
+$\nabla_\eta F^*(\eta(X))=\bar\theta$.
+That is:
+\begin{equation}
+\eta(X)=(\nabla F^*)^{-1}(\bar\theta)=(\nabla F^*)^{-1}(\sum_{i=1}^n w_i \nabla F^*(\eta_i)).
+\end{equation}
+The right-sided centroid is unique since the Hessian $\nabla^2_{\eta(X)} E(X)$
+is
+$\nabla^2 F^*(\eta(X))$, and $\nabla^2 F^*$ is positive-definite ($F^*$ is a strictly convex conjugate).
+The right-sided centroid is expressed in the $\theta$-coordinate system as 
+$\theta(C_{D_F}(\calP))=(\nabla F^*)(\eta(C_{D_F}(\calP)))=(\nabla F^*)((\nabla F^*)^{-1}(\bar\theta))=\bar\theta$.
+
+The proof for the left-sided centroid is similar, and we have 
+$\theta({C_{D_F}}^*(\calP))=(\nabla F)^{-1}(\bar\eta)=(\nabla F)^{-1}(\sum_{i=1}^n w_i \nabla F(\theta_i))$ so that 
+${C_{D_F}}^*(\calP)$ expressed in the $\eta$-coordinate system is $\bar\eta$.
+\end{proof}
+
+To summarize, we have:
+
+\begin{center}
+\begin{tabular}{lcc}
+ & $\theta$-coordinate system & $\eta$-coordinate system\\ \hline
+Right-sided centroid $C_{D_F}(\calP)$ &  $\bar\theta=\sum_{i=1}^n w_i\theta_i$ & $(\nabla F^*)^{-1}(\sum_{i=1}^n w_i \nabla F^*(\eta_i))$\\
+Left-sided centroid ${C_{D_F}}^*(\calP)$ & $(\nabla F)^{-1}(\sum_{i=1}^n w_i \nabla F(\theta_i))$  & $\bar\eta=\sum_{i=1}^n w_i\eta_i$
+\end{tabular}
+\end{center}
+
+In term of Bregman divergences, the right-sided Bregman centroid is the center of mass~\cite{BD-2005}.
+The Bregman information radius is called {\em Bregman information} in~\cite{BD-2005}.
+It was shown in~\cite{BVD-2007,BVD-2010} that the only {\em symmetrized Bregman divergences} are squared Mahalanobis divergences.
+Thus the left-sided centroid and right-sided Bregman centroids coincide only for squared Mahalanobis divergences,
+and the dual Bregman information radii differ in the general case.
+
+
+\begin{corollary}{Correct Corollary~3.3 of~\cite{SBD-2009}}
+The information radius $I_{D_F}(\calP)=J_F(\theta_1,\ldots,\theta_n;w_1,\ldots, w_n)$ where $J_F$ denotes the {\em Jensen diversity index}~\cite{GenJS-2020}:
+\begin{equation}
+J_F(\theta_1,\ldots,\theta_n;w_1,\ldots, w_n)\eqdef \sum_{i=1}^n w_i F(\theta_i)-F\left(\sum_{i=1}^n w_i\theta_i\right)\geq 0.
+\end{equation}
+The dual information radius ${I_{D_F}}^*(\calP)=I_{{D_F}^*}(\calP)=J_{F^*}(\eta_1,\ldots,\eta_n;w_1,\ldots, w_n)$ differs from the primal information radius except when $D_F$ is a squared Mahalanobis divergence.
+\end{corollary}
+
+Thus we have:
+\begin{eqnarray}
+I_{D_F}(\calP) &=& \sum_{i=1}^n w_i F(\theta_i)- F\left(\sum_{i=1}^n w_i\theta_i\right),\\
+I_{D_F^*}(\calP) &=& \sum_{i=1}^n w_iF^*(\eta_i)-  F^*\left(\sum_{i=1}^n w_i\eta_i\right).
+\end{eqnarray}
+
+\begin{example}
+When $F(\theta)=\frac{1}{2}\theta^\top Q\theta$ for a positive-definite matrix $Q\succ 0$, we have the convex conjugate $F^*(\eta)=\frac{1}{2}\eta^\top Q^{-1}\eta$ (with $Q^{-1}\succ 0$). We have 
+$\eta_i=Q^{-1}\theta_i$ and $\eta_i=Q\theta_i$.
+It follows that $\bar\theta=\sum_{i=1}^n w_i\theta_i=Q^{-1}\bar\eta$
+ and
+$\bar\eta=\sum_{i=1}^n w_i\eta_i=Q\bar\theta$.
+Thus we check that the information radii coincide when dealing with squared Mahalanobis Bregman divergences:
+\begin{eqnarray}
+I_{D_F}(\calP) &=& \sum_{i=1}^n w_i \frac{1}{2}\theta_i^\top Q\theta_i - \frac{1}{2}\bar\theta^\top Q\bar\theta,\\
+&=&  \sum_{i=1}^n w_i \frac{1}{2}(Q^{-1}\eta_i)^\top Q (Q^{-1}\eta_i) - \frac{1}{2} (Q^{-1}\bar\eta)^\top Q (Q^{-1}\bar\eta),\\
+&=& \sum_{i=1}^n w_i \eta_i^\top Q^{-1}\eta_i - \frac{1}{2} \bar\eta Q^{-1}\bar\eta,\\
+&=& I_{D_{F^*}}(\calP)= I_{D_F^*}(\calP).
+\end{eqnarray}
+
+\end{example}
+
+
+Let $Q=LL^\top$ be the Cholesky decomposition of a positive-definite matrix $Q\succ 0$. 
+It is well-known that the Mahalanobis distance $M_Q$ amounts to the Euclidean distance on affinely transformed points:
+\begin{eqnarray}
+M_Q^2(\theta,\theta') &=& \Delta\theta^\top Q\Delta\theta,\\
+&=&\Delta\theta^\top LL^\top\Delta\theta,\\
+&=& M_I^2(L^\top\theta,L^\top\theta')=\|L^\top\theta-L^\top\theta'\|^2,
+\end{eqnarray}
+where $\Delta\theta=\theta'-\theta$.
+
+The squared Mahalanobis distance $M_Q^2$ does not satisfy the triangle inequality, but the  Mahalanobis distance $M_Q$ is a metric distance:
+$$
+M_Q(\theta,\theta') = \sqrt{(\theta'-\theta)^\top Q (\theta'-\theta)}=\sqrt{\Delta\theta^\top Q \Delta\theta}.
+$$
+
+
+Conversely, we can transform the Euclidean distance as an equivalent Mahalanobis distance on affinely transformed points:
+$$
+M_Q( (L^\top)^{-1}\theta, (L^\top)^{-1}\theta') = M_I(\theta,\theta') = \|\theta-\theta'\|.
+$$
+
+Thus  the Euclidean distance can be rewritten as the following equivalent Mahalanobis distances:
+$$
+M_{Q_2}( (L_2^\top)^{-1}\theta, (L_2^\top)^{-1}\theta') = M_{Q_1}( (L_1^\top)^{-1}\theta,(L_1^\top)^{-1}\theta')= \|\theta-\theta'\|
+=M_I(\theta,\theta')
+$$
+
+It follows that we can transform one Mahalanobis distance $M_{Q_2}$ into another  Mahalanobis distance $M_{Q_1}$ by a linear transformation:
+$$
+M_{Q_2}(\theta,\theta') = 
+M_{Q_1}( (L_1^\top)^{-1}L_2^\top \theta, (L_1^\top)^{-1}L_2^\top \theta').
+$$
+% \|L_2^\top\theta-L_2^\top\theta'\| = 
+
+Observe that when $Q_1=I$, we have $L_1=I$, and we recover $M_{Q_2}(\theta,\theta')=M_I(L_2^\top \theta,L_2^\top \theta')=\|L_2^\top \theta - L_2^\top \theta'\|$, as expected.
+
+For any lower triangular matrix, we have $(L^{-1})^\top=(L^\top)^{-1}$.
+
+
+Let $L_{12}=L_2 \left(\left(L_1^\top\right)^{-1}\right)^\top$.
+Notice that $L_{12}=L_2L_1^{-1}$.
+Therefore we have $M_{Q_2}(\theta,\theta') =  M_{Q_1}(L_{12}^\top \theta, L_{12}^\top \theta' ) $.
+
+
+Another short proof consists in writing for symmetric positive-definite (SPD) matrix $Q=L^\top L\succ 0$ that
+$$
+M_Q(\theta_1,\theta_2)= M_I(L^\top\theta_1,L^\top\theta_2)  \Leftrightarrow
+M_I(\theta_1,\theta_2) = M_Q((L^\top)^{-1}\theta_1,((L^\top)^{-1}\theta_2).
+$$
+
+
+Then we have for two SPD matrices $Q_1=L_1^\top L_1\succ 0$ and $Q_2=L_2^\top L_2\succ 0$:
+$$
+M_{Q_1}(\theta_1,\theta_2)=
+M_I(L_1^\top\theta_1,L_1^\top\theta_2)= 
+M_{Q_2}((L_2^\top)^{-1}L_1^\top\theta_1,(L_2^\top)^{-1}L_1^\top\theta_2).
+$$
+
+Thus we have
+$$
+M_{Q_1}(\theta_1,\theta_2)=M_{Q_2}((L_2^\top)^{-1}L_1^\top\theta_1,(L_2^\top)^{-1}L_1^\top\theta_2).
+$$
+
+
+%%%%%%%%
+\section{The symmetrized Bregman centroids}
+%%%%%%%%
+
+\noindent{\bf Acknowledgments}: We kindly thank Professor Gavin Brown
+of the University of Manchester (UK) for communications on this topic.
+
+
+\bibliographystyle{plain}
+\bibliography{CorrigendumSBDBIB}
+\end{document}
+ 

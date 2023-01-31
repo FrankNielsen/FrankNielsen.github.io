@@ -1,0 +1,85 @@
+% Frank.Nielsen@acm.org  January 2023
+\documentclass{article} 
+\usepackage{fullpage,amsmath,amssymb,hyperref}
+\usepackage{algorithm2e} 
+%\usepackage{algorithm}
+
+%%% begin macros
+\def\CS{\mathrm{CS}}
+\def\calX{\mathcal{X}}
+\def\calF{\mathcal{F}}
+\def\eqdef{:=}
+\def\st{\ :\ }
+\def\calE{\mathcal{E}}
+\def\calM{\mathcal{M}}
+\def\calX{\mathcal{X}}
+\def\calP{\mathcal{P}}
+\def\calB{\mathcal{B}}
+\def\bbR{\mathbb{R}}
+\def\tp{\tilde{p}}
+\def\tq{\tilde{q}}
+\def\kl{\mathrm{kl}}
+\def\KL{\mathrm{KL}}
+\def\dx{\mathrm{d}x}
+\def\HH{\mathrm{HH}}
+\def\lhs{\mathrm{lhs}}
+\def\rhs{\mathrm{rhs}}
+\def\dx{\mathrm{d}x}
+\def\dy{\mathrm{d}y}
+\def\dt{\mathrm{d}t}
+\def\dmu{\mathrm{d}\mu}
+\def\hcross{{h^\times}}
+\def\bbR{\mathbb{R}}
+\def\bbN{\mathbb{N}}
+\def\Holder{\mathrm{Holder}}
+\def\tp{\tilde{p}}
+\def\tq{\tilde{q}}
+\def\leftsup#1{{{}^{#1}}}
+\def\supp{\mathrm{supp}}
+\def\JB{\mathrm{JB}}
+\def\JS{\mathrm{JS}}
+\def\QED{\ensuremath{{\square}}}
+\def\markatright#1{\leavevmode\unskip\nobreak\quad\hspace*{\fill}{#1}}
+\def\Inner#1#2{{\left\langle #1,#2 \right\rangle}}
+\def\inner#1#2{{\langle #1,#2 \rangle}}
+\def\innerE#1#2{{\langle #1,#2 \rangle}_E}
+%%%% end macros
+ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setcounter{section}{-1} %% Remove this when starting to work on the template.
+ 
+ 
+
+\begin{algorithm}[H]
+%\caption{The CCCP algorithm for computing the Jensen--Shannon centroid of a set of $n$ categorical distributions.}
+\label{algo:jscentroid}
+%\DontPrintSemicolon
+%\dontprintsemicolon % Some LaTeX compilers require you to use \dontprintsemicolon instead 
+\KwIn{A set $\{p_i=(p_i^1,\ldots, p_i^d)\}_{i\in [n]}$ of $n$ categorical distributions belonging to the $(d-1)$-dimensional probability simplex $\Delta_{d-1}$. $T$: The number of CCCP iterations} 
+\KwOut{An approximation $\leftsup{(T)}\bar{p}$ of the Jensen--Shannon centroid $\bar{p}$ minimizing $\frac{1}{n}\sum_{i=1}^n D_\JS(c,p_i)$}
+\tcc{Convert the categorical distributions to their natural parameters by dropping the last coordinate}
+$\theta_i^j=p_i^j$ for $j\in\{1,\ldots, d-1\}$\;
+\tcc{Initialize the Jensen--Shannon centroid} 
+$t\leftarrow 0$\;$\leftsup{(0)}\bar\theta=\frac{1}{n}\sum_{i=1} \theta_i$\;
+\tcc{Convert the initial natural parameter of the JS centroid to a categorical distribution}
+$\leftsup{(0)}\bar{p}^j=\leftsup{(0)}\bar\theta^j$ for $j\in\{1,\ldots, d-1\}$; $\leftsup{(0)}\bar{p}^d=1-\sum_{i=1}^d \leftsup{(0)}\bar{p}^j$\; 
+\tcc{Perform the ConCave-Convex Procedure (CCCP)} 
+ \While{$t\leq T$} {
+    \tcc{Use $\nabla F(\theta)=\left[\log \frac{\theta_i}{1-\sum_{j=1}^D \theta_j}\right]_i$ and $\nabla F^{-1}(\eta)=\frac{1}{1+\sum_{j=1}^D \exp(\eta_j)}[\exp(\eta_i)]_i$}
+$\leftsup{(t+1)}\theta = (\nabla F)^{-1} \left(  \frac{1}{n}\sum_i \nabla F\left(\frac{\theta_i+\leftsup{(t)}\theta}{2}\right) \right)$\;
+	$t\leftarrow t+1$\;
+  }
+\tcc{Convert back the natural parameter to the categorical distribution of the approximated Jensen-Shannon centroid} 
+%$\leftsup{(T)}\bar{p}^j=\leftsup{(T)}\bar\theta^j$ for $j\in\{1,\ldots, d-1\}$\; $\leftsup{(T)}\bar{p}^d=1-\sum_{i=1}^d \leftsup{(T)}\bar{p}^j$\;
+$\leftsup{(T)}\bar{p}^j=\leftsup{(T)}\bar\theta^j$ for $j\in\{1,\ldots, d-1\}$; $\leftsup{(T)}\bar{p}^d=1-\sum_{i=1}^d \leftsup{(T)}\bar{p}^j$\;
+\Return{$\leftsup{(T)}\bar{p}$}\;
+\end{algorithm}
+
+
+\end{document}
