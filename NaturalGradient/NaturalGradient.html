@@ -18,6 +18,13 @@ The Fisher information Riemannian metric is defined from the Fisher information 
 FIM is positive-definite for regular statistical models but can be singular (= rank deficient) or not well-defined (when the covariance of the score is unbounded).
 
 
+NGD is a second-order optimization method which uses the inverse FIM.
+The main merits of NGD is to be invariant to reparameterization (but FIM is covariant to reparameterization) and provably avoiding plateau in online learning.
+ 
+Thus many works consider ways to bypass the computational of the inverse FIM (FIM),
+ or to efficiently compute products of IFIM with vectors.
+ Moreover NGD optimization on submanifolds is important in applications 
+ (e.g., NGD on sparse or rank-deficient positive-definite matrices of the SPD cone)
 
 <h2>Some works and notes on natural gradient methods</h2>
  
