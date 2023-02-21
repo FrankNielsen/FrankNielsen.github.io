@@ -1,0 +1,212 @@
+% Frank.Nielsen@acm.org
+
+\documentclass[11pt]{article}
+\usepackage{fullpage,url,amssymb}
+\usepackage{amsmath}
+
+% https://ermongroup.github.io/blog/geo/
+
+ 
+\newenvironment{proof}{\paragraph{Proof:}}{\hfill$\square$}
+
+\def\calL{\mathcal{L}}
+
+\def\leftsup#1{\ ^{#1}}
+\def\supleft#1{\ ^{#1}}
+\def\bbR{\mathbb{R}}
+\def\inner#1#2{\langle #1,#2\rangle}
+\def\calF{\mathcal{F}}
+\def\NG{\mathrm{NG}}
+\def\nablaNG{\leftsup{\NG}\nabla}
+\def\eqdef{:=}
+
+\newtheorem{property}{Property}
+
+
+\begin{document}
+
+\title{A note on the natural gradient and its connections with the Riemannian gradient, the mirror descent, and the ordinary gradient}
+
+\author{Frank Nielsen}
+
+\date{August 2020}
+
+\maketitle
+
+Given a real-valued function $L_\theta(\theta)$ (parameterized by a a $D$-dimensional vector $\theta$) to minimize on parameter space 
+$\theta\in\Theta\subset\bbR^D$, 
+the {\em gradient descent} (GD) method (also called the {\em steepest descent} method) is a first-order local optimization procedure which starts by initializing the parameter to an arbitrary value $\theta_0\in\Theta$, and then iteratively updates at stage $t$  
+the current position $\theta_t$  to $\theta_{t+1}$ as follows:
+\begin{equation}\label{eq:gd}
+\mathrm{GD}:\quad \theta_{t+1} = \theta_t - \alpha_t \nabla_\theta L_\theta(\theta_t).
+\end{equation}
+The scalar $\alpha_t>0$ is called the {\em step size} or {\em learning rate} in machine learning.
+The ordinary gradient (OG) $\nabla_\theta F_\theta(\theta)$ (vector of partial derivatives) represents the {\em steepest vector} at $\theta$ of the function graph $\calL_\theta=\{(\theta,L_\theta(\theta))\ :\ \theta\in\Theta\}$.
+The GD method was pioneered by Cauchy~\cite{Cauchy-1847} (1847) and its convergence proof to a {\em stationary point} was first reported in Curry~\cite{Curry-1944} (1944).
+
+If we {\em reparameterize} the function $L_\theta$ using a one-to-one and onto differentiable mapping $\eta=\eta(\theta)$ (with reciprocal inverse mapping $\theta=\theta(\eta)$), the GD update rule transforms as:
+\begin{equation}
+\eta_{t+1} = \eta_t-\alpha_t \nabla_\eta L_\eta(\eta_t),
+\end{equation}
+where 
+\begin{equation}
+L_\eta(\eta):=L_\theta(\theta(\eta)).
+\end{equation}
+
+Thus in general, the two gradient descent position sequences $\{\theta_t\}_t$ and $\{\eta_t\}_t$ (initialized at $\theta_0=\theta(\eta_0)$ and $\eta_0=\eta(\theta_0)$) are  different (because $\eta(\theta)\not=\theta$) and the two GDs may potentially reach different stationary points!
+In other words, the GD local optimization depends on the choice of the parameterization of the function $L$ (i.e., $L_\theta$ or $L_\eta$).
+For example,
+ minimizing with the GD a temperature function $L_\theta(\theta)$ with respect to Celsius degrees $\theta$ may yield a different result 
+than minimizing the same temperature function $L_\eta(\eta)=L_\theta(\theta(\eta))$ expressed with respect to Farenheit degrees $\eta$.
+That is, the GD optimization is {\em extrinsic} since it depends on the choice of the parameterization of the function, and does not take into account the nature of the parameter space $\Theta$.
+
+The natural gradient precisely addresses  this problem and solves it by choosing {\em intrinsically} the steepest direction with respect to a Riemannian metric tensor field on the parameter manifold.
+
+%%%%
+\section{Natural gradient: Connection with the Riemannian gradient}
+%%%%
+
+Let $(M,g)$ be a $D$-dimensional Riemannian space~\cite{DG-2016} equipped with a metric tensor $g$, and $L\in C^\infty(M)$ a smooth function to minimize on  the manifold $M$.
+The {\em Riemannian gradient}~\cite{Bonnabel-2013} uses the Riemannian  {\em exponential map} 
+$\exp_{p}: T_p\rightarrow M$ to update the sequence of points 
+$p_t$'s on the manifold as follows:
+\begin{equation}
+\mathrm{RG}:\quad p_{t+1} =  \exp_{p_t}(-\alpha_t \nabla_{M} L(p_t)),
+\end{equation}
+where the Riemannian gradient $\nabla_{M}$ is defined according to a {\em directional derivative} $\nabla_v$ by:
+\begin{equation}
+\nabla_{M} L(p):=\left.\nabla_v\left(L\left(\exp_p(v)\right)\right)\right|_{v=0},
+\end{equation}
+with
+\begin{equation}
+\nabla_{v} L(p) :=\lim_{h\rightarrow 0} \frac{L(p+hv)-L(p)}{h}.
+\end{equation}
+
+However, the Riemannian exponential mapping $\exp_p(\cdot)$ is often computationally intractable since it requires to solve a system of second-order differential equations~\cite{DG-2016,MatrixMfd-2009}.
+Thus instead of using $\exp_p$,  we shall rather use a computable {\em Euclidean retraction} $R: T_p\rightarrow\bbR^D$ of the exponential map 
+ expressed in a local $\theta$-coordinate system:
+\begin{equation}
+\mathrm{RetG}:\quad \theta_{t+1} =  R_{\theta_t}\left(-\alpha_t \nabla_{\theta} L_\theta(\theta_t)\right).
+\end{equation}
+
+Using the retraction~\cite{MatrixMfd-2009} $R_p(v)=p+v$ which corresponds to a first-order Taylor approximation of the exponential map, 
+we recover the {\em natural gradient descent}~\cite{Amari-1998}:   
+\begin{equation}
+\mathrm{NG}: \theta_{t+1}= \theta_t-\alpha_t g^{-1}_\theta(\theta_t) \nabla_{\theta} L_\theta(\theta_t).
+\end{equation}
+
+The {\em natural gradient}~\cite{Amari-1998} (NG)
+\begin{equation}
+\nablaNG L_\theta(\theta) := g^{-1}_\theta(\theta) \nabla_\theta L_\theta(\theta)
+\end{equation}
+ is the {\em Riemannian steepest descent}, and the natural gradient descent yields the following update rule
+\begin{equation}
+\mathrm{NG}: \theta_{t+1}= \theta_t-\alpha_t \nablaNG L_\theta(\theta_t).
+\end{equation}
+
+Notice that the natural gradient is a {\em contravariant vector}\footnote{Recall that the {\em inner product} between two vectors $u$ and $v$ in a tangent plane $T_p$ for $p\in M$ is expressed equivalently as $
+\inner{u}{v}_p=g_p(u,v)=\sum_{i=1}^D u^i v_i = \sum_{i=1}^D u_i v^i = \sum_{i,j} g_{ij} u^i v^j = \sum_{i,j} g^{ij} u_i v_j$, 
+where $[w^i]$ and $[w_i]$ denote the contravariant and covariant components of a vector $w$, respectively.
+The metric tensor $g^*=g^{ij}$ is called the {\em dual Riemannian metric}. In a local coordinate chart $\theta$, we have
+$[g_{ij}] [g^{ij}]=I$, where $g=[g(e_i,e_j)]$ with $\{e_1,\ldots, e_D\}$ the natural basis of the vector space $T_p$.
+} while the ordinary gradient is a {\em covariant vector}.
+A covariant vector $[v_i]$ is transformed into a contravariant vector $[v^i]$ by $v^i=\sum_j g^{ij}v_i$, 
+that is by using the dual Riemannian metric $g^*_\eta(\eta)=g_\theta(\theta)^{-1}$, see~\cite{EIG-2018}.
+The natural gradient is {\em invariant} under an invertible smooth change of parameterization.
+However, the natural gradient {\em descent}  does not guarantee that the positions $\theta_t$'s always stay on the manifold:
+Indeed, it may happen that for some $t$, $\theta_t\not\in\Theta$ when $\Theta\not=\bbR^D$.
+
+\begin{property}[\cite{Bonnabel-2013}]
+The natural gradient descent approximates the intrinsic Riemannian gradient descent.
+\end{property}
+
+Let us emphasize that the natural gradient descent is not intrinsic because of the step sizes $\alpha_t$.
+
+Next, we shall explain how the natural gradient descent is related to the {\em mirror descent} and the {\em ordinary gradient} when the Riemannian space $\Theta$ is dually flat.
+
+
+
+%%%
+\section{Natural gradient in dually flat spaces: Connections to mirror descent and ordinary gradient}
+%%%%
+
+A dually flat space $(M,g,\nabla,\nabla^*)$ is a manifold $M$ equipped with a pair $(\nabla,\nabla^*)$ of dual torsion-free flat connections which are coupled to the Riemannian metric tensor $g$~\cite{IG-2016,EIG-2018,DFS-2019} in the sense that
+ $\frac{\nabla+\nabla^*}{2}=\leftsup{LC}\nabla$, where 
+$\leftsup{LC}\nabla$ denotes the unique metric torsion-free Levi-Civita connection 
+(see the fundamental theorem of Riemannian geometry~\cite{EIG-2018}).
+
+On a dually flat space, there exists a pair of dual global {\em Hessian structures}~\cite{Shima-2007} with dual canonical Bregman divergences~\cite{Bregman-1967,IG-2016}. The dual Riemannian metrics can be expressed as the Hessians of dual convex potential functions. 
+Examples of Hessian manifolds are the {\em manifolds of exponential families} or the {\em manifolds of mixture families}~\cite{MCIG-2019}.
+On a dually flat space induced by a strictly convex and $C^3$ function $F$ (Bregman generator), we have two dual global coordinate system:
+$\theta(\eta)=\nabla F^*(\eta)$ and $\eta(\theta)=\nabla F(\theta)$, where $F^*$ denotes the Legendre-Fenchel convex conjugate function~\cite{LegendreIG-2010,CR-2013}.
+The Hessian metric expressed in the primal $\theta$-coordinate system is $g_\theta(\theta)=\nabla^2 F(\theta)$, and the dual Hessian metric expressed
+ in the dual coordinate system is $g^*_\eta(\eta)=\nabla^2 F^*(\eta)$. 
+Crouzeix's identity~\cite{Crouzeix-1977,EIG-2018} shows that $g_\theta(\theta)g_\eta(\eta)=I$, where $I$ denotes the $D\times D$ matrix identity.
+
+
+%%%
+\subsection{Natural gradient: Connection with  Bregman mirror descent methods} 
+%%%%
+
+The ordinary gradient descent method can be extended using a  {\em proximity function} $\Phi(\cdot,\cdot)$ as follows:
+\begin{equation}
+\mathrm{PGD}:\quad \theta_{t+1} = \arg \min_{\theta\in\Theta} \left\{ \inner{\theta}{\nabla L_\theta(\theta_t)}+\frac{1}{\alpha_t} \Phi(\theta,\theta_t)\right\}.
+\end{equation}
+When $\Phi(\theta,\theta_t)=\frac{1}{2}\|\theta-\theta_t\|^2$, the PGD update rule becomes the GD update rule.
+
+Consider a Bregman divergence~\cite{Bregman-1967} $B_F$ for the proximity function $\Phi$: $\Phi(p,q)=B_F(p:q)$.
+Then the PGD yields the following {\em mirror descent} (MD):
+\begin{equation}
+\mathrm{MD}:\quad\theta_{t+1} = \arg \min_{\theta\in\Theta} \left\{ \inner{\theta}{\nabla L(\theta_t)}+\frac{1}{\alpha_t} B_F(\theta:\theta_t)\right\}.
+\end{equation}
+
+This mirror descent can be interpreted as a natural gradient descent as follows:
+
+\begin{property}[\cite{MDIG-2015}]
+Mirror descent on the Hessian manifold $(M,g)$ is equivalent to natural gradient descent on the dual Hessian manifold $(M,g^*)$.
+\end{property}
+
+Indeed, the mirror descent rule yields the following natural gradient update rule:
+\begin{eqnarray}
+\mathrm{NG}^*:\eta_{t+1} &=&\eta_t-\alpha_t (g^*_\eta)^{-1}(\eta_t)\nabla_{\eta} L_\theta(\theta(\eta_t)),\\
+&=& \eta_t-\alpha_t (g^*_\eta)^{-1}(\eta_t)\nabla_{\eta} L_\eta(\eta_t),
+\end{eqnarray}
+where $g^*_\eta(\eta)=\nabla^2 F^*(\eta)=(\nabla^2_\theta F(\theta))^{-1}$ and $\theta(\eta)=\nabla F^*(\theta)$.
+
+The method is called mirror descent~\cite{Bubeck-2015} because it performs that gradient step in the {\em dual space} (mirror space) $H=\{\eta=\nabla F(\theta)\ : \ \theta\in\Theta\}$, and thus solves the inconsistency contravariant/covariant type problem of subtracting a covariant vector from a contravariant vector of the GD (see Eq.~\ref{eq:gd}).
+
+
+
+%%%
+\subsection{Natural gradient: Connection with the ordinary gradient descent}
+%%%%
+
+Let us prove now the following property of the natural gradient in a dually flat space (or Bregman manifold~\cite{DFS-2019}):
+
+\begin{property}[\cite{Zhang-2018}]
+In a dually flat space induced by potential convex function $F$, the natural gradient amounts to the ordinary gradient on the dually parameterized function: $\nablaNG L_\theta(\theta)=\nabla_\eta L_\eta(\eta)$ where $\eta=\nabla_\theta F(\theta)$ and $L_\eta(\eta)=L_\theta(\theta(\eta))$. 
+\end{property}
+
+\begin{proof}
+Let $(M,g,\nabla,\nabla^*)$ be a dually flat space. We have $g_\theta(\theta)=\nabla^2 F(\theta)=\nabla_\theta \nabla_\theta F(\theta)=\nabla_\theta\eta$ since $\eta=\nabla_\theta F(\theta)$.
+The function to minimize can be written either as $L_\theta(\theta)=L_\theta(\theta(\eta))$ or as $L_\eta(\eta)=L_\eta(\eta(\theta))$.
+Recall the chain rule in the calculus of differentiation:
+\begin{equation}
+\nabla_\theta L_\theta(\theta)= \nabla_\theta (L_\eta(\eta(\theta)))=
+ (\nabla_\theta\eta) (\nabla_\eta L_{\eta}(\eta)).
+\end{equation}
+
+We have:
+\begin{eqnarray}
+\nablaNG L_\theta(\theta) &\eqdef& g_\theta^{-1}(\theta) \nabla_\theta L_\theta(\theta),\\
+&=& (\nabla_\theta \eta)^{-1} (\nabla_\theta\eta) \nabla_\eta L_{\eta}(\eta),\\
+&=& \nabla_\eta L_\eta(\eta).
+\end{eqnarray}
+\end{proof}
+
+Thus the natural gradient descent on a loss function $L_\theta(\theta)$ amounts to an ordinary gradient descent on the {\em dually parameterized} loss function $L_\eta(\eta):=L_\theta(\theta(\eta))$.
+In short, $\nablaNG_\theta L_\theta=\nabla_\eta L_\eta$.
+
+\bibliographystyle{plain}
+\bibliography{NaturalGradientBIB}
+\end{document}

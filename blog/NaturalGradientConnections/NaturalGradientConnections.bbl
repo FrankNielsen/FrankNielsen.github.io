@@ -1,0 +1,101 @@
+\begin{thebibliography}{10}
+
+\bibitem{MatrixMfd-2009}
+P-A Absil, Robert Mahony, and Rodolphe Sepulchre.
+\newblock {\em Optimization algorithms on matrix manifolds}.
+\newblock Princeton University Press, 2009.
+
+\bibitem{Amari-1998}
+Shun-ichi Amari.
+\newblock Natural gradient works efficiently in learning.
+\newblock {\em Neural computation}, 10(2):251--276, 1998.
+
+\bibitem{IG-2016}
+Shun-ichi Amari.
+\newblock {\em Information Geometry and Its Applications}.
+\newblock Applied Mathematical Sciences. Springer Japan, 2016.
+
+\bibitem{Bonnabel-2013}
+Silvere Bonnabel.
+\newblock Stochastic gradient descent on {R}iemannian manifolds.
+\newblock {\em IEEE Transactions on Automatic Control}, 58(9):2217--2229, 2013.
+
+\bibitem{Bregman-1967}
+Lev~M. Bregman.
+\newblock The relaxation method of finding the common point of convex sets and
+  its application to the solution of problems in convex programming.
+\newblock {\em USSR computational mathematics and mathematical physics},
+  7(3):200--217, 1967.
+
+\bibitem{Bubeck-2015}
+S{\'e}bastien Bubeck et~al.
+\newblock Convex optimization: Algorithms and complexity.
+\newblock {\em Foundations and Trends{\textregistered} in Machine Learning},
+  8(3-4):231--357, 2015.
+
+\bibitem{Cauchy-1847}
+AL~Cauchy.
+\newblock Methode g\'en\'erale pour la r\'esolution des syst\`emes
+  d'\'equations simultan\'ees.
+\newblock {\em Comptes Rendus de l'Acad\'emie des Sciences}, 25:536--538, 1847.
+
+\bibitem{Crouzeix-1977}
+Jean-Pierre Crouzeix.
+\newblock A relationship between the second derivatives of a convex function
+  and of its conjugate.
+\newblock {\em Mathematical Programming}, 13(1):364--365, 1977.
+
+\bibitem{Curry-1944}
+Haskell~B Curry.
+\newblock The method of steepest descent for non-linear minimization problems.
+\newblock {\em Quarterly of Applied Mathematics}, 2(3):258--261, 1944.
+
+\bibitem{DG-2016}
+Manfredo~P Do~Carmo.
+\newblock {\em Differential geometry of curves and surfaces: revised and
+  updated second edition}.
+\newblock Courier Dover Publications, 2016.
+
+\bibitem{LegendreIG-2010}
+Frank Nielsen.
+\newblock Legendre transformation and information geometry, 2010.
+
+\bibitem{CR-2013}
+Frank Nielsen.
+\newblock Cram{\'e}r-rao lower bound and information geometry.
+\newblock In {\em Connected at Infinity II}, pages 18--37. Springer, 2013.
+
+\bibitem{EIG-2018}
+Frank Nielsen.
+\newblock An elementary introduction to information geometry.
+\newblock Technical report, 2018.
+
+\bibitem{DFS-2019}
+Frank Nielsen.
+\newblock On geodesic triangles with right angles in a dually flat space.
+\newblock {\em arXiv preprint arXiv:1910.03935}, 2019.
+
+\bibitem{MCIG-2019}
+Frank Nielsen and Ga{\"e}tan Hadjeres.
+\newblock Monte {C}arlo information-geometric structures.
+\newblock In {\em Geometric Structures of Information}, pages 69--103.
+  Springer, 2019.
+
+\bibitem{MDIG-2015}
+Garvesh Raskutti and Sayan Mukherjee.
+\newblock The information geometry of mirror descent.
+\newblock {\em IEEE Transactions on Information Theory}, 61(3):1451--1457,
+  2015.
+
+\bibitem{Shima-2007}
+Hirohiko Shima.
+\newblock {\em The geometry of {H}essian structures}.
+\newblock World Scientific, 2007.
+
+\bibitem{Zhang-2018}
+Guodong Zhang, Shengyang Sun, David Duvenaud, and Roger Grosse.
+\newblock Noisy natural gradient as variational inference.
+\newblock In {\em International Conference on Machine Learning}, pages
+  5852--5861, 2018.
+
+\end{thebibliography}
