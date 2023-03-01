@@ -1,0 +1,25 @@
+As far as I remember, I programmed using these languages (APIs)]
+
+<ol>
+<li> Basic (Vic-20)
+<li> LOGO (Amstrad PCW)
+<li> Assembler
+<li> Turbo Pascal (IBM)
+<li> FORTRAN
+<li> LISP
+<li> PROLOG
+<li> OCAML
+<li> C
+<li> C++
+<li> C* (CM2)
+<li> (OpenGL)
+<li> Java/Processing
+<li> Javascript
+<li> (MPI/OpenCL)
+<li> Scala
+<li> R
+<li> Python
+<li> Julia
+</ol>
+
+

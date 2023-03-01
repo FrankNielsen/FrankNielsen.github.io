@@ -1,0 +1,17 @@
+Basic (Vic-20)
+LOGO (Amstrad PCW)
+Assembler
+Turbo Pascal (IBM)
+LISP
+PROLOG
+OCAML
+C
+C++
+C* (CM2)
+(OpenGL)
+Java/Processing
+Scala
+R
+Python
+Julia
+
