@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: BregmanDivergence.aux
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: apalike.bst
+Database file #1: BregmanDivergenceBIB.bib
+You've used 2 entries,
+            1935 wiz_defined-function locations,
+            487 strings with 4162 characters,
+and the built_in function-call counts, 941 in all, are:
+= -- 98
+> -- 25
+< -- 2
++ -- 10
+- -- 8
+* -- 71
+:= -- 152
+add.period$ -- 7
+call.type$ -- 2
+change.case$ -- 14
+chr.to.int$ -- 2
+cite$ -- 2
+duplicate$ -- 41
+empty$ -- 73
+format.name$ -- 10
+if$ -- 195
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 2
+newline$ -- 13
+num.names$ -- 6
+pop$ -- 14
+preamble$ -- 1
+purify$ -- 14
+quote$ -- 0
+skip$ -- 33
+stack$ -- 0
+substring$ -- 83
+swap$ -- 11
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 12
+warning$ -- 0
+while$ -- 9
+width$ -- 0
+write$ -- 29

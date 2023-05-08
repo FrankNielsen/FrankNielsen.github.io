@@ -1,21 +1,34 @@
 \documentclass{article}
 \usepackage{fullpage,amssymb}
+\usepackage[round]{natbib}  % bibliography package
+
+\usepackage{bibentry}         %  full citation in the body of the text (turn off natbib if use it)
+
+\nobibliography*   
+% https://tex.stackexchange.com/questions/150020/citation-in-the-body-of-the-text
 
 \def\bbX{\mathbb{X}}
 \def\inner#1#2{{\langle #1, #2\rangle}}
 
 \title{Some generalizations of Bregman divergences}
+\author{Frank Nielsen}
+\date{2023}
 
 \begin{document}
 \maketitle
 
-Consider an open inner product space $(\bbX^\circ,\inner{\cdot}{\cdot})$.
+Consider an inner product space $(\bbX^\circ,\inner{\cdot}{\cdot})$ where $\bbX^\circ$ is an open domain.
+
+\bibentry{nielsen2009bregman}
+
+The Bregman divergence~(\cite{Bregman-1967}) was originally defined by Lev M. Bregman in the 1960's for finding a point in a common intersection of a finite set of convex objects by iterative Bregman projections.
 
 
-The Bregman divergence~\cite{Bregman-1967} was originally defined by Lev M. Bregman in the 1960's for finding a point in a common intersection of a finite set of convex objects by iterative Bregman projections.
+Let us \cite{nielsen2009bregman}
 
 
-Let us 
+\bibliography{BregmanDivergenceBIB}
 
+\bibliographystyle{apalike}
 
 \end{document}

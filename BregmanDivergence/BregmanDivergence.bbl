@@ -1,0 +1,16 @@
+\begin{thebibliography}{}
+
+\bibitem[Bregman, 1967]{Bregman-1967}
+Bregman, L.~M. (1967).
+\newblock The relaxation method of finding the common point of convex sets and
+  its application to the solution of problems in convex programming.
+\newblock {\em USSR computational mathematics and mathematical physics},
+  7(3):200--217.
+
+\bibitem[Nielsen et~al., 2009]{nielsen2009bregman}
+Nielsen, F., Piro, P., and Barlaud, M. (2009).
+\newblock Bregman vantage point trees for efficient nearest neighbor queries.
+\newblock In {\em 2009 IEEE International Conference on Multimedia and Expo},
+  pages 878--881. IEEE.
+
+\end{thebibliography}
