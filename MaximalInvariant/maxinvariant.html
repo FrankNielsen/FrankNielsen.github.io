@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Maximal invariant</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+</style>
+<script src=""></script>
+<body>
+
+ <h1>Maximal invariant</h1>
+ 
+Consider a group G and an action of the group on a set X: y=gx.
+A function f(x) on X is invariant under the action of the group if f(gx)=f(x), 
+and a maximal invariant function m is an invariant function such that m(x)=m(y) 
+if and only if there exists g in G such that y=gx.
+Eaton's theorem (Theorem 2.3 in Eaton, Morris L. "Group invariance applications in statistics" IMS, 1989) 
+states that all invariant functions f can be expressed as functions of a maximal invariant function m:
+f(x)=h(m(x)).
+<BR>
+<IMG SRC="Card-MaximalInvariant.png" width="50%">
+<BR>
+
+We applied the framework of maximal invariant to study invariant divergences in statistics:
+
+<ul>
+
+<li>The chi-squared divergence is a maximal invariant for the group action of 
+linear fractional transformations of SL(2,R) on Cauchy distributions. 
+Since the chi-squared divergence between Cauchy distributions is symmetric, 
+we deduced that all f-divergences between Cauchy distributions are symmetric and 
+expressed as a scalar function of their chi-squared divergence.
+<BR>
+<IMG SRC="Card-fdivCauchy.jpg" width="50%">
+<BR>
+
+See <A HREF="https://ieeexplore.ieee.org/document/9997561">On f-Divergences Between Cauchy Distributions</A> 
+(IEEE Trans Information Theory, 2023) also on <A HREF="https://arxiv.org/abs/2101.12459">arxiv:2101.12459</A>
+<BR>&nbsp;<BR>
+<li>The triplet of pairwise Minkowski inner products of parameters of hyperboloid distributions 
+is a maximal invariant for the action of group SO0(1,2).
+Since f-divergences between hyperboloid distributions  are also invariant by the action,
+ we deduce that all f-divergences between hyperboloid distributions are functions of 3 canonical terms.
+<BR>
+<IMG SRC="DivCard-fdivHyperboloid.png" width="50%">
+<BR>
+See <A HREF="GSI23-HyperbolicDistribution-MaxInvariant.pdf" target="_blank">On the f-divergences between hyperboloid and
+Poincaré distributions</A> (GSI'23, technical report: <A HREF="https://arxiv.org/abs/2205.13984"
+ target="_blank">2205.13984</A>)
+ <BR>&nbsp;<BR>
+<li>The determinant and trace involving the 2x2 SPD matrix parameter 
+of Poincaré distributions is a maximal invariant for the congruence action of SL(2,R).
+Since f-divergences  between Poincaré distributions are also invariant under the action, we deduce that all f-divergences
+ between Poincaré distributions are expressed using the 3 canonical terms.
+
+<BR>
+<IMG SRC="DivCard-fdivPoincare.png" width="50%">
+<BR>
+See <A HREF="GSI23-HyperbolicDistribution-MaxInvariant.pdf" target="_blank">On the f-divergences between hyperboloid and
+Poincaré distributions</A> (GSI'23, technical report: <A HREF="https://arxiv.org/abs/2205.13984"
+ target="_blank">2205.13984</A>)
+</ul>
+
+More to come soon!
+ 
+
+ 
+
+</body>
+</html>
