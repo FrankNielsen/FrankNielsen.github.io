@@ -1,0 +1,5 @@
+
+- rho-tau
+- logarithmic divergence
+- Hilbert log cross-ratio distance and projective geometry
+-

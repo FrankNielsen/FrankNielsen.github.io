@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: AnnotatedWorks-FrankNIELSEN.aux
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: apalike.bst
+Database file #1: FrankNielsenBIB.bib
+Database file #2: OthersBIB.bib
+Warning--I didn't find a database entry for ""
+Warning--empty publisher in Eaton-1989
+You've used 3 entries,
+            1935 wiz_defined-function locations,
+            495 strings with 4177 characters,
+and the built_in function-call counts, 1014 in all, are:
+= -- 94
+> -- 27
+< -- 3
++ -- 8
+- -- 8
+* -- 84
+:= -- 182
+add.period$ -- 8
+call.type$ -- 3
+change.case$ -- 18
+chr.to.int$ -- 3
+cite$ -- 4
+duplicate$ -- 42
+empty$ -- 82
+format.name$ -- 13
+if$ -- 197
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 4
+newline$ -- 17
+num.names$ -- 9
+pop$ -- 16
+preamble$ -- 1
+purify$ -- 19
+quote$ -- 0
+skip$ -- 33
+stack$ -- 0
+substring$ -- 72
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 16
+warning$ -- 1
+while$ -- 8
+width$ -- 0
+write$ -- 38
+(There were 2 warnings)

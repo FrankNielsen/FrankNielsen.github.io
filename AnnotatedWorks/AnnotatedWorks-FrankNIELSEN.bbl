@@ -1,0 +1,18 @@
+\begin{thebibliography}{}
+
+\bibitem[Eaton, 1989]{Eaton-1989}
+Eaton, M.~L. (1989).
+\newblock {\em Group invariance applications in statistics}.
+
+\bibitem[Nielsen, 2022]{nielsen2022statistical}
+Nielsen, F. (2022).
+\newblock {Statistical divergences between densities of truncated exponential
+  families with nested supports: Duo Bregman and duo Jensen divergences}.
+\newblock {\em Entropy}, 24(3):421.
+
+\bibitem[Nielsen and Okamura, 2023]{fdivCauchy-2023}
+Nielsen, F. and Okamura, K. (2023).
+\newblock {On $f$-Divergences between Cauchy distributions}.
+\newblock {\em IEEE Transactions on Information Theory}, 69(5):3150--3171.
+
+\end{thebibliography}

@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage{fullpage,amssymb,orcidlink}
+\usepackage[round]{natbib}  % bibliography package
+
+\usepackage{bibentry}         %  full citation in the body of the text (turn off natbib if use it)
+
+\nobibliography*   
+% https://tex.stackexchange.com/questions/150020/citation-in-the-body-of-the-text
+
+
+
+\title{Annotated selected works}
+
+\author{Frank Nielsen  
+\orcidlink{0000-0001-5728-0726}}
+\date{ }
+
+
+% 
+% \bibentry{nielsen2009bregman} \cite{nielsen2009bregman}
+%\def\mycite#1{\bibentry{#1} [\cite{#1}]}
+\def\mycite#1{\bibentry{#1} \nocite{#1}}
+
+
+\def\dP{\mathrm{d}P}
+\def\dmu{\mathrm{d}\mu}
+\def\calX{\mathcal{X}}
+
+\def\bbX{\mathbb{X}}
+\def\inner#1#2{{\langle #1, #2\rangle}}
+\def\Cauchy{\mathrm{Cauchy}}
+\def\dx{\mathrm{d}x}
+\def\SL{\mathrm{SL}}
+\def\mattwotwo#1#2#3#4{{\left[\begin{array}{cc}#1&#2\cr#3&#4\end{array}\right]}}
+\def\bbR{\mathbb{R}}
+\def\KL{\mathrm{KL}}
+
+\begin{document}
+\maketitle
+
+We highlight the main result of each selected work as follows:
+
+\begin{itemize}
+	\item \mycite{fdivCauchy-2023}:
+	The main result is that all $f$-divergences~\cite{Csiszar-1967} $I_f(p:q)=\int p(x)f\left(\frac{q(x)}{p(x)}\right) \dx$ between univariate Cauchy distributions $p_{l_1,s_1}(x)$ and $p_{l_2,s_2}(x)$ are symmetric by showing that the $\chi^2$-divergence is a {\em maximal invariant}~\cite{Eaton-1989} for the linear fractional transform action of $\SL(2,\bbR)$ (real fractional linear group) when Cauchy distributions $p_{l,s}$ are parametrized by a complex number $\theta=l+is$. 
+	That is $a.x\mapsto \frac{ax+b}{cx+d}$ and  $A.X\sim\Cauchy(A.\theta)$ when $X\sim\Cauchy(\theta)$ for $A=\mattwotwo{a}{b}{c}{d}$.
+	Since all $f$-divergences are invariant under this group action, they can be expressed as a scalar function $h_f$ of the maximal invariant 
+	$\chi(l_1,s_1;l_2,s_2)=I_{\chi^2}(p_{\theta_1}:p_{\theta_2})=\frac{(l_1-l_2)^2}{2s_1s_2}$ divergence: 
+	$$
+	I_f(p_{l_1,s_1}:p_{l_2,s_2})=h_f(\chi(l_1,s_1;l_2,s_2))=I_f(p_{l_2,s_2}:p_{l_1,s_1}).
+		$$
+		
+	
+	\item \mycite{nielsen2022statistical}:
+	Consider two truncated densities $p_{\theta_1}^{R_1}$ and $p_{\theta_2}^{R_2}$ of an exponential family 
+	$\{p_\theta(x)=\frac{\dP_\theta}{\dmu}(x)= 1_\calX(x) \exp(\inner{\theta}{t(x)}-F(\theta)+k(x))\}$
+	where $R_1$ and $R_2$ are 
+		the supports of  $p_{\theta_1}^{R_1}$ and $p_{\theta_2}^{R_2}$, respectively.
+		A density $p_{\theta}^{R}$ of a truncated exponential family belongs to another exponential family with log-normalizer 
+		$F_R(\theta)=F(\theta)+\log Z_R(\theta)$ where $Z_R(\theta)=\int_R p_\theta(x) \dmu(x)$.
+		When $R_1\subset R_2$ (nested support), we show that
+		$$
+		D_\KL[p_{\theta_1}^{R_1}:p_{\theta_2}^{R_2}]=\int_{R_1} p_{\theta_1}^{R_1}(x)\log\frac{p_{\theta_1}^{R_1}(x)}{p_{\theta_2}^{R_2}(x)}\dmu(x)=B_{F_{R_2},F_{R_1}}(\theta_2:\theta_1),
+		$$
+		where $B_{F_1,F_2}$ is a duo Bregman pseudo-divergence:
+		$$
+		B_{F_1,F_2}(\theta:\theta')=F_1(\theta)-F_2(\theta')-\inner{\theta-\theta'}{\nabla F_2(\theta')}\geq 0.
+		$$
+		This is a pseudo-divergence because when $R_1\not=R_2$, $B_{F_{R_1},F_{R_2}}>0$.
+		As an example, we report the formula for the Kullback-Leibler divergence between truncated normal distributions.
+\end{itemize}
+
+\bibliography{FrankNielsenBIB,OthersBIB}
+
+\bibliographystyle{apalike}
+
+\end{document}
