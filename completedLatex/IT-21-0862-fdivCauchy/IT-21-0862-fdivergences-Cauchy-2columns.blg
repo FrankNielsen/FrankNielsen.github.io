@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: IT-21-0862-fdivergences-Cauchy-2columns.aux
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: IEEEtran.bst
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: fdivCauchy.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+You've used 87 entries,
+            4087 wiz_defined-function locations,
+            1351 strings with 20587 characters,
+and the built_in function-call counts, 65076 in all, are:
+= -- 5602
+> -- 1146
+< -- 669
++ -- 671
+- -- 151
+* -- 2976
+:= -- 9890
+add.period$ -- 182
+call.type$ -- 87
+change.case$ -- 73
+chr.to.int$ -- 1491
+cite$ -- 87
+duplicate$ -- 4621
+empty$ -- 5102
+format.name$ -- 198
+if$ -- 15261
+int.to.chr$ -- 0
+int.to.str$ -- 87
+missing$ -- 697
+newline$ -- 286
+num.names$ -- 87
+pop$ -- 1394
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 5246
+stack$ -- 0
+substring$ -- 3573
+swap$ -- 3938
+text.length$ -- 172
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 87
+warning$ -- 0
+while$ -- 325
+width$ -- 89
+write$ -- 880

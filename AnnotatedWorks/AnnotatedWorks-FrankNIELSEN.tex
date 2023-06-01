@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage{fullpage,amssymb,orcidlink}
-\usepackage[round]{natbib}  % bibliography package
 
+\usepackage[round]{natbib}  % bibliography package
 \usepackage{bibentry}         %  full citation in the body of the text (turn off natbib if use it)
 
 \nobibliography*   
@@ -42,14 +42,33 @@ We highlight the main result of each selected work as follows:
 
 \begin{itemize}
 	\item \mycite{fdivCauchy-2023}:
-	The main result is that all $f$-divergences~\cite{Csiszar-1967} $I_f(p:q)=\int p(x)f\left(\frac{q(x)}{p(x)}\right) \dx$ between univariate Cauchy distributions $p_{l_1,s_1}(x)$ and $p_{l_2,s_2}(x)$ are symmetric by showing that the $\chi^2$-divergence is a {\em maximal invariant}~\cite{Eaton-1989} for the linear fractional transform action of $\SL(2,\bbR)$ (real fractional linear group) when Cauchy distributions $p_{l,s}$ are parametrized by a complex number $\theta=l+is$. 
+	The main result is that all $f$-divergences~\cite{Csiszar-1967} $I_f(p:q)=\int p(x)f\left(\frac{q(x)}{p(x)}\right) \dx$ between univariate Cauchy distributions $p_{l_1,s_1}(x)$ and $p_{l_2,s_2}(x)$ are symmetric by showing that the $\chi^2$-divergence is a {\em maximal invariant}~\cite{Eaton-1989} for the linear fractional transform action of $\SL(2,\bbR)$ (special linear/real fractional linear group) when Cauchy distributions $p_{l,s}$ are parametrized by complex numbers $\theta=l+is$. 
 	That is $a.x\mapsto \frac{ax+b}{cx+d}$ and  $A.X\sim\Cauchy(A.\theta)$ when $X\sim\Cauchy(\theta)$ for $A=\mattwotwo{a}{b}{c}{d}$.
-	Since all $f$-divergences are invariant under this group action, they can be expressed as a scalar function $h_f$ of the maximal invariant 
+	Since all $f$-divergences are invariant under this group action, they can be expressed as a scalar function $h_f(u)$ of the maximal invariant 
 	$\chi(l_1,s_1;l_2,s_2)=I_{\chi^2}(p_{\theta_1}:p_{\theta_2})=\frac{(l_1-l_2)^2}{2s_1s_2}$ divergence: 
 	$$
 	I_f(p_{l_1,s_1}:p_{l_2,s_2})=h_f(\chi(l_1,s_1;l_2,s_2))=I_f(p_{l_2,s_2}:p_{l_1,s_1}).
 		$$
-		
+	 
+{\tiny\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|l|l|l|}\hline
+$f$-divergence name & $f(u)$ & $I_f(p:q)$ & $h_f(u)$  \\ \hline\hline
+Chi-squared divergence & $(u-1)^2$ & $\int \frac{(p(x)-q(x))^2}{p(x)}\dx$ &$u$\\
+Total variation distance & $\frac{1}{2}|u-1|$  & $\int \frac{1}{2}|p(x)-q(x)|\dx$  & $\frac{2}{\pi}\arctan\left(\sqrt{\frac{u}{2}}\right)$\\
+Kullback-Leibler divergence & $-\log u$ & $\int p(x)\log\frac{p(x)}{q(x)}\dx$ &  $\log(1+\frac{1}{2}u)$\\
+Jensen-Shannon divergence & $\frac{u}{2}\log\frac{2u}{1+u}-\frac{1}{2}\log\frac{1+u}{2}$ & $\int \left(p(x)\log\frac{2p(x)}{p(x)+q(x)} 
++q(x)\log\frac{2q(x)}{p(x)+q(x)}\right)\dx$ & $\log\left( \frac{2\sqrt{2+u}}{\sqrt{2+u}+\sqrt{2}} \right)$\\
+Taneja $T$-divergence & $\frac{u+1}{2}\log\frac{u+1}{2\sqrt{u}}$ & $\int \frac{p(x)+q(x)}{2}\log  \frac{p(x)+q(x)}{2 \sqrt{p(x) q(x)}} \dx$  &$\log \left( \frac{1+\sqrt{1+\frac{u}{2}}}{2} \right)$,\\
+LeCam-Vincze divergence & $\frac{(u-1)^2}{1+u}$ & $\int \frac{(p(x)-q(x))^2}{p(x)+q(x)} \dx$ & $2-4\sqrt{\frac{1}{2(u+2)}}$\\
+squared Hellinger divergence & $\frac{1}{2}(\sqrt{u}-1)^2$ & $\frac{1}{2} \int \left(\sqrt{p(x)}-\sqrt{q(x)}\right)^2\dx$ & $1-  \frac{2 K\left( 1 - \left(1+ u + \sqrt{u(2+u)}\right)^{-2}\right)}{\pi \sqrt{1+u + \sqrt{u(2+u)}}}$ \\ \hline
+\end{tabular}
+}
+
+\item \mycite{nielsen2023simple}: The Fisher-Rao distance~\cite{Rao-1945,Rao-reprint-1992} $\rho(p_{\theta_1},p_{\theta_2})$ between two distributions $p_{\theta_1}$ and $p_{\theta_2}$ belonging to a parametric family of distributions $\{p_\theta\}$ is the geodesic Riemannian distance with respect to the Fisher metric.
+To calculate the Fisher-Rao distance in closed-form one needs to get closed-form of the Fisher-Rao geodesics and perform integration along the geodesics with boundary conditions.
+We show that the Fisher-Rao distance is upper bounded by the square root of their Jeffreys divergence: $\rho(p_{\theta_1},p_{\theta_2})\leq D_J\rho(p_{\theta_1},p_{\theta_2})$.
+We then consider proxy curves of the Fisher-Rao geodesics obtained by orthogonal projections by using an isometric embedding of the Fisher-Rao manifold into the high-dimensional cone of symmetric positive-definite matrix~\cite{CalvoOller-1990}.
+
 	
 	\item \mycite{nielsen2022statistical}:
 	Consider two truncated densities $p_{\theta_1}^{R_1}$ and $p_{\theta_2}^{R_2}$ of an exponential family 
@@ -68,6 +87,15 @@ We highlight the main result of each selected work as follows:
 		$$
 		This is a pseudo-divergence because when $R_1\not=R_2$, $B_{F_{R_1},F_{R_2}}>0$.
 		As an example, we report the formula for the Kullback-Leibler divergence between truncated normal distributions.
+		
+		
+\item \mycite{nielsen2022generalizing}:
+By observing that the $\alpha$-divergences are scaled differences of the arithmetic (A) minus geometric (G) means (with $A\geq G$), we define
+$(M,N)$ $\alpha$-divergences for pairs of weighted means such that $M\geq N$.
+In the limit case of $\alpha\pm1$, we get generalizations of the forward and reverse Kullback-Leibler divergences.
+We report these novel divergences for quasi-arithmetic means $M=A_f$ and $N=A_g$ where $A_h(a,b;\alpha)=h^{-1}(\alpha h(a)+(1-\alpha)h(b))$.
+
+
 \end{itemize}
 
 \bibliography{FrankNielsenBIB,OthersBIB}

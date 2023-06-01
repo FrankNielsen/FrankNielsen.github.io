@@ -1,18 +1,51 @@
 \begin{thebibliography}{}
 
+\bibitem[Rao, ]{Rao-1945}
+
+
+\bibitem[Calvo and Oller, 1990]{CalvoOller-1990}
+Calvo, M. and Oller, J.~M. (1990).
+\newblock {A distance between multivariate normal distributions based in an
+  embedding into the Siegel group}.
+\newblock {\em Journal of multivariate analysis}, 35(2):223--242.
+
+\bibitem[Csisz{\'a}r, 1967]{Csiszar-1967}
+Csisz{\'a}r, I. (1967).
+\newblock Information-type measures of difference of probability distributions
+  and indirect observation.
+\newblock {\em studia scientiarum Mathematicarum Hungarica}, 2:229--318.
+
 \bibitem[Eaton, 1989]{Eaton-1989}
 Eaton, M.~L. (1989).
 \newblock {\em Group invariance applications in statistics}.
 
-\bibitem[Nielsen, 2022]{nielsen2022statistical}
-Nielsen, F. (2022).
+\bibitem[Nielsen, 2022a]{nielsen2022generalizing}
+Nielsen, F. (2022a).
+\newblock Generalizing the alpha-divergences and the oriented kullback--leibler
+  divergences with quasi-arithmetic means.
+\newblock {\em Algorithms}, 15(11):435.
+
+\bibitem[Nielsen, 2022b]{nielsen2022statistical}
+Nielsen, F. (2022b).
 \newblock {Statistical divergences between densities of truncated exponential
   families with nested supports: Duo Bregman and duo Jensen divergences}.
 \newblock {\em Entropy}, 24(3):421.
+
+\bibitem[Nielsen, 2023]{nielsen2023simple}
+Nielsen, F. (2023).
+\newblock {A Simple Approximation Method for the Fisher--Rao Distance between
+  Multivariate Normal Distributions}.
+\newblock {\em Entropy}, 25(4):654.
 
 \bibitem[Nielsen and Okamura, 2023]{fdivCauchy-2023}
 Nielsen, F. and Okamura, K. (2023).
 \newblock {On $f$-Divergences between Cauchy distributions}.
 \newblock {\em IEEE Transactions on Information Theory}, 69(5):3150--3171.
+
+\bibitem[Rao, 1992]{Rao-reprint-1992}
+Rao, C.~R. (1992).
+\newblock Information and the accuracy attainable in the estimation of
+  statistical parameters.
+\newblock In {\em Breakthroughs in statistics}, pages 235--247. Springer.
 
 \end{thebibliography}

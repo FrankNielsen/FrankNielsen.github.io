@@ -7,47 +7,55 @@ Reallocating 'name_of_file' (item size: 1) to 8 items.
 The style file: apalike.bst
 Database file #1: FrankNielsenBIB.bib
 Database file #2: OthersBIB.bib
-Warning--I didn't find a database entry for ""
+I was expecting an "="---line 29 of file OthersBIB.bib
+ : ? 
+ :   ?AUTHOR = {Calyampudi Radhakrishna Rao},
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in Rao-1945
+Warning--empty author in Rao-1945
+Warning--empty year in Rao-1945
+Warning--empty title in Rao-1945
+Warning--empty journal in Rao-1945
 Warning--empty publisher in Eaton-1989
-You've used 3 entries,
+You've used 9 entries,
             1935 wiz_defined-function locations,
-            495 strings with 4177 characters,
-and the built_in function-call counts, 1014 in all, are:
-= -- 94
-> -- 27
-< -- 3
-+ -- 8
-- -- 8
-* -- 84
-:= -- 182
-add.period$ -- 8
-call.type$ -- 3
-change.case$ -- 18
-chr.to.int$ -- 3
-cite$ -- 4
-duplicate$ -- 42
-empty$ -- 82
-format.name$ -- 13
-if$ -- 197
-int.to.chr$ -- 1
+            531 strings with 5058 characters,
+and the built_in function-call counts, 3117 in all, are:
+= -- 306
+> -- 68
+< -- 9
++ -- 21
+- -- 20
+* -- 253
+:= -- 525
+add.period$ -- 25
+call.type$ -- 9
+change.case$ -- 53
+chr.to.int$ -- 8
+cite$ -- 16
+duplicate$ -- 138
+empty$ -- 260
+format.name$ -- 32
+if$ -- 623
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 4
-newline$ -- 17
-num.names$ -- 9
-pop$ -- 16
+missing$ -- 10
+newline$ -- 45
+num.names$ -- 24
+pop$ -- 50
 preamble$ -- 1
-purify$ -- 19
+purify$ -- 55
 quote$ -- 0
-skip$ -- 33
+skip$ -- 106
 stack$ -- 0
-substring$ -- 72
-swap$ -- 3
-text.length$ -- 0
+substring$ -- 245
+swap$ -- 17
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 16
-warning$ -- 1
-while$ -- 8
+type$ -- 52
+warning$ -- 6
+while$ -- 27
 width$ -- 0
-write$ -- 38
-(There were 2 warnings)
+write$ -- 110
+(There was 1 error message)
