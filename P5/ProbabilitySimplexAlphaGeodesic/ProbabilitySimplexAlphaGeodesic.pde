@@ -1,4 +1,5 @@
 // Frank.Nielsen@acm.org
+// last updated June 2023
 
 import processing.pdf.*;
 
@@ -21,6 +22,7 @@ double maxy=1.05;
 boolean toggleText=true;
 boolean toggleAnimation=true;
 boolean toggleRectify=false;
+boolean toggleMidpoint=true;
 
 
 int n;
@@ -239,6 +241,10 @@ double [] geodesic(double alpha, double [] p, double [] q, double t)
   return res2;
 }
 
+double [] midPoint(double alpha, double []p, double [] q)
+{
+  return geodesic(alpha, p, q, 0.5);
+}
 
 void drawGeodesic(double alpha, double []p, double [] q)
 {
@@ -308,6 +314,10 @@ double alpha;
     float intensity=(float)((alpha-minalpha)/(maxalpha-minalpha));
     stroke(255*(1-intensity),255*(1-intensity),255*(1-intensity));
   drawGeodesic(alpha, p, q);
+  
+  stroke(0);
+ 
+
   }
   
  strokeWeight(2);
@@ -318,8 +328,15 @@ double alpha;
   stroke(255, 0, 255); // magenta Fisher-Rao geodesic
  drawGeodesic(0, p, q);
 
-  // MyPoint(point[i][0],point[i][1]);
-  //   ellipse((float)x2X(point[i][0]), (float)y2Y(point[i][1]), ptsize,ptsize);
+stroke(0,0,0);
+for(alpha=minalpha;alpha<=maxalpha;alpha+=stepalpha)
+  {
+     if (toggleMidpoint){
+    double [] mid=midPoint(alpha,p,q);
+   MyPoint(mid[0],mid[1]);
+    // ellipse((float)x2X(mid[0]), (float)y2Y(mid[1]), 2*ptsize,2*ptsize);
+}
+  }
 
 
 
@@ -413,6 +430,8 @@ void initializeDegenerate()
 
 void keyPressed()
 {if (key=='a'){toggleAnimation=!toggleAnimation;}
+
+if (key=='m'){toggleMidpoint=!toggleMidpoint;}
 
 if (key=='d') {initializeDegenerate();toggleAnimation=false;}
   if (key=='q') exit();

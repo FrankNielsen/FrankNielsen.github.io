@@ -1,0 +1,457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>A Simple Approximation Method for the Fisher-Rao Distance between Multivariate Normal Distributions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="webFisherRaoMVN.tex"> 
+<link rel="stylesheet" type="text/css" href="webFisherRaoMVN.css"> 
+</head><body 
+>
+   <div class="maketitle">
+
+
+
+<h2 class="titleHead">A Simple Approximation Method for the Fisher-Rao Distance
+between Multivariate Normal Distributions</h2>
+<div class="author" ><span 
+class="cmr-12">Frank Nielsen</span></div><br />
+<div class="date" ><span 
+class="cmr-12">2023</span></div>
+   </div>
+   <center>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/JGOwwVSKzHQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<BR>
+Run video full screen to see the difference between Fisher-Rao geodesics (black, computationally time-consuming using geodesic shooting) and our proposed projected SPD geodesic curve which can be calculated fast (green).
+
+ <a 
+href="https://www.mdpi.com/1099-4300/25/4/654" class="url" ><span 
+class="cmtt-10">https://www.mdpi.com/1099-4300/25/4/654</span></a>
+</center>
+
+<BR>
+Geodesic shooting from standard normal with initial value conditions
+<center>
+<iframe width="361" height="642" src="https://www.youtube.com/embed/_ggisBydO08" title="Fisher-Rao geodesics from the standard bivariate normal distribution" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</center><BR>
+
+
+   <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-10001"></a>The Fisher-Rao distance</h3>
+<!--l. 117--><p class="noindent" >Let <span 
+class="msbm-10">&#x2119;</span>(<span 
+class="cmmi-10">d</span>) denote the set of symmetric positive?definite (SPD) <span 
+class="cmmi-10">d</span><span 
+class="cmsy-10">&#x00D7;</span><span 
+class="cmmi-10">d </span>matrices and <span 
+class="cmsy-10"><img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /></span>(<span 
+class="cmmi-10">d</span>) denote the set of multivariate
+normal distributions:
+<!--l. 120--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="webFisherRaoMVN0x.png" alt="        {            d2   - 1   (  1      &#x22A4;  -1      )                   d      }
+N (d) := p&#x03BC;,&#x03A3; (x) = (2&#x03C0;)  |&#x03A3;| 2 exp - 2(x- &#x03BC; ) &#x03A3;  (x- &#x03BC;)   : (&#x03BC;,&#x03A3;) &#x2208; &#x039B; (d) := &#x211D; &#x00D7; &#x2119;(d) ,
+" class="math-display" ></div>
+<!--l. 127--><p class="indent" >   The Fisher-Rao distance between two normals <span 
+class="cmmi-10">N</span>(<span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmr-7">1</span></sub><span 
+class="cmmi-10">,</span>&#x03A3;<sub><span 
+class="cmr-7">1</span></sub>) and <span 
+class="cmmi-10">N</span>(<span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmr-7">2</span></sub><span 
+class="cmmi-10">,</span>&#x03A3;<sub><span 
+class="cmr-7">2</span></sub>) is the geodesic Riemannian distance on
+the manifold (<span 
+class="cmsy-10"><img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /></span><span 
+class="cmmi-10">,g</span><sup><span 
+class="cmr-7">Fisher</span></sup>) induced by the Fisher information metric:
+<!--l. 129--><p class="indent" >
+   <div class="math-display" >
+<img 
+src="webFisherRaoMVN1x.png" alt="&#x03C1;N (N(&#x03BB;1),N (&#x03BB;2)) :=  inc(ft)  {Length(c)},
+                   c(0)=p&#x03BB;1
+                   c(1)=p&#x03BB;2
+" class="math-display" ></div>
+<!--l. 132--><p class="noindent" >where
+   <div class="math-display" >
+<img 
+src="webFisherRaoMVN2x.png" alt="           &#x222B; 1
+Length(c) :=    dsFisher(c(t))dt,
+            0
+" class="math-display" ></div>
+<!--l. 136--><p class="indent" >   and d<span 
+class="cmmi-10">s</span><sup><span 
+class="cmr-7">Fisher</span></sup>(<span 
+class="cmmi-10">t</span>) := <img 
+src="webFisherRaoMVN3x.png" alt="&#x2218; &#x27E8;&#x02D9;c(t), &#x02D9;c(t)&#x27E9;"  class="sqrt" ><sub><span 
+class="cmmi-7">c</span><span 
+class="cmr-7">(</span><span 
+class="cmmi-7">t</span><span 
+class="cmr-7">)</span></sub> is the Fisher-Rao length element. The inner product <span 
+class="cmsy-10">&#x27E8;</span><span 
+class="cmmi-10">v</span><sub><span 
+class="cmr-7">1</span></sub><span 
+class="cmmi-10">,v</span><sub><span 
+class="cmr-7">2</span></sub><span 
+class="cmsy-10">&#x27E9;</span><sub><span 
+class="cmmi-7">N</span></sub> for
+<span 
+class="cmmi-10">v</span><sub><span 
+class="cmr-7">1</span></sub><span 
+class="cmmi-10">,v</span><sub><span 
+class="cmr-7">2</span></sub> <span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">T</span><sub><span 
+class="cmmi-7">N</span></sub><span 
+class="cmsy-10"><img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /> </span>at normal <span 
+class="cmmi-10">N </span>is the called the Fisher-Rao norm (with tangent planes <span 
+class="cmmi-10">T</span><sub><span 
+class="cmmi-7">N</span></sub><span 
+class="cmsy-10"><img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /> </span>is identified to
+<span 
+class="msbm-10">&#x211D;</span><sup><span 
+class="cmmi-7">d</span></sup> <span 
+class="cmsy-10">&#x00D7;</span> Sym(<span 
+class="cmmi-10">d</span>) where Sym(<span 
+class="cmmi-10">d</span>) be the set of <span 
+class="cmmi-10">d </span><span 
+class="cmsy-10">&#x00D7; </span><span 
+class="cmmi-10">d </span>symmetric matrices). The statistical model <span 
+class="cmsy-10"><img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /></span>(<span 
+class="cmmi-10">d</span>) is of dimension
+<span 
+class="cmmi-10">m </span>= dim(&#x039B;(<span 
+class="cmmi-10">d</span>)) = <span 
+class="cmmi-10">d </span>+ <img 
+src="webFisherRaoMVN4x.png" alt="d(d+1)
+  2"  class="frac" align="middle"> = <img 
+src="webFisherRaoMVN5x.png" alt="d(d+3)
+  2"  class="frac" align="middle"> and identifiable: there is a one-to-one correspondence <span 
+class="cmmi-10">&#x03BB; </span><span 
+class="cmsy-10">&#x2194; </span><span 
+class="cmmi-10">p</span><sub><span 
+class="cmmi-7">&#x03BB;</span></sub>(<span 
+class="cmmi-10">x</span>) between
+<span 
+class="cmmi-10">&#x03BB; </span><span 
+class="cmsy-10">&#x2208; </span>&#x039B;(<span 
+class="cmmi-10">d</span>) and <span 
+class="cmmi-10">N</span>(<span 
+class="cmmi-10">&#x03BC;,</span>&#x03A3;) <span 
+class="cmsy-10">&#x2208;<img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /></span>(<span 
+class="cmmi-10">d</span>).
+     <ul class="itemize1">
+     <li class="itemize">When <span 
+class="cmmi-10">d </span>= 1, the Fisher-Rao distance is known in closed form:
+<div class="math-display" >
+<img 
+src="webFisherRaoMVN6x.png" alt="             &#x221A;-
+&#x03C1;N(N1,N2) = 2 2 arctanh(&#x0394;(&#x03BC;1,&#x03C3;1;&#x03BC;2,&#x03C3;2)),
+" class="math-display" ></div>
+     <!--l. 147--><p class="noindent" >where  &#x0394;(<span 
+class="cmmi-10">a,b</span>;<span 
+class="cmmi-10">c,d</span>)  =  <img 
+src="webFisherRaoMVN7x.png" alt="&#x2218; (c-a)2+2(d--b)2
+  (c-a)2+2(d+b)2"  class="sqrt" >  is  a  Möbius  distance  and  arctanh(<span 
+class="cmmi-10">u</span>)  :=  <img 
+src="webFisherRaoMVN8x.png" alt="1
+2"  class="frac" align="middle"> log <img 
+src="webFisherRaoMVN9x.png" alt="(1+u)
+ 1-u"  class="left" align="middle"> for
+     0 <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">u &#x003C; </span>1. The Fisher-Rao geodesics are semi-ellipses with centers located on the <span 
+class="cmmi-10">x</span>-axis:
+     <div class="center" 
+>
+<!--l. 150--><p class="noindent" >
+<!--l. 151--><p class="noindent" ><img 
+src="Fig//FisherRaoGeodesics1D.png" alt="PIC"  
+width="405" height="405" ></div>
+     </li>
+     <li class="itemize">When the normal distributions belongs to the same submodel <span 
+class="cmsy-10"><img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /></span><sub><span 
+class="cmmi-7">&#x03BC;</span></sub> = <span 
+class="cmsy-10">{</span><span 
+class="cmmi-10">N</span>(<span 
+class="cmmi-10">&#x03BC;,</span>&#x03A3;)<span 
+class="cmmi-10">&#x00A0; </span>: <span 
+class="cmmi-10">&#x00A0;</span>&#x03A3; <span 
+class="cmsy-10">&#x2208;<img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" /></span>(<span 
+class="cmmi-10">d</span>)<span 
+class="cmsy-10">}&#x2282;<img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /> </span>of normal
+     distributions sharing the same mean <span 
+class="cmmi-10">&#x03BC;</span>, we have: <div class="eqnarray">
+
+<div class="math-display" >
+<img 
+src="webFisherRaoMVN10x.png" alt="               &#x250C;&#x2502; ---d--------------
+&#x03C1;  (N ,N )  =  &#x2502;&#x2218;  1&#x2211;  log2&#x03BB; (&#x03A3; -1&#x03A3; ),
+ N&#x03BC;  1   2        2i=1     i  1  2
+" class="math-display" ></div>
+     <!--l. 157--><p class="noindent" ></div>where <span 
+class="cmmi-10">&#x03BB;</span><sub><span 
+class="cmmi-7">i</span></sub>(<span 
+class="cmmi-10">M</span>) denotes the <span 
+class="cmmi-10">i</span>-th generalized largest eigenvalue of matrix <span 
+class="cmmi-10">M</span>, where the generalized eigenvalues
+     are solutions of the equation <span 
+class="cmsy-10">|</span>&#x03A3;<sub><span 
+class="cmr-7">1</span></sub> <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03BB;</span>&#x03A3;<sub><span 
+class="cmr-7">2</span></sub><span 
+class="cmsy-10">| </span>= 0. The submanifold (<span 
+class="cmsy-10"><img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /></span><sub><span 
+class="cmmi-7">&#x03BC;</span></sub><span 
+class="cmmi-10">,g</span><sup><span 
+class="cmr-7">Fisher</span></sup>) is totally geodesic in
+     (<span 
+class="cmsy-10"><img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /></span><span 
+class="cmmi-10">,g</span><sup><span 
+class="cmr-7">Fisher</span></sup>).
+     </li>
+     <li class="itemize">When the normal distributions belongs to the same submodel <span 
+class="cmsy-10"><img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /></span><sub><span 
+class="cmr-7">&#x03A3;</span></sub> = <span 
+class="cmsy-10">{</span><span 
+class="cmmi-10">N</span>(<span 
+class="cmmi-10">&#x03BC;,</span>&#x03A3;)<span 
+class="cmmi-10">&#x00A0; </span>: <span 
+class="cmmi-10">&#x00A0;</span>&#x03A3; <span 
+class="cmsy-10">&#x2208;<img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" /></span>(<span 
+class="cmmi-10">d</span>)<span 
+class="cmsy-10">}&#x2282;<img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /> </span>of normal
+     distributions sharing the same covariance matrix &#x03A3; we have
+<div class="math-display" >
+<img 
+src="webFisherRaoMVN11x.png" alt="&#x221A; -      (               )
+  2arccosh  1+ 1 &#x0394;2&#x03A3;(&#x03BC;1,&#x03BC;2) ,
+              4
+" class="math-display" ></div>
+     <!--l. 166--><p class="noindent" >where &#x0394;<sub><span 
+class="cmr-7">&#x03A3;</span></sub> is the Mahalanobis distance:
+<div class="math-display" >
+<img 
+src="webFisherRaoMVN12x.png" alt="            &#x2218; ---------------------
+&#x0394; &#x03A3;(&#x03BC;1,&#x03BC;2) :=   (&#x03BC;2 - &#x03BC;1)&#x22A4;&#x03A3; -1(&#x03BC;2 - &#x03BC;1).
+" class="math-display" ></div>
+     </li></ul>
+<!--l. 172--><p class="indent" >   However, in the general case, the Fisher-Rao distance between normals is not known in closed
+form.
+
+<!--l. 174--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-20002"></a>Isometric embedding into the higher-dimensional SPD cone</h3>
+<!--l. 177--><p class="noindent" >Calvo and Oller  show how to embed <span 
+class="cmmi-10">N</span>(<span 
+class="cmmi-10">&#x03BC;,</span>&#x03A3;) <span 
+class="cmsy-10">&#x2208;<img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /></span>(<span 
+class="cmmi-10">d</span>) = <img 
+src="webFisherRaoMVN13x.png" alt="{                                     }
+ P¯= f&#x03B2;(&#x03BC;,&#x03A3;) : (&#x03BC;,&#x03A3;) &#x2208; N (d) = &#x211D;d &#x00D7; P(d)"  class="left" align="middle"> into a
+SPD matrix of <span 
+class="msbm-10">&#x2119;</span>(<span 
+class="cmmi-10">d </span>+ 1):
+   <div class="math-display" >
+<img 
+src="webFisherRaoMVN14x.png" alt="              [       &#x22A4;     ]
+P¯(N) = f(N ) =  &#x03A3; +&#x22A4; &#x03BC;&#x03BC;    &#x03BC;
+                &#x03BC;         1
+" class="math-display" ></div>
+<!--l. 181--><p class="indent" >   so that the manifold (<span 
+class="cmsy-10"><img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /></span>(<span 
+class="cmmi-10">d</span>)<span 
+class="cmmi-10">,g</span><sup><span 
+class="cmr-7">Fisher</span></sup>) is isometrically embedded into the submanifold (<span class="overline"><span 
+class="cmsy-10"><img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /></span></span><span 
+class="cmmi-10">,g</span><sup><span 
+class="cmr-7">trace</span></sup>) of the cone
+equipped with the trace metric
+   <div class="math-display" >
+<img 
+src="webFisherRaoMVN15x.png" alt=" trace          1    -1   -1
+gP   (P1,P2) := 2tr(P   P1P  P2).
+" class="math-display" ></div>
+<!--l. 186--><p class="indent" >   However, the submanifold <span class="overline"><span 
+class="cmsy-10"><img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /></span></span><span 
+class="cmsy-10">&#x2282; </span><span 
+class="msbm-10">&#x2119;</span>(<span 
+class="cmmi-10">d </span>+ 1) is not totally geodesic. Thus Calvo and Oller&#x00A0;  derived a lower bound
+on the Fisher-Rao distance:
+   <div class="math-display" >
+<img 
+src="webFisherRaoMVN16x.png" alt="             &#x2218;--&#x250C;&#x2502; ------------------
+               1&#x2502;&#x2218; 1 &#x2211;d   2     -1
+&#x03C1;CO(N1,N2) =   2  2    log  &#x03BB;i(P¯1  ¯P2)
+                    i=1
+" class="math-display" ></div>
+<!--l. 191--><p class="indent" >   which is also metric distance.
+
+<!--l. 194--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-30003"></a>A simple approximation method</h3>
+<!--l. 196--><p class="noindent" >Our method consists in projecting the SPD geodesic <span 
+class="cmmi-10">&#x03B3;</span><sub><span 
+class="msbm-7">&#x2119;</span><span 
+class="cmr-7">(</span><span 
+class="cmmi-7">d</span><span 
+class="cmr-7">+1)</span></sub>(<span class="bar-css"><span 
+class="cmmi-10">P</span></span><sub><span 
+class="cmr-7">1</span></sub><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup><span class="bar-css"><span 
+class="cmmi-10">P</span></span><sub><span 
+class="cmr-7">2</span></sub>) onto <span class="overline"><span 
+class="cmsy-10"><img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /></span></span> and then maps back the SPD
+projected curve into <span 
+class="cmsy-10"><img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /> </span>by using <span 
+class="cmmi-10">f</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup>:
+   <div class="math-display" >
+<img 
+src="webFisherRaoMVN17x.png" alt="               - 1(             - 1    )
+cCO(N1,N2;t) = f   projN-(&#x03B3;&#x2119;(d+1)(¯P1 P¯2;t)) .
+" class="math-display" ></div>
+<!--l. 202--><p class="indent" >   Indeed, the geodesic <span 
+class="cmmi-10">&#x03B3;</span><sub><span 
+class="msbm-7">&#x2119;</span><span 
+class="cmr-7">(</span><span 
+class="cmmi-7">d</span><span 
+class="cmr-7">+1)</span></sub>(<span class="bar-css"><span 
+class="cmmi-10">P</span></span><sub><span 
+class="cmr-7">1</span></sub><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup><span class="bar-css"><span 
+class="cmmi-10">P</span></span><sub><span 
+class="cmr-7">2</span></sub>) has closed-form equation
+   <div class="math-display" >
+<img 
+src="webFisherRaoMVN18x.png" alt="                 1 ( - 1   - 1)t 1
+&#x03B3;&#x2119;(d+1)(¯P-11P¯2) = ¯P21  ¯P1 2¯P2 ¯P1 2 ¯P21 .
+" class="math-display" ></div>
+<!--l. 207--><p class="indent" >   Now, we need to estimate the Fisher-Rao length of the curve <span 
+class="cmmi-10">c</span><sub><span 
+class="cmr-7">CO</span></sub>(<span 
+class="cmmi-10">N</span><sub><span 
+class="cmr-7">1</span></sub><span 
+class="cmmi-10">,N</span><sub><span 
+class="cmr-7">2</span></sub>;<span 
+class="cmmi-10">t</span>) by discretizing the curve at <span 
+class="cmmi-10">T</span>
+positions:
+   <div class="math-display" >
+<img 
+src="webFisherRaoMVN19x.png" alt="                      ( (   )  (     ))
+              1-T&#x2211;-1       i-     i+-1
+&#x03C1;&#x02DC;CO (N1, N2) &#x2264; T    &#x03C1;N  c  T  ,c   T     ,
+                i=1
+" class="math-display" ></div>
+<!--l. 211--><p class="indent" >   and approximate for nearby normals their Fisher-Rao distances by the square root of their Jeffreys
+divergence:
+   <div class="math-display" >
+<img 
+src="webFisherRaoMVN20x.png" alt="   (  (  )   (     ))   &#x2218; ---[-(--)---(-----)]-
+&#x03C1;    c -i  ,c i+-1    &#x2248;   D   c  i- ,c i-+1   ,
+ N     T        T          J     T       T
+" class="math-display" ></div>
+<!--l. 215--><p class="indent" >   where
+   <div class="math-display" >
+<img 
+src="webFisherRaoMVN21x.png" alt="                      (  -1      -1      )             -1    -1
+D [p      : p    ] = tr &#x03A3;-2-&#x03A3;1 +-&#x03A3;-1-&#x03A3;2 - I + (&#x03BC; - &#x03BC; )&#x22A4; &#x03A3;1-+-&#x03A3;-2-(&#x03BC; - &#x03BC; ).
+ J  (&#x03BC;1,&#x03A3;1)   (&#x03BC;2,&#x03A3;2)             2               2   1       2      2   1
+" class="math-display" ></div>
+<!--l. 221--><p class="indent" >    <img 
+src="Fig//Fig1.png" alt="PIC"  
+ width="500" >
+<!--l. 223--><p class="indent" >   The projection of a SPD matrix <span 
+class="cmmi-10">P </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="msbm-10">&#x2119;</span>(<span 
+class="cmmi-10">d </span>+ 1) onto <span class="overline"><span 
+class="cmsy-10"><img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /></span></span> is done as follows: Let <span 
+class="cmmi-10">&#x03B2; </span>= <span 
+class="cmmi-10">P</span><sub><span 
+class="cmmi-7">d</span><span 
+class="cmr-7">+1</span><span 
+class="cmmi-7">,d</span><span 
+class="cmr-7">+1</span></sub> and write
+<span 
+class="cmmi-10">P </span>= <img 
+src="webFisherRaoMVN22x.png" alt="[              ]
+  &#x03A3;+ &#x03B2;&#x03BC; &#x03BC;&#x22A4;  &#x03B2;&#x03BC;
+  &#x03B2;&#x03BC;&#x22A4;       &#x03B2;"  class="left" align="middle">. Then the orthogonal projection at <span 
+class="cmmi-10">P </span><span 
+class="cmsy-10">&#x2208;<img 
+src="cmsy10-50.png" alt="P" class="10x-x-50" /> </span>onto <span class="overline"><span 
+class="cmsy-10"><img 
+src="cmsy10-4e.png" alt="N" class="10x-x-4e" /></span></span> is:
+   <div class="math-display" >
+<img 
+src="webFisherRaoMVN23x.png" alt="                 [             ]
+ ¯       --       &#x03A3; + &#x03BC;&#x03BC;&#x22A4;   &#x03BC;&#x22A4;
+P &#x22A5; := projN (P) = &#x03BC;         1   ,
+" class="math-display" ></div>
+<!--l. 229--><p class="indent" >   and the SPD distance between <span 
+class="cmmi-10">P </span>and <span class="bar-css"><span 
+class="cmmi-10">P</span></span><sub><span 
+class="cmsy-7">&#x22A5;</span></sub> is
+   <div class="math-display" >
+<img 
+src="webFisherRaoMVN24x.png" alt="&#x03C1;P(P, ¯P&#x22A5;) = &#x221A;1-|log&#x03B2;|.
+            2
+" class="math-display" ></div>
+<!--l. 234--><p class="indent" >    <img 
+src="Fig//Fig2.png" alt="PIC"  
+ width="500">
+<!--l. 236--><p class="indent" >   Here are some examples of the curves <span 
+class="cmmi-10">c</span><sub><span 
+class="cmr-7">CO</span></sub> (in green) compared to the Fisher-Rao geodesics (in
+black):
+<!--l. 238--><p class="indent" >    <img 
+src="BivariateNormal-11918040-.png" alt="PIC"  
+ width="605" height="605"  >
+<!--l. 241--><p class="indent" >    <img 
+src="BivariateNormal-11892050-.png" alt="PIC"  
+ width="605" height="605"  >
+<BR>
+
+
+
+<!--l. 244--><p class="indent" >   More details and quantitative analysis: <a 
+href="https://www.mdpi.com/1099-4300/25/4/654" class="url" ><span 
+class="cmtt-10">https://www.mdpi.com/1099-4300/25/4/654</span></a>
+    
+</body></html> 
+
+
+
