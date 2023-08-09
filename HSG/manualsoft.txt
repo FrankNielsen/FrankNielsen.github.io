@@ -1,0 +1,44 @@
+
+===LAUNCH INSTRUCTIONS===
+
+In the command line:
+$ java -jar <filename>.jar
+
+For all Jars except demo.jar, this will launch an animation demonstrating a property of hilbert balls.
+
+For demo.jar this will launch an applet with a range of buttons on the top row. From left to right:
+# "Change to mode:UNIT_BALL/DRAW_CONTOUR": allows the user to switch between "UNIT_BALL" mode to define the center of hilbert balls, and "DRAW_CONTOUR" mode to edit the hilbert convex domain.
+# "Change to mode: RED/GREY/NORMAL" : in UNIT_BALL mode, changes the color of the selected Hilbert ball - useful for visualization.
+# "Reinitialize": In UNIT_BALL mode, erases all center points. In DRAW_CONTOUR: reinitializes the Hilbert domain and the center points.
+# "+" / "-": In UNIT_BALL mode: allows the user to change the radius of the selected Hilbert ball. (step is 0.1).
+# "Activate rays": In UNIT_BALL mode, allows the user to visualise the rays for the selected Hilbert ball.
+
+# In DRAW_CONTOUR mode:
+The user can define the Hilbert domain by:
+-left clicking on the screen to add a vertex to the domain - the domain traced will be the convex hull of all points.
+-left clicking on an existing vertex and dragging it to another location.
+
+#In UNIT_BALL mode:
+The user can define a Hilbert ball by:
+-left clicking inside the domain to define a center point - by default the radius is 1.0.
+-left clicking on an existing center point and dragging it to another location to move it.
+-left clicking on an existing center point to select it. A selected center point is displayed in red instead of in black. Information regarding a selected ball will be displayed on screen (coordinates of the center point, number of edges and radius).
+-right-clicking on an existing center point to remove it.
+
+Alternatively, demo.jar can take one optional argument:
+- [optional] path to an inputfile: that encodes information about a convex and a hilbert balls. If not provided, the user can define everything by hand following the previous instructions.
+
+The input file should be written as follows:
+
+N //number of vertices for the convex
+X0 Y0
+X1 Y1
+.
+X(N-1) Y(N-1) //coordinates of the vertices
+M //number of center points
+X0 Y0 R0
+X1 Y1 R1
+
+X(N-1) Y(N-1) R(N-1) //coordinates of the center points and radius of the hilbert ball
+
+
