@@ -1,0 +1,16 @@
+/* Frank.Nielsen@acm.org */ 
+
+M:matrix([a,c/2,d/2],[c/2,b,e/2],[d/2,e/2,f]);
+v:matrix([x],[y],[1]);
+transpose(v).M.v;
+expand(%);
+
+/* extract parameters */
+Q:matrix([a,c],[c,b]);
+v:matrix([x-xc],[y-yc]);
+transpose(v).Q.v;
+expand(%);
+
+
+ 
+

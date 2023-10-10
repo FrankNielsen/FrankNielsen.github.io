@@ -801,8 +801,8 @@ void setup()
   //size(size, size);
  // size(winwidth,winheight);
  size(900,650);
-  frame.setTitle("Visualizing hyperbolic Voronoi diagrams");
-  frame.setLocation(0,0);
+ // frame.setTitle("Visualizing hyperbolic Voronoi diagrams");
+ // frame.setLocation(0,0);
   
   initialize();
   // noLoop();

@@ -1,6 +1,8 @@
 // Frank.Nielsen@acm.org
 // October 2023
-//
+// https://math.stackexchange.com/questions/159095/how-to-derive-ellipse-matrix-for-general-ellipse-in-homogenous-coordinates
+// https://www.johndcook.com/blog/2023/06/19/conic-through-five-points/
+
 import processing.pdf.*;
 import Jama.*;
 
@@ -14,12 +16,37 @@ boolean toggleEll=true;
 
 class Ellipse{
  double a,b,c,d,e,f;
+ double tolerance=1.0e-3;
  
  public String toString(){return a+"x**2+"+b+"y**2+"+c+"xy+"+d+"x+"+e+"y+"+f+"=0";
  }
  
 public double evaluate(double x, double y)
  {return a*x*x+b*y*y+c*x*y+d*x+e*y+f;}
+ 
+ public Matrix HomogeneousMatrix()
+ {
+  Matrix res=new Matrix(3,3);
+  //matrix([a,c/2,d/2],[c/2,b,e/2],[d/2,e/2,f]);
+  
+  res.set(0,0,a);res.set(0,1,c/2.0);res.set(0,2,d/2.0);
+  res.set(1,0,c/2.0);res.set(1,1,b);res.set(1,2,e/2.0);
+  res.set(2,0,d/2.0);res.set(2,1,e/2.0);res.set(2,2,f);
+  
+  return  res;
+ }
+ 
+  boolean PointOnEllipse(double x, double y) 
+ {Matrix v;
+  v=new Matrix(3,1);
+  // homogeneous vector
+  v.set(0,0,x);v.set(1,0,y);v.set(2,0,1.0);
+  
+  double eq=(v.transpose().times(HomogeneousMatrix()).times(v)).get(0,0);
+  println(eq+" "+evaluate(x,y));
+  
+  if (Math.abs(eq)<tolerance) return true; else return false;
+ }
  
  
  public double evaluatey1(double x)
@@ -241,7 +268,10 @@ String ss=""+millis();
 
 void keyPressed()
 {if (key=='e') {toggleEll=!toggleEll;}
-  if (key==' '){ell=new Ellipse(); ell.solve(xarray,yarray);}
+  if (key==' '){ell=new Ellipse(); ell.solve(xarray,yarray);
+int i;
+for(i=0;i<n;i++) println(ell.PointOnEllipse(xarray[i],yarray[i]));
+}
   
   if (key=='p'){savePDF();}
   
