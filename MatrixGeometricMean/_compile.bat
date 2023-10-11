@@ -1,0 +1,4 @@
+pdflatex WhichMatrixGeometricMean.tex
+bibtex WhichMatrixGeometricMean
+htlatex WhichMatrixGeometricMean.tex
+pause 5000

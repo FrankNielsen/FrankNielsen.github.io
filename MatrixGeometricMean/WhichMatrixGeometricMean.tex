@@ -1,5 +1,25 @@
 \documentclass{article}
+\usepackage{fullpage,amssymb}
+\sloppy 
 
+\def\domega{{\mathrm{d}\omega}}
+\def\calP{\mathcal{P}}
+\def\det{\mathrm{det}}
+\def\bbR{\mathbb{R}}
+\def\AGM{\mathrm{AGM}}
+\def\AHM{\mathrm{AHM}}
+\def\tr{\mathrm{tr}}
+\def\farthest{\mathrm{farthest}}
+\def\PD{\mathrm{PD}}
+\def\mod{\mathrm{mod}}
+\def\inner#1#2{\langle #1,#2\rangle}
+\def\LEM{\mathrm{LE}}
+\def\RGM{\mathrm{RG}}
+\def\bbP{\mathbb{P}}
+\def\bbN{\mathbb{N}}
+\def\bbE{\mathbb{E}}
+\def\bbV{\mathbb{V}}
+\def\DS{\mathrm{DS}}
 
 \title{Which matrix geometric mean do you mean?}
 
@@ -8,20 +28,155 @@
 \date{2023}
 
 \begin{document}
+\maketitle
 
-The geometric mean between two positive reals $x$ and $y$ is $G(x,y)=\sqrt{xy}$.
-To define the geometric mean between two positive-definite matrices $X$ and $Y$, we may generalize different properties of the scalar geometric mean as follows:
 
-\begin{itemize}
-	\item The geometric mean is the limit of power means for $p\rightarrow 0$.
-	Since power means are quasi-arithmetic means for , get the following geometric matrix mean
-	
-	\item The geometric mean is the centroid with respect to the distance $\rho(x,y)=\left\| \log\frac{x}{y}\right|$
-	
-	\item The geometric mean is the limit of the inductive AHM mean
-	
-\end{itemize}
+\begin{abstract}
+We explain how to generalize the geometric mean between two positive reals to symmetric positive-definite matrices by considering different  properties of the geometric mean.
+Namely, we present the viewpoint of Riemannian centroids, inductive means,  and  limits of power means.
+\end{abstract}
 
+The geometric mean between two positive reals $x$ and $y$ is defined by 
+$$
+G(x,y)=\sqrt{xy}.
+$$
+To extend the scalar geometric mean to symmetric positive-definite matrices $X$ and $Y$, we may generalize different properties of the scalar geometric mean as follows:
+
+\begin{description}
+\item[Limit of quasi-arithmetic power means.] First, let us consider the scalar geometric mean as the limit of power means $M_p(x,y)=\left(x^p+y^p\right)^{\frac{1}{p}}$ when $p\rightarrow 0$:
+$$
+G(x,y)=\lim_{p\rightarrow 0} M_p(x,y).
+$$
+A quasi-arithmetic mean induced by strictly increasing and differentiable real-valued functional generators $f(u)$ is defined by
+$$
+M_f(x,y)=f^{-1}\left(\frac{f(x)+f(y)}{2}\right).
+$$
+Quasi-arithmetic means are also called Kolmogorov-Nagumo means~\cite{Kolmogorov-1930,Nagumo-1930}. 
+Since power means $M_p(x,y)=M_{f_p}(x,y)$ are quasi-arithmetic means for the smooth family of generators
+$$
+f_p(u)=
+\left\{
+\begin{array}{ll}
+\frac{u^p-1}{p}, & p\in\bbR\backslash\{0\},\cr
+\log(u), & p=0.
+\end{array}
+\right., \quad
+f_p^{-1}(u)=
+\left\{
+\begin{array}{ll}
+(1+up)^{\frac{1}{p}}, & p\in\bbR\backslash\{0\},\cr
+\exp(u), & p=0.
+\end{array}
+\right.,
+$$
+with $G(x,y)=M_0(x,y)$, we get by extension the following matrix geometric mean by taking the corresponding matrix quasi-arithmetic mean:
+$$
+\LEM(X,Y)=M_{\log}(X,Y)=\exp\left(\frac{\log X+\log Y}{2}\right),
+$$
+where $\exp(X)$ and $\log(X)$ denote the matrix exponential and  the matrix logarithm of $X$, respectively.
+This matrix mean is called the {\bf log-Euclidean matrix mean}~\cite{LEMean-2007}.
+One drawback of this matrix geometric mean (MGM) is that it is not operator monotone where
+a matrix mean $M(X,Y)$ is said operator monotone~\cite{bhatia2006riemannian} if for $X'\preceq X$ and $Y'\preceq Y$, we have
+$M(X',Y')\preceq M(X,Y)$ where $\preceq$ denotes Loewner partial ordering on the cone $\bbP$:
+ $P\preceq Q$ if and only if $Q-P$ is positive semi-definite.
+The scalar geometric mean satisfies the operator monotone property: if $x'\leq x$ and $y'\leq y$ then we have $G(x',y')\leq G(x,y)$.
+Ando-Li-Mathias~\cite{ALM-2004} defined a set of $10$ properties that a matrix geometric mean should satisfy, including the operator monotone property.
+	
+\item[Riemannian centroid.] Second, the scalar geometric mean can be interpreted as the unique centroid 
+with respect to the distance $\rho(x,y)=\left\| \log\frac{x}{y} \right|$:
+$$
+G(x,y)=\arg\min_{c\in\bbR_{>0}} \frac{1}{2}\rho^2(x,c)+\frac{1}{2}\rho^2(c,y).
+$$
+Let $\bbP$ denote the set of symmetric positive-definite $d\times d$ matrices.
+Consider the Riemannian manifold $(\bbP,g)$ where $g$ is the so-called trace metric,
+ i.e., a collection of smoothly varying inner products $g_P$ for $P\in\bbP$ defined by
+$$
+g_P(S_1,S_2)=\tr\left(P^{-1} S_1 P^{-1} S_2\right),
+$$ 
+where $S_1$ and $S_2$ are matrices belonging to the vector space of symmetric $d\times d$ matrices.
+$S_1$ and $S_2$ are geometrically interpreted as vectors  of the tangent plane $T_P$ of $P\in\bbP$.
+The Riemannian geodesic distance is
+$$
+\rho(P_1,P_2)=\left\| \log\left(P_1^{-\frac{1}{2}}\, P_2\, P_1^{-\frac{1}{2}}\right)\right\|_F  =\sqrt{\sum_{i=1}^d \log^2 \lambda_i\left(P_1^{-\frac{1}{2}}\, P_2\, P_1^{-\frac{1}{2}}\right)},
+$$
+where $\lambda_i(M)$ denotes the $i$-th largest real eigenvalue of a symmetric matrix $M$, $\|\cdot\|_F$ denotes the Frobenius norm, and $\log P$ is the unique matrix logarithm of a SPD matrix $P$.
+It follows that the Riemannian matrix geometric mean is
+$$
+\RGM(X,Y)=X^{\frac{1}{2}}\, (X^{-\frac{1}{2}}\, Y\, X^{-\frac{1}{2}})^{\frac{1}{2}}\, X^{\frac{1}{2}.}
+$$
+This mean is proven to be the unique solution to the matrix Ricatti equation $CX^{-1}C=Y$,
+is invariant under inversion (i.e., $\RGM(X,Y)=G(X^{-1},Y^{-1})^{-1}$), 
+and satisfies the determinant property $\det(\RGM(X,Y))=\sqrt{\det(X)\det(Y)}$.
+Furthermore, the matrix mean $\RGM=\AHM$ is operator monotone~\cite{bhatia2012monotonicity}.
+
+	
+\item[Inductive means.] Third, the scalar geometric scalar mean can be defined 
+as limits of sequences of iterations: 
+\begin{eqnarray*}
+a_{t+1} &=& A(a_t,g_t):=\frac{a_t+g_t}{2},\\
+h_{t+1} &=& H(a_t,g_t)=\frac{2a_tg_t}{a_t+g_t},
+\end{eqnarray*}
+initialized with $a_0=x>0$ and $g_0=y>0$.
+We have 
+$$
+\AHM(x,y)=\lim_{t\rightarrow\infty} a_t=\lim_{t\rightarrow\infty} h_t=\sqrt{xy}=G(x,y).
+$$
+The AHM iterations enjoys fast quadratic convergence~\cite{ArchimedeanDoubleSequence-1984}.
+These kinds of means defined as limits of sequences have been termed {\bf inductive means}~\cite{sturm2003probability}.
+
+Similarly, we may define the  inductive matrix arithmetic-harmonic  mean by the following sequence:
+\begin{eqnarray*}
+A_{t+1} &=& \frac{A_t+H_t}{2}=A(A_t,H_t),\\
+H_{t+1} &=& 2\, (A_t^{-1}+H_t^{-1})^{-1}=H(A_t,H_t),
+\end{eqnarray*}
+where the matrix arithmetic mean is $A(X,Y)=\frac{X+Y}{2}$ and the matrix harmonic mean is $H(X,Y)=2(X^{-1}+Y^{-1})^{-1}$.
+The AHM iterations initialized with $A_0=X$ and $H_0=Y$ yield in the limit $t \rightarrow\infty$, the matrix arithmetic-harmonic mean~\cite{AHM-Nakamura-2001} (AHM):
+$$
+\AHM(X,Y)=\lim_{t\rightarrow +\infty} A_t=\lim_{t\rightarrow +\infty} H_t=\RGM(X,Y).
+$$
+The matrix AHM iterations enjoys quadratic convergence.
+
+
+
+\item[Limits of power mean functional equation] Fourth, we can define the scalar power means $M_p(x,y)$
+as the solutions of the equation~\cite{lim2012matrix}:
+$$
+m=\frac{1}{2} m^{1-p}x^p + \frac{1}{2} m^{1-p}y^p
+$$  
+which is solved as 
+$m=\left(\frac{1}{2}x^p+\frac{1}{2}y^p\right)^{\frac{1}{p}}=M_p(x,y)$.
+Similarly, we can define the matrix power means
+ $M_p(X,Y)$ for $p\in (0,1]$  
+by uniquely solving the matrix equation~\cite{lim2012matrix}:
+\begin{equation}\label{eq:mp}
+M=\frac{1}{2} M\#_p X + \frac{1}{2}  M\#_p Y,
+\end{equation}
+where 
+$$
+X\#_t Y= 
+X^{\frac{1}{2}}\, \left(X^{-\frac{1}{2}}\, Y\, X^{-\frac{1}{2}}\right)^t\, X^{\frac{1}{2}},
+$$
+is the Riemannian barycenter minimizing
+$$
+(1-t) \rho^2(X,P)+t\rho^2(Y,P).
+$$
+In the limit case $p\rightarrow 0$, this matrix power mean $M_p$ yields the Riemannian matrix geometric mean~\cite{lim2012matrix}: 
+$$
+\lim_{p\rightarrow 0^+} M_p(X,Y)=\RGM(X,Y). 
+$$
+\end{description}
+
+We have described several properties of the scalar geometric means which when extended to matrices yield different ways to define matrix geometric means.
+Ando-Li-Mathias~\cite{ALM-2004} (ALM) listed $10$ properties that such matrix geometric means should satisfy.
+There are infinitely many ways to construct matrix geometric means satisfying those ALM properties~\cite{bini2010effective}.
+The Riemannian matrix geometric mean is often used as it can be obtained from many different generalizations (e.g., Riemannian centroid~\cite{bhatia2012monotonicity}, arithmetic-harmonic mean~\cite{AHM-Nakamura-2001}, limit of power means~\cite{lim2012matrix}).
+
+There are also several extensions of geometric means to $n$-parameter geometric means. 
+In particular, a recursive matrix mean which converges with cubic order is given in~\cite{bini2010effective}.
+
+This note is based on a paper entitled ``What is... an inductive mean?''~\cite{Mean-Nielsen-2023}.
+
+So which matrix geometric mean do you mean\footnote{Closing sentence by analogy to the paper entitled ``Mean, what do you Mean?''~\cite{de2016mean}}?
 
 \bibliographystyle{plain}
 \bibliography{WhichMatrixGeometricMeanBIB}

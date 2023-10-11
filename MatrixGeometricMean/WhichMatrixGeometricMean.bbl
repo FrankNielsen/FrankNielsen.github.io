@@ -1,0 +1,79 @@
+\begin{thebibliography}{10}
+
+\bibitem{ALM-2004}
+Tsuyoshi Ando, Chi-Kwong Li, and Roy Mathias.
+\newblock Geometric means.
+\newblock {\em Linear algebra and its applications}, 385:305--334, 2004.
+
+\bibitem{LEMean-2007}
+Vincent Arsigny, Pierre Fillard, Xavier Pennec, and Nicholas Ayache.
+\newblock Geometric means in a novel vector space structure on symmetric
+  positive-definite matrices.
+\newblock {\em SIAM journal on matrix analysis and applications},
+  29(1):328--347, 2007.
+
+\bibitem{bhatia2006riemannian}
+Rajendra Bhatia and John Holbrook.
+\newblock {Riemannian geometry and matrix geometric means}.
+\newblock {\em Linear algebra and its applications}, 413(2-3):594--618, 2006.
+
+\bibitem{bhatia2012monotonicity}
+Rajendra Bhatia and Rajeeva~L Karandikar.
+\newblock Monotonicity of the matrix geometric mean.
+\newblock {\em Mathematische Annalen}, 353:1453--1467, 2012.
+
+\bibitem{bini2010effective}
+Dario Bini, Beatrice Meini, and Federico Poloni.
+\newblock {An effective matrix geometric mean satisfying the Ando--Li--Mathias
+  properties}.
+\newblock {\em Mathematics of Computation}, 79(269):437--452, 2010.
+
+\bibitem{de2016mean}
+Miguel de~Carvalho.
+\newblock Mean, what do you mean?
+\newblock {\em The American Statistician}, 70(3):270--274, 2016.
+
+\bibitem{ArchimedeanDoubleSequence-1984}
+D.~M.~E. Foster and G.~M. Phillips.
+\newblock {A generalization of the Archimedean double sequence}.
+\newblock {\em Journal of mathematical analysis and applications},
+  101(2):575--581, 1984.
+
+\bibitem{Kolmogorov-1930}
+A.~N. Kolmogorov.
+\newblock Sur la notion de la moyenne.
+\newblock {\em Atti della Accademia nazionale dei Lincei Rendicoti},
+  12:388--391, 1930.
+
+\bibitem{lim2012matrix}
+Yongdo Lim and Mikl{\'o}s P{\'a}lfia.
+\newblock {Matrix power means and the Karcher mean}.
+\newblock {\em Journal of Functional Analysis}, 262(4):1498--1514, 2012.
+
+\bibitem{Nagumo-1930}
+Mitio Nagumo.
+\newblock {\"U}ber eine klasse der mittelwerte.
+\newblock In {\em Japanese journal of mathematics: transactions and abstracts},
+  volume~7, pages 71--79. The Mathematical Society of Japan, 1930.
+
+\bibitem{AHM-Nakamura-2001}
+Yoshimasa Nakamura.
+\newblock Algorithms associated with arithmetic, geometric and harmonic means
+  and integrable systems.
+\newblock {\em Journal of computational and applied mathematics},
+  131(1-2):161--174, 2001.
+
+\bibitem{Mean-Nielsen-2023}
+Frank Nielsen.
+\newblock What is an inductive mean?
+\newblock {\em Notices of the AMS}, 70(11), 2023.
+
+\bibitem{sturm2003probability}
+Karl-Theodor Sturm.
+\newblock Probability measures on metric spaces of nonpositive curvature.
+\newblock {\em Heat Kernels and Analysis on Manifolds, Graphs, and Metric
+  Spaces: Lecture Notes from a Quarter Program on Heat Kernels, Random Walks,
+  and Analysis on Manifolds and Graphs: April 16-July 13, 2002, Emile Borel
+  Centre of the Henri Poincar{\'e} Institute, Paris, France}, 338:357, 2003.
+
+\end{thebibliography}

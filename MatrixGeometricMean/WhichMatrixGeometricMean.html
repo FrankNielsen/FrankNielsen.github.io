@@ -1,0 +1,509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Which matrix geometric mean do you mean?</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="WhichMatrixGeometricMean.tex"> 
+<link rel="stylesheet" type="text/css" href="WhichMatrixGeometricMean.css"> 
+</head><body 
+>
+   <div class="maketitle">
+
+
+
+<h2 class="titleHead">Which matrix geometric mean do you mean?</h2>
+<div class="author" ><span 
+class="cmr-12">Frank Nielsen</span></div><br />
+<div class="date" ><span 
+class="cmr-12">2023</span></div>
+   </div>
+   <div 
+class="abstract" 
+>
+   <h3 class="abstracttitle">
+<span 
+class="cmbx-9">Abstract</span>
+</h3>
+     <!--l. 35--><p class="noindent" ><span 
+class="cmr-9">We explain how to generalize the geometric mean between two positive reals to symmetric positive-definite</span>
+     <span 
+class="cmr-9">matrices by considering different properties of the geometric mean. Namely, we present the viewpoint of</span>
+     <span 
+class="cmr-9">Riemannian centroids, inductive means, and limits of power means.</span>
+</div>
+<!--l. 39--><p class="indent" >   The geometric mean between two positive reals <span 
+class="cmmi-10">x </span>and <span 
+class="cmmi-10">y </span>is defined by
+   <div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean0x.png" alt="         &#x221A;---
+G (x,y) =  xy.
+" class="math-display" ></div>
+<!--l. 43--><p class="indent" >   To extend the scalar geometric mean to symmetric positive-definite matrices <span 
+class="cmmi-10">X </span>and <span 
+class="cmmi-10">Y </span>, we may generalize
+different properties of the scalar geometric mean as follows:
+     <dl class="description"><dt class="description">
+<span 
+class="cmbx-10">Limit of quasi-arithmetic power means.</span> </dt><dd 
+class="description">First, let us consider the scalar geometric mean as the limit
+     of power means <span 
+class="cmmi-10">M</span><sub><span 
+class="cmmi-7">p</span></sub>(<span 
+class="cmmi-10">x,y</span>) = <img 
+src="WhichMatrixGeometricMean1x.png" alt="(xp + yp)"  class="left" align="middle"><sup><img 
+src="WhichMatrixGeometricMean2x.png" alt=" 1p"  class="frac" align="middle"></sup> when <span 
+class="cmmi-10">p </span><span 
+class="cmsy-10">&#x2192; </span>0:
+
+<div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean3x.png" alt="G(x,y) = lpim&#x2192;0 Mp(x,y).
+" class="math-display" ></div>
+     <!--l. 50--><p class="noindent" >A  quasi-arithmetic  mean  induced  by  strictly  increasing  and  differentiable  real-valued  functional
+     generators <span 
+class="cmmi-10">f</span>(<span 
+class="cmmi-10">u</span>) is defined by
+<div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean4x.png" alt="           -1( f(x)+ f(y))
+Mf (x,y ) = f   ----2-----  .
+" class="math-display" ></div>
+     <!--l. 54--><p class="noindent" >Quasi-arithmetic  means  are  also  called  Kolmogorov-Nagumo  means&#x00A0;<span class="cite">[<a 
+href="#XKolmogorov-1930">8</a>,&#x00A0;<a 
+href="#XNagumo-1930">10</a>]</span>.  Since  power  means
+     <span 
+class="cmmi-10">M</span><sub><span 
+class="cmmi-7">p</span></sub>(<span 
+class="cmmi-10">x,y</span>) = <span 
+class="cmmi-10">M</span><sub><span 
+class="cmmi-7">f</span><sub><span 
+class="cmmi-5">p</span></sub></sub>(<span 
+class="cmmi-10">x,y</span>) are quasi-arithmetic means for the smooth family of generators
+<div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean5x.png" alt="       {  up-1                         {        1p
+fp(u) =    p  ,  p &#x2208; &#x211D; \{0}, , fp-1(u) =  (1+ up) ,  p &#x2208; &#x211D;\{0}, ,
+          log(u), p = 0.                  exp(u),    p = 0.
+" class="math-display" ></div>
+     <!--l. 72--><p class="noindent" >with <span 
+class="cmmi-10">G</span>(<span 
+class="cmmi-10">x,y</span>) = <span 
+class="cmmi-10">M</span><sub><span 
+class="cmr-7">0</span></sub>(<span 
+class="cmmi-10">x,y</span>), we get by extension the following matrix geometric mean by taking the
+     corresponding matrix quasi-arithmetic mean:
+<div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean6x.png" alt="                          (            )
+LE (X, Y) = Mlog(X, Y) = exp logX-+-logY- ,
+                                2
+" class="math-display" ></div>
+
+     <!--l. 76--><p class="noindent" >where exp(<span 
+class="cmmi-10">X</span>) and log(<span 
+class="cmmi-10">X</span>) denote the matrix exponential and the matrix logarithm of <span 
+class="cmmi-10">X</span>, respectively.
+     This  matrix  mean  is  called  the  <span 
+class="cmbx-10">log-Euclidean  matrix  mean</span>&#x00A0;<span class="cite">[<a 
+href="#XLEMean-2007">2</a>]</span>.  One  drawback  of  this  matrix
+     geometric mean (MGM) is that it is not operator monotone where a matrix mean <span 
+class="cmmi-10">M</span>(<span 
+class="cmmi-10">X,Y </span>) is said
+     operator monotone&#x00A0;<span class="cite">[<a 
+href="#Xbhatia2006riemannian">3</a>]</span> if for <span 
+class="cmmi-10">X</span><span 
+class="cmsy-10">&#x2032;&#x227C; </span><span 
+class="cmmi-10">X </span>and <span 
+class="cmmi-10">Y </span><span 
+class="cmsy-10">&#x2032;&#x227C; </span><span 
+class="cmmi-10">Y </span>, we have <span 
+class="cmmi-10">M</span>(<span 
+class="cmmi-10">X</span><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmmi-10">,Y </span><span 
+class="cmsy-10">&#x2032;</span>) <span 
+class="cmsy-10">&#x227C; </span><span 
+class="cmmi-10">M</span>(<span 
+class="cmmi-10">X,Y </span>) where <span 
+class="cmsy-10">&#x227C; </span>denotes
+     Loewner partial ordering on the cone <span 
+class="msbm-10">&#x2119;</span>: <span 
+class="cmmi-10">P </span><span 
+class="cmsy-10">&#x227C; </span><span 
+class="cmmi-10">Q </span>if and only if <span 
+class="cmmi-10">Q </span><span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">P </span>is positive semi-definite. The
+     scalar geometric mean satisfies the operator monotone property: if <span 
+class="cmmi-10">x</span><span 
+class="cmsy-10">&#x2032; &#x2264; </span><span 
+class="cmmi-10">x </span>and <span 
+class="cmmi-10">y</span><span 
+class="cmsy-10">&#x2032; &#x2264; </span><span 
+class="cmmi-10">y </span>then we have
+     <span 
+class="cmmi-10">G</span>(<span 
+class="cmmi-10">x</span><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmmi-10">,y</span><span 
+class="cmsy-10">&#x2032;</span>) <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">G</span>(<span 
+class="cmmi-10">x,y</span>). Ando-Li-Mathias&#x00A0;<span class="cite">[<a 
+href="#XALM-2004">1</a>]</span> defined a set of 10 properties that a matrix geometric mean
+     should satisfy, including the operator monotone property.
+     </dd><dt class="description">
+<span 
+class="cmbx-10">Riemannian centroid.</span> </dt><dd 
+class="description">Second, the scalar geometric mean can be interpreted as the unique centroid with
+     respect to the distance <span 
+class="cmmi-10">&#x03C1;</span>(<span 
+class="cmmi-10">x,y</span>) = <img 
+src="WhichMatrixGeometricMean7x.png" alt="&#x2225;&#x2225;   x||
+&#x2225;log y|"  class="left" align="middle">:
+<div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean8x.png" alt="G(x,y) = arg min 1&#x03C1;2(x,c) + 1&#x03C1;2(c,y).
+           c&#x2208;&#x211D;&#x003E;02         2
+" class="math-display" ></div>
+     <!--l. 90--><p class="noindent" >Let <span 
+class="msbm-10">&#x2119; </span>denote the set of symmetric positive-definite <span 
+class="cmmi-10">d </span><span 
+class="cmsy-10">&#x00D7; </span><span 
+class="cmmi-10">d </span>matrices. Consider the Riemannian manifold
+     (<span 
+class="msbm-10">&#x2119;</span><span 
+class="cmmi-10">,g</span>) where <span 
+class="cmmi-10">g </span>is the so-called trace metric, i.e., a collection of smoothly varying inner products <span 
+class="cmmi-10">g</span><sub><span 
+class="cmmi-7">P</span></sub> for
+     <span 
+class="cmmi-10">P </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="msbm-10">&#x2119; </span>defined by
+<div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean9x.png" alt="gP(S1,S2) = tr(P- 1S1P-1S2),
+" class="math-display" ></div>
+     <!--l. 96--><p class="noindent" >where <span 
+class="cmmi-10">S</span><sub><span 
+class="cmr-7">1</span></sub> and <span 
+class="cmmi-10">S</span><sub><span 
+class="cmr-7">2</span></sub> are matrices belonging to the vector space of symmetric <span 
+class="cmmi-10">d </span><span 
+class="cmsy-10">&#x00D7; </span><span 
+class="cmmi-10">d </span>matrices. <span 
+class="cmmi-10">S</span><sub><span 
+class="cmr-7">1</span></sub> and <span 
+class="cmmi-10">S</span><sub><span 
+class="cmr-7">2</span></sub>
+     are geometrically interpreted as vectors of the tangent plane <span 
+class="cmmi-10">T</span><sub><span 
+class="cmmi-7">P</span></sub> of <span 
+class="cmmi-10">P </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="msbm-10">&#x2119;</span>. The Riemannian geodesic
+     distance is
+<div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean10x.png" alt="                               &#x250C;&#x2502; ----------------------
+          &#x2225;&#x2225;   ( - 12    - 12)&#x2225;&#x2225;   &#x2502;&#x2218; &#x2211;d    2  (  - 12   - 12)
+&#x03C1;(P1,P2) = &#x2225;log  P1  P2P 1  &#x2225;F =      log &#x03BB;i P1  P2 P1   ,
+                                 i=1
+" class="math-display" ></div>
+     <!--l. 102--><p class="noindent" >where <span 
+class="cmmi-10">&#x03BB;</span><sub><span 
+class="cmmi-7">i</span></sub>(<span 
+class="cmmi-10">M</span>) denotes the <span 
+class="cmmi-10">i</span>-th largest real eigenvalue of a symmetric matrix <span 
+class="cmmi-10">M</span>, <span 
+class="cmsy-10">&#x2225;&#x22C5;&#x2225;</span><sub><span 
+class="cmmi-7">F</span></sub> denotes the
+     Frobenius norm, and log <span 
+class="cmmi-10">P </span>is the unique matrix logarithm of a SPD matrix <span 
+class="cmmi-10">P</span>. It follows that the
+     Riemannian matrix geometric mean is
+<div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean11x.png" alt="RG (X,Y ) = X 12 (X - 12 Y X - 12)12 X 12.
+" class="math-display" ></div>
+     <!--l. 107--><p class="noindent" >This  mean  is  proven  to  be  the  unique  solution  to  the  matrix  Ricatti  equation  <span 
+class="cmmi-10">CX</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup><span 
+class="cmmi-10">C  </span>=  <span 
+class="cmmi-10">Y </span>,
+     is  invariant  under  inversion  (i.e.,  RG(<span 
+class="cmmi-10">X,Y </span>)  =  <span 
+class="cmmi-10">G</span>(<span 
+class="cmmi-10">X</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup><span 
+class="cmmi-10">,Y</span> <sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup>)<sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup>),  and  satisfies  the  determinant
+     property det(RG(<span 
+class="cmmi-10">X,Y </span>)) = <img 
+src="WhichMatrixGeometricMean12x.png" alt="&#x2218;det-(X)det(Y-)"  class="sqrt" >. Furthermore, the matrix mean RG = AHM is operator
+     monotone&#x00A0;<span class="cite">[<a 
+href="#Xbhatia2012monotonicity">4</a>]</span>.
+     </dd><dt class="description">
+<span 
+class="cmbx-10">Inductive means.</span> </dt><dd 
+class="description">Third, the scalar geometric scalar mean can be defined as limits of sequences of iterations:
+     <div class="eqnarray">
+<div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean13x.png" alt="at+1  =   A(at,gt) := at +-gt,
+                     2
+ht+1  =   H(at,gt) = 2atgt,
+                   at + gt
+" class="math-display" ></div>
+     <!--l. 118--><p class="noindent" ></div>initialized with <span 
+class="cmmi-10">a</span><sub><span 
+class="cmr-7">0</span></sub> = <span 
+class="cmmi-10">x &#x003E; </span>0 and <span 
+class="cmmi-10">g</span><sub><span 
+class="cmr-7">0</span></sub> = <span 
+class="cmmi-10">y &#x003E; </span>0. We have
+<div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean14x.png" alt="                            &#x221A; ---
+AHM  (x,y) = lt&#x2192;im&#x221E; at = lt&#x2192;im&#x221E; ht = xy = G (x,y).
+" class="math-display" ></div>
+     <!--l. 124--><p class="noindent" >The AHM iterations enjoys fast quadratic convergence&#x00A0;<span class="cite">[<a 
+href="#XArchimedeanDoubleSequence-1984">7</a>]</span>. These kinds of means defined as limits of sequences
+     have been termed <span 
+class="cmbx-10">inductive means</span>&#x00A0;<span class="cite">[<a 
+href="#Xsturm2003probability">13</a>]</span>.
+     <!--l. 127--><p class="noindent" >Similarly, we may define the inductive matrix arithmetic-harmonic mean by the following sequence:
+     <div class="eqnarray">
+<div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean15x.png" alt="          A + H
+At+1  =   -t----t= A(At,Ht),
+            2-1    -1 -1
+Ht+1  =  2 (A t + H t )  = H (At,Ht),
+" class="math-display" ></div>
+     <!--l. 131--><p class="noindent" ></div>where the matrix arithmetic mean is <span 
+class="cmmi-10">A</span>(<span 
+class="cmmi-10">X,Y </span>) = <img 
+src="WhichMatrixGeometricMean16x.png" alt="X+2Y-"  class="frac" align="middle"> and the matrix harmonic mean is
+     <span 
+class="cmmi-10">H</span>(<span 
+class="cmmi-10">X,Y </span>) = 2(<span 
+class="cmmi-10">X</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup> + <span 
+class="cmmi-10">Y</span> <sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup>)<sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup>. The AHM iterations initialized with <span 
+class="cmmi-10">A</span><sub><span 
+class="cmr-7">0</span></sub> = <span 
+class="cmmi-10">X </span>and <span 
+class="cmmi-10">H</span><sub><span 
+class="cmr-7">0</span></sub> = <span 
+class="cmmi-10">Y </span>yield in the limit
+     <span 
+class="cmmi-10">t </span><span 
+class="cmsy-10">&#x2192;&#x221E;</span>, the matrix arithmetic-harmonic mean&#x00A0;<span class="cite">[<a 
+href="#XAHM-Nakamura-2001">11</a>]</span> (AHM):
+<div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean17x.png" alt="AHM  (X, Y) =  lim  A =  lim  H  = RG (X,Y ).
+             t&#x2192;+ &#x221E;  t  t&#x2192;+ &#x221E;  t
+" class="math-display" ></div>
+     <!--l. 137--><p class="noindent" >The matrix AHM iterations enjoys quadratic convergence.
+     </dd><dt class="description">
+<span 
+class="cmbx-10">Limits of power mean functional equation</span> </dt><dd 
+class="description">Fourth, we can define the scalar power means <span 
+class="cmmi-10">M</span><sub><span 
+class="cmmi-7">p</span></sub>(<span 
+class="cmmi-10">x,y</span>) as the
+     solutions of the equation&#x00A0;<span class="cite">[<a 
+href="#Xlim2012matrix">9</a>]</span>:
+<div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean18x.png" alt="     1         1
+m  = -m1- pxp +-m1 -pyp
+     2         2
+" class="math-display" ></div>
+     <!--l. 146--><p class="noindent" >which is solved as <span 
+class="cmmi-10">m </span>= <img 
+src="WhichMatrixGeometricMean19x.png" alt="(1 p  1 p)
+ 2x + 2y"  class="left" align="middle"><sup><img 
+src="WhichMatrixGeometricMean20x.png" alt="1p"  class="frac" align="middle"></sup> = <span 
+class="cmmi-10">M</span><sub><span 
+class="cmmi-7">p</span></sub>(<span 
+class="cmmi-10">x,y</span>). Similarly, we can define the matrix power means <span 
+class="cmmi-10">M</span><sub><span 
+class="cmmi-7">p</span></sub>(<span 
+class="cmmi-10">X,Y </span>)
+     for <span 
+class="cmmi-10">p </span><span 
+class="cmsy-10">&#x2208; </span>(0<span 
+class="cmmi-10">,</span>1] by uniquely solving the matrix equation&#x00A0;<span class="cite">[<a 
+href="#Xlim2012matrix">9</a>]</span>:
+     <table 
+class="equation"><tr><td>
+<div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean21x.png" alt="M  = 1M #pX  + 1M #pY,
+     2         2
+" class="math-display" ><a 
+ id="x1-4r1"></a></div>
+     </td><td class="equation-label">(1)</td></tr></table>
+     <!--l. 153--><p class="nopar" >
+     where
+<div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean22x.png" alt="          12 ( - 12    - 12)t  12
+X#tY  = X    X   Y X      X  ,
+" class="math-display" ></div>
+     <!--l. 159--><p class="noindent" >is the Riemannian barycenter minimizing
+<div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean23x.png" alt="(1- t)&#x03C1;2(X,P )+ t&#x03C1;2(Y,P ).
+" class="math-display" ></div>
+     <!--l. 163--><p class="noindent" >In the limit case <span 
+class="cmmi-10">p </span><span 
+class="cmsy-10">&#x2192; </span>0, this matrix power mean <span 
+class="cmmi-10">M</span><sub><span 
+class="cmmi-7">p</span></sub> yields the Riemannian matrix geometric
+     mean&#x00A0;<span class="cite">[<a 
+href="#Xlim2012matrix">9</a>]</span>:
+
+<div class="math-display" >
+<img 
+src="WhichMatrixGeometricMean24x.png" alt="pl&#x2192;im0+ Mp (X, Y) = RG (X, Y).
+" class="math-display" ></div>
+     </dd></dl>
+<!--l. 169--><p class="indent" >   We have described several properties of the scalar geometric means which when extended to matrices yield
+different ways to define matrix geometric means. Ando-Li-Mathias&#x00A0;<span class="cite">[<a 
+href="#XALM-2004">1</a>]</span> (ALM) listed 10 properties that such matrix
+geometric means should satisfy. There are infinitely many ways to construct matrix geometric means satisfying those
+ALM properties&#x00A0;<span class="cite">[<a 
+href="#Xbini2010effective">5</a>]</span>. The Riemannian matrix geometric mean is often used as it can be obtained from many
+different generalizations (e.g., Riemannian centroid&#x00A0;<span class="cite">[<a 
+href="#Xbhatia2012monotonicity">4</a>]</span>, arithmetic-harmonic mean&#x00A0;<span class="cite">[<a 
+href="#XAHM-Nakamura-2001">11</a>]</span>, limit of power
+means&#x00A0;<span class="cite">[<a 
+href="#Xlim2012matrix">9</a>]</span>).
+<!--l. 174--><p class="indent" >   There are also several extensions of geometric means to <span 
+class="cmmi-10">n</span>-parameter geometric means. In particular, a recursive
+matrix mean which converges with cubic order is given in&#x00A0;<span class="cite">[<a 
+href="#Xbini2010effective">5</a>]</span>.
+<!--l. 177--><p class="indent" >   This note is based on a paper entitled &#8220;What is... an inductive mean?&#8221;&#x00A0;<span class="cite">[<a 
+href="#XMean-Nielsen-2023">12</a>]</span>.
+<!--l. 179--><p class="indent" >   So which matrix geometric mean do you mean<span class="footnote-mark"><a 
+href="WhichMatrixGeometricMean2.html#fn1x0"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-5f1"></a>?
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+    <div class="thebibliography">
+    <p class="bibitem" ><span class="biblabel">
+  [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XALM-2004"></a>Tsuyoshi  Ando,  Chi-Kwong  Li,  and  Roy  Mathias.   Geometric  means.   <span 
+class="cmti-10">Linear  algebra  and  its</span>
+    <span 
+class="cmti-10">applications</span>, 385:305&#8211;334, 2004.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XLEMean-2007"></a>Vincent Arsigny, Pierre Fillard, Xavier Pennec, and Nicholas Ayache.  Geometric means in a novel
+    vector space structure on symmetric positive-definite matrices.  <span 
+class="cmti-10">SIAM journal on matrix analysis and</span>
+    <span 
+class="cmti-10">applications</span>, 29(1):328&#8211;347, 2007.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xbhatia2006riemannian"></a>Rajendra Bhatia and John Holbrook.  Riemannian geometry and matrix geometric means.  <span 
+class="cmti-10">Linear</span>
+    <span 
+class="cmti-10">algebra and its applications</span>, 413(2-3):594&#8211;618, 2006.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [4]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xbhatia2012monotonicity"></a>Rajendra  Bhatia  and  Rajeeva&#x00A0;L  Karandikar.    Monotonicity  of  the  matrix  geometric  mean.
+    <span 
+class="cmti-10">Mathematische Annalen</span>, 353:1453&#8211;1467, 2012.
+
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [5]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xbini2010effective"></a>Dario Bini, Beatrice Meini, and Federico Poloni. An effective matrix geometric mean satisfying the
+    Ando&#8211;Li&#8211;Mathias properties. <span 
+class="cmti-10">Mathematics of Computation</span>, 79(269):437&#8211;452, 2010.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [6]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xde2016mean"></a>Miguel de&#x00A0;Carvalho. Mean, what do you mean? <span 
+class="cmti-10">The American Statistician</span>, 70(3):270&#8211;274, 2016.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [7]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XArchimedeanDoubleSequence-1984"></a>D.&#x00A0;M.&#x00A0;E. Foster and G.&#x00A0;M. Phillips. A generalization of the Archimedean double sequence. <span 
+class="cmti-10">Journal</span>
+    <span 
+class="cmti-10">of mathematical analysis and applications</span>, 101(2):575&#8211;581, 1984.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [8]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XKolmogorov-1930"></a>A.&#x00A0;N. Kolmogorov. Sur la notion de la moyenne. <span 
+class="cmti-10">Atti della Accademia nazionale dei Lincei Rendicoti</span>,
+    12:388&#8211;391, 1930.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [9]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xlim2012matrix"></a>Yongdo Lim and Miklós Pálfia. Matrix power means and the Karcher mean. <span 
+class="cmti-10">Journal of Functional</span>
+    <span 
+class="cmti-10">Analysis</span>, 262(4):1498&#8211;1514, 2012.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [10]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XNagumo-1930"></a>Mitio Nagumo. Über eine klasse der mittelwerte. In <span 
+class="cmti-10">Japanese journal of mathematics: transactions</span>
+    <span 
+class="cmti-10">and abstracts</span>, volume&#x00A0;7, pages 71&#8211;79. The Mathematical Society of Japan, 1930.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [11]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XAHM-Nakamura-2001"></a>Yoshimasa Nakamura.  Algorithms associated with arithmetic, geometric and harmonic means and
+    integrable systems. <span 
+class="cmti-10">Journal of computational and applied mathematics</span>, 131(1-2):161&#8211;174, 2001.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [12]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XMean-Nielsen-2023"></a>Frank Nielsen. What is an inductive mean? <span 
+class="cmti-10">Notices of the AMS</span>, 70(11), 2023.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [13]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="Xsturm2003probability"></a>Karl-Theodor Sturm. Probability measures on metric spaces of nonpositive curvature. <span 
+class="cmti-10">Heat Kernels</span>
+    <span 
+class="cmti-10">and Analysis on Manifolds, Graphs, and Metric Spaces: Lecture Notes from a Quarter Program on Heat</span>
+    <span 
+class="cmti-10">Kernels, Random Walks, and Analysis on Manifolds and Graphs: April 16-July 13, 2002, Emile Borel</span>
+    <span 
+class="cmti-10">Centre of the Henri Poincar</span><span 
+class="cmti-10">é Institute, Paris, France</span>, 338:357, 2003.
+</p>
+    </div>
+    
+</body></html> 
+
+
+
