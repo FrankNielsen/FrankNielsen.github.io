@@ -5,44 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
 Reallocating 'name_of_file' (item size: 1) to 28 items.
 Database file #1: WhichMatrixGeometricMeanBIB.bib
-You've used 13 entries,
+You've used 15 entries,
             2118 wiz_defined-function locations,
-            601 strings with 6390 characters,
-and the built_in function-call counts, 4237 in all, are:
-= -- 440
-> -- 153
-< -- 2
-+ -- 61
-- -- 48
-* -- 311
-:= -- 710
-add.period$ -- 40
-call.type$ -- 13
-change.case$ -- 63
+            616 strings with 6743 characters,
+and the built_in function-call counts, 5024 in all, are:
+= -- 525
+> -- 179
+< -- 3
++ -- 71
+- -- 56
+* -- 363
+:= -- 829
+add.period$ -- 47
+call.type$ -- 15
+change.case$ -- 73
 chr.to.int$ -- 0
-cite$ -- 13
-duplicate$ -- 152
-empty$ -- 350
-format.name$ -- 48
-if$ -- 874
+cite$ -- 15
+duplicate$ -- 184
+empty$ -- 418
+format.name$ -- 56
+if$ -- 1049
 int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 13
-newline$ -- 68
-num.names$ -- 26
-pop$ -- 41
+int.to.str$ -- 15
+missing$ -- 15
+newline$ -- 78
+num.names$ -- 30
+pop$ -- 52
 preamble$ -- 1
-purify$ -- 50
+purify$ -- 58
 quote$ -- 0
-skip$ -- 104
+skip$ -- 128
 stack$ -- 0
-substring$ -- 356
-swap$ -- 22
-text.length$ -- 2
+substring$ -- 424
+swap$ -- 32
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 52
+type$ -- 60
 warning$ -- 0
-while$ -- 49
-width$ -- 15
-write$ -- 147
+while$ -- 58
+width$ -- 17
+write$ -- 170

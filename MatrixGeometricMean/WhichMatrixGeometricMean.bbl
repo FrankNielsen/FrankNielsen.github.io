@@ -68,6 +68,19 @@ Frank Nielsen.
 \newblock What is an inductive mean?
 \newblock {\em Notices of the AMS}, 70(11), 2023.
 
+\bibitem{nielsen2011burbea}
+Frank Nielsen and Sylvain Boltz.
+\newblock {The Burbea-Rao and Bhattacharyya centroids}.
+\newblock {\em IEEE Transactions on Information Theory}, 57(8):5455--5466,
+  2011.
+
+\bibitem{nielsen2008quantum}
+Frank Nielsen and Richard Nock.
+\newblock {Quantum Voronoi diagrams and Holevo channel capacity for $1$-qubit
+  quantum states}.
+\newblock In {\em 2008 IEEE International Symposium on Information Theory},
+  pages 96--100. IEEE, 2008.
+
 \bibitem{sturm2003probability}
 Karl-Theodor Sturm.
 \newblock Probability measures on metric spaces of nonpositive curvature.

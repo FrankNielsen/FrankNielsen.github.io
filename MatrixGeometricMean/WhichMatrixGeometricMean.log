@@ -1,14 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=latex 2021.4.14)  11 OCT 2023 12:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.5)  11 OCT 2023 15:03
 entering extended mode
-**\makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx\HCode\def\HCod
-e##1{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.{\g
-@addto@macro\@documentclasshook{\RequirePackage[#1,html]{tex4ht}}\let\HCode\doc
-umentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname te
-x4ht\endcsname{#1,html}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{\HC
-ode}{\documentstyle[tex4ht]}}}\makeatother\HCode .a.b.c.\input  WhichMatrixGeom
-etricMean.tex
- (WhichMatrixGeometricMean.tex
-(C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls
+**./WhichMatrixGeometricMean.tex
+(WhichMatrixGeometricMean.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18> (C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
 (C:\Program Files\MiKTeX 2.9\tex/latex/base\size10.clo
 File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
@@ -25,299 +20,24 @@ File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 )
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\tex4ht.sty
-version 2021-01-02-13:53
-Package: tex4ht 
---------------------------------------
---- Note --- for _ at preamble, use the command line option `early_'
---------------------------------------
---------------------------------------
---- Note --- for ^ at preamble, use the command line option `early^'
---------------------------------------
-\tmp:toks=\toks15
-)
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\usepackage.4ht
-version 2021-02-07-14:58
-) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/preprint\fullpage.sty
+(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/preprint\fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip49
 )
 (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty
+ (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks16
+\@emptytoks=\toks15
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\tex4ht.4ht
-version 2020-03-12-14:03
---------------------------------------
---- Note --- for additional information, use the command line option `info'
---------------------------------------
-
-::::::::::::::::::::::::::::::::::::::::::
- TeX4ht info is available in the log file 
-::::::::::::::::::::::::::::::::::::::::::
-) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\tex4ht.sty
-version 2021-01-02-13:53
-
---- needs --- tex4ht WhichMatrixGeometricMean ---
-\tmp:cnt=\count187
-\openout15 = `WhichMatrixGeometricMean.tmp'.
-
-(WhichMatrixGeometricMean.tmp)
-\tmp:dim=\skip50
---------------------------------------
---- Note --- for XML code, use the command line option `xml' or `xhtml'
---------------------------------------
- (WhichMatrixGeometricMean.xref)
-\:refout=\write3
-\openout3 = `WhichMatrixGeometricMean.xref'.
-
-
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2021-02-14-13:56
---------------------------------------
---- Note --- to remove the <?xml version=...?> processing instruction use the c
-ommand line option `no-VERSION'
---------------------------------------
---------------------------------------
---- Note --- to remove the DOCTYPE declaration use the command line option `no-
-DOCTYPE'
---------------------------------------
-)
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2021-01-30-14:17
-)
---------------------------------------
---- Note --- for marking of the base font, use the command line option `fonts+'
-
---------------------------------------
---------------------------------------
---- Note --- for non active _, use the command line option `no_'
---------------------------------------
---------------------------------------
---- Note --- for _ of catcode 13, use the command line option `_13'
---------------------------------------
---------------------------------------
---- Note --- for non active ^, use the command line option `no^'
---------------------------------------
---------------------------------------
---- Note --- for ^ of catcode 13, use the command line option `^13'
---------------------------------------
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2021-02-14-13:56
---------------------------------------
---- Note --- for alternative charset, use the command line option `charset=...'
-
---------------------------------------
---------------------------------------
---- Note --- to ignore CSS font decoration, use the `NoFonts' command line opti
-on
---------------------------------------
---------------------------------------
---- Note --- for jpg bitmaps of pictures, use the `jpg' command line option. (C
-haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
-hes of tex4ht.c) 
---------------------------------------
---------------------------------------
---- Note --- for gif bitmaps of pictures, use the `gif' command line option. (C
-haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
-hes of tex4ht.c) 
---------------------------------------
---------------------------------------
---- Note --- for content and toc in 2 frames, use the command line option `fram
-es'
---------------------------------------
---------------------------------------
---- Note --- for content, toc, and footnotes in 3 frames, use the command line 
-option `frames-fn'
---------------------------------------
---------------------------------------
---- Note --- for file extension name xht, use the command line option `xht'
---------------------------------------
-TeX4ht package options: html
---------------------------------------
---- Note --- To print a timestamp, use the command line option timestamp
---------------------------------------
---------------------------------------
---- Note --- to ignore CSS code, use the command line option `-css
---------------------------------------
---------------------------------------
---- Note --- for inline CSS code, use the command line option `css-in'
---------------------------------------
---------------------------------------
---- Note --- for pop ups on mouse over, use the command line option `mouseover'
-
---------------------------------------
---------------------------------------
---- Note --- for addressing images in a subdirectory, use the command line opti
-on `imgdir:.../'
---------------------------------------
-)
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2021-01-30-14:17
-)
-\:tokwrite=\toks17
-\:tokpage=\toks18
---------------------------------------
---- Note --- for back links to toc, use the command line option `sections+'
---------------------------------------
---------------------------------------
---- Note --- for linear crosslinks of pages, use the command line option `next'
-
---------------------------------------
-\openout15 = `WhichMatrixGeometricMean.4ct'.
-
-\:tocout=\write4
-\openout4 = `WhichMatrixGeometricMean.4tc'.
-
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2021-02-14-13:56
-)
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2021-01-30-14:17
-) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\latex.4ht
-version 2021-02-06-14:21
-LaTeX Info: Redefining \_ on input line 173.
-LaTeX Info: Redefining \, on input line 791.
-LaTeX Info: Redefining \; on input line 792.
-LaTeX Info: Redefining \! on input line 793.
-LaTeX Info: Redefining \: on input line 794.
-LaTeX Info: Redefining \> on input line 795.
---------------------------------------
---- Note --- for links into captions, instead of float heads, use the command l
-ine option `refcaption'
---------------------------------------
-
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2021-02-14-13:56
-)
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2021-01-30-14:17
-) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2021-02-14-13:56
---------------------------------------
---- Note --- For mini tocs immediately aftter the header use the command line o
-ption `minitoc<'
---------------------------------------
---------------------------------------
---- Note --- for enumerated list elements with valued data, use the command lin
-e option `enumerate+'
---------------------------------------
---------------------------------------
---- Note --- for enumerated list elements li's with value attributes, use the c
-ommand line option `enumerate-'
---------------------------------------
---------------------------------------
---- Note --- for CSS2 code, use the command line option `css2'
---------------------------------------
---------------------------------------
---- Note --- for pictorial tabular, use the command line option `pic-tabular'
---------------------------------------
---------------------------------------
---- Note --- for bitmap fbox'es, use the command line option `pic-fbox'
---------------------------------------
---------------------------------------
---- Note --- for bitmap framebox'es, use the command line option `pic-framebox'
-
---------------------------------------
---------------------------------------
---- Note --- for inline footnotes use command line option `fn-in'
---------------------------------------
---------------------------------------
---- Note --- for tracing of latex font commands, use the command line option `f
-onts'
---------------------------------------
---------------------------------------
---- Note --- for width specifications of tabular p entries, use the `p-width' c
-ommand line option or a configuration similar to \Configure{HColWidth}{\HCode{ 
-style="width:\HColWidth"}}
---------------------------------------
-)
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2021-01-30-14:17
---------------------------------------
---- Note --- for pictorial eqnarray, use the command line option `pic-eqnarray'
-
---------------------------------------
---------------------------------------
---- Note --- for pictorial array, use the command line option `pic-array'
---------------------------------------
---------------------------------------
---- Note --- for pictorial $...$ environments, use the command line option `pic
--m' (not recommended!!)
---------------------------------------
---------------------------------------
---- Note --- for pictorial $...$ and $$...$$ environments with latex alt, use t
-he command line option `pic-m+' (not safe!!)
---------------------------------------
---------------------------------------
---- Note --- for pictorial array, use the command line option `pic-array'
---------------------------------------
-)) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\fontmath.4ht
-version 2018-11-06-15:55
-
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2021-02-14-13:56
-)
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2021-01-30-14:17
-)) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\article.4ht
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2021-02-14-13:56
---------------------------------------
---- Note --- for automatic sectioning pagination, use the command line option `
-1', `2', `3', '4', '5', '6', or '7'
---------------------------------------
---------------------------------------
---- Note --- for files named derived from section titles, use the command line 
-option `sec-filename'
---------------------------------------
---------------------------------------
---- Note --- for i-columns index, use the command line option `index=i' (e.g., 
-index=2)
---------------------------------------
-)
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2021-01-30-14:17
-)) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\amssymb.4ht
-version 2009-05-21-09:32
-
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2021-02-14-13:56
-)
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2021-01-30-14:17
-)) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\amsfonts.4ht
-version 2009-05-21-09:32
-
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2021-02-14-13:56
-)
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2021-01-30-14:17
-)) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4.4ht
-version 2021-02-14-13:56
-)
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/generic/tex4ht\html4-math.4ht
-version 2021-01-30-14:17
-))
-(C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/l3backend\l3backend-dvip
-s.def
-File: l3backend-dvips.def 2021-03-18 L3 backend support: dvips
+)) (C:\Users\Nielsen\AppData\Roaming\MiKTeX\2.9\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count187
 \l__pdf_internal_box=\box47
-\g__pdf_backend_object_int=\count188
-\l__pdf_backend_content_box=\box48
-\l__pdf_backend_model_box=\box49
-\g__pdf_backend_annotation_int=\count189
-\g__pdf_backend_link_int=\count190
-\g__pdf_backend_link_sf_int=\count191
 ) (WhichMatrixGeometricMean.aux)
 \openout1 = `WhichMatrixGeometricMean.aux'.
 
@@ -335,81 +55,54 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
---- file WhichMatrixGeometricMean.css ---
- [1
-
-] [2]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 31.
-
-
 (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 31.
-
-
-(C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
+ (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-l. 40 Writing WhichMatrixGeometricMean.idv[1] (WhichMatrixGeometricMean0x.png)
-l. 46 Writing WhichMatrixGeometricMean.idv[2] (WhichMatrixGeometricMean1x.png)
-l. 46 Writing WhichMatrixGeometricMean.idv[3] (WhichMatrixGeometricMean2x.png)
-l. 47 Writing WhichMatrixGeometricMean.idv[4] (WhichMatrixGeometricMean3x.png)
- [3]
-l. 51 Writing WhichMatrixGeometricMean.idv[5] (WhichMatrixGeometricMean4x.png)
-l. 56 Writing WhichMatrixGeometricMean.idv[6] (WhichMatrixGeometricMean5x.png)
-l. 73 Writing WhichMatrixGeometricMean.idv[7] (WhichMatrixGeometricMean6x.png)
- [4]
-l. 86 Writing WhichMatrixGeometricMean.idv[8] (WhichMatrixGeometricMean7x.png)
-l. 87 Writing WhichMatrixGeometricMean.idv[9] (WhichMatrixGeometricMean8x.png)
-l. 93 Writing WhichMatrixGeometricMean.idv[10] (WhichMatrixGeometricMean9x.png)
 
-l. 99 Writing WhichMatrixGeometricMean.idv[11] (WhichMatrixGeometricMean10x.png
-)
- [5]
-l. 104 Writing WhichMatrixGeometricMean.idv[12] (WhichMatrixGeometricMean11x.pn
-g)
-l. 109 Writing WhichMatrixGeometricMean.idv[13] (WhichMatrixGeometricMean12x.pn
-g)
-l. 115 Writing WhichMatrixGeometricMean.idv[14] (WhichMatrixGeometricMean13x.pn
-g)
-l. 121 Writing WhichMatrixGeometricMean.idv[15] (WhichMatrixGeometricMean14x.pn
-g)
- [6]
-l. 128 Writing WhichMatrixGeometricMean.idv[16] (WhichMatrixGeometricMean15x.pn
-g)
-l. 132 Writing WhichMatrixGeometricMean.idv[17] (WhichMatrixGeometricMean16x.pn
-g)
-l. 134 Writing WhichMatrixGeometricMean.idv[18] (WhichMatrixGeometricMean17x.pn
-g)
-l. 143 Writing WhichMatrixGeometricMean.idv[19] (WhichMatrixGeometricMean18x.pn
-g)
+LaTeX Warning: Citation `nielsen2011burbea' on page 1 undefined on input line 78.
 
-[7]
-l. 147 Writing WhichMatrixGeometricMean.idv[20] (WhichMatrixGeometricMean19x.pn
-g)
-l. 147 Writing WhichMatrixGeometricMean.idv[21] (WhichMatrixGeometricMean20x.pn
-g)
-l. 151 Writing WhichMatrixGeometricMean.idv[22] (WhichMatrixGeometricMean21x.pn
-g)
-l. 155 Writing WhichMatrixGeometricMean.idv[23] (WhichMatrixGeometricMean22x.pn
-g)
-l. 160 Writing WhichMatrixGeometricMean.idv[24] (WhichMatrixGeometricMean23x.pn
-g)
-l. 164 Writing WhichMatrixGeometricMean.idv[25] (WhichMatrixGeometricMean24x.pn
-g)
- [8]
---- file WhichMatrixGeometricMean2.html ---
- (WhichMatrixGeometricMean.bbl [9
 
-]) [10] (WhichMatrixGeometricMean.aux) ) 
+LaTeX Warning: Citation `nielsen2008quantum' on page 1 undefined on input line 78.
+
+[1
+
+{C:/Users/Nielsen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] (WhichMatrixGeometricMean.bbl [3]) [4]
+(WhichMatrixGeometricMean.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4407 strings out of 479296
- 53103 string characters out of 2863330
- 462320 words of memory out of 3000000
- 21846 multiletter control sequences out of 15000+600000
- 412107 words of font info for 61 fonts, out of 8000000 for 9000
+ 1000 strings out of 479295
+ 14126 string characters out of 2863305
+ 306095 words of memory out of 3000000
+ 18511 multiletter control sequences out of 15000+600000
+ 411939 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,10n,72p,791b,508s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,8n,60p,319b,213s stack positions out of 5000i,500n,10000p,200000b,80000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on WhichMatrixGeometricMean.pdf (4 pages, 237035 bytes).
+PDF statistics:
+ 95 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on WhichMatrixGeometricMean.dvi (10 pages, 43216 bytes).

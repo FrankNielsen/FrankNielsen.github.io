@@ -7,8 +7,8 @@ expand(%);
 
 /* extract parameters */
 Q:matrix([a,c],[c,b]);
-v:matrix([x-xc],[y-yc]);
-transpose(v).Q.v;
+v:matrix([x-x_c],[y-y_c]);
+transpose(v).Q.v-1;
 expand(%);
 
 
