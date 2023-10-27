@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{fullpage}
+
+\def\calE{\mathcal{E}}
+
+\def\vectortwotranspose#1#2{{\left[\begin{array}{ll}#1 & #2 \end{array}\right]}}
+\def\vectortwo#1#2{{\left[\begin{array}{l}#1 \cr #2 \end{array}\right]}}
+\def\matrixtwo#1#2#3#4{{\left[\begin{array}{ll}#1 & #2 \cr  #3 & #4 \end{array}\right]}}
+
+\def\vectorthreetranspose#1#2#3{{\left[\begin{array}{lll}#1 & #2 & #3 \end{array}\right]}}
+\def\vectorthree#1#2#3{{\left[\begin{array}{l}#1 \cr #2 \cr #3 \end{array}\right]}}
+\def\matrixthree#1#2#3#4#5#6#7#8#9{{\left[\begin{array}{lll}#1 & #2 & #3\cr #4 & #5 & #6\cr #7 & #8 & #9 \end{array}\right]}}
+
+\title{Ellipses}
+\author{Frank Nielsen}
+
+\begin{document}
+\maketitle
+
+The Cartesian equation of an ellipse $\calE$ is
+\begin{equation}\label{eq:ellCC}
+ax^2+by^2+cxy+dx+ey+f=0.
+\end{equation}
+
+Using the homogeneous coordinates $(x,y,1)$, we can write the above equation in matrix form as
+$$
+\vectorthreetranspose{x}{y}{1}\, \matrixthree{a}{c/2}{d/2}{c/2}{b}{e/2}{d/2}{e/2}{f} \,  \vectorthree{x}{y}{1}=0.
+$$
+
+We can also view an ellipse as an affinely deformed circle.
+
+$$
+\calE=\left\{ \vectortwotranspose{x}{y}  + \vectortwo{c_x}{c_y} \right\}
+$$ 
+
+\begin{equation}\label{eq:ellCC2}
+ ...
+\end{equation}
+
+
+By identifying Eq.~\ref{eq:ellCC} with Eq.~\ref{eq:ellCC2}, we have
+$$
+...
+$$
+
+% https://francisbach.com/matrix-monotony-and-convexity/
+
+The ellipse $\calE$ can also be described using a parametric equation:
+\begin{equation}\label{eq:ellCC3}
+ ...
+\end{equation}
+
+
+{\tt InEllipse} predicate and 
+
+
+\section*{Code in {\sc Maxima}}
+
+\end{document}
