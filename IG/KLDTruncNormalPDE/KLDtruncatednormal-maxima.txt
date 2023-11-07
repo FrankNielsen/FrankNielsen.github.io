@@ -1,0 +1,41 @@
+
+/* Copyright 2022 Frank.Nielsen@acm.org */
+/* All rights reserved, no warranties */
+
+/* Program in Maxima https://maxima.sourceforge.io/ */
+
+/* Statistical Divergences between Densities of Truncated Exponential Families with Nested Supports: Duo Bregman and Duo Jensen Divergences
+ https://www.mdpi.com/1099-4300/24/3/421
+*/
+
+
+/* standard normal density */
+phi(x):=exp(-x*x / 2.0) / sqrt(2.0 * %pi);
+
+/* standard normal CDF */
+Phi(x):=0.5*(1.0+erf( (x)/(sqrt(2.0))) );
+
+/* cumulant function of truncated normal exponential family */
+ F(m, s, a, b):=((m*m)/(2.0*s*s)) + 0.5*log(2.0*%pi*s*s)+log(Phi((b-m)/s)-Phi((a-m)/s));
+
+
+/* moments eta */ 
+variance(m, s, a, b):= (alpha:(a-m)/s,
+ beta:(b-m)/s,
+ t:(phi(alpha)-phi(beta))/(Phi(beta)-Phi(alpha)),
+s*s* (1 -(beta*phi(beta)-alpha*phi(alpha))/(Phi(beta)-Phi(alpha)) -t*t) );
+
+mu(m,s,a,b):= m- (s* ((phi((b-m)/s)-phi((a-m)/s))/(Phi((b-m)/s)-Phi((a-m)/s))));
+
+mom2(m,s,a,b):=variance(m, s, a, b)+mu(m, s, a, b)**2;
+
+  
+/* Kullback-Leibler divergence between truncated normal distributions */
+
+KLD(m1, s1, a1, b1,m2, s2, a2, b2):= F(m2, s2, a2, b2)-F(m1, s1, a1, b1)
+      -((m2/s2**2)-(m1/s1**2))*mu(m1, s1, a1, b1)
+      -((1.0/(2.0*s1**2))-(1.0/(2.0*s2**2)))*mom2(m1, s1, a1, b1);
+
+/* Example */
+KLD(0,1,2,3,2,3,1,5);
+float(%);

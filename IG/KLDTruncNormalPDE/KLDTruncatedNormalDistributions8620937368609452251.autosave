@@ -1,0 +1,254 @@
+ // Calculate the Kullback-Leibler divergence between truncated normal distributions
+//
+// Statistical Divergences between Densities of Truncated Exponential Families with Nested Supports: Duo Bregman and Duo Jensen Divergences
+//
+// https://www.mdpi.com/1099-4300/24/3/421
+//
+// // The duo Fenchel-Young divergence
+// https://arxiv.org/abs/2202.10726
+//
+// Copyright Frank Nielsen, All rights reserved. No warranties
+// Frank.Nielsen@acm.org
+// March 2022
+//
+// double KLDTruncatedNormal(double m1, double s1, double a1, double b1, double m2, double s2, double a2, double b2)
+// double KLDTruncatedNormal(double m1, double s1, double m2, double s2, double a, double b)
+//
+
+class KLDTruncatedNormalDistribution {
+
+  // CDF of normal distribution
+  public static double Phi(double m, double s, double x)
+  {
+    return 0.5*(1.0+erf( (x-m)/(Math.sqrt(2.0)*s)) );
+  } 
+
+  // Log-normalizer of the truncated exponential family
+  public static double F(double m, double s, double a, double b) 
+  {
+    return ((m*m)/(2.0*s*s)) + 0.5*Math.log(2.0*Math.PI*s*s)+Math.log(Phi(m, s, b)-Phi(m, s, a));
+  }
+
+  public static double Z(double m, double s, double a, double b) 
+  {
+    return Math.exp(F(m, s, a, b));
+  }
+
+  // mean of a truncated normal N(m,s;a,b)
+  public static double mu(double m, double s, double a, double b)
+  {
+    double alpha, beta;
+    alpha=(a-m)/s;
+    beta=(b-m)/s;
+
+    return m- (s* ((phi(beta)-phi(alpha))/(Phi(beta)-Phi(alpha))));
+  }
+
+  // Convert ordinary (m,s) parameter to natural parameter
+  public static double [] theta(double m, double s)
+  {
+    double [] res=new double[2];
+    res[0]=m/(s*s); 
+    res[1]=-0.5/(s*s);
+    return   res;
+  }
+
+  // Convert ordinary (m,s) parameter to moment parameter
+  public static double [] eta(double m, double s, double a, double b)
+  {
+    double [] res=new double[2];
+    res[0]=mu(m, s, a, b); 
+    res[1]=mom2(m, s, a, b);
+    return   res;
+  }
+
+  public static double [] minus(double [] v1, double [] v2)
+  {
+    double [] res=new double[2];
+    res[0]=v1[0]-v2[0];
+    res[1]=v1[1]-v2[1];
+    return   res;
+  }
+
+
+  public static double inner(double [] v1, double [] v2)
+  {
+
+    return   v1[0]*v2[0]+v1[1]*v2[1];
+  }
+
+  // KLD between truncated normal distributions with same truncation (a,b
+  public static double KLDTruncatedNormal(double m1, double s1, double m2, double s2, double a, double b)
+  {
+    double[] theta1=theta(m1, s1);
+    double[] theta2=theta(m2, s2);
+
+    return F(m2, s2, a, b)-F(m1, s1, a, b)-inner(minus(theta2, theta1), eta(m1, s1, a, b));
+  }
+
+
+  // variance of a truncated normal distribution
+  public static double var(double m, double s, double a, double b)
+  {
+    double alpha, beta;
+    alpha=(a-m)/s;
+    beta=(b-m)/s;
+
+    double t=(phi(alpha)-phi(beta))/(Phi(beta)-Phi(alpha));
+
+    return s*s* (1 -(beta*phi(beta)-alpha*phi(alpha))/(Phi(beta)-Phi(alpha)) -t*t);
+  }
+
+  public static double mom2(double m, double s, double a, double b)
+  {
+    double mom1=mu(m, s, a, b);
+    return var(m, s, a, b)+mom1*mom1;
+  }
+
+  public static double  NumericalIntegrationKLDTruncatedNormal(double m1, double s1, double a1, double b1, 
+    double m2, double s2, double a2, double b2, 
+    double nbsteps) 
+
+  {
+    double alpha, beta;
+    double dx=(b1-a1)/(double)nbsteps;
+    double sum=0;
+    double x;
+    double mp=0;
+    double mq=0;
+    double p, q;
+
+    for ( x=a1; x<=b1; x+=dx)
+    {
+      p=phi(m1, s1, a1, b1, x);
+      q=phi(m2, s2, a2, b2, x);
+      sum+=p*Math.log(p/q);
+    }
+
+    return sum*dx;
+  } 
+
+  // KLD between full normal distributions
+  public static double KLDNormalDistribution(double m1, double s1, double m2, double s2) 
+  { 
+    double v1=s1*s1;
+    double v2=s2*s2;
+    return 0.5*((v1/v2)+Math.log(v2/v1)+((m1-m2)*(m1-m2)/v2)-1.0);
+  }
+
+
+
+  // Calculate the KLD between two truncated normal distributions as an equivalent duo Bregman divergence
+  public static double KLDTruncatedNormal(double m1, double s1, double a1, double b1, 
+    double m2, double s2, double a2, double b2) 
+  {
+   // variance is squared deviation 
+    double v1=s1*s1;
+    double v2=s2*s2;
+
+    return F(m2, s2, a2, b2)-F(m1, s1, a1, b1)
+      -((m2/v2)-(m1/v1))*mu(m1, s1, a1, b1)
+      -((1.0/(2.0*v1))-(1.0/(2.0*v2)))*mom2(m1, s1, a1, b1);
+  }
+
+
+
+  public static double erf(double z) 
+  {
+    return 2.0*Phi(Math.sqrt(2)*z)-1.0;
+  }
+
+
+  // return cdf(z) 
+  public static double Phi(double z) {
+    if (z < -8.0) return 0.0;
+    if (z >  8.0) return 1.0;
+    double sum = 0.0, term = z;
+    for (int i = 3; sum + term != sum; i += 2) {
+      sum  = sum + term;
+      term = term * z * z / i;
+    }
+    return 0.5 + sum * phi(z);
+  }
+
+  // return pdf(x) = standard Gaussian pdf
+  public static double phi(double x) {
+    return Math.exp(-x*x / 2.0) / Math.sqrt(2.0 * Math.PI);
+  }
+
+
+  public static   double phi(double m, double s, double x) {
+    return (1.0/s)*phi((x-m)/s);
+  }
+
+
+  public static   double phi(double m, double s, double a, double b, double x) {
+    return (1.0/s)*phi((x-m)/s)/(Phi((b-m)/s)-Phi((a-m)/s));
+  }
+
+
+// Test the formula
+  public static void main(String [] args)
+  {
+    System.out.println("Kullback-Leibler divergence between two truncated normal distributions");  
+
+    double a1=10*Math.random();
+    double b1=10+10*Math.random();
+
+    double m1=Math.random()*10;
+    double s1=1+Math.random()*5;
+
+
+    double a2=a1-Math.random();
+    double b2=b1+Math.random();
+
+    double m2=Math.random()*10;
+    double s2=1+Math.random()*5;
+
+    System.out.println("Truncated normal N(mu="+m1+",sigma="+s1+";a="+a1+",b="+b1+")");
+    System.out.println("Truncated normal N(mu="+m2+",sigma="+s2+";a="+a2+",b="+b2+")");
+
+
+    int nbsteps=1000000;
+
+    double numintKLD=  
+      NumericalIntegrationKLDTruncatedNormal(m1, s1, a1, b1, m2, s2, a2, b2, nbsteps);
+    double KL=KLDTruncatedNormal(m1, s1, a1, b1, m2, s2, a2, b2);
+    double error=Math.abs(KL-numintKLD);
+
+    System.out.println("[Different truncations] KLD as duo Bregman:"+KL+" numerical integration KLD:"+numintKLD+" error:"+error);
+
+
+    System.out.println("\n--------------------------------------\n");
+
+    a1=a2;
+    b1=b2;
+  //  System.out.println("Same truncation range:");
+    System.out.println("Truncated normal N("+m1+","+s1+";"+a1+","+b1+")");
+    System.out.println("Truncated normal N("+m2+","+s2+";"+a2+","+b2+")");
+
+    double klsame=KLDTruncatedNormal(m1, s1, m2, s2, a1, b1);
+
+    numintKLD=  
+      NumericalIntegrationKLDTruncatedNormal(m1, s1, a1, b1, m2, s2, a2, b2, nbsteps);
+      error=Math.abs(klsame-numintKLD);
+    System.out.println("[same truncation] KLD as Bregman divergence:"+klsame+" Numerical integration KL:"+numintKLD+" error:"+error);
+
+
+    System.out.println("\n--------------------------------------\n");
+    System.out.println("Full support (real line)");
+    System.out.println("Truncated normal N("+m1+","+s1+")");
+    System.out.println("Truncated normal N("+m2+","+s2+")");
+
+    a1=-30;
+    b1=30;
+    a2=a1;
+    b2=b1;
+    double kl=KLDNormalDistribution(m1, s1, m2, s2);
+    numintKLD=  
+      NumericalIntegrationKLDTruncatedNormal(m1, s1, a1, b1, m2, s2, a2, b2, nbsteps);
+      error=Math.abs(kl-numintKLD);
+
+    System.out.println("[same large support] KLD between normal distributions as Bregman divergence:"+kl+" Numerical integration KL:"+numintKLD+ " error:"+error);
+  }
+}
