@@ -247,5 +247,12 @@ class KLDTruncatedNormalDistribution {
       NumericalIntegrationKLDTruncatedNormal(m1, s1, a1, b1, m2, s2, a2, b2, nbsteps);
 
     System.out.println("KLD between normal distributions as Bregman divergence:"+kl+" Numerical integration KL:"+numintKLD);
+    
+    m1=0;s1=1;a1=2;b1=3;
+    m2=2;s2=3; a2=1;b2=5;
+    KL=KLDTruncatedNormal(m1, s1, a1, b1, m2, s2, a2, b2);
+   
+    System.out.println("Test fixed example:"+KL);
+    
   }
 }
