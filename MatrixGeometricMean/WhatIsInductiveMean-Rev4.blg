@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: WhatIsInductiveMean-Rev4.aux
+The style file: plain.bst
+Database file #1: WhatIsInductiveMeanR3BIB.bib
+You've used 16 entries,
+            2118 wiz_defined-function locations,
+            618 strings with 6954 characters,
+and the built_in function-call counts, 5083 in all, are:
+= -- 524
+> -- 180
+< -- 3
++ -- 72
+- -- 56
+* -- 372
+:= -- 850
+add.period$ -- 48
+call.type$ -- 16
+change.case$ -- 74
+chr.to.int$ -- 0
+cite$ -- 16
+duplicate$ -- 185
+empty$ -- 424
+format.name$ -- 56
+if$ -- 1044
+int.to.chr$ -- 0
+int.to.str$ -- 16
+missing$ -- 18
+newline$ -- 83
+num.names$ -- 32
+pop$ -- 56
+preamble$ -- 1
+purify$ -- 60
+quote$ -- 0
+skip$ -- 125
+stack$ -- 0
+substring$ -- 428
+swap$ -- 25
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 60
+warning$ -- 0
+while$ -- 60
+width$ -- 18
+write$ -- 178

@@ -1,7 +1,6 @@
 % Frank.Nielsen@acm.org
-% August 2023, revision 3
-% notices-ed@amsjournals.org  rlevine@sdsu.edu
-
+% November 2023 
+ 
 % 15 references
 
 
@@ -34,7 +33,7 @@
 
 \begin{document}
 
-\title{What is... An inductive mean?}
+\title{What is... An inductive mean?\thanks{This article was published in formatted style in~\cite{whatis-2023}. This document correctd some typographic errors indicated in \correction{red}}}
 
 \author{Frank Nielsen\\ \ \\ Sony Computer Science Laboratories Inc.\\ Tokyo, Japan}
 
@@ -68,7 +67,7 @@ Power means are also called binomial, Minkowski or H\"older means in the literat
 There are many ways to define and axiomatize means with a rich literature~\cite{bullen2003handbook}.
 An important class of means are the quasi-arithmetic means induced by strictly increasing and differentiable real-valued functional generators $f(u)$:
 \begin{equation}\label{eq:qam}
-M_f(x,y)=f^{-1}\left(\frac{f(x)+f(y)}{2}\right).
+M_f(x,y)=f^{-1}\left(\frac{f(x)+f(y)}{\correction{2}}\right).
 \end{equation}
 Quasi-arithmetic means satisfy the in-betweenness property of means: 
 $\min(x,y)\leq M_f(x,y)\leq \max(x,y)$, and are called so because $f(M_f(x,y))=\frac{f(x)+f(y)}{2}=A(f(x),f(y))$ is the arithmetic mean on the $f$-representation of numbers.
@@ -93,12 +92,12 @@ $$
 Power means are the only homogeneous quasi-arithmetic means, where a mean $M(x,y)$ is said homogeneous when $M(\lambda x,\lambda y)=\lambda\, M(x,y)$ for any $\lambda>0$.   
 
 Quasi-arithmetic means can also be defined for $n$-variable means 
-(i.e., \correction{$M_f(x_1,\ldots,x_n)=f^{-1}(\frac{1}{n}\sum_{i=1}^n f(x_i))$}), and more generally for calculating expected values of random variables~\cite{de2016mean}: 
+(i.e., {$M_f(x_1,\ldots,x_n)=f^{-1}(\frac{1}{n}\sum_{i=1}^n f(x_i))$}), and more generally for calculating expected values of random variables~\cite{de2016mean}: 
 We denote by $\bbE_f[X]=f^{-1}(\bbE[f(X)])$ 
 the quasi-arithmetic expected value of a random variable $X$ induced by a strictly monotone and differentiable function $f(u)$.
 For example, the geometric and harmonic expected values of $X$ are defined  by
 $\bbE^G[X]=\bbE_{\log x}[X]=\exp(\bbE[\log X])$ and $\bbE^H[X]=\bbE_{x^{-1}}[X]=\frac{1}{\bbE[1/X]}$, respectively.
-The ordinary expectation is recovered for $f(u)=u$: \correction{$\bbE^A[X]=\bbE_x[X]=\bbE[X]$}. 
+The ordinary expectation is recovered for $f(u)=u$: {$\bbE^A[X]=\bbE_x[X]=\bbE[X]$}. 
 The quasi-arithmetic expected values satisfy a  strong law of large numbers and a central limit theorem (\cite{de2016mean}, Theorem 1):
 Let $X_1,\ldots, X_n$ be independent and identically distributed (i.i.d.) with finite variance $\bbV[f(X)]<\infty$ 
 and derivative $f'(\bbE_f[X])\not =0$ at $x=\bbE_f[X]$.
@@ -136,7 +135,7 @@ The fast quadratic convergence~\cite{ArchimedeanDoubleSequence-1984} of the AGM 
 
 Some inductive means admit closed-form formulas: For example, the arithmetic-harmonic mean $\AHM(x,y)$ obtained as the limit of the double sequence
 \begin{eqnarray*}
-a_{t+1} &=& A(a_t,h_t)=\frac{a_t+h_t}{2},\\
+a_{t+1} &=& A(a_t,h_t)=\frac{a_t+\correction{h_t}}{2},\\
 h_{t+1} &=& H(a_t,h_t)=\frac{2a_th_t}{a_t+h_t},
 \end{eqnarray*}
 initialized with $a_0=x>0$ and $h_0=y>0$
@@ -183,8 +182,7 @@ $$
 When $X=x$ and $Y=y$ are positive reals, we recover $G(X,Y)=\sqrt{xy}$.
 When $X=I$, the identity matrix, we get $G(I,Y)=Y^{\frac{1}{2}}=\sqrt{Y}$, the positive square root of SPD matrix $Y$.
 Thus the matrix AHM iterations provide a fast method in practice to numerically approximate matrix square roots by bypassing the matrix eigendecomposition.
-When matrices $X$ and $Y$ commute (i.e., $XY=YX$), we have $G(X,Y)=\sqrt{XY}$.\correction{\st{,
- and when $Y^{-1}X$ or $X^{-1}Y$  is symmetric positive-definite, we have $G(X,Y)=Y(Y^{-1}X)^{\frac{1}{2}}$ or $G(X,Y)=X(X^{-1}Y)^{\frac{1}{2}}$, respectively.}}
+When matrices $X$ and $Y$ commute (i.e., $XY=YX$), we have $G(X,Y)=\sqrt{XY}$.
 The geometric mean $G(A,B)$ is proven to be the unique solution to the matrix Ricatti equation $XA^{-1}X=B$,
 is invariant under inversion (i.e., $G(A,B)=G(A^{-1},B^{-1})^{-1}$), and satisfies the determinant property $\det(G(A,B))=\sqrt{\det(A)\,\det(B)}$.
 
@@ -205,7 +203,7 @@ $$
 G(X,Y)=\arg\min_{P\in\bbP} \frac{1}{2}\rho^2(X,P)+\frac{1}{2}\rho^2(Y,P).
 $$
 This  Riemannian least squares mean is also called the Cartan, K\"archer, or Fr\'echet mean in the literature.
-More generally, the Riemannian geodesic $\gamma(X,Y;t)=X\#_t Y$ between $X$ and $Y$ of $(\bbP,g)$ for $t\in [0,1]$ is expressed using the weighted matrix geometric mean \correction{$G(X,Y;1-t,t)=X\#_t Y$} minimizing
+More generally, the Riemannian geodesic $\gamma(X,Y;t)=X\#_t Y$ between $X$ and $Y$ of $(\bbP,g)$ for $t\in [0,1]$ is expressed using the weighted matrix geometric mean {$G(X,Y;1-t,t)=X\#_t Y$} minimizing
 $$
 (1-t) \rho^2(X,P)+t\rho^2(Y,P).
 $$
@@ -273,7 +271,7 @@ That is, if $P_1'\preceq P_1$, \ldots, $P_n'\preceq P_n$ then we have
 $G(P_1',\ldots,P_n')\preceq G(P_1,\ldots,P_n)$.
 The following matrix  arithmetic-geometric-harmonic mean inequalities extends the scalar case: 
 $$
-\correction{H(X,Y;1-t,t)=((1-t)X^{-1}+tY^{-1})^{-1} \preceq G(X,Y;1-t,t) \preceq A(X,Y;1-t,t)=(1-t)X+tY}.
+{H(X,Y;1-t,t)=((1-t)X^{-1}+tY^{-1})^{-1} \preceq G(X,Y;1-t,t) \preceq A(X,Y;1-t,t)=(1-t)X+tY}.
 $$
  
 
@@ -317,7 +315,7 @@ $$
 In particular, these matrix means exhibit a unique $(n-1)$-tuple for which the recursive mean 
 $G_{\frac{n-1}{n},\frac{n-2}{n-1},\ldots,\frac{1}{2}}(P_1,\ldots, P_n)$ converges fast in cubic order (order-$3$ convergence). 
 This geometric matrix mean is called the BMP mean in the literature. 
-Furthermore, the mean $G_{1,1,\ldots,1,\frac{1}{2}}(P_1,\ldots, P_n)$ coincides \correction{\st{in the limit}} with the Ando-Li-Mathias geometric mean~\cite{ALM-2004} (ALM) which convergences linearly.
+Furthermore, the mean $G_{1,1,\ldots,1,\frac{1}{2}}(P_1,\ldots, P_n)$ coincides  with the Ando-Li-Mathias geometric mean~\cite{ALM-2004} (ALM) which convergences linearly.
 
 \vskip 0.3cm
 \noindent {\bf Random variables, expectations, and the law of large numbers}.
@@ -351,15 +349,15 @@ $z_1=r_1\, e^{i\theta_1}$ and $z_2=r_2\, e^{i\theta_2}$ expressed in polar forms
 To conclude, let us say that not only  is it important to consider which mean we mean~\cite{de2016mean} 
 but it is also essential to state which matrix geometric mean we mean!
 
-\vskip 1cm
-
-
-\noindent\includegraphics[width=3cm]{FrankNielsen.jpg}
-Photo of Frank Nielsen courtesy of Maryse Beaumont.
-\vskip 0.3cm
-
-\noindent ABOUT THE AUTHOR.\\
-\noindent Frank Nielsen enjoys walking along the coastal paths of the French Riviera and in the beautiful Japanese parks of Tokyo.
+%\vskip 1cm
+%
+%
+%\noindent\includegraphics[width=3cm]{FrankNielsen.jpg}
+%Photo of Frank Nielsen courtesy of Maryse Beaumont.
+%\vskip 0.3cm
+%
+%\noindent ABOUT THE AUTHOR.\\
+%\noindent Frank Nielsen enjoys walking along the coastal paths of the French Riviera and in the beautiful Japanese parks of Tokyo.
 
 
 \bibliographystyle{plain}

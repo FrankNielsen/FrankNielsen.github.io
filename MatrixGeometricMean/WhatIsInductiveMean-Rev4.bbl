@@ -1,0 +1,94 @@
+\begin{thebibliography}{10}
+
+\bibitem{ALM-2004}
+Tsuyoshi Ando, Chi-Kwong Li, and Roy Mathias.
+\newblock Geometric means.
+\newblock {\em Linear algebra and its applications}, 385:305--334, 2004.
+
+\bibitem{arnaudon2013approximating}
+Marc Arnaudon and Frank Nielsen.
+\newblock {On approximating the Riemannian $1$-center}.
+\newblock {\em Computational Geometry}, 46(1):93--104, 2013.
+
+\bibitem{ConvexFunctionalMean-2001}
+Marc Atteia.
+\newblock {Self dual operators on convex functionals: Geometric mean and square
+  root of convex functionals}.
+\newblock {\em Journal of Convex Analysis}, 8(1):223--240, 2001.
+
+\bibitem{bacak2014computing}
+Miroslav Bac{\'a}k.
+\newblock {Computing medians and means in Hadamard spaces}.
+\newblock {\em SIAM journal on optimization}, 24(3):1542--1566, 2014.
+
+\bibitem{bhatia2006riemannian}
+Rajendra Bhatia and John Holbrook.
+\newblock {Riemannian geometry and matrix geometric means}.
+\newblock {\em Linear algebra and its applications}, 413(2-3):594--618, 2006.
+
+\bibitem{bini2010effective}
+Dario Bini, Beatrice Meini, and Federico Poloni.
+\newblock {An effective matrix geometric mean satisfying the Ando--Li--Mathias
+  properties}.
+\newblock {\em Mathematics of Computation}, 79(269):437--452, 2010.
+
+\bibitem{borwein1987pi}
+Jonathan~M Borwein and Peter~B Borwein.
+\newblock {\em {Pi and the AGM}}, volume~9.
+\newblock Wiley New York, 1987.
+
+\bibitem{bullen2003handbook}
+Peter~S Bullen.
+\newblock {\em Handbook of means and their inequalities}, volume 560.
+\newblock Springer Science \& Business Media, 2003.
+
+\bibitem{RecursiveFrechetMeanNPC-2016}
+Guang Cheng, Jeffrey Ho, Hesamoddin Salehian, and Baba~C Vemuri.
+\newblock {Recursive computation of the Fr{\'e}chet mean on non-positively
+  curved Riemannian manifolds with applications}.
+\newblock {\em Riemannian Computing in Computer Vision}, pages 21--43, 2016.
+
+\bibitem{de2016mean}
+Miguel De~Carvalho.
+\newblock Mean, what do you mean?
+\newblock {\em The American Statistician}, 70(3):270--274, 2016.
+
+\bibitem{ArchimedeanDoubleSequence-1984}
+D.~M.~E. Foster and G.~M. Phillips.
+\newblock {A generalization of the Archimedean double sequence}.
+\newblock {\em Journal of mathematical analysis and applications},
+  101(2):575--581, 1984.
+
+\bibitem{holbrook2012no}
+John Holbrook.
+\newblock {No dice: a deterministic approach to the Cartan centroid}.
+\newblock {\em Journal of the Ramanujan Mathematical Society}, 27(4):509--521,
+  2012.
+
+\bibitem{lim2012matrix}
+Yongdo Lim and Mikl{\'o}s P{\'a}lfia.
+\newblock {Matrix power means and the Karcher mean}.
+\newblock {\em Journal of Functional Analysis}, 262(4):1498--1514, 2012.
+
+\bibitem{AHM-Nakamura-2001}
+Yoshimasa Nakamura.
+\newblock Algorithms associated with arithmetic, geometric and harmonic means
+  and integrable systems.
+\newblock {\em Journal of computational and applied mathematics},
+  131(1-2):161--174, 2001.
+
+\bibitem{whatis-2023}
+Frank Nielsen.
+\newblock What is... an inductive mean?
+\newblock {\em Notices of the American Mathematical Society},
+  70(11):1851--1855, 2023.
+
+\bibitem{sturm2003probability}
+Karl-Theodor Sturm.
+\newblock Probability measures on metric spaces of nonpositive curvature.
+\newblock {\em Heat Kernels and Analysis on Manifolds, Graphs, and Metric
+  Spaces: Lecture Notes from a Quarter Program on Heat Kernels, Random Walks,
+  and Analysis on Manifolds and Graphs: April 16-July 13, 2002, Emile Borel
+  Centre of the Henri Poincar{\'e} Institute, Paris, France}, 338:357, 2003.
+
+\end{thebibliography}
