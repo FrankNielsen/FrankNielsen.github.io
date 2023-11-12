@@ -1,0 +1,106 @@
+\documentclass{article}
+% ‡@ ‡A ‡B
+
+\def\AHM{\mathrm{AHM}}
+
+\begin{document}
+\def\LEM{\mathrm{LEM}}
+
+$$
+\LEM(X,Y)=\exp\left(\frac{\log X+\log Y}{2}\right),
+$$
+
+
+$$
+A_0=X\succ 0
+$$
+
+$$
+H_0=Y\succ 0
+$$
+
+\begin{eqnarray*}
+A_{t+1} &=& \frac{A_t+H_t}{2}\\
+H_{t+1} &=& 2\, (A_t^{-1}+H_t^{-1})^{-1} 
+\end{eqnarray*}
+ $$
+\AHM(X,Y)=\lim_{t\rightarrow +\infty} A_t=\lim_{t\rightarrow +\infty} H_t =X^{\frac{1}{2}}\, (X^{-\frac{1}{2}}\, Y\, X^{-\frac{1}{2}})^{\frac{1}{2}}\, X^{\frac{1}{2}}=G(X,Y)
+$$
+
+$GX^{-1}G=Y$
+
+
+$$
+M=\frac{1}{2} M\#_p X + \frac{1}{2}  M\#_p Y
+$$
+
+
+$$
+m=\frac{1}{2} m^{1-p}x^p + \frac{1}{2} m^{1-p}y^p
+$$
+$$
+m=\left(\frac{1}{2}x^p+\frac{1}{2}y^p\right)^{\frac{1}{p}}=M_p(x,y)
+$$
+
+$$
+X\#_t Y= 
+X^{\frac{1}{2}}\, \left(X^{-\frac{1}{2}}\, Y\, X^{-\frac{1}{2}}\right)^t\, X^{\frac{1}{2}},
+$$
+
+$$
+\lim_{p\rightarrow 0}M_p(x,y)=G(x,y)
+$$
+
+
+$$
+M=\frac{1}{2} M\#_p X + \frac{1}{2}  M\#_p Y
+$$
+
+$M(X,Y)$ is said operator monotone~\cite{bhatia2006riemannian} if for $X'\preceq X$ and $Y'\preceq Y$, we have
+$M(X',Y')\preceq M(X,Y)$.
+
+\end{document}
+
+$$
+a_0=x>0, h_0=y>0
+$$
+
+ 
+\begin{eqnarray*}
+a_{t+1} &=& A(a_t,h_t)=\frac{a_t+h_t}{2},\\
+h_{t+1} &=& H(a_t,h_t)=\frac{2a_th_t}{a_t+h_t},
+\end{eqnarray*}
+ 
+
+$$
+\AHM(x,y)=\lim_{t\rightarrow\infty} a_t=\lim_{t\rightarrow\infty} h_t=\sqrt{xy}=G(x,y)
+$$
+
+$$
+x=r_1\, e^{i\theta_1}, y=r_2\, e^{i\theta_2}
+$$  
+
+ 
+
+$$
+\AHM(x,y)=\lim_{t\rightarrow\infty} a_t=\lim_{t\rightarrow\infty} h_t= \AHM(z_1,z_2)=\sqrt{r_1r_2}\, e^{i\frac{\theta_1+\theta_2}{2}}=G(r_1,r_2)e^{i A(\theta_1,\theta_2)}
+$$
+
+
+$$
+A_0=X\succ 0, h_0=Y\succ 0
+$$
+\begin{eqnarray*}
+A_{t+1} &=& \frac{A_t+H_t}{2}\\
+H_{t+1} &=& 2\, (A_t^{-1}+H_t^{-1})^{-1} 
+\end{eqnarray*}
+ $$
+\AHM(X,Y)=\lim_{t\rightarrow +\infty} A_t=\lim_{t\rightarrow +\infty} H_t =X^{\frac{1}{2}}\, (X^{-\frac{1}{2}}\, Y\, X^{-\frac{1}{2}})^{\frac{1}{2}}\, X^{\frac{1}{2}}=G(X,Y)
+$$
+
+
+
+
+
+
+\end{document}
