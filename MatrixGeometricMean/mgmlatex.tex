@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\def\LEM{\mathrm{LogEuclideanMean}}
+
+\begin{document}
+
+Loewner partial ordering $\preceq$
+
+
+$$
+P\preceq Q
+$$ if and only if $Q-P$ is positive semi-definite: 
+$$
+\forall x,\quad x^\top (Q-P)x \geq 0
+$$
+
+$$
+x'\leq x, y'\leq y \Rightarrow M(x,y)\leq M(x',y')
+$$
+
+$$
+x'\leq x, y'\leq y \Rightarrow G(x',y')=\sqrt{x'y'}\leq  G(x,y)=\sqrt{xy}
+$$
+
+
+$$
+\LEM(X,Y)=\exp\left(\frac{\log X+\log Y}{2}\right),
+$$
+
+$$
+G(X,Y)=X^{\frac{1}{2}}\, (X^{-\frac{1}{2}}\, Y\, X^{-\frac{1}{2}})^{\frac{1}{2}}\, X^{\frac{1}{2}} 
+$$
+
+
+$M(X,Y)$ is said operator monotone 
+
+$$
+X'\preceq X, Y'\preceq Y \Rightarrow M(X',Y')\preceq M(X,Y)
+$$
+
+
+\end{document}
