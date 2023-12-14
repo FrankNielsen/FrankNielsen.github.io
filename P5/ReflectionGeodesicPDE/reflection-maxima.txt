@@ -1,0 +1,30 @@
+/* given three points z1 z2 z3 on the Poincare geodesics (circle arc perpendicular to boundary circle), get the reflection transform a0, b0, r0 */
+ 
+z1:a1+b1*%i;
+z2:a2+b2*%i;
+z3:a3+b3*%i;
+/* circle inversion */
+reflect(z,a0,b0,r0):=(r0**2/(conjugate(z)-conjugate(a0+b0*%i)))+a0+b0*%i;
+
+/* reflection of the points z1, z2, z3 should be identity */
+reflect(z1,a0,b0,r0);
+realpart(%);ratsimp(%);
+eq1: %=a1;
+reflect(z1,a0,b0,r0);
+imagpart(%);ratsimp(%);
+eq2: %=b1;
+ reflect(z2,a0,b0,r0);
+realpart(%);ratsimp(%);
+eq3: %=a2;
+reflect(z2,a0,b0,r0);
+imagpart(%);ratsimp(%);
+eq4: %=b2;
+ reflect(z3,a0,b0,r0);
+realpart(%);ratsimp(%);
+eq5: %=a3;
+reflect(z3,a0,b0,r0);
+imagpart(%);ratsimp(%);
+eq6: %=b3;
+
+solve([eq1,eq2,eq3,eq4,eq5,eq6],[a0,b0,r0]);
+solution: %[2];
