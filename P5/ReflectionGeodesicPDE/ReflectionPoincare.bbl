@@ -1,0 +1,32 @@
+\begin{thebibliography}{1}
+
+\bibitem{hitchman2009geometry}
+Michael~P Hitchman.
+\newblock {\em Geometry with an introduction to cosmic topology}.
+\newblock Jones \& Bartlett Learning, 2009.
+
+\bibitem{nielsen2010hyperbolic}
+Frank Nielsen and Richard Nock.
+\newblock {Hyperbolic Voronoi diagrams made easy}.
+\newblock In {\em 2010 International Conference on Computational Science and
+  Its Applications}, pages 74--80. IEEE, 2010.
+
+\bibitem{nielsen2012hyperbolic}
+Frank Nielsen and Richard Nock.
+\newblock {The hyperbolic Voronoi diagram in arbitrary dimension}.
+\newblock {\em arXiv preprint arXiv:1210.8234}, 2012.
+
+\bibitem{sala2018representation}
+Frederic Sala, Chris De~Sa, Albert Gu, and Christopher R{\'e}.
+\newblock Representation tradeoffs for hyperbolic embeddings.
+\newblock In {\em International conference on machine learning}, pages
+  4460--4469. PMLR, 2018.
+
+\bibitem{tanuma2010revisiting}
+Toshihiro Tanuma, Hiroshi Imai, and Sonoko Moriyama.
+\newblock {Revisiting hyperbolic Voronoi diagrams from theoretical, applied and
+  generalized viewpoints}.
+\newblock In {\em 2010 International Symposium on Voronoi Diagrams in Science
+  and Engineering}, pages 23--32. IEEE, 2010.
+
+\end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  14 DEC 2023 16:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  15 DEC 2023 10:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -39,13 +39,42 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip50
 )
-(c:/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
+(c:/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
 (c:/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
+\lst@mode=\count193
+\lst@gtempboxa=\box51
+\lst@token=\toks18
+\lst@length=\count194
+\lst@currlwidth=\dimen141
+\lst@column=\count195
+\lst@pos=\count196
+\lst@lostspace=\dimen142
+\lst@width=\dimen143
+\lst@newlines=\count197
+\lst@lineno=\count198
+\lst@maxwidth=\dimen144
+
+(c:/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count199
+\lst@skipnumbers=\count266
+\lst@framebox=\box52
+)
+(c:/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
+(c:/texlive/2023/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(c:/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
 (c:/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
 
@@ -60,48 +89,49 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 (c:/texlive/2023/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen141
-\Gin@req@width=\dimen142
+\Gin@req@height=\dimen145
+\Gin@req@width=\dimen146
 )
-\c@theorem=\count193
-\c@property=\count194
+\c@theorem=\count267
+\c@property=\count268
 
 (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count195
-\l__pdf_internal_box=\box51
+\l__color_backend_stack_int=\count269
+\l__pdf_internal_box=\box53
 )
 (./ReflectionPoincare.aux)
 \openout1 = `ReflectionPoincare.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+\c@lstlisting=\count270
 
 (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count196
-\scratchdimen=\dimen143
-\scratchbox=\box52
-\nofMPsegments=\count197
-\nofMParguments=\count198
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count199
-\MPscratchDim=\dimen144
-\MPnumerator=\count266
-\makeMPintoPDFobject=\count267
-\everyMPtoPDFconversion=\toks19
+\scratchcounter=\count271
+\scratchdimen=\dimen147
+\scratchbox=\box54
+\nofMPsegments=\count272
+\nofMParguments=\count273
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count274
+\MPscratchDim=\dimen148
+\MPnumerator=\count275
+\makeMPintoPDFobject=\count276
+\everyMPtoPDFconversion=\toks20
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -111,60 +141,100 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 23.
 
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
 
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+) [1
 
-LaTeX Warning: Citation `nielsen2012hyperbolic' on page 1 undefined on input li
-ne 38.
-
-
-LaTeX Warning: Command \l invalid in math mode on input line 45.
-
-<ReflectionPoincare3Points.png, id=1, 1134.639pt x 433.62pt>
+{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<ReflectionPoincare3Points.png, id=19, 1094.28825pt x 433.62pt>
 File: ReflectionPoincare3Points.png Graphic file (type png)
 <use ReflectionPoincare3Points.png>
-Package pdftex.def Info: ReflectionPoincare3Points.png  used on input line 60.
-(pdftex.def)             Requested size: 469.75502pt x 179.52548pt.
-[1
+Package pdftex.def Info: ReflectionPoincare3Points.png  used on input line 90.
+(pdftex.def)             Requested size: 469.75502pt x 186.14198pt.
+<PoincareReflectionGeodesics-1.png, id=20, 370.0224pt x 370.0224pt>
+File: PoincareReflectionGeodesics-1.png Graphic file (type png)
+<use PoincareReflectionGeodesics-1.png>
+Package pdftex.def Info: PoincareReflectionGeodesics-1.png  used on input line 
+122.
+(pdftex.def)             Requested size: 140.92793pt x 140.92615pt.
+<KleinReflectionGeodesics-1.png, id=21, 370.0224pt x 370.0224pt>
+File: KleinReflectionGeodesics-1.png Graphic file (type png)
+<use KleinReflectionGeodesics-1.png>
+Package pdftex.def Info: KleinReflectionGeodesics-1.png  used on input line 123
+.
+(pdftex.def)             Requested size: 140.92793pt x 140.92615pt.
+<PoincareReflectionGeodesics-2.png, id=22, 370.0224pt x 370.0224pt>
+File: PoincareReflectionGeodesics-2.png Graphic file (type png)
+<use PoincareReflectionGeodesics-2.png>
+Package pdftex.def Info: PoincareReflectionGeodesics-2.png  used on input line 
+124.
+(pdftex.def)             Requested size: 140.92793pt x 140.92615pt.
+<KleinReflectionGeodesics-2.png, id=23, 370.0224pt x 370.0224pt>
+File: KleinReflectionGeodesics-2.png Graphic file (type png)
+<use KleinReflectionGeodesics-2.png>
+Package pdftex.def Info: KleinReflectionGeodesics-2.png  used on input line 125
+.
+(pdftex.def)             Requested size: 140.92793pt x 140.92615pt.
+ [2 <./ReflectionPoincare3Points.png (PNG copy)>] [3 <./PoincareReflectionGeode
+sics-1.png (PNG copy)> <./KleinReflectionGeodesics-1.png (PNG copy)> <./Poincar
+eReflectionGeodesics-2.png (PNG copy)> <./KleinReflectionGeodesics-2.png (PNG c
+opy)>]
+(c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
+58.
 
-{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ReflectionPoi
-ncare3Points.png (PNG copy)>] (./ReflectionPoincare.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+(c:/texlive/2023/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <5> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 258.
+ [4{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] (./R
+eflectionPoincare.bbl)
+[5] (./ReflectionPoincare.aux) ) 
 Here is how much of TeX's memory you used:
- 1900 strings out of 476017
- 28930 string characters out of 5793766
- 1857660 words of memory out of 5000000
- 22372 multiletter control sequences out of 15000+600000
- 519238 words of font info for 60 fonts, out of 8000000 for 9000
+ 3805 strings out of 476017
+ 54947 string characters out of 5793766
+ 2832660 words of memory out of 5000000
+ 24238 multiletter control sequences out of 15000+600000
+ 521821 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,62p,211b,219s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
-live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2023/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
-b><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/tex
-live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2023/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ReflectionPoincare.pdf (1 page, 264210 bytes).
+ 57i,12n,62p,446b,1693s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.p
+fb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/te
+xlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/202
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2023/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.p
+fb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texl
+ive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2023/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmti10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb
+><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texl
+ive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb><c:/texlive/2023/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf
+-dist/fonts/type1/public/cm-super/sfrm0500.pfb>
+Output written on ReflectionPoincare.pdf (5 pages, 549025 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 141 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

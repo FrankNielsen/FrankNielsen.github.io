@@ -3,6 +3,7 @@
 z1:a1+b1*%i;
 z2:a2+b2*%i;
 z3:a3+b3*%i;
+
 /* circle inversion */
 reflect(z,a0,b0,r0):=(r0**2/(conjugate(z)-conjugate(a0+b0*%i)))+a0+b0*%i;
 
