@@ -247,6 +247,30 @@ b' &=& \frac{(b-b_0)r_0^2}{(b_0-b)^2+(a-a_0)^2)}+b_0.
  Figure~\ref{fig:illustration} illustrates some examples of reflections obtained in the Poincar\'e disk and then converted into the Klein disk.
 
 
+Notice that the equation of a circle  of center $(x_0,y_0)$ and radius $r_0>0$ passing through three given points $(x_1,y_1), (x_2,y_2)$ and $(x_3,y3)$ can be found also by symbolic computing:
+
+\begin{lstlisting}
+/* equation of a circle with center (x0,y0) and radius r0 passing through 3 points (xi, yi) for i=1,2,3*/
+assume(r0>0);
+
+eq1: (x1-x0)**2 + (y1-y0)**2=  r0**2;
+eq2: (x2-x0)**2 + (y2-y0)**2 = r0**2;
+eq3: (x3-x0)**2 + (y3-y0)**2 = r0**2;
+
+solve([eq1,eq2,eq3],[x0,y0,r0]);
+%[2];
+\end{lstlisting} 
+
+See Figure~\ref{fig:circle3pts} for a screenshot of {\sc Maxima} result.
+One way to geometrically derive this equation is to consider the unique intersection of two line bisectors defined by the three points $\{(x_i,y_i), i\in\{1,2,3\}\}$, and then calculate the radius $r_0$ as the distance of the circumcenter to the given points~\cite{nielsen2005visual}.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Circle3PointsEquation.png} 
+\caption{Equation of a circle passing through three given points.\label{fig:circle3pts} }
+\end{figure}
+
 
 
 It is usually easy and numerically robust to implement geometric algorithms like the Voronoi diagram~\cite{nielsen2010hyperbolic} in the Klein disk and visualize the result in the conformal Poincar\'e disk.

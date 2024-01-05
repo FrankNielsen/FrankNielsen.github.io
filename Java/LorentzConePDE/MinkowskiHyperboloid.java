@@ -25,7 +25,7 @@ class MinkowskiHyperboloid
    public static double HyperboloidDistance( double [] p, double [] q)
   {
   
-  return arccosh(MInnerProduct(p,q));
+  return arccosh( MInnerProduct( p, q)/Math.sqrt(MInnerProduct(p,p)*MInnerProduct(q,q)) );
 }
 
 }

@@ -97,6 +97,17 @@ class LorentzCone
    return res;
   }
   
+        public static double [] normalizeHyperboloid(double R, double [] p)
+  {
+    int d=p.length; 
+   int i;
+   double [] res=new double [d];
+   double det=MInnerProduct(p,p);
+   
+   for(i=0;i<d;i++) res[i]=R*p[i]/Math.sqrt(det);
+   
+   return res;
+  }
   
   
   // Minkowski innner product

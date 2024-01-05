@@ -4,8 +4,10 @@ void setup()
 {
  println("2023 Dec, FN. Demo: Lorentz cone"); 
  
- //Test1();
- Test2();
+ KleinDisk.Test();
+ 
+ Test1();
+ //Test2();
 }
 
 
@@ -82,12 +84,12 @@ println("Klein distance:"+KD);
 }
 
 void Test1()
-{
+{double R;
   
    println("Demo 1");
    
   int d=10;
-  double R=1+Math.random()*50;
+   R=1+Math.random()*50;
   
 double [] p=LorentzCone.randomPointLorentzCone(d);
 double [] q=LorentzCone.randomPointLorentzCone(d);
@@ -119,16 +121,29 @@ println("Klein distance:"+KD);
 double err=Math.abs(KD-BD);
 println("Error:"+err);
 
+double [] ph,qh;
+double HD;
 
 // Get the points on the unit disk
-double [] ph=LorentzCone.normalizeHyperboloid(p);
-double [] qh=LorentzCone.normalizeHyperboloid(q);
+  ph=LorentzCone.normalizeHyperboloid(p);
+ qh=LorentzCone.normalizeHyperboloid(q);
 
 //println("ph:"+LorentzCone.MInnerProduct(ph,ph));
 //println("qh:"+LorentzCone.MInnerProduct(qh,qh));
 
-double HD=MinkowskiHyperboloid.HyperboloidDistance(ph,qh);
+ HD=MinkowskiHyperboloid.HyperboloidDistance(ph,qh);
 println("Hyperboloid distance:"+HD);
+
+  R=1+Math.random();
+
+  ph=LorentzCone.normalizeHyperboloid(R,p);
+ qh=LorentzCone.normalizeHyperboloid(R,q);
+
+//println("ph:"+LorentzCone.MInnerProduct(ph,ph));
+//println("qh:"+LorentzCone.MInnerProduct(qh,qh));
+
+ HD=MinkowskiHyperboloid.HyperboloidDistance(ph,qh);
+println("Hyperboloid distance (new scaled model):"+HD);
 
 
 double[] pp=KleinDisk.Klein2Poincare(pk);
