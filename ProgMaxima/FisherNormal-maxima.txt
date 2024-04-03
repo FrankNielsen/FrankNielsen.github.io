@@ -27,8 +27,8 @@ param2inv(theta1,theta2):=sqrt(theta2/(1-theta2));
 
 /* param2(mu,param2inv(theta1,theta2)); ratsimp(%); */
 
-q(x,param1,param2):=p(x,param1inv(mu,sigma),param2inv(mu,sigma));
-lq(x,param1,param2):=log(q(x,param1,param2));
+q(x,p1,p2):=p(x,param1inv(p1,p2),param2inv(p1,p2));
+lq(x,p1,p2):=log(q(x,p1,p2));
 
 g[2][2]=ratsimp(integrate(q(x,p1,p2)*derivative(lq(x,p1,p2),p2,1)*derivative(lq(x,p1,p2),p2,1),x,minf,inf));
 
