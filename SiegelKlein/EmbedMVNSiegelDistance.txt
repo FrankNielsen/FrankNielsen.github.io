@@ -1,24 +1,24 @@
 /* Code in Maxima */
-/* Calculate the Siegel metric distance in the Siegel upper space */
+ /* Embed MVNs into Siegel, Frank 2024 */
 
 load(eigen);
 
-/* symmetric */
-S1: matrix( [0.265,   0.5],
-    [0.5 , -0.085]);
+ 
+
+ 
+
+S1: matrix( [0,0],  [0,0]);
 
 /* positive-definite */
-P1: matrix( [0.235,   0.048],
-    [0.048 ,  0.792]);
+P1: matrix( [1,0],
+    [0,1]);
 
 /* Matrix in the Siegel upper space */
 Z1: S1+%i*P1;
 
-S2:  matrix( [-0.329,  -0.2],
-   [-0.2 , -0.382]);
+S2:  matrix( [1,0],[0,1]);
 
-P2: matrix([0.464,   0.289],
-    [0.289  , 0.431]);
+P2: matrix([2,-1],[-1,2]);
 
 Z2: S2+%i*P2;
 
