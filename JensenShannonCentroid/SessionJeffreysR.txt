@@ -1,0 +1,39 @@
+setwd("C:/testR")
+lenah=read.table("Lena.histogram")
+barbarah=read.table("Barbara.histogram")
+
+plot(lenah[,1], type="l", col = "blue", xlab="grey intensity value", ylab="Percentage")
+lines(barbara[,1], type="l",col = "red" )
+graphics.off()
+
+source("JeffreysSKLCentroid.R") 
+
+
+demoJeffreysCentroid<-function(){
+n<-2
+d<-256
+weight=c(0.5,0.5)
+set<- array(0, dim=c(n,d))
+set[1,]=lenah[,1]
+set[2,]=barbarah[,1]
+approxP=JeffreysPositiveCentroid(set,weight)
+approxF=JeffreysFrequencyCentroidApproximation(set,weight)
+approxFG=JeffreysFrequencyCentroid(set,weight) 
+
+pdf(file="SKLJeffreys-BarbaraLena.pdf", paper ="A4")
+typedraw="l"
+plot(set[1,], type=typedraw, col = "black", xlab="grey intensity value", ylab="Percentage")
+lines(set[2,], type=typedraw,col = "black" )
+lines(approxP,type=typedraw, col="blue")
+# green not visible, almost coincide with red
+lines(approxF, type=typedraw,col = "green")
+lines(approxFG,type=typedraw, col="red")
+title(main="Jeffreys frequency centroids", sub="Barbara/Lena grey histograms" , col.main="black", font.main=3)
+dev.off()
+graphics.off()
+}
+
+demoJeffreysCentroid()
+
+quit()
+
