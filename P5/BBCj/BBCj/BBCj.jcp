@@ -1,0 +1,44 @@
+<?xml?>
+<project>
+	<settings>
+		<label>BBCj</label>
+		<root_path>\</root_path>
+		<output_path>\</output_path>
+		<source_path>\</source_path>
+		<jdkprofile_ref>JDK version 1.5.0_06</jdkprofile_ref>
+		<compiler_ref/>
+		<ant_ref/>
+	</settings>
+	<runtimes>
+		<runtime>
+			<label>&lt;Default&gt;</label>
+			<application_ref/>
+			<applet_ref/>
+			<debugger_ref/>
+			<param/>
+			<run>classes\BBCj.htm</run>
+		</runtime>
+	</runtimes>
+	<libraries/>
+	<files>
+		<include>
+			<folderitem>
+				<path>classes</path>
+			</folderitem>
+			<folderitem>
+				<path>src</path>
+			</folderitem>
+			<fileitem>
+				<path>classes\BBCj.htm</path>
+				<url>classes\BBCj.htm</url>
+				<source>true</source>
+				<browser>true</browser>
+			</fileitem>
+			<fileitem>
+				<path>src\BBCj.java</path>
+				<source>true</source>
+			</fileitem>
+		</include>
+	</files>
+	<tasks/>
+</project>

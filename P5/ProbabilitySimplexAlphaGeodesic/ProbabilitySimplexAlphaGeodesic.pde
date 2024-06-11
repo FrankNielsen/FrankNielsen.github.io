@@ -309,6 +309,79 @@ double alpha;
   
   strokeWeight(1);
   
+  for(alpha=-1;alpha<=1;alpha+=1)
+  {
+    float intensity=(float)((alpha-minalpha)/(maxalpha-minalpha));
+    stroke(255*(1-intensity),255*(1-intensity),255*(1-intensity));
+  drawGeodesic(alpha, p, q);
+  
+  stroke(0);
+ 
+
+  }
+  
+ strokeWeight(2);
+  stroke(0, 0, 255);// blue m-geodesic
+  drawGeodesic(-1, p, q);
+  stroke(255, 0, 0); // red e-geodesic
+  drawGeodesic(1, p, q);
+  stroke(255, 0, 255); // magenta Fisher-Rao geodesic
+ drawGeodesic(0, p, q);
+
+stroke(0,0,0);
+for(alpha=-1;alpha<=1;alpha+=1)
+  {
+     if (toggleMidpoint){
+    double [] mid=midPoint(alpha,p,q);
+   MyPoint(mid[0],mid[1]);
+    // ellipse((float)x2X(mid[0]), (float)y2Y(mid[1]), 2*ptsize,2*ptsize);
+}
+  }
+
+
+
+
+
+  noFill();
+
+  if (toggleText)
+  {
+    String msg;
+    if (toggleRectify) msg="Probability simplex/Categorical manifold"; else msg="Mixture parameter space";
+    textSize(32);
+    fill(0, 0, 0);
+    stroke(0, 0, 0);
+    text(msg, 100, 30);
+  }
+  
+  if (toggleAnimation) {animate();}
+}
+
+
+
+
+void drawgood()
+{
+  int i, j, ii, jj;
+double minalpha=-5; double maxalpha=5; double stepalpha=0.5;
+double alpha;
+
+  surface.setTitle("α-geodesics in the probability simplex");
+  background(255, 255, 255);
+  stroke(0);
+  strokeWeight(3);
+
+  MyLine(V[0][0], V[0][1], V[1][0], V[1][1]);
+  MyLine(V[1][0], V[1][1], V[2][0], V[2][1]);
+  MyLine(V[2][0], V[2][1], V[0][0], V[0][1]);
+
+
+  stroke(255, 0, 255);
+  MyPoint(p[0], p[1]);
+  MyPoint(q[0], q[1]);
+  
+  strokeWeight(1);
+  
   for(alpha=minalpha;alpha<=maxalpha;alpha+=stepalpha)
   {
     float intensity=(float)((alpha-minalpha)/(maxalpha-minalpha));
@@ -356,7 +429,6 @@ for(alpha=minalpha;alpha<=maxalpha;alpha+=stepalpha)
   
   if (toggleAnimation) {animate();}
 }
-
 public static double mind(double x, double y)
 {
   if (x<y) return x;

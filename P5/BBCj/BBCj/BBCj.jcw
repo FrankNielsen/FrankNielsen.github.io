@@ -1,0 +1,16 @@
+<?xml?>
+<workspace>
+	<settings>
+		<label>BBCj</label>
+	</settings>
+	<users>
+		<user>
+			<path>BBCj.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>BBCj.jcp</path>
+		</project>
+	</projects>
+</workspace>
