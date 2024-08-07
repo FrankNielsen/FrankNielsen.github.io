@@ -1,0 +1,727 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=latex 2024.8.7)  7 AUG 2024 18:25
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx\HCode\def\HCod
+e##1{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.{\g
+@addto@macro\@documentclasshook{\RequirePackage[#1,html]{tex4ht}}\let\HCode\doc
+umentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname te
+x4ht\endcsname{#1,html}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{\HC
+ode}{\documentstyle[tex4ht]}}}\makeatother\HCode .a.b.c.\input  WhatIsCIG.tex
+(WhatIsCIG.tex
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
+File: size11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count189
+\c@section=\count190
+\c@subsection=\count191
+\c@subsubsection=\count192
+\c@paragraph=\count193
+\c@subparagraph=\count194
+\c@figure=\count195
+\c@table=\count196
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\tex4ht.st
+y
+version 2023-10-04-13:17
+Package: tex4ht 
+--------------------------------------
+--- Note --- for _ at preamble, use the command line option `early_'
+--------------------------------------
+--------------------------------------
+--- Note --- for ^ at preamble, use the command line option `early^'
+--------------------------------------
+\tmp:toks=\toks17
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\usepackag
+e.4ht
+version 2023-07-25-12:42
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\hyperref-
+hooks.4ht
+version 2023-09-17-08:01
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.
+sty
+Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.st
+y
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkey
+s.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvd
+efinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfesc
+ape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.
+sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdfte
+xcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwar
+err.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
+))
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.st
+y
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.st
+y
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+
+
+Package auxhook Warning: Cannot patch \document,
+(auxhook)                using \AtBeginDocument instead.
+
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.s
+ty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.
+sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\g
+ettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoption
+s.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count197
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.
+sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count198
+)
+\@linkdim=\dimen141
+\Hy@linkcounter=\count199
+\Hy@pagecounter=\count266
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.de
+f
+File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.
+sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count267
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4062.
+Package hyperref Info: Hyper figures OFF on input line 4179.
+Package hyperref Info: Link nesting OFF on input line 4184.
+Package hyperref Info: Hyper index ON on input line 4187.
+Package hyperref Info: Plain pages OFF on input line 4194.
+Package hyperref Info: Backreferencing OFF on input line 4199.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4446.
+\c@Hy@tempcnt=\count268
+ (C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4784.
+\XeTeXLinkMargin=\dimen142
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.st
+y
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigin
+tcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count269
+\Field@Width=\dimen143
+\Fld@charsize=\dimen144
+\Field@toks=\toks19
+Package hyperref Info: Hyper figures OFF on input line 6063.
+Package hyperref Info: Link nesting OFF on input line 6068.
+Package hyperref Info: Hyper index ON on input line 6071.
+Package hyperref Info: backreferencing OFF on input line 6078.
+Package hyperref Info: Link coloring ON on input line 6081.
+Package hyperref Info: Link coloring with OCG OFF on input line 6088.
+Package hyperref Info: PDF/A mode OFF on input line 6093.
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.
+sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count270
+
+
+Package hyperref Message: Stopped early.
+
+)
+Package hyperref Info: Driver: htex4ht.
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\htex4ht.d
+ef
+File: htex4ht.def 2024-01-20 v7.01h Hyperref driver for TeX4ht
+Package hyperref Info: tex4ht is already loaded.
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/preprint\fullpage.
+sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip50
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.s
+ty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.
+sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks20
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.
+sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\graphics-
+hooks.4ht
+version 2022-08-17-14:25
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.
+sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graph
+ics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 107.
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\dvips
+.def
+File: dvips.def 2022/09/22 v3.1e Graphics/color driver for dvips
+))
+\Gin@req@height=\dimen145
+\Gin@req@width=\dimen146
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\tex4ht.4h
+t
+version 2022-07-05-14:37
+--------------------------------------
+--- Note --- for additional information, use the command line option `info'
+--------------------------------------
+
+::::::::::::::::::::::::::::::::::::::::::
+ TeX4ht info is available in the log file 
+::::::::::::::::::::::::::::::::::::::::::
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\tex4ht.st
+y
+version 2023-10-04-13:17
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color
+.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: dvips.def on input line 149.
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvipsnam.
+def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor
+.ltx))
+l.870 --- TeX4ht warning --- nonprimitive \everypar ---
+--- needs --- tex4ht WhatIsCIG ---
+\tmp:cnt=\count271
+\openout15 = `WhatIsCIG.tmp'.
+
+(WhatIsCIG.tmp)
+\tmp:dim=\skip51
+--------------------------------------
+--- Note --- for XML code, use the command line option `xml' or `xhtml'
+--------------------------------------
+ (WhatIsCIG.xref)
+\:refout=\write3
+\openout3 = `WhatIsCIG.xref'.
+
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+--------------------------------------
+--- Note --- to remove the <?xml version=...?> processing instruction use the c
+ommand line option `no-VERSION'
+--------------------------------------
+--------------------------------------
+--- Note --- to remove the DOCTYPE declaration use the command line option `no-
+DOCTYPE'
+--------------------------------------
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+)
+--------------------------------------
+--- Note --- for marking of the base font, use the command line option `fonts+'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for non active _, use the command line option `no_'
+--------------------------------------
+--------------------------------------
+--- Note --- for _ of catcode 13, use the command line option `_13'
+--------------------------------------
+--------------------------------------
+--- Note --- for non active ^, use the command line option `no^'
+--------------------------------------
+--------------------------------------
+--- Note --- for ^ of catcode 13, use the command line option `^13'
+--------------------------------------
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+--------------------------------------
+--- Note --- for alternative charset, use the command line option `charset=...'
+
+--------------------------------------
+--------------------------------------
+--- Note --- to ignore CSS font decoration, use the `NoFonts' command line opti
+on
+--------------------------------------
+--------------------------------------
+--- Note --- for jpg bitmaps of pictures, use the `jpg' command line option. (C
+haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
+hes of tex4ht.c) 
+--------------------------------------
+--------------------------------------
+--- Note --- for gif bitmaps of pictures, use the `gif' command line option. (C
+haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
+hes of tex4ht.c) 
+--------------------------------------
+--------------------------------------
+--- Note --- for content and toc in 2 frames, use the command line option `fram
+es'
+--------------------------------------
+--------------------------------------
+--- Note --- for content, toc, and footnotes in 3 frames, use the command line 
+option `frames-fn'
+--------------------------------------
+--------------------------------------
+--- Note --- for file extension name xht, use the command line option `xht'
+--------------------------------------
+TeX4ht package options: html
+--------------------------------------
+--- Note --- To print a timestamp, use the command line option timestamp
+--------------------------------------
+--------------------------------------
+--- Note --- to ignore CSS code, use the command line option `-css
+--------------------------------------
+--------------------------------------
+--- Note --- for inline CSS code, use the command line option `css-in'
+--------------------------------------
+--------------------------------------
+--- Note --- for pop ups on mouse over, use the command line option `mouseover'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for addressing images in a subdirectory, use the command line opti
+on `imgdir:.../'
+--------------------------------------
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+)
+\:tokwrite=\toks21
+\:tokpage=\toks22
+--------------------------------------
+--- Note --- for back links to toc, use the command line option `sections+'
+--------------------------------------
+--------------------------------------
+--- Note --- for linear crosslinks of pages, use the command line option `next'
+
+--------------------------------------
+\openout15 = `WhatIsCIG.4ct'.
+
+\:tocout=\write4
+\openout4 = `WhatIsCIG.4tc'.
+
+ (WhatIsCIG.4tc)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\latex.4ht
+version 2023-10-02-13:11
+LaTeX Info: Redefining \_ on input line 179.
+LaTeX Info: Redefining \begin on input line 597.
+LaTeX Info: Redefining \end on input line 645.
+LaTeX Info: Redefining \, on input line 807.
+LaTeX Info: Redefining \; on input line 808.
+LaTeX Info: Redefining \! on input line 809.
+LaTeX Info: Redefining \: on input line 810.
+LaTeX Info: Redefining \> on input line 811.
+--------------------------------------
+--- Note --- for links into captions, instead of float heads, use the command l
+ine option `refcaption'
+--------------------------------------
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+--------------------------------------
+--- Note --- For mini tocs immediately aftter the header use the command line o
+ption `minitoc<'
+--------------------------------------
+--------------------------------------
+--- Note --- for enumerated list elements with valued data, use the command lin
+e option `enumerate+'
+--------------------------------------
+--------------------------------------
+--- Note --- for enumerated list elements li's with value attributes, use the c
+ommand line option `enumerate-'
+--------------------------------------
+--------------------------------------
+--- Note --- for CSS2 code, use the command line option `css2'
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial tabular, use the command line option `pic-tabular'
+--------------------------------------
+--------------------------------------
+--- Note --- for bitmap fbox'es, use the command line option `pic-fbox'
+--------------------------------------
+--------------------------------------
+--- Note --- for bitmap framebox'es, use the command line option `pic-framebox'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for inline footnotes use command line option `fn-in'
+--------------------------------------
+--------------------------------------
+--- Note --- for tracing of latex font commands, use the command line option `f
+onts'
+--------------------------------------
+--------------------------------------
+--- Note --- for width specifications of tabular p entries, use the `p-width' c
+ommand line option or a configuration similar to \Configure{HColWidth}{\HCode{ 
+style="width:\HColWidth"}}
+--------------------------------------
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+--------------------------------------
+--- Note --- for pictorial eqnarray, use the command line option `pic-eqnarray'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial array, use the command line option `pic-array'
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial $...$ environments, use the command line option `pic
+-m' (not recommended!!)
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial $...$ and $$...$$ environments with latex alt, use t
+he command line option `pic-m+' (not safe!!)
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial array, use the command line option `pic-array'
+--------------------------------------
+))
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\fontmath.
+4ht
+version 2022-10-25-13:59
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+))
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\article.4
+ht
+version 2023-04-10-13:46
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+--------------------------------------
+--- Note --- for automatic sectioning pagination, use the command line option `
+1', `2', `3', '4', '5', '6', or '7'
+--------------------------------------
+--------------------------------------
+--- Note --- for files named derived from section titles, use the command line 
+option `sec-filename'
+--------------------------------------
+--------------------------------------
+--- Note --- for i-columns index, use the command line option `index=i' (e.g., 
+index=2)
+--------------------------------------
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+))
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\hyperref.
+4ht
+version 2022-07-01-14:27
+LaTeX Info: Redefining \autoref on input line 88.
+\Hy@SectionHShift=\skip52
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+))
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\nameref.4
+ht
+version 2022-12-30-15:46
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+))
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\pd1enc.4h
+t
+version 2009-05-21-09:32
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+))
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\url.4ht
+version 2023-02-19-10:11
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+--------------------------------------
+--- Note --- for URL encoding within href use the command line option `url-enc'
+
+--------------------------------------
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+))
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\amssymb.4
+ht
+version 2009-05-21-09:32
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+))
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\amsfonts.
+4ht
+version 2009-05-21-09:32
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+))
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\graphicx.
+4ht
+version 2022-01-12-13:53
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+))
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\graphics.
+4ht
+version 2022-03-20-14:29
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+--------------------------------------
+--- Note --- if included graphics are of degraded quality, try the command line
+ options `graphics-num' or `graphics-'. The `num' should provide the density of
+ pixels in the bitmaps (e.g., 110). 
+--------------------------------------
+--------------------------------------
+--- Note --- for setting image dimensions, try the option `Gin-dim'; to use per
+cents instead of units, use `Gin-perecent'; for key dimensions when bounding bo
+x is unavailable try `Gin-dim+'; neither is recommended
+--------------------------------------
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+))
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\dvips.4ht
+version 2009-05-21-09:32
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+))
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\color.4ht
+version 2022-02-01-14:27
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+))
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\dvipsnam.
+4ht
+version 2009-05-21-09:32
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvipsnam.
+def)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+))
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4.4ht
+version 2023-10-13-14:16
+)
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/generic/tex4ht\html4-mat
+h.4ht
+version 2022-10-25-13:59
+))
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backen
+d-dvips.def
+File: l3backend-dvips.def 2024-04-11 L3 backend support: dvips
+\l__pdf_internal_box=\box51
+\l__pdf_backend_content_box=\box52
+\l__pdf_backend_model_box=\box53
+\g__pdf_backend_annotation_int=\count272
+\g__pdf_backend_link_int=\count273
+\g__pdf_backend_link_sf_int=\count274
+) (WhatIsCIG.aux)
+\openout1 = `WhatIsCIG.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+Package hyperref Info: Link coloring ON on input line 10.
+--- file WhatIsCIG.css ---
+ [1
+
+] [2]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
+
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
+
+
+(C:\Users\0000102564\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+l. 31 Writing WhatIsCIG.idv[1] (WhatIsCIG0x.png)
+
+[3] (WhatIsCIG.bbl [4] [5] [6]) [7] (WhatIsCIG.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-04-11>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 12137 strings out of 474370
+ 177569 string characters out of 5738181
+ 1933751 words of memory out of 5000000
+ 34332 multiletter control sequences out of 15000+600000
+ 566021 words of font info for 66 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 80i,7n,96p,995b,786s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on WhatIsCIG.dvi (7 pages, 30704 bytes).

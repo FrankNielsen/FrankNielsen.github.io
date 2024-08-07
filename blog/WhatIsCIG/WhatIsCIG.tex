@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+\usepackage{hyperref,fullpage,url,amssymb,graphicx} % Required for inserting images
+
+\title{What is Computational Information Geometry?}
+
+\author{Frank Nielsen\\ Sony Computer Science Laboratories Inc\\ Tokyo, Japan}
+
+\date{}  
+
+\begin{document}
+
+ \maketitle
+
+\def\inner#1#2{\langle #1,#2\rangle}
+
+Information geometry~\cite{IG-2016} defines, studies, and applies core dualistic structures on smooth manifolds: Namely, pairs of dual affine connections $(\nabla,\nabla^*)$ coupled with Riemannian metrics $g$. 
+In particular, those $(g,\nabla,\nabla^*)$ structures can be built from statistical models~\cite{IG-2016} or induced by divergences~\cite{DIV-2010} (contrast functions on product manifolds) or  convex functions~\cite{Shima-2007} on open convex domains (e.g., logarithmic characteristic functions of symmetric cones~\cite{JordanAlgebraConnectionSymCone-2004,OharaEguchi-2014}).
+In the latter case, manifolds are said dually flat~\cite{IG-2016} or Hessian~\cite{Shima-2007} since the Riemannian metrics can be expressed locally either as $g(\theta)=\nabla^2 F(\theta)$ in the $\nabla$-affine coordinate system $\theta$ or equivalently as $g(\eta)=\nabla^2 F^*(\eta)$ in the $\nabla^*$-affine coordinate system $\eta$. 
+The Legendre-Fenchel duality 
+$F^*(\eta)=\sup_{\theta\in\Theta} \inner{\theta}{\eta}-F(\theta)$ allows to convert between primal to dual coordinates: $\eta(\theta)=\nabla F(\theta)$ and $\theta(\eta)=\nabla F^*(\eta)$.
+Dually flat spaces have been further generalized to handle singularities in~\cite{SingularDFS-2021}.
+
+To get a taste of computational information geometry (CIG), let us mention 
+ the following two problems when implementing information-geometric structures and algorithms:
+ 
+\begin{itemize}
+\item In practice, we can fully implement geometric algorithms on dually flat spaces when both the primal potential function $F(\theta)$ and the dual potential function $F^*(\eta)$ are known in closed-form and computationally tractable~\cite{MCIG-2019}. See also the Python library {\tt pyBregMan}~\cite{pyBregMan-2024}.
+To overcome computationally intractable potential functions, we may either consider Monte Carlo information geometry~\cite{MCIG-2019} or discretizing continuous distributions into a finite number of bins~\cite{Critchley-2014,CIG-2017} (amounts to consider standard simplex models). 
+
+\item The Chernoff information~\cite{Chernoff-1952} between two absolutely continuous distributions $P$ and $Q$ with densities $p(x)$ and $q(x)$ with respect to some dominating measure $\mu$ is defined by
+$$
+C(P,Q)=\max_{\alpha\in (0,1)} -\log\int p^\alpha q^{1-\alpha}\mathrm{d}\mu
+=-\log\int p^{\alpha^*} q^{1-{\alpha^*}}\mathrm{d}\mu,
+$$
+where $\alpha^*$ is called the optimal exponent.
+Chernoff information is used in statistics and for information fusion tasks~\cite{ChernoffJulier-2006} among others.
+In general, the Chernoff information between two continuous distributions is not available in closed form (e.g., not known in closed-form between multivariate Gaussian distributions~\cite{ChernoffNielsen-2022}).
+However, for densities $p$ and $q$ of an exponential family, the optimal exponent $\alpha^*$ can be characterized exactly geometrically as the unique intersection of the $e$-geodesic $\gamma_{pq}$ with a dual $m$-bisector~\cite{ChernoffNielsen-2013}. This geometric characterization yields an efficient approximation algorithm.
+\end{itemize}
+
+Thus computational information geometry aims at implementing robustly the information-geometric structures and the geometric algorithms on those structures for various applications. To give  two  examples of CIG, consider 
+\begin{itemize}
+\item 
+ computing the minimum enclosing ball (MEB) of a finite set of $m$-dimensional points on a dually flat space:
+The MEB is always unique and can be  calculated (in theory) using a LP-type 
+  randomized  linear-time solver~\cite{MEBB-2008} (linear programming-type) relying on oracles which exactly compute the enclosing balls passing through exactly $k$ points for $k\in\{2,\ldots, m\}$. However, these oracles are in general computationally intractable so that guaranteed approximation algorithms have been considered~\cite{MEB-2005}.
+  
+  \item Learning a deep neural networks using natural gradient~\cite{NatGrad-1998,DNN-Calin2020}: In practice, the number of parameters of a DNN is very large so that it is impractical to learn the weights of a DNN with natural gradient descent which require to handle large (potentially inverse) Fisher information matrices. Many practical approaches closely related to natural gradient have been thus considered in machine learning~\cite{NatGrad-Martens-2020,RFIM-2017,StructureNatGrad-2021}.
+
+  \end{itemize}
+  
+ 
+
+
+\maketitle
+ 
+
+\bibliographystyle{plain}
+\bibliography{WhatIsCIGBIB}
+
+\end{document}

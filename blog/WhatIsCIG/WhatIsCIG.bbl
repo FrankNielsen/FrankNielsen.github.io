@@ -1,0 +1,120 @@
+\begin{thebibliography}{10}
+
+\bibitem{NatGrad-1998}
+Shun-Ichi Amari.
+\newblock Natural gradient works efficiently in learning.
+\newblock {\em Neural computation}, 10(2):251--276, 1998.
+
+\bibitem{IG-2016}
+Shun-ichi Amari.
+\newblock {\em Information geometry and its applications}, volume 194.
+\newblock Springer, 2016.
+
+\bibitem{DIV-2010}
+Shun-ichi Amari and Andrzej Cichocki.
+\newblock Information geometry of divergence functions.
+\newblock {\em Bulletin of the polish academy of sciences. Technical sciences},
+  58(1):183--195, 2010.
+
+\bibitem{DNN-Calin2020}
+Ovidiu Calin.
+\newblock {\em Deep learning architectures}.
+\newblock Springer, 2020.
+
+\bibitem{Chernoff-1952}
+Herman Chernoff.
+\newblock A measure of asymptotic efficiency for tests of a hypothesis based on
+  the sum of observations.
+\newblock {\em The Annals of Mathematical Statistics}, pages 493--507, 1952.
+
+\bibitem{Critchley-2014}
+Frank Critchley and Paul Marriott.
+\newblock Computational information geometry in statistics: theory and
+  practice.
+\newblock {\em Entropy}, 16(5):2454--2471, 2014.
+
+\bibitem{ChernoffJulier-2006}
+Simon~J Julier.
+\newblock {An empirical study into the use of Chernoff information for robust,
+  distributed fusion of Gaussian mixture models}.
+\newblock In {\em 2006 9th International Conference on Information Fusion},
+  pages 1--8. IEEE, 2006.
+
+\bibitem{StructureNatGrad-2021}
+Wu~Lin, Frank Nielsen, Khan~Mohammad Emtiyaz, and Mark Schmidt.
+\newblock Tractable structured natural-gradient descent using local
+  parameterizations.
+\newblock In {\em International Conference on Machine Learning}, pages
+  6680--6691. PMLR, 2021.
+
+\bibitem{NatGrad-Martens-2020}
+James Martens.
+\newblock New insights and perspectives on the natural gradient method.
+\newblock {\em Journal of Machine Learning Research}, 21(146):1--76, 2020.
+
+\bibitem{SingularDFS-2021}
+Naomichi Nakajima and Toru Ohmoto.
+\newblock The dually flat structure for singular models.
+\newblock {\em Information Geometry}, 4(1):31--64, 2021.
+
+\bibitem{ChernoffNielsen-2013}
+Frank Nielsen.
+\newblock {An information-geometric characterization of Chernoff information}.
+\newblock {\em IEEE Signal Processing Letters}, 20(3):269--272, 2013.
+
+\bibitem{ChernoffNielsen-2022}
+Frank Nielsen.
+\newblock {Revisiting Chernoff information with likelihood ratio exponential
+  families}.
+\newblock {\em Entropy}, 24(10):1400, 2022.
+
+\bibitem{CIG-2017}
+Frank Nielsen, Frank Critchley, and Christopher~TJ Dodson.
+\newblock {\em Computational Information Geometry}.
+\newblock Springer, 2017.
+
+\bibitem{MCIG-2019}
+Frank Nielsen and Ga{\"e}tan Hadjeres.
+\newblock Monte carlo information-geometric structures.
+\newblock {\em Geometric Structures of Information}, pages 69--103, 2019.
+
+\bibitem{MEBB-2008}
+Frank Nielsen and Richard Nock.
+\newblock On the smallest enclosing information disk.
+\newblock {\em Information Processing Letters}, 105(3):93--97, 2008.
+
+\bibitem{pyBregMan-2024}
+Frank Nielsen and Alexander Soen.
+\newblock {\em {pyBregMan: A Python package for Bregman Manifolds}}.
+\newblock Tokyo, Japan, 2024.
+
+\bibitem{MEB-2005}
+Richard Nock and Frank Nielsen.
+\newblock {Fitting the smallest enclosing Bregman ball}.
+\newblock In {\em European Conference on Machine Learning}, pages 649--656.
+  Springer, 2005.
+
+\bibitem{OharaEguchi-2014}
+Atsumi Ohara and Shinto Eguchi.
+\newblock {Geometry on positive definite matrices deformed by $V$-potentials
+  and its submanifold structure}.
+\newblock {\em Geometric Theory of Information}, pages 31--55, 2014.
+
+\bibitem{Shima-2007}
+Hirohiko Shima.
+\newblock {\em {The geometry of Hessian structures}}.
+\newblock World Scientific, 2007.
+
+\bibitem{RFIM-2017}
+Ke~Sun and Frank Nielsen.
+\newblock {Relative Fisher information and natural gradient for learning large
+  modular models}.
+\newblock In {\em International Conference on Machine Learning}, pages
+  3289--3298. PMLR, 2017.
+
+\bibitem{JordanAlgebraConnectionSymCone-2004}
+Keiko Uohashi and Atsumi Ohara.
+\newblock Jordan algebras and dual affine connections on symmetric cones.
+\newblock {\em Positivity}, 8:369--378, 2004.
+
+\end{thebibliography}

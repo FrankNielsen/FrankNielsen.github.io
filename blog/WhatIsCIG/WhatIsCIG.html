@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>What is Computational Information Geometry?</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="WhatIsCIG.tex"> 
+<link rel="stylesheet" type="text/css" href="WhatIsCIG.css"> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+
+<h2 class="titleHead">What is Computational Information Geometry?</h2>
+             <div class="author" ><span 
+class="cmr-12">Frank Nielsen</span>
+<br /><span 
+class="cmr-12">Sony Computer Science Laboratories Inc</span>
+<br />             <span 
+class="cmr-12">Tokyo, Japan</span></div><br />
+
+This text in <A HREF="WhatIsCIG.pdf" target="_blank">PDF</A>
+<div class="date" ></div>
+   </div>
+<!--l. 16--><p class="indent" >   Information geometry&#x00A0;<span class="cite">[<a 
+href="#XIG-2016">2</a>]</span> defines, studies, and applies core dualistic structures on smooth manifolds:
+Namely, pairs of dual affine connections (<span 
+class="cmsy-10x-x-109">&#x2207;</span><span 
+class="cmmi-10x-x-109">,</span><span 
+class="cmsy-10x-x-109">&#x2207;</span><sup><span 
+class="cmsy-8">*</span></sup>) coupled with Riemannian metrics <span 
+class="cmmi-10x-x-109">g</span>. In particular, those
+(<span 
+class="cmmi-10x-x-109">g,</span><span 
+class="cmsy-10x-x-109">&#x2207;</span><span 
+class="cmmi-10x-x-109">,</span><span 
+class="cmsy-10x-x-109">&#x2207;</span><sup><span 
+class="cmsy-8">*</span></sup>) structures can be built from statistical models&#x00A0;<span class="cite">[<a 
+href="#XIG-2016">2</a>]</span> or induced by divergences&#x00A0;<span class="cite">[<a 
+href="#XDIV-2010">3</a>]</span> (contrast
+functions on product manifolds) or convex functions&#x00A0;<span class="cite">[<a 
+href="#XShima-2007">19</a>]</span> on open convex domains (e.g., logarithmic
+characteristic functions of symmetric cones&#x00A0;<span class="cite">[<a 
+href="#XJordanAlgebraConnectionSymCone-2004">21</a>,&#x00A0;<a 
+href="#XOharaEguchi-2014">18</a>]</span>). In the latter case, manifolds are said dually flat&#x00A0;<span class="cite">[<a 
+href="#XIG-2016">2</a>]</span>
+or Hessian&#x00A0;<span class="cite">[<a 
+href="#XShima-2007">19</a>]</span> since the Riemannian metrics can be expressed locally either as <span 
+class="cmmi-10x-x-109">g</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) = <span 
+class="cmsy-10x-x-109">&#x2207;</span><sup><span 
+class="cmr-8">2</span></sup><span 
+class="cmmi-10x-x-109">F</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) in the
+<span 
+class="cmsy-10x-x-109">&#x2207;</span>-affine coordinate system <span 
+class="cmmi-10x-x-109">&#x03B8; </span>or equivalently as <span 
+class="cmmi-10x-x-109">g</span>(<span 
+class="cmmi-10x-x-109">&#x03B7;</span>) = <span 
+class="cmsy-10x-x-109">&#x2207;</span><sup><span 
+class="cmr-8">2</span></sup><span 
+class="cmmi-10x-x-109">F</span><sup><span 
+class="cmsy-8">*</span></sup>(<span 
+class="cmmi-10x-x-109">&#x03B7;</span>) in the <span 
+class="cmsy-10x-x-109">&#x2207;</span><sup><span 
+class="cmsy-8">*</span></sup>-affine coordinate system <span 
+class="cmmi-10x-x-109">&#x03B7;</span>. The
+Legendre-Fenchel duality <span 
+class="cmmi-10x-x-109">F</span><sup><span 
+class="cmsy-8">*</span></sup>(<span 
+class="cmmi-10x-x-109">&#x03B7;</span>) = sup<sub><span 
+class="cmmi-8">&#x03B8;</span><span 
+class="cmsy-8">&#x2208;</span><span 
+class="cmr-8">&#x0398;</span></sub><span 
+class="cmsy-10x-x-109">&#x27E8;</span><span 
+class="cmmi-10x-x-109">&#x03B8;,&#x03B7;</span><span 
+class="cmsy-10x-x-109">&#x27E9;- </span><span 
+class="cmmi-10x-x-109">F</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) allows to convert between primal to dual
+coordinates: <span 
+class="cmmi-10x-x-109">&#x03B7;</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) = <span 
+class="cmsy-10x-x-109">&#x2207;</span><span 
+class="cmmi-10x-x-109">F</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>) and <span 
+class="cmmi-10x-x-109">&#x03B8;</span>(<span 
+class="cmmi-10x-x-109">&#x03B7;</span>) = <span 
+class="cmsy-10x-x-109">&#x2207;</span><span 
+class="cmmi-10x-x-109">F</span><sup><span 
+class="cmsy-8">*</span></sup>(<span 
+class="cmmi-10x-x-109">&#x03B7;</span>). Dually flat spaces have been further generalized to handle
+singularities in&#x00A0;<span class="cite">[<a 
+href="#XSingularDFS-2021">10</a>]</span>.
+<!--l. 23--><p class="indent" >   To get a taste of computational information geometry (CIG), let us mention the following two
+problems when implementing information-geometric structures and algorithms:
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 27--><p class="noindent" >In practice, we can fully implement geometric algorithms on dually flat spaces when both
+     the  primal  potential  function  <span 
+class="cmmi-10x-x-109">F</span>(<span 
+class="cmmi-10x-x-109">&#x03B8;</span>)  and  the  dual  potential  function  <span 
+class="cmmi-10x-x-109">F</span><sup><span 
+class="cmsy-8">*</span></sup>(<span 
+class="cmmi-10x-x-109">&#x03B7;</span>)  are  known  in
+     closed-form and computationally tractable&#x00A0;<span class="cite">[<a 
+href="#XMCIG-2019">14</a>]</span>. See also the Python library <span 
+class="cmtt-10x-x-109">pyBregMan</span>&#x00A0;<span class="cite">[<a 
+href="#XpyBregMan-2024">16</a>]</span>.
+     To overcome computationally intractable potential functions, we may either consider Monte
+     Carlo information geometry&#x00A0;<span class="cite">[<a 
+href="#XMCIG-2019">14</a>]</span> or discretizing continuous distributions into a finite number
+     of bins&#x00A0;<span class="cite">[<a 
+href="#XCritchley-2014">6</a>,&#x00A0;<a 
+href="#XCIG-2017">13</a>]</span> (amounts to consider standard simplex models).
+     </li>
+     <li class="itemize">
+     <!--l. 30--><p class="noindent" >The Chernoff information&#x00A0;<span class="cite">[<a 
+href="#XChernoff-1952">5</a>]</span> between two absolutely continuous distributions <span 
+class="cmmi-10x-x-109">P </span>and <span 
+class="cmmi-10x-x-109">Q </span>with
+     densities <span 
+class="cmmi-10x-x-109">p</span>(<span 
+class="cmmi-10x-x-109">x</span>) and <span 
+class="cmmi-10x-x-109">q</span>(<span 
+class="cmmi-10x-x-109">x</span>) with respect to some dominating measure <span 
+class="cmmi-10x-x-109">&#x03BC; </span>is defined by
+<div class="math-display" >
+                                                                                         
+                                                                                         
+<img 
+src="WhatIsCIG0x.png" alt="                     &#x222B;                  &#x222B;
+C (P, Q) =  max  - log   p&#x03B1;q1-&#x03B1;d &#x03BC; = - log   p&#x03B1;*q1-&#x03B1;*d&#x03BC;,
+          &#x03B1;&#x2208;(0,1)
+" class="math-display" ></div>
+     <!--l. 35--><p class="noindent" >where <span 
+class="cmmi-10x-x-109">&#x03B1;</span><sup><span 
+class="cmsy-8">*</span></sup> is called the optimal exponent. Chernoff information is used in statistics and for
+     information fusion tasks&#x00A0;<span class="cite">[<a 
+href="#XChernoffJulier-2006">7</a>]</span> among others. In general, the Chernoff information between two
+     continuous distributions is not available in closed form (e.g., not known in closed-form between
+     multivariate Gaussian distributions&#x00A0;<span class="cite">[<a 
+href="#XChernoffNielsen-2022">12</a>]</span>). However, for densities <span 
+class="cmmi-10x-x-109">p </span>and <span 
+class="cmmi-10x-x-109">q </span>of an exponential
+     family, the optimal exponent <span 
+class="cmmi-10x-x-109">&#x03B1;</span><sup><span 
+class="cmsy-8">*</span></sup> can be characterized exactly geometrically as the unique
+     intersection of the <span 
+class="cmmi-10x-x-109">e</span>-geodesic <span 
+class="cmmi-10x-x-109">&#x03B3;</span><sub><span 
+class="cmmi-8">pq</span></sub> with a dual <span 
+class="cmmi-10x-x-109">m</span>-bisector&#x00A0;<span class="cite">[<a 
+href="#XChernoffNielsen-2013">11</a>]</span>. This geometric characterization
+     yields an efficient approximation algorithm.</li></ul>
+<!--l. 41--><p class="indent" >   Thus computational information geometry aims at implementing robustly the information-geometric
+structures and the geometric algorithms on those structures for various applications. To give two examples
+of CIG, consider
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 44--><p class="noindent" >computing the minimum enclosing ball (MEB) of a finite set of <span 
+class="cmmi-10x-x-109">m</span>-dimensional points on a
+     dually flat space: The MEB is always unique and can be calculated (in theory) using a LP-type
+     randomized linear-time solver&#x00A0;<span class="cite">[<a 
+href="#XMEBB-2008">15</a>]</span> (linear programming-type) relying on oracles which exactly
+     compute the enclosing balls passing through exactly <span 
+class="cmmi-10x-x-109">k </span>points for <span 
+class="cmmi-10x-x-109">k </span><span 
+class="cmsy-10x-x-109">&#x2208; {</span>2<span 
+class="cmmi-10x-x-109">,</span><span 
+class="cmmi-10x-x-109">&#x2026;</span><span 
+class="cmmi-10x-x-109">,m</span><span 
+class="cmsy-10x-x-109">}</span>. However,
+     these oracles are in general computationally intractable so that guaranteed approximation
+     algorithms have been considered&#x00A0;<span class="cite">[<a 
+href="#XMEB-2005">17</a>]</span>.
+     </li>
+     <li class="itemize">
+     <!--l. 48--><p class="noindent" >Learning a deep neural networks using natural gradient&#x00A0;<span class="cite">[<a 
+href="#XNatGrad-1998">1</a>,&#x00A0;<a 
+href="#XDNN-Calin2020">4</a>]</span>: In practice, the number of
+     parameters of a DNN is very large so that it is impractical to learn the weights of a DNN
+     with  natural  gradient  descent  which  require  to  handle  large  (potentially  inverse)  Fisher
+     information matrices. Many practical approaches closely related to natural gradient have been
+     thus considered in machine learning&#x00A0;<span class="cite">[<a 
+href="#XNatGrad-Martens-2020">9</a>,&#x00A0;<a 
+href="#XRFIM-2017">20</a>,&#x00A0;<a 
+href="#XStructureNatGrad-2021">8</a>]</span>.
+     </li></ul>
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+    <div class="thebibliography">
+    <p class="bibitem" ><span class="biblabel">
+  [1]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XNatGrad-1998"></a>Shun-Ichi Amari.   Natural gradient works efficiently in learning.   <span 
+class="cmti-10x-x-109">Neural computation</span>,
+    10(2):251&#8211;276, 1998.
+    </p>
+                                                                                         
+                                                                                         
+    <p class="bibitem" ><span class="biblabel">
+  [2]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XIG-2016"></a>Shun-ichi Amari. <span 
+class="cmti-10x-x-109">Information geometry and its applications</span>, volume 194. Springer, 2016.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [3]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XDIV-2010"></a>Shun-ichi Amari and Andrzej Cichocki.   Information geometry of divergence functions.
+    <span 
+class="cmti-10x-x-109">Bulletin of the polish academy of sciences. Technical sciences</span>, 58(1):183&#8211;195, 2010.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [4]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XDNN-Calin2020"></a>Ovidiu Calin. <span 
+class="cmti-10x-x-109">Deep learning architectures</span>. Springer, 2020.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [5]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XChernoff-1952"></a>Herman Chernoff.  A measure of asymptotic efficiency for tests of a hypothesis based on
+    the sum of observations. <span 
+class="cmti-10x-x-109">The Annals of Mathematical Statistics</span>, pages 493&#8211;507, 1952.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [6]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XCritchley-2014"></a>Frank Critchley and Paul Marriott.  Computational information geometry in statistics:
+    theory and practice. <span 
+class="cmti-10x-x-109">Entropy</span>, 16(5):2454&#8211;2471, 2014.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [7]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XChernoffJulier-2006"></a>Simon&#x00A0;J  Julier.   An  empirical  study  into  the  use  of  Chernoff  information  for  robust,
+    distributed  fusion  of  Gaussian  mixture  models.   In  <span 
+class="cmti-10x-x-109">2006 9th International Conference on</span>
+    <span 
+class="cmti-10x-x-109">Information Fusion</span>, pages 1&#8211;8. IEEE, 2006.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [8]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XStructureNatGrad-2021"></a>Wu&#x00A0;Lin,  Frank  Nielsen,  Khan&#x00A0;Mohammad  Emtiyaz,  and  Mark  Schmidt.    Tractable
+    structured natural-gradient descent using local parameterizations. In <span 
+class="cmti-10x-x-109">International Conference</span>
+    <span 
+class="cmti-10x-x-109">on Machine Learning</span>, pages 6680&#8211;6691. PMLR, 2021.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [9]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XNatGrad-Martens-2020"></a>James Martens.  New insights and perspectives on the natural gradient method.  <span 
+class="cmti-10x-x-109">Journal</span>
+    <span 
+class="cmti-10x-x-109">of Machine Learning Research</span>, 21(146):1&#8211;76, 2020.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [10]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XSingularDFS-2021"></a>Naomichi Nakajima and Toru Ohmoto.   The dually flat structure for singular models.
+    <span 
+class="cmti-10x-x-109">Information Geometry</span>, 4(1):31&#8211;64, 2021.
+                                                                                         
+                                                                                         
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [11]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XChernoffNielsen-2013"></a>Frank Nielsen. An information-geometric characterization of Chernoff information. <span 
+class="cmti-10x-x-109">IEEE</span>
+    <span 
+class="cmti-10x-x-109">Signal Processing Letters</span>, 20(3):269&#8211;272, 2013.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [12]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XChernoffNielsen-2022"></a>Frank Nielsen. Revisiting Chernoff information with likelihood ratio exponential families.
+    <span 
+class="cmti-10x-x-109">Entropy</span>, 24(10):1400, 2022.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [13]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XCIG-2017"></a>Frank Nielsen, Frank Critchley, and Christopher&#x00A0;TJ Dodson. <span 
+class="cmti-10x-x-109">Computational Information</span>
+    <span 
+class="cmti-10x-x-109">Geometry</span>. Springer, 2017.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [14]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XMCIG-2019"></a>Frank  Nielsen  and  Gaëtan  Hadjeres.    Monte  carlo  information-geometric  structures.
+    <span 
+class="cmti-10x-x-109">Geometric Structures of Information</span>, pages 69&#8211;103, 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [15]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XMEBB-2008"></a>Frank Nielsen and Richard Nock. On the smallest enclosing information disk. <span 
+class="cmti-10x-x-109">Information</span>
+    <span 
+class="cmti-10x-x-109">Processing Letters</span>, 105(3):93&#8211;97, 2008.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [16]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XpyBregMan-2024"></a>Frank Nielsen and Alexander Soen. <span 
+class="cmti-10x-x-109">pyBregMan: A Python package for Bregman Manifolds</span>.
+    Tokyo, Japan, 2024.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [17]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XMEB-2005"></a>Richard Nock and Frank Nielsen. Fitting the smallest enclosing Bregman ball. In <span 
+class="cmti-10x-x-109">European</span>
+    <span 
+class="cmti-10x-x-109">Conference on Machine Learning</span>, pages 649&#8211;656. Springer, 2005.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [18]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XOharaEguchi-2014"></a>Atsumi Ohara and Shinto Eguchi.  Geometry on positive definite matrices deformed by
+    <span 
+class="cmmi-10x-x-109">V </span>-potentials and its submanifold structure.  <span 
+class="cmti-10x-x-109">Geometric Theory of Information</span>, pages 31&#8211;55,
+    2014.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [19]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XShima-2007"></a>Hirohiko Shima. <span 
+class="cmti-10x-x-109">The geometry of Hessian structures</span>. World Scientific, 2007.
+                                                                                         
+                                                                                         
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [20]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XRFIM-2017"></a>Ke&#x00A0;Sun and Frank Nielsen. Relative Fisher information and natural gradient for learning
+    large modular models.  In <span 
+class="cmti-10x-x-109">International Conference on Machine Learning</span>, pages 3289&#8211;3298.
+    PMLR, 2017.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [21]<span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span><a 
+ id="XJordanAlgebraConnectionSymCone-2004"></a>Keiko  Uohashi  and  Atsumi  Ohara.   Jordan  algebras  and  dual  affine  connections  on
+    symmetric cones. <span 
+class="cmti-10x-x-109">Positivity</span>, 8:369&#8211;378, 2004.
+</p>
+    </div>
+    
+</body></html> 
+
+                                                                                         
+
+

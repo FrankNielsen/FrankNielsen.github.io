@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: WhatIsCIG.aux
+The style file: plain.bst
+Database file #1: WhatIsCIGBIB.bib
+You've used 21 entries,
+            2118 wiz_defined-function locations,
+            646 strings with 7144 characters,
+and the built_in function-call counts, 7017 in all, are:
+= -- 734
+> -- 234
+< -- 8
++ -- 95
+- -- 72
+* -- 431
+:= -- 1114
+add.period$ -- 67
+call.type$ -- 21
+change.case$ -- 94
+chr.to.int$ -- 0
+cite$ -- 21
+duplicate$ -- 304
+empty$ -- 596
+format.name$ -- 72
+if$ -- 1525
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 24
+newline$ -- 108
+num.names$ -- 42
+pop$ -- 108
+preamble$ -- 1
+purify$ -- 78
+quote$ -- 0
+skip$ -- 226
+stack$ -- 0
+substring$ -- 515
+swap$ -- 86
+text.length$ -- 8
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 76
+warning$ -- 0
+while$ -- 80
+width$ -- 23
+write$ -- 233
