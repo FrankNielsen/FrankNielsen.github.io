@@ -1,0 +1,208 @@
+// (C) 2024 Frank NIELSEN
+// Frank.Nielsen@acm.org
+//
+// implements
+//  "Jeffreys centroids: A closed-form expression for positive histograms and a guaranteed tight approximation for frequency histograms."
+//  IEEE Signal Processing Letters 20.7 (2013): 657-660.
+//
+// We use external library  specfunc/lambert.c  by  G. Jungman (converted in Java)
+
+class StandAloneJeffreysHistogramCentroid
+{
+
+  
+ static  double [] MiddleHistogram(double[] p,double[] q)
+{
+  int d=p.length, i;
+double [] res=new double[d];
+
+
+for(i=0;i<d;i++) 
+{res[i]=p[i]+q[i]+2.0*Math.sqrt(p[i]*q[i]);}
+
+
+return Normalize(res);
+}
+
+  static double W(double x)
+  {
+    return LambertW.branch0(x);
+  }
+
+
+  static double sum(double [] array)
+  {
+    double res=0;
+    for (int i=0; i<array.length; i++) res+=array[i];
+    return res;
+  }
+
+  static double scalarJeffreysDiv(double p, double q)
+  {
+    return (p-q)*Math.log(p/q);
+  }
+
+  static double JeffreysDiv(double [] array1, double[] array2)
+  {
+    int d=array1.length;
+    double  res=0;
+    int i;
+    for (i=0; i<d; i++)  res+=scalarJeffreysDiv(array1[i], array2[i]);
+    return res;
+  }
+
+  // Average Jeffreys divergence from  a histogram p to a set of histograms
+  static double JeffreysInformation(double [][]set, double[] p)
+  {
+    int n=set.length;
+    double   res=0;
+    int i;
+    for (i=0; i<n; i++) res+=JeffreysDiv(set[i], p);
+    return res;
+  }
+
+
+  // a is arithmetic mean of the centroids, g is normalized geometric mean
+  static double Jeffreys1D(double a, double g, double lambda)
+  {
+    return a/W(Math.exp(1+lambda)*a/g);
+  }
+
+
+  static double [] Normalize(double [] array)
+  {
+    int d=array.length;
+    double [] res=new double [d];
+    int i;
+    double norm=sum(array);
+    for (i=0; i<d; i++) res[i]=array[i]/norm;
+    return res;
+  }
+
+  // Arithmetic mean is always normalized
+  static double [] ArithmeticMean(double [][] set)
+  {
+    int n=set.length, d=set[0].length;
+    double [] res=new double [d];
+    int i, j;
+    for (i=0; i<d; i++)
+    {
+      res[i]=0;
+      for (j=0; j<n; j++) res[i]+=set[j][i];
+      res[i]/=(double) n;
+    }
+    return res;
+  }
+
+  // Geometric mean needs to be normalized
+  static double [] NormalizedGeometricMean(double [][] set)
+  {
+    int n=set.length, d=set[0].length;
+    double [] res=new double [d];
+    int i, j;
+    for (i=0; i<d; i++)
+    {
+      res[i]=1;
+      for (j=0; j<n; j++) res[i]*=set[j][i];
+      res[i]=Math.pow(res[i], 1.0/(double)n); // unstable use exp log
+    }
+    return Normalize(res);
+  }
+
+
+  static double [] UnnormalizedJeffreysCentroid(double [] array1, double[] array2)
+  {
+
+    return UnnormalizedJeffreysCentroid(array1, array2, 0.0);
+  }
+
+
+
+
+  static double [] UnnormalizedJeffreysCentroid(double [] array1, double[] array2, double lambda)
+  {
+    int d=array1.length;
+    double [] res=new double [d];
+    int i;
+    for (i=0; i<d; i++) res[i]= Jeffreys1D(array1[i], array2[i], lambda);
+    return res;
+  }
+
+
+static double [] NormalizedExactJeffreysCentroid(double [][] set)
+{
+  double [] a,g;
+
+    a=ArithmeticMean(set);
+    g=NormalizedGeometricMean(set);
+return MiddleHistogram(a,g);
+}
+
+  static double [] UnnormalizedJeffreysCentroid(double [][] set)
+  {
+
+    return UnnormalizedJeffreysCentroid(ArithmeticMean(set),NormalizedGeometricMean(set));
+  }
+  
+
+  static double [] NormalizedJeffreysCentroid(double [][] set)
+  {
+    double [] A, G;
+
+    A=ArithmeticMean(set);
+    G=NormalizedGeometricMean(set);
+
+
+    double  lmin=-1, lmax=0, l, csum=0;
+
+    double eps=1.0e-8;
+    while (Math.abs(lmax-lmin)>eps)
+    {
+      l=0.5*(lmax+lmin);
+      csum=sum(UnnormalizedJeffreysCentroid(A, G, l));
+      if (csum>1) lmin=l;
+      else lmax=l;
+    }
+    l=0.5*(lmax+lmin);
+    return UnnormalizedJeffreysCentroid(A, G, l);
+  }
+
+
+// test procedure
+  static void testJeffreysCentroid()
+  {
+    int  n=5;
+    int d=3; //int  d=256;
+    int i, j;
+    double [][] set=new double[n][d];
+
+    for (i=0; i<n; i++) {
+      for (j=0; j<d; j++)
+      {
+        set[i][j]=Math.random();
+      }
+      set[i]=Normalize(set[i]);
+    }
+
+      // provide a lower bound
+      double [] unnormalizedJeffreys=UnnormalizedJeffreysCentroid(set);
+      double unnormalizedJinfo=JeffreysInformation(set, unnormalizedJeffreys);
+      
+      double [] normalizedJeffreys=Normalize(unnormalizedJeffreys);
+      double normalizedJinfo=JeffreysInformation(set, normalizedJeffreys);
+
+      double [] numericalJeffreys=  NormalizedJeffreysCentroid(set);
+      double Jinfo=JeffreysInformation(set, numericalJeffreys);
+
+      System.out.println("Jeffreys unnormalized info (closed form, lower bound):\t"+unnormalizedJinfo);
+       System.out.println("Jeffreys unnormalized info (closed form, upper bound):\t"+normalizedJinfo);
+      System.out.println("Jeffreys normalized info (numerical):\t\t\t"+Jinfo);
+      
+      //
+      double [] A=ArithmeticMean(set);
+      double [] G=NormalizedGeometricMean(set);
+      
+      // Same Jeffreys information
+       System.out.println("Remarkable property:"+JeffreysInformation(set,A)+"\t"+JeffreysInformation(set,G));
+    }
+  }
