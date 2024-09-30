@@ -10,19 +10,80 @@
 class StandAloneJeffreysHistogramCentroid
 {
 
-  
- static  double [] MiddleHistogram(double[] p,double[] q)
+    
+static double [] mGeodesic(double[] p, double [] q,double lambda)
 {
-  int d=p.length, i;
-double [] res=new double[d];
-
-
-for(i=0;i<d;i++) 
-{res[i]=p[i]+q[i]+2.0*Math.sqrt(p[i]*q[i]);}
-
-
-return Normalize(res);
+ int i,dd=p.length;
+ double [] res=new double [dd];
+ 
+ for(i=0;i<dd;i++) {res[i]=(1-lambda)*p[i]+lambda*q[i];}
+ 
+ 
+  return res;
 }
+
+
+static double [] eGeodesic(double[] p, double [] q,double lambda)
+{
+ int i,dd=p.length;
+ double [] res=new double [dd];
+ 
+ for(i=0;i<dd;i++) {res[i]=Math.pow(p[i],(1-lambda))*Math.pow(q[i],lambda);}
+ 
+ 
+  return Normalize(res);
+}
+
+
+  static double scalarKLD(double p, double q)
+  {
+    return p*Math.log(p/q);
+  }
+
+  static double KLD(double [] array1, double[] array2)
+  {
+    int d=array1.length;
+    double  res=0;
+    int i;
+    for (i=0; i<d; i++)  res+=scalarKLD(array1[i], array2[i]);
+    return res;
+  }
+
+
+  static double rightKLInfo(double [][]set, double[] p)
+  {
+    int n=set.length;
+    double   res=0;
+    int i;
+    for (i=0; i<n; i++) res+=KLD(set[i], p); // right
+    return res;
+  }
+
+  static double leftKLInfo(double [][]set, double[] p)
+  {
+    int n=set.length;
+    double   res=0;
+    int i;
+    for (i=0; i<n; i++) res+=KLD(p, set[i]); // left
+    return res;
+  }
+
+
+
+  static  double [] MiddleHistogram(double[] p, double[] q)
+  {
+    int d=p.length, i;
+    double [] res=new double[d];
+
+
+    for (i=0; i<d; i++)
+    {
+      res[i]=p[i]+q[i]+2.0*Math.sqrt(p[i]*q[i]);
+    }
+
+
+    return Normalize(res);
+  }
 
   static double W(double x)
   {
@@ -129,21 +190,21 @@ return Normalize(res);
   }
 
 
-static double [] NormalizedExactJeffreysCentroid(double [][] set)
-{
-  double [] a,g;
+  static double [] NormalizedExactJeffreysCentroid(double [][] set)
+  {
+    double [] a, g;
 
     a=ArithmeticMean(set);
     g=NormalizedGeometricMean(set);
-return MiddleHistogram(a,g);
-}
+    return MiddleHistogram(a, g);
+  }
 
   static double [] UnnormalizedJeffreysCentroid(double [][] set)
   {
 
-    return UnnormalizedJeffreysCentroid(ArithmeticMean(set),NormalizedGeometricMean(set));
+    return UnnormalizedJeffreysCentroid(ArithmeticMean(set), NormalizedGeometricMean(set));
   }
-  
+
 
   static double [] NormalizedJeffreysCentroid(double [][] set)
   {
@@ -168,7 +229,7 @@ return MiddleHistogram(a,g);
   }
 
 
-// test procedure
+  // test procedure
   static void testJeffreysCentroid()
   {
     int  n=5;
@@ -184,25 +245,25 @@ return MiddleHistogram(a,g);
       set[i]=Normalize(set[i]);
     }
 
-      // provide a lower bound
-      double [] unnormalizedJeffreys=UnnormalizedJeffreysCentroid(set);
-      double unnormalizedJinfo=JeffreysInformation(set, unnormalizedJeffreys);
-      
-      double [] normalizedJeffreys=Normalize(unnormalizedJeffreys);
-      double normalizedJinfo=JeffreysInformation(set, normalizedJeffreys);
+    // provide a lower bound
+    double [] unnormalizedJeffreys=UnnormalizedJeffreysCentroid(set);
+    double unnormalizedJinfo=JeffreysInformation(set, unnormalizedJeffreys);
 
-      double [] numericalJeffreys=  NormalizedJeffreysCentroid(set);
-      double Jinfo=JeffreysInformation(set, numericalJeffreys);
+    double [] normalizedJeffreys=Normalize(unnormalizedJeffreys);
+    double normalizedJinfo=JeffreysInformation(set, normalizedJeffreys);
 
-      System.out.println("Jeffreys unnormalized info (closed form, lower bound):\t"+unnormalizedJinfo);
-       System.out.println("Jeffreys unnormalized info (closed form, upper bound):\t"+normalizedJinfo);
-      System.out.println("Jeffreys normalized info (numerical):\t\t\t"+Jinfo);
-      
-      //
-      double [] A=ArithmeticMean(set);
-      double [] G=NormalizedGeometricMean(set);
-      
-      // Same Jeffreys information
-       System.out.println("Remarkable property:"+JeffreysInformation(set,A)+"\t"+JeffreysInformation(set,G));
-    }
+    double [] numericalJeffreys=  NormalizedJeffreysCentroid(set);
+    double Jinfo=JeffreysInformation(set, numericalJeffreys);
+
+    System.out.println("Jeffreys unnormalized info (closed form, lower bound):\t"+unnormalizedJinfo);
+    System.out.println("Jeffreys unnormalized info (closed form, upper bound):\t"+normalizedJinfo);
+    System.out.println("Jeffreys normalized info (numerical):\t\t\t"+Jinfo);
+
+    //
+    double [] A=ArithmeticMean(set);
+    double [] G=NormalizedGeometricMean(set);
+
+    // Same Jeffreys information
+    System.out.println("Remarkable property:"+JeffreysInformation(set, A)+"\t"+JeffreysInformation(set, G));
   }
+}
