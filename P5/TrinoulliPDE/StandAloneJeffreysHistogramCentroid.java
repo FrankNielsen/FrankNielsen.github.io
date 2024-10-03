@@ -16,7 +16,7 @@ static double [] mGeodesic(double[] p, double [] q,double lambda)
  int i,dd=p.length;
  double [] res=new double [dd];
  
- for(i=0;i<dd;i++) {res[i]=(1-lambda)*p[i]+lambda*q[i];}
+ for(i=0;i<dd;i++) {res[i]=(1.0-lambda)*p[i]+lambda*q[i];}
  
  
   return res;
@@ -70,7 +70,7 @@ static double [] eGeodesic(double[] p, double [] q,double lambda)
 
 
 
-  static  double [] MiddleHistogram(double[] p, double[] q)
+  static  double [] FisherRaoMidpoint(double[] p, double[] q)
   {
     int d=p.length, i;
     double [] res=new double[d];
@@ -110,6 +110,15 @@ static double [] eGeodesic(double[] p, double [] q,double lambda)
     int i;
     for (i=0; i<d; i++)  res+=scalarJeffreysDiv(array1[i], array2[i]);
     return res;
+  }
+  
+    static double TotalVariation(double [] array1, double[] array2)
+  {
+    int d=array1.length;
+    double  res=0;
+    int i;
+    for (i=0; i<d; i++)  res+=Math.abs(array1[i]- array2[i]);
+    return 0.5*res;
   }
 
   // Average Jeffreys divergence from  a histogram p to a set of histograms
@@ -190,13 +199,13 @@ static double [] eGeodesic(double[] p, double [] q,double lambda)
   }
 
 
-  static double [] NormalizedExactJeffreysCentroid(double [][] set)
+  static double [] JeffreysFisherRaoCentroid(double [][] set)
   {
     double [] a, g;
 
     a=ArithmeticMean(set);
     g=NormalizedGeometricMean(set);
-    return MiddleHistogram(a, g);
+    return FisherRaoMidpoint(a, g);
   }
 
   static double [] UnnormalizedJeffreysCentroid(double [][] set)
@@ -205,18 +214,124 @@ static double [] eGeodesic(double[] p, double [] q,double lambda)
     return UnnormalizedJeffreysCentroid(ArithmeticMean(set), NormalizedGeometricMean(set));
   }
 
+static double max(double x, double y){if (x>y) return x; else return y;}
 
-  static double [] NormalizedJeffreysCentroid(double [][] set)
+static void Test2()
+{
+int d=256;
+int i; int j;
+double almost1=0.99999,eps;
+
+for(d=16;d<=1024;d*=2)
+{
+
+double [][] set=new double[2][d];  
+for(i=0;i<d;i++) set[0][i]=1.0/(double)d;
+set[1][0]=almost1;eps=(1-almost1)/(d-1.0);
+for(i=1;i<d;i++) set[1][i]=eps;
+
+double [] J=NumericalJeffreysCentroid(set);
+double [] FR=JeffreysFisherRaoCentroid(set);
+
+double TV=TotalVariation(J,FR);
+System.out.println("Total variation between FR and J in dim d="+d+" :"+TV);
+}
+
+}
+
+// Frank
+  static double [] JeffreysCentroidInfoGeo(double [][] set)
+  {
+    double lm=0,lM=1,l,eps=1.e-5;
+    double [] res=null;
+    double [] A, G;
+    
+    A=ArithmeticMean(set);
+    G=NormalizedGeometricMean(set);
+    
+    while(Math.abs(lM-lm)>eps)
+    {
+      l=(lm+lM)/2.0;
+      res=mGeodesic(A,G,l);
+      if (KLD(res,A)>KLD(G,res)){lM=l;}  
+      else {lm=l;}
+    }
+    
+    double delta=Math.abs(KLD(res,A)-KLD(G,res));
+    System.out.println("info geo quality:"+delta);
+    
+    return res;
+  }
+  
+  
+
+  static double [] NumericalJeffreysCentroid(double [][] set,double eps)
   {
     double [] A, G;
+    double error;
 
     A=ArithmeticMean(set);
     G=NormalizedGeometricMean(set);
 
 
-    double  lmin=-1, lmax=0, l, csum=0;
+    double  lmin=-Double.MAX_VALUE, lmax=0, l, csum=0;
+int i,d=A.length;
+for(i=0;i<d;i++) lmin=max(lmin,A[i]+Math.log(G[i])-1);
 
-    double eps=1.0e-8;
+l=0.5*(lmax+lmin);
+      csum=sum(UnnormalizedJeffreysCentroid(A, G, l));
+      error=(1.0/csum);
+ 
+    while (error-1>eps)
+    {
+      l=0.5*(lmax+lmin);
+      csum=sum(UnnormalizedJeffreysCentroid(A, G, l));
+      if (csum>1) lmin=l;
+      else lmax=l;
+    
+ error=(1.0/csum);  
+}
+    
+    
+    l=0.5*(lmax+lmin);
+    
+    error=(1.0/csum)-1;
+    System.out.println("guaranteed approximation with eps="+eps);
+    
+    double kl=KLD(UnnormalizedJeffreysCentroid(A, G, l),G);
+    
+    double delta=Math.abs(-kl-l);
+    
+    System.out.println("\t\tnumerical lambda:"+l+" KL(c:g)="+kl+ "  delta="+delta);
+    double klac=KLD(A,UnnormalizedJeffreysCentroid(A, G, l));
+    
+    delta=Math.abs(-klac-l);
+    System.out.println("\t KL(a:c)="+klac+ "  delta="+delta);
+    
+    
+    return UnnormalizedJeffreysCentroid(A, G, l);
+  }
+
+
+  static double [] NumericalJeffreysCentroid(double [][] set)
+  {
+    
+    
+    
+    double [] A, G;
+    
+
+    A=ArithmeticMean(set);
+    G=NormalizedGeometricMean(set);
+
+
+    double  lmin=-Double.MAX_VALUE, lmax=0, l, csum=0;
+int i,d=A.length;
+for(i=0;i<d;i++) lmin=max(lmin,A[i]+Math.log(G[i])-1);
+
+//System.out.println("lmin:"+lmin);
+
+    double eps=1.0e-12;
     while (Math.abs(lmax-lmin)>eps)
     {
       l=0.5*(lmax+lmin);
@@ -225,6 +340,17 @@ static double [] eGeodesic(double[] p, double [] q,double lambda)
       else lmax=l;
     }
     l=0.5*(lmax+lmin);
+    double kl=KLD(UnnormalizedJeffreysCentroid(A, G, l),G);
+    double delta=Math.abs(-kl-l);
+    
+    System.out.println("\t\tnumerical lambda:"+l+" KL(c:g)="+kl+ "  delta="+delta);
+    
+        double klac=KLD(A,UnnormalizedJeffreysCentroid(A, G, l));
+    
+    delta=Math.abs(-klac-l);
+    System.out.println("\t KL(a:c)="+klac+ "  delta="+delta);
+    
+    
     return UnnormalizedJeffreysCentroid(A, G, l);
   }
 
@@ -252,7 +378,7 @@ static double [] eGeodesic(double[] p, double [] q,double lambda)
     double [] normalizedJeffreys=Normalize(unnormalizedJeffreys);
     double normalizedJinfo=JeffreysInformation(set, normalizedJeffreys);
 
-    double [] numericalJeffreys=  NormalizedJeffreysCentroid(set);
+    double [] numericalJeffreys=  NumericalJeffreysCentroid(set);
     double Jinfo=JeffreysInformation(set, numericalJeffreys);
 
     System.out.println("Jeffreys unnormalized info (closed form, lower bound):\t"+unnormalizedJinfo);

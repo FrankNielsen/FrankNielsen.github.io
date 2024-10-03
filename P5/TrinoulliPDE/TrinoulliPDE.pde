@@ -14,75 +14,231 @@ double maxy=1+delta;
 float ptsize=5;
 
 boolean toggleRectify=false;
+boolean toggleem=false; //true;// false;
 
+boolean toggleGeodesic=false;
+boolean toggleFR=false;
+boolean toggleJ=true;
+
+//boolean toggleA=false;
+//boolean toggleG=false;
+
+boolean toggleA=true;
+boolean toggleG=true;
+
+
+boolean toggleAnimation=false; //true;
 
 int n;
 double [][] ps; // stored 2d coordinates of 3-mixtures
 
-double [] a, g, c;
+double [][] speed;
 
-double sqr(double x){return x*x;}
+double [] a, g, c, fr, cig; // cig is via info geo method
 
+double sqr(double x)
+{
+  return x*x;
+}
+
+static double sum(double [] array)
+{
+  double res=0;
+  for (int i=0; i<array.length; i++) res+=array[i];
+  return res;
+}
+
+static double [] Normalize(double [] array)
+{
+  int d=array.length;
+  double [] res=new double [d];
+  int i;
+  double norm=sum(array);
+  for (i=0; i<d; i++) res[i]=array[i]/norm;
+  return res;
+}
+
+// Mixture geodesic
+static double [] mGeodesic(double[] p, double [] q, double lambda)
+{
+  int i, dd=p.length;
+  double [] res=new double [dd];
+
+  for (i=0; i<dd; i++) {
+    res[i]=(1-lambda)*p[i]+lambda*q[i];
+  }
+
+
+  return res;
+}
+
+
+static double [] metricGeodesic(double[] p, double [] q, double lambda)
+{
+  int i, dd=p.length;
+  double [] res=new double [dd];
+  double [] aa, gg;
+
+
+  for (i=0; i<dd; i++) {
+    // Fisher-Rao for
+    res[i]= (1-lambda)*p[i]+2.0*Math.sqrt((1-lambda)*p[i]*lambda*q[i])+lambda*q[i];
+  }
+
+
+  return Normalize(res);
+}
+
+
+static double [] eGeodesic(double[] p, double [] q, double lambda)
+{
+  int i, dd=p.length;
+  double [] res=new double [dd];
+
+  for (i=0; i<dd; i++) {
+    res[i]=Math.pow(p[i], (1.0-lambda))*Math.pow(q[i], lambda);
+  }
+
+
+  return Normalize(res);
+}
 
 void TestEnergy0()
-{double aa=a[0],gg=g[0], x=c[0];
+{
+  double aa=a[0], gg=g[0], x=c[0];
 
-      double E=((sqr(x)-x)*Math.log(x)+((-Math.log(1-x))-Math.log(gg)
-      +Math.log(1-gg))*sqr(x)+
-      (Math.log(1-x)+Math.log(gg)-Math.log(1-gg)-1)*x+aa)/(sqr(x)-x);
+  double E=((sqr(x)-x)*Math.log(x)+((-Math.log(1-x))-Math.log(gg)
+    +Math.log(1-gg))*sqr(x)+
+    (Math.log(1-x)+Math.log(gg)-Math.log(1-gg)-1)*x+aa)/(sqr(x)-x);
 
-      System.out.println("Energy derivative 0:"+E);
-      
+  System.out.println("Energy derivative 0:"+E);
 }
 
 
 void TestEnergy()
-{double aa=a[0],gg=g[0], x=c[0];
+{
+  double aa=a[0], gg=g[0], x=c[0];
 
-      double E=((sqr(x)-x)*Math.log(x)+((-Math.log(1-x))-Math.log(gg)
-      +Math.log(1-gg))*sqr(x)+
-      (Math.log(1-x)+Math.log(gg)-Math.log(1-gg)-1)*x+aa)/(sqr(x)-x);
+  double E=((sqr(x)-x)*Math.log(x)+((-Math.log(1-x))-Math.log(gg)
+    +Math.log(1-gg))*sqr(x)+
+    (Math.log(1-x)+Math.log(gg)-Math.log(1-gg)-1)*x+aa)/(sqr(x)-x);
 
-      System.out.println("Energy derivative 0:"+E);
-      
-      aa=a[1];gg=g[1]; x=c[1];
+  System.out.println("Energy derivative 0:"+E);
 
-       E=((sqr(x)-x)*Math.log(x)+((-Math.log(1-x))-Math.log(gg)
-      +Math.log(1-gg))*sqr(x)+
-      (Math.log(1-x)+Math.log(gg)-Math.log(1-gg)-1)*x+aa)/(sqr(x)-x);
+  aa=a[1];
+  gg=g[1];
+  x=c[1];
 
-      System.out.println("Energy derivative 1:"+E);
-      
-      
+  E=((sqr(x)-x)*Math.log(x)+((-Math.log(1-x))-Math.log(gg)
+    +Math.log(1-gg))*sqr(x)+
+    (Math.log(1-x)+Math.log(gg)-Math.log(1-gg)-1)*x+aa)/(sqr(x)-x);
+
+  System.out.println("Energy derivative 1:"+E);
 }
 
+void PrintPoint(String msg, double [] p)
+{
+  int i;
+  String str=msg;
+  for (i=0; i<p.length; i++)
+    str=str+p[i]+" ";
+
+  System.out.println(str);
+}
 
 void testBernoulli()
 {
   //n=256;
   n=2;
-  
+
   int i;
   ps=new double[n][2];
   for (i=0; i<n; i++) {
     ps[i][0]=Math.random();
-    
+
     ps[i][1]=1-ps[i][0];
   }
 
   a=StandAloneJeffreysHistogramCentroid.ArithmeticMean(ps);
   g=StandAloneJeffreysHistogramCentroid.NormalizedGeometricMean(ps);
-  c=StandAloneJeffreysHistogramCentroid.NormalizedExactJeffreysCentroid(ps);
-  
+  c=StandAloneJeffreysHistogramCentroid.JeffreysFisherRaoCentroid(ps);
+
   TestEnergy0();
 }
 
+void calculateCenters()
+{
+  a=StandAloneJeffreysHistogramCentroid.ArithmeticMean(ps);
+  g=StandAloneJeffreysHistogramCentroid.NormalizedGeometricMean(ps);
+
+  c=StandAloneJeffreysHistogramCentroid.NumericalJeffreysCentroid(ps);
+  //c=StandAloneJeffreysHistogramCentroid.NumericalJeffreysCentroid(ps,1.e-5);
+
+  double deltakl=Math.abs(StandAloneJeffreysHistogramCentroid.KLD(c, g)-StandAloneJeffreysHistogramCentroid.KLD(a, c));
+  System.out.println("Quality of Jeffreys centroid:"+deltakl);
+
+  //   return NumericalJeffreysCentroid(  set,  1.e-5);
+  double tv;
+
+  fr=StandAloneJeffreysHistogramCentroid.JeffreysFisherRaoCentroid(ps);
+  tv=StandAloneJeffreysHistogramCentroid.TotalVariation(fr, c);
+
+  System.out.println("Difference in TV between Jeffreys numerical and Jeffreys-Fisher-Rao center:"+tv);
+
+
+
+  cig=StandAloneJeffreysHistogramCentroid.JeffreysCentroidInfoGeo(ps);
+
+
+
+  //double kl=StandAloneJeffreysHistogramCentroid.JeffreysDiv(cig,c);
+  tv=StandAloneJeffreysHistogramCentroid.TotalVariation(cig, c);
+
+
+
+  System.out.println("Difference in TV between Jeffreys numerical and computational information geometry:"+tv);
+
+  PrintPoint("numerical W Jeffreys:\t\t", c);
+  PrintPoint("information geometric Jeffreys:\t", cig);
+
+  double leftkli=StandAloneJeffreysHistogramCentroid.leftKLInfo(ps, c);
+  double rightkli=StandAloneJeffreysHistogramCentroid.rightKLInfo(ps, c);
+
+  // println("Left KL info:\t"+leftkli);
+  // println("Right KL info:\t"+rightkli);
+
+  // TestEnergy();
+}
+
+void animate()
+{
+  int i;
+  double ll=0.001;
+
+  for (i=0; i<n; i++)
+  {
+    double px, py, pz;
+    px=ps[i][0]+ll*speed[i][0];
+    py=ps[i][1]+ll*speed[i][1];
+    pz=1-px-py;
+
+    // if (( px+py+pz >0)&&( px+py+pz <1) && (px>0)&&(py>0)&&(pz>0)) {
+    if ((1-px-py>0) && (px>0) &&(py>0) ) {
+      ps[i][0]+=ll*speed[i][0];
+      ps[i][1]+=ll*speed[i][1];
+      ps[i][2]=1-(ps[i][0]+ps[i][1]);
+    } else {
+      speed[i][0]=-speed[i][0];
+      speed[i][1]=-speed[i][1]; //speed[i][2]=-speed[i][2];
+    }
+  }
+}
 
 void initialize()
 {
-  n=256;
- // n=2;
-  
+  //n=5;
+ n=2;
+
   int i;
   ps=new double[n][3];
   for (i=0; i<n; i++) {
@@ -91,19 +247,31 @@ void initialize()
     ps[i][2]=1-ps[i][0]-ps[i][1];
   }
 
-  a=StandAloneJeffreysHistogramCentroid.ArithmeticMean(ps);
-  g=StandAloneJeffreysHistogramCentroid.NormalizedGeometricMean(ps);
-  
-  c=StandAloneJeffreysHistogramCentroid.NormalizedExactJeffreysCentroid(ps);
-  
-  
-  double leftkli=StandAloneJeffreysHistogramCentroid.leftKLInfo(ps,c);
-  double rightkli=StandAloneJeffreysHistogramCentroid.rightKLInfo(ps,c);
-  
-  println("Left KL info:\t"+leftkli);
-  println("Right KL info:\t"+rightkli);
-  
-  TestEnergy();
+
+  speed=new double[n][3];
+  for (i=0; i<n; i++) {
+    speed[i][0]=Math.random();
+    speed[i][1]=(1-ps[i][0])*Math.random();
+    speed[i][2]=1-ps[i][0]-ps[i][1];
+  }
+
+  // very visible property, overwrite with bad example
+  if (true) {
+    // counter example
+    //ps[0][0]=0.9999999;
+    ps[0][0]=0.99;
+    ps[0][1]=(1-ps[0][0])/2.0;
+    ps[0][2]=1-ps[0][0]-ps[0][1];
+
+
+    ps[1][0]=0.3333;
+    ps[1][1]=0.3333;
+    ps[1][2]=1-ps[1][0]-ps[1][1];
+  }
+
+  calculateCenters();
+
+  System.out.println("Jeffreys centroid:\t"+ c[0]+" "+c[1]+" "+c[2]);
 }
 
 void setup()
@@ -156,42 +324,143 @@ void strokefill(int r, int g, int b) {
   fill(r, g, b);
 }
 
+void drawEGeodesic(double [] p, double [] q)
+{
+  double l, ll, i;
+  int nbsteps=10;
 
+  for (i=0; i<nbsteps; i++)
+  {
+    l=((double)i)/(double)nbsteps;
+    ll=((double)i+1.0)/(double)nbsteps;
+
+    double [] pp=eGeodesic(p, q, l);
+    double [] ppp=eGeodesic(p, q, ll);
+
+    MyLine(pp[0], pp[1], ppp[0], ppp[1]);
+  }
+}
+
+
+void drawMGeodesic(double [] p, double [] q)
+{
+  double l, ll, i;
+  int nbsteps=10;
+
+  for (i=0; i<nbsteps; i++)
+  {
+    l=((double)i)/(double)nbsteps;
+    ll=((double)i+1.0)/(double)nbsteps;
+
+    double [] pp=mGeodesic(p, q, l);
+    double [] ppp=mGeodesic(p, q, ll);
+
+    MyLine(pp[0], pp[1], ppp[0], ppp[1]);
+  }
+}
+
+
+void drawFisherRaoGeodesic(double [] p, double [] q)
+{
+
+  double l, ll, i;
+  int nbsteps=10;
+
+  for (i=0; i<nbsteps; i++)
+  {
+    l=((double)i)/(double)nbsteps;
+    ll=((double)i+1.0)/(double)nbsteps;
+
+    double [] pp=metricGeodesic(p, q, l);
+    double [] ppp=metricGeodesic(p, q, ll);
+
+    MyLine(pp[0], pp[1], ppp[0], ppp[1]);
+  }
+}
+
+//
+//
+//
 void draw()
 {
   int i, j, ii, jj;
 
 
-  surface.setTitle("Standard simplex (trinoulli)");
+  surface.setTitle("Standard/probability simplex (trinoulli family)");
 
 
 
   background(255, 255, 255);
 
-  strokefill(0, 0, 0);
+  int mgrey=128;
+  strokefill(mgrey, mgrey, mgrey);
   strokeWeight(3);
 
-MyLine(0,0, 0,1);
-MyLine(0,1, 1,0);
-MyLine(0,0,1,0);
+  MyLine(0, 0, 0, 1);
+  MyLine(0, 1, 1, 0);
+  MyLine(0, 0, 1, 0);
 
   strokeWeight(1);
 
-  for (i=0; i<n; i++) {
-    MyPoint(ps[i][0], ps[i][1]);
+  if (toggleem) {
+    strokefill(255, 0, 0);
+    drawEGeodesic(ps[0], ps[1]);   //drawEGeodesic(a,g);
+
+    strokefill(0, 0, 255);
+    drawMGeodesic(ps[0], ps[1]); //drawMGeodesic(a,g);
+
+
+    strokefill(255, 0, 255);
+    drawFisherRaoGeodesic(ps[0], ps[1]); //drawMGeodesic(a,g);
   }
+
+  strokefill(0, 0, 0);
+
+  /*
+ 
+   strokefill(255, 0, 255);
+   drawFisherRaoGeodesic(a,g);
+   */
+
+  if (toggleGeodesic) {
+    strokefill(255, 0, 255);
+    drawFisherRaoGeodesic(a, g); //drawMGeodesic(a,g);
+  }
+
   ptsize*=2;
 
-  strokefill(255, 0, 0);
-  MyPoint(a[0], a[1]);// red
-  strokefill(0, 0, 255);
-  MyPoint(g[0], g[1]);// blue
+  if (toggleA) {
+    strokefill(255, 0, 0);
+    MyPoint(a[0], a[1]);// red arithmetic mean
+  }
+
+  if (toggleG) {
+    strokefill(0, 0, 255);
+    MyPoint(g[0], g[1]);// blue normalized geometric mean
+  }
+
+  noFill();
+  stroke(0, 255, 0); // green
+  MyPoint(c[0], c[1]);// purple Jeffreys
+
+  ptsize*=2.0;
+
+  if (toggleFR) {
+    stroke(255, 0, 255);// purple
+    MyPoint(fr[0], fr[1]);
+  }
+
+  strokefill(0, 0, 0);
+  ptsize=5.0f;
+
+ 
+  for (i=0; i<n; i++) {
+    MyPoint(ps[i][0], ps[i][1]);
+    println("!!! input point:"+ ps[i][0]+ "  "+ ps[i][1]);
+  }
 
 
-  strokefill(255, 0, 255);
-  MyPoint(c[0], c[1]);// pruple
-
-  ptsize/=2;
+  //if (toggleAnimation){ animate();calculateCenters();}
 }
 
 
@@ -238,14 +507,22 @@ void savepdffile()
 
 void keyPressed()
 {
+  if (key=='a') {
+    toggleAnimation=!toggleAnimation;
+  }
   if (key=='q') exit();
-  
-  
+
+
+  if (key=='t') {
+    StandAloneJeffreysHistogramCentroid.Test2();
+  }
+
+
   if (key=='b') {
     testBernoulli();
     draw();
   }
-  
+
   if (key==' ') {
     initialize();
     draw();

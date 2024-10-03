@@ -1,0 +1,34 @@
+I program scripts in <A HREF="https://maxima.sourceforge.io/">maxima</A> (wxmaxima), a computer algebra system.
+
+<HR>
+
+Book with examples: 
+<ul>
+<li> Timberlake, Todd Keene, and J. Wilson Mixon. Classical mechanics with maxima. Springer New York, 2016.
+</ul>
+
+
+
+Some useful tips
+<ul>
+
+<li>There are on internet some "Maxima online" web sites which run maxima scripts.
+  
+
+<li>quote-quote operator forces Maxima to evaluate:
+
+<pre>
+f(x):=cos(x)+sin(x);
+derivative(f(x),x,1);
+fprime(x):=''%;
+</pre>
+defines fprime(x):= cos(x) - sin(x);
+
+<li>single-quote operator forces Maxima to recognize the command but not to evaluate it:
+<pre>
+theta(mu,sigma):=mu/sigma**2;
+'theta(1,2);
+theta(1,2);
+</pre>
+gives theta(1, 2) and 1/4
+</ul>
