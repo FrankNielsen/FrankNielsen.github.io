@@ -17,8 +17,9 @@ boolean toggleRectify=false;
 boolean toggleem=false; //true;// false;
 
 boolean toggleGeodesic=false;
-boolean toggleFR=false;
+boolean toggleFR=true;
 boolean toggleJ=true;
+boolean toggleIM=true;
 
 //boolean toggleA=false;
 //boolean toggleG=false;
@@ -34,7 +35,7 @@ double [][] ps; // stored 2d coordinates of 3-mixtures
 
 double [][] speed;
 
-double [] a, g, c, fr, cig; // cig is via info geo method
+double [] a, g, c, fr, cig, gb; // cig is via info geo method
 
 double sqr(double x)
 {
@@ -173,6 +174,8 @@ void calculateCenters()
 
   c=StandAloneJeffreysHistogramCentroid.NumericalJeffreysCentroid(ps);
   //c=StandAloneJeffreysHistogramCentroid.NumericalJeffreysCentroid(ps,1.e-5);
+  
+  gb=StandAloneJeffreysHistogramCentroid.inductiveJeffreysCentroid(ps,1.e-6);
 
   double deltakl=Math.abs(StandAloneJeffreysHistogramCentroid.KLD(c, g)-StandAloneJeffreysHistogramCentroid.KLD(a, c));
   System.out.println("Quality of Jeffreys centroid:"+deltakl);
@@ -236,8 +239,8 @@ void animate()
 
 void initialize()
 {
-  //n=5;
- n=2;
+  n=32;
+ //n=2;
 
   int i;
   ps=new double[n][3];
@@ -256,7 +259,7 @@ void initialize()
   }
 
   // very visible property, overwrite with bad example
-  if (true) {
+  if (false) {
     // counter example
     //ps[0][0]=0.9999999;
     ps[0][0]=0.99;
@@ -386,7 +389,7 @@ void draw()
   int i, j, ii, jj;
 
 
-  surface.setTitle("Standard/probability simplex (trinoulli family)");
+  surface.setTitle("Parameter space of the trinoulli family (#trial=1)");
 
 
 
@@ -449,6 +452,13 @@ void draw()
     stroke(255, 0, 255);// purple
     MyPoint(fr[0], fr[1]);
   }
+  
+  ptsize*=1.5;
+  if (toggleIM) {
+    stroke(255, 255, 0);// yellow
+    MyPoint(gb[0], gb[1]);
+  }
+  
 
   strokefill(0, 0, 0);
   ptsize=5.0f;
@@ -456,7 +466,7 @@ void draw()
  
   for (i=0; i<n; i++) {
     MyPoint(ps[i][0], ps[i][1]);
-    println("!!! input point:"+ ps[i][0]+ "  "+ ps[i][1]);
+ //   println("!!! input point:"+ ps[i][0]+ "  "+ ps[i][1]);
   }
 
 
@@ -517,6 +527,9 @@ void keyPressed()
     StandAloneJeffreysHistogramCentroid.Test2();
   }
 
+if (key=='n') {
+    StandAloneJeffreysHistogramCentroid.testJeffreysCentroid();
+  }
 
   if (key=='b') {
     testBernoulli();

@@ -3,7 +3,7 @@
 //
 // implements
 //  "Jeffreys centroids: A closed-form expression for positive histograms and a guaranteed tight approximation for frequency histograms."
-//  IEEE Signal Processing Letters 20.7 (2013): 657-660.
+//  IEEE Signal Processing Letters 20.7voi (2013): 657-660.
 //
 // We use external library  specfunc/lambert.c  by  G. Jungman (converted in Java)
 
@@ -263,7 +263,31 @@ System.out.println("Total variation between FR and J in dim d="+d+" :"+TV);
     return res;
   }
   
+    static double [] inductiveJeffreysCentroid(double [][] set, double eps)
+    {
+       double [] A, G;
+    
+    A=ArithmeticMean(set);
+    G=NormalizedGeometricMean(set);
+    return inductiveJeffreysCentroid(A,G,eps);
+    }
   
+   static double [] inductiveJeffreysCentroid(double [] p, double [] q, double eps)
+   {double [][] set=new double[2][];
+   set[0]=p;
+   set[1]=q;
+   
+      double [] A, G;
+    double error;
+
+    A=ArithmeticMean(set);
+    G=NormalizedGeometricMean(set);
+    
+    error=TotalVariation(A,G);
+    
+    if (error<eps) return A; else return  inductiveJeffreysCentroid(A,G,eps);
+    
+   }
 
   static double [] NumericalJeffreysCentroid(double [][] set,double eps)
   {
@@ -355,6 +379,7 @@ for(i=0;i<d;i++) lmin=max(lmin,A[i]+Math.log(G[i])-1);
   }
 
 
+
   // test procedure
   static void testJeffreysCentroid()
   {
@@ -391,5 +416,19 @@ for(i=0;i<d;i++) lmin=max(lmin,A[i]+Math.log(G[i])-1);
 
     // Same Jeffreys information
     System.out.println("Remarkable property:"+JeffreysInformation(set, A)+"\t"+JeffreysInformation(set, G));
+    
+    double [][] nset=new double [2][d];
+    nset[0]=A;nset[1]=G;
+    double [] nJeffreys=  NumericalJeffreysCentroid(nset);
+    double tv=TotalVariation(nJeffreys, numericalJeffreys);
+    System.out.println("Test centroid of full set vs centroid of sided centroids: tv distance="+tv);
+    
+    double [] simpleJ=inductiveJeffreysCentroid(A,G, 1.e-5);
+    double tv2=TotalVariation(simpleJ, numericalJeffreys);
+    
+     System.out.println("simpleJ vs usual J: tv distance="+tv2);
+    
+ 
+    
   }
 }
