@@ -1,0 +1,240 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsfonts,amsmath,epsfig,float,graphicx,xcolor}
+
+\usepackage[]{hyperref}
+
+\usepackage{mathrsfs}
+\usepackage{parskip}
+
+
+\def\Tr{\mbox{ {\rm Tr}\,}}
+\def\Ro{{\mathbb R}}
+
+%opening
+\title{What is Quantum Information Geometry?}
+
+\author{Jan Naudts\\Universiteit Antwerpen}
+
+\date{}
+
+\begin{document}
+
+\maketitle
+
+
+% $<$ INTRO $>$
+
+In Quantum Information Geometry the notion of a statistical manifold is generalized
+to that of a quantum statistical manifold.
+A related domain of research is that of Quantum Information Theory which concentrates
+on the theory behind quantum computing.  
+
+A {\em quantum state} is determined by a wave function $\psi$, which is a normalized element
+of a Hilbert space $\mathscr H$. In a statistical context the quantum state is determined
+by a {\em density matrix} or a {\em density operator} $\rho$.
+This is a positive trace-class operator the trace of which equals 1.
+The {\em quantum expectation value} of a bounded operator $B$ on $\mathscr H$
+is usually denoted $\langle B\rangle$.
+Given an orthonormal diagonalizing basis $(\psi_n)_n$ one can write
+\[
+ \langle B\rangle=\Tr\rho B=\sum_ip_i (B\psi_n,\psi_n)
+\]
+where $p_i$ are the eigenvalues of $\rho$. Because the eigenvalues are non-negative
+and add up to 1 one can make the interpretation that with probability $p_i$
+the quantum system is in the state determined by the wave function $\psi_i$.
+The novel aspect of {\em quantum statistics} is that the quantum expectation values 
+depend not only on the probabilities $p_i$ but also on the basis of eigenvectors of
+the density operator $\rho$. 
+
+The obvious models of Quantum Information Geometry belong to the {\em quantum exponential family},
+this is the exponential family of non-degenerate density matrices of dimension $N$-by-$N$. 
+See for instance Chapter 7 of \cite{AN00}.
+In Statistical Physics the states of a model belonging to the quantum exponential family
+are known as quantum Gibbs distributions.
+They depend on a number of thermodynamic parameters such as the inverse temperature $\beta$
+or a chemical potential $\mu$. 
+The importance of these quantum models for different branches of Physics
+cannot be overestimated.
+
+A model belonging to the quantum exponential family 
+is described by a parameterized density operator $\rho_\theta$, $\theta\in\Ro^n$,
+of the form
+\[
+ \rho_\theta=\exp\big(\theta^iE_i-\alpha(\theta)\big)
+\]
+with Hermitian $N$-by-$N$ matrices $E_i$ and 
+with the normalization function $\phi(\theta)$ given by
+\[
+ \phi(\theta)=\log\Tr\exp\big(\theta^iE_i\big).
+\]
+The latter acts as a potential function from which one 
+can derive Amari's dually flat geometry \cite{AN00}.
+A short calculation gives
+\[
+\frac{\partial\phi}{\partial\theta^p}=\eta_p
+\quad\mbox{ with }\quad \eta_p=\Tr\rho_\theta E_p=\langle E_p\rangle.
+\]
+These $\eta_p$ are the dual coordinates, dual to the $\theta^p$.
+
+The directional derivatives $\partial\rho_\theta/\partial\theta^i$ of the density matrices
+span the tangent spaces of the manifold of quantum states.
+Eguchi's method \cite{ES85} can be used to define the inner product
+of pairs of tangent vectors starting from Umegaki's relative entropy/divergence \cite{UH62}.
+The result is known as Bogoliubov's metric \cite{PT93}.
+
+Geodesics of the e-connection are affine in the parameters $\theta$.
+If the affine combination $(1-t)\rho_\theta+t\rho_\zeta$ lies in the manifold
+then it is a geodesic for the dual connection, which is called the m-connection.
+IN the classical context
+Chentsov \cite {CNN82} gave a characterization of the Fisher metric 
+as the unique metric which is invariant
+under Markov type transformations \cite {FA22}. 
+On the other hand, quantum measurements are modeled by completely-positive trace-preserving maps 
+acting on the manifold of density matrices. Petz \cite{PD86,PS96} gave a complete characterization
+of the class of metrics which are monotone w.r.t.~these maps.
+Grasselli and Streater \cite{GS01} then showed that the Bogoliubov metric is the unique element of this class
+with the property that the e- and m-connections are each other dual w.r.t.~this metric.
+
+The parameter-free approach to Information Geometry was initiated by
+Pistone and Sempi \cite{PS95}. A non-commutative generalization
+is studied for instance in \cite{JA01,SRF04a,SRF04b,JA06}.
+These papers use the $C^*$-algebraic formulation of quantum mechanics because it
+clarifies the link between classical (i.e.~non-quantum) and quantum statistics.
+
+Areas of further research include the following.
+
+The definition of the quantum exponential family, as given above, is not the only possibility.
+It is argued in \cite{NJ22,NJ23} that the definition is highly non-unique
+because of the non-uniqueness \cite{AH74} of the Radon–Nikodym derivative in a non-commutative context. 
+The latter result relies on the theory of the modular operator also known as Tomita-Takesaki Theory \cite{TM70,BR87}.
+
+Technical difficulties show up for families of density operators on an infinite-dimensional Hilbert space.
+The action of the group of invertible elements of a $C^*$-algebra $\mathfrak A$ on the set
+of states of $\mathfrak A$ 
+induces a partition into a disjoint union of orbits each of which is a Banach manifold \cite {CIJM19}.
+Exponential arcs in a manifold of quantum states are studied in \cite{NJ22,NJ23}.
+These exponential arcs are candidates for being geodesics of the quantum statistical manifold.
+
+Almost unexplored up to now is the possible impact of Quantum Information Geometry on
+some of the specific models well-known in Quantum Statistical Physics.
+An example in this direction is the study of scalar curvature in the transverse Ising chain \cite {NT23}.
+
+
+\begin{thebibliography}{99}
+
+
+\bibitem{UH62}
+H. Umegaki, {\em
+Conditional Expectation in an Operator Algebra.  {IV}. {E}ntropy and Information,}
+Kodai Math. Sem. Rep. {\bf 14}, 59--85 (1962).
+
+\bibitem{TM70}
+M. Takesaki, {\em 
+Tomita's theory of modular Hilbert algebras and its applications,}
+Lecture Notes Math. {\bf 128} (Springer, 1970).
+
+\bibitem{AH74}
+H. Araki, {\em
+Some properties of modular conjugation operator of von Neumann
+algebras and a non-commutative Radon-Nikodym theorem with a chain rule,}
+Pac. J.  Math. {\bf 50}, 309--354 (1974).
+
+\bibitem {CNN82}
+N. N. {\v C}encov, {\em
+Statistical decision rules and optimal inference,}
+Transl. math. monographs {\bf 53} (AMS, Providence, 1982)
+
+\bibitem{ES85} S. Eguchi, {\em 
+A differential geometric approach to statistical inference on the basis of contrast functionals,}
+Hiroshima Math. J. {\bf 15}, 341--391 (1985). 
+
+\bibitem{PD86}
+D. Petz, {\em 
+Quasi-entropies for Finite Quantum Systems,}
+Rep. Math. Phys. {\bf 23}, 57--65 (1986)
+
+\bibitem{BR87}
+O. Bratteli and D. W. Robinson, {\em 
+Operator Algebras and Quantum Statistical Mechanics 1, Second Edition,}
+(Springer-Verlag, 1987)
+
+\bibitem{PT93}
+D. Petz, G. Toth, {\em
+The Bogoliubov inner product in quantum statistics,}
+Lett. Math. Phys. {\bf 27}, 205--216 (1993).
+
+\bibitem {PS95}
+G. Pistone, C. Sempi, {\em
+An infinite-dimensional structure on the space of all 
+the probability measures equivalent to a given one,}
+Ann. Stat. {\bf 23}, 1543--1561 (1995).
+
+\bibitem {PS96}
+D. Petz and C.Sudar, {\em 
+Geometries of Quantum States,}
+J. Math. Phys. {\bf 37}, 2662--2673 (1996).
+
+\bibitem{AN00}
+S. Amari, H. Nagaoka, {\em
+Methods of Information Geometry}
+(Oxford University Press, 2000)
+(Originally published in Japanese by Iwanami Shoten, Tokyo, Japan, 1993) 
+
+\bibitem{GS01}
+M. R. Grasselli and R. F. Streater, {\em 
+On the uniqueness of the Chentsov metric in quantum information geometry,}
+Infin. Dim. Anal. Quantum Prob. Rel. Top. {\bf 4}, 173--182 (2001).
+
+\bibitem{JA01}
+A. {Jen\v cov\'a}, {\em 
+Geometry of quantum states: Dual connections and divergence functions,}
+Rep. Math. Phys. {\bf 47}, 121--138 (2001).
+
+\bibitem{SRF04a}
+R. F. Streater, {\em  
+Duality in Quantum Information Geometry,}
+Open Syst. {\&} Inf. Dyn. {\bf 11}, 71--77 (2004).
+
+\bibitem{SRF04b}	
+R. F. Streater, {\em  
+Quantum Orlicz Spaces in Information Geometry,}
+Open Syst. {\&} Inf. Dyn. {\bf 2004}, {\bf 11}, 359--375 (2004).
+
+
+\bibitem{JA06}
+A. {Jen\v cov\'a}, {\em
+A construction of a nonparametric quantum information manifold,}
+J. Funct. Anal.  {\bf  239}, 1--20 (2006).
+
+\bibitem{CIJM19}
+F. M. Ciaglia, A. Ibort, J. Jost and G. Marmo,
+{\em 
+Manifolds of classical probability distributions and
+quantum density operators in infinite dimensions,}
+Inf. Geo. {\bf 2}, 231--271 (2019).
+
+\bibitem{FA22}
+A. Fujiwara, {\em
+Hommage to Chentsov's theorem,}
+Inf. Geom. {\bf 7}, Suppl. 1, 579--598 (2024).
+
+\bibitem{NJ22}
+J. Naudts, {\em
+Exponential arcs in the manifold of vector states on a $\sigma$-finite von {N}eumann algebra,}
+Inf. Geom. {\bf 5}, 1--30 (2022).
+
+\bibitem{NJ23}
+ J. Naudts, {\em
+ Exponential arcs in manifolds of quantum states,}
+Front. Phys. {\bf 11}, 1042257, (2023).
+
+\bibitem{NT23} T. Nakamura, {\em
+Monotonicity of the scalar curvature of the quantum
+exponential family for transverse-field Ising chains,}
+in: Geometric Science of Information, F. Nielsen and F. Barbaresco (Eds.) 
+LNCS 14072 (Springer, 2023),  p. II--353.
+
+\end{thebibliography}
+
+\end{document}

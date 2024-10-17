@@ -272,6 +272,7 @@ System.out.println("Total variation between FR and J in dim d="+d+" :"+TV);
     return inductiveJeffreysCentroid(A,G,eps);
     }
   
+  // Nice recursive code
    static double [] inductiveJeffreysCentroid(double [] p, double [] q, double eps)
    {double [][] set=new double[2][];
    set[0]=p;
@@ -320,13 +321,13 @@ l=0.5*(lmax+lmin);
     l=0.5*(lmax+lmin);
     
     error=(1.0/csum)-1;
-    System.out.println("guaranteed approximation with eps="+eps);
+ //   System.out.println("guaranteed approximation with eps="+eps);
     
     double kl=KLD(UnnormalizedJeffreysCentroid(A, G, l),G);
     
     double delta=Math.abs(-kl-l);
     
-    System.out.println("\t\tnumerical lambda:"+l+" KL(c:g)="+kl+ "  delta="+delta);
+  //  System.out.println("\t\tnumerical lambda:"+l+" KL(c:g)="+kl+ "  delta="+delta);
     double klac=KLD(A,UnnormalizedJeffreysCentroid(A, G, l));
     
     delta=Math.abs(-klac-l);
@@ -367,17 +368,27 @@ for(i=0;i<d;i++) lmin=max(lmin,A[i]+Math.log(G[i])-1);
     double kl=KLD(UnnormalizedJeffreysCentroid(A, G, l),G);
     double delta=Math.abs(-kl-l);
     
-    System.out.println("\t\tnumerical lambda:"+l+" KL(c:g)="+kl+ "  delta="+delta);
+   // System.out.println("\t\tnumerical lambda:"+l+" KL(c:g)="+kl+ "  delta="+delta);
     
         double klac=KLD(A,UnnormalizedJeffreysCentroid(A, G, l));
     
     delta=Math.abs(-klac-l);
-    System.out.println("\t KL(a:c)="+klac+ "  delta="+delta);
+   // System.out.println("\t KL(a:c)="+klac+ "  delta="+delta);
     
     
     return UnnormalizedJeffreysCentroid(A, G, l);
   }
 
+
+
+static double [] randomHistogram(int dim)
+{double [] res=new double[dim];
+  for (int j=0; j<dim; j++)
+      {
+        res[j]=Math.random();
+      }
+      return Normalize(res);
+}
 
 
   // test procedure

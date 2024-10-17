@@ -13,6 +13,7 @@ double maxy=1+delta;
 
 float ptsize=5;
 
+String supertest="";
 boolean toggleRectify=false;
 boolean toggleem=false; //true;// false;
 
@@ -174,8 +175,8 @@ void calculateCenters()
 
   c=StandAloneJeffreysHistogramCentroid.NumericalJeffreysCentroid(ps);
   //c=StandAloneJeffreysHistogramCentroid.NumericalJeffreysCentroid(ps,1.e-5);
-  
-  gb=StandAloneJeffreysHistogramCentroid.inductiveJeffreysCentroid(ps,1.e-6);
+
+  gb=StandAloneJeffreysHistogramCentroid.inductiveJeffreysCentroid(ps, 1.e-6);
 
   double deltakl=Math.abs(StandAloneJeffreysHistogramCentroid.KLD(c, g)-StandAloneJeffreysHistogramCentroid.KLD(a, c));
   System.out.println("Quality of Jeffreys centroid:"+deltakl);
@@ -237,10 +238,272 @@ void animate()
   }
 }
 
+double max(double  x, double y) {
+  if (x>y) return x;
+  else return y;
+}
+
+void testPaper(int dim)
+{
+ // int dim=1024;
+ 
+ dim=3;
+ 
+  int nn=2;
+  int i, j, t, test, nbtests=10000;
+  double[][] ds=new double[nn][dim];
+  double [] GBcenter, JFRcenter, JeffreysCentroid;
+  double infoGB, infoJFR, infoJeffreysCentroid;
+  double TVGB, TVJFR;
+  double epsGB, epsJFR;
+  double MepsGB=0, MepsJFR=0;
+  double avgGB=0, avgJFR=0;
+  chrono JeffreysChrono, JFRChrono, GBChrono;
+  double totaltimeJeffreys=0, totaltimeJFR=0, totaltimeGB=0;
+
+for(double eps=0.1;eps>1.e-20;eps/=10.0)
+{
+  System.out.println("Epsilon eps="+eps);
+
+  JeffreysChrono=new chrono();
+  JFRChrono=new chrono();
+  GBChrono=new chrono();
+
+  System.out.println("----------------------------------------");
+  System.out.println("Test for paper with dim="+dim);
+
+  for (t=0; t<nbtests; t++)
+  {
+/*
+    for (i=0; i<nn; i++) {
+      ds[i]=StandAloneJeffreysHistogramCentroid.randomHistogram(dim);
+    }
+  */  
+   
+    // Bad example
+    ds[0][0]=1.0-eps;
+    ds[0][1]=(1-ds[0][0])/2.0;
+    ds[0][2]=1-ds[0][0]-ds[0][1];
+
+
+    ds[1][0]=1.0/3.0;
+    ds[1][1]=1.0/3.0;
+    ds[1][2]=1.0-ds[1][0]-ds[1][1];
+    
+
+ // costly with Lambert W
+    JeffreysChrono.reset() ;
+    JeffreysCentroid=StandAloneJeffreysHistogramCentroid.NumericalJeffreysCentroid(ds);
+    JeffreysChrono.time();
+
+// fast but recursive
+    GBChrono.reset();
+    GBcenter=StandAloneJeffreysHistogramCentroid.inductiveJeffreysCentroid(ds,1.e-1 );//1.e-8
+    GBChrono.time();
+
+// very fast closed-form
+    JFRChrono.reset();
+    JFRcenter=StandAloneJeffreysHistogramCentroid.JeffreysFisherRaoCentroid(ds);
+    JFRChrono.time();
+
+
+    totaltimeJeffreys+=JeffreysChrono.t;
+    totaltimeJFR+=JFRChrono.t;
+    totaltimeGB+=GBChrono.t;
+
+
+    infoJeffreysCentroid =  StandAloneJeffreysHistogramCentroid.JeffreysInformation(ds, JeffreysCentroid);
+    infoGB=  StandAloneJeffreysHistogramCentroid.JeffreysInformation(ds, GBcenter);
+    infoJFR  =  StandAloneJeffreysHistogramCentroid.JeffreysInformation(ds, JFRcenter);
+
+    TVGB=StandAloneJeffreysHistogramCentroid.TotalVariation(JeffreysCentroid, GBcenter);
+    TVJFR=StandAloneJeffreysHistogramCentroid.TotalVariation(JeffreysCentroid, JFRcenter);
+
+    epsGB=(infoGB/infoJeffreysCentroid)-1.0;
+    epsJFR=(infoJFR/infoJeffreysCentroid)-1.0;
+
+    /*
+    System.out.println("epsGB="+epsGB+"\tepsJFR="+epsJFR);
+     System.out.println("TV(Jeffreys,GB)="+TVGB+"\t TV(Jeffreys,JFR)="+TVJFR);
+     System.out.println("time Jeffreys="+JeffreysChrono.t+" time GB="+GBChrono.t+" time JFR="+JFRChrono.t);
+     */
+
+    MepsGB=max(MepsGB, epsGB);
+    MepsJFR=max(MepsJFR, epsJFR);
+
+    avgGB+=epsGB;
+    avgJFR+=epsJFR;
+  }
+
+  avgGB/=(double)nbtests;
+  avgJFR/=(double)nbtests;
+
+
+  totaltimeJeffreys/=(double)nbtests;
+  totaltimeJFR/=(double)nbtests;
+  totaltimeGB/=(double)nbtests;
+
+  double ratioGB, ratioJFR;
+
+  ratioGB=totaltimeJeffreys/totaltimeGB;
+  ratioJFR=totaltimeJeffreys/totaltimeJFR;
+
+  System.out.println("agv time Jeffreys:\t"+totaltimeJeffreys);
+  System.out.println("agv time GB:\t"+totaltimeGB+"\t speed up GB="+ratioGB);
+  System.out.println("agv time JFR:\t"+totaltimeJFR+"\t speed up JFR="+ratioJFR);
+
+  System.out.println("\nmaximum approx GB:"+MepsGB+"\t JFR:"+MepsJFR);
+  System.out.println("average approx GB:"+avgGB+"\t JFR:"+avgJFR);
+  
+  // dimension & JFR average $\eps$ & JFR maximum $\eps$ & JFR average time &  JFR speed factor &  GB average $\eps$ & GB maximum $\eps$ & GB average time &  JGB speed factor\\
+  
+//  String export=  "d=" + dim+" & " + avgJFR +" & "+MepsJFR + " & " + ratioJFR+ " & "; 
+ //export=export+ avgGB +" & "+MepsGB + " & " + ratioGB+ " \\\\ ";  
+  String export=String.format("d=%d & %.3e & %.3e & %.3e & %.3f & %.3e & %.3e & %.3e & %.3f \\\\",dim, avgJFR,MepsJFR,totaltimeJFR,ratioJFR,
+  avgGB,MepsGB,totaltimeGB,ratioGB);
+  
+  
+  //$\alpha$ &    $\eps$ &      avg time &    $\times$ speed  &    $\eps$ &    avg time &    $\time$ speed \\ \hline
+  
+ export=String.format("%.3e & %.3e &   %.3e & %.3f & %.3e &  %.3e & %.3f  \\\\",eps, avgJFR,totaltimeJFR,ratioJFR,
+  avgGB,totaltimeGB,ratioGB);
+  
+  
+//String export=String.format("d=%d & %.3e", dim, avgJFR);
+
+
+
+
+ System.out.println("\n"+export+"\n");
+ 
+ supertest=supertest +"\n"+export;
+  System.out.println("----------------------------------------");
+  System.out.println(supertest);exit();
+}
+
+}
+
+
+
+
+
+void testPaperGood(int dim)
+{
+ // int dim=1024;
+  int nn=2;
+  int i, j, t, test, nbtests=10000;
+  double[][] ds=new double[nn][dim];
+  double [] GBcenter, JFRcenter, JeffreysCentroid;
+  double infoGB, infoJFR, infoJeffreysCentroid;
+  double TVGB, TVJFR;
+  double epsGB, epsJFR;
+  double MepsGB=0, MepsJFR=0;
+  double avgGB=0, avgJFR=0;
+  chrono JeffreysChrono, JFRChrono, GBChrono;
+  double totaltimeJeffreys=0, totaltimeJFR=0, totaltimeGB=0;
+
+
+  JeffreysChrono=new chrono();
+  JFRChrono=new chrono();
+  GBChrono=new chrono();
+
+  System.out.println("----------------------------------------");
+  System.out.println("Test for paper with dim="+dim);
+
+  for (t=0; t<nbtests; t++)
+  {
+
+    for (i=0; i<nn; i++) {
+      ds[i]=StandAloneJeffreysHistogramCentroid.randomHistogram(dim);
+    }
+
+ // costly with Lambert W
+    JeffreysChrono.reset() ;
+    JeffreysCentroid=StandAloneJeffreysHistogramCentroid.NumericalJeffreysCentroid(ds);
+    JeffreysChrono.time();
+
+// fast but recursive
+    GBChrono.reset();
+    GBcenter=StandAloneJeffreysHistogramCentroid.inductiveJeffreysCentroid(ds,1.e-1 );//1.e-8
+    GBChrono.time();
+
+// very fast closed-form
+    JFRChrono.reset();
+    JFRcenter=StandAloneJeffreysHistogramCentroid.JeffreysFisherRaoCentroid(ds);
+    JFRChrono.time();
+
+
+    totaltimeJeffreys+=JeffreysChrono.t;
+    totaltimeJFR+=JFRChrono.t;
+    totaltimeGB+=GBChrono.t;
+
+
+    infoJeffreysCentroid =  StandAloneJeffreysHistogramCentroid.JeffreysInformation(ds, JeffreysCentroid);
+    infoGB=  StandAloneJeffreysHistogramCentroid.JeffreysInformation(ds, GBcenter);
+    infoJFR  =  StandAloneJeffreysHistogramCentroid.JeffreysInformation(ds, JFRcenter);
+
+    TVGB=StandAloneJeffreysHistogramCentroid.TotalVariation(JeffreysCentroid, GBcenter);
+    TVJFR=StandAloneJeffreysHistogramCentroid.TotalVariation(JeffreysCentroid, JFRcenter);
+
+    epsGB=(infoGB/infoJeffreysCentroid)-1.0;
+    epsJFR=(infoJFR/infoJeffreysCentroid)-1.0;
+
+    /*
+    System.out.println("epsGB="+epsGB+"\tepsJFR="+epsJFR);
+     System.out.println("TV(Jeffreys,GB)="+TVGB+"\t TV(Jeffreys,JFR)="+TVJFR);
+     System.out.println("time Jeffreys="+JeffreysChrono.t+" time GB="+GBChrono.t+" time JFR="+JFRChrono.t);
+     */
+
+    MepsGB=max(MepsGB, epsGB);
+    MepsJFR=max(MepsJFR, epsJFR);
+
+    avgGB+=epsGB;
+    avgJFR+=epsJFR;
+  }
+
+  avgGB/=(double)nbtests;
+  avgJFR/=(double)nbtests;
+
+
+  totaltimeJeffreys/=(double)nbtests;
+  totaltimeJFR/=(double)nbtests;
+  totaltimeGB/=(double)nbtests;
+
+  double ratioGB, ratioJFR;
+
+  ratioGB=totaltimeJeffreys/totaltimeGB;
+  ratioJFR=totaltimeJeffreys/totaltimeJFR;
+
+  System.out.println("agv time Jeffreys:\t"+totaltimeJeffreys);
+  System.out.println("agv time GB:\t"+totaltimeGB+"\t speed up GB="+ratioGB);
+  System.out.println("agv time JFR:\t"+totaltimeJFR+"\t speed up JFR="+ratioJFR);
+
+  System.out.println("\nmaximum approx GB:"+MepsGB+"\t JFR:"+MepsJFR);
+  System.out.println("average approx GB:"+avgGB+"\t JFR:"+avgJFR);
+  
+  // dimension & JFR average $\eps$ & JFR maximum $\eps$ & JFR average time &  JFR speed factor &  GB average $\eps$ & GB maximum $\eps$ & GB average time &  JGB speed factor\\
+  
+//  String export=  "d=" + dim+" & " + avgJFR +" & "+MepsJFR + " & " + ratioJFR+ " & "; 
+ //export=export+ avgGB +" & "+MepsGB + " & " + ratioGB+ " \\\\ ";  
+  String export=String.format("d=%d & %.3e & %.3e & %.3e & %.3f & %.3e & %.3e & %.3e & %.3f \\\\",dim, avgJFR,MepsJFR,totaltimeJFR,ratioJFR,
+  avgGB,MepsGB,totaltimeGB,ratioGB);
+
+//String export=String.format("d=%d & %.3e", dim, avgJFR);
+
+
+
+
+ System.out.println("\n"+export+"\n");
+ 
+ supertest=supertest +"\n"+export;
+  System.out.println("----------------------------------------");
+}
+
+
 void initialize()
 {
   n=32;
- //n=2;
+  //n=2;
 
   int i;
   ps=new double[n][3];
@@ -452,21 +715,21 @@ void draw()
     stroke(255, 0, 255);// purple
     MyPoint(fr[0], fr[1]);
   }
-  
+
   ptsize*=1.5;
   if (toggleIM) {
     stroke(255, 255, 0);// yellow
     MyPoint(gb[0], gb[1]);
   }
-  
+
 
   strokefill(0, 0, 0);
   ptsize=5.0f;
 
- 
+
   for (i=0; i<n; i++) {
     MyPoint(ps[i][0], ps[i][1]);
- //   println("!!! input point:"+ ps[i][0]+ "  "+ ps[i][1]);
+    //   println("!!! input point:"+ ps[i][0]+ "  "+ ps[i][1]);
   }
 
 
@@ -527,7 +790,19 @@ void keyPressed()
     StandAloneJeffreysHistogramCentroid.Test2();
   }
 
-if (key=='n') {
+  if (key=='z') {
+    int testd=2;
+    while(testd<=256){
+    testPaper(testd);
+    testd*=2;
+    }
+    // Table export
+    System.out.println(supertest);
+  }
+
+
+
+  if (key=='n') {
     StandAloneJeffreysHistogramCentroid.testJeffreysCentroid();
   }
 
