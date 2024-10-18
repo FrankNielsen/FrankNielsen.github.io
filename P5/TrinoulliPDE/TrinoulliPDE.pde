@@ -243,7 +243,7 @@ double max(double  x, double y) {
   else return y;
 }
 
-void testPaper(int dim)
+void testPaperSpecial(int dim)
 {
  // int dim=1024;
  
@@ -260,6 +260,9 @@ void testPaper(int dim)
   double avgGB=0, avgJFR=0;
   chrono JeffreysChrono, JFRChrono, GBChrono;
   double totaltimeJeffreys=0, totaltimeJFR=0, totaltimeGB=0;
+double avgtvGB, avgtvJFR, maxtvGB, maxtvJFR;
+
+avgtvGB= avgtvJFR= maxtvGB= maxtvJFR=0;
 
 for(double eps=0.1;eps>1.e-20;eps/=10.0)
 {
@@ -318,6 +321,15 @@ for(double eps=0.1;eps>1.e-20;eps/=10.0)
 
     TVGB=StandAloneJeffreysHistogramCentroid.TotalVariation(JeffreysCentroid, GBcenter);
     TVJFR=StandAloneJeffreysHistogramCentroid.TotalVariation(JeffreysCentroid, JFRcenter);
+    
+    
+ 
+
+    avgtvGB+=TVGB;
+    maxtvGB=max(maxtvGB,TVGB);
+    
+   avgtvJFR+=TVJFR;
+    maxtvJFR=max(maxtvGB,TVJFR);
 
     epsGB=(infoGB/infoJeffreysCentroid)-1.0;
     epsJFR=(infoJFR/infoJeffreysCentroid)-1.0;
@@ -347,6 +359,9 @@ for(double eps=0.1;eps>1.e-20;eps/=10.0)
 
   ratioGB=totaltimeJeffreys/totaltimeGB;
   ratioJFR=totaltimeJeffreys/totaltimeJFR;
+  
+   avgtvGB/=(double)nbtests;
+  avgtvJFR/=(double)nbtests;
 
   System.out.println("agv time Jeffreys:\t"+totaltimeJeffreys);
   System.out.println("agv time GB:\t"+totaltimeGB+"\t speed up GB="+ratioGB);
@@ -359,14 +374,16 @@ for(double eps=0.1;eps>1.e-20;eps/=10.0)
   
 //  String export=  "d=" + dim+" & " + avgJFR +" & "+MepsJFR + " & " + ratioJFR+ " & "; 
  //export=export+ avgGB +" & "+MepsGB + " & " + ratioGB+ " \\\\ ";  
-  String export=String.format("d=%d & %.3e & %.3e & %.3e & %.3f & %.3e & %.3e & %.3e & %.3f \\\\",dim, avgJFR,MepsJFR,totaltimeJFR,ratioJFR,
-  avgGB,MepsGB,totaltimeGB,ratioGB);
+  String export=String.format("d=%d & %.3e & %.3e & %.3e & %.3e & %.3e & %.3f & %.3e & %.3e & %.3e & %.3e & %.3e & %.3f \\\\",dim,
+  avgJFR,MepsJFR,avgtvJFR,maxtvJFR,totaltimeJFR,ratioJFR,
+  avgGB,MepsGB,avgtvGB,maxtvGB,totaltimeGB,ratioGB);
   
   
   //$\alpha$ &    $\eps$ &      avg time &    $\times$ speed  &    $\eps$ &    avg time &    $\time$ speed \\ \hline
   
- export=String.format("%.3e & %.3e &   %.3e & %.3f & %.3e &  %.3e & %.3f  \\\\",eps, avgJFR,totaltimeJFR,ratioJFR,
-  avgGB,totaltimeGB,ratioGB);
+ export=String.format("%.3e & %.3e &   %.3e & %.3e  & %.3f & %.3e &  %.3e & %.3e &  %.3f  \\\\",eps, 
+ avgJFR,avgtvJFR,totaltimeJFR,ratioJFR,
+  avgGB,avgtvGB,totaltimeGB,ratioGB);
   
   
 //String export=String.format("d=%d & %.3e", dim, avgJFR);
@@ -387,7 +404,7 @@ for(double eps=0.1;eps>1.e-20;eps/=10.0)
 
 
 
-void testPaperGood(int dim)
+void testPaperGeneral(int dim)
 {
  // int dim=1024;
   int nn=2;
@@ -399,15 +416,19 @@ void testPaperGood(int dim)
   double epsGB, epsJFR;
   double MepsGB=0, MepsJFR=0;
   double avgGB=0, avgJFR=0;
+  double avgtvGB, avgtvJFR, maxtvGB, maxtvJFR;
   chrono JeffreysChrono, JFRChrono, GBChrono;
   double totaltimeJeffreys=0, totaltimeJFR=0, totaltimeGB=0;
+
+
+avgtvGB= avgtvJFR= maxtvGB= maxtvJFR=0;
 
 
   JeffreysChrono=new chrono();
   JFRChrono=new chrono();
   GBChrono=new chrono();
 
-  System.out.println("----------------------------------------");
+  System.out.println("--[General test]--------------------------------------");
   System.out.println("Test for paper with dim="+dim);
 
   for (t=0; t<nbtests; t++)
@@ -441,9 +462,19 @@ void testPaperGood(int dim)
     infoJeffreysCentroid =  StandAloneJeffreysHistogramCentroid.JeffreysInformation(ds, JeffreysCentroid);
     infoGB=  StandAloneJeffreysHistogramCentroid.JeffreysInformation(ds, GBcenter);
     infoJFR  =  StandAloneJeffreysHistogramCentroid.JeffreysInformation(ds, JFRcenter);
-
-    TVGB=StandAloneJeffreysHistogramCentroid.TotalVariation(JeffreysCentroid, GBcenter);
+    
+    
+        TVGB=StandAloneJeffreysHistogramCentroid.TotalVariation(JeffreysCentroid, GBcenter);
     TVJFR=StandAloneJeffreysHistogramCentroid.TotalVariation(JeffreysCentroid, JFRcenter);
+
+
+    avgtvGB+=TVGB;
+    maxtvGB=max(maxtvGB,TVGB);
+    
+   avgtvJFR+=TVJFR;
+    maxtvJFR=max(maxtvGB,TVJFR);
+    
+
 
     epsGB=(infoGB/infoJeffreysCentroid)-1.0;
     epsJFR=(infoJFR/infoJeffreysCentroid)-1.0;
@@ -468,6 +499,9 @@ void testPaperGood(int dim)
   totaltimeJeffreys/=(double)nbtests;
   totaltimeJFR/=(double)nbtests;
   totaltimeGB/=(double)nbtests;
+  
+  avgtvGB/=(double)nbtests;
+  avgtvJFR/=(double)nbtests;
 
   double ratioGB, ratioJFR;
 
@@ -485,8 +519,9 @@ void testPaperGood(int dim)
   
 //  String export=  "d=" + dim+" & " + avgJFR +" & "+MepsJFR + " & " + ratioJFR+ " & "; 
  //export=export+ avgGB +" & "+MepsGB + " & " + ratioGB+ " \\\\ ";  
-  String export=String.format("d=%d & %.3e & %.3e & %.3e & %.3f & %.3e & %.3e & %.3e & %.3f \\\\",dim, avgJFR,MepsJFR,totaltimeJFR,ratioJFR,
-  avgGB,MepsGB,totaltimeGB,ratioGB);
+  String export=String.format("d=%d & %.3e & %.3e & %.3e  & %.3e & %.3e & %.3f & %.3e & %.3e & %.3e &  %.3e & %.3e & %.3f \\\\",dim, 
+  avgJFR,MepsJFR,avgtvJFR, maxtvJFR,totaltimeJFR,ratioJFR,
+  avgGB,MepsGB,avgtvGB,maxtvGB,totaltimeGB,ratioGB);
 
 //String export=String.format("d=%d & %.3e", dim, avgJFR);
 
@@ -790,10 +825,22 @@ void keyPressed()
     StandAloneJeffreysHistogramCentroid.Test2();
   }
 
+
   if (key=='z') {
     int testd=2;
     while(testd<=256){
-    testPaper(testd);
+    testPaperSpecial(testd);
+    testd*=2;
+    }
+    // Table export
+    System.out.println(supertest);
+  }
+  
+  
+  if (key=='x') {
+    int testd=2;
+    while(testd<=256){
+    testPaperGeneral(testd);
     testd*=2;
     }
     // Table export
