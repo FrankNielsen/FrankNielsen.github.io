@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Contributions-Frank.aux
+The style file: plain.bst
+Database file #1: ContributionsBIB.bib
+Warning--empty journal in chevallier2024equivariant
+Warning--empty booktitle in NIELSEN2024
+You've used 30 entries,
+            2118 wiz_defined-function locations,
+            653 strings with 8574 characters,
+and the built_in function-call counts, 10431 in all, are:
+= -- 1092
+> -- 361
+< -- 13
++ -- 143
+- -- 112
+* -- 608
+:= -- 1634
+add.period$ -- 101
+call.type$ -- 30
+change.case$ -- 145
+chr.to.int$ -- 0
+cite$ -- 32
+duplicate$ -- 475
+empty$ -- 888
+format.name$ -- 112
+if$ -- 2312
+int.to.chr$ -- 0
+int.to.str$ -- 30
+missing$ -- 31
+newline$ -- 153
+num.names$ -- 60
+pop$ -- 174
+preamble$ -- 1
+purify$ -- 116
+quote$ -- 0
+skip$ -- 358
+stack$ -- 0
+substring$ -- 690
+swap$ -- 148
+text.length$ -- 13
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 118
+warning$ -- 2
+while$ -- 113
+width$ -- 32
+write$ -- 334
+(There were 2 warnings)

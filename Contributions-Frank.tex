@@ -1,0 +1,108 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage,url,hyperref}
+
+\title{Overview of some contributions on computational geometry on various geometric structures beyond the Euclidean structure}
+
+\author{Frank Nielsen}
+\date{}
+\begin{document}
+\maketitle
+
+
+%%%%%%%%%
+\section*{Riemannian geometry}
+%%%%%%%%%
+
+The uniqueness and circumcenter of the smallest enclosing ball on a finite point set lying on a Riemannian manifold was studied in~\cite{arnaudon2013approximating}.
+
+%%%%%%%%%
+\section*{Finsler geometry}
+%%%%%%%%%
+
+Finsler geometry extends Riemannian geometry by considering smoothly varying Minkowski norms at tangent planes of a manifold.
+The forward and backward $p$-centers on Finsler manifolds was considered in~\cite{arnaudon2012medians}.
+
+
+%%%%%%%%%
+\section*{Fisher-Rao geometry}
+%%%%%%%%%
+
+The Fisher-Rao geometry of a parametric statistical model corresponds to the Riemannian geometry with respect to the Fisher metric.
+The Riemannian geodesic distance is called the Fisher-Rao distance in information geometry~\cite{nielsen2020elementary}.
+Approximation schemes of the Fisher-Rao distances are considered in~\cite{nielsen2023simple,NIELSEN2024}.
+Fisher-Rao geometry of location-scale families amount to hyperbolic geometry.
+
+
+%%%%%%%%%
+\section*{Dually flat geometry}
+%%%%%%%%%
+
+Dually flat geometry has the structures of both a Riemannian manifold with a Hessian metric and a pair of dual torsion-free affine connections.
+Right-angles in dual geodesic triangles in dually flat spaces are studied in~\cite{nielsen2021geodesic}.
+The dual Voronoi diagrams in a dually flat space are dual Bregman Voronoi diagrams~\cite{boissonnat2010bregman} in the dual coordinate systems.
+Exact and approximation of the smallest enclosing Bregman balls were studied in~\cite{nock2005fitting,nielsen2008smallest}.
+Data structures for proximity queries on dually flat spaces are given in~\cite{nielsen2009tailored,nielsen2009bregman}.
+Chernoff information is characterized on a dually flat space in~\cite{nielsen2013information,nielsen2013hypothesis}.
+When the dual potential functions are not in closed-form for exponential or mixture families, Monte Carlo information-geometric structures are considered in~\cite{nielsen2019monte}.
+When the Bregman generator is separable, the dually flat space amounts to Euclidean geometry~\cite{gomes2018geometry}.
+
+
+
+
+
+%%%%%%%%%
+\section*{Hyperbolic geometry}
+%%%%%%%%%
+Bisectors in Klein ball model of hyperbolic geometry are affine hyperplanes clipped to the open ball domain~\cite{nielsen2010hyperbolic}.
+Thus the Klein hyperbolic Voronoi diagram (HVD) and all its $k$-order Voronoi diagrams are equivalent to  power diagrams clipped to the ball domain.
+The Klein HVD can be converted to other models of hyperbolic geometry~\cite{nielsen2014visualizing} (demo: HVD \url{https://www.youtube.com/watch?v=i9IUzNxeH4o}, $k$-order HVD \url{https://www.youtube.com/watch?v=sM_16XgyfhY}). 
+The hyperbolic smallest enclosing  ball (SEB) in Poincar\'e ball model has an Euclidean shape and thus amounts to an Euclidean smallest enclosing ball.
+We can compute numerically the hyperbolic SEB in high dimensions in Klein model with guarantees~\cite{nielsen2015approximating}.
+The dual of the HVD is the hyperbolic Delaunay complex~\cite{nielsen2020voronoi}. 
+Klein Riemannian geodesics, general position and degeneracies of point sets in hyperbolic geometry are studied in~\cite{nielsen2014further}.
+Klein HVDs can be extended to Cayley-Klein HVDs~\cite{nielsen2016classification} where the domains are ellipsoids.
+
+%%%%%%%%%
+\section*{Hilbert geometry and Birkhoff projective geometry}
+%%%%%%%%%
+
+Hilbert geometry is defined on open bounded convex domain. When the domain is a ball, it amounts to Klein model of hyperbolic geometry.
+Hilbert geometry of the (a) simplex domain modeling the space of categorical distributions and (b) the elliptope of correlation matrices are studied in~\cite{nielsen2019clustering,nielsen2023non}. 
+Balls in Hilbert geometry with polygonal domains are investigated in~\cite{nielsen2017balls}.
+
+For an open bounded convex domain $\Omega$, we may define the cone $C_\Omega=\{(\lambda,\lambda\Omega), \lambda>0\}$ by stacking all its homothets. Birkhoff geometry is a projective geometry which coincides on slices of the cone with the underlying Hilbert geometry~\cite{nielsen2023fisher}.
+
+
+ 
+%%%%%%%%%
+\section*{Siegel geometry}
+%%%%%%%%%
+
+The Siegel upper space is a generalization of the Poincar\'e upper plane: The set of complex square matrices with symmetric positive-definie imaginary parts~\cite{nielsen2013matrix}. The Siegel upper space can be transformed into the Siegel matrix ball which is a generalization of Poincar\'e ball mode of hyperbolic geometry.
+The Siegel-Klein geometry~\cite{nielsen2020siegel} is the Hilbert geometry of the Siegel matrix ball model.
+
+%%%%%%%%%
+\section*{Symmetric cone geometry}
+%%%%%%%%%
+
+The cone of symmetric positive-definite matrices is a symmetric cone~\cite{nielsen2023fisher}.
+Equivariant log-extrinsic centers and Gaussian-like distributions are studied in~\cite{chevallier2024equivariant}.
+
+
+%%%%%%%%%
+\section*{Lightlike manifolds}
+%%%%%%%%%
+
+The parameter space of a deep neural network can be considered as a lightlike manifold~\cite{sun2019geometric}.
+
+%%%%%%%%%
+\section*{Stratifolds}
+%%%%%%%%%
+
+The parameter space of a deep neural network can be considered as a stratifold~\cite{esser2022influence}.
+
+\bibliographystyle{plain}
+\bibliography{ContributionsBIB}
+
+\end{document}
+ 

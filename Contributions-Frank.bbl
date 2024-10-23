@@ -1,0 +1,175 @@
+\begin{thebibliography}{10}
+
+\bibitem{arnaudon2012medians}
+Marc Arnaudon and Frank Nielsen.
+\newblock {Medians and means in Finsler geometry}.
+\newblock {\em LMS Journal of Computation and Mathematics}, 15:23--37, 2012.
+
+\bibitem{arnaudon2013approximating}
+Marc Arnaudon and Frank Nielsen.
+\newblock {On approximating the Riemannian $1$-center}.
+\newblock {\em Computational Geometry}, 46(1):93--104, 2013.
+
+\bibitem{boissonnat2010bregman}
+Jean-Daniel Boissonnat, Frank Nielsen, and Richard Nock.
+\newblock {Bregman Voronoi diagrams}.
+\newblock {\em Discrete \& Computational Geometry}, 44:281--307, 2010.
+
+\bibitem{chevallier2024equivariant}
+Emmanuel Chevallier and Frank Nielsen.
+\newblock Equivariant log-extrinsic means on irreducible symmetric cones.
+\newblock 2024.
+
+\bibitem{esser2022influence}
+Pascal~Mattia Esser and Frank Nielsen.
+\newblock On the influence of enforcing model identifiability on learning
+  dynamics of gaussian mixture models.
+\newblock {\em arXiv preprint arXiv:2206.08598}, 2022.
+
+\bibitem{gomes2018geometry}
+Erika Gomes-Gon{\c{c}}alves, Henryk Gzyl, and Frank Nielsen.
+\newblock {Geometry and clustering with metrics derived from separable Bregman
+  divergences}.
+\newblock {\em arXiv preprint arXiv:1810.10770}, 2018.
+
+\bibitem{nielsen2013information}
+Frank Nielsen.
+\newblock {An information-geometric characterization of Chernoff information}.
+\newblock {\em IEEE Signal Processing Letters}, 20(3):269--272, 2013.
+
+\bibitem{nielsen2013hypothesis}
+Frank Nielsen.
+\newblock Hypothesis testing, information divergence and computational
+  geometry.
+\newblock In {\em International Conference on Geometric Science of
+  Information}, pages 241--248. Springer, 2013.
+
+\bibitem{nielsen2020elementary}
+Frank Nielsen.
+\newblock An elementary introduction to information geometry.
+\newblock {\em Entropy}, 22(10):1100, 2020.
+
+\bibitem{nielsen2020voronoi}
+Frank Nielsen.
+\newblock {On Voronoi diagrams on the information-geometric Cauchy manifolds}.
+\newblock {\em Entropy}, 22(7):713, 2020.
+
+\bibitem{nielsen2020siegel}
+Frank Nielsen.
+\newblock {The Siegel--Klein disk: Hilbert geometry of the Siegel disk domain}.
+\newblock {\em Entropy}, 22(9):1019, 2020.
+
+\bibitem{nielsen2021geodesic}
+Frank Nielsen.
+\newblock On geodesic triangles with right angles in a dually flat space.
+\newblock In {\em Progress in Information Geometry: Theory and Applications},
+  pages 153--190. Springer, 2021.
+
+\bibitem{nielsen2023simple}
+Frank Nielsen.
+\newblock {A simple approximation method for the Fisher--Rao distance between
+  multivariate normal distributions}.
+\newblock {\em Entropy}, 25(4):654, 2023.
+
+\bibitem{nielsen2023fisher}
+Frank Nielsen.
+\newblock {Fisher-Rao and pullback Hilbert cone distances on the multivariate
+  Gaussian manifold with applications to simplification and quantization of
+  mixtures}.
+\newblock In {\em Topological, Algebraic and Geometric Learning Workshops
+  2023}, pages 488--504. PMLR, 2023.
+
+\bibitem{NIELSEN2024}
+Frank Nielsen.
+\newblock {Approximation and bounding techniques for the Fisher-Rao distances
+  between parametric statistical models}.
+\newblock Handbook of Statistics. Elsevier, 2024.
+
+\bibitem{nielsen2013matrix}
+Frank Nielsen and Rajendra Bhatia.
+\newblock {\em Matrix information geometry}.
+\newblock Springer, 2013.
+
+\bibitem{nielsen2015approximating}
+Frank Nielsen and Ga{\"e}tan Hadjeres.
+\newblock Approximating covering and minimum enclosing balls in hyperbolic
+  geometry.
+\newblock In {\em Geometric Science of Information: Second International
+  Conference, GSI 2015, Palaiseau, France, October 28-30, 2015, Proceedings 2},
+  pages 586--594. Springer, 2015.
+
+\bibitem{nielsen2019monte}
+Frank Nielsen and Ga{\"e}tan Hadjeres.
+\newblock {Monte Carlo information-geometric structures}.
+\newblock {\em Geometric Structures of Information}, pages 69--103, 2019.
+
+\bibitem{nielsen2016classification}
+Frank Nielsen, Boris Muzellec, and Richard Nock.
+\newblock {Classification with mixtures of curved Mahalanobis metrics}.
+\newblock In {\em IEEE International Conference on Image Processing (ICIP)},
+  pages 241--245. IEEE, 2016.
+
+\bibitem{nielsen2008smallest}
+Frank Nielsen and Richard Nock.
+\newblock On the smallest enclosing information disk.
+\newblock {\em Information Processing Letters}, 105(3):93--97, 2008.
+
+\bibitem{nielsen2010hyperbolic}
+Frank Nielsen and Richard Nock.
+\newblock {Hyperbolic Voronoi diagrams made easy}.
+\newblock In {\em International Conference on Computational Science and Its
+  Applications}, pages 74--80. IEEE, 2010.
+
+\bibitem{nielsen2014further}
+Frank Nielsen and Richard Nock.
+\newblock {Further results on the hyperbolic Voronoi diagrams}.
+\newblock {\em arXiv preprint arXiv:1410.1036}, 2014.
+
+\bibitem{nielsen2014visualizing}
+Frank Nielsen and Richard Nock.
+\newblock {Visualizing hyperbolic Voronoi diagrams}.
+\newblock In {\em Proceedings of the thirtieth annual symposium on
+  Computational geometry}, pages 90--91, 2014.
+
+\bibitem{nielsen2009bregman}
+Frank Nielsen, Paolo Piro, and Michel Barlaud.
+\newblock Bregman vantage point trees for efficient nearest neighbor queries.
+\newblock In {\em 2009 IEEE International Conference on Multimedia and Expo},
+  pages 878--881. IEEE, 2009.
+
+\bibitem{nielsen2009tailored}
+Frank Nielsen, Paolo Piro, and Michel Barlaud.
+\newblock {Tailored Bregman ball trees for effective nearest neighbors}.
+\newblock In {\em Proceedings of the 25th European Workshop on Computational
+  Geometry (EuroCG)}, pages 29--32, 2009.
+
+\bibitem{nielsen2017balls}
+Frank Nielsen and Laetitia Shao.
+\newblock {On balls in a Hilbert polygonal geometry (multimedia contribution)}.
+\newblock In {\em 33rd International Symposium on Computational Geometry (SoCG
+  2017)}. Schloss Dagstuhl-Leibniz-Zentrum fuer Informatik, 2017.
+
+\bibitem{nielsen2019clustering}
+Frank Nielsen and Ke~Sun.
+\newblock {Clustering in Hilbert's projective geometry: The case studies of the
+  probability simplex and the elliptope of correlation matrices}.
+\newblock {\em Geometric structures of information}, pages 297--331, 2019.
+
+\bibitem{nielsen2023non}
+Frank Nielsen and Ke~Sun.
+\newblock {Non-linear embeddings in Hilbert simplex geometry}.
+\newblock In {\em Topological, Algebraic and Geometric Learning Workshops
+  2023}, pages 254--266. PMLR, 2023.
+
+\bibitem{nock2005fitting}
+Richard Nock and Frank Nielsen.
+\newblock {Fitting the smallest enclosing Bregman ball}.
+\newblock In {\em European Conference on Machine Learning}, pages 649--656.
+  Springer, 2005.
+
+\bibitem{sun2019geometric}
+Ke~Sun and Frank Nielsen.
+\newblock {A Geometric Modeling of Occam's Razor in Deep Learning}.
+\newblock {\em arXiv preprint arXiv:1905.11027}, 2019.
+
+\end{thebibliography}
