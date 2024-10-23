@@ -5,45 +5,45 @@ The style file: plain.bst
 Database file #1: ContributionsBIB.bib
 Warning--empty journal in chevallier2024equivariant
 Warning--empty booktitle in NIELSEN2024
-You've used 30 entries,
+You've used 32 entries,
             2118 wiz_defined-function locations,
-            653 strings with 8574 characters,
-and the built_in function-call counts, 10431 in all, are:
-= -- 1092
-> -- 361
-< -- 13
-+ -- 143
-- -- 112
-* -- 608
-:= -- 1634
-add.period$ -- 101
-call.type$ -- 30
-change.case$ -- 145
+            662 strings with 9000 characters,
+and the built_in function-call counts, 11399 in all, are:
+= -- 1201
+> -- 387
+< -- 15
++ -- 153
+- -- 120
+* -- 660
+:= -- 1765
+add.period$ -- 109
+call.type$ -- 32
+change.case$ -- 155
 chr.to.int$ -- 0
-cite$ -- 32
-duplicate$ -- 475
-empty$ -- 888
-format.name$ -- 112
-if$ -- 2312
+cite$ -- 34
+duplicate$ -- 523
+empty$ -- 973
+format.name$ -- 120
+if$ -- 2544
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 31
-newline$ -- 153
-num.names$ -- 60
-pop$ -- 174
+int.to.str$ -- 32
+missing$ -- 33
+newline$ -- 163
+num.names$ -- 64
+pop$ -- 190
 preamble$ -- 1
-purify$ -- 116
+purify$ -- 124
 quote$ -- 0
-skip$ -- 358
+skip$ -- 399
 stack$ -- 0
-substring$ -- 690
-swap$ -- 148
-text.length$ -- 13
+substring$ -- 772
+swap$ -- 172
+text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 118
+type$ -- 126
 warning$ -- 2
-while$ -- 113
-width$ -- 32
-write$ -- 334
+while$ -- 123
+width$ -- 34
+write$ -- 358
 (There were 2 warnings)

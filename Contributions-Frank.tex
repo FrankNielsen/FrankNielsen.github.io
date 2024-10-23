@@ -1,12 +1,20 @@
 \documentclass[11pt]{article}
 \usepackage{fullpage,url,hyperref}
 
+\def\calM{\mathcal{M}}
+
 \title{Overview of some contributions on computational geometry on various geometric structures beyond the Euclidean structure}
 
 \author{Frank Nielsen}
 \date{}
 \begin{document}
 \maketitle
+
+Let $\calM=\{p_\theta(x), \theta\in\Theta\}$ be a parametric statistical model, regular or not.
+Examples of regular statistical models are the families of categorical or Gaussian distributions (exponential families), family of Gaussian mixture models with prescribed components~\cite{nielsen2018geometry} (mixture families), etc.
+Examples of irregular models are families of Gaussian mixture models with $k$ components, family of uniform distributions, etc.
+Information geometry considers various geometric structures on $\calM$.
+I concisely review some geometric structures and geometric computing contributions below.
 
 
 %%%%%%%%%
@@ -79,6 +87,7 @@ For an open bounded convex domain $\Omega$, we may define the cone $C_\Omega=\{(
 %%%%%%%%%
 
 The Siegel upper space is a generalization of the Poincar\'e upper plane: The set of complex square matrices with symmetric positive-definie imaginary parts~\cite{nielsen2013matrix}. The Siegel upper space can be transformed into the Siegel matrix ball which is a generalization of Poincar\'e ball mode of hyperbolic geometry.
+The sectional curvatures of the Siegel upper space was shown to be non-positive~\cite{cabanes2021classification}.
 The Siegel-Klein geometry~\cite{nielsen2020siegel} is the Hilbert geometry of the Siegel matrix ball model.
 
 %%%%%%%%%
@@ -88,6 +97,23 @@ The Siegel-Klein geometry~\cite{nielsen2020siegel} is the Hilbert geometry of th
 The cone of symmetric positive-definite matrices is a symmetric cone~\cite{nielsen2023fisher}.
 Equivariant log-extrinsic centers and Gaussian-like distributions are studied in~\cite{chevallier2024equivariant}.
 
+
+%%%%%%%%%
+\section*{Bruhat-Tits spaces}
+%%%%%%%%%
+
+Bruhat-Tits spaces have a semi parallelogram law.
+
+
+
+%%%%%%%%%
+\section*{Non-positive-curvature (NPC) spaces}
+%%%%%%%%%
+
+
+%%%%%%%%%
+\section*{CAT spaces}
+%%%%%%%%%
 
 %%%%%%%%%
 \section*{Lightlike manifolds}
