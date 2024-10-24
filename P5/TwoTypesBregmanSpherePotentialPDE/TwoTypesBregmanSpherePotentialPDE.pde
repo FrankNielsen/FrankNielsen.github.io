@@ -2,6 +2,24 @@
 // October 2024
 
 // Extending Hausdorff Distances to Asymmetric Geometries, page 64
+import processing.pdf.*;
+
+void savepdffile()
+{
+  int s=0;
+  String suffix=year()+"-"+month()+"-"+day()+"-"+hour()+"-"+minute()+"-"+second();
+
+  beginRecord(PDF, "BregmanSpherePotential-"+suffix+".pdf");
+
+
+  draw();
+
+  save("BregmanSpherePotential-"+suffix+".png");
+  endRecord();
+}
+
+
+boolean toggleAnimation=true;
 
 boolean toggleLeftBregmanSphere=true;
 boolean toggleRightBregmanSphere=true;
@@ -9,6 +27,8 @@ boolean toggleRightBregmanSphere=true;
 boolean toggleRight=true;
 boolean toggleLeft=true;
 boolean toggleSym=true;
+
+boolean toggleTangentCenter=false;
 
 BB bb;
 int ww=800,hh=800;
@@ -70,12 +90,13 @@ double F(double theta) {
 }
 */
 
+// paraboloid of revolution
 double F(double theta) {
-  return 0.5*theta*theta;
+  return theta*theta;
 }
 
 double gradF(double theta) {
-  return  theta;
+  return  2.0*theta;
 }
 
 
@@ -89,12 +110,27 @@ double SIS(double p, double q) {
   return (p/q)+(q/p)-2;
 }
 
-double xmin=0.01, xmax=2;
+double xmin=-4, xmax=4;
 
 double right1, right2, left1,left2,sym1,sym2;
 
 
 double GeometricMean(double p1,double p2){return Math.sqrt(p1*p2);}
+
+
+double speed=0.01;
+
+void animate()
+{
+  centerE=centerE+speed;
+  if (centerE>bb.maxx-Math.sqrt(radiusE)) {speed=-speed;}
+   if (centerE<bb.minx+Math.sqrt(radiusE)) {speed=-speed;}
+  
+  leftE=centerE-Math.sqrt(radiusE);
+rightE=centerE+Math.sqrt(radiusE);
+  
+}
+
 
 void init()
 {
@@ -144,7 +180,7 @@ assume(r>0);
 solve([(x-c)**2-r**2=0],x);
 */
 
-  bb=new BB(xmin, xmax, F(xmin)-deltay, F(xmax)+deltay, ww, hh); //
+  bb=new BB(xmin, xmax, -deltay, F(xmax)+deltay, ww, hh); //
 }
 
 void setup()
@@ -155,6 +191,7 @@ void setup()
 
 float ptsize=3;
 
+// main drawing procedure
 void draw()
 {
   background(255);
@@ -179,6 +216,8 @@ void draw()
      line(bb.x2X(leftE),bb.y2Y(0), bb.x2X(leftE),bb.y2Y(F(leftE)));
       line(bb.x2X(rightE),bb.y2Y(0), bb.x2X(rightE),bb.y2Y(F(rightE)));
       
+      
+      if (toggleLeftBregmanSphere){
       stroke(0,255,0);
       ellipse(bb.x2X(centerE),bb.y2Y(F(centerE)-radiusE ),ptsize,ptsize);
       
@@ -190,17 +229,23 @@ tangentRight=new Line(centerE,F(centerE)-radiusE ,rightE,F(rightE));
       line(bb.x2X(centerE),bb.y2Y(F(centerE)-radiusE), bb.x2X(bb.maxx),bb.y2Y(tangentRight.x2y(bb.maxx)));
         line(bb.x2X(centerE),bb.y2Y(F(centerE)-radiusE), bb.x2X(bb.minx),bb.y2Y(tangentLeft.x2y(bb.minx)));
     //   line(bb.x2X(centerE),bb.y2Y(0), bb.x2X(centerE),bb.y2Y(F(centerE)));
+      }
        
-       
-       
+       if(toggleRightBregmanSphere)
+       {
        stroke(0,0,255);
        Line tangentCenter=new Line(gradF(centerE),F(centerE)-gradF(centerE)*centerE);
        
+       if (toggleTangentCenter){
+       strokeWeight(1);
        line(bb.x2X(bb.minx),bb.y2Y(tangentCenter.x2y(bb.minx)), bb.x2X(bb.maxx),bb.y2Y(tangentCenter.x2y(bb.maxx)) );
+       }
        
-       
-       Line supportBS=tangentCenter.translate(radiusE);
+        strokeWeight(3);
+       Line supportBS=tangentCenter.translate( (radiusE));
         line(bb.x2X(bb.minx),bb.y2Y(supportBS.x2y(bb.minx)), bb.x2X(bb.maxx),bb.y2Y(supportBS.x2y(bb.maxx)) );
+       }
+  
   noFill();
   
   
@@ -230,9 +275,33 @@ tangentRight=new Line(centerE,F(centerE)-radiusE ,rightE,F(rightE));
     
     line((float)i, (float)bb.y2Y(y), (float)(i+step), (float)bb.y2Y(ny));
   }
+  
+  stroke(255,0,0);
+  double xx, stepxx=0.01;
+  for (xx=leftE; xx<=rightE; xx+=stepxx)
+  {
+    y=F(xx);
+    
+    
+    ellipse(bb.x2X(xx), bb.y2Y(y), ptsize,ptsize);
+  }
+  
+  if (toggleAnimation) animate();
 }
 
 void keyPressed()
 {
+    if (key=='q') exit();
+  
+  if (key=='p') savepdffile();
+  
+   if (key=='a'){toggleAnimation=!toggleAnimation;} 
+   
  if (key==' '){init();} 
+ 
+  if (key=='t'){toggleTangentCenter=!toggleTangentCenter;}
+ 
+  if (key=='r'){toggleRightBregmanSphere=!toggleRightBregmanSphere;}
+  
+    if (key=='l'){toggleLeftBregmanSphere=!toggleLeftBregmanSphere;}
 }

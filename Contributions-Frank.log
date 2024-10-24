@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  23 OCT 2024 10:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  24 OCT 2024 10:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -212,33 +212,47 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 13.
  [1
 
-{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./Contribu
-tions-Frank.bbl [3] [4]) [5]
-(./Contributions-Frank.aux)
+{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `nielsen2012hyperbolic' on page 2 undefined on input li
+ne 66.
+
+
+LaTeX Warning: Citation `nock2013information' on page 2 undefined on input line
+ 73.
+
+
+LaTeX Warning: Citation `neurips-2024' on page 2 undefined on input line 74.
+
+[2] (./Contributions-Frank.bbl [3] [4]) [5] (./Contributions-Frank.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Contributions-Frank.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 7412 strings out of 476017
- 118851 string characters out of 5793766
+ 7414 strings out of 476017
+ 118875 string characters out of 5793766
  1860660 words of memory out of 5000000
- 27772 multiletter control sequences out of 15000+600000
- 517357 words of font info for 49 fonts, out of 8000000 for 9000
+ 27773 multiletter control sequences out of 15000+600000
+ 517665 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,6n,76p,372b,548s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
-live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/te
-xlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Contributions-Frank.pdf (5 pages, 147390 bytes).
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
+live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
+fb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/te
+xlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/202
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Contributions-Frank.pdf (5 pages, 157420 bytes).
 PDF statistics:
- 173 PDF objects out of 1000 (max. 8388607)
- 144 compressed objects within 2 object streams
+ 177 PDF objects out of 1000 (max. 8388607)
+ 146 compressed objects within 2 object streams
  52 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -7,3 +7,24 @@ Some libraries I use:
 <li><A HREF="http://www.apfloat.org/">Apfloat</A>: Apfloat arbitrary precision library (ex: Lambert W function)
 <li><A HREF="https://github.com/OpenSourcePhysics/osp">Open source physics</A>, osp.jar (complex eigenvalues)
 </ul>
+
+
+<HR>
+Example of using ApFloat  (put jar in directory 'code'):<BR>
+
+<pre>
+import org.apfloat.Apfloat;
+import org.apfloat.ApfloatMath;
+
+void init()
+{
+  Apfloat x = new Apfloat(2, 1000);
+  System.out.println(ApfloatMath.sqrt(x));
+}
+
+
+void setup()
+{
+  init();
+}
+</pre>

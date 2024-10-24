@@ -13,5 +13,6 @@ class Line
  
  Line(double aa, double bb){a=aa;b=bb;}
  
- Line translate(double delta){return new Line(a,b+delta);}
+ Line translate(double delta)
+ {return new Line(a,b+delta);}
 }

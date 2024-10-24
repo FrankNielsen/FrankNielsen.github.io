@@ -128,6 +128,11 @@ Frank Nielsen and Richard Nock.
 \newblock In {\em International Conference on Computational Science and Its
   Applications}, pages 74--80. IEEE, 2010.
 
+\bibitem{nielsen2012hyperbolic}
+Frank Nielsen and Richard Nock.
+\newblock {The hyperbolic Voronoi diagram in arbitrary dimension}.
+\newblock {\em arXiv preprint arXiv:1210.8234}, 2012.
+
 \bibitem{nielsen2014further}
 Frank Nielsen and Richard Nock.
 \newblock {Further results on the hyperbolic Voronoi diagrams}.
@@ -175,11 +180,23 @@ Frank Nielsen and Ke~Sun.
 \newblock In {\em Topological, Algebraic and Geometric Learning Workshops
   2023}, pages 254--266. PMLR, 2023.
 
+\bibitem{neurips-2024}
+Richard Nock, Ehsan Amid, Frank Nielsen, Alexander Soen, and Manfred~K.
+  Warmuth.
+\newblock Hyperbolic embeddings of supervised models.
+\newblock In {\em Neural Information Processing Society (NeurIPS)}, Vancouver,
+  Canada, December 2024.
+
 \bibitem{nock2005fitting}
 Richard Nock and Frank Nielsen.
 \newblock {Fitting the smallest enclosing Bregman ball}.
 \newblock In {\em European Conference on Machine Learning}, pages 649--656.
   Springer, 2005.
+
+\bibitem{nock2013information}
+Richard Nock and Frank Nielsen.
+\newblock Information-geometric lenses for multiple foci+contexts interfaces.
+\newblock In {\em SIGGRAPH Asia 2013 Technical Briefs}, pages 1--4. 2013.
 
 \bibitem{sun2019geometric}
 Ke~Sun and Frank Nielsen.
