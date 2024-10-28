@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  24 OCT 2024 10:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.11)  25 OCT 2024 17:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -178,64 +178,67 @@ File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
 (./Contributions-Frank.aux)
 \openout1 = `Contributions-Frank.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-Package hyperref Info: Link coloring OFF on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+Package hyperref Info: Link coloring OFF on input line 12.
  (./Contributions-Frank.out)
 (./Contributions-Frank.out)
 \@outlinefile=\write3
 \openout3 = `Contributions-Frank.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 12.
+(Font)              <12> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 12.
+(Font)              <8> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 12.
+(Font)              <6> on input line 14.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 13.
+(Font)              <10.95> on input line 15.
  [1
 
 {c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 LaTeX Warning: Citation `nielsen2012hyperbolic' on page 2 undefined on input li
-ne 66.
+ne 68.
 
 
 LaTeX Warning: Citation `nock2013information' on page 2 undefined on input line
- 73.
+ 75.
 
 
-LaTeX Warning: Citation `neurips-2024' on page 2 undefined on input line 74.
+LaTeX Warning: Citation `neurips-2024' on page 2 undefined on input line 76.
 
 [2] (./Contributions-Frank.bbl [3] [4]) [5] (./Contributions-Frank.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `Contributions-Frank.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 7414 strings out of 476017
- 118875 string characters out of 5793766
+ 7420 strings out of 476017
+ 119000 string characters out of 5793766
  1860660 words of memory out of 5000000
- 27773 multiletter control sequences out of 15000+600000
+ 27776 multiletter control sequences out of 15000+600000
  517665 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,6n,76p,372b,548s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -249,10 +252,10 @@ c/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts
 fb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/te
 xlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/202
 3/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Contributions-Frank.pdf (5 pages, 157420 bytes).
+Output written on Contributions-Frank.pdf (5 pages, 159383 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 146 compressed objects within 2 object streams
- 52 named destinations out of 1000 (max. 500000)
+ 181 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
+ 55 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
