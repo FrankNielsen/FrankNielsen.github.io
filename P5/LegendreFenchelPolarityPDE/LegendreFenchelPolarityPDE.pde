@@ -1,8 +1,9 @@
 // Frank.Nielsen@acm.org
 // October 2024
-// KL
+ 
+// The contribution of K.-H. Elster to generalized conjugation theory and nonconvex duality
 
-// Extending Hausdorff Distances to Asymmetric Geometries, page 64
+
 import processing.pdf.*;
 
 double WNeg1(double x)
@@ -136,6 +137,20 @@ float ptsize=3;
 
 double y0right=-0.05;//;
 
+double Paraboloid(double x){return x*x;}
+
+void drawParaboloid()
+{int i;  double y, ny;
+  
+  for (i=0; i<ww-step; i+=step)
+  {
+    y=Paraboloid(bb.X2x(i));
+    ny=Paraboloid(bb.X2x(i+step));
+
+    line((float)i, (float)bb.y2Y(y), (float)(i+step), (float)bb.y2Y(ny));
+  }
+}
+
 //
 // main drawing procedure
 //
@@ -165,6 +180,11 @@ void draw()
     line((float)i, (float)bb.y2Y(y), (float)(i+step), (float)bb.y2Y(ny));
   }
 
+
+stroke(0,255,0);
+drawParaboloid();
+
+stroke(0);
   strokeWeight(1);
   
 if (toggleLeftBregmanSphere) {
