@@ -1,0 +1,158 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage,amssymb}
+
+\def\calX{\mathcal{X}}
+\def\KL{\mathrm{KL}}
+\def\bbN{\mathbb{N}}
+
+\newtheorem{example}{Example}
+
+
+
+\title{Closed-form formula for the Chernoff information between categorical distributions}
+
+\author{Frank Nielsen}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Introduction}
+
+We consider discrete probability distributions on a finite alphabet of size $k\geq 2$.
+
+
+By interpreting the set of categorical distributions as an exponential family, we get the following characterization~\cite{}:
+
+
+In particular, we get a closed-form solution~\cite{CI-2013} for binary alphabets (when $k=2$, the underlying exponential family is of order $1$):
+
+
+
+Chernoff distribution is a member of an exponential family arc (i.e., an exponential family of order $1$)
+
+
+\nocite{*}
+
+
+%%%%%%%%%
+\section{Characterization and approximation method}
+
+Exponential arc.
+
+
+%%%%%%%%%
+\section{Bernoulli case}
+%%%%%%%%%
+
+For $x\in\calX=\{0,1\}$, the PMF of a Bernoulli distribution is:
+$$
+p^x (1-p)^{1-x}
+$$
+
+
+$$
+D_\KL(b_\lambda:b_p)=D(b_\lambda:b_q).
+$$
+
+
+
+
+ 
+
+
+Let $a=\frac{p_1}{p_2}$ and $b=\frac{1-p_1}{1-p_2}$.
+Then we have the optimal Chernoff exponent given by:
+$$
+\alpha^*(p_1,p_2) = \frac{\log \left( \frac{\log b}{\log a} (1-\frac{1}{p_2}) \right)}{\log \frac{a}{b}}.
+$$
+
+Let $c=\frac{\log(-\frac{\log b}{\log a})}{\log\frac{a}{b}}$.
+Then the Chernoff distribution is
+$$
+p^*=\frac{1}{1+(\frac{b}{a})^c}
+$$
+
+and the Chernoff information is:
+$$
+D_C(p_1,p_2)=D_{B,\alpha^*}(p_1,p_2),
+$$
+where $=D_{B,\alpha^*}$ is the skew Bhattacharyya distance:
+$$
+D_{B,\alpha}(p_1,p_2) = -\log \left(p_1^\alpha p_2^{1-\alpha} + (1-p_1)^\alpha (1-p_2)^{1-\alpha} \right).
+$$
+
+
+
+\begin{example}
+Consider $p_1=0.1$ and $p_2=0.2$, we find $\alpha^*\approx 0.4761245029727815$.
+The Chernoff distribution is $p^*=0.1452443543242726$.
+The Chernoff information is about $0.01012451657995914$.
+\end{example}
+ 
+
+
+
+%%%%%%%%%
+\section{Multinoulli case}
+%%%%%%%%%
+
+
+\section{Multiple distributions}
+
+natural neighbour interpolation
+\cite{NNN-1981}
+
+\section{Natural gradient}
+
+$$
+g(\alpha)=F''(\alpha)
+$$
+
+Dual parameter $\beta=F'(\alpha)$
+
+NGD = OGD on $\beta$.
+
+$$
+\min_\alpha D_{B,\alpha}(p_1,p_2) 
+$$
+
+$$
+\min_\beta D_{B,\beta}(p_1,p_2) 
+$$
+
+\bibliographystyle{plain}
+\bibliography{CatChernoffBIB}
+
+\appendix
+
+
+
+\section{Bernoulli exponential family}\label{sec:BerEF}
+
+\begin{itemize}
+
+\item $\theta=\log\frac{p}{1-p}$
+
+\item $F(\theta)=\log(1+e^\theta)$
+
+\item $\eta(\theta)=\frac{e^\theta}{1+e^\theta}$, $\eta(p)=p$
+
+\item $\theta(\eta)=\log\frac{\eta}{1-\eta}$
+
+\item $F^*(\eta)=\eta\log\eta+(1-\eta)\log(1-\eta)=-H(b_p)$
+
+\item $\lambda(\theta)=\frac{e^\theta}{1+e^\theta}$
+
+\item $\lambda_\alpha= \frac{\left(\frac{p_1}{1-p_1}\right)^{\alpha}\left((\frac{p_2}{1-p_2}\right)^{1-\alpha}}{1+
+\left(\frac{p_1}{1-p_1}\right)^{\alpha}\left((\frac{p_2}{1-p_2}\right)^{1-\alpha}}$.
+
+\end{itemize}
+
+Bernoulli Kullback-Leibler divergence also called binary Kullback-Leibler divergence.
+
+$k$-ary Kullback-Leibler divergence.
+
+
+\end{document}

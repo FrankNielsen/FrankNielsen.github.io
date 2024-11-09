@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: CategoricalChernoffInformation.aux
+The style file: plain.bst
+Database file #1: CatChernoffBIB.bib
+Warning--I didn't find a database entry for ""
+You've used 6 entries,
+            2118 wiz_defined-function locations,
+            541 strings with 4898 characters,
+and the built_in function-call counts, 1886 in all, are:
+= -- 200
+> -- 42
+< -- 2
++ -- 20
+- -- 12
+* -- 114
+:= -- 303
+add.period$ -- 18
+call.type$ -- 6
+change.case$ -- 23
+chr.to.int$ -- 0
+cite$ -- 6
+duplicate$ -- 83
+empty$ -- 167
+format.name$ -- 12
+if$ -- 404
+int.to.chr$ -- 0
+int.to.str$ -- 6
+missing$ -- 7
+newline$ -- 33
+num.names$ -- 12
+pop$ -- 22
+preamble$ -- 1
+purify$ -- 18
+quote$ -- 0
+skip$ -- 62
+stack$ -- 0
+substring$ -- 169
+swap$ -- 22
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 22
+warning$ -- 0
+while$ -- 24
+width$ -- 7
+write$ -- 67
+(There was 1 warning)

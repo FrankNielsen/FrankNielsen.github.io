@@ -1,0 +1,36 @@
+\begin{thebibliography}{1}
+
+\bibitem{vcencov1978algebraic}
+NN~{\v{C}}encov.
+\newblock Algebraic foundation of mathematical statistics.
+\newblock {\em Statistics: A Journal of Theoretical and Applied Statistics},
+  9(2):267--276, 1978.
+
+\bibitem{chernoff1952measure}
+Herman Chernoff.
+\newblock A measure of asymptotic efficiency for tests of a hypothesis based on
+  the sum of observations.
+\newblock {\em The Annals of Mathematical Statistics}, pages 493--507, 1952.
+
+\bibitem{cover1999elements}
+Thomas~M Cover.
+\newblock {\em Elements of information theory}.
+\newblock John Wiley \& Sons, 1999.
+
+\bibitem{CI-2013}
+Frank Nielsen.
+\newblock {An information-geometric characterization of Chernoff information}.
+\newblock {\em IEEE Signal Processing Letters}, 20(3):269--272, 2013.
+
+\bibitem{NNN-1981}
+Robin Sibson.
+\newblock A brief description of natural neighbour interpolation.
+\newblock {\em Interpreting multivariate data}, pages 21--36, 1981.
+
+\bibitem{westover2008asymptotic}
+M~Brandon Westover.
+\newblock Asymptotic geometry of multiple hypothesis testing.
+\newblock {\em IEEE transactions on information theory}, 54(7):3327--3329,
+  2008.
+
+\end{thebibliography}

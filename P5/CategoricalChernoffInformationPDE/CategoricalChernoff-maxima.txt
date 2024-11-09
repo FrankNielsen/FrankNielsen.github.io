@@ -1,0 +1,73 @@
+kill(all);
+
+lambda2theta(p):= log(p/(1-p));
+theta2lambda(theta):=exp(theta)/(1+exp(theta));
+
+F(theta):=log(1+exp(theta));
+Gprime(eta):=log(eta/(1-eta));
+
+
+
+deltaF(theta1,theta2):=F(theta2)-F(theta1);
+deltaTheta(theta1,theta2):=theta2-theta1;
+
+alpha(theta1,theta2):=(Gprime(deltaF(theta1,theta2)/deltaTheta(theta1,theta2))-theta2)/(theta1-theta2);
+
+
+alpha(lambda2theta(p1),lambda2theta(p2));
+ratsimp(%);
+logcontract(%);
+
+ChernoffDistribution(p1,p2):=theta2lambda(alpha(lambda2theta(p1),lambda2theta(p2))*lambda2theta(p1)+(1-alpha(lambda2theta(p1),lambda2theta(p2)))
+*lambda2theta(p2));
+
+kl(a,b):=a*log(a/b);
+KL(p,q):=kl(p,q)+kl(1-p,1-q);
+
+ChernoffInformation(p1,p2):=KL( ChernoffDistribution(p1,p2)  ,p1);
+
+p1:0.1;
+p2:0.2;
+alpha(lambda2theta(p1),lambda2theta(p2));
+ChernoffDistribution(p1,p2);
+ChernoffInformation(p1,p2);
+
+
+/* 0.4761245029727815 vs java :0.4761245029727815 */
+
+
+kill(all);
+kl(a,b):=a*log(a/b);
+
+p:0.1;
+q:0.2;
+
+/* Bernoulli KL */
+KL(p,q):=kl(p,q)+kl(1-p,1-q);
+
+KL(lambda,p)-KL(lambda,q);
+ratsimp(%);
+ 
+
+fortran(%);
+
+solve([%],[lambda]);
+
+
+fortran(%);
+
+
+solve      (1-lambda)*log(-(10*lambda-10)/9+0)+(lambda-1)*log((*lambda-5)/4)+lambda*log(10*lambda)-lambda*log(5*lambda)
+
+
+
+
+      (-lambda*log(lambda/q))+lambda*log(lambda/p)-q*log(q/lambda)+p*log(p/lambda)=0
+
+
+f(É…):=É…**3;
+f(É…):=É…**3;
+derivative(f(É…),É…,2);
+6*É…
+
+r:float(0.123);
