@@ -26,6 +26,10 @@ KL(p,q):=kl(p,q)+kl(1-p,1-q);
 
 ChernoffInformation(p1,p2):=KL( ChernoffDistribution(p1,p2)  ,p1);
 
+
+ChernoffDistribution(p1,p2);
+ChernoffInformation(p1,p2);
+
 p1:0.1;
 p2:0.2;
 alpha(lambda2theta(p1),lambda2theta(p2));
@@ -71,3 +75,9 @@ derivative(f(É…),É…,2);
 6*É…
 
 r:float(0.123);
+
+/* next try */
+
+ChernoffAlpha(alpha,p,q):=-log( (p**alpha)*(q**(1-alpha)) + ((1-p)**alpha)*(1-q)**(1-alpha) ) ;
+derivative(ChernoffAlpha(alpha,p,q),alpha,1);
+solve([%=0],alpha);
