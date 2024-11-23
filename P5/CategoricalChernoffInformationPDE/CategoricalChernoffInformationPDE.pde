@@ -13,7 +13,7 @@ println("Chernoff information between categorical distributions");
 
 BernoulliExpFam.Test();
 
-Test();
+//Test();
 }
 
 void Test()

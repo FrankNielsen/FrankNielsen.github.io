@@ -1,3 +1,5 @@
+// Frank.Nielsen@acm.org
+
 import processing.pdf.*;
 
 int side = 512;
@@ -37,6 +39,19 @@ double [][] ps; // stored 2d coordinates of 3-mixtures
 double [][] speed;
 
 double [] a, g, c, fr, cig, gb; // cig is via info geo method
+
+// Map a trinoulli distribution (eta1,eta2,1-eta1-eta2) into a point in the 2D equilateral triangle
+double []  Moment2EquilateralTriangle(double eta1, double eta2)
+{double [] res=new double[2];
+
+res[0]=eta1+0.5*eta2;
+res[1]=eta2*sqrt(3.0)/2.0;
+
+return res;
+}
+
+
+
 
 double sqr(double x)
 {
