@@ -1,0 +1,125 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage,url,hyperref}
+
+\title{A note on the Chernoff information between Bernoulli distributions}
+
+\author{Frank Nielsen\\
+Sony Computer Science Laboratories Inc}
+
+\date{November 2024}
+
+\def\Ber{\mathrm{Ber}}
+\def\Pr{\mathrm{Pr}}
+\def\calX{\mathcal{X}}
+\def\KL{\mathrm{KL}}
+\newtheorem{Example}{Example}
+
+\begin{document}
+\maketitle
+ 
+The probability mass function of a random variable $X$ following a Bernoulli distribution $\Ber(p)$ with probability of success $p\in (0,1)$ is:
+$$
+\Pr(X=x) = f_p(x)= p^x (1-p)^{1-x},\quad x\in\calX=\{0,1\}.
+$$
+
+The Chernoff information~\cite{chernoff1952measure} between two Bernoulli distributions $f_{p_1}$ and $f_{p_2}$ is
+$$
+C(f_{p_1},f_{p_2})=\max_{\alpha\in(0,1)} -\log \left( f_{p_1}(0)^\alpha f_{p_2}^{1-\alpha}(0) + f_{p_1}(1)^\alpha f_{p_2}^{1-\alpha}(1)\right). 
+$$
+The optimal exponent $\alpha$ maximizing the skew Bhattacharyya distance 
+$$
+B_\alpha(f_{p_1},f_{p_2})= -\log \left( f_{p_1}(0)^\alpha f_{p_2}^{1-\alpha}(0) + f_{p_1}(1)^\alpha f_{p_2}^{1-\alpha}(1)\right)
+$$ 
+is called the Chernoff information.
+
+The family $\{f_p\ :\ p\in(0,1)\}$ of Bernoulli distributions form a discrete exponential family of order $1$
+with natural parameter $\theta=\log(p/(1-p))$ (and $\lambda(\theta)=\frac{e^\theta}{1+e^\theta}$), cumulant function $F(\theta)=\log(1+e^\theta)$,
+moment parameter $\eta(\theta)=\frac{e^\theta}{1+e^\theta}$ (with $\eta(p)=p$ and $\theta(\eta)=\log\frac{\eta}{1-\eta}$),
+ convex conjugate (negentropy) $F^*(\eta)=\eta\log\eta+(1-\eta)\log(1-\eta)=-H(\Ber(p))$.
+
+Assume $p_1\not =p_2$ (otherwise $C(f_{p_1},f_{p_2})=0$).
+A closed-form formula for the Chernoff exponent of uni-order exponential families was reported in~\cite{CI-2013}:
+$$
+\alpha^*(\theta_1,\theta_2)=\frac{{F^*}'\left(\frac{\Delta_F}{\Delta_\theta}\right)-\theta_2}{\Delta_\theta},
+$$
+with $\Delta_\theta=\theta_1-\theta_2$ and $\Delta_F=F(\theta_1)-F(\theta_2)$.
+
+Applying this generic formula to the case of Bernoulli distributions on the ordinary parameterization, we get the Chernoff exponent between Bernoulli distributions:
+$$
+\alpha^*(p_1,p_2)=
+{{\log \left(-\left({{\log \left({{p_{1}-1}\over{p_{2}-1}}\right)\,
+ \left(p_{2}-1\right)}\over{p_{2}\,\log \left({{p_{2}}\over{p_{1}}}
+ \right)}}\right)\right)}\over{\log \left({{p_{1}\,\left(p_{2}-1
+ \right)}\over{\left(p_{1}-1\right)\,p_{2}}}\right)}},
+$$
+and the Chernoff information in closed-form as
+$$
+C(f_{p_1},f_{p_2})=B_{\alpha^*(p_1,p_2)}(f_{p_1},f_{p_2}).
+$$
+
+Let $a=\frac{p_1}{p_2}$ and $b=\frac{1-p_1}{1-p_2}$.
+Then the Chernoff exponent can be rewritten as
+\begin{equation}
+{\alpha^*(p_1,p_2)=\frac{\log \left( \frac{\log b}{\log a} \left(1-\frac{1}{p_2}\right))\right)}{\log\frac{a}{b}}}.
+\end{equation}
+
+
+ 
+
+Let $f_{p^*}$ be the Chernoff distribution where $p^*=p_{\alpha^*}$ corresponds to the parameter of the Bernoulli distribution obtained after normalization of
+ $f_{p_1}^{\alpha^*} f_{p_2}^{1-\alpha^*}$ ($e$-geodesic).
+We have
+$$
+p_\alpha= \frac{\left(\frac{p_1}{1-p_1}\right)^{\alpha}\left( \frac{p_2}{1-p_2}\right)^{1-\alpha}}{1+
+\left(\frac{p_1}{1-p_1}\right)^{\alpha}\left( \frac{p_2}{1-p_2}\right)^{1-\alpha}}.
+$$
+
+We check that we have
+$$
+C(f_{p_1},f_{p_2})=D_\KL(f_{p^*}:f_{p_1})=D_\KL(f_{p^*}:f_{p_2}),
+$$
+where $D_\KL$ denotes the Kullback-Leibler divergence:
+$$
+D_\KL(f_{p_1},f_{p_2})=f_{p_1}(0)\log\frac{f_{p_1}(0)}{f_{p_2}(0)}+f_{p_1}(1)\log\frac{f_{p_1}(1)}{f_{p_2}(1)}=
+p_1\log\frac{p_1}{p_2}+(1-p_1)\log\frac{1-p_1}{1-p_2}.
+$$
+
+\begin{Example}
+Let $p_1=0.1$ and $p_2=0.2$.
+We have $\alpha^*\simeq 0.47612450297278$, $p^*\simeq 0.14524435432427263$, and 
+$C(f_{p_1},f_{p_2})\simeq 0.0101245165799591$.
+\end{Example}
+
+\begin{Example}
+Let $p_1=0.1$ and $p_2=0.7$.
+We have $\alpha^*\simeq 0.466076329662342$, $p^*\simeq 0.360848806714530$, and 
+$C(f_{p_1},f_{p_2})\simeq 0.244321377719848$.
+\end{Example}
+ 
+
+
+
+Note that the Chernoff information is known in closed-form between univariate normal distributions~\cite{nielsen2022revisiting} but not for arbitrary $d$-variate normal distributions.
+
+A code snippet in {\sc Maxima} (\url{https://maxima.sourceforge.io/}) to calculate the Chernoff exponent:
+
+{
+\begin{verbatim}
+kill(all);
+lambda2theta(p):= log(p/(1-p));
+theta2lambda(theta):=exp(theta)/(1+exp(theta));
+F(theta):=log(1+exp(theta));
+Gprime(eta):=log(eta/(1-eta));
+deltaF(theta1,theta2):=F(theta2)-F(theta1);
+deltaTheta(theta1,theta2):=theta2-theta1;
+alpha(theta1,theta2):=(Gprime(deltaF(theta1,theta2)
+/deltaTheta(theta1,theta2))-theta2)/(theta1-theta2);
+alpha(lambda2theta(p1),lambda2theta(p2));
+ratsimp(%);logcontract(%);tex(%);
+\end{verbatim}
+}
+
+\bibliographystyle{plain}
+\bibliography{ChernoffBernoulliBIB}
+
+\end{document}

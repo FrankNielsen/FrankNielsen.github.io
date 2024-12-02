@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+
+\bibitem{chernoff1952measure}
+Herman Chernoff.
+\newblock A measure of asymptotic efficiency for tests of a hypothesis based on
+  the sum of observations.
+\newblock {\em The Annals of Mathematical Statistics}, pages 493--507, 1952.
+
+\bibitem{CI-2013}
+Frank Nielsen.
+\newblock {An information-geometric characterization of Chernoff information}.
+\newblock {\em IEEE Signal Processing Letters}, 20(3):269--272, 2013.
+
+\bibitem{nielsen2022revisiting}
+Frank Nielsen.
+\newblock {Revisiting Chernoff information with likelihood ratio exponential
+  families}.
+\newblock {\em Entropy}, 24(10):1400, 2022.
+
+\end{thebibliography}
