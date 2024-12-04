@@ -2,21 +2,14 @@ kill(all);
 
 lambda2theta(p):= log(p/(1-p));
 theta2lambda(theta):=exp(theta)/(1+exp(theta));
-
 F(theta):=log(1+exp(theta));
 Gprime(eta):=log(eta/(1-eta));
-
-
-
 deltaF(theta1,theta2):=F(theta2)-F(theta1);
 deltaTheta(theta1,theta2):=theta2-theta1;
-
 alpha(theta1,theta2):=(Gprime(deltaF(theta1,theta2)/deltaTheta(theta1,theta2))-theta2)/(theta1-theta2);
-
-
 alpha(lambda2theta(p1),lambda2theta(p2));
-ratsimp(%);
-logcontract(%);
+ratsimp(%);logcontract(%);tex(%);
+
 
 ChernoffDistribution(p1,p2):=theta2lambda(alpha(lambda2theta(p1),lambda2theta(p2))*lambda2theta(p1)+(1-alpha(lambda2theta(p1),lambda2theta(p2)))
 *lambda2theta(p2));

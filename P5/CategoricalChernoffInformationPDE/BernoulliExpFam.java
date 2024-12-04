@@ -1,14 +1,17 @@
 // Frank.Nielsen@acm.org
-
+// November 2024
 class BernoulliExpFam
 {
   
 static void  Test()
 {
-double p1=Math.random();
-double p2=Math.random();
+  double p1,p2;
+//double p1=Math.random();
+//double p2=1-p1;
+//double p2=Math.random();
 
-// p1=0.1; p2=0.2;
+ //p1=0.1; p2=0.2;
+ p1=0.1; p2=0.7;
 
   double t1=lambda2theta(p1);
   double t2=lambda2theta(p2);

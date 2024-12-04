@@ -10,7 +10,7 @@
 class StandAloneJeffreysHistogramCentroid
 {
 
-    
+// mixture geodesic, -1 geodesic
 static double [] mGeodesic(double[] p, double [] q,double lambda)
 {
  int i,dd=p.length;
@@ -22,7 +22,7 @@ static double [] mGeodesic(double[] p, double [] q,double lambda)
   return res;
 }
 
-
+// Exponential geodesic, +1 geodesic
 static double [] eGeodesic(double[] p, double [] q,double lambda)
 {
  int i,dd=p.length;
