@@ -43,7 +43,7 @@ double [][] speed;
 double [] a, g, c, fr, cig, gb; // cig is via info geo method
 
 // Fisher ball
-double [] c0;
+double [] c0, s0; // center and speed vector
 double r0;
 
 // Map a trinoulli distribution (eta1,eta2,1-eta1-eta2) into a point in the 2D equilateral triangle
@@ -301,6 +301,23 @@ void animate()
       speed[i][1]=-speed[i][1]; //speed[i][2]=-speed[i][2];
     }
   }
+  
+  
+  // FisherBall
+if (mode==1){
+
+ 
+  if ((1-c0[0]-c0[1]>0) && (c0[0]>0) &&(c0[1]>0) ) {
+      c0[0]+=ll*s0[0];
+  c0[1]+=ll*s0[1];
+      c0[2]=1-(c0[0]+c0[1]);
+    } else {
+      speed[i][0]=-speed[i][0];
+      speed[i][1]=-speed[i][1]; //speed[i][2]=-speed[i][2];
+    }
+}
+    
+  
 }
 
 double max(double  x, double y) {
@@ -601,8 +618,8 @@ void testPaperGeneral(int dim)
 
 
 void initialize()
-{
-  n=32;
+{n=8;
+  //n=32;
   //n=2;
   
   r0=0.05+Math.random();
@@ -611,7 +628,10 @@ c0=new double [3];
  c0[0]=Math.random();
     c0[1]=(1-c0[0])*Math.random();
     c0[2]=1-c0[0]-c0[1];
-
+    
+    s0=new double [2];
+s0[0]=Math.random();
+s0[1]=Math.random();
   int i;
   ps=new double[n][3];
   for (i=0; i<n; i++) {
@@ -907,9 +927,11 @@ MyLine(startx, bim.xtoy(startx), stopx, bim.xtoy(stopx));
   MyPoint(cp[0], cp[1]);
   ptsize/=2.0;
 
+/*
   if (toggleAnimation) {
     animate();
   }
+  */
 }
 
 
@@ -919,6 +941,38 @@ if (mode==1) drawFisherBall();
 if (mode==2) drawChernoff();
  if (mode==3) drawEMFisherRao();
 if (mode==4) drawJFR();
+if (mode==5) drawTriMiniball();
+
+if (toggleAnimation) {
+    animate();
+  }
+}
+
+void drawFRBall(double [] cc0, double rr0)
+{
+  int i,j; double eta1,eta2;
+  double [] pp=new double[3];
+   strokeWeight(1);
+stroke(255, 165, 0);// orange
+fill(255, 165, 0);
+for(i=0;i<512;i++)
+for(j=0;j<512;j++)
+{
+  eta1=X2x(j);
+  eta2=Y2y(i);
+  pp[0]=eta1;pp[1]=eta2;pp[2]=1-eta1-eta2;
+  
+  if (FisherRaoDistance(cc0,pp)<rr0) 
+  {
+        double x=pp[0];double y=pp[1];
+
+ if (toggleRectify) {ellipse((float)x2X(x+0.5*y), (float)y2Y(y*sqrt(3)/2.0), 1.0,1.0);}
+  else {ellipse((float)x2X(x), (float)y2Y(y), 1.0,1.0);}
+  
+    //MyPoint(eta1,eta2);
+  
+  }
+}
 }
 
 // Draw a Fisher-Rao ball in eta or lambda parameterization
@@ -965,6 +1019,58 @@ MyPoint(c0[0],c0[1]);
   
   
 }
+
+
+void drawTriMiniball()
+{
+  int i, j, ii, jj;
+
+
+  surface.setTitle("Parameter space of the trinoulli family (#trial=1)");
+
+
+
+  background(255, 255, 255);
+
+  int mgrey=128;
+  strokefill(mgrey, mgrey, mgrey);
+  strokeWeight(3);
+
+  MyLine(0, 0, 0, 1);
+  MyLine(0, 1, 1, 0);
+  MyLine(0, 0, 1, 0);
+
+  strokeWeight(1);
+
+  double [] circumcenter=TrinoulliMiniball.TrinoulliFisherRaoBC(ps,1000);
+  
+//  System.out.println("circumcenter:"+circumcenter[0]+" "+circumcenter[1]+" "+circumcenter[2]);
+  
+  double rad=FisherRaoDistance(circumcenter,ps[TrinoulliMiniball.FarthestIndex(ps, circumcenter)]);
+  
+   /*int l;
+   for(l=0;l<n;l++)
+   {
+    if (FisherRaoDistance(circumcenter,ps[l])>rad) System.out.println("error!"); 
+   }
+  */
+
+drawFRBall(circumcenter, rad);
+
+
+
+stroke(0);
+fill(0);
+ for (i=0; i<n; i++) {
+    MyPoint(ps[i][0], ps[i][1]);
+    //   println("!!! input point:"+ ps[i][0]+ "  "+ ps[i][1]);
+  }
+  
+
+ stroke(255,0,0);fill(255,0,0);
+ptsize*=2;MyPoint(circumcenter[0],circumcenter[1]);ptsize/=2.0;
+}
+
 
 void drawJFR()
 {
@@ -1104,6 +1210,7 @@ void keyPressed()
    if (key=='2') {mode=2;}
    if (key=='3') {mode=3;}
    if (key=='4') {mode=4;}
+   if (key=='5') {mode=5;}
    
    
      
