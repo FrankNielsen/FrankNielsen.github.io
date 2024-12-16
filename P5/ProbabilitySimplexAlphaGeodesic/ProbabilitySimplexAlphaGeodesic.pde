@@ -3,7 +3,8 @@
 
 import processing.pdf.*;
 
-int side = 800;
+//int side = 800;
+int side = 512;
 int ww = side;
 int hh = side;
 /*
@@ -162,7 +163,7 @@ public   double [] gradF(double [] theta)
 
 void setup()
 {
-  size(800,800);
+  size(512,512);
   initialize();
 }
 
