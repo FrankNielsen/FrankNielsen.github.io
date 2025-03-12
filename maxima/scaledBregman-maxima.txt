@@ -1,0 +1,16 @@
+
+Fostar(u):=(1+u)*F(u/(1+u));
+
+derivative(Fostar(u),u,2);
+
+Fprime(u):=derivative(F(u),u,1);
+BF(p,q):=F(p)-F(q)-(p-q)*Fprime(q);
+
+Fostar(u):=(1+u)*F(u/(1+u));
+Fostarprime(u):=derivative(Fostar(u),u,1);
+
+BFostar(x,y):=F(x)-F(y)-(x-y)*Fostarprime(y);
+
+
+
+BF(x/(1+x),y/(1+y))-(1/(1+x))*BFostar(x,y);
