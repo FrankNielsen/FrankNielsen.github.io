@@ -1,0 +1,34 @@
+/* Frank.Nielsen@acm.org */
+/* June 2023 */
+
+set_random_state (make_random_state (20));
+
+
+CAHM(z1,z2) := sqrt(cabs(z1)*cabs(z2)) * exp(%i*(carg(z1)+carg(z2))/2);
+
+display("z1:")$
+z1: random(1.0)+%i*random(1.0);
+display("z2:")$
+z2: random(1.0)+%i*random(1.0);
+
+display("closed-form AHM formula (geometric mean*exp(i* arithmetic mean):")$
+expand(float(CAHM(z1,z2)));
+
+T:100$
+
+display("Inductive AHM complex mean iterations:",T," iterations")$
+for i:1 thru T step 1 do
+(za:rectform( expand(float(z1+z2)/2) ),
+zh:rectform( expand(float((2*z1*z2)/(z1+z2))) ),
+z1: rectform(za),
+z2: rectform(zh)
+);
+
+
+float(z1);
+
+
+
+
+
+

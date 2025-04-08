@@ -1,0 +1,21 @@
+F(theta1,theta2):=(1/4)*( (theta1*theta1/theta2));
+hessian(F(theta1,theta2),[theta1,theta2]);
+eivals(%);
+
+/* counterexample of Rockaffeler */
+F(theta1,theta2):=(1/4)*( (theta1*theta1/theta2) + (theta1*theta1)+ (theta2*theta2));
+plot3d(F(theta1,theta2),[theta1,-3,3],[theta2,0,6]);
+Hess: hessian(F(theta1,theta2),[theta1,theta2]);
+eivals(Hess);
+eigenvectors(Hess);
+
+derivative(F(theta1,theta2),theta1,1);
+Eq1: ratsimp(%);
+
+derivative(F(theta1,theta2),theta2,1);
+Eq2:ratsimp(%);
+
+solve([Eq1=eta1,Eq2=eta2],[theta1,theta2]);
+
+
+grad(F,[theta1,theta2]);

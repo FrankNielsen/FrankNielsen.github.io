@@ -1,0 +1,5 @@
+F(mu,v):=(1/2)*(mu*mu/v+log(v)+log(2*%pi));
+hessian(F(mu,v),[mu,v]);
+ratsimp(%);
+
+

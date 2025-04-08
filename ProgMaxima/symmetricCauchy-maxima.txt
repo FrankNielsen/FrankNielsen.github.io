@@ -1,0 +1,9 @@
+
+p_{\frac{-l}{s},\frac{1}{s}}=p_{l,s}.
+
+CauchyStd(x):=1/(1+x*x);
+Cauchy(x,l,s):=CauchyStd((x-l)/s);
+
+Cauchy(x,-l/s,1/s)-Cauchy(x,l,s);
+ratsimp(%);
+

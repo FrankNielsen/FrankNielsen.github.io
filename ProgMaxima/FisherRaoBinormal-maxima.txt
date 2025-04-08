@@ -1,0 +1,164 @@
+
+mu:matrix([0],[0]);
+Sigma: matrix([0.1,0],[0,1]);
+
+pdf(x,mu,Sigma):=1.0/(2*%pi*determinant(Sigma))*exp(-(1/2)*transpose(x-mu).invert(Sigma).(x-mu));
+
+plot3d (pdf(matrix([u],[v]),mu,Sigma),[u, -3, 3], [v, -3, 3],[z, 0, 2.0]);
+
+---
+mu:matrix([0],[0]);
+Sigma: matrix([0.1,0],[0,1]);
+x:matrix([x],[y]);
+
+pdf(x,mu,Sigma):=1.0/(2*%pi*sqrt(determinant(Sigma)))*exp(-(1/2)*transpose(x-mu).invert(Sigma).(x-mu));
+
+integrate(pdf(x,mu,Sigma),x[1][1],minf,inf);
+integrate(%,x[2][1],minf,inf);float(%);
+
+
+set_draw_defaults(zrange = [0,2]);
+
+draw3d(explicit(pdf(matrix([u],[v]),mu,Sigma),-5,5,v,-5,5));
+
+-----
+
+
+
+x:matrix([1],[1]);
+
+pdf(x,mu,Sigma);
+float(%);
+
+
+
+
+mu1:matrix([0],[0]);
+mu2:matrix([1],[1]);
+m:[mu1,mu2];
+
+Sigma1: matrix([1,0],[0,1]);
+Sigma2: matrix([1,-1/2],[-1/2,1]);
+ S:[Sigma1,Sigma2];
+
+
+with_slider_draw(
+    d,
+    makelist(i,i,1,2,1),
+    explicit(x^d, x, 0, 1)
+)$
+
+
+---
+mu:matrix([0],[0]);
+Sigma: matrix([1,0],[0,1]);
+
+pdf(x,mu,Sigma):=1.0/(2*%pi*determinant(Sigma))*exp(-(1/2)*transpose(x-mu).invert(Sigma).(x-mu));
+
+
+draw3d(explicit(pdf(matrix([u],[v]),matrix([0],[0]),matrix([1,0],[0,1])),u,-5,5,v,-5,5));
+
+
+
+draw3d(explicit(pdf(matrix([u],[v]),mu,Sigma),u,-1,1,v,-1,1));
+
+-----------------
+
+kill(all); 
+
+pdf(x,mu,Sigma):=1.0/(2*%pi*determinant(Sigma))*exp(-(1/2)*transpose(x-mu).invert(Sigma).(x-mu));
+
+mu1:matrix([0],[0]);
+mu2:matrix([1],[1]);
+mu3:matrix([1.2],[2]);
+mu4:matrix([2],[3]);
+
+
+m:[mu1,mu2,mu3,mu4];
+
+Sigma1: matrix([1,0],[0,1]);
+Sigma2: matrix([1,-1/2],[-1/2,1]);
+Sigma3: matrix([1,-0.7],[-0.7,1]);
+Sigma4: matrix([1,-0.8],[-0.8,2]);
+ S:[Sigma1,Sigma2,Sigma3,Sigma4];
+
+
+name1: "C:/Users/0000102564/Desktop/FisherRaoBinormal-1";
+name2: "C:/Users/0000102564/Desktop/FisherRaoBinormal-2";
+name3: "C:/Users/0000102564/Desktop/FisherRaoBinormal-3";
+name4: "C:/Users/0000102564/Desktop/FisherRaoBinormal-4";
+name: [name1,name2,name3,name4];
+
+
+for k:1 thru 4 do
+draw3d(
+file_name =  name[k],
+terminal   = 'png,
+explicit(pdf(matrix([u],[v]),m[k],S[k]),u,-5,5,v,-5,5)
+);
+
+k:3;
+draw3d(
+file_name =  name[k],
+terminal   = 'png,
+explicit(pdf(matrix([u],[v]),m[k],S[k]),u,-5,5,v,-5,5)
+);
+
+
+draw3d(explicit(pdf(matrix([u],[v]),m[2],S[2]),u,-1,1,v,-1,1));
+
+
+--------------
+
+convert -delay 5 -loop 0 frame_*.png movie.gif
+
+pdf(x,mu,Sigma):=1.0/(2*%pi*determinant(Sigma))*exp(-(1/2)*transpose(x-mu).invert(Sigma).(x-mu));
+
+mu1:matrix([0],[0]);
+mu2:matrix([1],[1]);
+mu3:matrix([2],[2]);
+
+m:[mu1,mu2,mu3];
+
+Sigma1: matrix([1,0],[0,1]);
+Sigma2: matrix([1,-1/2],[-1/2,1]);
+Sigma3: matrix([1,-1],[-1,1]);
+ S:[Sigma1,Sigma2,Sigma3];
+
+
+
+
+draw3d(
+        delay     = 10,
+        file_name = "C:/Users/0000102564/Desktop/FisherRaoBinormal",
+        terminal  = 'animated_gif,
+        explicit(pdf(matrix([u],[v]),m[1],S[1]),u,-1,1,v,-1,1),
+explicit(pdf(matrix([u],[v]),m[2],S[2]),u,-1,1,v,-1,1)
+explicit(pdf(matrix([u],[v]),m[3],S[3]),u,-1,1,v,-1,1)
+)
+
+------------------
+
+,
+explicit(pdf(matrix([u],[v]),m[2],S[2]),u,-1,1,v,-1,1),
+explicit(pdf(matrix([u],[v]),m[2],S[2]),u,-1,1,v,-1,1),
+
+
+
+
+with_slider_draw(
+    t,
+    makelist(i,i,1,2),
+    explicit(pdf(matrix([u],[v]),m[t],S[t]),u,-5,5,v,-5,5)
+)$
+
+
+
+draw(
+        delay     = 100,
+        file_name = "C:/Users/0000102564/Desktop/zzz",
+        terminal  = 'animated_gif,
+        gr2d(explicit(x^2,x,-1,1)),
+        gr2d(explicit(x^3,x,-1,1)),
+        gr2d(explicit(x^4,x,-1,1)));
+

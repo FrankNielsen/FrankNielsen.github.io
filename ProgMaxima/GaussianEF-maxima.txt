@@ -1,0 +1,19 @@
+F(theta1,theta2):=-theta1**2/(4*theta2)+(1/2)*log(-%pi/theta2);
+
+derivative(F(theta1,theta2),theta1,1);
+eta1(theta1,theta2):=derivative(F(theta1,theta2),theta1,1);
+eta2(theta1,theta2):=derivative(F(theta1,theta2),theta2,1);
+
+solve([eta1(theta1,theta2)=e1,eta2(theta1,theta2)=e2],[theta1,theta2]);
+
+G(eta1,eta2):=-(1/2)*(log(eta2-eta1**2)+1+log(2*%pi));
+
+
+
+hF: hessian(F(theta1,theta2),[theta1,theta2]);
+hG: hessian(G(eta1,eta2),[eta1,eta2]);
+
+hF.hG;
+subst(eta1=-theta1/(2*theta2),%);
+subst(eta2=-1/(2*theta2)+(1/4)*(theta1/theta2)**2,%);
+ratsimp(%);

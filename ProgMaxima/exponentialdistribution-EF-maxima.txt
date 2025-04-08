@@ -1,0 +1,14 @@
+assume(lambda>0);
+
+p(x,lambda):=lambda*exp(-lambda*x);
+integrate(p(x,lambda),x,0,inf);
+integrate(x*p(x,lambda),x,0,inf);
+integrate(x*x*p(x,lambda),x,0,inf);
+
+l(x,lambda):=log(lambda*exp(-lambda*x));
+partiall: diff(l(x,lambda),lambda);
+/* FIM */
+integrate(p(x,lambda)*partiall*partiall,x,0,inf);
+
+partiall(x,lamba):=derivative(l(x,lambda),lambda);
+ 

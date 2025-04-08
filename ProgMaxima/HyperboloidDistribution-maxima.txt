@@ -1,0 +1,12 @@
+assume(theta[1]>theta[2]**2+theta[3]**2);
+
+theta[1]:1;
+theta[2]:0;
+theta[3]:0;
+
+HyperboloidDensity(theta,x,y):=
+(sqrt(theta[1]**2-theta[2]**2-theta[3]**2)*exp(sqrt(theta[1]**2-theta[2]**2-theta[3]**2))/(2*pi))
+*(exp(-theta[1]*sqrt(1+x**2+y**2) +theta[2]*x + theta[3]*y)/sqrt(1+x**2+y**2));
+
+integrate(integrate(HyperboloidDensity(theta,x,y),x,minf,inf),y,minf,inf);
+

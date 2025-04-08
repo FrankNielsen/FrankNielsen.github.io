@@ -1,0 +1,135 @@
+
+
+
+----
+assume(sigma>0);
+normal(x,sigma):=((1.0/sqrt(2*%pi*sigma**2)))*exp(-(1/2)*(x**2)/(sigma**2));
+integrate(normal(x,sigma),x,minf,inf);
+
+
+
+assume(sigma1>0);
+assume(sigma2>0);
+/* unnormalized KLD */
+
+
+
+
+ 
+/*2.606893405616241*/
+sigma1:3;
+sigma2:5;
+
+/* KLD */
+assume(sigma1>0);
+assume(sigma2>0);
+tildenormal(x,sigma):=exp(-(1/2)*(x**2)/(sigma**2));
+integrate( tildenormal(x,sigma1)*log(tildenormal(x,sigma1)/tildenormal(x,sigma2))+tildenormal(x,sigma2)-tildenormal(x,sigma1),x,minf,inf );
+eq1:%;
+
+theta(sigma):=1/sigma**2;
+Z(theta):=sqrt(2*%pi/theta);
+Zprime(theta):=-sqrt(%pi/2)*theta**(-3/2);
+BZ(t1,t2):=Z(t1)-Z(t2)-(t1-t2)*Zprime(t2);
+ratsimp(%);
+
+BZ(theta(sigma2),theta(sigma1));
+eq2:%;
+eq1-eq2;
+ratsimp(%);
+
+
+/* Hellinger divergence */
+assume(sigma1>0);
+assume(sigma2>0);
+tildenormal(x,sigma):=exp(-(1/2)*(x**2)/(sigma**2));
+
+theta(sigma):=1/sigma**2;
+Z(theta):=sqrt(2*%pi/theta);
+
+integrate( (1/2)*(sqrt(tildenormal(x,sigma1))-sqrt(tildenormal(x,sigma2)))**2,x,minf,inf );
+eq3:%;
+
+JZ(t1,t2):=((Z(t1)+Z(t2))/2)-Z((t1+t2)/2);
+
+JZ(theta(sigma1),theta(sigma2));
+eq4:%;
+
+eq3-eq4;
+ratsimp(%);
+/* end Hellinger divergence */
+
+alpha:0.2;
+integrate( (1/alpha*(1-alpha))*(alpha*(tildenormal(x,sigma1))+(1-alpha)*(tildenormal(x,sigma2))-(tildenormal(x,sigma1)**alpha)*))-(tildenormal(x,sigma2)**(1-alpha))),x,minf,inf );
+eq5:%;
+
+
+h(p,x):=(x**p-1)/p;
+hinv(p,x):=(1+x*p)**(1/p);
+
+ 
+
+F(x):=h(p_2,Z(hinv(p_1,x)));
+derivative(F(x),x,2);
+
+Z(x):=hinv(p_2,F(h(p_1,x)));
+derivative(Z(x),x,2);
+
+-----
+alpha:0.3;
+t1:2.5;
+t2:6;
+
+
+tp(x,lambda):=exp(-lambda*x);
+assume(lambda>0);
+/*Z  */
+integrate(tp(x,lambda),x,0,inf);
+
+
+assume(t1>0);assume(t2>0);assume(alpha>0);assume(alpha<1);
+
+integrate( (1/(alpha*(1-alpha))) * ( alpha*(tp(x,t1))+(1-alpha)*(tp(x,t2))- (tp(x,t1)**alpha)*(tp(x,t2)**(1-alpha)) ),x,0,inf );
+float(%);
+
+Z(theta):=1/theta;
+Zprime(theta):=-1/theta**2;
+
+BZ(t1,t2):=Z(t1)-Z(t2)-(t1-t2)*Zprime(t2);
+
+integrate(tp(x,lambda_2)*log(tp(x,lambda_2)/tp(x,\lambda_1)))
+ 
+
+sJ(t1,t2,alpha):=(1/(alpha*(1-alpha))) * (alpha*Z(t1)+(1-alpha)*Z(t2)-Z(alpha*t1+(1-alpha)*t2));
+
+(1/(alpha*(1-alpha))) * (alpha*Z(t1)+(1-alpha)*Z(t2)-Z(alpha*t1+(1-alpha)*t2));
+float(%);
+
+
+
+integrate((1/2)* (sqrt(tp(x,t1))-sqrt(tp(x,t2)) )**2,x,0,inf );
+alpha:1/2;
+(1/4)*(1/(alpha*(1-alpha))) * (alpha*Z(t1)+(1-alpha)*Z(t2)-Z(alpha*t1+(1-alpha)*t2));
+ratsimp(%);
+
+
+/* */
+tp(x,theta_1,theta_2):=exp(-(1/2)*(x**2)*theta_1+x*theta_2);
+integrate(tp(x,theta_1,theta_2),x,minf,inf);
+
+Z(theta_1,theta_2):=sqrt(2*%pi/theta_1)*exp((1/2)*theta_2**2/theta_1);
+
+derivative(Z(theta_1,theta_2),theta_1,1);
+ratsimp(%);
+
+derivative(Z(theta_1,theta_2),theta_2,1);
+ratsimp(%);
+
+
+Z(p_2,theta):=((1/theta**p_2)-1)/p_2;
+derivative(Z(p_2,theta),theta,2);
+
+
+
+
+

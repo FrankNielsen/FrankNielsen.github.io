@@ -1,0 +1,58 @@
+/* Frank Nielsen */
+
+
+
+/* a:0;b:0; c:1;d:0;e:1;*/
+
+kill(all)$
+v:matrix([x],[y]);
+mu:matrix([a],[b]);
+Sigma: matrix([c,d],[d,e]);
+
+assume(c>0);assume(e>0);
+assume(determinant(Sigma)>0);
+
+/* pdf of a bivariate normal distribution */
+pdf:1/(2*%pi*sqrt(determinant(Sigma)))*exp(-(1/2)*transpose(v-mu).invert(Sigma).(v-mu));
+
+/* Fisher information matrix */
+hessian(-log(pdf),[a,b,c,d,e]);
+integrate(integrate(pdf*%,x,minf,inf),y,minf,inf);
+
+/* check that the expectation of the score is zero */
+derivative(log(pdf),a,1);
+integrate(integrate(pdf*%,x,minf,inf),y,minf,inf);
+
+
+tex(%);
+
+
+
+derivative(log(pdf),e,1);
+integrate(integrate(pdf*ratsimp(%**2),x,minf,inf),y,minf,inf);
+ ratsimp(%);
+
+
+
+/////
+integrate(pdf,x,minf,inf);
+integrate(%,y,minf,inf);
+
+
+derivative(log(pdf(x,mu,Sigma)),a,1);
+%**2; ratsimp(%);
+FI: %;
+
+integrate(pdf(x,mu,Sigma)*%,x[1][1],minf,inf);
+integrate(%,x[2][1],minf,inf);
+
+
+
+
+derivative(-log(pdf(x,mu,Sigma)),a,2);
+ratsimp(%);
+
+integrate(pdf(x,mu,Sigma)*%,x[1][1],minf,inf);
+integrate(%,x[2][1],minf,inf);
+
+float(%);

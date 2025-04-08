@@ -1,0 +1,62 @@
+
+assume(alpha>0);
+assume(alpha<1);
+assume(beta>0);
+assume(beta<1);
+assume(q>0);
+
+/* 
+f(x,q) := ((1-alpha)*x+alpha*q)*log(((1-alpha)*x+alpha*q)/((1-beta)*x+beta*q));
+*/
+
+f : ((1-alpha)*x+alpha*q)*log(((1-alpha)*x+alpha*q)/((1-beta)*x+beta*q));
+derivative(f,x,2);
+ratsimp(%);
+factor(%);
+
+
+wxplot3d([%], [x,0.01,0.99],[q,0.01,10]);
+
+------
+
+
+f : ((1-alpha)*x+alpha*q)*log(((1-alpha)*x+alpha*q)/((1-beta)*x+beta*q))
+ + ((1-alpha)*(1-x)+alpha*(1-q))*log(((1-alpha)*(1-x)+alpha*(1-q))/((1-beta)*(1-x)+beta*(1-q)));
+derivative(f,x,2);
+ratsimp(%);
+factor(%);
+
+
+
+-----
+
+
+
+
+a11:1;
+a12:-0.5;
+a22:3;
+
+assume(a11>0);
+assume(a22>0);
+assume(a12<0);
+assume(a22<1);
+assume(a11*a22-a12*a12>0);
+assume(x>0);
+assume(x<1);
+
+A: matrix([a11,a12],[a12,a22]);
+v1: matrix([x],[1-x]);
+v2: matrix([log(x)],[log(1-x)]);
+v1t : transpose(v1);
+F : (v1t.(A)).v2;
+derivative(F,x,2);
+ratsimp(%);
+factor(%);
+wxplot2d([%], [x,0.01,0.99]);
+
+
+
+eq: a22*x^3-x^3-a22*x^2+a12*x^2+2*x^2-a12*x-x+a12;
+solve (eq,x);
+ 

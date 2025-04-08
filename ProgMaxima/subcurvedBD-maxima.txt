@@ -1,0 +1,39 @@
+F1(theta):=theta*log(theta);
+F2(theta):=-log(theta);
+F(theta1,theta2):=F1(theta1)+F2(theta2);
+
+
+gF1: explicit (x*log(x),x,0.1,1,y,0,1);
+gF2: explicit (-log(y),x,0,1,y,0.1,1);
+gF12: explicit (x*log(x)-log(y),x,0,0.1,y,0,0.1);
+
+
+wxdraw3d(
+color=black,
+gF12,
+color=red,
+gF1,
+color=blue,
+gF2);
+
+wxdraw3d(
+ title="Separable 2D Bregman potential function",
+color=black,
+xlabel="theta_1",
+ylabel="theta_2",
+zlabel="y",
+   xyplane=0,
+xaxis=true,yaxis=true,zaxis=true,
+ xaxis_width=2,zaxis_width=2,yaxis_width=2,
+   xaxis_type=solid,yaxis_type=solid,zaxis_type=solid,
+gF12
+	color=red,
+	gF1
+	key="Shannon negentropy",
+	gF2,
+	key="Burg negentropy",
+   surface_hide=true,
+	 color=black,
+	xu_grid=20,yv_grid=20,
+xu_grid=10,yv_grid=10,
+axis_3d=false);

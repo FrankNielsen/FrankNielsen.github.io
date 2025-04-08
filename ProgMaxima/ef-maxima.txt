@@ -1,0 +1,6 @@
+assume(theta<=0);
+
+p(x,theta):=exp(theta*x)/x**2;
+
+assume(theta<0);
+integrate(p(x,theta),x,1,inf);

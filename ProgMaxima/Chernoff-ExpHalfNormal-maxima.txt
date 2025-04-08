@@ -1,0 +1,22 @@
+assume(sigma>0);
+halfnormal(x,sigma):=(sqrt(2)/(sqrt(%pi*sigma**2)))*exp(-x**2/(2*sigma**2));
+integrate(halfnormal(x,sigma),x,0,inf);
+assume(lambda>0);
+exponential(x,lambda):=lambda*exp(-lambda*x);
+integrate(exponential(x,lambda),x,0,inf);
+/* KLD diverges */
+integrate(exponential(x,lambda)*log(exponential(x,lambda)/halfnormal(x,sigma)),x,0,inf);
+/* KLD converges */
+integrate(halfnormal(x,sigma)*log(halfnormal(x,sigma)/exponential(x,lambda)),x,0,inf);
+/* Bhattacharyya coefficient */
+assume(alpha>0);
+assume(alpha<1);
+integrate( (halfnormal(x,sigma)**alpha) * (exponential(x,lambda)**(1-alpha)),x,0,inf);  
+ 
+
+eq: a/(x+ad)+b/(x+bd)+c=0;
+solve(eq,x);
+
+
+eq: a/x+b/x+c/x+d=0;
+solve(eq,x);

@@ -1,0 +1,95 @@
+/*
+Frank.Nielsen@acm.org
+Maxima 3rd September 2020
+
+On the Chi square and higher-order Chi distances for approximating f-divergences
+https://arxiv.org/pdf/1309.3029.pdf
+*/
+
+assume(lambda>0);
+Poisson(x,lambda):=(lambda**x)*exp(-lambda)/x!;
+
+
+KL(lambda1,lambda2,n):=sum(Poisson(x,lambda1)*log(Poisson(x,lambda1)/Poisson(x,lambda2)), x, 0, n);
+/* A Bregman divergence */
+KLcf(lambda1,lambda2):=lambda2-lambda1+lambda1*log(lambda1/lambda2);
+
+n:20;
+
+
+lambda2: 1;
+lambda1: 0.01;
+
+/*
+KL(1,0.1,n);
+bfloat(%);
+KLcf(1,0.1);
+*/
+
+ExpDiv(lambda1,lambda2,n):= sum( Poisson(x,lambda1)*exp(Poisson(x,lambda2)/Poisson(x,lambda1)), x, 0, n);
+TaylorExpDiv(lambda1,lambda2,n):= sum(  exp((lambda1**(1-j)*lambda2**j)-((1-j)*lambda1+j*lambda2))/j! , j,0,n);
+
+ExpDiv(0.1,0.2,n);
+bfloat(%);
+TaylorExpDiv(0.1,0.2,n);
+bfloat(%);
+
+/* Triangular Discrimination [61], [107] (aka Vincze-Le Cam distance)*/
+
+LeCam(lambda1,lambda2,n):= sum(((Poisson(x,lambda1)-Poisson(x,lambda2))**2)/(Poisson(x,lambda1)+Poisson(x,lambda2)), x, 0, n);
+
+fLeCam(u):=(u-1)**2/(u+1);
+
+LeCamFdiv(lambda1,lambda2,n):= sum( Poisson(x,lambda1)*fLeCam(Poisson(x,lambda2)/Poisson(x,lambda1)), x, 0, n);
+
+TaylorLeCam(lambda1,lambda2,n):= sum( 4*((-1)**j)* exp((lambda1**(1-j)*lambda2**j)-((1-j)*lambda1+j*lambda2)) , j,0,n);
+
+TaylorLeCam(2,1,n);
+bfloat(%);
+LeCamFdiv(1,2,n);
+bfloat(%);
+
+
+/* 4*((-1)**j)* j! */
+fLeCam(u):=(u-1)**2/(u+1);
+derivative(fLeCam(u),u,7);
+ratsimp(%);
+7!;
+derivative(fLeCam(u),u,8);
+ratsimp(%);
+8!;
+
+
+
+
+n:5;
+TaylorLeCam(lambda1,lambda2,n);
+LeCam(lambda1,lambda2,n);
+ratsimp(%);
+
+
+
+
+
+kl12: bfloat(KLcf(lambda1,lambda2));
+
+
+
+ChiK(lambda1,lambda2,k):= sum( (-1)**(k-j)*binomial(k,j)*exp(lambda1**(1-j)*lambda2**j-((1-j)*lambda1+j*lambda2)) ,j,0,k);
+
+KLChiK(lambda1,lambda2,m):=sum( (((-1)**i)/i)*ChiK(lambda1,lambda2,i) ,i,1,m);
+
+lambda1: 1;
+lambda2: 0.1;
+
+kl12: bfloat(KLcf(lambda1,lambda2));
+
+for i:2 while i<=30 do
+( 
+klchi12: bfloat(KLChiK(lambda1,lambda2,i)),
+print(i," ",klchi12," ",abs(kl12-klchi12))
+)
+
+
+
+ 

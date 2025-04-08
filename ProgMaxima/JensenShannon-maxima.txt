@@ -1,0 +1,61 @@
+kill(all);
+f(x):=x*log(x)-x;
+fprime(x):=''(derivative(f(x),x,2));
+
+kill(all);
+fJS(u):=-((1+u)/2)*log((1+u)/2)+(u/2)*log(u);
+fJSpp(u):=''(derivative(fJS(u),u,2));
+fJSpp(1);
+
+
+
+\frac{4}{1-\alpha^{2}}\left(\frac{1-\alpha}{2}+\frac{1+\alpha}{2} u-u^{\frac{1+\alpha}{2}}\right)
+
+fa(u):=(4/(1-a*a))*(((1-a)/2)+ u*((1+a)/2)-u**(((1+a)/2)) );
+derivative(fa(u),u,1);ratsimp(%);
+derivative(fa(u),u,2);ratsimp(%);
+derivative(fa(u),u,3);ratsimp(%);
+
+g(u):=u*f(1/u);
+derivative(g(u),u,1);
+ratsimp(%);
+derivative(g(u),u,2);
+ratsimp(%);
+derivative(g(u),u,3);
+ratsimp(%);
+derivative(g(u),u,12);
+
+Jeffreys(u):=0.5*((u-1)*log(u));
+f(u):=((1+u)/2)*log((1+u)/2*(sqrt(u)));
+
+
+f(u):=0.5*(-(u+1)*log((u+1)/2)+u*log(u));
+
+
+fJS(u):=-((1+u)/2)*log((1+u)/2)+(u/2)*log(u);
+derivative(fJS(u),u,1);
+ratsimp(%);
+derivative(fJS(u),u,2);
+ratsimp(%);
+derivative(fJS(u),u,3);
+ratsimp(%);
+
+p*f(q/p);
+ratsimp(%);
+
+/* K div */
+f(u):=(u/2)*log(2*u/(1+u));
+derivative(f(u),u,2);
+ratsimp(%);
+
+/* Hellinger */
+f(u):=(sqrt(u)-1)**2;
+derivative(f(u),u,2);
+ratsimp(%);
+
+
+
+/* LeCam */
+f(u):=(1-u)/(2*u+2);
+derivative(f(u),u,20);
+ratsimp(%);

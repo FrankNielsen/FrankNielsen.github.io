@@ -1,0 +1,67 @@
+F(theta):=theta*log(theta)-theta;
+
+
+F(theta):=(1/2)*theta*theta;
+gradF(theta):=theta;
+alpha(theta,theta1,theta2):=(theta-theta2)/(theta1-theta2);
+
+BF(alpha,theta1,theta2):=F(alpha*theta1+(1-alpha)*theta2)-F(theta2)-(theta1-theta2)*gradF(theta2);
+
+integrate(BF(alpha(theta,theta1,theta2),theta1,theta2),theta,theta1,theta2);
+ratsimp(%);
+
+----
+
+F(theta):=theta*log(theta)-theta;
+gradF(theta):=log(theta);
+alpha(theta,theta1,theta2):=(theta-theta2)/(theta1-theta2);
+
+BF(alpha,theta1,theta2):=F(alpha*theta1+(1-alpha)*theta2)-F(theta2)-(theta1-theta2)*gradF(theta2);
+
+integrate(BF(alpha(theta,theta1,theta2),theta1,theta2),theta,theta1,theta2);
+ratsimp(%);
+
+
+----
+[gnuplot_term, latex], [gnuplot_out_file, "~/graph.tex"]
+[gnuplot_term,pdf],[gnuplot_out_file,"c:/travail/myplot.pdf"]
+[point_type, circle]
+https://stackoverflow.com/questions/28258704/how-can-i-plot-a-single-point-using-maxima-wxmaxima
+[discrete, [a], [f(a)]]]
+
+F(theta):=(1/2)*theta*theta;
+
+
+F(theta):=theta*log(theta)-theta;
+F12(alpha,theta1,theta2):=F(theta2+alpha*(theta1-theta2));
+
+
+plot3d(F(theta1)+F(theta2),[theta1,0.1,0.9],[theta2,0.1,0.9],[grid,50,50]);
+
+
+plot2d(F12(alpha,0.3, 0.7),[alpha,0,1],[ylabel,"F_θ1θ2, θ1=0.3, θ2=0.7"],[xlabel, "α"]);
+
+plot2d(F(theta),[theta,0.3,0.7],[xlabel, "θ"],[ylabel,"F(θ)"]);
+
+
+
+
+alpha(theta,theta1,theta2):=(theta-theta2)/(theta1-theta2);
+integrate(JF(alpha(theta,theta1,theta2),theta1,theta2),theta,theta1,theta2);
+ratsimp(%);
+
+/* Burg entropy */
+F(theta):=-log(theta);
+F12(alpha,theta1,theta2):=F(theta2+alpha*(theta1-theta2));
+JF(alpha,theta1,theta2):=alpha*F12(0,theta1,theta2)+(1-alpha)*F12(1,theta1,theta2)-F12(alpha,theta1,theta2);
+integrate(JF(alpha,theta1,theta2),alpha,0,1);
+ratsimp(%);
+
+
+
+
+F(theta):=(1/2)*theta*theta;
+JF(alpha,theta1,theta2):=alpha*F(theta1)+(1-alpha)*F(theta2)-F(alpha*theta1+(1-alpha)*theta2);
+alpha(theta,theta1,theta2):=(theta-theta2)/(theta1-theta2);
+integrate(JF(alpha(theta,theta1,theta2),theta1,theta2),theta,theta1,theta2);
+ratsimp(%);

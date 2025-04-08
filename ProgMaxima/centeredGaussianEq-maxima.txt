@@ -1,0 +1,96 @@
+
+assume(l1>0);
+assume(l2>=l1);
+assume(alpha>0);assume(alpha<1);
+
+ l1:1;
+l2:2;
+
+eq: (1-l1)/(alpha+(1-alpha)*l1)+ (1-l2)/(alpha+(1-alpha)*l2) + log(l1)+log(l2);
+
+solve(eq,alpha);
+float(%);
+realpart(%);
+
+
+----
+
+assume(l1>0);
+assume(l2>0);
+assume(l3>0);
+assume(alpha>0);assume(alpha<1);
+
+ 
+
+eq: (1-l1)/(alpha+(1-alpha)*l1)+ (1-l2)/(alpha+(1-alpha)*l2)+ (1-l3)/(alpha+(1-alpha)*l3) + log(l1)+log(l2)+log(l3);
+
+solve(eq,alpha);
+
+
+-----
+
+
+assume(l1>0);assume(l2>0);assume(l3>0);assume(l4>0);
+assume(alpha>0);assume(alpha<1);
+l1:1;l2:2;l3:3;l4:4;
+eq: (1-l1)/(alpha+(1-alpha)*l1)+ (1-l2)/(alpha+(1-alpha)*l2)+ (1-l3)/(alpha+(1-alpha)*l3)+ (1-l4)/(alpha+(1-alpha)*l4) + log(l1)+log(l2)+log(l3)+log(l4);
+solve(eq,alpha);
+sol:float(%);
+realpart(sol);imagpart(sol);
+/* alpha=0.5969427599369763 */
+
+-----------
+
+
+assume(l1>0);
+assume(l2>0);
+assume(l3>0);
+assume(l4>0);
+assume(l5>0);
+
+assume(alpha>0);assume(alpha<1);
+ 
+l1:1;
+l2:2;
+l3:3;
+l4:4;
+ l5:5;
+ 
+
+eq: (1-l1)/(alpha+(1-alpha)*l1)+ (1-l2)/(alpha+(1-alpha)*l2)+ (1-l3)/(alpha+(1-alpha)*l3)+ (1-l4)/(alpha+(1-alpha)*l4) 
++(1-l5)/(alpha+(1-alpha)*l5)  + log(l1)+log(l2)+log(l3)+log(l4)+log(l5);
+
+solve(eq,alpha);
+ratsimp(%);
+
+sol:float(%);
+realpart(sol);
+imagpart(sol);
+
+----
+
+
+assume(l1>0);
+assume(l2>0);
+assume(l3>0);
+assume(l4>0);
+assume(l5>0);
+assume(l6>0);
+assume(alpha>0);assume(alpha<1);
+ 
+l1:1;
+l2:2;
+l3:3;
+l4:4;
+ l5:5;
+ l6:6;
+
+eq: (1-l1)/(alpha+(1-alpha)*l1)+ (1-l2)/(alpha+(1-alpha)*l2)+ (1-l3)/(alpha+(1-alpha)*l3)+ (1-l4)/(alpha+(1-alpha)*l4) 
++(1-l5)/(alpha+(1-alpha)*l5)+(1-l6)/(alpha+(1-alpha)*l6)  + log(l1)+log(l2)+log(l3)+log(l4)+log(l5)+log(l6);
+
+solve(eq,alpha);
+ratsimp(%);
+
+sol:float(%);
+realpart(sol);
+imagpart(sol);

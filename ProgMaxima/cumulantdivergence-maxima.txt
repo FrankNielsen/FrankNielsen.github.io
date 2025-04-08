@@ -1,0 +1,6 @@
+
+
+assume(a>0);
+assume(b>0);
+JS(a,b):=((a*log(a)+b*log(b))/2) - ((a+b)/2)*log((a+b)/2);
+integrate(JS(a,(1-alpha)*a+alpha*b),alpha,0,1);

@@ -1,0 +1,31 @@
+/* April 7th 2022, Frank.Nielsen@acm.org */
+
+determinant(m);
+exp(m);
+log(m);
+
+
+p1: matrix ([1, 1/2], [1/2, 1]);
+p2: matrix ([1, 1/4], [1/4, 1]);
+
+p1: matrix ([1, 0.5], [0.5, 1]);
+p2: matrix ([1, 0.25], [0.25, 1]);
+
+determinant(p1);
+determinant(p2);
+
+/* not the same */
+invert(sqrt(p1)); /* good*/
+sqrt(invert(p1));
+
+
+geodesicSPD(t,p1,p2):=sqrt(p1).exp(t.log( (invert(sqrt(p1))).p2.(invert(sqrt(p1))  ))).sqrt(p1);
+
+geodesicSPD(0.5,p1,p2);
+float(%[1][1]);
+ 
+
+
+geodesicSPD(0,p1,p2);
+
+geodesicSPD(1,p1,p2);

@@ -1,0 +1,1 @@
+solve(a*cos(theta)+b*sin(theta)=c,theta);

@@ -1,0 +1,64 @@
+/* Frank Nielsen, 20 March 2024 */ 
+
+kill(all)$
+
+assume(sigma>0);
+
+p(x,mu,sigma):=(1/(sqrt(2*%pi)*sigma)) *exp(-(1/2)*((x-mu)**2)/(sigma**2));
+integrate(p(x,mu,sigma),x,minf,inf);
+
+l(x,mu,sigma):=log(p(x,mu,sigma));
+
+assume(mu>0);
+
+g[1][1]=integrate(p(x,mu,sigma)*derivative(l(x,mu,sigma),mu,1)*derivative(l(x,mu,sigma),mu,1),x,minf,inf);
+
+g[2][2]=ratsimp(integrate(p(x,mu,sigma)*derivative(l(x,mu,sigma),sigma,1)*derivative(l(x,mu,sigma),sigma,1),x,minf,inf));
+
+
+g[1][2]=integrate(p(x,mu,sigma)*derivative(l(x,mu,sigma),mu,1)*derivative(l(x,mu,sigma),sigma,1),x,minf,inf);
+
+/* generic */
+param1(mu,sigma):=mu;
+param2(mu,sigma):=(sigma**2)/(1+sigma**2);
+param1inv(theta1,theta2):=theta1;
+param2inv(theta1,theta2):=sqrt(theta2/(1-theta2));
+
+
+/* param2(mu,param2inv(theta1,theta2)); ratsimp(%); */
+
+q(x,p1,p2):=p(x,param1inv(p1,p2),param2inv(p1,p2));
+lq(x,p1,p2):=log(q(x,p1,p2));
+
+g[2][2]=ratsimp(integrate(q(x,p1,p2)*derivative(lq(x,p1,p2),p2,1)*derivative(lq(x,p1,p2),p2,1),x,minf,inf));
+
+
+/* other parameterizations */
+assume(v>0);
+q(x,mu,v):=(1/(sqrt(2*%pi*v))) *exp(-(1/2)*((x-mu)**2)/(v));
+
+lq(x,mu,v):=log(q(x,mu,v));
+
+g[1][1]=integrate(q(x,mu,v)*derivative(lq(x,mu,v),mu,1)*derivative(lq(x,mu,v),mu,1),x,minf,inf);
+
+g[2][2]=ratsimp(integrate(q(x,mu,v)*derivative(lq(x,mu,v),v,1)*derivative(lq(x,mu,v),v,1),x,minf,inf));
+
+
+g[1][2]=integrate(q(x,mu,v)*derivative(lq(x,mu,v),mu,1)*derivative(lq(x,mu,v),v,1),x,minf,inf);
+
+
+
+r(x,mu,logs2):=(1/(sqrt(2*%pi*exp(logs2)))) *exp(-(1/2)*((x-mu)**2)/exp(logs2));
+
+lr(x,mu,logs2):=log(r(x,mu,logs2));
+
+g[1][1]=integrate(r(x,mu,logs2)*derivative(lr(x,mu,logs2),mu,1)*derivative(lr(x,mu,logs2),mu,1),x,minf,inf);
+
+g[2][2]=ratsimp(integrate(r(x,mu,logs2)*derivative(lr(x,mu,logs2),logs2,1)*derivative(lr(x,mu,logs2),logs2,1),x,minf,inf));
+
+
+g[1][2]=integrate(r(x,mu,logs2)*derivative(lr(x,mu,logs2),mu,1)*derivative(lr(x,mu,logs2),logs2,1),x,minf,inf);
+
+
+
+

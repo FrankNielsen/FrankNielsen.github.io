@@ -1,0 +1,45 @@
+/* numer:true$
+ratprint: false$
+*/
+
+assume (s>1);
+pdfPareto(x,s):=(s-1)/x**s;
+integrate(pdfPareto(x,s),x,1,inf);
+ 
+
+PMFzeta(x,s):=1.0/((x**s)*zeta(s));
+PMFbfzeta(x,s):=1.0/((x**s)*bfzeta(s));
+
+
+/*\frac{1}{\alpha(1-\alpha)}*/
+
+s1:4;
+s2:12;
+alpha:1/2;
+
+/* Jensen skewed divergence */
+expminusJ(alpha,s1,s2):=zeta(alpha*s1+(1-alpha)*s2)/((zeta(s1)**alpha) * (zeta(s2)**(1-alpha)));
+(1/(alpha*(1-alpha)))*(1-expminusJ(alpha,s1,s2));bfloat(%);
+
+(1/(alpha*(1-alpha)))*(1-sum((PMFzeta(x,s1)**alpha)*(PMFzeta(x,s2)**(1-alpha)), x, 1, 20));
+bfloat(%);
+
+
+
+sum((PMFbfzeta(x,s1)**alpha)*(PMFbfzeta(x,s2)**(1-alpha)), x, 1, 20);
+
+alphadiv(alpha,s1,s2):=(1/(alpha*(1-alpha)))*(1-I(alpha,s1,s2));
+
+
+
+sum((PMFbfzeta(x,s1)**alpha)*(PMFbfzeta(x,s2)**(1-alpha)), x, 1, 20);
+
+
+I(alpha,s1,s2):=sum((PMFzeta(x,s1)**alpha)*(PMFzeta(x,s2)**(1-alpha)), x, 1, inf);
+
+
+
+
+alphadiv(alpha,s1,s2):=(1/(alpha*(1-alpha)))*(1-I(alpha,s1,s2));
+
+calc:(1/(alpha*(1-alpha)))*(1-I(alpha,s1,s2));

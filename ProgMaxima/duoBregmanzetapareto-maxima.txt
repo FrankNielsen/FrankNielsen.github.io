@@ -1,0 +1,65 @@
+
+/* von Mangoldt function */
+Mangoldt(i):=if integerp(i)
+  then block([fct],fct:ev(ifactors(i),factors_only:true),
+                   if length(fct)=1 then log(fct[1]) else 0)
+  else 'Mangoldt(i)
+
+ 
+
+
+
+Poisson(x,lambda):=(lambda**x)*exp(-lambda)/factorial(x);
+FPoisson(lambda):=lambda;
+gradFPoisson(lambda):=lambda;
+
+Exponential(x,lambda):=lambda*exp(-lambda*x);
+FExp(lambda):=-log(lambda);
+
+DuoBD(lambda2,lambda1):=FExp(lambda2)-FPoisson(lambda1)-(lambda2-log(lambda1))*gradFPoisson(lambda1);
+
+
+lambda1:1.5;
+lambda2:3.3;
+
+kl(p,q):=p*log(p/q);
+
+kmax:10;
+
+/* KL Poisson:Exp */
+divKL: sum( kl(Poisson(k,lambda1),Exponential(k,lambda2)) , k, 0, kmax);
+float(%);
+
+DuoBD(lambda2,lambda1);
+float(%);
+
+
+Exponential(x,lambda):=lambda*exp(-lambda*x);
+FExp(lambda):=-log(lambda);
+
+Poisson(x,lambda):=(lambda**x)*exp(-lambda)/factorial(x);
+FPoisson(lambda):=lambda;
+
+gradFPoisson(lambda):=lambda;
+
+DuoBD(lambda2,lambda1):=FExp(lambda2)-FPoisson(lambda1)-(lambda2-log(lambda1))*gradFPoisson(lambda1);
+
+
+lambda1:1.5;
+lambda2:13.3;
+
+kl(p,q):=p*log(p/q);
+
+kmax:10;
+
+/* KL Poisson:Exp */
+divKL: sum( kl(Poisson(k,lambda1),Exponential(k,lambda2)) , k, 0, kmax);
+float(%);
+
+DuoBD(lambda2,lambda1);
+float(%);
+
+
+
+
+

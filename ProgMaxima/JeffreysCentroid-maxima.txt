@@ -1,0 +1,52 @@
+
+
+p1:0.3;
+p2:0.4;
+
+kill(all);
+
+j(p1,p2):=(p1-p2)*log(p1/p2)+(p2-p1)*log((1-p1)/(1-p2));
+J(c,p1,p2):=j(c,p1)+j(c,p2);
+
+
+derivative(J(x,p1,p2),x);
+
+
+J(c,p1,p2,p3):=j(c,p1)+j(c,p2)+j(c,p3);
+derivative(J(x,p1,p2,p3),x);
+
+J(c,p1,p2,p3,p4):=j(c,p1)+j(c,p2)+j(c,p3)+j(c,p4);
+derivative(J(x,p1,p2,p3,p4),x);
+
+
+( (x-p)/x)+(x-p)/(1-x)) );
+
+/* log(x/p2)+log(x/p1)+(x-p2)/x+(x-p1) x*/
+
+ratsimp(%);
+solve([%=0],c);
+
+
+
+log(x/p2)+log(x/p1)+(x-p2)/x+(x-p1)/x
+
+/* */
+kill(all);
+
+j(p1,p2):=(p1-p2)*log(p1/p2);
+J(c,p1,p2):=j(c,p1)+j(c,p2);
+
+derivative(J(x,p1,p2),x);
+deriv(p1,p2,x):=log(x/p2)+log(x/p1)+(x-p2)/x+(x-p1)/x;
+
+ c(p1,p2):= (p1 + p2)/(2* lambert_w(
+(1/2)* 
+((sqrt(2) *%e* sqrt(p1))/(
+  (p2**(3/2))* sqrt((2.0* p1)/(p2*p2* (p1 + p2)) + 2/(p2 *(p1 + p2)))) + 
+  (sqrt(2) *%e)/(sqrt(p1)* sqrt(p2) * sqrt((2.0 * p1)/(p2*p2* (p1 + p2)) + 2.0/(p2* (p1 + p2))))))
+);
+
+ratsimp(%);
+
+c(0.3,0.4); float(%);
+deriv(0.3,0.4,%);

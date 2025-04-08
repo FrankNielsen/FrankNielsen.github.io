@@ -1,0 +1,43 @@
+ 
+I have fully expanded the manuscript by added many figures and new results (eg., Proposition 1, Proposition 3, Proposition 5).
+I have enriched the experimental section and compared our approximation results with the exact Fisher-Rao distance when known.
+Notice that we provided both a lower and an upper bound of our approximation.
+We also added an appendix.
+
+Best regards.
+
+
+
+FR(u):=sqrt(2)*acosh(1+0.25*u*u);
+plot2d([FR(u),u],[u,0,5]);
+
+plot2d([u,FR(u)],[u,0,3],[legend, "Upper bound", "Fisher-Rao"],
+[xlabel, "Mahalanobis distance Δ_{μ}"], [ylabel,"Distance"],
+[title, "Fisher-Rao distance and  sqrt(Jeffreys) upper bound"],
+[gnuplot_term,pdf] , [gnuplot_out_file, "C://travail/Plot-FRUBSameCovar.pdf"],
+[gnuplot_default_term_command, "set term pngcairo font \",12\""]);
+
+
+hFR(u):=sqrt(2.0)*log((sqrt(8.0+u*u)+u)/(sqrt(8.0+u*u)-u));
+
+hFR(u):=sqrt(2.0)*acosh(1+0.25*u*u);
+COLB(u):=acosh(1.0+0.5*u*u);
+id(u):=u;
+ 
+
+plot2d([id(u),hFR(u),COLB(u)],[u,0,10],[legend, "identity", "Fisher-Rao (h_{FR})", "C\\&O LB (h_{CO})"],
+[xlabel, "Mahalanobis distance Δ_{μ}"], [ylabel,"Distance"],
+[title, "Distances as functions of the Mahalanobis distance"],
+[gnuplot_term,pdf] , [gnuplot_out_file, "C://travail/Plot-FRCOLB.pdf"]);
+
+
+
+ 
+
+hSS(u):=2*acosh(1.0+0.5*u*u);
+plot2d([hFR(u),hCO(u),hSS(u)],[u,0,0.001]);
+
+
+plot2d(hFR(u)-hCO(u),[u,0.002,0.005]);
+
+plot2d([hFR(u),hCO(u)],[u,0,0.001]);

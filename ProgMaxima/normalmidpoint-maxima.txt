@@ -1,0 +1,22 @@
+kill(all);
+
+dKlein(p,q):=acosh((1-p.q)/(sqrt((1-p.p)*(1-q.q))));
+
+u(p,q,alpha):= ((1-p.p)*cosh(alpha* dKlein(p,q))*sqrt(((1-p.p)*((q-p).(q-p))+(p.(q-p))**2)*  (cosh(alpha* dKlein(p,q))
+**2-1)) +(1-p.p)* (p.(q-p))* (1-cosh(alpha* dKlein(p,q))**2))/((1-p.p)* ((q-p).(q-p)) * cosh(alpha* dKlein(p,q))**2 + (p.(q-p))**2);
+
+gammaKlein(p,q,alpha):=(1-u(p,q,alpha))*p+u(p,q,alpha)*q;
+
+
+gammaKlein(p,q,1.2);
+ratsimp(%);
+
+
+
+/* Test for Klein geodesics */
+p: [0.5, 0.2];
+q: [0.1, -0.3];
+s:random(1.0);
+t:random(1.0);
+dKlein(gammaKlein(p,q,s),gammaKlein(p,q,t));
+abs(s-t)*dKlein(p,q);

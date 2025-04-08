@@ -1,0 +1,36 @@
+varalpha(v1,v2,alpha):=(v1*v2)/((1-alpha)*v1+alpha*v2)$
+mualpha(mu1,v1,mu2,v2,alpha):=(alpha*mu1*v2+(1-alpha)*mu2*v1)/((1-alpha)*v1+alpha*v2)$
+assume(v1>0)$assume(v2>0)$
+theta1(mu,v):=mu/v$
+theta2(mu,v):=-1/(2*v)$;
+F(theta1,theta2):=((-theta1**2)/(4*theta2))+(1/2)*log(-%pi/theta2)$
+JF(alpha,theta1,theta2,theta1p,theta2p):=alpha*F(theta1,theta2)+(1-alpha)*F(theta1p,theta2p)-F(alpha*theta1+(1-alpha)*theta1p,alpha*theta2+(1-alpha)*theta2p);
+
+m1:0;v1:1;m2:1;v2:2;
+
+plot2d([JF(alpha,theta1(m1,v1),theta2(m1,v1),theta1(m2,v2),theta2(m2,v2)),
+-JF(alpha,theta1(m1,v1),theta2(m1,v1),theta1(m2,v2),theta2(m2,v2)),
+ [discrete,[[0.4215580558605244,-0.15],[0.4215580558605244,0.15]]],
+[discrete, [0.4215580558605244], [0.1155433222682347]],
+[discrete, [0.4215580558605244], [-0.1155433222682347]]
+],
+[alpha,0,1], [xlabel,"α"], [ylabel,"F_{pq}(α)=-D_{B,α}[p:q]"],
+[style,  [lines,1,1],[lines,1,2],
+ [lines,2,0], [points, 3,3],[points, 3,3]],[legend, "skew Bhattacharyya D_{B,α}[p:q]","LREF log-normalizer F_{pq}(α)","","","" ],
+[color, blue, red,   black, black,black],[point_type,asterisk]);
+
+[discrete, [0.4215580558605244], [0.1155433222682347]]]
+
+plot2d(JF(alpha,theta1(m1,v1),theta2(m1,v1),theta1(m2,v2),theta2(m2,v2)),[alpha,0,1]);
+
+as:0.4215580558605244;
+ 
+ 
+
+
+Bhat(alpha,m1,v1,m2,v2):=JF(alpha,theta1(m1,v1),theta2(m1,v1),theta1(m2,v2),theta2(m2,v2));
+
+
+
+
+Bhat(alpha,m1,v1,m2,v2):=(1/2)*()

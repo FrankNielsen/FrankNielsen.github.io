@@ -1,0 +1,18 @@
+
+Fnormal(theta1,theta2):=-theta1**2/(4*theta2)-(1/2)*log(-theta2)+(1/2)*log(%pi);
+H: hessian (Fnormal(theta1,theta2), [theta1, theta2]);
+
+
+Znormal(theta1,theta2):=exp(Fnormal(theta1,theta2));
+HZ: hessian (Znormal(theta1,theta2), [theta1, theta2]);
+
+kill(all);
+Z(theta1,theta2):=exp(-(theta1**2)/(4*theta2))/(sqrt(-theta2*%pi));
+HZ: hessian (Z(theta1,theta2), [theta1, theta2]);
+
+theta1:mu/sigma**2;
+theta2:-1/(2*sigma**2);
+
+tex(%);
+
+H;

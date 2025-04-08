@@ -1,0 +1,53 @@
+/* Frank Nielsen */
+
+kill(all);
+v:matrix([x],[y],[z])$
+mu:matrix([a],[b],[c])$
+Sigma: matrix([d,g,h],[g,e,i],[h,i,f])$
+
+assume(d>0);assume(e>0);assume(f>0);
+assume(determinant(Sigma)>0);
+
+
+1/(((2*%pi)**3/2)*sqrt(determinant(Sigma)))*exp(-(1/2)*transpose(v-mu).invert(Sigma).(v-mu));
+pdf:ratsimp(%);
+ 
+hessian(-log(pdf),[a,b,c,d,e,f,g,h,i]);
+ratsimp(%);
+/* Fisher information matrix */
+integrate(integrate(integrate(pdf*%,x,minf,inf),y,minf,inf),z,minf,inf);
+
+tex(%);
+
+
+
+
+/* score */ 
+derivative(log(pdf),a,1);
+integrate(integrate(pdf*ratsimp(%**2),x,minf,inf),y,minf,inf);
+ ratsimp(%);
+
+
+
+/////
+integrate(pdf,x,minf,inf);
+integrate(%,y,minf,inf);
+
+
+derivative(log(pdf(x,mu,Sigma)),a,1);
+%**2; ratsimp(%);
+FI: %;
+
+integrate(pdf(x,mu,Sigma)*%,x[1][1],minf,inf);
+integrate(%,x[2][1],minf,inf);
+
+
+
+
+derivative(-log(pdf(x,mu,Sigma)),a,2);
+ratsimp(%);
+
+integrate(pdf(x,mu,Sigma)*%,x[1][1],minf,inf);
+integrate(%,x[2][1],minf,inf);
+
+float(%);

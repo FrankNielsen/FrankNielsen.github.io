@@ -1,0 +1,16 @@
+logt(t,x):=(1/(1-t))*(x**(1-t)-1);
+
+Poincare(r):=log((1+r)/(1-r));
+
+
+Poincaret(t,r):=logt(t,exp(Poincare(r)));
+
+
+plot3d(Poincaret(t,r),[t,0.5,1.5],[r,0,1]);
+
+ /* at origin zero */
+ 
+ dPoincare(dr):=log((1+dr)/(1-dr));
+ 
+ /* 2x+O(x^2) */
+ 

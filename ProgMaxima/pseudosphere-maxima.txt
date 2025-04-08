@@ -1,0 +1,8 @@
+# tractrix
+draw2d(parametric(t - 2*tanh(t/2), 2*sech(t/2),t,-8,8));
+
+# pseudo-sphere
+plot3d([sech(u)*cos(v), sech(u)*sin(v), u - tanh(u)],[u,-3,3],[v,-%pi,%pi],[z,0,3],[grid, 30,30]);
+
+
+plot3d([sech(u)*cos(v), sech(u)*sin(v), u - tanh(u)],[u,-3,3],[v,-%pi,%pi],[z,0,3],[grid, 50,50]);

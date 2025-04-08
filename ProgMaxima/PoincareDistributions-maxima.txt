@@ -1,0 +1,34 @@
+
+Some characterizations of the Cauchy distribution, Arnold 1979
+A characterization of the Cauchy distribution, Norton 1983
+
+
+plot2d(F(a,-0.1,3),[a,1,10]);
+
+F(a,b,c):=log( (%pi/sqrt(a*c-b*b))*exp(2*sqrt(a*c-b*b)) );
+hessian(F(a,b,c),[a,b,c]);
+determinant(%);
+ratsimp(%);
+
+
+tex(ratsimp(%));
+ 
+
+
+t: matrix ([sqrt(y), x/sqrt(y)], [0, 1/sqrt(y)]);
+t.transpose(t);
+
+
+
+assume(a>0);
+p(x,y,a) := (sqrt(a)*exp(2.0*sqrt(a))/%pi)*exp(-(a*(x*x+y*y)+1)/y)/(y*y);
+integrate(integrate(p(x,y,1),x,minf,inf),y,0,inf);
+
+
+/* Poincare distributions Tojo */
+p(x,y,a,b,c) := (sqrt(a*c-b*b)*exp(2.0*sqrt(a*c-b*b))/%pi)*exp(-(a*(x*x+y*y)+2*b*x+c)/y)/(y*y);
+
+p(0.3,0.2,1,0,1);
+
+integrate(p(x,y,1,0,1),x,minf,inf);
+integrate(p(x,y,1,0,1),y,0,inf);

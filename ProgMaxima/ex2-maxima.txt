@@ -1,0 +1,100 @@
+
+/* von Mangoldt function */
+Mangoldt(i):=if integerp(i)
+  then block([fct],fct:ev(ifactors(i),factors_only:true),
+                   if length(fct)=1 then log(fct[1]) else 0)
+  else 'Mangoldt(i)
+
+s1:4;
+s2:12;
+PMFzeta(x,s):=1.0/((x**s)*zeta(s));
+s1:4;
+s2:12;
+
+/* number of terms in the sums */
+nbsum:100;
+eta(s):=sum(-float(Mangoldt(i))/(i**s),i,1,nbsum);
+omega:exp(-eta(s1));
+log(PMFzeta(omega,s1)/PMFzeta(omega,s2));
+float(%);
+
+log(zeta(s2)/zeta(s1))+(s2-s1)*(-eta(s1));
+
+
+alpha:0.99999;
+/* Bhattacharyya coecient */
+expminusJ(alpha,s1,s2):=zeta(alpha*s1+(1-alpha)*s2)/((zeta(s1)**alpha) * (zeta(s2)**(1-alpha)));
+/* alpha-divergence*/
+(1/(alpha*(1-alpha)))*(1-expminusJ(alpha,s1,s2));
+bfloat(%);
+
+
+
+
+s1:4;
+s2:12;
+PMFzeta(x,s):=1.0/((x**s)*zeta(s));
+s1:4;
+s2:12;
+alpha:0.99999;
+/* Bhattacharyya coecient */
+expminusJ(alpha,s1,s2):=zeta(alpha*s1+(1-alpha)*s2)/((zeta(s1)**alpha) * (zeta(s2)**(1-alpha)));
+/* alpha-divergence*/
+(1/(alpha*(1-alpha)))*(1-expminusJ(alpha,s1,s2));
+bfloat(%);
+
+/* number of terms in the sums */
+nbsum:100;
+
+H(s):=sum((1/((i**s)*zeta(s))*log((i**s)*zeta(s))),i,1,nbsum);
+
+eta(s):=sum(-float(Mangoldt(i))/(i**s),i,1,nbsum);
+
+H2(s):=-(s*eta(s)-log(zeta(s)));
+H(s1);bfloat(%);
+H2(s1);bfloat(%);
+
+KL(s1,s2):= log(zeta(s2))-H(s1)-s2*eta(s1); 
+
+
+eta(s1); bfloat(%);
+KL(s1,s2); bfloat(%);
+
+/**/
+
+
+(1/(alpha*(1-alpha)))*(1-sum((PMFzeta(x,s1)**alpha)*(PMFzeta(x,s2)**(1-alpha)), x, 1, 20));
+bfloat(%);
+
+
+s1:4;
+s2:12;
+alpha:1/2;
+
+assume(s1>1);
+assume(s2>1);
+pdfPareto(x,s):=(s-1)/(x**s);
+
+integrate(pdfPareto(x,s1)*log(pdfPareto(x,s1)/pdfPareto(x,s2)),x,1,inf);
+ratsimp(%);
+bfloat(%);
+
+KLParetoCF(s1,s2):=log((s2-1)/(s1-1))+(s1-s2)/(s2-1);
+KLParetoCF(s2,s1);
+bfloat(%);
+
+assume(s>1);
+s:2.3;
+integrate(-pdfPareto(x,s)*log(pdfPareto(x,s)),x,1,inf);
+float(%);
+
+HParetoCF(s):=1+(1/(s-1))-log(s-1);
+HParetoCF(s);
+
+
+(1/(alpha*(1-alpha)))*(1-integrate( (pdfPareto(x,s1)**alpha)*(pdfPareto(x,s2)**(1-alpha)),x,1,inf));
+
+
+integrate( (pdfPareto(x,s1)**alpha)*(pdfPareto(x,s2)**(1-alpha)),x,1,inf);
+f(alpha,s1,s2):=(s1*alpha+(1-alpha)*s2)/(s1**alpha * s2**(1-\alpha));
+f(alpha,s1,s2);

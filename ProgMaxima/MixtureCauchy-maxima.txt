@@ -1,0 +1,238 @@
+Cauchy(x,l,s) := (s/(%pi*((x-l)**2+s**2))); 
+
+ assume(s>0);
+ 
+
+assume(s1>0);
+assume(s0>0);
+
+/* polynomial in x**4 in den, x** in num */
+m(x,theta):=(1-theta)*(s0/(%pi*((x-l0)**2+s0**2)))+theta*(s1/(%pi*((x-l1)**2+s1**2)));
+
+
+ 
+
+KLCauchy(l0,s0,l1,s1,theta):=log(  ( (l0-l1)**2+(s0+s1)**2) / ( (1-theta)*(s0*s0+s1*s1+(l0-l1)**2) + 2*theta*s0*s1+2*sqrt(s0*s0*s1*s1+s0*s1*((s0-s1)**2+(l0-l1)**2)*theta*(1-theta)) ));
+JSCauchy(l0,s0,l1,s1,theta):=(1-theta)*KLCauchy(l0,s0,l1,s1,theta) + theta*KLCauchy(l1,s1,l0,s0,1-theta);
+
+ratsimp((1-theta)*KLCauchy(l0,s0,l1,s1,theta) + theta*KLCauchy(l1,s1,l0,s0,1-theta));
+ 
+
+
+hCauchy(l,s):=log(4*%pi*s);
+hmixCauchy(l0,s0,l1,s1,theta) :=   JSCauchy(l0,s0,l1,s1,theta)+((1-theta)*hCauchy(l0,s0)+theta*hCauchy(l1,s1))  ;
+
+
+ratsimp(derivative(hmixCauchy(l0,s0,l1,s1,theta),theta,1));
+
+ratsimp(derivative(hmixCauchy(l0,s0,l1,s1,theta),theta,2));
+
+
+
+fortran (ratsimp(hmixCauchy(l0,s0,l1,s1,theta) ));
+
+crossentropyCauchy(l0,s0,l1,s1,theta) := KLCauchy(l0,s0,l1,s1,theta)+hCauchy(l0,s0);
+KLmix(l0,s0,l1,s1,theta1,theta2):=(1-theta1)*crossentropyCauchy(l0,s0,l1,s1,theta2)+theta1*crossentropyCauchy(l1,s1,l0,s0,1-theta2)-hmixCauchy(l0,s0,l1,s1,theta1);
+
+DiffKLmix(l0,s0,l1,s1,theta1,theta2):=abs(KLmix(l0,s0,l1,s1,theta1,theta2)-KLmix(l0,s0,l1,s1,theta2,theta1));
+
+float(DiffKLmix(0,1,100,5,0.5,0.9));
+
+
+expand(-hmixCauchy(0,1,1,1,theta));
+ 
+
+/* special example */
+
+F(theta):=(-theta*log(5/(2*sqrt((-theta^2)+theta+1)+theta+2)))+theta*log(5/(2*sqrt((-theta^2)+theta+1)-theta+3))-log(5/(2*sqrt((-theta^2)+theta+1)-theta+3))-log(4*%pi);
+eta(theta):=log((2*sqrt((-theta^2)+theta+1)+theta+2)/(2*sqrt((-theta^2)+theta+1)-theta+3));
+theta(eta):=(5*exp(2*eta) + 2*sqrt(5)*sqrt(exp(3*eta) - 2*exp(2*eta)+exp(eta)) - 3*exp(eta))/(5*exp(2*eta)-6*exp(eta)+5);
+Fdual(eta):=theta(eta)*eta-F(theta(eta));
+
+plot2d(Fdual(eta),[eta,-1,1]);
+
+t(theta):=2*sqrt(1+theta-theta*theta);
+
+/* new */
+F(theta):=theta*log((2*sqrt(1+theta-(theta*theta))+theta+2)/(2*sqrt(1+theta-(theta*theta))-theta+3)) + log((2*sqrt(1+theta-(theta*theta))-theta+3)/(20*%pi));
+gradF(theta):=log((2*sqrt(1+theta-(theta*theta))+theta+2)/(2*sqrt(1+theta-(theta*theta))-theta+3));
+
+BD(theta1,theta2):=F(theta1)-F(theta2)-(theta1-theta2)*gradF(theta2);
+expand(F(theta1)-F(theta2)-(theta1-theta2)*gradF(theta2));
+
+theta(eta):=(5*exp(2*eta) + 2*sqrt(5)*sqrt(exp(3*eta) - 2*exp(2*eta)+exp(eta)) - 3*exp(eta))/(5*exp(2*eta)-6*exp(eta)+5);
+Fdual(eta):=theta(eta)*eta-F(theta(eta));
+expand(theta(eta)*eta-F(theta(eta)));
+
+
+theta(eta):=(5*exp(2*eta) + 2*sqrt(5)*sqrt(exp(3*eta) - 2*exp(2*eta)+exp(eta)) - 3*exp(eta))/(5*exp(2*eta)-6*exp(eta)+5);
+
+
+
+F(theta):=(-theta*log(5/(2*sqrt((-theta^2)+theta+1)+theta+2)))+theta*log(5/(2*sqrt((-theta^2)+theta+1)-theta+3))-log(5/(2*sqrt((-theta^2)+theta+1)-theta+3))-log(4*%pi);
+eta2theta(theta):=log((2*sqrt((-theta^2)+theta+1)+theta+2)/(2*sqrt((-theta^2)+theta+1)-theta+3));
+theta2eta(eta):=(5*exp(2*eta) + 2*sqrt(5)*sqrt(exp(3*eta) - 2*exp(2*eta)+exp(eta)) - 3*exp(eta))/(5*exp(2*eta)-6*exp(eta)+5);
+Fdual(eta):=theta2eta(eta)*eta-F(theta2eta(eta));
+
+theta2eta(eta)*eta-F(theta2eta(eta));
+expand(%);
+
+theta2eta(theta)*eta-F(theta2eta(theta));
+expand(%);
+ 
+
+Fdual(theta2eta(theta));
+expand(%);
+
+G(theta):=Fdual(theta2eta(theta));
+
+
+ 
+
+
+
+expand(-hmixCauchy(0,1,1,1,theta));
+string(%);
+
+
+%%%%%
+F(theta):=theta *log 
+\frac{2\sqrt{1+\theta-\theta^2}+\theta+2}{2\sqrt{1+\theta-\theta^2}-\theta+3}+\log\frac{2\sqrt{1+\theta-\theta^2}-\theta+3}{20\pi}
+
+%%%%
+
+
+expand(-hmixCauchy(l0,s0,l1,s1,theta));
+string(%);
+
+
+
+expand(hmixCauchy(l0,s0,l1,s1,theta));
+
+
+expand(KLmix(l0,s0,l1,s1,theta1,theta2)-KLmix(l0,s0,l1,s1,theta2,theta1));
+
+
+F:-hmixCauchy(0,1,1,1,theta);
+eta:derivative(F,theta,1); 
+ratsimp(%);
+
+
+F:-hmixCauchy(0,1,0,2,theta);
+eta:derivative(F,theta,1); 
+ratsimp(%);
+
+
+
+KLmix(l0,s0,l1,s1,theta1,theta2)-KLmix(l0,s0,l1,s1,theta2,theta1);
+radcan(%);
+
+logcontract(%);
+exp(%);
+ratsimp(%);
+
+
+
+DiffKL(l0,s0,l1,s1,theta1,theta2):=KLmix(l0,s0,l1,s1,theta1,theta2)-KLmix(l0,s0,l1,s1,theta2,theta1);
+
+
+float(DiffKL(0,1,1,1,0.2,0.8));
+
+DiffKL(0,1,1,1,theta1,theta2);
+
+KLmix(0,1,1,1,0.2,0.8);
+
+
+float(DiffKL(0,1,1,1,theta1,theta2))
+
+F:-hmixCauchy(0,1,1,1,theta);
+g:derivative(F,theta,2); 
+ratsimp(%);
+
+dualF: crossentropyCauchy(0,1,1,1,theta);
+
+eta:derivative(F,theta,1); 
+
+
+
+BF(theta1,theta2):=-hmixCauchy(0,1,1,1,theta1)+hmixCauchy(0,1,1,1,theta2)-(theta1-theta2)*eta;
+
+plot2d(F,[theta,0,1]);
+
+
+solve([log ((2*sqrt(1+t-t*t)+t+2)/(2*sqrt(1+t-t*t)-t+3)) = eta],[t]);
+
+solve((2*sqrt(1+t-t*t)+t+2)/(2*sqrt(1+t-t*t)-t+3)-eta,t);
+
+https://www.wolframalpha.com/
+(2*sqrt(1+t-t*t)+t+2)/(2*sqrt(1+t-t*t)-t+3)=exp(eta) solve for t
+
+
+f(t):=(2*sqrt(1+t-t*t)+t+2)/(2*sqrt(1+t-t*t)-t+3);
+radcan(%);
+
+2\sqrt{1+\theta-\theta^2}+\theta+2}{2\sqrt{1+\theta-\theta^2}-\theta+3}
+
+
+ratsimp(%);
+plot2d(F(theta),[theta,0,1]);
+
+float(hmixCauchy(0,1,1,1,0.5));
+
+
+F(theta):=-hmixCauchy(l0,s0,l1,s1,theta);
+derivative(F(theta),theta,1);  
+
+ratsimp(%);
+
+F(theta):=-hmixCauchy(l0,s0,l1,s1,theta);
+logcontract(%);
+
+hmixCauchy(0,1,0,s,theta);
+ratsimp(%);
+ 
+
+/* simplex example */
+-hmixCauchy(0,1,1,1,theta);
+ratsimp(%);
+derivative(%,theta,1);
+ratsimp(%);
+ derivative(-hmixCauchy(0,1,1,1,theta),theta,2);
+
+BF(theta1,theta2)=F(theta1)-F(theta2)-(theta1-theta2)*eta(theta2);
+ 
+plot2d(-hmixCauchy(0,1,1,1,theta),[theta,0,1]);
+
+
+hmixCauchy(1,s0,1,s1,theta);
+ratsimp(%);
+ 
+
+
+-hmixCauchy(0,1,2,3,theta);
+ratsimp(%);
+
+-hmixCauchy(l0,s0,l1,s1,theta);
+ratsimp(%);
+
+
+
+plot2d(-hmix(0,1,2,3,theta),[theta,0,1]);
+derivative(-hmix(0,1,2,3,theta),theta,2);
+
+
+/* binary negentropy */
+f(theta):=(1-theta)*log(1-theta)+theta*log(theta);
+derivative(f(theta),theta,2);
+
+
+
+s(x,theta):=((1-theta)/(1+x**2))+(theta/(1+(x-1)**2));
+ratsimp(%);
+
+/*
+log\left( \frac{(l_0 - l_1)^2 + (s_0+s_1)^2}{(1-\theta)(s_0^2 + s_1^2 +(l_0 - l_1)^2)+ 2\theta s_0 s_1 +
+2\sqrt{s_0^2 s_1^2 + s_0 s_1 ((s_0-s_1)^2+(l_0 - l_1)^2)\theta (1-\theta)}}\right)
+*/
+
+The Cauchy entropy is $h[p_{l,s}]=\log(4\pi s)$~\cite{KLCauchy-2019}.

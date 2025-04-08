@@ -1,0 +1,76 @@
+varalpha(v1,v2,alpha):=(v1*v2)/((1-alpha)*v1+alpha*v2);
+mualpha(mu1,v1,mu2,v2,alpha):=(alpha*mu1*v2+(1-alpha)*mu2*v1)/((1-alpha)*v1+alpha*v2);
+KLD(mu1,v1,mu2,v2):=(1/2)*((((mu2-mu1)**2)/v2)+(v1/v2)-log(v1/v2)-1);
+
+theta1(mu,v):=mu/v;
+theta2(mu,v):=-1/(2*v);
+F(theta1,theta2):=-theta1**2/(4*theta2)+0.5*log(-1/theta2);
+
+eq: (theta1(mu1,v1)-theta1(mu2,v2))*mualpha(mu1,v1,mu2,v2,alpha)+(theta2(mu1,v1)-theta2(mu2,v2))*(mualpha(mu1,v1,mu2,v2,alpha)**2+varalpha(v1,v2,alpha))-F(theta1(mu1,v1),theta2(mu1,v1))+F(theta1(mu2,v2),theta2(mu2,v2));
+
+assume(v1>0);
+assume(v2>0);
+
+
+eq:(theta1(mu1,v1)-theta1(mu2,v2))*mualpha(mu1,v1,mu2,v2,alpha)+(theta2(mu1,v1)-theta2(mu2,v2))*(mualpha(mu1,v1,mu2,v2,alpha)**2+varalpha(v1,v2,alpha))-F(theta1(mu1,v1),theta2(mu1,v1))+F(theta1(mu2,v2),theta2(mu2,v2));
+
+solalpha: solve(eq,alpha);
+alphastar:rhs(ratsimp(solalpha[1]));
+ratsimp(alphastar);
+
+
+solalphastd: solve(eqstd,alpha);
+alphastarstd:rhs(ratsimp(solalphastd[1]));
+
+
+
+
+mu1:mu;mu2:mu;
+eqsamemu:  (theta1(mu1,v1)-theta1(mu2,v2))*mualpha(mu1,v1,mu2,v2,alpha)+(theta2(mu1,v1)-theta2(mu2,v2))*(mualpha(mu1,v1,mu2,v2,alpha)**2+varalpha(v1,v2,alpha))-F(theta1(mu1,v1),theta2(mu1,v1))+F(theta1(mu2,v2),theta2(mu2,v2));
+
+ 
+
+solalphasamemu: solve(eqsamemu,alpha);
+alphastarsamemu:rhs(ratsimp(solalphasamemu[1]));
+ratsimp(alphastarsamemu);
+
+kld1: KLD(mualpha(mu1,v1,mu2,v2,alphastarsamemu),varalpha(v1,v2,alphastarsamemu),mu1,v1);
+print("Chernoff information=")$float(kld1);
+kld2: KLD(mualpha(mu1,v1,mu2,v2,alphastarsamemu),varalpha(v1,v2,alphastarsamemu),mu2,v2);
+print("Chernoff information=")$float(kld2);
+
+
+mu1:0;v1:1; mu2:mu;v2:v;
+
+----
+http://maxima.cesga.es/index.php?c=2mrkkzkao4qpj1ve0an4k&n=1
+
+{{\sqrt{\left(\left(4\,{\it mu_2}^2-8\,{\it mu_1}\,{\it mu_2}+4\,
+ {\it mu_1}^2\right)\,{\it v_1}\,{\it v_2}^2+\left(-4\,{\it mu_2}^2+8
+ \,{\it mu_1}\,{\it mu_2}-4\,{\it mu_1}^2\right)\,{\it v_1}^2\,
+ {\it v_2}\right)\,\log \left(2\,{\it v_2}\right)+{\it v_2}^4-4\,
+ {\it v_1}\,{\it v_2}^3+\left(\left(-4\,{\it mu_2}^2+8\,{\it mu_1}\,
+ {\it mu_2}-4\,{\it mu_1}^2\right)\,{\it v_1}\,\log \left(2\,
+ {\it v_1}\right)+6\,{\it v_1}^2\right)\,{\it v_2}^2+\left(\left(4\,
+ {\it mu_2}^2-8\,{\it mu_1}\,{\it mu_2}+4\,{\it mu_1}^2\right)\,
+ {\it v_1}^2\,\log \left(2\,{\it v_1}\right)-4\,{\it v_1}^3+\left(4\,
+ {\it mu_2}^4-16\,{\it mu_1}\,{\it mu_2}^3+24\,{\it mu_1}^2\,
+ {\it mu_2}^2-16\,{\it mu_1}^3\,{\it mu_2}+4\,{\it mu_1}^4\right)\,
+ {\it v_1}\right)\,{\it v_2}+{\it v_1}^4}+\left(2\,{\it v_1}^2-2\,
+ {\it v_1}\,{\it v_2}\right)\,\log \left(2\,{\it v_2}\right)+
+ {\it v_2}^2+\left(2\,{\it v_1}\,\log \left(2\,{\it v_1}\right)-2\,
+ {\it v_1}\right)\,{\it v_2}-2\,{\it v_1}^2\,\log \left(2\,{\it v_1}
+ \right)+{\it v_1}^2+\left(-2\,{\it mu_2}^2+4\,{\it mu_1}\,{\it mu_2}
+ -2\,{\it mu_1}^2\right)\,{\it v_1}}\over{\left(2\,{\it v_2}^2-4\,
+ {\it v_1}\,{\it v_2}+2\,{\it v_1}^2\right)\,\log \left(2\,{\it v_2}
+ \right)-2\,\log \left(2\,{\it v_1}\right)\,{\it v_2}^2+\left(4\,
+ {\it v_1}\,\log \left(2\,{\it v_1}\right)+2\,{\it mu_2}^2-4\,
+ {\it mu_1}\,{\it mu_2}+2\,{\it mu_1}^2\right)\,{\it v_2}-2\,
+ {\it v_1}^2\,\log \left(2\,{\it v_1}\right)+\left(-2\,{\it mu_2}^2+4
+ \,{\it mu_1}\,{\it mu_2}-2\,{\it mu_1}^2\right)\,{\it v_1}}}
+
+
+
+
+
+

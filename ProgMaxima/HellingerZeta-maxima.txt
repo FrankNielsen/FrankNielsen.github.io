@@ -1,0 +1,11 @@
+PMFzeta(x,s):=1.0/((x**s)*zeta(s));
+s1:4;
+s2:12;
+alpha:1/2;
+
+expminusJ(alpha,s1,s2):=zeta(alpha*s1+(1-alpha)*s2)/((zeta(s1)**alpha) * (zeta(s2)**(1-alpha)));
+(1/(alpha*(1-alpha)))*(1-expminusJ(alpha,s1,s2));
+bfloat(%);
+
+(1/(alpha*(1-alpha)))*(1-sum((PMFzeta(x,s1)**alpha)*(PMFzeta(x,s2)**(1-alpha)), x, 1, 20));
+bfloat(%);

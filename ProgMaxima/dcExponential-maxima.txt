@@ -1,0 +1,124 @@
+assume(lambda>0);
+assume(lambda1>0);
+assume(lambda2>0);
+
+Exp(x,lambda):=lambda*exp(-lambda*x);
+Laplace(x,lambda):=(lambda/2)*exp(-lambda*abs(x));
+
+integrate(Exp(x,lambda),x,0,inf);
+integrate(Laplace(x,lambda),x,minf,inf);
+
+
+cfexp(l1,l2):=(l2/l1)+log(l1/l2)-1+log(2);
+
+lambda1:3;
+lambda2:7;
+
+integrate(Exp(x,lambda1)*log(Exp(x,lambda1)/Laplace(x,lambda2)),x,0,inf);
+float(%);
+float(cfexp(lambda1,lambda2));
+
+
+
+
+assume(sigma1>0);
+assume(sigma2>0);
+
+halfnormal(x,sigma):= (1/(sigma*sqrt(%pi/2))) * exp(-x**2/(2*sigma**2));
+normal(x,sigma):=(1/(sigma*sqrt(2*%pi))) *exp(-x**2/(2*sigma**2));
+
+
+cfnormal(sigma1,sigma2):=(1/2) * (log(sigma2**2/sigma1**2)+(sigma1**2/sigma2**2)-1);
+cfspecnormal(sigma1,sigma2):=(1/2) * ( log(sigma2**2/sigma1**2) + (sigma1**2/sigma2**2)-1+log(4) );
+
+sigma1:4;
+sigma2:8;
+
+integrate(halfnormal(x,sigma1)*log(halfnormal(x,sigma1)/normal(x,sigma2)),x,0,inf);
+float(%);
+float(cfspecnormal(sigma1,sigma2));
+
+ 
+integrate(normal(x,sigma1)*log(normal(x,sigma1)/normal(x,sigma2)),x,minf,inf);
+float(%);
+float(cfnormal(sigma1,sigma2));
+
+
+
+
+
+
+integrate(halfnormal(x,sigma1),x,0,inf);
+integrate(normal(x,sigma1),x,minf,inf);
+ 
+cf(sigma1,sigma2):=log(sigma1/sigma2)+log(sqrt(%pi/2));
+
+
+sigma1:3;
+sigma2:5;
+integrate(halfnormal(x,sigma1)*log(halfnormal(x,sigma1)/normal(x,sigma2)),x,0,inf);
+float(%);
+float(cf(sigma1,sigma2));
+float(cf(sigma2,sigma1));
+
+
+
+a:1/2;
+plot3d((a/2)*theta**2+(1/2)*eta**2-theta*eta,[theta,-3,3],[eta,-3,3],[grid,50,50]);
+
+
+F1(theta):=theta**2;
+F2dual(eta):=((1/4)**(1/3)-(1/4)**(4/3))*eta*(4/3);
+eta2(thetap):=4*thetap**3;
+F1(theta)+F2dual(eta2(thetap))-theta*eta2(thetap);
+plot3d(%,[theta,0,0.9],[thetap,0,0.8],[grid,50,50]);
+
+plot2d([theta**2,theta**4],[theta,0,1]);
+plot2d([(1/4)*eta**2,((1/4)**(1/3)-(1/4)**(4/3))*eta**(4/3)],[eta,0,2]);
+
+assume(theta>0);
+/* Discrete exponential distribution */ 
+dExp(theta,x):=(1-exp(-theta))*(exp(-theta*x));
+/* sum to one */
+sum(dExp(theta,x), x, 0, inf), simpsum=true;
+
+F(theta):=-log(1-exp(-theta));
+/* eta */
+derivative(F(theta),theta,1); 
+
+
+1/4
+
+
+float((1/4)**(1/3)-(1/4)**(4/3));
+
+
+plot2d([theta**2,theta**4],[theta,-1,1]);
+
+
+plot2d([exp(theta),-log(1-exp(theta))],[theta,0,1]);
+
+
+eta(theta):=exp(-theta)/(exp(-theta)-1);
+theta(eta):=-log(eta/(eta-1));
+
+eta(theta(eta));
+
+Fc(eta)=eta*theta(eta)-F(theta(eta));
+ratsimp(%);
+
+
+Fc(eta):=-eta*log(eta/(eta-1))-log(1-eta);
+derivative(Fc(eta),eta,2);
+derivative(Fc(eta),eta,1);
+
+
+Fq(thetaq)=-log(thetaq);
+Fp(theta):=-log(1-exp(-theta));
+eta(theta):=(exp(-theta)/(exp(-theta)-1));
+Fpc(theta):=-(exp(-theta)/(exp(-theta)-1))*log((exp(-theta)/(exp(-theta)-1))/((exp(-theta)/(exp(-theta)-1))-1))-log(1-(exp(-theta)/(exp(-theta)-1)));
+
+/* eta*/ 
+sum(x*dExp(theta,x), x, 0, inf), simpsum=true;
+
+sum(x*(1-exp(-theta))*(exp(-theta*x)), x, 0, inf), simpsum=true;

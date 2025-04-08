@@ -1,0 +1,81 @@
+/* May 2023, Frank.Nielsen@acm.org */
+
+/* set_random_state (make_random_state (20)); */
+
+MobiusDistance(a,b,c,d):=sqrt(((c-a)**2+2*(d-b)**2)/((c-a)**2+2*(d+b)**2));
+RaoDistance(m1, s1, m2, s2) :=sqrt(2)*log((1.0+MobiusDistance(m1, s1, m2, s2))/(1.0-MobiusDistance(m1, s1, m2, s2)));
+
+/* here points with coordinates (mu,sigma**2) parameters */
+RaoDistancePoint(p1,p2):=RaoDistance(p1[1],sqrt(p1[2]),p2[1],sqrt(p2[2]));
+
+lambda2eta(l) := [l[1],l[1]**2+l[2]];
+eta2lambda(e) := [e[1],e[2]-e[1]**2];
+lambda2theta(l) := [l[1]/l[2],-1/(2*l[2])];
+theta2lambda(t) := [-t[1]/(2*t[2]),-1/(2*t[2])];
+
+
+/* sanity check: identity */
+theta2lambda(lambda2theta(l));
+eta2lambda(lambda2eta(l));
+
+
+
+declare( mu1 , real);declare( sigma1 , real);
+assume( sigma1>0);
+declare( mu2 , real);declare( sigma2 , real);
+assume( sigma2>0);
+
+
+
+  mu1: random(1.0); mu2: random(1.0); sigma1: 1+random(1.0); sigma2: 1+random(1.0);  
+
+
+/* for the example below we find : */
+/* mu1:0;sigma1: 1; mu2: 1; sigma2: 2; */ 
+/* mid:[0.3297622973982172,1.4521143208823653] rho(p1,p2)=1.1893809314064119 rho(p1,mid)=0.5926601095849375 rho(mid,p2)=0.5967254493425403 */
+ 
+
+
+p1:[mu1,sigma1*sigma1];
+p2:[mu2,sigma2*sigma2];
+
+fpprec:30;
+
+display("Rao distance p1 to p2 ")$
+bfloat(RaoDistancePoint(p1,p2));
+bfloat(RaoDistance(mu1,sigma1,mu2,sigma2));
+
+ 
+
+T:10000;
+
+LERP(p,q,t):=(1-t)*p+t*q;
+
+
+display("Doing the Frechet Gauss-type iterations");
+for i:1 thru T step 1 do
+(theta: LERP(lambda2theta(p1),lambda2theta(p2),0.5),
+eta: LERP(lambda2eta(p1),lambda2eta(p2),0.5),
+p1: theta2lambda(theta),
+p2: eta2lambda(eta));   /* display(i)*/
+
+display("mid point is in (mu,sigma**2) parameterization")$
+mid:[p1[1],p1[2]];
+
+p1:[mu1,sigma1*sigma1];
+p2:[mu2,sigma2*sigma2];
+
+display("Rao distance p1 to midpoint ")$
+Raop1mid: bfloat(RaoDistancePoint(p1,mid));
+
+display("Rao distance midpoint to p2 ")$
+Raop2mid: bfloat(RaoDistancePoint(mid,p2));
+
+
+display("numerical error for the midpoint:")$
+bfloat(Raop2mid-Raop1mid);
+
+
+
+
+ 

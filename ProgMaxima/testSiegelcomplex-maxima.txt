@@ -1,0 +1,65 @@
+/*  Frank.Nielsen@acm.org */
+/* it works! 9 march 2020*/
+
+declare(z, complex);
+declare(w, complex);
+
+z : 5.5+5.25*%i;
+w : -3 + 5.5*%i;
+
+/* Hyperbolic distance in the upper plane */
+dhyperbolic(a,b) := log( (cabs(a-conjugate(b))+cabs(a-b)) /  (cabs(a-conjugate(b))-cabs(a-b)) );
+
+dhyperbolic(z,w);
+float(ratsimp(%));
+
+ 
+/* equivalent formula with Siegel */
+R(z,w):= ((z-w)/(z-conjugate(w)))*((conjugate(z)-conjugate(w))/(conjugate(z)-w));
+
+r: ratsimp(R(z,w));
+s:sum(r**i/(2*i+1), i, 0, 1000);
+distSiegel: 4*r*s*s;
+float(distSiegel);
+
+distSiegel2: log( (1+sqrt(r))/(1-sqrt(r)) )**2;
+float(distSiegel2);
+
+
+/* Code in Maxima, Frank.Nielsen@acm.org */
+/* Calculate the Siegel metric distance in the Siegel upper space */
+
+load(eigen);
+
+/* symmetric */
+S1: matrix( [0.265,   0.5],
+   [0.5 , -0.085]);
+
+/* positive-definite */
+P1: matrix( [0.235,   0.048],
+   [0.048 ,  0.792]);
+
+/* Matrix in the Siegel upper space */
+Z1: S1+%i*P1;
+
+S2:  matrix( [-0.329,  -0.2],
+  [-0.2 , -0.382]);
+
+P2: matrix([0.464,   0.289],
+   [0.289  , 0.431]);
+
+Z2: S2+%i*P2;
+
+/* Generalized Moebius transformation */
+R(Z1,Z2) := ((Z1-Z2).invert(Z1-conjugate(Z2))).((conjugate(Z1)-conjugate(Z2)).invert(conjugate(Z1)-Z2));
+
+/* R12 is not Hermitian but complex matrix */
+R12: ratsimp(R(Z1,Z2));
+ratsimp(R12[2][1]-conjugate(R12[1][2]));
+
+/* Retrieve the eigenvalues: They are all reals */
+r: float(eivals(R12))[1];
+
+/* Calculate the Siegel distance */
+distSiegel: sum(log( (1+sqrt(r[i]))/(1-sqrt(r[i]))  )**2, i, 1, 2);
+  

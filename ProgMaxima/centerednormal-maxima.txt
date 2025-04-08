@@ -1,0 +1,18 @@
+assume(v>0);
+normal(x,v):=1/(sqrt(2*%pi*v))*exp(-0.5*x*x/v);
+integrate(normal(x,v),x,minf,inf);
+
+assume(alpha>0);assume(alpha<1);
+assume(v1>0);assume(v2>v1);
+integrate((normal(x,v1)**alpha)*(normal(x,v2)**(1-alpha)),x,minf,inf);
+Bhat: ratsimp(-log(%));
+derivative(Bhat,alpha,1);
+solve(%,alpha);
+alphastar: ratsimp(%[1]);
+
+alpha:rhs(alphastar);
+integrate((normal(x,v1)**alpha)*(normal(x,v2)**(1-alpha)),x,minf,inf);
+ratsimp(%);
+
+derivative(0.5*log(-%pi/theta),theta,1);
+

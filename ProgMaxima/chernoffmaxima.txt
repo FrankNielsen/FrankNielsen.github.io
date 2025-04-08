@@ -1,0 +1,11 @@
+
+assume(s>0);
+eq: ((1/s-1)**2)*(1+l*(1/s-1))-2*log(s);
+
+solve(eq=0,l);
+
+eq2:-log(s)+(1-1/s)/(alpha+(1-alpha)/s);
+
+eq3:derivative(eq2,alpha,1);
+
+solve(eq3=0,alpha);

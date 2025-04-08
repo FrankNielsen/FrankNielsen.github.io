@@ -362,8 +362,12 @@ for(alpha=-1;alpha<=1;alpha+=1)
   if (toggleAnimation) {animate();}
 }
 
-
-
+/*
+void draw()
+{
+ drawAlpha(1.0); 
+}
+*/
 void draw()
 {
   int i, j, ii, jj;

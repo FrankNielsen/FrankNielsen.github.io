@@ -1,0 +1,4 @@
+z1: a1+%i*b1;
+z2: a2+%i*b2;
+(z1-z2)/(1-z1*conjugate(z2));
+ratsimp(%);

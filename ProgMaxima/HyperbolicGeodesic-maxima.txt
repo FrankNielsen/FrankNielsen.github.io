@@ -1,0 +1,85 @@
+
+m1:0;s1:1;
+m2:3;s2:2;
+m3:1.5;s3:2;
+/* non-vertical geodesics */
+c(m1,s1,m2,s2):=((0.5*(m2**2-m1**2))+(s2*s2-s1*s1))/(sqrt(2)*(m2-m1));
+r(m1,s1,m2,s2):=sqrt( (m1/sqrt(2)-c(m1,s1,m2,s2))**2+s1*s1);
+theta1(m1,s1,m2,s2):=atan(s1/((m1/sqrt(2))-c(m1,s1,m2,s2)));
+theta2(m1,s1,m2,s2):=atan(s2/((m2/sqrt(2))-c(m1,s1,m2,s2)));
+t1: if theta1(m1,s1,m2,s2)<0 then  theta1(m1,s1,m2,s2)+%pi else theta1(m1,s1,m2,s2);
+t2: if theta2(m1,s1,m2,s2)<0 then  theta2(m1,s1,m2,s2)+%pi else theta2(m1,s1,m2,s2);  
+m(lambda,m1,s1,m2,s2):=sqrt(2)*(c(m1,s1,m2,s2)+r(m1,s1,m2,s2)*cos(lambda*t1+(1-lambda)*t2));
+s(lambda,m1,s1,m2,s2):=r(m1,s1,m2,s2)*sin(lambda*t1+(1-lambda)*t2);
+
+plot2d([parametric, m(lambda,m1,s1,m2,s2), s(lambda,m1,s1,m2,s2), [lambda, 0.0,1.0]],[same_xy],[title,"Fisher-Rao Gaussian geodesic"],
+[legend,false],[pdf_file,"C:/Travail/FisherRaoGaussianGeodesic-maxima.pdf"]);
+
+PSx(m,s,M):=cos(m/(sqrt(2)*M))/s;
+PSy(m,s,M):=sin(m/(sqrt(2)*M))/s;
+PSz(m,s,M):=acosh(s)-sqrt(1-1/s**2);
+
+M:1;
+plot3d([
+PSx(m(lambda,m1,s1,m2,s2), s(lambda,m1,s1,m2,s2),M),
+PSy(m(lambda,m1,s1,m2,s2), s(lambda,m1,s1,m2,s2),M)
+,PSz(m(lambda,m1,s1,m2,s2), s(lambda,m1,s1,m2,s2),M)
+],[lambda,0,1], [u,-5,5]
+,[pdf_file,"C:/Travail/PseudosphereGaussianGeodesic-maxima.pdf"]);
+
+plot3d([
+PSx(m,s,M),
+PSy(m,s,M)
+,PSz(p,s,M)
+],[m,-2*%pi*M,2*%pi*M], [s,-10,10]
+);
+
+[pdf_file,"C:/Travail/PseudosphereByConversion-maxima.pdf"]);
+
+
+
+
+plot3d([sech(u)*cos(v), sech(u)*sin(v), u - tanh(u)],[u,0,5],[v,-%pi,%pi]);
+
+M:1;
+plot3d(
+[PSx(m(lambda,m1,s1,m2,s2), s(lambda,m1,s1,m2,s2),M),
+PSy(m(lambda,m1,s1,m2,s2), s(lambda,m1,s1,m2,s2),M)
+,PSz(m(lambda,m1,s1,m2,s2), s(lambda,m1,s1,m2,s2),M)],[lambda,0,1], [u,-5,5]
+,[sech(u)*cos(v), sech(u)*sin(v), u - tanh(u)],[u,-5,5],[v,-%pi,%pi]
+,[pdf_file,"C:/Travail/PseudosphereGaussianGeodesic-maxima.pdf"]);
+
+
+plot3d([[cos(t),sin(t),t],[t,0,2*%pi],[y,-3,3],[color, magenta],[sin(t),cos(t),t],[t,0,2*%pi],[y,-3,3]],[color, yellow]);
+
+
+plot3d([[cos(t),sin(t),t],[t,0,2*%pi],[y,-3,3],[color, magenta],[sin(t),cos(t),t],[t,0,2*%pi],[y,-3,3]],[color, yellow]);
+
+
+S1:parametric(PSx(m(lambda,m1,s1,m2,s2), s(lambda,m1,s1,m2,s2),M),
+PSy(m(lambda,m1,s1,m2,s2), s(lambda,m1,s1,m2,s2),M)
+,PSz(m(lambda,m1,s1,m2,s2), s(lambda,m1,s1,m2,s2),M),lambda,0,1);
+draw(S1);
+
+
+S1:explicit(x^2+y^2,x,-1,1,y,-1,1);
+S2:explicit(4*sqrt((x-1)^2+(y-1)^2),x,0,2,y,0,2);
+draw3d(S1,S2);
+
+plot3d([sech(u)*cos(v), sech(u)*sin(v), u - tanh(u)],[u,-5,5],[v,-%pi,%pi],[z,0,3],[grid,50,50],[legend,false],[title,"Pseudosphere"],[pdf_file,"C:/Travail/pseudosphere-maxima.pdf"]);
+
+ 
+
+plot2d([[parametric, m(lambda,m1,s1,m2,s2), s(lambda,m1,s1,m2,s2), m(lambda,m1,s1,m3,s3), s(lambda,m1,s1,m3,s3)],[lambda, 0.0,1.0]][same_xy],[title,"Fisher-Rao Gaussian geodesic"],[legend,false]);
+
+
+
+plot2d([parametric, m(lambda,m1,s1,m2,s2), s(lambda,m1,s1,m2,s2), [lambda, 0.0,1.0]],[same_xy],[title,"Fisher-Rao Gaussian geodesic"],[legend,false]);
+
+
+plot2d([parametric, cos(t),sin(t), [t, theta1(m1,s1,m2,s2),theta2(m1,s1,m2,s2)]],[same_xy]);
+plot2d([parametric, cos(t),sin(t), [t, -%pi,%pi]],[same_xy],[color, magenta]);
+
+plot2d([parametric, cos(t),sin(t), [t, -%pi,%pi]],[same_xy],color_bar, [xtics, 1], [ytics, 1],  [legend,false],  [color_bar_tics, 4]);
+
+

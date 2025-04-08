@@ -1,0 +1,154 @@
+% Lambert W, may assume mu1=0,v1=0. e-geo perpendicular at m-bisector yields test.
+
+reset();
+
+varalpha(v1,v2,alpha):=(v1*v2)/((1-alpha)*v1+alpha*v2);
+mualpha(mu1,v1,mu2,v2,alpha):=(alpha*mu2*v1+(1-alpha)*mu2*v1)/((1-alpha)*v1+alpha*v2);
+KLD(mu1,v1,mu2,v2):=(1/2)*((((mu2-mu1)**2)/v2)+(v1/v2)-log(v1/v2)-1);
+
+theta1(mu,v):=mu/v;
+theta2(mu,v):=-1/(2*v);
+F(theta1,theta2):=-theta1**2/(4*theta2)+0.5*log(-1/theta2);
+
+mu1:0;
+v1:1;
+
+mu2:1;
+v2:3;
+
+
+eq: (theta1(mu1,v1)-theta1(mu2,v2))*mualpha(mu1,v1,mu2,v2,alpha)+(theta2(mu1,v1)-theta2(mu2,v2))*(mualpha(mu1,v1,mu2,v2,alpha)**2+varalpha(v1,v2,alpha))-F(theta1(mu1,v1),theta2(mu1,v1))+F(theta1(mu2,v2),theta2(mu2,v2));
+
+solve(eq,alpha);
+alphastar:rhs(%[1]);
+float(%);
+
+plain(alphastar);
+
+KLD(mualpha(mu1,v1,mu2,v2,alphastar),varalpha(v1,v2,alphastar),mu1,v1);
+float(%);
+KLD(mualpha(mu1,v1,mu2,v2,alphastar),varalpha(v1,v2,alphastar),mu2,v2);
+float(%);
+
+
+/* tex (%o1, "foo.tex"); */
+
+
+
+$$\left[ \alpha=-{{v_{1}\,\sqrt{\left(4\,\mu_{2}^2\,v_{1}\,v_{2}^4+
+ \left(-4\,\mu_{2}^2-8\,\mu_{1}\,\mu_{2}\right)\,v_{1}^2\,v_{2}^3+
+ \left(8\,\mu_{1}\,\mu_{2}+4\,\mu_{1}^2\right)\,v_{1}^3\,v_{2}^2-4\,
+ \mu_{1}^2\,v_{1}^4\,v_{2}\right)\,\log \left(2\,v_{2}\right)+v_{2}^6
+ +\left(-4\,v_{1}-4\,\mu_{1}\,\mu_{2}\right)\,v_{2}^5+\left(-4\,
+ \mu_{2}^2\,v_{1}\,\log \left(2\,v_{1}\right)+6\,v_{1}^2+\left(12\,
+ \mu_{1}\,\mu_{2}+4\,\mu_{1}^2\right)\,v_{1}\right)\,v_{2}^4+\left(
+ \left(4\,\mu_{2}^2+8\,\mu_{1}\,\mu_{2}\right)\,v_{1}^2\,\log \left(2
+ \,v_{1}\right)-4\,v_{1}^3+\left(-12\,\mu_{1}\,\mu_{2}-12\,\mu_{1}^2
+ \right)\,v_{1}^2+\left(4\,\mu_{2}^4-8\,\mu_{1}\,\mu_{2}^3+4\,\mu_{1}
+ ^2\,\mu_{2}^2\right)\,v_{1}\right)\,v_{2}^3+\left(\left(-8\,\mu_{1}
+ \,\mu_{2}-4\,\mu_{1}^2\right)\,v_{1}^3\,\log \left(2\,v_{1}\right)+
+ v_{1}^4+\left(4\,\mu_{1}\,\mu_{2}+12\,\mu_{1}^2\right)\,v_{1}^3+
+ \left(-8\,\mu_{1}\,\mu_{2}^3+16\,\mu_{1}^2\,\mu_{2}^2-8\,\mu_{1}^3\,
+ \mu_{2}\right)\,v_{1}^2\right)\,v_{2}^2+\left(4\,\mu_{1}^2\,v_{1}^4
+ \,\log \left(2\,v_{1}\right)-4\,\mu_{1}^2\,v_{1}^4+\left(4\,\mu_{1}^
+ 2\,\mu_{2}^2-8\,\mu_{1}^3\,\mu_{2}+4\,\mu_{1}^4\right)\,v_{1}^3
+ \right)\,v_{2}}+\left(2\,v_{1}^2\,v_{2}^2-2\,v_{1}^3\,v_{2}\right)\,
+ \log \left(2\,v_{2}\right)-v_{1}\,v_{2}^3+\left(-2\,v_{1}^2\,\log 
+ \left(2\,v_{1}\right)+2\,v_{1}^2+\left(2\,\mu_{1}\,\mu_{2}-2\,
+ \mu_{1}^2\right)\,v_{1}\right)\,v_{2}^2+\left(2\,v_{1}^3\,\log 
+ \left(2\,v_{1}\right)-v_{1}^3+\left(2\,\mu_{2}^2-6\,\mu_{1}\,\mu_{2}
+ +4\,\mu_{1}^2\right)\,v_{1}^2\right)\,v_{2}}\over{\left(2\,v_{1}\,
+ v_{2}^3-4\,v_{1}^2\,v_{2}^2+2\,v_{1}^3\,v_{2}\right)\,\log \left(2\,
+ v_{2}\right)+\left(-2\,v_{1}\,\log \left(2\,v_{1}\right)-2\,\mu_{1}^
+ 2\right)\,v_{2}^3+\left(4\,v_{1}^2\,\log \left(2\,v_{1}\right)+
+ \left(2\,\mu_{2}^2-4\,\mu_{1}\,\mu_{2}+8\,\mu_{1}^2\right)\,v_{1}
+ \right)\,v_{2}^2+\left(\left(-2\,\mu_{2}^2+4\,\mu_{1}\,\mu_{2}-8\,
+ \mu_{1}^2\right)\,v_{1}^2-2\,v_{1}^3\,\log \left(2\,v_{1}\right)
+ \right)\,v_{2}+2\,\mu_{1}^2\,v_{1}^3}} , \alpha={{v_{1}\,\sqrt{
+ \left(4\,\mu_{2}^2\,v_{1}\,v_{2}^4+\left(-4\,\mu_{2}^2-8\,\mu_{1}\,
+ \mu_{2}\right)\,v_{1}^2\,v_{2}^3+\left(8\,\mu_{1}\,\mu_{2}+4\,
+ \mu_{1}^2\right)\,v_{1}^3\,v_{2}^2-4\,\mu_{1}^2\,v_{1}^4\,v_{2}
+ \right)\,\log \left(2\,v_{2}\right)+v_{2}^6+\left(-4\,v_{1}-4\,
+ \mu_{1}\,\mu_{2}\right)\,v_{2}^5+\left(-4\,\mu_{2}^2\,v_{1}\,\log 
+ \left(2\,v_{1}\right)+6\,v_{1}^2+\left(12\,\mu_{1}\,\mu_{2}+4\,
+ \mu_{1}^2\right)\,v_{1}\right)\,v_{2}^4+\left(\left(4\,\mu_{2}^2+8\,
+ \mu_{1}\,\mu_{2}\right)\,v_{1}^2\,\log \left(2\,v_{1}\right)-4\,
+ v_{1}^3+\left(-12\,\mu_{1}\,\mu_{2}-12\,\mu_{1}^2\right)\,v_{1}^2+
+ \left(4\,\mu_{2}^4-8\,\mu_{1}\,\mu_{2}^3+4\,\mu_{1}^2\,\mu_{2}^2
+ \right)\,v_{1}\right)\,v_{2}^3+\left(\left(-8\,\mu_{1}\,\mu_{2}-4\,
+ \mu_{1}^2\right)\,v_{1}^3\,\log \left(2\,v_{1}\right)+v_{1}^4+\left(
+ 4\,\mu_{1}\,\mu_{2}+12\,\mu_{1}^2\right)\,v_{1}^3+\left(-8\,\mu_{1}
+ \,\mu_{2}^3+16\,\mu_{1}^2\,\mu_{2}^2-8\,\mu_{1}^3\,\mu_{2}\right)\,
+ v_{1}^2\right)\,v_{2}^2+\left(4\,\mu_{1}^2\,v_{1}^4\,\log \left(2\,
+ v_{1}\right)-4\,\mu_{1}^2\,v_{1}^4+\left(4\,\mu_{1}^2\,\mu_{2}^2-8\,
+ \mu_{1}^3\,\mu_{2}+4\,\mu_{1}^4\right)\,v_{1}^3\right)\,v_{2}}+
+ \left(2\,v_{1}^3\,v_{2}-2\,v_{1}^2\,v_{2}^2\right)\,\log \left(2\,
+ v_{2}\right)+v_{1}\,v_{2}^3+\left(2\,v_{1}^2\,\log \left(2\,v_{1}
+ \right)-2\,v_{1}^2+\left(2\,\mu_{1}^2-2\,\mu_{1}\,\mu_{2}\right)\,
+ v_{1}\right)\,v_{2}^2+\left(-2\,v_{1}^3\,\log \left(2\,v_{1}\right)+
+ v_{1}^3+\left(-2\,\mu_{2}^2+6\,\mu_{1}\,\mu_{2}-4\,\mu_{1}^2\right)
+ \,v_{1}^2\right)\,v_{2}}\over{\left(2\,v_{1}\,v_{2}^3-4\,v_{1}^2\,
+ v_{2}^2+2\,v_{1}^3\,v_{2}\right)\,\log \left(2\,v_{2}\right)+\left(-
+ 2\,v_{1}\,\log \left(2\,v_{1}\right)-2\,\mu_{1}^2\right)\,v_{2}^3+
+ \left(4\,v_{1}^2\,\log \left(2\,v_{1}\right)+\left(2\,\mu_{2}^2-4\,
+ \mu_{1}\,\mu_{2}+8\,\mu_{1}^2\right)\,v_{1}\right)\,v_{2}^2+\left(
+ \left(-2\,\mu_{2}^2+4\,\mu_{1}\,\mu_{2}-8\,\mu_{1}^2\right)\,v_{1}^2
+ -2\,v_{1}^3\,\log \left(2\,v_{1}\right)\right)\,v_{2}+2\,\mu_{1}^2\,
+ v_{1}^3}} \right] $$
+
+
+
+eta1: mualpha(mu1,v1,mu2,v2,alpha);
+eta2: mualpha(mu1,v1,mu2,v2,alpha)**2+varalpha(v1,v2,alpha);
+
+
+eq: 3*eta1+2*eta2-5;
+
+KLD(mu1,v1,mu2,v2):=(1/2)*((((mu2-mu1)**2)/v2)+(v1/v2)-log(v1/v2)-1);
+
+equation:KLD(mualpha(mu1,v1,mu2,v2,alpha),varalpha(v1,v2,alpha),mu1,v1)-KLD(mualpha(mu1,v1,mu2,v2,alpha),varalpha(v1,v2,alpha),mu2,v2);
+
+
+solve(equation,alpha);
+
+
+
+
+reset();
+
+varalpha(v1,v2,alpha):=(v1*v2)/((1-alpha)*v1+alpha*v2);
+mualpha(mu1,v1,mu2,v2,alpha):=(alpha*mu1*v1+(1-alpha)*mu2*v1)/((1-alpha)*v1+alpha*v2);
+KLD(mu1,v1,mu2,v2):=(1/2)*((((mu2-mu1)**2)/v2)+(v1/v2)-log(v1/v2)-1);
+
+mu1:0;
+v1:1;
+
+mu2:1;
+v2:3;
+
+ex1: KLD(mualpha(mu1,v1,mu2,v2,alpha),varalpha(v1,v2,alpha),mu1,v1)=KLD(mualpha(mu1,v1,mu2,v2,alpha),varalpha(v1,v2,alpha),mu2,v2);
+ratsimp(%);
+
+solve(ex1,alpha);
+
+
+solve(KLD(mualpha(mu1,v1,mu2,v2,alpha),varalpha(v1,v2,alpha),mu1,v1)=KLD(mualpha(mu1,v1,mu2,v2,alpha),varalpha(v1,v2,alpha),mu2,v2),alpha);
+
+
+
+
+
+$$-{{\left(\alpha^2\,v_{1}\,v_{2}^2+\left(2\,\alpha-2\,\alpha^2
+ \right)\,v_{1}^2\,v_{2}+\left(\alpha^2-2\,\alpha+1\right)\,v_{1}^3
+ \right)\,\log \left({{v_{2}}\over{\alpha\,v_{2}+\left(1-\alpha
+ \right)\,v_{1}}}\right)+\left(\left(\alpha^2-\alpha\right)\,v_{1}-
+ \alpha^2\,\mu_{1}^2\right)\,v_{2}^2+\left(\left(-2\,\alpha^2+3\,
+ \alpha-1\right)\,v_{1}^2+\left(\left(2-2\,{\it alph}\right)\,\alpha
+ \,\mu_{1}\,\mu_{2}+\left(4\,\alpha^2-2\,\alpha\right)\,\mu_{1}^2
+ \right)\,v_{1}\right)\,v_{2}+\left(\alpha^2-2\,\alpha+1\right)\,
+ v_{1}^3+\left(\left(-{\it alph}^2+2\,{\it alph}-1\right)\,\mu_{2}^2+
+ \left(\left(4\,{\it alph}-4\right)\,\alpha-2\,{\it alph}+2\right)\,
+ \mu_{1}\,\mu_{2}+\left(-4\,\alpha^2+4\,\alpha-1\right)\,\mu_{1}^2
+ \right)\,v_{1}^2}\over{2\,\alpha^2\,v_{1}\,v_{2}^2+\left(4\,\alpha-4
+ \,\alpha^2\right)\,v_{1}^2\,v_{2}+\left(2\,\alpha^2-4\,\alpha+2
+ \right)\,v_{1}^3}}$$

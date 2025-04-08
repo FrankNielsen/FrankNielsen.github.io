@@ -1,0 +1,54 @@
+f(x):=1+x+x**2+x**3+x**4+x**5;
+integrate(f(x)*log(f(x)),x,0,1);
+
+f(x):=1+x+x**2+x**3+x**4+x**5+x**6;
+integrate(f(x)*log(f(x)),x,0,1);
+
+f(x):=1+x+x**2+x**3+x**4;
+integrate(f(x)*log(f(x)),x,0,1);
+
+
+
+
+assume(w>0);assume(w<1);
+m(x,w):=w*2*x+(1-w)*1;
+integrate(m(x,w),x,0,1);
+integrate(m(x,w)*log(m(x,w)),x,0,1);
+ tex(ratsimp(%));
+
+F:ratsimp(%); /* negentropy in closed form */
+plot2d(F,[w,0,1]); /* convex */
+Fprime:ratsimp(derivative(F,w,1));
+
+G:integrate(-log(m(x,w)),x,0,1);  /* F^*/
+Gprime:ratsimp(derivative(G,w,1));
+plot2d(G,[w,0,1]);
+
+plot2d(Fprime,[w,0.01,0.99]);
+
+solve(Fprime=eta,w);
+Gprime: %[2];
+
+((w^2-1)*log(w+1)-log(1-w)*w^2+2*w+log(1-w))/(4*w^2)
+
+((w^2-1)*log(w+1)-log(1-w)*w^2+2*w+log(1-w))=0
+
+assume(w1>0);assume(w1<1);
+assume(w2>0);assume(w1+w2<1);
+m(x,w1,w2):=w1*2*x+w2*3*x**2+(1-w1-w2)*1;
+integrate(m(x,w1,w2)*log(m(x,w1,w2)),x,0,1);
+ tex(ratsimp(%));
+
+assume(w1>0);assume(w1<1);
+assume(w2>0);assume(w1+w2<1);
+assume(w3>0);assume(w1+w2+w3<1);
+m(x,w1,w2,w3):=w1*2*x+w2*3*x**2++4*x**3+(1-w1-w2-w3)*1;
+integrate(m(x,w1,w2,w3)*log(m(x,w1,w2,w3)),x,0,1);
+
+
+plot3d(F,[w1,0,1],[w2,0,w1]);
+
+
+integrate(m(x,w1,w2)*log(m(x,w1,w2)),x,0,1);
+
+m(w1,w2):=

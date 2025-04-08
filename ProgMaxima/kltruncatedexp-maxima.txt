@@ -1,0 +1,19 @@
+
+p(x,lambda):=lambda*exp(-lambda*x);
+
+assume(lambda1>0);
+assume(lambda2>0);
+integrate(p(x,lambda1)*log(p(x,lambda1)/p(x,lambda2)),x,a,b);
+
+
+p(x,lambda):=lambda*exp(-lambda*x);
+CDF(x,lambda):=1-exp(-lambda*x);
+
+assume(lambda>0);
+assume(a<b);
+integrate(p(x,lambda)/(CDF(b,lambda)-CDF(a,lambda)),x,a,b);
+ratsimp(%);
+
+/* moment of a truncated exp distribution */
+integrate(x*p(x,lambda)/(CDF(b,lambda)-CDF(a,lambda)),x,a,b);
+ratsimp(%);

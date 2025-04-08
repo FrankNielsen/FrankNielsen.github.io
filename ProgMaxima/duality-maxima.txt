@@ -1,0 +1,45 @@
+plot3d((1/2)* (mu**2/sigma**2 +log(2*%pi*sigma**2),[mu,-1,1],[sigma,0.1,2]);
+
+
+F(mu,sigma):= (1/2)* (mu**2/sigma**2 +log(2*%pi*sigma**2));
+ratsimp(hessian(F(mu,sigma),[mu,sigma]));
+determinant(%);
+
+
+Fphi(phi1,phi2):= (1/2)* (phi1**2 +log(2*%pi/phi2**2));
+derivative(Fphi(phi1,phi2),phi1,1);
+derivative(Fphi(phi1,phi2),phi2,1);
+
+
+ratsimp(hessian(Fphi(phi1,phi2),[phi1,phi2]));
+determinant(%);
+
+gradef(Fphi(phi1,phi2),[phi1,phi2]); 
+ 
+
+grad(Fphi(phi1,phi2),[phi1,phi2]);
+
+
+Fl(mu,v):= (1/2)* (mu**2/v +log(2*%pi*v));
+
+ratsimp(hessian(F(mu,v),[mu,v]));
+determinant(%);
+plot3d(Fl(mu,v),[mu,-1,1],[v,0.01,0.02]);
+
+Ftheta(theta1,theta2):=(-theta1**2/(4*theta2))+(1/2)*\log(-%pi/theta2);
+ratsimp(hessian(Ftheta(theta1,theta2),[theta1,theta2]));
+determinant(%);
+
+plot3d(Ftheta(theta1,theta2),[theta1,-1,1],[theta2,-0.02,-0.01]);
+
+
+F(theta,p):=theta**p*log(theta**p)-theta**p;
+derivative(F(theta,p),theta,2);
+ratsimp(%);
+
+
+theta(lambda):=(exp(p*theta)-1)/p;
+F(theta):=theta(lambda)*log(theta(lambda))-theta(lambda);
+derivative(F(theta),theta,2);
+ratsimp(%);
+

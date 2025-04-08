@@ -1,0 +1,7 @@
+sigma(beta,x):=x/(1+exp(-beta*x));
+beta:1;
+plot2d(sigma(beta,x),[x,-3,3]);
+
+
+
+plot2d(sin(x),[x,0,2*%pi]);

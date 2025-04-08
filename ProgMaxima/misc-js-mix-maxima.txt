@@ -1,0 +1,14 @@
+
+
+gaussian(x,mu):=1/(sqrt(2*%pi))*exp(-(x-mu)**2/2);
+integrate(gaussian(x,mu),x,minf,inf);
+
+k:4;
+integrate((gaussian(x,mu1)-gaussian(x,mu2))**k/gaussian(x,mu1)**(k-1),x,minf,inf);
+
+
+
+integrate (1/(4+x**2))*log((0.2)/(1+x**2) + 0.5/(2+x**2)+ 0.3/(3+x**2))
+
+
+m(x):=a/(1+x**2) + b/(2+x**2)+ c/(3+x**2);

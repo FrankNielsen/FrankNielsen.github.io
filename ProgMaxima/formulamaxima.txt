@@ -1,0 +1,29 @@
+(%i1) declare(x, complex) $
+(%i2) conjugate(x);
+(%o2)                            conjugate(x)
+(%i3) conjugate(realpart(x));
+(%o3)                             realpart(x)
+cabs imagpart
+
+
+declare(p,complex)
+declare(q,complex)
+declare(alpha,scalar)
+
+p: xp+yp*%i$
+q: yq+yq*%i$
+cabs(p-q);
+
+
+p: xp+yp*%i$
+q: yq+yq*%i$
+Translation(z0,z) := (z+z0)/(conjugate(z0)+1)$
+tq: Translation(-p,q)$
+xq: cabs(tq)$
+calphaq: (1+xq/(1-xq))**alpha$
+xalpha: (calphaq-1)/(calphaq+1)$
+qq: xalpha*tq$
+malpha: Translation(p,qq)$
+ratsimp(malpha)
+
+ 

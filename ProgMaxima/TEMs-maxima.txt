@@ -1,0 +1,199 @@
+
+
+
+
+xtilde(t,x):=x**(2-t);
+ytilde(t,xtilda):=(1-xtilda**(2-t))**(1/(2-t));
+
+YT(t,X):=(1-X)**(1/(2-t));
+
+
+/* plot with x axis */
+ 
+plot2d([YT(0.1,x),YT(0.5,x),YT(1,x),YT(1.25,x),YT(1.5,x),YT(1.7,x)],[x,0.001,0.999],grid2d, 
+[title, "t-simplex"],[xlabel, "ṕE"], [ylabel, "ṕE"],[legend, "0.1", "0.5","1","1.25","1.5","1.7"],
+[color, green, red, black,blue,magenta,yellow]);
+
+
+/* plot with xtilde axis */
+
+plot2d([ytilde(0.1,x),ytilde(0.5,x),ytilde(1,x),ytilde(1.25,x),ytilde(1.5,x),ytilde(1.7,x)],[x,0.001,0.999],grid2d, 
+[title, "t-simplex"],[xlabel, "ṕE"], [ylabel, "ṕE"],[legend, "0.1", "0.5","1","1.25","1.5","1.7"],
+[color, green, red, black,blue,magenta,yellow]);
+
+, [gnuplot_term,'pdf]);
+
+
+t:0.5;
+tsimplex:x**(2-t)+y**(2-t)+z**(2-t)=1;
+draw3d(color=black,implicit(tsimplex,x,0,1,y,0,1,z,0,1));
+draw3d(color=black,terminal   = 'png,title="t-Simplex",implicit(tsimplex,x,0,1,y,0,1,z,0,1));
+
+terminal   = 'png
+draw3d(enhanced3d=true,implicit(tsimplex,x,0,1,y,0,1,z,0,1));
+
+
+ytildex(t,x):=ytilde(t,xtilde(t,x));
+
+plot2d([ytilde(0.1,x),ytilde(0.5,x),ytilde(1,x),ytilde(1.25,x),ytilde(1.5,x),ytilde(1.7,x)],[x,0.001,0.999],grid2d, 
+[title, "t-simplex"],[xlabel, "ṕE"], [ylabel, "ṕE"],[legend, "0.1", "0.5","1","1.25","1.5","1.7"],
+[color, green, red, black,blue,magenta,yellow], [gnuplot_term,'pdf]);
+
+YT(t,X):=(1-X)**(1/(2-t));
+
+u:0.5;
+lxtilde:[xtilde(0.1,u),xtilde(0.5,u),xtilde(1,u),xtilde(1.25,u),xtilde(1.5,u),xtilde(1.7,u)];
+lytilde:[ytildex(0.1,u),ytildex(0.5,u),ytildex(1,u),ytildex(1.25,u),ytildex(1.5,u),ytildex(1.7,u)];
+plot2d ([discrete, lxtilde,lytilde]);
+
+
+plot2d([ytilde(0.1,x),ytilde(0.5,x),ytilde(1,x),ytilde(1.25,x),ytilde(1.5,x),ytilde(1.7,x),
+[discrete, lxtilde,lytilde]],[x,0.001,0.999],grid2d, 
+[title, "t-simplex"],[xlabel, "ṕE"], [ylabel, "ṕE"],[legend, "0.1", "0.5","1","1.25","1.5","1.7", "traj 0.5"],
+[color, green, red, black,blue,magenta,yellow,gray]);
+
+, [gnuplot_term,'pdf]);
+
+
+
+
+plot2d([ytilde(0.1,x),ytilde(0.5,x),ytilde(1,x),ytilde(1.25,x),ytilde(1.5,x),ytilde(1.7,x),[discrete, lxtilde,lytilde]],[x,0.001,0.999],grid2d, 
+[title, "t-simplex"],[xlabel, "ṕE"], [ylabel, "ṕE"],[legend, "0.1", "0.5","1","1.25","1.5","1.7", "traj"],
+[color, green, red, black,blue,magenta,yellow,blue], [gnuplot_term,'pdf]);
+
+
+plot2d([y(0.1,x),y(0.5,x),y(1,x),y(1.25,x),y(1.5,x),y(1.7,x)],[x,0.01,0.99],grid2d, 
+[title, "t-simplex"],[xlabel, "ṕE"], [ylabel, "ṕE"],[legend, "0.1", "0.5","1","1.25","1.5","1.7"],
+[color, green, red, black,blue,magenta,yellow]);
+
+
+
+u:0.5;
+lx:[x(0.1,u),x(0.5,u),x(1,u),x(1.25,u),yx(1.5,u),x(1.7,u)];
+ly:[y(0.1,u),y(0.5,u),y(1,u),y(1.25,u),y(1.5,u),y(1.7,u)];
+plot2d ([discrete, lx,ly]);
+
+
+t:0.5;
+
+tsimplex: x**(2-t)+y**(2-t)+z**(2-t)=1;
+
+
+
+draw(
+        delay     = 100,
+        file_name = "C:\Travail\tSimple-anim",
+        terminal  = 'animated_gif,
+        gr3d(title="t-Simplex",implicit(ttsimplex(1),x,0,1,y,0,1,z,0,1)),
+        gr3d(title="t-Simplex",implicit(ttsimplex(0.5),x,0,1,y,0,1,z,0,1)),
+        gr3d(title="t-Simplex",implicit(ttsimplex(1.5),x,0,1,y,0,1,z,0,1))
+);
+ 
+ttsimplex(t):= x**(2-t)+y**(2-t)+z**(2-t)=1;
+
+draw(
+        delay     = 100,
+        file_name = "C:\Travail\tSimple-anim",
+        terminal  = 'animated_gif,
+        gr3d(title="t-Simplex",implicit(ttsimplex(1),x,0,1,y,0,1,z,0,1)),
+        gr3d(title="t-Simplex",implicit(ttsimplex(0.5),x,0,1,y,0,1,z,0,1)),
+        gr3d(title="t-Simplex",implicit(ttsimplex(1.5),x,0,1,y,0,1,z,0,1))
+);
+
+draw3d(color=black,title="t-Simplex",implicit(ttsimplex(0.5),x,0,1,y,0,1,z,0,1));
+
+
+/* good */
+ttsimplex(t):= x**(2-t)+y**(2-t)+z**(2-t)=1;
+makelist (  gr3d(color="black",title="t-Simplex",
+xlabel = 0.1*i,
+implicit(ttsimplex(0.1*i),x,0,1,y,0,1,z,0,1)) , i, 0, 19);
+append ([terminal   = animated_gif,
+             delay      = 50,
+             file_name  = "C:/Travail/tSimplex-animation",
+             pic_width  = 512,
+             pic_height = 512], %);
+draw (%);
+
+ 
+/* fine resolution */
+ttsimplex(t):= x**(2-t)+y**(2-t)+z**(2-t)=1;
+makelist (  gr3d(color="black",title="t-Simplex",
+xlabel = 0.02*i,
+implicit(ttsimplex(0.02*i),x,0,1,y,0,1,z,0,1)) , i, 0, 100);
+append ([terminal   = animated_gif,
+             delay      = 10,
+             file_name  = "C:/Travail/tSimplex3D-fineanimation",
+             pic_width  = 512,
+             pic_height = 512], %);
+draw (%);
+
+/* deformed log */
+htlog(t):=(1/(1-t))*(exp((1-t)*x)-1);
+
+/* continuous definition */
+htlog(x,t):=
+block ( [],
+    if t = 1 
+       then log(x)
+       else
+             (1/(1-t))*(exp((1-t)*x)-1)
+);
+
+
+plot2d(htlog(x,2),[x,0,3]);
+plot2d(htlog(x,0.1),[x,0,3]);
+plot2d(htlog(x,1),[x,0,3]);
+
+
+set_draw_defaults(
+         xrange = [0.01,3],
+         yrange = [-2, 11],
+         color  = black,
+         grid   = true)$
+
+i:1;
+draw(gr2d(color="black",title="Deformed t-logarithms",
+explicit(htlog(x,i),x,0.0,3)));
+
+debugmode(true);
+
+makelist (  gr2d(color="black",title="Deformed t-logarithms",
+xlabel = 0.1*i,
+explicit(htlog(x,0.1*i),x,0.0,3)) , i, 0, 20);
+append ([terminal   = animated_gif,
+             delay      = 50,
+             file_name  = "C:/Travail/deformedlog-animation",
+             pic_width  = 512,
+             pic_height = 512], %);
+draw (%);
+
+
+
+draw(
+         
+        file_name = "C:/Travail/tSimplex3D-t=1",
+        terminal  = 'pdf,
+        gr3d(xtics=none,ytics=none,ztics=none,color=black,nticks=1,title="t-Simplex (t=1)",implicit(ttsimplex(1),x,0,1,y,0,1,z,0,1)) 
+);
+
+
+draw(
+         
+        file_name = "C:/Travail/tSimplex3D-t=1.5",
+        terminal  = 'pdf,
+        gr3d(xtics=none,ytics=none,ztics=none,color=black,nticks=1,title="t-Simplex (t=1.5)",implicit(ttsimplex(1.5),x,0,1,y,0,1,z,0,1)) 
+);
+
+draw(
+         
+        file_name = "C:/Travail/tSimplex3D-t=0.5",
+        terminal  = 'pdf,
+        gr3d(xtics=none,ytics=none,ztics=none,color=black,nticks=1,title="t-Simplex (t=0.5)",implicit(ttsimplex(0.5),x,0,1,y,0,1,z,0,1)) 
+);
+
+
+ 
+
+
+

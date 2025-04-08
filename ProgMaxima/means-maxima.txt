@@ -1,0 +1,17 @@
+H(x,y):=1/(1/2*1/x+1/2*1/y);
+(x-H(x,y))/(H(x,y)-y);
+ratsimp(%);
+
+C(x,y):=(x*x+y*y)/(x+y);
+(x-C(x,y))/(C(x,y)-y);
+ratsimp(%);
+
+
+/* Contraharmonic mean minimizes the sum of square relative errors */
+
+l(a,y):=((a-y)/y)**2;
+derivative(l(a,y),y,1);ratsimp(%);
+
+derivative(l(a1,y)+l(a2,y)+l(a3,y),y,1);ratsimp(%);
+solve(%=0,y);
+ratsimp(%);

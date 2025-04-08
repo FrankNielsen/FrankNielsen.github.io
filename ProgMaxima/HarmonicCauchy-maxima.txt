@@ -1,0 +1,105 @@
+
+https://mathoverflow.net/questions/6112/harmonic-mean-of-random-variables
+http://exploringdatablog.blogspot.com/2011/11/harmonic-means-reciprocals-and-ratios.html
+
+
+l1:0;
+s1:1;
+
+l2:1;
+s2:2;
+
+
+l12(l1,s1,l2,s2):=2*(l1*s2*s2+l2*s1*s1+l1*l2*l2+l1*l1*l2)/((s1+s2)*(s1+s2)+(l1+l2)*(l1+l2));
+s12(l1,s1,l2,s2):=2*(s1*s2*s2+(s1*s1+l1*l1)*s2+l2*l2*s1)/((s1+s2)*(s1+s2)+(l1+l2)*(l1+l2));
+
+
+
+theta1:l1+%i*s1;
+theta2:l2+%i*s2;
+theta12:2*theta1*theta2/(theta1+theta2);
+ratsimp(%);
+
+1/theta1;
+imagpart(%);
+
+
+il1:l1/(l1*l1+s1*s1);
+is1:s1/(l1*l1+s1*s1);
+
+il2:l2/(l2*l2+s2*s2);
+is2:s2/(l2*l2+s2*s2);
+
+sumil12:il1+il2;
+sumis12:is1+is2;
+
+invsumil12: sumil12/(sumil12*sumil12+sumis12*sumis12);
+ratsimp(%);
+
+
+invsumis12:  sumis12/(sumil12*sumil12+sumis12*sumis12);
+
+
+
+InvCauchy[p]:=[p[0]/(p[0]*p[0]+p[1]*p[1]),p[1]/(p[0]*p[0]+p[1]*p[1])];
+
+
+l12:realpart(theta12);ratsimp(%);
+s12:imagpart(theta12);ratsimp(%);
+
+l1:0;
+s1:1;
+
+l2;1;
+s2:2;
+
+l12:realpart(theta12); float(%);
+s12:imagpart(theta12);float(%);
+
+# Rcode
+
+
+
+invx1 <- 1/x1
+mlcauchy(invx1)
+l1/(l1*l1+s1*s1)
+s1/(l1*l1+s1*s1)
+
+l1 <- 1.5
+s1 <- 1
+x1 <- rcauchy(n,l1,s1)
+lambda<-3
+lambdax1<-lambda*x1
+mlcauchy(lambdax1)
+lambda*l1
+lambda*s1
+
+# install.packages("univariateML")
+library("univariateML")
+n <- 100000
+l1 <- 1.5
+s1 <- 1
+l2 <- 2
+s2 <- 3
+
+x1 <- rcauchy(n,l1,s1)
+x2 <- rcauchy(n,l2,s2)
+
+h12<- 2*x1*x2/(x1+x2)
+mlcauchy(h12)
+#l12
+2*(l1*s2*s2+l2*s1*s1+l1*l2*l2+l1*l1*l2)/((s1+s2)*(s1+s2)+(l1+l2)*(l1+l2))
+#s12
+2*(s1*s2*s2+(s1*s1+l1*l1)*s2+l2*l2*s1)/((s1+s2)*(s1+s2)+(l1+l2)*(l1+l2))
+
+
+
+
+library("univariateML")
+mlcauchy(x12)
+
+
+# 2 5 
+
+
+hist(x12,breaks = 100,xlim=c(-15,15))
