@@ -1,0 +1,49 @@
+[Japanese]
+
+ICMロゴ
+デザイン： フランク・ニールセン（Frank NIELSEN）
+メール： frank.nielsen.x@gmail.com
+所属： ソニーコンピュータサイエンス研究所
+
+ロゴの説明 – 国際数学会議（ICM）
+このカラフルで幾何学的なロゴは、国際数学会議（ICM）の多様性と構造性を美しく表現しています。
+
+* 幾何学的構成：
+ロゴ内の「I」「C」「M」の文字は、すべて三角形・四角形・平行四辺形などのポリゴン（多角形）で構成されており、数学における幾何学の基盤的役割を象徴しています。
+
+* グラフ的表現：
+各頂点に配置された黒い点と太い辺によって、グラフやメッシュ構造のような印象を与え、数学的厳密さやネットワーク性、結びつきを示しています。
+
+* 色による多様性の表現：
+それぞれのポリゴンには異なる鮮やかな色が使われており、代数学、幾何学、位相幾何学、数論、応用数学などの数学の多様な分野を表しています。
+
+* 国際性の象徴：
+この多彩な色使いは、さまざまな背景や専門分野を持つ数学者が集う国際的な会議であるICMのグローバルな精神も表現しています。
+
+* モジュール的でパズルのようなデザイン：
+ロゴ全体は少しパズルのような構成をしており、探求心をくすぐります。これは数学が持つ好奇心や問題解決力、創造的思考を呼び起こす本質を反映しています。
+
+--------------
+[English]
+
+ICM Logo by Frank NIELSEN (email: frank.nielsen.x@gmail.com)
+Sony Computer Science Laboratories Inc.
+
+Logo Explanation: International Congress of Mathematics (ICM)
+
+This colorful and geometric logo for the International Congress of Mathematics (ICM) 
+beautifully represents both the diversity and structure inherent in the world of mathematics.
+
+* The letters I, C, and M are constructed entirely from polygons—triangles, quadrilaterals, and parallelograms—reflecting the foundational role of geometry in mathematics.
+
+* The use of black dots at vertices and bold edges gives the impression of a graph or mesh, emphasizing mathematical rigor, networks, and connectivity.
+
+* Each polygon is filled with a distinct, vibrant color, symbolizing the diverse fields within mathematics: algebra, geometry, topology, number theory, applied math, and more.
+
+* The color variety also hints at the international nature of the congress—bringing together mathematicians of all backgrounds and specialties.
+
+ 
+The logo has a slightly modular and puzzle-like feel, which invites exploration—echoing how mathematics 
+invites curiosity, problem-solving, and creative thinking.
+
+It is visually appealing to both professionals and students, reinforcing ICM’s mission to be accessible and inspiring across all levels of mathematical education.
