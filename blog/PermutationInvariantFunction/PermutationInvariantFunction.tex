@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{fullpage,amssymb}
+\begin{document}
+
+\def\bbR{\mathbb{R}}
+\def\bbN{\mathbb{N}}
+\def\st{{\ :\ }}
+
+\title{Permutation invariant functions}
+\author{Frank Nielsen}
+\date{April 2025}
+\maketitle
+
+Let $f: 2^X\rightarrow\bbR,  S\mapsto f(S)$ be a real-valued set function where $X=\{x_1,\ldots, x_n\}$ is a set.
+It was proven in~\cite{deepset-2017} that $f$ can be written canonically as
+\begin{equation}\label{eq:permcandecomp}
+f(S)=g\left(\sum_{x\in S} \phi(x)\right)
+\end{equation}
+for functions $\phi$ and $g$.
+
+First, to prove the sufficient condition, we check that the right-hand-side of Eq.~\ref{eq:permcandecomp} is invariant to any permutation $\sigma$ of the elements of $X$: $f(\sigma(S))=g\left(\sum_{x\in\sigma(S)} \phi(x)\right)=g\left(\sum_{x\in S} \phi(x)\right)$ because of the commutativity property of the addition.
+To prove necessity, let $c: X\rightarrow\bbN, x\mapsto c(x)$ be a count function such that $c(x)\not=c(x)\Leftrightarrow x\not=x'$.
+Let $\phi(x)$ be any positive function such that $\phi(x)\not=\phi(x')$ for any $x,x'\in X$.
+For example, we may choose $\phi(x)=\exp(c(x))$.
+Then for any two distinct subsets $S$ and $S'$ of $2^X$, we have $\sum_{x\in\S} \phi(x)\not = \sum_{x\in\S'} \phi(x)$ since the difference is
+$$
+\sum_{x\in S\Delta S'} \phi(x)>0,
+$$
+where $S\Delta S'=(S\backslash S')\cup (S'\backslash S)$ denotes the symmetric difference (non-empty since  subsets are distinct).
+
+Thus $\{\phi(S)\st S\in 2^X\}$ is a collection of $|2^X|=2^n$ distinct points in $\bbR$.
+We may then choose $g$ to be the Lagrange polynomial interpolating those $2^n$ points $\{(\sum_{x\in\S} \phi(x),f(S))\st S\in 2^X\}$.
+
+For example, the Heron formula for the area of a triangle is invariant to the triangle vertex permutation, and can thus be written using the canonical form of Eq.~\ref{eq:permcandecomp}. See~\cite{DeepSetHeron-2025}.
+
+
+\bibliographystyle{plain}
+\bibliography{permutationfuncBIB}
+
+
+\end{document}

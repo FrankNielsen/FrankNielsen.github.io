@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: PermutationInvariantFunction.aux
+The style file: plain.bst
+Database file #1: permutationfuncBIB.bib
+You've used 2 entries,
+            2118 wiz_defined-function locations,
+            509 strings with 4430 characters,
+and the built_in function-call counts, 630 in all, are:
+= -- 55
+> -- 46
+< -- 0
++ -- 19
+- -- 16
+* -- 44
+:= -- 124
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 14
+chr.to.int$ -- 0
+cite$ -- 2
+duplicate$ -- 20
+empty$ -- 35
+format.name$ -- 16
+if$ -- 118
+int.to.chr$ -- 0
+int.to.str$ -- 2
+missing$ -- 2
+newline$ -- 13
+num.names$ -- 4
+pop$ -- 12
+preamble$ -- 1
+purify$ -- 12
+quote$ -- 0
+skip$ -- 16
+stack$ -- 0
+substring$ -- 11
+swap$ -- 2
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 8
+warning$ -- 0
+while$ -- 4
+width$ -- 3
+write$ -- 23

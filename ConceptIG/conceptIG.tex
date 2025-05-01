@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{fullpage,url}
+
+\title{Concepts in information geometry}
+\author{Frank Nielsen}
+\date{April 2024\\ Last updated: \today}
+
+\newtheorem{defconcept}{}
+
+
+\newenvironment{concept}[2]{
+\noindent{Concept} (#1)
+\begin{defconcept}\label{concept:#2}\\
+}{
+\end{defconcept}
+%\vskip 0.3cm
+}
+
+\begin{document}
+\maketitle
+
+\begin{concept}{Information monotonicity}{im}
+IM
+\end{concept}
+
+
+\begin{concept}{Markov kernel}{mk}
+MK
+\end{concept}
+
+See IM concept in~\ref{concept:im}
+
+\end{document}

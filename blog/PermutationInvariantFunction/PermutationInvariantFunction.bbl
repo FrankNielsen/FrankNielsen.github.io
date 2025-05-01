@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{DeepSetHeron-2025}
+Connor Hainje and David~W Hogg.
+\newblock A formula for the area of a triangle: Useless, but explicitly in deep
+  sets form.
+\newblock {\em arXiv preprint arXiv:2503.22786}, 2025.
+
+\bibitem{deepset-2017}
+Manzil Zaheer, Satwik Kottur, Siamak Ravanbakhsh, Barnabas Poczos, Russ~R
+  Salakhutdinov, and Alexander~J Smola.
+\newblock Deep sets.
+\newblock {\em Advances in neural information processing systems}, 30, 2017.
+
+\end{thebibliography}
