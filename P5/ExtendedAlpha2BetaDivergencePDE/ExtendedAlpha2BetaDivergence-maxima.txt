@@ -1,0 +1,9 @@
+
+
+rep(a,u):=(u/sqrt(a))**a;
+
+Dalpha(a,p,q) := (1/(a*(1-a)))*(a*p + (1-a)*q + (p**a)*(q**(1-a)) );
+
+Dbeta(b,p,q) := (1/(b*(1+b)))*(p**(1+b) + b*q**(1+b) - (1+b)*p*q**b);
+
+Dbeta((1/a)-1,rep(a,p),rep(a,q))-Dalpha(a,p,q);

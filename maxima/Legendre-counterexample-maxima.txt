@@ -2,23 +2,29 @@
 /* from the Rockafellar 1967 paper */
 /* Parameter space Theta=upper space $\Theta=\bbR\times\bbR_{>0}$ */
 
-F(theta1,theta2) := (1/4)*( (theta1**2/theta2) + (theta1**2) + (theta2**2) );
+kill(all);
 
+F(theta1,theta2) := (1/4)*( (theta1**2/theta2) + (theta1**2) + (theta2**2) );
+derivative(F(theta1,theta2),theta1,1);ratsimp(%);tex(%);
+derivative(F(theta1,theta2),theta2,1);ratsimp(%);tex(%);
+
+
+G(lambda):='''F(0,lambda*theta2);
 
 plot3d(F(theta1,theta2),[theta1,-1,1],[theta2,0.01,2]);
 
 H: '''hessian(F(theta1,theta2),[theta1,theta2]);
-trace(%);
-
-determinant(H);
-ratsimp(%);
-
-
-mat_trace(H);
-ratsimp(%);
+ratsimp(%); tex(%);
+mat_trace(H);ratsimp(%);tex(%);
+determinant(H);ratsimp(%);tex(%);
 
 
-derivative(F(theta1,theta2),theta1,1);ratsimp(%);
-derivative(F(theta1,theta2),theta2,1);ratsimp(%);
+ 
+
+
+
+
+
+
 
 /* */

@@ -1,3 +1,12 @@
+
+kill(all)$
+phi(x):=x*x/2;
+F(x,y):=log(y-phi(x));
+hessian(F(x,y),[x,y]);
+determinant(%);
+
+
+
 /* Frank Nielsen, 20 March 2024 */ 
 
 kill(all)$
