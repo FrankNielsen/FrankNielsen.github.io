@@ -42,7 +42,7 @@ private Point center;
 private double radius;
 
 private minibb mini;
-private BregmanDisk BD;
+private BregmanDisk BD, BD0, BD1;
 
 // Window size 
 private int w, h;
@@ -71,7 +71,12 @@ private color buttonTextCol = buttonBorderCol; // Buttons text color
 private color pointsCol = color(255,0,0);
 private color centerCol = color(10,0,255);
 private color geodesicCol = color(0,255,0);
-private color ballCol = color(255,204,0); // Bregman ball color
+//private color ballCol = color(255,204,0); // Bregman ball color
+
+
+private color ballCol = color(255,0,0,80); // Bregman ball color
+
+private color dualballCol = color(0,0,255,80); // dual Bregman ball color
 
 boolean showTop=true;
 
@@ -96,6 +101,7 @@ if (key=='p') {
 showTop=false;
  beginRecord(PDF, filenameprefix+"-"+snapshotnb+".pdf");
  draw();
+ save(filenameprefix+"-"+snapshotnb+".png");
  endRecord();
  snapshotnb++;
  showTop=true;
@@ -120,10 +126,13 @@ void initSet()
 void setup(){
 
 	frameRate(30);
-size(512,512); // Can't use w and h here!
-	maxcard=30;
-w=512;
-h=512;
+size(800,800); // Can't use w and h here!
+
+//	maxcard=30;
+maxcard=2;
+
+w=800;
+h=800;
 	int i;
 
 	mbutton = 8;
@@ -170,6 +179,12 @@ void draw(){
 	int xx1,yy1,xx2,yy2;
 
 	/*System.out.println("Redrawing graphics with double buffering image...");*/
+
+BD0=new BregmanDisk(dataset.array[0],BD.rad);
+BD1=new BregmanDisk(dataset.array[1],BD.rad);
+
+drawDualBregmanBall(BD0);
+drawDualBregmanBall(BD1);
 
 	drawBregmanBall(BD);
 
@@ -297,6 +312,29 @@ public void drawGeodesic(Point source, Point dest) {
 	}
 
 } // end of geodesic
+
+
+public void drawDualBregmanBall(BregmanDisk bd) {
+
+  int i,j;
+  Point p=new Point();
+
+  stroke(dualballCol);
+  fill(dualballCol);
+
+  for(i=0;i<h;i++)
+  {
+    p.y=Ytoy(i);
+
+    for(j=0;j<w;j++)
+    {
+      p.x=Xtox(j);
+      if (DF.divergence(p,bd.center)<bd.rad) rect(j,i, 1, 1);
+    }
+  }
+
+}
+
 
 public void drawBregmanBall(BregmanDisk bd) {
 
@@ -1024,6 +1062,18 @@ class BregmanDisk
 		basis.array[0].x=center.x;
 		basis.array[0].y=center.y;
 	}
+
+
+  BregmanDisk(Point P,double rr)
+  {
+    center=new Point();
+
+    center.x=P.x;
+    center.y=P.y;
+    rad=rr;
+
+ 
+  }
 
 };
 
