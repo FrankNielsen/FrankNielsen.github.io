@@ -1,3 +1,4 @@
+// Frank: set maxcard=2 to get Chernoff information
 //
 // Miniball extended to arbitrary Bregman divergences
 //
@@ -74,9 +75,9 @@ private color geodesicCol = color(0,255,0);
 //private color ballCol = color(255,204,0); // Bregman ball color
 
 
-private color ballCol = color(255,0,0,80); // Bregman ball color
+private color ballCol = color(255,0,0,40); // Bregman ball color
 
-private color dualballCol = color(0,0,255,80); // dual Bregman ball color
+private color dualballCol = color(0,0,255,40); // dual Bregman ball color
 
 boolean showTop=true;
 
@@ -128,8 +129,8 @@ void setup(){
 	frameRate(30);
 size(800,800); // Can't use w and h here!
 
-//	maxcard=30;
-maxcard=2;
+	maxcard=5;
+//maxcard=2;
 
 w=800;
 h=800;
@@ -180,12 +181,16 @@ void draw(){
 
 	/*System.out.println("Redrawing graphics with double buffering image...");*/
 
-BD0=new BregmanDisk(dataset.array[0],BD.rad);
-BD1=new BregmanDisk(dataset.array[1],BD.rad);
+for(i=0;i<BD.basis.n;i++)
+{
+BD0=new BregmanDisk(BD.basis.array[i],BD.rad);
+//BD1=new BregmanDisk(dataset.array[1],BD.rad);
 
 drawDualBregmanBall(BD0);
-drawDualBregmanBall(BD1);
+//drawDualBregmanBall(BD1);
+}
 
+// draw covering ball
 	drawBregmanBall(BD);
 
 	stroke(0,0,0);
