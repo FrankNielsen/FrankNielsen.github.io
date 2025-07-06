@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage{fullpage,amsmath,amssymb}
+
+\def\st{\ :\ }
+\def\dim{\mathrm{dim}}
+\newtheorem{Theorem}{Theorem}
+\newenvironment{proof}{Proof:}{$\square$}
+\def\KL{\mathrm{KL}}
+\def\Cov{\mathrm{Cov}}
+\def\tr{\mathrm{tr}}
+\def\dmu{\mathrm{d}\mu}
+\def\BC{\mathrm{BC}}
+\def\lhs{\mathrm{lhs}}
+\def\rhs{\mathrm{rhs}}
+\def\calX{\mathcal{X}}
+\def\calE{\mathcal{E}}
+
+\title{The $(M,N)$-Bhattacharyya dissimilarity}
+\author{Frank Nielsen}
+\date{}
+
+
+
+\begin{document}
+\maketitle
+%$$
+%\BC_\alpha^M[p:q] := \int\, M_\alpha(p(x),q(x))\, \dmu(x),\quad M\not=A
+%$$
+%
+%$$
+%D_{B,\alpha}^{M,N}[p:q] := -\log\, \frac{\BC_\alpha^M[p:q]}{\BC_\alpha^N[p:q]} \geq 0
+%$$
+%
+%$M=G$, $N=A$, $\alpha=\frac{1}{2}$ 
+%
+%$$
+%D_{B,\alpha}[p:q] := -\log \int p^\alpha(x)\, q^{1-\alpha}(x) \dmu(x).
+%$$
+%
+%\end{document}
+
+Let $(\calX,\calE,\mu)$ be a measure space with $\mu$ a positive measure.
+Consider the Bhattacharyya distance between two probability measures $P$ and $Q$ with corresponding densities $p$ and $q$ wrt.  $\mu$:
+
+$$
+D_B[p:q]:=-\log \int \sqrt{p(x)\, q(x)} \dmu(x),
+$$
+
+and more generally the skewed Bhattacharyya distance:
+
+$$
+D_{B,\alpha}[p:q]:=-\log \int p^\alpha(x)\, q^{1-\alpha}(x) \dmu(x).
+$$
+
+Let us prove that $D_{B,\alpha}[p:q]\geq 0$ with equality iff. $p=q$ $\mu$-ae.:
+
+Let us use the property thatthe weighted geometric mean  is less or equal than the weighted arithmetic mean:
+$$
+\underbrace{p^\alpha(x)q^{1-\alpha}(x)}_{:=G_\alpha(p(x):q(x))} \leq \underbrace{\alpha p(x)+(1-\alpha) q(x)}_{:=A_\alpha(p(x):q(x))},
+$$
+with equality holding iff. $p(x)=q(x)$.
+
+It follows that
+$$
+\underbrace{\int \left(p^\alpha(x)q^{1-\alpha}(x)\right)\dmu}_{:=\BC_\alpha[p:q]} \leq \underbrace{\int \left(\alpha p(x)+(1-\alpha) q(x)\right)}_{=1}\dmu(x),
+$$
+where $\BC_\alpha$ is the skewed Bhattacharyya coefficient in $[0,1]$.
+Hence, we have by monotonicity of the logarithm function:
+$$
+\log \BC_\alpha[p:q]\leq \log 1=0,
+$$
+It follows that
+$$
+D_{B,\alpha}[p:q]=-\log\BC_\alpha[p:q]\geq 0,
+$$
+with equality iff. $p=q$ $\mu$-ae.
+
+However, the Bhattacharyya distance is not strictly speaking a ``mathematical distance'' since it does not satisfy the triangle inequality.
+Thus it is a misnomer and should have been better called the Bhattacharyya dissimilarity.
+
+In general, for an inequality $\lhs(p:q) \leq \rhs(p:q)$, we may define the following inequality gap dissimilarities: $\rhs(p:q)-\lhs(p:q)$ or $-\log\frac{\lhs(p:q)}{\rhs(p:q)}\geq 0$.
+
+
+Thus we could have chosen any power mean $P_{r,\alpha}(a,b)=(\alpha a^r+(1-\alpha)b^r)^{\frac{1}{r}}$ with $r<1$ and $a,b\geq 0$ (and $P_{0,\alpha}=G_\alpha$, the weighted geometric mean) to define a generalized Bhattacharyya distance since
+$$
+P_{r,\alpha}(p(x):q(x))\leq A_\alpha(p(x):q(x))=\alpha p(x)+(1-\alpha)q(x), r\leq 1
+$$
+and we get
+$$
+D_{B,\alpha}[p:q]=-\log \int P_{r,\alpha}(p(x):q(x)) \dmu(x)\geq 0.
+$$
+
+For two comparable weighted means $M_\alpha\leq N_\alpha$, we define
+$$
+\boxed{D_{B,\alpha}^{M,N}[p:q] := -\log\frac{\int M_{r,\alpha}(p(x):q(x)) \dmu(x)}{\int N_{r,\alpha}(p(x):q(x)) \dmu(x)}\geq 0.}
+$$
+
+See
+\begin{itemize}
+\item Nielsen, Frank. Generalized Bhattacharyya and Chernoff upper bounds on Bayes error using quasi-arithmetic means. Pattern Recognition Letters 42 (2014): 25-34.
+\item Nielsen, Frank, Ke Sun, and St\'ephane Marchand-Maillet. On H\"older projective divergences. Entropy 19.3 (2017): 122.
+\end{itemize}
+
+\end{document}
+
+ 

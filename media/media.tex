@@ -22,6 +22,10 @@
 
 %ChernoffEKLInformationPDE
 
+Left KL ball of  center $\theta$ and radius $r$   encloses all densities which can be approximated with expected loss of $r$ bits.
+The right KL ball of center $\theta$ and radius $r$   encloses all densities which can be approximated by $\theta$ with expected loss of $r$ bits.
+The Chernoff point of $\theta_1$ and $\theta_2$ approximates both $\theta_1$ and $\theta_2$ withthe least lost.
+
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{eKLminiball-5pts-3pts-basis.png}
@@ -36,7 +40,7 @@ $\theta^*=\cap_{i=1}^3 \beta_F^(\theta_i,r^*)$.}\label{fig:minibball}
 \centering
 \includegraphics[width=0.5\textwidth]{ChernoffEKL-1.png}
 
-\caption{The Chernoff information between two categorical distributions $p_{\theta_1}$ and $p_{\theta_2}$ (``trinoullis'') is the radius of the smallest enclosing ball with respect to the Bregman divergence induced by  $F(\theta)=\sum_{i=1}^2 \theta_i\log\theta_i$ (extended Shannon neg-entropy).
+\caption{The Chernoff information between two categorical distributions $p_{\theta_1}$ and $p_{\theta_2}$ (``trinoullis'' as a shortcut for trinomial with a single trial) is the radius of the smallest enclosing ball with respect to the Bregman divergence induced by  $F(\theta)=\sum_{i=1}^2 \theta_i\log\theta_i$ (extended Shannon neg-entropy).
 The circumcenter of the smallest enclosing Bregman ball is called the Chernoff point and is characterized as the intersection of the $e$-geodesic with the $m$-bisector.
  }\label{figChernoffEKL-1.png:}
 \end{figure} 
