@@ -5,10 +5,13 @@
 \def\bbR{\mathbb{R}}
 \def\bbN{\mathbb{N}}
 \def\st{{\ :\ }}
+\newenvironment{proof}{\paragraph{Proof:}}{\hfill$\square$}
 
 \title{Permutation invariant functions}
 \author{Frank Nielsen}
+ 
 \date{April 2025}
+
 \maketitle
 
 Let $f: 2^X\rightarrow\bbR,  S\mapsto f(S)$ be a real-valued set function where $X=\{x_1,\ldots, x_n\}$ is a set.
@@ -18,6 +21,7 @@ f(S)=g\left(\sum_{x\in S} \phi(x)\right)
 \end{equation}
 for functions $\phi$ and $g$.
 
+\begin{proof}
 First, to prove the sufficient condition, we check that the right-hand-side of Eq.~\ref{eq:permcandecomp} is invariant to any permutation $\sigma$ of the elements of $X$: $f(\sigma(S))=g\left(\sum_{x\in\sigma(S)} \phi(x)\right)=g\left(\sum_{x\in S} \phi(x)\right)$ because of the commutativity property of the addition.
 To prove necessity, let $c: X\rightarrow\bbN, x\mapsto c(x)$ be a count function such that $c(x)\not=c(x)\Leftrightarrow x\not=x'$.
 Let $\phi(x)$ be any positive function such that $\phi(x)\not=\phi(x')$ for any $x,x'\in X$.
@@ -33,6 +37,7 @@ We may then choose $g$ to be the Lagrange polynomial interpolating those $2^n$ p
 
 For example, the Heron formula for the area of a triangle is invariant to the triangle vertex permutation, and can thus be written using the canonical form of Eq.~\ref{eq:permcandecomp}. See~\cite{DeepSetHeron-2025}.
 
+\end{proof}
 
 \bibliographystyle{plain}
 \bibliography{permutationfuncBIB}
