@@ -1,3 +1,5 @@
+// Frank.Nielsen@acm.org
+
 public class NestedHilbertDistance
 {
 	
