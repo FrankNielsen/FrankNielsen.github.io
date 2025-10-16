@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{ConvexLayers-1985}
+Bernard Chazelle.
+\newblock On the convex layers of a planar set.
+\newblock {\em IEEE Transactions on Information Theory}, 31(4):509--517, 1985.
+
+\bibitem{UltimateCH-1986}
+David~G Kirkpatrick and Raimund Seidel.
+\newblock The ultimate planar convex hull algorithm?
+\newblock {\em SIAM journal on computing}, 15(1):287--299, 1986.
+
+\bibitem{OSPeeling-1996}
+Franck Nielsen.
+\newblock Output-sensitive peeling of convex and maximal layers.
+\newblock {\em Information processing letters}, 59(5):255--259, 1996.
+
+\bibitem{GroupingQuerying-1998}
+Frank Nielsen.
+\newblock Grouping and querying: A paradigm to get output-sensitive algorithms.
+\newblock In {\em Japanese Conference on Discrete and Computational Geometry},
+  pages 250--257. Springer, 1998.
+
+\end{thebibliography}
