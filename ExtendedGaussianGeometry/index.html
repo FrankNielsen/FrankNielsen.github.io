@@ -1,0 +1,88 @@
+
+<html>
+  <head>
+    <title>Geometry of the family of extended Gaussian distributions</title>
+	<link rel="shortcut icon" type="image/x-icon" href="GSI.ico">
+  </head>
+  <body bgcolor=white> 
+  
+ <h1>Geometry of the family of extended Gaussian distributions</h1>
+ by Jacek Karwowski  and Frank Nielsen
+  
+<h1>Extended Gaussian distributions</h1>
+A Gaussian distribution with potential rank-deficient degenerate covariance or precision matrix is called an extended Gaussian distribution.
+When the covariance matrix is rank-deficient, we may handle the extended Gaussian distribution as a lower-dimensional non-degenerate Gaussian distribution.
+When the precision matrix is degenerate, the degenerate precision matrix Gaussian models an affine subspace.
+When this affine subspace is of dimension 0, we get a Dirac distribution.
+Degenerate precision Gaussians were first studied by James [James, 1973] are used to model non-determinism in Willems's framework 
+of open stochastic systems [Willems, 2012].
+We consider below zero-centered extended Gaussian distributions.
+
+<h1>Parameter space</h1>
+The parameter space of (zero-centered) extended Gaussian distributions form a bicone:
+<BR>
+<IMG SRC="biconeformula.png"><BR>
+For 2x2 matrices, we can visualize the bicone in R3:<BR
+<IMG SRC="bicone2x2viz3d.png"><BR>
+<A HREF="https://youtube.com/shorts/PEJG8Xtz46c?si=50jGw6ytUKJvlway">animation video</A>: rotating the bicone.<BR>
+ 
+A conceptual view of the generic bicone is <BR>
+<IMG SRC="bicone.png"><BR>
+
+<h1>Hilbert geometry</h2>
+Because the bicone is bounded convex object, we may consider its underlying Hilbert geometry.
+We get the following Hilbert distance:<BR>
+<IMG SRC="Hilbertbiconedistance.png"><BR>
+
+<h1>Invariances of the Hilbert bicone distance</h1>
+
+<ul>
+<li>Isometry under identity complement:<BR>
+<IMG SRC="IsometryIdentityComplement.png">
+<li>Isometry under orthonormal conjugation:<BR>
+<IMG SRC="IsometryOrthonormalConjugation.png">
+</ul>
+
+<h1>Nested Hilbert geometry</h1>
+Hilbert distance is defined on a bounded open convex domain.
+We can enlarge the bicone by scaling by a factor 1+eps so that it contains the bicone parameter space, and thus defines a proper (finite) 
+distance  between degenerate Gaussians.<BR>
+
+<IMG SRC="EnlargingBicone.png"><BR>
+
+
+<h1>Abstract</h1>
+<p>
+The extended Gaussian family is the closure of the Gaussian family obtained by completing the Gaussian family with the counterpart elements induced by degenerate covariance or
+degenerate precision matrices, or a mix of both degeneracies. The parameter space of the extended Gaussian family forms a symmetric positive semi-definite matrix bicone, i.e. two partial
+symmetric positive semi-definite matrix cones joined at their bases. In this paper, we study the
+Hilbert geometry of such an open bounded convex symmetric positive-definite bicone. We report
+the closed-form formula for the corresponding Hilbert metric distance and study exhaustively
+its invariance properties. We also touch upon potential applications of this geometry for dealing
+with extended Gaussian distributions.
+</p>
+
+<h1>Keywords</h1>
+<p>extended Gaussian distributions, symmetric positive semi-definite cone bicone, Hilbert geometry, projective geometry, invariance, open stochastic systems
+</p>
+ 
+<h1>References</h1>
+<ol>
+<li>Alan Treleven James. The variance information manifold and the functions on it. In Multivariate
+Analysis–III, pages 157–169. Elsevier, 1973
+
+<li>Jan C Willems. Open stochastic systems. IEEE Transactions on Automatic Control, 58(2):406–
+421, 2012.
+
+<li>Dario Stein and Richard Samuelson. A Category for Unifying Gaussian Probability and Nondeterminism.
+In 10th Conference on Algebra and Coalgebra in Computer Science (CALCO
+2023), pages 13–1. Schloss Dagstuhl–Leibniz-Zentrum für Informatik, 2023.
+
+<li>Jacek Karwowski  and Frank Nielsen. 
+<A HREF="https://arxiv.org/abs/2508.14369">Hilbert geometry of the symmetric positive-definite bicone:
+ Application to the geometry of the extended Gaussian family</A>, 
+arXiv preprint arXiv:2508.14369 (2025). Accepted to <A HREF="neurreps">Neurreps</A>, 2025.
+<A HREF="https://openreview.net/group?id=NeurIPS.cc/2025/Workshop/NeurReps">Open review</A>
+</ol>
+
+<HR>
