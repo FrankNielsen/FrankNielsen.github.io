@@ -18,15 +18,10 @@ BDc(0,%pi);
 kill(all)$
 BD(theta1,theta2):=(1/2)* ( (theta1[1]-theta2[1])**2  + (theta1[2]-theta2[2])**2);
 theta(u):=[cos(u),sin(u)];
-
 exu1:random(float(2*%pi));
 exu2:random(float(2*%pi));
-
 extheta1: theta(exu1);
 extheta2: theta(exu2);
-
 BD(extheta1,extheta2);
-
-
 BDc(u1,u2):= (1/2)*( (cos(u1)-cos(u2))**2 + (sin(u1)-sin(u2))**2 );
 BDc(exu1,exu2);
