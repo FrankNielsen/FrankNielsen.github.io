@@ -1,0 +1,2277 @@
+\begin{thebibliography}{100}
+
+\bibitem{DBLP:journals/entropy/Nielsen25}
+Frank Nielsen.
+\newblock Two types of geometric jensen-shannon divergences.
+\newblock {\em Entropy}, 27(9):947, 2025.
+
+\bibitem{DBLP:journals/corr/abs-2504-05654}
+Frank Nielsen.
+\newblock Curved representational bregman divergences and their applications.
+\newblock {\em CoRR}, abs/2504.05654, 2025.
+
+\bibitem{DBLP:journals/corr/abs-2506-10494}
+Minh~Ha Quang and Frank Nielsen.
+\newblock Geometric jensen-shannon divergence between gaussian measures on
+  hilbert space.
+\newblock {\em CoRR}, abs/2506.10494, 2025.
+
+\bibitem{DBLP:journals/corr/abs-2507-20577}
+Frank Nielsen.
+\newblock A note on the artstein-avidan-milman's generalized legendre
+  transforms.
+\newblock {\em CoRR}, abs/2507.20577, 2025.
+
+\bibitem{DBLP:journals/corr/abs-2508-05066}
+Frank Nielsen.
+\newblock Two tales for a geometric jensen-shannon divergence.
+\newblock {\em CoRR}, abs/2508.05066, 2025.
+
+\bibitem{DBLP:journals/corr/abs-2508-14369}
+Jacek Karwowski and Frank Nielsen.
+\newblock Hilbert geometry of the symmetric positive-definite bicone:
+  Application to the geometry of the extended gaussian family.
+\newblock {\em CoRR}, abs/2508.14369, 2025.
+
+\bibitem{DBLP:journals/entropy/Nielsen24}
+Frank Nielsen.
+\newblock Divergences induced by the cumulant and partition functions of
+  exponential families and their deformations induced by comparative convexity.
+\newblock {\em Entropy}, 26(3):193, 2024.
+
+\bibitem{DBLP:journals/entropy/Nielsen24b}
+Frank Nielsen.
+\newblock Fast proxy centers for the jeffreys centroid: The jeffreys-fisher-rao
+  center and the gauss-bregman inductive center.
+\newblock {\em Entropy}, 26(12):1008, 2024.
+
+\bibitem{DBLP:journals/entropy/Nielsen24c}
+Frank Nielsen.
+\newblock Symplectic bregman divergences.
+\newblock {\em Entropy}, 26(12):1101, 2024.
+
+\bibitem{DBLP:journals/sac/NielsenO24}
+Frank Nielsen and Kazuki Okamura.
+\newblock On the f-divergences between densities of a multivariate location or
+  scale family.
+\newblock {\em Stat. Comput.}, 34(1):60, 2024.
+
+\bibitem{DBLP:conf/aaai/AmidNNW24}
+Ehsan Amid, Frank Nielsen, Richard Nock, and Manfred~K. Warmuth.
+\newblock Optimal transport with tempered exponential measures.
+\newblock In Michael~J. Wooldridge, Jennifer~G. Dy, and Sriraam Natarajan,
+  editors, {\em Thirty-Eighth {AAAI} Conference on Artificial Intelligence,
+  {AAAI} 2024, Thirty-Sixth Conference on Innovative Applications of Artificial
+  Intelligence, {IAAI} 2024, Fourteenth Symposium on Educational Advances in
+  Artificial Intelligence, {EAAI} 2014, February 20-27, 2024, Vancouver,
+  Canada}, pages 10838--10846. {AAAI} Press, 2024.
+
+\bibitem{DBLP:conf/icml/ApostolopoulouE24}
+Ifigeneia Apostolopoulou, Benjamin Eysenbach, Frank Nielsen, and Artur
+  Dubrawski.
+\newblock A rate-distortion view of uncertainty quantification.
+\newblock In {\em Forty-first International Conference on Machine Learning,
+  {ICML} 2024, Vienna, Austria, July 21-27, 2024}. OpenReview.net, 2024.
+
+\bibitem{DBLP:conf/nips/NockANSW24}
+Richard Nock, Ehsan Amid, Frank Nielsen, Alexander Soen, and Manfred~K.
+  Warmuth.
+\newblock Hyperbolic embeddings of supervised models.
+\newblock In Amir Globersons, Lester Mackey, Danielle Belgrave, Angela Fan,
+  Ulrich Paquet, Jakub~M. Tomczak, and Cheng Zhang, editors, {\em Advances in
+  Neural Information Processing Systems 38: Annual Conference on Neural
+  Information Processing Systems 2024, NeurIPS 2024, Vancouver, BC, Canada,
+  December 10 - 15, 2024}, 2024.
+
+\bibitem{DBLP:journals/corr/abs-2402-04163}
+Richard Nock, Ehsan Amid, Frank Nielsen, Alexander Soen, and Manfred~K.
+  Warmuth.
+\newblock Tempered calculus for {ML:} application to hyperbolic model
+  embedding.
+\newblock {\em CoRR}, abs/2402.04163, 2024.
+
+\bibitem{DBLP:journals/corr/abs-2403-10089}
+Frank Nielsen.
+\newblock Approximation and bounding techniques for the fisher-rao distances.
+\newblock {\em CoRR}, abs/2403.10089, 2024.
+
+\bibitem{DBLP:journals/corr/abs-2406-10775}
+Ifigeneia Apostolopoulou, Benjamin Eysenbach, Frank Nielsen, and Artur
+  Dubrawski.
+\newblock A rate-distortion view of uncertainty quantification.
+\newblock {\em CoRR}, abs/2406.10775, 2024.
+
+\bibitem{DBLP:journals/corr/abs-2408-04175}
+Frank Nielsen and Alexander Soen.
+\newblock pybregman: {A} python library for bregman manifolds.
+\newblock {\em CoRR}, abs/2408.04175, 2024.
+
+\bibitem{DBLP:journals/corr/abs-2408-12961}
+Frank Nielsen.
+\newblock Symplectic bregman divergences.
+\newblock {\em CoRR}, abs/2408.12961, 2024.
+
+\bibitem{DBLP:journals/corr/abs-2409-05084}
+Alexandre Luis~Magalhaes Levada, Frank Nielsen, and Michel Ferreira~Cardia
+  Haddad.
+\newblock Adaptive \emph{k}-nearest neighbor classifier based on the local
+  estimation of the shape operator.
+\newblock {\em CoRR}, abs/2409.05084, 2024.
+
+\bibitem{DBLP:journals/corr/abs-2410-14326}
+Frank Nielsen.
+\newblock Fast proxy centers for jeffreys centroids: The jeffreys-fisher-rao
+  and the inductive gauss-bregman centers.
+\newblock {\em CoRR}, abs/2410.14326, 2024.
+
+\bibitem{DBLP:journals/corr/abs-2410-15717}
+Frank Nielsen.
+\newblock What is an inductive mean?
+\newblock {\em CoRR}, abs/2410.15717, 2024.
+
+\bibitem{DBLP:journals/entropy/Nielsen23}
+Frank Nielsen.
+\newblock A simple approximation method for the fisher-rao distance between
+  multivariate normal distributions.
+\newblock {\em Entropy}, 25(4):654, 2023.
+
+\bibitem{DBLP:journals/tit/NielsenO23}
+Frank Nielsen and Kazuki Okamura.
+\newblock On f-divergences between cauchy distributions.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 69(5):3150--3171, 2023.
+
+\bibitem{DBLP:conf/gsi/Nielsen23}
+Frank Nielsen.
+\newblock Quasi-arithmetic centers, quasi-arithmetic mixtures, and the
+  jensen-shannon {\textdollar}{\textbackslash}nabla {\textdollar}-divergences.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - 6th International Conference, {GSI} 2023,
+  St. Malo, France, August 30 - September 1, 2023, Proceedings, Part {I}},
+  volume 14071 of {\em Lecture Notes in Computer Science}, pages 147--156.
+  Springer, 2023.
+
+\bibitem{DBLP:conf/gsi/NielsenO23}
+Frank Nielsen and Kazuki Okamura.
+\newblock On the f-divergences between hyperboloid and poincar{\'{e}}
+  distributions.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - 6th International Conference, {GSI} 2023,
+  St. Malo, France, August 30 - September 1, 2023, Proceedings, Part {I}},
+  volume 14071 of {\em Lecture Notes in Computer Science}, pages 176--185.
+  Springer, 2023.
+
+\bibitem{DBLP:conf/icml/LinDLNK023}
+Wu~Lin, Valentin Duruisseaux, Melvin Leok, Frank Nielsen, Mohammad~Emtiyaz
+  Khan, and Mark Schmidt.
+\newblock Simplifying momentum-based positive-definite submanifold optimization
+  with applications to deep learning.
+\newblock In Andreas Krause, Emma Brunskill, Kyunghyun Cho, Barbara Engelhardt,
+  Sivan Sabato, and Jonathan Scarlett, editors, {\em International Conference
+  on Machine Learning, {ICML} 2023, 23-29 July 2023, Honolulu, Hawaii, {USA}},
+  volume 202 of {\em Proceedings of Machine Learning Research}, pages
+  21026--21050. {PMLR}, 2023.
+
+\bibitem{DBLP:conf/ola/DupinN23}
+Nicolas Dupin and Frank Nielsen.
+\newblock Partial k-means with {M} outliers: Mathematical programs and
+  complexity results.
+\newblock In Bernab{\'{e}} Dorronsoro, Francisco Chicano, Gr{\'{e}}goire Danoy,
+  and El{-}Ghazali Talbi, editors, {\em Optimization and Learning - 6th
+  International Conference, {OLA} 2023, Malaga, Spain, May 3-5, 2023,
+  Proceedings}, volume 1824 of {\em Communications in Computer and Information
+  Science}, pages 287--303. Springer, 2023.
+
+\bibitem{DBLP:conf/tagml/NielsenS23}
+Frank Nielsen and Ke~Sun.
+\newblock Non-linear embeddings in hilbert simplex geometry.
+\newblock In Timothy Doster, Tegan Emerson, Henry Kvinge, Nina Miolane,
+  Mathilde Papillon, Bastian Rieck, and Sophia Sanborn, editors, {\em
+  Topological, Algebraic and Geometric Learning Workshops 2023, 28 July 2023,
+  Honolulu, HI, {USA}}, volume 221 of {\em Proceedings of Machine Learning
+  Research}, pages 254--266. {PMLR}, 2023.
+
+\bibitem{DBLP:conf/tagml/Nielsen23}
+Frank Nielsen.
+\newblock Fisher-rao and pullback hilbert cone distances on the multivariate
+  gaussian manifold with applications to simplification and quantization of
+  mixtures.
+\newblock In Timothy Doster, Tegan Emerson, Henry Kvinge, Nina Miolane,
+  Mathilde Papillon, Bastian Rieck, and Sophia Sanborn, editors, {\em
+  Topological, Algebraic and Geometric Learning Workshops 2023, 28 July 2023,
+  Honolulu, HI, {USA}}, volume 221 of {\em Proceedings of Machine Learning
+  Research}, pages 488--504. {PMLR}, 2023.
+
+\bibitem{DBLP:conf/gsi/2023-1}
+Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors.
+\newblock {\em Geometric Science of Information - 6th International Conference,
+  {GSI} 2023, St. Malo, France, August 30 - September 1, 2023, Proceedings,
+  Part {I}}, volume 14071 of {\em Lecture Notes in Computer Science}. Springer,
+  2023.
+
+\bibitem{DBLP:conf/gsi/2023-2}
+Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors.
+\newblock {\em Geometric Science of Information - 6th International Conference,
+  {GSI} 2023, St. Malo, France, August 30 - September 1, 2023, Proceedings,
+  Part {II}}, volume 14072 of {\em Lecture Notes in Computer Science}.
+  Springer, 2023.
+
+\bibitem{DBLP:journals/corr/abs-2301-10980}
+Frank Nielsen.
+\newblock Beyond scalar quasi-arithmetic means: Quasi-arithmetic averages and
+  quasi-arithmetic mixtures in information geometry.
+\newblock {\em CoRR}, abs/2301.10980, 2023.
+
+\bibitem{DBLP:journals/corr/abs-2302-05644}
+Nicolas Dupin and Frank Nielsen.
+\newblock Partial k-means to avoid outliers, mathematical programming
+  formulations, complexity results.
+\newblock {\em CoRR}, abs/2302.05644, 2023.
+
+\bibitem{DBLP:journals/corr/abs-2302-08175}
+Frank Nielsen.
+\newblock A numerical approximation method for the fisher-rao distance between
+  multivariate normal distributions.
+\newblock {\em CoRR}, abs/2302.08175, 2023.
+
+\bibitem{DBLP:journals/corr/abs-2302-09738}
+Wu~Lin, Valentin Duruisseaux, Melvin Leok, Frank Nielsen, Mohammad~Emtiyaz
+  Khan, and Mark Schmidt.
+\newblock Simplifying momentum-based riemannian submanifold optimization.
+\newblock {\em CoRR}, abs/2302.09738, 2023.
+
+\bibitem{DBLP:journals/corr/abs-2303-05910}
+Andrea~Di Pasquale, Daniel Krefl, Stefano Carrazza, and Frank Nielsen.
+\newblock Product jacobi-theta boltzmann machines with score matching.
+\newblock {\em CoRR}, abs/2303.05910, 2023.
+
+\bibitem{DBLP:journals/corr/abs-2307-10644}
+Frank Nielsen.
+\newblock Fisher-rao distance and pullback {SPD} cone distances between
+  multivariate normal distributions.
+\newblock {\em CoRR}, abs/2307.10644, 2023.
+
+\bibitem{DBLP:journals/corr/abs-2309-04015}
+Ehsan Amid, Frank Nielsen, Richard Nock, and Manfred~K. Warmuth.
+\newblock Optimal transport with tempered exponential measures.
+\newblock {\em CoRR}, abs/2309.04015, 2023.
+
+\bibitem{DBLP:journals/corr/abs-2311-13459}
+Ehsan Amid, Frank Nielsen, Richard Nock, and Manfred~K. Warmuth.
+\newblock The tempered hilbert simplex distance and its application to
+  non-linear embeddings of tems.
+\newblock {\em CoRR}, abs/2311.13459, 2023.
+
+\bibitem{DBLP:journals/corr/abs-2312-12849}
+Frank Nielsen.
+\newblock Divergences induced by dual subtractive and divisive normalizations
+  of exponential families and their convex deformations.
+\newblock {\em CoRR}, abs/2312.12849, 2023.
+
+\bibitem{DBLP:journals/algorithms/Nielsen22}
+Frank Nielsen.
+\newblock Generalizing the alpha-divergences and the oriented kullback-leibler
+  divergences with quasi-arithmetic means.
+\newblock {\em Algorithms}, 15(11):435, 2022.
+
+\bibitem{DBLP:journals/entropy/Nielsen22}
+Frank Nielsen.
+\newblock Statistical divergences between densities of truncated exponential
+  families with nested supports: Duo bregman and duo jensen divergences.
+\newblock {\em Entropy}, 24(3):421, 2022.
+
+\bibitem{DBLP:journals/entropy/Nielsen22a}
+Frank Nielsen.
+\newblock Revisiting chernoff information with likelihood ratio exponential
+  families.
+\newblock {\em Entropy}, 24(10):1400, 2022.
+
+\bibitem{DBLP:journals/corr/abs-2202-10726}
+Frank Nielsen.
+\newblock The duo fenchel-young divergence.
+\newblock {\em CoRR}, abs/2202.10726, 2022.
+
+\bibitem{DBLP:journals/corr/abs-2203-11434}
+Frank Nielsen and Ke~Sun.
+\newblock Non-linear embeddings in hilbert simplex geometry.
+\newblock {\em CoRR}, abs/2203.11434, 2022.
+
+\bibitem{DBLP:journals/corr/abs-2204-10952}
+Frank Nielsen and Kazuki Okamura.
+\newblock A note on the f-divergences between multivariate location-scale
+  families with either prescribed scale matrices or location parameters.
+\newblock {\em CoRR}, abs/2204.10952, 2022.
+
+\bibitem{DBLP:journals/corr/abs-2205-13984}
+Frank Nielsen and Kazuki Okamura.
+\newblock Information geometry of the tojo-yoshino's exponential family on the
+  poincar{\'{e}} upper plane.
+\newblock {\em CoRR}, abs/2205.13984, 2022.
+
+\bibitem{DBLP:journals/corr/abs-2206-08598}
+Pascal~Mattia Esser and Frank Nielsen.
+\newblock On the influence of enforcing model identifiability on learning
+  dynamics of gaussian mixture models.
+\newblock {\em CoRR}, abs/2206.08598, 2022.
+
+\bibitem{DBLP:journals/corr/abs-2207-03745}
+Frank Nielsen.
+\newblock Revisiting chernoff information with likelihood ratio exponential
+  families.
+\newblock {\em CoRR}, abs/2207.03745, 2022.
+
+\bibitem{DBLP:journals/corr/abs-2209-07481}
+Rob Brekelmans and Frank Nielsen.
+\newblock Rho-tau bregman information and the geometry of annealing paths.
+\newblock {\em CoRR}, abs/2209.07481, 2022.
+
+\bibitem{DBLP:journals/entropy/Nielsen21}
+Frank Nielsen.
+\newblock On a variational definition for the jensen-shannon symmetrization of
+  distances based on the information radius.
+\newblock {\em Entropy}, 23(4):464, 2021.
+
+\bibitem{DBLP:journals/entropy/Nielsen21a}
+Frank Nielsen.
+\newblock Fast approximations of the jeffreys divergence between univariate
+  gaussian mixtures via mixture conversions to exponential-polynomial
+  distributions.
+\newblock {\em Entropy}, 23(11):1417, 2021.
+
+\bibitem{DBLP:journals/tnn/NielsenS21}
+Frank Nielsen and Ke~Sun.
+\newblock q-neurons: Neuron activations based on stochastic jackson's
+  derivative operators.
+\newblock {\em {IEEE} Trans. Neural Networks Learn. Syst.}, 32(6):2782--2789,
+  2021.
+
+\bibitem{DBLP:conf/gsi/MartiGN21}
+Gautier Marti, Victor Goubet, and Frank Nielsen.
+\newblock ccorrgan: Conditional correlation {GAN} for learning empirical
+  conditional distributions in the elliptope.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - 5th International Conference, {GSI} 2021,
+  Paris, France, July 21-23, 2021, Proceedings}, volume 12829 of {\em Lecture
+  Notes in Computer Science}, pages 613--620. Springer, 2021.
+
+\bibitem{DBLP:conf/gsi/NielsenN21}
+Frank Nielsen and Richard Nock.
+\newblock Computing statistical divergences with sigma points.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - 5th International Conference, {GSI} 2021,
+  Paris, France, July 21-23, 2021, Proceedings}, volume 12829 of {\em Lecture
+  Notes in Computer Science}, pages 677--684. Springer, 2021.
+
+\bibitem{DBLP:conf/gsi/CabanesN21}
+Yann Cabanes and Frank Nielsen.
+\newblock Classification in the siegel space for vectorial autoregressive data.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - 5th International Conference, {GSI} 2021,
+  Paris, France, July 21-23, 2021, Proceedings}, volume 12829 of {\em Lecture
+  Notes in Computer Science}, pages 693--700. Springer, 2021.
+
+\bibitem{DBLP:conf/gsi/NielsenO21}
+Frank Nielsen and Kazuki Okamura.
+\newblock On f-divergences between cauchy distributions.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - 5th International Conference, {GSI} 2021,
+  Paris, France, July 21-23, 2021, Proceedings}, volume 12829 of {\em Lecture
+  Notes in Computer Science}, pages 799--807. Springer, 2021.
+
+\bibitem{DBLP:conf/icml/LinNK021}
+Wu~Lin, Frank Nielsen, Mohammad~Emtiyaz Khan, and Mark Schmidt.
+\newblock Tractable structured natural-gradient descent using local
+  parameterizations.
+\newblock In Marina Meila and Tong Zhang, editors, {\em Proceedings of the 38th
+  International Conference on Machine Learning, {ICML} 2021, 18-24 July 2021,
+  Virtual Event}, volume 139 of {\em Proceedings of Machine Learning Research},
+  pages 6680--6691. {PMLR}, 2021.
+
+\bibitem{DBLP:conf/uai/MasraniBBNGSW21}
+Vaden Masrani, Rob Brekelmans, Thang Bui, Frank Nielsen, Aram Galstyan,
+  Greg~Ver Steeg, and Frank Wood.
+\newblock q-paths: Generalizing the geometric annealing path using power means.
+\newblock In Cassio~P. de~Campos, Marloes~H. Maathuis, and Erik Quaeghebeur,
+  editors, {\em Proceedings of the Thirty-Seventh Conference on Uncertainty in
+  Artificial Intelligence, {UAI} 2021, Virtual Event, 27-30 July 2021}, volume
+  161 of {\em Proceedings of Machine Learning Research}, pages 1938--1947.
+  {AUAI} Press, 2021.
+
+\bibitem{DBLP:conf/gsi/2021}
+Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors.
+\newblock {\em Geometric Science of Information - 5th International Conference,
+  {GSI} 2021, Paris, France, July 21-23, 2021, Proceedings}, volume 12829 of
+  {\em Lecture Notes in Computer Science}. Springer, 2021.
+
+\bibitem{DBLP:conf/spigl/2020}
+Fr{\'{e}}d{\'{e}}ric Barbaresco and Frank Nielsen, editors.
+\newblock {\em Geometric Structures of Statistical Physics, Information
+  Geometry, and Learning - SPIGL'20, Les Houches, France, July 27-31}, volume
+  361. Springer, 2021.
+
+\bibitem{DBLP:journals/corr/abs-2101-03839}
+Frank Nielsen.
+\newblock On information projections between multivariate elliptical and
+  location-scale families.
+\newblock {\em CoRR}, abs/2101.03839, 2021.
+
+\bibitem{DBLP:journals/corr/abs-2101-12459}
+Frank Nielsen and Kazuki Okamura.
+\newblock On {\textdollar}f{\textdollar}-divergences between cauchy
+  distributions.
+\newblock {\em CoRR}, abs/2101.12459, 2021.
+
+\bibitem{DBLP:journals/corr/abs-2102-07405}
+Wu~Lin, Frank Nielsen, Mohammad~Emtiyaz Khan, and Mark Schmidt.
+\newblock Tractable structured natural gradient descent using local
+  parameterizations.
+\newblock {\em CoRR}, abs/2102.07405, 2021.
+
+\bibitem{DBLP:journals/corr/abs-2102-09728}
+Frank Nielsen.
+\newblock On a variational definition for the jensen-shannon symmetrization of
+  distances based on the information radius.
+\newblock {\em CoRR}, abs/2102.09728, 2021.
+
+\bibitem{DBLP:journals/corr/abs-2104-10548}
+Frank Nielsen.
+\newblock A note on some information-theoretic divergences between zeta
+  distributions.
+\newblock {\em CoRR}, abs/2104.10548, 2021.
+
+\bibitem{DBLP:journals/corr/abs-2104-13801}
+Frank Nielsen.
+\newblock The dually flat information geometry of the mixture family of two
+  prescribed cauchy components.
+\newblock {\em CoRR}, abs/2104.13801, 2021.
+
+\bibitem{DBLP:journals/corr/abs-2107-00745}
+Vaden Masrani, Rob Brekelmans, Thang Bui, Frank Nielsen, Aram Galstyan,
+  Greg~Ver Steeg, and Frank Wood.
+\newblock q-paths: Generalizing the geometric annealing path using power means.
+\newblock {\em CoRR}, abs/2107.00745, 2021.
+
+\bibitem{DBLP:journals/corr/abs-2107-05901}
+Frank Nielsen.
+\newblock Fast approximations of the jeffreys divergence between univariate
+  gaussian mixture models via exponential polynomial densities.
+\newblock {\em CoRR}, abs/2107.05901, 2021.
+
+\bibitem{DBLP:journals/corr/abs-2107-10606}
+Gautier Marti, Victor Goubet, and Frank Nielsen.
+\newblock ccorrgan: Conditional correlation {GAN} for learning empirical
+  conditional distributions in the elliptope.
+\newblock {\em CoRR}, abs/2107.10606, 2021.
+
+\bibitem{DBLP:journals/corr/abs-2107-10884}
+Wu~Lin, Frank Nielsen, Mohammad~Emtiyaz Khan, and Mark Schmidt.
+\newblock Structured second-order methods via natural gradient descent.
+\newblock {\em CoRR}, abs/2107.10884, 2021.
+
+\bibitem{DBLP:journals/corr/abs-2109-14920}
+Frank Nielsen.
+\newblock On the kullback-leibler divergence between discrete normal
+  distributions.
+\newblock {\em CoRR}, abs/2109.14920, 2021.
+
+\bibitem{DBLP:journals/corr/abs-2112-03734}
+Pascal~Mattia Esser and Frank Nielsen.
+\newblock Towards modeling and resolving singular parameter spaces using
+  stratifolds.
+\newblock {\em CoRR}, abs/2112.03734, 2021.
+
+\bibitem{DBLP:journals/entropy/Nielsen20}
+Frank Nielsen.
+\newblock On a generalization of the jensen-shannon divergence and the
+  jensen-shannon centroid.
+\newblock {\em Entropy}, 22(2):221, 2020.
+
+\bibitem{DBLP:journals/entropy/Nielsen20a}
+Frank Nielsen.
+\newblock On voronoi diagrams on the information-geometric cauchy manifolds.
+\newblock {\em Entropy}, 22(7):713, 2020.
+
+\bibitem{DBLP:journals/entropy/Nielsen20b}
+Frank Nielsen.
+\newblock The siegel-klein disk: Hilbert geometry of the siegel disk domain.
+\newblock {\em Entropy}, 22(9):1019, 2020.
+
+\bibitem{DBLP:journals/entropy/Nielsen20c}
+Frank Nielsen.
+\newblock An elementary introduction to information geometry.
+\newblock {\em Entropy}, 22(10):1100, 2020.
+
+\bibitem{DBLP:journals/nca/HadjeresN20}
+Ga{\"{e}}tan Hadjeres and Frank Nielsen.
+\newblock Anticipation-rnn: enforcing unary constraints in sequence generation,
+  with application to interactive music generation.
+\newblock {\em Neural Comput. Appl.}, 32(4):995--1005, 2020.
+
+\bibitem{DBLP:conf/ola/DupinNT20}
+Nicolas Dupin, Frank Nielsen, and El{-}Ghazali Talbi.
+\newblock Clustering a 2d pareto front: P-center problems are solvable in
+  polynomial time.
+\newblock In Bernab{\'{e}} Dorronsoro, Patricia Ruiz, Juan~Carlos de~la Torre,
+  Daniel Urda, and El{-}Ghazali Talbi, editors, {\em Optimization and Learning
+  - Third International Conference, {OLA} 2020, C{\'{a}}diz, Spain, February
+  17-19, 2020, Proceedings}, volume 1173 of {\em Communications in Computer and
+  Information Science}, pages 179--191. Springer, 2020.
+
+\bibitem{DBLP:conf/spigl/NielsenH20}
+Frank Nielsen and Ga{\"{e}}tan Hadjeres.
+\newblock Quasiconvex jensen divergences and quasiconvex bregman divergences.
+\newblock In Fr{\'{e}}d{\'{e}}ric Barbaresco and Frank Nielsen, editors, {\em
+  Geometric Structures of Statistical Physics, Information Geometry, and
+  Learning - SPIGL'20, Les Houches, France, July 27-31}, volume 361, pages
+  196--218. Springer, 2020.
+
+\bibitem{DBLP:journals/corr/abs-2001-09660}
+Frank Nielsen.
+\newblock A generalization of the {\(\alpha\)}-divergences based on comparable
+  and distinct weighted means.
+\newblock {\em CoRR}, abs/2001.09660, 2020.
+
+\bibitem{DBLP:journals/corr/abs-2003-02469}
+Frank Nielsen and Richard Nock.
+\newblock Cumulant-free closed-form formulas for some common (dis)similarities
+  between densities of an exponential family.
+\newblock {\em CoRR}, abs/2003.02469, 2020.
+
+\bibitem{DBLP:journals/corr/abs-2003-13199}
+Frank Nielsen.
+\newblock A note on onicescu's informational energy and correlation coefficient
+  in exponential families.
+\newblock {\em CoRR}, abs/2003.13199, 2020.
+
+\bibitem{DBLP:journals/corr/abs-2004-08160}
+Frank Nielsen.
+\newblock Hilbert geometry of the siegel disk: The siegel-klein disk model.
+\newblock {\em CoRR}, abs/2004.08160, 2020.
+
+\bibitem{DBLP:journals/corr/abs-2006-07020}
+Frank Nielsen.
+\newblock On voronoi diagrams and dual delaunay complexes on the
+  information-geometric cauchy manifolds.
+\newblock {\em CoRR}, abs/2006.07020, 2020.
+
+\bibitem{DBLP:journals/corr/abs-2012-07823}
+Rob Brekelmans, Vaden Masrani, Thang Bui, Frank Wood, Aram Galstyan, Greg~Ver
+  Steeg, and Frank Nielsen.
+\newblock Annealed importance sampling with q-paths.
+\newblock {\em CoRR}, abs/2012.07823, 2020.
+
+\bibitem{DBLP:journals/corr/abs-2012-15480}
+Rob Brekelmans, Frank Nielsen, Alireza Makhzani, Aram Galstyan, and Greg~Ver
+  Steeg.
+\newblock Likelihood ratio exponential families.
+\newblock {\em CoRR}, abs/2012.15480, 2020.
+
+\bibitem{DBLP:journals/entropy/Nielsen19}
+Frank Nielsen.
+\newblock On the jensen-shannon symmetrization of distances relying on abstract
+  means.
+\newblock {\em Entropy}, 21(5):485, 2019.
+
+\bibitem{DBLP:conf/gsi/NielsenN19}
+Frank Nielsen and Richard Nock.
+\newblock The bregman chord divergence.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - 4th International Conference, {GSI} 2019,
+  Toulouse, France, August 27-29, 2019, Proceedings}, volume 11712 of {\em
+  Lecture Notes in Computer Science}, pages 299--308. Springer, 2019.
+
+\bibitem{DBLP:conf/gsi/Gomes-Goncalves19}
+Erika Gomes{-}Gon{\c{c}}alves, Henryk Gzyl, and Frank Nielsen.
+\newblock Geometry and fixed-rate quantization in riemannian metric spaces
+  induced by separable bregman divergences.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - 4th International Conference, {GSI} 2019,
+  Toulouse, France, August 27-29, 2019, Proceedings}, volume 11712 of {\em
+  Lecture Notes in Computer Science}, pages 351--358. Springer, 2019.
+
+\bibitem{DBLP:conf/gsi/Nielsen19}
+Frank Nielsen.
+\newblock The statistical minkowski distances: Closed-form formula for gaussian
+  mixture models.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - 4th International Conference, {GSI} 2019,
+  Toulouse, France, August 27-29, 2019, Proceedings}, volume 11712 of {\em
+  Lecture Notes in Computer Science}, pages 359--367. Springer, 2019.
+
+\bibitem{DBLP:conf/uai/PatriniBFCBWGN19}
+Giorgio Patrini, Rianne van~den Berg, Patrick Forr{\'{e}}, Marcello Carioni,
+  Samarth Bhargav, Max Welling, Tim Genewein, and Frank Nielsen.
+\newblock Sinkhorn autoencoders.
+\newblock In Amir Globerson and Ricardo Silva, editors, {\em Proceedings of the
+  Thirty-Fifth Conference on Uncertainty in Artificial Intelligence, {UAI}
+  2019, Tel Aviv, Israel, July 22-25, 2019}, volume 115 of {\em Proceedings of
+  Machine Learning Research}, pages 733--743. {AUAI} Press, 2019.
+
+\bibitem{DBLP:conf/wcgo/DupinNT19}
+Nicolas Dupin, Frank Nielsen, and El{-}Ghazali Talbi.
+\newblock K-medoids clustering is solvable in polynomial time for a 2d pareto
+  front.
+\newblock In Hoai An~Le Thi, Hoai~Minh Le, and Tao~Pham Dinh, editors, {\em
+  Optimization of Complex Systems: Theory, Models, Algorithms and Applications,
+  {WCGO} 2019, World Congress on Global Optimization, Metz, France, 8-10 July,
+  2019}, volume 991 of {\em Advances in Intelligent Systems and Computing},
+  pages 790--799. Springer, 2019.
+
+\bibitem{DBLP:conf/gsi/2019}
+Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors.
+\newblock {\em Geometric Science of Information - 4th International Conference,
+  {GSI} 2019, Toulouse, France, August 27-29, 2019, Proceedings}, volume 11712
+  of {\em Lecture Notes in Computer Science}. Springer, 2019.
+
+\bibitem{DBLP:journals/corr/abs-1901-03732}
+Frank Nielsen.
+\newblock The statistical minkowski distances: Closed-form formula for gaussian
+  mixture models.
+\newblock {\em CoRR}, abs/1901.03732, 2019.
+
+\bibitem{DBLP:journals/corr/abs-1903-05818}
+Frank Nielsen and Ga{\"{e}}tan Hadjeres.
+\newblock On power chi expansions of f-divergences.
+\newblock {\em CoRR}, abs/1903.05818, 2019.
+
+\bibitem{DBLP:journals/corr/abs-1904-04017}
+Frank Nielsen.
+\newblock On a generalization of the jensen-shannon divergence and the
+  js-symmetrization of distances relying on abstract means.
+\newblock {\em CoRR}, abs/1904.04017, 2019.
+
+\bibitem{DBLP:journals/corr/abs-1904-10428}
+Frank Nielsen.
+\newblock On the kullback-leibler divergence between location-scale densities.
+\newblock {\em CoRR}, abs/1904.10428, 2019.
+
+\bibitem{DBLP:journals/corr/abs-1905-10965}
+Fr{\'{e}}d{\'{e}}ric Chyzak and Frank Nielsen.
+\newblock A closed-form formula for the kullback-leibler divergence between
+  cauchy distributions.
+\newblock {\em CoRR}, abs/1905.10965, 2019.
+
+\bibitem{DBLP:journals/corr/abs-1905-11027}
+Ke~Sun and Frank Nielsen.
+\newblock Lightlike neuromanifolds, occam's razor and deep learning.
+\newblock {\em CoRR}, abs/1905.11027, 2019.
+
+\bibitem{DBLP:journals/corr/abs-1908-09648}
+Nicolas Dupin, Frank Nielsen, and El{-}Ghazali Talbi.
+\newblock Planar p-center problems are solvable in polynomial time when
+  clustering a pareto front.
+\newblock {\em CoRR}, abs/1908.09648, 2019.
+
+\bibitem{DBLP:journals/corr/abs-1909-08857}
+Frank Nielsen and Ga{\"{e}}tan Hadjeres.
+\newblock A note on the quasiconvex jensen divergences and the quasiconvex
+  bregman divergences derived thereof.
+\newblock {\em CoRR}, abs/1909.08857, 2019.
+
+\bibitem{DBLP:journals/corr/abs-1910-03935}
+Frank Nielsen.
+\newblock On geodesic triangles with right angles in a dually flat space.
+\newblock {\em CoRR}, abs/1910.03935, 2019.
+
+\bibitem{DBLP:journals/corr/abs-1911-12463}
+Ke~Sun and Frank Nielsen.
+\newblock Information-geometric set embeddings {(IGSE):} from sets to
+  probability distributions.
+\newblock {\em CoRR}, abs/1911.12463, 2019.
+
+\bibitem{DBLP:journals/corr/abs-1912-00610}
+Frank Nielsen.
+\newblock On a generalization of the jensen-shannon divergence.
+\newblock {\em CoRR}, abs/1912.00610, 2019.
+
+\bibitem{DBLP:journals/entropy/PhamBN18}
+Gia{-}Thuy Pham, R{\'{e}}my Boyer, and Frank Nielsen.
+\newblock Computational information geometry for binary classification of
+  high-dimensional random tensors.
+\newblock {\em Entropy}, 20(3):203, 2018.
+
+\bibitem{DBLP:conf/eusipco/GrecoBN18}
+Maria~S. Greco, R{\'{e}}my Boyer, and Frank Nielsen.
+\newblock On the angular resolution limit uncertainty.
+\newblock In {\em 26th European Signal Processing Conference, {EUSIPCO} 2018,
+  Roma, Italy, September 3-7, 2018}, pages 623--626. {IEEE}, 2018.
+
+\bibitem{DBLP:conf/icassp/Nielsen18a}
+Frank Nielsen.
+\newblock The chord gap divergence and a generalization of the bhattacharyya
+  distance.
+\newblock In {\em 2018 {IEEE} International Conference on Acoustics, Speech and
+  Signal Processing, {ICASSP} 2018, Calgary, AB, Canada, April 15-20, 2018},
+  pages 2276--2280. {IEEE}, 2018.
+
+\bibitem{DBLP:conf/icassp/NielsenN18}
+Frank Nielsen and Richard Nock.
+\newblock On the geometry of mixtures of prescribed distributions.
+\newblock In {\em 2018 {IEEE} International Conference on Acoustics, Speech and
+  Signal Processing, {ICASSP} 2018, Calgary, AB, Canada, April 15-20, 2018},
+  pages 2861--2865. {IEEE}, 2018.
+
+\bibitem{DBLP:conf/mlsp/Nielsen018}
+Frank Nielsen and Ke~Sun.
+\newblock Guaranteed deterministic bounds on the total variation distance
+  between univariate mixtures.
+\newblock In {\em 28th {IEEE} International Workshop on Machine Learning for
+  Signal Processing, {MLSP} 2018, Aalborg, Denmark, September 17-20, 2018},
+  pages 1--6. {IEEE}, 2018.
+
+\bibitem{DBLP:journals/corr/abs-1803-07225}
+Frank Nielsen and Ga{\"{e}}tan Hadjeres.
+\newblock Monte carlo information geometry: The dually flat case.
+\newblock {\em CoRR}, abs/1803.07225, 2018.
+
+\bibitem{DBLP:journals/corr/abs-1806-00149}
+Frank Nielsen and Ke~Sun.
+\newblock q-neurons: Neuron activations based on stochastic jackson's
+  derivative operators.
+\newblock {\em CoRR}, abs/1806.00149, 2018.
+
+\bibitem{DBLP:journals/corr/abs-1806-11311}
+Frank Nielsen and Ke~Sun.
+\newblock Guaranteed deterministic bounds on the total variation distance
+  between univariate mixtures.
+\newblock {\em CoRR}, abs/1806.11311, 2018.
+
+\bibitem{DBLP:journals/corr/abs-1808-08271}
+Frank Nielsen.
+\newblock An elementary introduction to information geometry.
+\newblock {\em CoRR}, abs/1808.08271, 2018.
+
+\bibitem{DBLP:journals/corr/abs-1810-01118}
+Giorgio Patrini, Marcello Carioni, Patrick Forr{\'{e}}, Samarth Bhargav, Max
+  Welling, Rianne van~den Berg, Tim Genewein, and Frank Nielsen.
+\newblock Sinkhorn autoencoders.
+\newblock {\em CoRR}, abs/1810.01118, 2018.
+
+\bibitem{DBLP:journals/corr/abs-1810-09113}
+Frank Nielsen and Richard Nock.
+\newblock The bregman chord divergence.
+\newblock {\em CoRR}, abs/1810.09113, 2018.
+
+\bibitem{DBLP:journals/corr/abs-1810-10770}
+Erika Gomes{-}Gon{\c{c}}alves, Henryk Gzyl, and Frank Nielsen.
+\newblock Geometry and clustering with metrics derived from separable bregman
+  divergences.
+\newblock {\em CoRR}, abs/1810.10770, 2018.
+
+\bibitem{DBLP:journals/corr/abs-1812-08113}
+Frank Nielsen and Ke~Sun.
+\newblock On the chain rule optimal transport distance.
+\newblock {\em CoRR}, abs/1812.08113, 2018.
+
+\bibitem{DBLP:journals/entropy/NielsenSM17}
+Frank Nielsen, Ke~Sun, and St{\'{e}}phane Marchand{-}Maillet.
+\newblock On h{\"{o}}lder projective divergences.
+\newblock {\em Entropy}, 19(3):122, 2017.
+
+\bibitem{DBLP:journals/spl/NielsenN17}
+Frank Nielsen and Richard Nock.
+\newblock Maxent upper bounds for the differential entropy of univariate
+  continuous distributions.
+\newblock {\em {IEEE} Signal Process. Lett.}, 24(4):402--406, 2017.
+
+\bibitem{DBLP:journals/spl/NielsenN17a}
+Frank Nielsen and Richard Nock.
+\newblock Generalizing skew jensen divergences and bregman divergences with
+  comparative convexity.
+\newblock {\em {IEEE} Signal Process. Lett.}, 24(8):1123--1127, 2017.
+
+\bibitem{DBLP:conf/aaai/MuzellecNPN17}
+Boris Muzellec, Richard Nock, Giorgio Patrini, and Frank Nielsen.
+\newblock Tsallis regularized optimal transport and ecological inference.
+\newblock In Satinder Singh and Shaul Markovitch, editors, {\em Proceedings of
+  the Thirty-First {AAAI} Conference on Artificial Intelligence, February 4-9,
+  2017, San Francisco, California, {USA}}, pages 2387--2393. {AAAI} Press,
+  2017.
+
+\bibitem{DBLP:conf/compgeom/NielsenS17}
+Frank Nielsen and La{\"{e}}titia Shao.
+\newblock On balls in a hilbert polygonal geometry (multimedia contribution).
+\newblock In Boris Aronov and Matthew~J. Katz, editors, {\em 33rd International
+  Symposium on Computational Geometry, SoCG 2017, July 4-7, 2017, Brisbane,
+  Australia}, volume~77 of {\em LIPIcs}, pages 67:1--67:4. Schloss Dagstuhl -
+  Leibniz-Zentrum f{\"{u}}r Informatik, 2017.
+
+\bibitem{DBLP:conf/gsi/NielsenN17}
+Frank Nielsen and Richard Nock.
+\newblock Bregman divergences from comparative convexity.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - Third International Conference, {GSI}
+  2017, Paris, France, November 7-9, 2017, Proceedings}, volume 10589 of {\em
+  Lecture Notes in Computer Science}, pages 639--647. Springer, 2017.
+
+\bibitem{DBLP:conf/gsi/BoyerN17}
+R{\'{e}}my Boyer and Frank Nielsen.
+\newblock On the error exponent of a random tensor with orthonormal factor
+  matrices.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - Third International Conference, {GSI}
+  2017, Paris, France, November 7-9, 2017, Proceedings}, volume 10589 of {\em
+  Lecture Notes in Computer Science}, pages 657--664. Springer, 2017.
+
+\bibitem{DBLP:conf/gsi/Nielsen0M17}
+Frank Nielsen, Ke~Sun, and St{\'{e}}phane Marchand{-}Maillet.
+\newblock k-means clustering with h{\"{o}}lder divergences.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - Third International Conference, {GSI}
+  2017, Paris, France, November 7-9, 2017, Proceedings}, volume 10589 of {\em
+  Lecture Notes in Computer Science}, pages 856--863. Springer, 2017.
+
+\bibitem{DBLP:conf/icassp/BoyerN17}
+R{\'{e}}my Boyer and Frank Nielsen.
+\newblock Information geometry metric for random signal detection in large
+  random sensing systems.
+\newblock In {\em 2017 {IEEE} International Conference on Acoustics, Speech and
+  Signal Processing, {ICASSP} 2017, New Orleans, LA, USA, March 5-9, 2017},
+  pages 4471--4475. {IEEE}, 2017.
+
+\bibitem{DBLP:conf/icassp/Nielsen017}
+Frank Nielsen and Ke~Sun.
+\newblock Combinatorial bounds on the {\(\alpha\)}-divergence of univariate
+  mixture models.
+\newblock In {\em 2017 {IEEE} International Conference on Acoustics, Speech and
+  Signal Processing, {ICASSP} 2017, New Orleans, LA, USA, March 5-9, 2017},
+  pages 4476--4480. {IEEE}, 2017.
+
+\bibitem{DBLP:conf/icml/HadjeresPN17}
+Ga{\"{e}}tan Hadjeres, Fran{\c{c}}ois Pachet, and Frank Nielsen.
+\newblock Deepbach: a steerable model for bach chorales generation.
+\newblock In Doina Precup and Yee~Whye Teh, editors, {\em Proceedings of the
+  34th International Conference on Machine Learning, {ICML} 2017, Sydney, NSW,
+  Australia, 6-11 August 2017}, volume~70 of {\em Proceedings of Machine
+  Learning Research}, pages 1362--1371. {PMLR}, 2017.
+
+\bibitem{DBLP:conf/icml/0001N17}
+Ke~Sun and Frank Nielsen.
+\newblock Relative fisher information and natural gradient for learning large
+  modular models.
+\newblock In Doina Precup and Yee~Whye Teh, editors, {\em Proceedings of the
+  34th International Conference on Machine Learning, {ICML} 2017, Sydney, NSW,
+  Australia, 6-11 August 2017}, volume~70 of {\em Proceedings of Machine
+  Learning Research}, pages 3289--3298. {PMLR}, 2017.
+
+\bibitem{DBLP:conf/ssci/HadjeresNP17}
+Ga{\"{e}}tan Hadjeres, Frank Nielsen, and Fran{\c{c}}ois Pachet.
+\newblock {GLSR-VAE:} geodesic latent space regularization for variational
+  autoencoder architectures.
+\newblock In {\em 2017 {IEEE} Symposium Series on Computational Intelligence,
+  {SSCI} 2017, Honolulu, HI, USA, November 27 - Dec. 1, 2017}, pages 1--7.
+  {IEEE}, 2017.
+
+\bibitem{DBLP:conf/gsi/2017}
+Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors.
+\newblock {\em Geometric Science of Information - Third International
+  Conference, {GSI} 2017, Paris, France, November 7-9, 2017, Proceedings},
+  volume 10589 of {\em Lecture Notes in Computer Science}. Springer, 2017.
+
+\bibitem{DBLP:journals/corr/NielsenSM17}
+Frank Nielsen, Ke~Sun, and St{\'{e}}phane Marchand{-}Maillet.
+\newblock On h{\"{o}}lder projective divergences.
+\newblock {\em CoRR}, abs/1701.03916, 2017.
+
+\bibitem{DBLP:journals/corr/NielsenN17}
+Frank Nielsen and Richard Nock.
+\newblock Generalizing jensen and bregman divergences with comparative
+  convexity and the statistical bhattacharyya distances with comparable means.
+\newblock {\em CoRR}, abs/1702.04877, 2017.
+
+\bibitem{DBLP:journals/corr/NielsenS17}
+Frank Nielsen and Ke~Sun.
+\newblock Clustering in hilbert simplex geometry.
+\newblock {\em CoRR}, abs/1704.00454, 2017.
+
+\bibitem{DBLP:journals/corr/NockN17}
+Richard Nock and Frank Nielsen.
+\newblock Distribution-free evolvability of vector spaces: All it takes is a
+  generating set.
+\newblock {\em CoRR}, abs/1704.02708, 2017.
+
+\bibitem{DBLP:journals/corr/HadjeresNP17}
+Ga{\"{e}}tan Hadjeres, Frank Nielsen, and Fran{\c{c}}ois Pachet.
+\newblock {GLSR-VAE:} geodesic latent space regularization for variational
+  autoencoder architectures.
+\newblock {\em CoRR}, abs/1707.04588, 2017.
+
+\bibitem{DBLP:journals/corr/abs-1708-00568}
+Frank Nielsen and Richard Nock.
+\newblock On w-mixtures: Finite convex combinations of prescribed component
+  distributions.
+\newblock {\em CoRR}, abs/1708.00568, 2017.
+
+\bibitem{DBLP:journals/corr/abs-1709-00740}
+Ga{\"{e}}tan Hadjeres and Frank Nielsen.
+\newblock Deep rank-based transposition-invariant distances on musical
+  sequences.
+\newblock {\em CoRR}, abs/1709.00740, 2017.
+
+\bibitem{DBLP:journals/corr/abs-1709-06404}
+Ga{\"{e}}tan Hadjeres and Frank Nielsen.
+\newblock Interactive music generation with positional constraints using
+  anticipation-rnns.
+\newblock {\em CoRR}, abs/1709.06404, 2017.
+
+\bibitem{DBLP:journals/corr/abs-1709-10498}
+Frank Nielsen.
+\newblock A generalization of the jensen divergence: The chord gap divergence.
+\newblock {\em CoRR}, abs/1709.10498, 2017.
+
+\bibitem{DBLP:series/utcs/Nielsen16}
+Frank Nielsen.
+\newblock {\em Introduction to {HPC} with {MPI} for Data Science}.
+\newblock Undergraduate Topics in Computer Science. Springer, 2016.
+
+\bibitem{DBLP:journals/entropy/NielsenS16}
+Frank Nielsen and Ke~Sun.
+\newblock Guaranteed bounds on information-theoretic measures of univariate
+  mixtures using piecewise log-sum-exp inequalities.
+\newblock {\em Entropy}, 18(12):442, 2016.
+
+\bibitem{DBLP:journals/spl/NielsenS16}
+Frank Nielsen and Ke~Sun.
+\newblock Guaranteed bounds on the kullback-leibler divergence of univariate
+  mixtures.
+\newblock {\em {IEEE} Signal Process. Lett.}, 23(11):1543--1546, 2016.
+
+\bibitem{DBLP:journals/tit/NockNA16}
+Richard Nock, Frank Nielsen, and Shun{-}ichi Amari.
+\newblock On conformal divergences and their population minimizers.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 62(1):527--538, 2016.
+
+\bibitem{DBLP:conf/icassp/MartiND16}
+Gautier Marti, Frank Nielsen, and Philippe Donnat.
+\newblock Optimal copula transport for clustering multivariate time series.
+\newblock In {\em 2016 {IEEE} International Conference on Acoustics, Speech and
+  Signal Processing, {ICASSP} 2016, Shanghai, China, March 20-25, 2016}, pages
+  2379--2383. {IEEE}, 2016.
+
+\bibitem{DBLP:conf/icassp/SchwanderMN16}
+Olivier Schwander, St{\'{e}}phane Marchand{-}Maillet, and Frank Nielsen.
+\newblock Comix: Joint estimation and lightspeed comparison of mixture models.
+\newblock In {\em 2016 {IEEE} International Conference on Acoustics, Speech and
+  Signal Processing, {ICASSP} 2016, Shanghai, China, March 20-25, 2016}, pages
+  2449--2453. {IEEE}, 2016.
+
+\bibitem{DBLP:conf/icip/NielsenMN16}
+Frank Nielsen, Boris Muzellec, and Richard Nock.
+\newblock Classification with mixtures of curved mahalanobis metrics.
+\newblock In {\em 2016 {IEEE} International Conference on Image Processing,
+  {ICIP} 2016, Phoenix, AZ, USA, September 25-28, 2016}, pages 241--245.
+  {IEEE}, 2016.
+
+\bibitem{DBLP:conf/icip/YaoN16}
+Junlin Yao and Frank Nielsen.
+\newblock {SSSC-AM:} {A} unified framework for video co-segmentation by
+  structured sparse subspace clustering with appearance and motion features.
+\newblock In {\em 2016 {IEEE} International Conference on Image Processing,
+  {ICIP} 2016, Phoenix, AZ, USA, September 25-28, 2016}, pages 3957--3961.
+  {IEEE}, 2016.
+
+\bibitem{DBLP:conf/icml/NockCBN16}
+Richard Nock, Rapha{\"{e}}l Canyasse, Roksana Boreli, and Frank Nielsen.
+\newblock k-variates++: more pluses in the k-means++.
+\newblock In Maria{-}Florina Balcan and Kilian~Q. Weinberger, editors, {\em
+  Proceedings of the 33nd International Conference on Machine Learning, {ICML}
+  2016, New York City, NY, USA, June 19-24, 2016}, volume~48 of {\em {JMLR}
+  Workshop and Conference Proceedings}, pages 145--154. JMLR.org, 2016.
+
+\bibitem{DBLP:conf/icml/PatriniNNC16}
+Giorgio Patrini, Frank Nielsen, Richard Nock, and Marcello Carioni.
+\newblock Loss factorization, weakly supervised learning and label noise
+  robustness.
+\newblock In Maria{-}Florina Balcan and Kilian~Q. Weinberger, editors, {\em
+  Proceedings of the 33nd International Conference on Machine Learning, {ICML}
+  2016, New York City, NY, USA, June 19-24, 2016}, volume~48 of {\em {JMLR}
+  Workshop and Conference Proceedings}, pages 708--717. JMLR.org, 2016.
+
+\bibitem{DBLP:conf/ijcai/MartiAND16}
+Gautier Marti, S{\'{e}}bastien Andler, Frank Nielsen, and Philippe Donnat.
+\newblock Clustering financial time series: How long is enough?
+\newblock In Subbarao Kambhampati, editor, {\em Proceedings of the Twenty-Fifth
+  International Joint Conference on Artificial Intelligence, {IJCAI} 2016, New
+  York, NY, USA, 9-15 July 2016}, pages 2583--2589. {IJCAI/AAAI} Press, 2016.
+
+\bibitem{DBLP:conf/nips/MartiAND16}
+Gautier Marti, S{\'{e}}bastien Andler, Frank Nielsen, and Philippe Donnat.
+\newblock Exploring and measuring non-linear correlations: Copulas, lightspeed
+  transportation and clustering.
+\newblock In Oren Anava, Azadeh Khaleghi, Marco Cuturi, Vitaly Kuznetsov, and
+  Alexander Rakhlin, editors, {\em Proceedings of the {NIPS} 2016 Time Series
+  Workshop, co-located with the 30th Annual Conference on Neural Information
+  Processing Systems {(NIPS} 2016), Barcelona, Spain, December 9, 2016},
+  volume~55 of {\em {JMLR} Workshop and Conference Proceedings}, pages 59--69.
+  JMLR.org, 2016.
+
+\bibitem{DBLP:conf/sisap/Marchand-Maillet16}
+St{\'{e}}phane Marchand{-}Maillet, Edgar Roman{-}Rangel, Hisham Mohamed, and
+  Frank Nielsen.
+\newblock Quantifying the invariance and robustness of permutation-based
+  indexing schemes.
+\newblock In Laurent Amsaleg, Michael~E. Houle, and Erich Schubert, editors,
+  {\em Similarity Search and Applications - 9th International Conference,
+  {SISAP} 2016, Tokyo, Japan, October 24-26, 2016. Proceedings}, volume 9939 of
+  {\em Lecture Notes in Computer Science}, pages 79--92, 2016.
+
+\bibitem{DBLP:conf/sisap/NielsenN16}
+Frank Nielsen and Richard Nock.
+\newblock Patch matching with polynomial exponential families and projective
+  divergences.
+\newblock In Laurent Amsaleg, Michael~E. Houle, and Erich Schubert, editors,
+  {\em Similarity Search and Applications - 9th International Conference,
+  {SISAP} 2016, Tokyo, Japan, October 24-26, 2016. Proceedings}, volume 9939 of
+  {\em Lecture Notes in Computer Science}, pages 109--116, 2016.
+
+\bibitem{DBLP:conf/ssp/MartiAND16}
+Gautier Marti, S{\'{e}}bastien Andler, Frank Nielsen, and Philippe Donnat.
+\newblock Optimal transport vs. fisher-rao distance between copulas for
+  clustering multivariate time series.
+\newblock In {\em {IEEE} Statistical Signal Processing Workshop, {SSP} 2016,
+  Palma de Mallorca, Spain, June 26-29, 2016}, pages 1--5. {IEEE}, 2016.
+
+\bibitem{DBLP:journals/corr/NockCBN16}
+Richard Nock, Rapha{\"{e}}l Canyasse, Roksana Boreli, and Frank Nielsen.
+\newblock k-variates++: more pluses in the k-means++.
+\newblock {\em CoRR}, abs/1602.01198, 2016.
+
+\bibitem{DBLP:journals/corr/Nielsen16}
+Frank Nielsen.
+\newblock Image and information.
+\newblock {\em CoRR}, abs/1602.01228, 2016.
+
+\bibitem{DBLP:journals/corr/PatriniNNC16}
+Giorgio Patrini, Frank Nielsen, Richard Nock, and Marcello Carioni.
+\newblock Loss factorization, weakly supervised learning and label noise
+  robustness.
+\newblock {\em CoRR}, abs/1602.02450, 2016.
+
+\bibitem{DBLP:journals/corr/YaoN16}
+Junlin Yao and Frank Nielsen.
+\newblock {SSSC-AM:} {A} unified framework for video co-segmentation by
+  structured sparse subspace clustering with appearance and motion features.
+\newblock {\em CoRR}, abs/1603.04139, 2016.
+
+\bibitem{DBLP:journals/corr/NielsenN16}
+Frank Nielsen and Richard Nock.
+\newblock Fast {\textdollar}(1+{\(\epsilon\)}){\textdollar}-approximation of
+  the l{\"{o}}wner extremal matrices of high-dimensional symmetric matrices.
+\newblock {\em CoRR}, abs/1604.01592, 2016.
+
+\bibitem{DBLP:journals/corr/NielsenS16a}
+Frank Nielsen and Ke~Sun.
+\newblock Guaranteed bounds on the kullback-leibler divergence of univariate
+  mixtures using piecewise log-sum-exp inequalities.
+\newblock {\em CoRR}, abs/1606.05850, 2016.
+
+\bibitem{DBLP:journals/corr/SunN16}
+Ke~Sun and Frank Nielsen.
+\newblock Relative natural gradient for learning large complex models.
+\newblock {\em CoRR}, abs/1606.06069, 2016.
+
+\bibitem{DBLP:journals/corr/MuzellecNPN16}
+Boris Muzellec, Richard Nock, Giorgio Patrini, and Frank Nielsen.
+\newblock Tsallis regularized optimal transport and ecological inference.
+\newblock {\em CoRR}, abs/1609.04495, 2016.
+
+\bibitem{DBLP:journals/corr/NielsenMN16}
+Frank Nielsen, Boris Muzellec, and Richard Nock.
+\newblock Large margin nearest neighbor classification using curved mahalanobis
+  distances.
+\newblock {\em CoRR}, abs/1609.07082, 2016.
+
+\bibitem{DBLP:journals/corr/NielsenN16a}
+Frank Nielsen and Richard Nock.
+\newblock A series of maximum entropy upper bounds of the differential entropy.
+\newblock {\em CoRR}, abs/1612.02954, 2016.
+
+\bibitem{DBLP:journals/pami/NockADNB15}
+Richard Nock, Wafa Bel~Haj Ali, Roberto D'Ambrosio, Frank Nielsen, and Michel
+  Barlaud.
+\newblock Gentle nearest neighbors boosting over proper scoring rules.
+\newblock {\em {IEEE} Trans. Pattern Anal. Mach. Intell.}, 37(1):80--93, 2015.
+
+\bibitem{DBLP:conf/gsi/Saint-JeanN15}
+Christophe Saint{-}Jean and Frank Nielsen.
+\newblock Online k-mle for mixture modeling with exponential families.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - Second International Conference, {GSI}
+  2015, Palaiseau, France, October 28-30, 2015, Proceedings}, volume 9389 of
+  {\em Lecture Notes in Computer Science}, pages 340--348. Springer, 2015.
+
+\bibitem{DBLP:conf/gsi/SchwanderN15}
+Olivier Schwander and Frank Nielsen.
+\newblock Bag-of-components: An online algorithm for batch learning of mixture
+  models.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - Second International Conference, {GSI}
+  2015, Palaiseau, France, October 28-30, 2015, Proceedings}, volume 9389 of
+  {\em Lecture Notes in Computer Science}, pages 387--395. Springer, 2015.
+
+\bibitem{DBLP:conf/gsi/NielsenH15}
+Frank Nielsen and Ga{\"{e}}tan Hadjeres.
+\newblock Approximating covering and minimum enclosing balls in hyperbolic
+  geometry.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - Second International Conference, {GSI}
+  2015, Palaiseau, France, October 28-30, 2015, Proceedings}, volume 9389 of
+  {\em Lecture Notes in Computer Science}, pages 586--594. Springer, 2015.
+
+\bibitem{DBLP:conf/gsi/MartiNVD15}
+Gautier Marti, Frank Nielsen, Philippe Very, and Philippe Donnat.
+\newblock Clustering random walk time series.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - Second International Conference, {GSI}
+  2015, Palaiseau, France, October 28-30, 2015, Proceedings}, volume 9389 of
+  {\em Lecture Notes in Computer Science}, pages 675--684. Springer, 2015.
+
+\bibitem{DBLP:conf/icassp/NielsenN15}
+Frank Nielsen and Richard Nock.
+\newblock Total jensen divergences: Definition, properties and clustering.
+\newblock In {\em 2015 {IEEE} International Conference on Acoustics, Speech and
+  Signal Processing, {ICASSP} 2015, South Brisbane, Queensland, Australia,
+  April 19-24, 2015}, pages 2016--2020. {IEEE}, 2015.
+
+\bibitem{DBLP:conf/icmla/MartiVDN15}
+Gautier Marti, Philippe Very, Philippe Donnat, and Frank Nielsen.
+\newblock A proposal of a methodological framework with experimental guidelines
+  to investigate clustering stability on financial time series.
+\newblock In Tao Li, Lukasz~A. Kurgan, Vasile Palade, Randy Goebel, Andreas
+  Holzinger, Karin Verspoor, and M.~Arif Wani, editors, {\em 14th {IEEE}
+  International Conference on Machine Learning and Applications, {ICMLA} 2015,
+  Miami, FL, USA, December 9-11, 2015}, pages 32--37. {IEEE}, 2015.
+
+\bibitem{DBLP:conf/gsi/2015}
+Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors.
+\newblock {\em Geometric Science of Information - Second International
+  Conference, {GSI} 2015, Palaiseau, France, October 28-30, 2015, Proceedings},
+  volume 9389 of {\em Lecture Notes in Computer Science}. Springer, 2015.
+
+\bibitem{DBLP:journals/corr/MartiNVD15}
+Gautier Marti, Frank Nielsen, Philippe Very, and Philippe Donnat.
+\newblock Comment partitionner automatiquement des marches al{\'{e}}atoires ?
+  avec application {\`{a}} la finance quantitative.
+\newblock {\em CoRR}, abs/1506.09163, 2015.
+
+\bibitem{DBLP:journals/corr/MartiDNV15}
+Gautier Marti, Philippe Donnat, Frank Nielsen, and Philippe Very.
+\newblock Hcmapper: An interactive visualization tool to compare
+  partition-based flat clustering extracted from pairs of dendrograms.
+\newblock {\em CoRR}, abs/1507.08137, 2015.
+
+\bibitem{DBLP:journals/corr/MartiVDN15}
+Gautier Marti, Philippe Very, Philippe Donnat, and Frank Nielsen.
+\newblock A proposal of a methodological framework with experimental guidelines
+  to investigate clustering stability on financial time series.
+\newblock {\em CoRR}, abs/1509.05475, 2015.
+
+\bibitem{DBLP:journals/corr/MartiND15}
+Gautier Marti, Frank Nielsen, and Philippe Donnat.
+\newblock Optimal copula transport for clustering multivariate time series.
+\newblock {\em CoRR}, abs/1509.08144, 2015.
+
+\bibitem{DBLP:journals/entropy/NielsenNA14}
+Frank Nielsen, Richard Nock, and Shun{-}ichi Amari.
+\newblock On clustering histograms with \emph{k}-means by using mixed
+  {\(\alpha\)}-divergences.
+\newblock {\em Entropy}, 16(6):3273--3301, 2014.
+
+\bibitem{DBLP:journals/prl/Nielsen14}
+Frank Nielsen.
+\newblock Generalized bhattacharyya and chernoff upper bounds on bayes error
+  using quasi-arithmetic means.
+\newblock {\em Pattern Recognit. Lett.}, 42:25--34, 2014.
+
+\bibitem{DBLP:journals/spl/NielsenN14}
+Frank Nielsen and Richard Nock.
+\newblock On the chi square and higher-order chi distances for approximating
+  {\textdollar}f{\textdollar} -divergences.
+\newblock {\em {IEEE} Signal Process. Lett.}, 21(1):10--13, 2014.
+
+\bibitem{DBLP:journals/spl/NielsenN14a}
+Frank Nielsen and Richard Nock.
+\newblock Optimal interval clustering: Application to bregman clustering and
+  statistical mixture learning.
+\newblock {\em {IEEE} Signal Process. Lett.}, 21(10):1289--1292, 2014.
+
+\bibitem{DBLP:conf/compgeom/NielsenN14}
+Frank Nielsen and Richard Nock.
+\newblock Visualizing hyperbolic voronoi diagrams.
+\newblock In Siu{-}Wing Cheng and Olivier Devillers, editors, {\em 30th Annual
+  Symposium on Computational Geometry, SoCG'14, Kyoto, Japan, June 08 - 11,
+  2014}, page~90. {ACM}, 2014.
+
+\bibitem{DBLP:journals/corr/Nielsen14}
+Frank Nielsen.
+\newblock Generalized bhattacharyya and chernoff upper bounds on bayes error
+  using quasi-arithmetic means.
+\newblock {\em CoRR}, abs/1401.4788, 2014.
+
+\bibitem{DBLP:journals/corr/NielsenN14}
+Frank Nielsen and Richard Nock.
+\newblock A note on the optimal scalar bregman k-means clustering with an
+  application to learning best statistical mixtures.
+\newblock {\em CoRR}, abs/1403.2485, 2014.
+
+\bibitem{DBLP:journals/corr/NielsenN14a}
+Frank Nielsen and Richard Nock.
+\newblock Further heuristics for {\textdollar}k{\textdollar}-means: The
+  merge-and-split heuristic and the {\textdollar}(k, l){\textdollar}-means.
+\newblock {\em CoRR}, abs/1406.6314, 2014.
+
+\bibitem{DBLP:journals/corr/NielsenN14b}
+Frank Nielsen and Richard Nock.
+\newblock Further results on the hyperbolic voronoi diagrams.
+\newblock {\em CoRR}, abs/1410.1036, 2014.
+
+\bibitem{DBLP:journals/comgeo/ArnaudonN13}
+Marc Arnaudon and Frank Nielsen.
+\newblock On approximating the riemannian 1-center.
+\newblock {\em Comput. Geom.}, 46(1):93--104, 2013.
+
+\bibitem{DBLP:journals/spl/Nielsen13}
+Frank Nielsen.
+\newblock An information-geometric characterization of chernoff information.
+\newblock {\em {IEEE} Signal Process. Lett.}, 20(3):269--272, 2013.
+
+\bibitem{DBLP:journals/spl/Nielsen13a}
+Frank Nielsen.
+\newblock Jeffreys centroids: {A} closed-form expression for positive
+  histograms and a guaranteed tight approximation for frequency histograms.
+\newblock {\em {IEEE} Signal Process. Lett.}, 20(7):657--660, 2013.
+
+\bibitem{DBLP:conf/acpr/NielsenN13}
+Frank Nielsen and Richard Nock.
+\newblock Consensus region merging for image segmentation.
+\newblock In {\em 2nd {IAPR} Asian Conference on Pattern Recognition, {ACPR}
+  2013, Naha, Japan, November 5-8, 2013}, pages 325--329. {IEEE}, 2013.
+
+\bibitem{DBLP:conf/gsi/Nielsen13}
+Frank Nielsen.
+\newblock Hypothesis testing, information divergence and computational
+  geometry.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - First International Conference, {GSI}
+  2013, Paris, France, August 28-30, 2013. Proceedings}, volume 8085 of {\em
+  Lecture Notes in Computer Science}, pages 241--248. Springer, 2013.
+
+\bibitem{DBLP:conf/gsi/Saint-JeanN13}
+Christophe Saint{-}Jean and Frank Nielsen.
+\newblock A new implementation of k-mle for mixture modeling of wishart
+  distributions.
+\newblock In Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors, {\em
+  Geometric Science of Information - First International Conference, {GSI}
+  2013, Paris, France, August 28-30, 2013. Proceedings}, volume 8085 of {\em
+  Lecture Notes in Computer Science}, pages 249--256. Springer, 2013.
+
+\bibitem{DBLP:conf/jcdl/NockNB13}
+Richard Nock, Frank Nielsen, and Eric Briys.
+\newblock Non-linear book manifolds: learning from associations the dynamic
+  geometry of digital libraries.
+\newblock In J.~Stephen Downie, Robert~H. McDonald, Timothy~W. Cole, Robert
+  Sanderson, and Frank Shipman, editors, {\em 13th {ACM/IEEE-CS} Joint
+  Conference on Digital Libraries, {JCDL} '13, Indianapolis, IN, USA, July 22 -
+  26, 2013}, pages 313--322. {ACM}, 2013.
+
+\bibitem{DBLP:conf/mva/Nielsen13}
+Frank Nielsen.
+\newblock Perspective click-and-drag area selections in pictures.
+\newblock In {\em Proceedings of the 13. {IAPR} International Conference on
+  Machine Vision Applications, {MVA} 2013, Kyoto, Japan, May 20-23, 2013},
+  pages 29--32, 2013.
+
+\bibitem{DBLP:conf/siggraph/NockN13}
+Richard Nock and Frank Nielsen.
+\newblock Information-geometric lenses for multiple foci+contexts interfaces.
+\newblock In Baoquan Chen and Andrei Sharf, editors, {\em {SIGGRAPH} Asia 2013,
+  Hong Kong, China, November 19-22, 2013, Technical Briefs}, pages 18:1--18:4.
+  {ACM}, 2013.
+
+\bibitem{DBLP:conf/simbad/Nielsen13}
+Frank Nielsen.
+\newblock Pattern learning and recognition on statistical manifolds: An
+  information-geometric review.
+\newblock In Edwin~R. Hancock and Marcello Pelillo, editors, {\em
+  Similarity-Based Pattern Recognition - Second International Workshop,
+  {SIMBAD} 2013, York, UK, July 3-5, 2013. Proceedings}, volume 7953 of {\em
+  Lecture Notes in Computer Science}, pages 1--25. Springer, 2013.
+
+\bibitem{DBLP:conf/simbad/SchwanderN13}
+Olivier Schwander and Frank Nielsen.
+\newblock Fast learning of gamma mixture models with k-mle.
+\newblock In Edwin~R. Hancock and Marcello Pelillo, editors, {\em
+  Similarity-Based Pattern Recognition - Second International Workshop,
+  {SIMBAD} 2013, York, UK, July 3-5, 2013. Proceedings}, volume 7953 of {\em
+  Lecture Notes in Computer Science}, pages 235--249. Springer, 2013.
+
+\bibitem{DBLP:conf/gsi/2013}
+Frank Nielsen and Fr{\'{e}}d{\'{e}}ric Barbaresco, editors.
+\newblock {\em Geometric Science of Information - First International
+  Conference, {GSI} 2013, Paris, France, August 28-30, 2013. Proceedings},
+  volume 8085 of {\em Lecture Notes in Computer Science}. Springer, 2013.
+
+\bibitem{DBLP:journals/corr/abs-1301-3578}
+Frank Nielsen.
+\newblock Cramer-rao lower bound and information geometry.
+\newblock {\em CoRR}, abs/1301.3578, 2013.
+
+\bibitem{DBLP:journals/corr/abs-1303-7286}
+Frank Nielsen.
+\newblock On the symmetrical kullback-leibler jeffreys centroids.
+\newblock {\em CoRR}, abs/1303.7286, 2013.
+
+\bibitem{DBLP:journals/corr/abs-1304-6499}
+Frank Nielsen.
+\newblock Logging safely in public spaces using color pins.
+\newblock {\em CoRR}, abs/1304.6499, 2013.
+
+\bibitem{DBLP:journals/corr/NielsenN13}
+Frank Nielsen and Richard Nock.
+\newblock On the chi square and higher-order chi distances for approximating
+  f-divergences.
+\newblock {\em CoRR}, abs/1309.3029, 2013.
+
+\bibitem{DBLP:journals/corr/NielsenN13a}
+Frank Nielsen and Richard Nock.
+\newblock Total jensen divergences: Definition, properties and k-means++
+  clustering.
+\newblock {\em CoRR}, abs/1309.7109, 2013.
+
+\bibitem{DBLP:journals/corr/NockNA13}
+Richard Nock, Frank Nielsen, and Shun{-}ichi Amari.
+\newblock On conformal divergences and their population minimizers.
+\newblock {\em CoRR}, abs/1311.5125, 2013.
+
+\bibitem{DBLP:journals/ijcv/NockPNAB12}
+Richard Nock, Paolo Piro, Frank Nielsen, Wafa Bel~Haj Ali, and Michel Barlaud.
+\newblock Boosting k-nn for categorization of natural scenes.
+\newblock {\em Int. J. Comput. Vis.}, 100(3):294--314, 2012.
+
+\bibitem{DBLP:journals/ijon/PiroNNB12}
+Paolo Piro, Richard Nock, Frank Nielsen, and Michel Barlaud.
+\newblock Leveraging k-nn for generic classification boosting.
+\newblock {\em Neurocomputing}, 80:3--9, 2012.
+
+\bibitem{DBLP:journals/lmsjcm/ArnaudonN12}
+Marc Arnaudon and Frank Nielsen.
+\newblock Medians and means in finsler geometry.
+\newblock {\em {LMS} J. Comput. Math.}, 15:23--37, 2012.
+
+\bibitem{DBLP:journals/pami/LiuVAN12}
+Meizhu Liu, Baba~C. Vemuri, Shun{-}ichi Amari, and Frank Nielsen.
+\newblock Shape retrieval using hierarchical total bregman soft clustering.
+\newblock {\em {IEEE} Trans. Pattern Anal. Mach. Intell.}, 34(12):2407--2419,
+  2012.
+
+\bibitem{DBLP:conf/icassp/SchwanderN12}
+Olivier Schwander and Frank Nielsen.
+\newblock Model centroids for the simplification of kernel density estimators.
+\newblock In {\em 2012 {IEEE} International Conference on Acoustics, Speech and
+  Signal Processing, {ICASSP} 2012, Kyoto, Japan, March 25-30, 2012}, pages
+  737--740. {IEEE}, 2012.
+
+\bibitem{DBLP:conf/icassp/Nielsen12}
+Frank Nielsen.
+\newblock {K-MLE:} {A} fast algorithm for learning statistical mixture models.
+\newblock In {\em 2012 {IEEE} International Conference on Acoustics, Speech and
+  Signal Processing, {ICASSP} 2012, Kyoto, Japan, March 25-30, 2012}, pages
+  869--872. {IEEE}, 2012.
+
+\bibitem{DBLP:conf/icpr/Nielsen12}
+Frank Nielsen.
+\newblock Closed-form information-theoretic divergences for statistical
+  mixtures.
+\newblock In {\em Proceedings of the 21st International Conference on Pattern
+  Recognition, {ICPR} 2012, Tsukuba, Japan, November 11-15, 2012}, pages
+  1723--1726. {IEEE} Computer Society, 2012.
+
+\bibitem{DBLP:conf/icpr/SchwanderSNB12}
+Olivier Schwander, Aurelien~J. Schutz, Frank Nielsen, and Yannick Berthoumieu.
+\newblock k-mle for mixtures of generalized gaussians.
+\newblock In {\em Proceedings of the 21st International Conference on Pattern
+  Recognition, {ICPR} 2012, Tsukuba, Japan, November 11-15, 2012}, pages
+  2825--2828. {IEEE} Computer Society, 2012.
+
+\bibitem{DBLP:conf/icpr/NielsenLYV12}
+Frank Nielsen, Meizhu Liu, Xiaojing Ye, and Baba~C. Vemuri.
+\newblock Jensen divergence based {SPD} matrix means and applications.
+\newblock In {\em Proceedings of the 21st International Conference on Pattern
+  Recognition, {ICPR} 2012, Tsukuba, Japan, November 11-15, 2012}, pages
+  2841--2844. {IEEE} Computer Society, 2012.
+
+\bibitem{DBLP:conf/miccai/DAmbrosioANSNB12}
+Roberto D'Ambrosio, Wafa Bel~Haj Ali, Richard Nock, Paolo Soda, Frank Nielsen,
+  and Michel Barlaud.
+\newblock Biomedical images classification by universal nearest neighbours
+  classifier using posterior probability.
+\newblock In Fei Wang, Dinggang Shen, Pingkun Yan, and Kenji Suzuki, editors,
+  {\em Machine Learning in Medical Imaging - Third International Workshop,
+  {MLMI} 2012, Held in Conjunction with {MICCAI} 2012, Nice, France, October 1,
+  2012, Revised Selected Papers}, volume 7588 of {\em Lecture Notes in Computer
+  Science}, pages 119--127. Springer, 2012.
+
+\bibitem{DBLP:conf/pkdd/DAmbrosioNANB12}
+Roberto D'Ambrosio, Richard Nock, Wafa Bel~Haj Ali, Frank Nielsen, and Michel
+  Barlaud.
+\newblock Boosting nearest neighbors for the efficient estimation of
+  posteriors.
+\newblock In Peter~A. Flach, Tijl~De Bie, and Nello Cristianini, editors, {\em
+  Machine Learning and Knowledge Discovery in Databases - European Conference,
+  {ECML} {PKDD} 2012, Bristol, UK, September 24-28, 2012. Proceedings, Part
+  {I}}, volume 7523 of {\em Lecture Notes in Computer Science}, pages 314--329.
+  Springer, 2012.
+
+\bibitem{DBLP:conf/siggraph/Nielsen12}
+Frank Nielsen.
+\newblock Perspective dragging: quick area selection in photos.
+\newblock In Qunsheng Peng and Haizhou Li, editors, {\em {SIGGRAPH} Asia 2012
+  Poster Proceedings, Singapore, Singapore, November 28 - December 01, 2012},
+  page~18. {ACM}, 2012.
+
+\bibitem{DBLP:journals/corr/abs-1203-5181}
+Frank Nielsen.
+\newblock {\textdollar}k{\textdollar}-mle: {A} fast algorithm for learning
+  statistical mixture models.
+\newblock {\em CoRR}, abs/1203.5181, 2012.
+
+\bibitem{DBLP:journals/corr/abs-1210-8234}
+Frank Nielsen and Richard Nock.
+\newblock The hyperbolic voronoi diagram in arbitrary dimension.
+\newblock {\em CoRR}, abs/1210.8234, 2012.
+
+\bibitem{DBLP:journals/tcos/NielsenN11}
+Frank Nielsen and Richard Nock.
+\newblock Skew jensen-bregman voronoi diagrams.
+\newblock {\em Trans. Comput. Sci.}, 14:102--128, 2011.
+
+\bibitem{DBLP:journals/tit/NielsenB11}
+Frank Nielsen and Sylvain Boltz.
+\newblock The burbea-rao and bhattacharyya centroids.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 57(8):5455--5466, 2011.
+
+\bibitem{DBLP:journals/tmi/VemuriLAN11}
+Baba~C. Vemuri, Meizhu Liu, Shun{-}ichi Amari, and Frank Nielsen.
+\newblock Total bregman divergence and its applications to {DTI} analysis.
+\newblock {\em {IEEE} Trans. Medical Imaging}, 30(2):475--483, 2011.
+
+\bibitem{DBLP:conf/acivs/HouitN11}
+Thomas Houit and Frank Nielsen.
+\newblock Video stippling.
+\newblock In Jacques Blanc{-}Talon, Richard~P. Kleihorst, Wilfried Philips,
+  Dan~C. Popescu, and Paul Scheunders, editors, {\em Advances Concepts for
+  Intelligent Vision Systems - 13th International Conference, {ACIVS} 2011,
+  Ghent, Belgium, August 22-25, 2011. Proceedings}, volume 6915 of {\em Lecture
+  Notes in Computer Science}, pages 384--395. Springer, 2011.
+
+\bibitem{DBLP:conf/icassp/SchwanderN11}
+Olivier Schwander and Frank Nielsen.
+\newblock Non-flat clustering with alpha-divergences.
+\newblock In {\em Proceedings of the {IEEE} International Conference on
+  Acoustics, Speech, and Signal Processing, {ICASSP} 2011, May 22-27, 2011,
+  Prague Congress Center, Prague, Czech Republic}, pages 2100--2103. {IEEE},
+  2011.
+
+\bibitem{DBLP:conf/icml/NockMBN11}
+Richard Nock, Brice Magdalou, Eric Briys, and Frank Nielsen.
+\newblock On tracking portfolios with certainty equivalents on a generalization
+  of markowitz model: the fool, the wise and the adaptive.
+\newblock In Lise Getoor and Tobias Scheffer, editors, {\em Proceedings of the
+  28th International Conference on Machine Learning, {ICML} 2011, Bellevue,
+  Washington, USA, June 28 - July 2, 2011}, pages 73--80. Omnipress, 2011.
+
+\bibitem{DBLP:journals/corr/abs-1101-4718}
+Marc Arnaudon and Frank Nielsen.
+\newblock On approximating the riemannian 1-center.
+\newblock {\em CoRR}, abs/1101.4718, 2011.
+
+\bibitem{DBLP:journals/corr/abs-1102-2684}
+Frank Nielsen.
+\newblock Chernoff information of exponential families.
+\newblock {\em CoRR}, abs/1102.2684, 2011.
+
+\bibitem{DBLP:journals/corr/abs-1105-3259}
+Frank Nielsen and Richard Nock.
+\newblock On r{\'{e}}nyi and tsallis entropies and divergences for exponential
+  families.
+\newblock {\em CoRR}, abs/1105.3259, 2011.
+
+\bibitem{DBLP:journals/corr/abs-1112-4221}
+Frank Nielsen and Richard Nock.
+\newblock A closed-form expression for the sharma-mittal entropy of exponential
+  families.
+\newblock {\em CoRR}, abs/1112.4221, 2011.
+
+\bibitem{DBLP:journals/dcg/BoissonnatNN10}
+Jean{-}Daniel Boissonnat, Frank Nielsen, and Richard Nock.
+\newblock Bregman voronoi diagrams.
+\newblock {\em Discret. Comput. Geom.}, 44(2):281--307, 2010.
+
+\bibitem{DBLP:journals/sigpro/GarciaN10}
+Vincent Garcia and Frank Nielsen.
+\newblock Simplification and hierarchical representations of mixtures of
+  exponential families.
+\newblock {\em Signal Process.}, 90(12):3197--3212, 2010.
+
+\bibitem{DBLP:conf/accv/PiroNNB10}
+Paolo Piro, Richard Nock, Frank Nielsen, and Michel Barlaud.
+\newblock Multi-class leveraged \emph{{\(\kappa\)}}-nn for image
+  classification.
+\newblock In Ron Kimmel, Reinhard Klette, and Akihiro Sugimoto, editors, {\em
+  Computer Vision - {ACCV} 2010 - 10th Asian Conference on Computer Vision,
+  Queenstown, New Zealand, November 8-12, 2010, Revised Selected Papers, Part
+  {III}}, volume 6494 of {\em Lecture Notes in Computer Science}, pages 67--81.
+  Springer, 2010.
+
+\bibitem{DBLP:conf/cvpr/LiuVAN10}
+Meizhu Liu, Baba~C. Vemuri, Shun{-}ichi Amari, and Frank Nielsen.
+\newblock Total bregman divergence and its applications to shape retrieval.
+\newblock In {\em The Twenty-Third {IEEE} Conference on Computer Vision and
+  Pattern Recognition, {CVPR} 2010, San Francisco, CA, USA, 13-18 June 2010},
+  pages 3463--3468. {IEEE} Computer Society, 2010.
+
+\bibitem{DBLP:conf/eccv/BoltzNS10}
+Sylvain Boltz, Frank Nielsen, and Stefano Soatto.
+\newblock Texture regimes for entropy-based multiscale image analysis.
+\newblock In Kostas Daniilidis, Petros Maragos, and Nikos Paragios, editors,
+  {\em Computer Vision - {ECCV} 2010, 11th European Conference on Computer
+  Vision, Heraklion, Crete, Greece, September 5-11, 2010, Proceedings, Part
+  {III}}, volume 6313 of {\em Lecture Notes in Computer Science}, pages
+  692--705. Springer, 2010.
+
+\bibitem{DBLP:conf/icassp/GarciaNN10}
+Vincent Garcia, Frank Nielsen, and Richard Nock.
+\newblock Hierarchical gaussian mixture model.
+\newblock In {\em Proceedings of the {IEEE} International Conference on
+  Acoustics, Speech, and Signal Processing, {ICASSP} 2010, 14-19 March 2010,
+  Sheraton Dallas Hotel, Dallas, Texas, {USA}}, pages 4070--4073. {IEEE}, 2010.
+
+\bibitem{DBLP:conf/iccsa/NielsenN10}
+Frank Nielsen and Richard Nock.
+\newblock Hyperbolic voronoi diagrams made easy.
+\newblock In Bernady~O. Apduhan, Osvaldo Gervasi, Andr{\'{e}}s Iglesias, David
+  Taniar, and Marina~L. Gavrilova, editors, {\em Prodeedings of the 2010
+  International Conference on Computational Science and Its Applications,
+  {ICCSA} 2010, Fukuoka, Japan, March 23-26, 2010}, pages 74--80. {IEEE}
+  Computer Society, 2010.
+
+\bibitem{DBLP:conf/icip/BoltzN10}
+Sylvain Boltz and Frank Nielsen.
+\newblock Randomized motion estimation.
+\newblock In {\em Proceedings of the International Conference on Image
+  Processing, {ICIP} 2010, September 26-29, Hong Kong, China}, pages 781--784.
+  {IEEE}, 2010.
+
+\bibitem{DBLP:conf/icip/NielsenN10}
+Frank Nielsen and Richard Nock.
+\newblock Entropies and cross-entropies of exponential families.
+\newblock In {\em Proceedings of the International Conference on Image
+  Processing, {ICIP} 2010, September 26-29, Hong Kong, China}, pages
+  3621--3624. {IEEE}, 2010.
+
+\bibitem{DBLP:conf/icip/GarciaDNB10}
+Vincent Garcia, Eric Debreuve, Frank Nielsen, and Michel Barlaud.
+\newblock K-nearest neighbor search: Fast gpu-based implementations and
+  application to high-dimensional feature matching.
+\newblock In {\em Proceedings of the International Conference on Image
+  Processing, {ICIP} 2010, September 26-29, Hong Kong, China}, pages
+  3757--3760. {IEEE}, 2010.
+
+\bibitem{DBLP:conf/icip/BoltzNS10}
+Sylvain Boltz, Frank Nielsen, and Stefano Soatto.
+\newblock Earth mover distance on superpixels.
+\newblock In {\em Proceedings of the International Conference on Image
+  Processing, {ICIP} 2010, September 26-29, Hong Kong, China}, pages
+  4597--4600. {IEEE}, 2010.
+
+\bibitem{DBLP:conf/icpr/PiroNNB10}
+Paolo Piro, Richard Nock, Frank Nielsen, and Michel Barlaud.
+\newblock Boosting bayesian {MAP} classification.
+\newblock In {\em 20th International Conference on Pattern Recognition, {ICPR}
+  2010, Istanbul, Turkey, 23-26 August 2010}, pages 661--665. {IEEE} Computer
+  Society, 2010.
+
+\bibitem{DBLP:conf/icpr/NielsenBS10}
+Frank Nielsen, Sylvain Boltz, and Olivier Schwander.
+\newblock Bhattacharyya clustering with applications to mixture
+  simplifications.
+\newblock In {\em 20th International Conference on Pattern Recognition, {ICPR}
+  2010, Istanbul, Turkey, 23-26 August 2010}, pages 1437--1440. {IEEE} Computer
+  Society, 2010.
+
+\bibitem{DBLP:conf/isvd/NielsenN10}
+Frank Nielsen and Richard Nock.
+\newblock Jensen-bregman voronoi diagrams and centroidal tessellations.
+\newblock In Mir~Abolfazl Mostafavi, editor, {\em Seventh International
+  Symposium on Voronoi Diagrams in Science and Engineering, {ISVD} 2010,
+  Quebec, Canada, June 28-30, 2010}, pages 56--65. {IEEE} Computer Society,
+  2010.
+
+\bibitem{DBLP:conf/visapp/SchwanderN10}
+Olivier Schwander and Frank Nielsen.
+\newblock Reranking with contextual dissimilarity measures from
+  representational bregman k-means.
+\newblock In Paul Richard and Jos{\'{e}} Braz, editors, {\em {VISAPP} 2010 -
+  Proceedings of the Fifth International Conference on Computer Vision Theory
+  and Applications, Angers, France, May 17-21, 2010 - Volume 1}, pages
+  118--123. {INSTICC} Press, 2010.
+
+\bibitem{DBLP:conf/wiamis/PiroBNN10}
+Paolo Piro, Michel Barlaud, Richard Nock, and Frank Nielsen.
+\newblock {K-NN} boosting prototype learning for object classification.
+\newblock In {\em 11th International Workshop on Image Analysis for Multimedia
+  Interactive Services, {WIAMIS} 2010, Desenzano del Garda, Italy, April 12-14,
+  2010}, pages 1--4. {IEEE}, 2010.
+
+\bibitem{DBLP:journals/corr/abs-1001-1221}
+Paolo Piro, Richard Nock, Frank Nielsen, and Michel Barlaud.
+\newblock Boosting k-nn for categorization of natural scenes.
+\newblock {\em CoRR}, abs/1001.1221, 2010.
+
+\bibitem{DBLP:journals/corr/abs-1004-5049}
+Frank Nielsen and Sylvain Boltz.
+\newblock The burbea-rao and bhattacharyya centroids.
+\newblock {\em CoRR}, abs/1004.5049, 2010.
+
+\bibitem{DBLP:journals/corr/abs-1009-4004}
+Frank Nielsen.
+\newblock A family of statistical symmetric divergences based on jensen's
+  inequality.
+\newblock {\em CoRR}, abs/1009.4004, 2010.
+
+\bibitem{DBLP:journals/corr/abs-1011-6049}
+Thomas Houit and Frank Nielsen.
+\newblock Video stippling.
+\newblock {\em CoRR}, abs/1011.6049, 2010.
+
+\bibitem{DBLP:journals/corr/abs-1011-6076}
+Marc Arnaudon and Frank Nielsen.
+\newblock Medians and means in finsler geometry.
+\newblock {\em CoRR}, abs/1011.6076, 2010.
+
+\bibitem{DBLP:series/utcs/Nielsen09}
+Frank Nielsen.
+\newblock {\em A Concise and Practical Introduction to Programming Algorithms
+  in Java}.
+\newblock Undergraduate Topics in Computer Science. Springer, 2009.
+
+\bibitem{DBLP:journals/cacm/Nielsen09}
+Frank Nielsen.
+\newblock Technical opinion - steering self-learning distance algorithms.
+\newblock {\em Commun. {ACM}}, 52(11):150--152, 2009.
+
+\bibitem{DBLP:journals/ijcga/NielsenN09}
+Frank Nielsen and Richard Nock.
+\newblock Approximating smallest enclosing balls with applications to machine
+  learning.
+\newblock {\em Int. J. Comput. Geom. Appl.}, 19(5):389--414, 2009.
+
+\bibitem{DBLP:journals/pami/NockN09}
+Richard Nock and Frank Nielsen.
+\newblock Bregman divergences and surrogates for learning.
+\newblock {\em {IEEE} Trans. Pattern Anal. Mach. Intell.}, 31(11):2048--2059,
+  2009.
+
+\bibitem{DBLP:journals/pr/NockVHN09}
+Richard Nock, Pascal Vaillant, Claudia Henry, and Frank Nielsen.
+\newblock Soft memberships for spectral clustering, with application to
+  permeable language distinction.
+\newblock {\em Pattern Recognit.}, 42(1):43--53, 2009.
+
+\bibitem{DBLP:journals/tit/NielsenN09}
+Frank Nielsen and Richard Nock.
+\newblock Sided and symmetrized bregman centroids.
+\newblock {\em {IEEE} Trans. Inf. Theory}, 55(6):2882--2904, 2009.
+
+\bibitem{DBLP:conf/accv/GarciaNN09}
+Vincent Garcia, Frank Nielsen, and Richard Nock.
+\newblock Levels of details for gaussian mixture models.
+\newblock In Hongbin Zha, Rin{-}Ichiro Taniguchi, and Stephen~J. Maybank,
+  editors, {\em Computer Vision - {ACCV} 2009, 9th Asian Conference on Computer
+  Vision, Xi'an, China, September 23-27, 2009, Revised Selected Papers, Part
+  {II}}, volume 5995 of {\em Lecture Notes in Computer Science}, pages
+  514--525. Springer, 2009.
+
+\bibitem{DBLP:conf/eusipco/NielsenGN09}
+Frank Nielsen, Vincent Garcia, and Richard Nock.
+\newblock Simplifying gaussian mixture models via entropic quantization.
+\newblock In {\em 17th European Signal Processing Conference, {EUSIPCO} 2009,
+  Glasgow, Scotland, UK, August 24-28, 2009}, pages 2012--2016. {IEEE}, 2009.
+
+\bibitem{DBLP:conf/icmcs/NielsenPB09}
+Frank Nielsen, Paolo Piro, and Michel Barlaud.
+\newblock Bregman vantage point trees for efficient nearest neighbor queries.
+\newblock In {\em Proceedings of the 2009 {IEEE} International Conference on
+  Multimedia and Expo, {ICME} 2009, June 28 - July 2, 2009, New York City, NY,
+  {USA}}, pages 878--881. {IEEE}, 2009.
+
+\bibitem{DBLP:conf/isvd/NielsenN09}
+Frank Nielsen and Richard Nock.
+\newblock The dual voronoi diagrams with respect to representational bregman
+  divergences.
+\newblock In Francois Anton, editor, {\em Sixth International Symposium on
+  Voronoi Diagrams, {ISVD} 2009, Copenhagen, Denmark, June 23-26, 2009}, pages
+  71--78. {IEEE} Computer Society, 2009.
+
+\bibitem{DBLP:conf/kdd/NielsenS09}
+Frank Nielsen and Aur{\'{e}}lien S{\'{e}}randour.
+\newblock Accuracy of distance metric learning algorithms.
+\newblock In Chris H.~Q. Ding and Tao Li, editors, {\em Proceedings of the 2nd
+  {ACM} {SIGKDD} Workshop on Data Mining using Matrices and Tensors, Paris,
+  France, June 28, 2009}. {ACM}, 2009.
+
+\bibitem{DBLP:conf/mirage/GarciaN09}
+Vincent Garcia and Frank Nielsen.
+\newblock Searching high-dimensional neighbours: Cpu-based tailored
+  data-structures versus gpu-based brute-force method.
+\newblock In Andr{\'{e}} Gagalowicz and Wilfried Philips, editors, {\em
+  Computer Vision/Computer Graphics Collaboration Techniques, 4th International
+  Conference, {MIRAGE} 2009, Rocquencourt, France, May 4-6, 2009. Proceedings},
+  volume 5496 of {\em Lecture Notes in Computer Science}, pages 425--436.
+  Springer, 2009.
+
+\bibitem{DBLP:conf/etvc/2008}
+Frank Nielsen, editor.
+\newblock {\em Emerging Trends in Visual Computing, {LIX} Fall Colloquium,
+  {ETVC} 2008, Palaiseau, France, November 18-20, 2008. Revised Invited
+  Papers}, volume 5416 of {\em Lecture Notes in Computer Science}. Springer,
+  2009.
+
+\bibitem{DBLP:journals/corr/abs-0901-2586}
+Richard Nock, Brice Magdalou, Nicolas Sanz, Eric Briys, Fred Celimene, and
+  Frank Nielsen.
+\newblock Information geometries and microeconomic theories.
+\newblock {\em CoRR}, abs/0901.2586, 2009.
+
+\bibitem{DBLP:journals/corr/abs-0903-3287}
+Frank Nielsen and Richard Nock.
+\newblock Hyperbolic voronoi diagrams made easy.
+\newblock {\em CoRR}, abs/0903.3287, 2009.
+
+\bibitem{DBLP:journals/corr/abs-0911-4863}
+Frank Nielsen and Vincent Garcia.
+\newblock Statistical exponential families: {A} digest with flash cards.
+\newblock {\em CoRR}, abs/0911.4863, 2009.
+
+\bibitem{DBLP:journals/ipl/NielsenN08}
+Frank Nielsen and Richard Nock.
+\newblock On the smallest enclosing information disk.
+\newblock {\em Inf. Process. Lett.}, 105(3):93--97, 2008.
+
+\bibitem{DBLP:conf/etvc/Nielsen08}
+Frank Nielsen.
+\newblock Abstracts of the {LIX} fall colloquium 2008: Emerging trends in
+  visual computing.
+\newblock In Frank Nielsen, editor, {\em Emerging Trends in Visual Computing,
+  {LIX} Fall Colloquium, {ETVC} 2008, Palaiseau, France, November 18-20, 2008.
+  Revised Invited Papers}, volume 5416 of {\em Lecture Notes in Computer
+  Science}, pages 1--12. Springer, 2008.
+
+\bibitem{DBLP:conf/etvc/NielsenN08}
+Frank Nielsen and Richard Nock.
+\newblock Clustering multivariate normal distributions.
+\newblock In Frank Nielsen, editor, {\em Emerging Trends in Visual Computing,
+  {LIX} Fall Colloquium, {ETVC} 2008, Palaiseau, France, November 18-20, 2008.
+  Revised Invited Papers}, volume 5416 of {\em Lecture Notes in Computer
+  Science}, pages 164--174. Springer, 2008.
+
+\bibitem{DBLP:conf/etvc/NockN08}
+Richard Nock and Frank Nielsen.
+\newblock Intrinsic geometries in learning.
+\newblock In Frank Nielsen, editor, {\em Emerging Trends in Visual Computing,
+  {LIX} Fall Colloquium, {ETVC} 2008, Palaiseau, France, November 18-20, 2008.
+  Revised Invited Papers}, volume 5416 of {\em Lecture Notes in Computer
+  Science}, pages 175--215. Springer, 2008.
+
+\bibitem{DBLP:conf/iciar/NielsenAT08}
+Frank Nielsen, Alexis Andr{\'{e}}, and Shigeru Tajima.
+\newblock Real-time spherical videos from a fast rotating camera.
+\newblock In Aur{\'{e}}lio~C. Campilho and Mohamed~S. Kamel, editors, {\em
+  Image Analysis and Recognition, 5th International Conference, {ICIAR} 2008,
+  P{\'{o}}voa de Varzim, Portugal, June 25-27, 2008. Proceedings}, volume 5112
+  of {\em Lecture Notes in Computer Science}, pages 326--335. Springer, 2008.
+
+\bibitem{DBLP:conf/icpr/NielsenN08}
+Frank Nielsen and Richard Nock.
+\newblock Bregman sided and symmetrized centroids.
+\newblock In {\em 19th International Conference on Pattern Recognition {(ICPR}
+  2008), December 8-11, 2008, Tampa, Florida, {USA}}, pages 1--4. {IEEE}
+  Computer Society, 2008.
+
+\bibitem{DBLP:conf/icpr/NockN08}
+Richard Nock and Frank Nielsen.
+\newblock On the efficient minimization of convex surrogates in supervised
+  learning.
+\newblock In {\em 19th International Conference on Pattern Recognition {(ICPR}
+  2008), December 8-11, 2008, Tampa, Florida, {USA}}, pages 1--4. {IEEE}
+  Computer Society, 2008.
+
+\bibitem{DBLP:conf/isbi/OwadaNIHN08}
+Shigeru Owada, Frank Nielsen, Takeo Igarashi, Ryo Haraguchi, and Kazuo
+  Nakazawa.
+\newblock Projection plane processing for sketch-based volume segmentation.
+\newblock In {\em Proceedings of the 2008 {IEEE} International Symposium on
+  Biomedical Imaging: From Nano to Macro, Paris, France, May 14-17, 2008},
+  pages 117--120. {IEEE}, 2008.
+
+\bibitem{DBLP:conf/isit/NielsenN08}
+Frank Nielsen and Richard Nock.
+\newblock Quantum voronoi diagrams and holevo channel capacity for 1-qubit
+  quantum states.
+\newblock In Frank~R. Kschischang and En{-}Hui Yang, editors, {\em 2008 {IEEE}
+  International Symposium on Information Theory, {ISIT} 2008, Toronto, ON,
+  Canada, July 6-11, 2008}, pages 96--100. {IEEE}, 2008.
+
+\bibitem{DBLP:conf/nips/NockN08}
+Richard Nock and Frank Nielsen.
+\newblock On the efficient minimization of classification calibrated
+  surrogates.
+\newblock In Daphne Koller, Dale Schuurmans, Yoshua Bengio, and L{\'{e}}on
+  Bottou, editors, {\em Advances in Neural Information Processing Systems 21,
+  Proceedings of the Twenty-Second Annual Conference on Neural Information
+  Processing Systems, Vancouver, British Columbia, Canada, December 8-11,
+  2008}, pages 1201--1208. Curran Associates, Inc., 2008.
+
+\bibitem{DBLP:journals/corr/abs-0801-0390}
+Richard Nock, Nicolas Sanz, Fred Celimene, and Frank Nielsen.
+\newblock Staring at economic aggregators through information lenses.
+\newblock {\em CoRR}, abs/0801.0390, 2008.
+
+\bibitem{DBLP:journals/corr/abs-0810-1261}
+Richard Nock, Pascal Vaillant, Frank Nielsen, and Claudia Henry.
+\newblock Soft uncoupling of markov chains for permeable language distinction:
+  {A} new algorithm.
+\newblock {\em CoRR}, abs/0810.1261, 2008.
+
+\bibitem{DBLP:journals/ai/NockN07}
+Richard Nock and Frank Nielsen.
+\newblock A real generalization of discrete adaboost.
+\newblock {\em Artif. Intell.}, 171(1):25--41, 2007.
+
+\bibitem{DBLP:journals/cga/Nielsen07}
+Frank Nielsen.
+\newblock The digital chameleon principle: Computing invisibility by rendering
+  transparency.
+\newblock {\em {IEEE} Computer Graphics and Applications}, 27(1):90--96, 2007.
+
+\bibitem{DBLP:journals/tcs/NockN07}
+Richard Nock and Frank Nielsen.
+\newblock Self-improved gaps almost everywhere for the agnostic approximation
+  of monomials.
+\newblock {\em Theor. Comput. Sci.}, 377(1-3):139--150, 2007.
+
+\bibitem{DBLP:conf/compgeom/NielsenBN07}
+Frank Nielsen, Jean{-}Daniel Boissonnat, and Richard Nock.
+\newblock Visualizing bregman voronoi diagrams.
+\newblock In Jeff Erickson, editor, {\em Proceedings of the 23rd {ACM}
+  Symposium on Computational Geometry, Gyeongju, South Korea, June 6-8, 2007},
+  pages 121--122. {ACM}, 2007.
+
+\bibitem{DBLP:conf/ijcai/HenryNN07}
+Claudia Henry, Richard Nock, and Frank Nielsen.
+\newblock Real boosting a la carte with an application to boosting oblique
+  decision tree.
+\newblock In Manuela~M. Veloso, editor, {\em {IJCAI} 2007, Proceedings of the
+  20th International Joint Conference on Artificial Intelligence, Hyderabad,
+  India, January 6-12, 2007}, pages 842--847, 2007.
+
+\bibitem{DBLP:conf/mva/NielsenN07}
+Frank Nielsen and Richard Nock.
+\newblock Fast graph segmentation based on statistical aggregation phenomena.
+\newblock In {\em Proceedings of the {IAPR} Conference on Machine Vision
+  Applications {(IAPR} {MVA} 2007), May 16-18, 2007, Tokyo, Japan}, pages
+  150--153, 2007.
+
+\bibitem{DBLP:conf/sg/OwadaOINT07}
+Shigeru Owada, Makoto Okabe, Takeo Igarashi, Frank Nielsen, and Norimichi
+  Tsumura.
+\newblock Customized slider bars for adjusting multi-dimension parameter sets.
+\newblock In Andreas Butz, Brian~D. Fisher, Antonio Kr{\"{u}}ger, Patrick
+  Olivier, and Shigeru Owada, editors, {\em Smart Graphics, 7th International
+  Symposium, {SG} 2007, Kyoto, Japan, June 25-27, 2007, Proceedings}, volume
+  4569 of {\em Lecture Notes in Computer Science}, pages 230--232. Springer,
+  2007.
+
+\bibitem{DBLP:conf/siggraph/OwadaNNI07}
+Shigeru Owada, Frank Nielsen, Kazuo Nakazawa, and Takeo Igarashi.
+\newblock A sketching interface for modeling the internal structures of 3d
+  shapes.
+\newblock In Sara McMains and Peter{-}Pike Sloan, editors, {\em International
+  Conference on Computer Graphics and Interactive Techniques, {SIGGRAPH} 2007,
+  San Diego, California, USA, August 5-9, 2007, Courses}, page~38. {ACM}, 2007.
+
+\bibitem{DBLP:conf/soda/NielsenBN07}
+Frank Nielsen, Jean{-}Daniel Boissonnat, and Richard Nock.
+\newblock On bregman voronoi diagrams.
+\newblock In Nikhil Bansal, Kirk Pruhs, and Clifford Stein, editors, {\em
+  Proceedings of the Eighteenth Annual {ACM-SIAM} Symposium on Discrete
+  Algorithms, {SODA} 2007, New Orleans, Louisiana, USA, January 7-9, 2007},
+  pages 746--755. {SIAM}, 2007.
+
+\bibitem{DBLP:journals/corr/abs-0709-2196}
+Frank Nielsen, Jean{-}Daniel Boissonnat, and Richard Nock.
+\newblock Bregman voronoi diagrams: Properties, algorithms and applications.
+\newblock {\em CoRR}, abs/0709.2196, 2007.
+
+\bibitem{DBLP:journals/corr/abs-0711-3242}
+Frank Nielsen and Richard Nock.
+\newblock On the centroids of symmetrized bregman divergences.
+\newblock {\em CoRR}, abs/0711.3242, 2007.
+
+\bibitem{DBLP:journals/pami/NockN06}
+Richard Nock and Frank Nielsen.
+\newblock On weighting clustering.
+\newblock {\em {IEEE} Trans. Pattern Anal. Mach. Intell.}, 28(8):1223--1235,
+  2006.
+
+\bibitem{DBLP:conf/cccg/NielsenN06}
+Frank Nielsen and Richard Nock.
+\newblock On the smallest enclosing information disk.
+\newblock In {\em Proceedings of the 18th Annual Canadian Conference on
+  Computational Geometry, {CCCG} 2006, August 14-16, 2006, Queen's University,
+  Ontario, Canada}, 2006.
+
+\bibitem{DBLP:conf/compgeom/NielsenN06}
+Frank Nielsen and Richard Nock.
+\newblock On approximating the smallest enclosing bregman balls.
+\newblock In Nina Amenta and Otfried Cheong, editors, {\em Proceedings of the
+  22nd {ACM} Symposium on Computational Geometry, Sedona, Arizona, USA, June
+  5-7, 2006}, pages 485--486. {ACM}, 2006.
+
+\bibitem{DBLP:conf/ecai/NockN06}
+Richard Nock and Frank Nielsen.
+\newblock A real generalization of discrete adaboost.
+\newblock In Gerhard Brewka, Silvia Coradeschi, Anna Perini, and Paolo
+  Traverso, editors, {\em {ECAI} 2006, 17th European Conference on Artificial
+  Intelligence, August 29 - September 1, 2006, Riva del Garda, Italy, Including
+  Prestigious Applications of Intelligent Systems {(PAIS} 2006), Proceedings},
+  volume 141 of {\em Frontiers in Artificial Intelligence and Applications},
+  pages 509--515. {IOS} Press, 2006.
+
+\bibitem{DBLP:conf/ecai/NockVNH06}
+Richard Nock, Pascal Vaillant, Frank Nielsen, and Claudia Henry.
+\newblock Soft uncoupling of markov chains for permeable language distinction:
+  {A} new algorithm.
+\newblock In Gerhard Brewka, Silvia Coradeschi, Anna Perini, and Paolo
+  Traverso, editors, {\em {ECAI} 2006, 17th European Conference on Artificial
+  Intelligence, August 29 - September 1, 2006, Riva del Garda, Italy, Including
+  Prestigious Applications of Intelligent Systems {(PAIS} 2006), Proceedings},
+  volume 141 of {\em Frontiers in Artificial Intelligence and Applications},
+  pages 823--824. {IOS} Press, 2006.
+
+\bibitem{DBLP:conf/icmcs/NielsenOH06}
+Frank Nielsen, Shigeru Owada, and Yuichi Hasegawa.
+\newblock Autoframing: {A} recommendation system for detecting undesirable
+  elements and cropping automatically photos.
+\newblock In {\em Proceedings of the 2006 {IEEE} International Conference on
+  Multimedia and Expo, {ICME} 2006, July 9-12 2006, Toronto, Ontario, Canada},
+  pages 417--420. {IEEE} Computer Society, 2006.
+
+\bibitem{DBLP:conf/sg/OwadaNI06}
+Shigeru Owada, Frank Nielsen, and Takeo Igarashi.
+\newblock Copy-paste synthesis of 3d geometry with repetitive patterns.
+\newblock In Andreas Butz, Brian~D. Fisher, Antonio Kr{\"{u}}ger, and Patrick
+  Olivier, editors, {\em Smart Graphics, 6th International Symposium, {SG}
+  2006, Vancouver, Canada, July 23-25, 2006, Proceedings}, volume 4073 of {\em
+  Lecture Notes in Computer Science}, pages 184--193. Springer, 2006.
+
+\bibitem{DBLP:conf/siggraph/OwadaNNI06}
+Shigeru Owada, Frank Nielsen, Kazuo Nakazawa, and Takeo Igarashi.
+\newblock A sketching interface for modeling the internal structures of 3d
+  shapes.
+\newblock In John~W. Finnegan and Dave Shreiner, editors, {\em International
+  Conference on Computer Graphics and Interactive Techniques, {SIGGRAPH} 2006,
+  Boston, Massachusetts, USA, July 30 - August 3, 2006, Courses}, page~12.
+  {ACM}, 2006.
+
+\bibitem{DBLP:journals/ipl/NielsenN05}
+Frank Nielsen and Richard Nock.
+\newblock A fast deterministic smallest enclosing disk approximation algorithm.
+\newblock {\em Inf. Process. Lett.}, 93(6):263--268, 2005.
+
+\bibitem{DBLP:journals/pr/NockN05}
+Richard Nock and Frank Nielsen.
+\newblock Semi-supervised statistical region refinement for color image
+  segmentation.
+\newblock {\em Pattern Recognit.}, 38(6):835--846, 2005.
+
+\bibitem{DBLP:journals/vc/Nielsen05}
+Frank Nielsen.
+\newblock Surround video: a multihead camera approach.
+\newblock {\em Vis. Comput.}, 21(1-2):92--103, 2005.
+
+\bibitem{DBLP:conf/cvpr/NielsenN05}
+Frank Nielsen and Richard Nock.
+\newblock Interactive pinpoint image object removal.
+\newblock In {\em 2005 {IEEE} Computer Society Conference on Computer Vision
+  and Pattern Recognition {(CVPR} 2005), 20-26 June 2005, San Diego, CA,
+  {USA}}, page 1191. {IEEE} Computer Society, 2005.
+
+\bibitem{DBLP:conf/ecml/NockN05}
+Richard Nock and Frank Nielsen.
+\newblock Fitting the smallest enclosing bregman ball.
+\newblock In Jo{\~{a}}o Gama, Rui Camacho, Pavel Brazdil, Al{\'{\i}}pio Jorge,
+  and Lu{\'{\i}}s Torgo, editors, {\em Machine Learning: {ECML} 2005, 16th
+  European Conference on Machine Learning, Porto, Portugal, October 3-7, 2005,
+  Proceedings}, volume 3720 of {\em Lecture Notes in Computer Science}, pages
+  649--656. Springer, 2005.
+
+\bibitem{DBLP:conf/iccS/AgronBN05}
+Paul Agron, Leo Bachmair, and Frank Nielsen.
+\newblock A visual interactive framework for formal derivation.
+\newblock In Vaidy~S. Sunderam, G.~Dick van Albada, Peter M.~A. Sloot, and
+  Jack~J. Dongarra, editors, {\em Computational Science - {ICCS} 2005, 5th
+  International Conference, Atlanta, GA, USA, May 22-25, 2005, Proceedings,
+  Part {I}}, volume 3514 of {\em Lecture Notes in Computer Science}, pages
+  1019--1026. Springer, 2005.
+
+\bibitem{DBLP:conf/iccv/NielsenN05}
+Frank Nielsen and Richard Nock.
+\newblock Interactive point-and-click segmentation for object removal in
+  digital images.
+\newblock In Nicu Sebe, Michael~S. Lew, and Thomas~S. Huang, editors, {\em
+  Computer Vision in Human-Computer Interaction, {ICCV} 2005 Workshop on HCI,
+  Beijing, China, October 21, 2005, Proceedings}, volume 3766 of {\em Lecture
+  Notes in Computer Science}, pages 131--140. Springer, 2005.
+
+\bibitem{DBLP:conf/mm/NielsenN05}
+Frank Nielsen and Richard Nock.
+\newblock Clickremoval: interactive pinpoint image object removal.
+\newblock In HongJiang Zhang, Tat{-}Seng Chua, Ralf Steinmetz, Mohan~S.
+  Kankanhalli, and Lynn Wilcox, editors, {\em Proceedings of the 13th {ACM}
+  International Conference on Multimedia, Singapore, November 6-11, 2005},
+  pages 315--318. {ACM}, 2005.
+
+\bibitem{DBLP:conf/si3d/OwadaNI05}
+Shigeru Owada, Frank Nielsen, and Takeo Igarashi.
+\newblock Volume catcher.
+\newblock In Anselmo Lastra, Marc Olano, David~P. Luebke, and Hanspeter
+  Pfister, editors, {\em Proceedings of the 2005 Symposium on Interactive 3D
+  Graphics, {SI3D} 2005, April 3-6, 2005, Washington, DC, {USA}}, pages
+  111--116. {ACM}, 2005.
+
+\bibitem{DBLP:journals/pami/NockN04}
+Richard Nock and Frank Nielsen.
+\newblock Statistical region merging.
+\newblock {\em {IEEE} Trans. Pattern Anal. Mach. Intell.}, 26(11):1452--1458,
+  2004.
+
+\bibitem{DBLP:journals/tcs/NockN04}
+Richard Nock and Frank Nielsen.
+\newblock On domain-partitioning induction criteria: worst-case bounds for the
+  worst-case based.
+\newblock {\em Theor. Comput. Sci.}, 321(2-3):371--382, 2004.
+
+\bibitem{DBLP:journals/tog/OwadaNOI04}
+Shigeru Owada, Frank Nielsen, Makoto Okabe, and Takeo Igarashi.
+\newblock Volumetric illustration: designing 3d models with internal textures.
+\newblock {\em {ACM} Trans. Graph.}, 23(3):322--328, 2004.
+
+\bibitem{DBLP:conf/cccg/NielsenN04}
+Frank Nielsen and Richard Nock.
+\newblock Approximating smallest enclosing disks.
+\newblock In {\em Proceedings of the 16th Canadian Conference on Computational
+  Geometry, CCCG'04, Concordia University, Montr{\'{e}}al, Qu{\'{e}}bec,
+  Canada, August 9-11, 2004}, pages 124--127, 2004.
+
+\bibitem{DBLP:conf/cvpr/NockN04}
+Richard Nock and Frank Nielsen.
+\newblock Grouping with bias revisited.
+\newblock In {\em 2004 {IEEE} Computer Society Conference on Computer Vision
+  and Pattern Recognition {(CVPR} 2004), with CD-ROM, 27 June - 2 July 2004,
+  Washington, DC, {USA}}, pages 460--465. {IEEE} Computer Society, 2004.
+
+\bibitem{DBLP:conf/iccsa/NielsenN04}
+Frank Nielsen and Richard Nock.
+\newblock Approximating smallest enclosing balls.
+\newblock In Antonio Lagan{\`{a}}, Marina~L. Gavrilova, Vipin Kumar, Youngsong
+  Mun, Chih Jeng~Kenneth Tan, and Osvaldo Gervasi, editors, {\em Computational
+  Science and Its Applications - {ICCSA} 2004, International Conference,
+  Assisi, Italy, May 14-17, 2004, Proceedings, Part {III}}, volume 3045 of {\em
+  Lecture Notes in Computer Science}, pages 147--157. Springer, 2004.
+
+\bibitem{DBLP:conf/icpr/NockN04}
+Richard Nock and Frank Nielsen.
+\newblock Improving clustering algorithms through constrained convex
+  optimization.
+\newblock In {\em 17th International Conference on Pattern Recognition, {ICPR}
+  2004, Cambridge, UK, August 23-26, 2004}, pages 557--560. {IEEE} Computer
+  Society, 2004.
+
+\bibitem{DBLP:conf/sdm/NockN04}
+Richard Nock and Frank Nielsen.
+\newblock An abstract weighting framework for clustering algorithms.
+\newblock In Michael~W. Berry, Umeshwar Dayal, Chandrika Kamath, and David~B.
+  Skillicorn, editors, {\em Proceedings of the Fourth {SIAM} International
+  Conference on Data Mining, Lake Buena Vista, Florida, USA, April 22-24,
+  2004}, pages 200--209. {SIAM}, 2004.
+
+\bibitem{DBLP:journals/algorithmica/KatzNS03}
+Matthew~J. Katz, Frank Nielsen, and Michael Segal.
+\newblock Maintenance of a piercing set for intervals with applications.
+\newblock {\em Algorithmica}, 36(1):59--73, 2003.
+
+\bibitem{DBLP:journals/ijig/OwadaSN03}
+Shigeru Owada, Yoshihisa Shinagawa, and Frank Nielsen.
+\newblock Enumeration of contour correspondence.
+\newblock {\em Int. J. Image Graph.}, 3(4):609--628, 2003.
+
+\bibitem{DBLP:conf/cvpr/NielsenN03}
+Frank Nielsen and Richard Nock.
+\newblock On region merging: The statistical soundness of fast sorting, with
+  applications.
+\newblock In {\em 2003 {IEEE} Computer Society Conference on Computer Vision
+  and Pattern Recognition {(CVPR} 2003), 16-22 June 2003, Madison, WI, {USA}},
+  pages 19--26. {IEEE} Computer Society, 2003.
+
+\bibitem{DBLP:conf/icip/Nielsen03}
+Frank Nielsen.
+\newblock Plenoptic path and its applications.
+\newblock In {\em Proceedings of the 2003 International Conference on Image
+  Processing, {ICIP} 2003, Barcelona, Catalonia, Spain, September 14-18, 2003},
+  pages 793--796. {IEEE}, 2003.
+
+\bibitem{DBLP:conf/sg/OwadaNNI03}
+Shigeru Owada, Frank Nielsen, Kazuo Nakazawa, and Takeo Igarashi.
+\newblock A sketching interface for modeling the internal structures of 3d
+  shapes.
+\newblock In Andreas Butz, Antonio Kr{\"{u}}ger, and Patrick Olivier, editors,
+  {\em Smart Graphics, Third International Symposium, {SG} 2003, Heidelberg,
+  Germany, July 2-4, 2003, Proceedings}, volume 2733 of {\em Lecture Notes in
+  Computer Science}, pages 49--57. Springer, 2003.
+
+\bibitem{DBLP:journals/vc/YotsukuraMNBP02}
+Tatsuo Yotsukura, Shigeo Morishima, Frank Nielsen, Kim Binsted, and Claudio~S.
+  Pinhanez.
+\newblock Hypermask - projecting a talking head onto a real object.
+\newblock {\em Vis. Comput.}, 18(2):111--120, 2002.
+
+\bibitem{DBLP:conf/itcc/Nielsen02}
+Frank Nielsen.
+\newblock High resolution full spherical videos.
+\newblock In {\em 2002 International Symposium on Information Technology
+  {(ITCC} 2002), 8-10 April 2002, Las Vegas, NV, {USA}}, pages 260--267. {IEEE}
+  Computer Society, 2002.
+
+\bibitem{DBLP:journals/tcs/Nielsen01}
+Frank Nielsen.
+\newblock On point covers of c-oriented polygons.
+\newblock {\em Theor. Comput. Sci.}, 263(1-2):17--29, 2001.
+
+\bibitem{DBLP:journals/tcs/CalegariGKN01}
+Patrice Cal{\'{e}}gari, Fr{\'{e}}d{\'{e}}ric Guidec, Pierre Kuonen, and Frank
+  Nielsen.
+\newblock Combinatorial optimization algorithms for radio network planning.
+\newblock {\em Theor. Comput. Sci.}, 263(1-2):235--245, 2001.
+
+\bibitem{DBLP:conf/eurographics/MorishimaYNBP01}
+Shigeo Morishima, Tatsuo Yotsukura, Frank Nielsen, Kim Binsted, and Claudio~S.
+  Pinhanez.
+\newblock {HYPER} {MASK} - projecting a virtual face onto a moving real object.
+\newblock In Jonathan~C. Roberts, editor, {\em 22nd Annual Conference of the
+  European Association for Computer Graphics, Eurographics 2001 - Short
+  Presentations, Manchester, UK, September 3-7, 2001}. Eurographics
+  Association, 2001.
+
+\bibitem{DBLP:journals/comgeo/EfratKNS00}
+Alon Efrat, Matthew~J. Katz, Frank Nielsen, and Micha Sharir.
+\newblock Dynamic data structures for fat objects and their applications.
+\newblock {\em Comput. Geom.}, 15(4):215--227, 2000.
+
+\bibitem{DBLP:journals/tcs/Nielsen00}
+Frank Nielsen.
+\newblock Fast stabbing of boxes in high dimensions.
+\newblock {\em Theor. Comput. Sci.}, 246(1-2):53--72, 2000.
+
+\bibitem{DBLP:conf/isaac/KatzNS00}
+Matthew~J. Katz, Frank Nielsen, and Michael Segal.
+\newblock Maintenance of a percing set for intervals with applications.
+\newblock In D.~T. Lee and Shang{-}Hua Teng, editors, {\em Algorithms and
+  Computation, 11th International Conference, {ISAAC} 2000, Taipei, Taiwan,
+  December 18-20, 2000, Proceedings}, volume 1969 of {\em Lecture Notes in
+  Computer Science}, pages 552--563. Springer, 2000.
+
+\bibitem{DBLP:conf/mva/NielsenM00}
+Frank Nielsen and Nicolas de~Mauroy.
+\newblock On the precision of textures.
+\newblock In {\em Proceedings of the {IAPR} Conference on Machine Vision
+  Applications {(IAPR} {MVA} 2000), November 28-30, 2000, Tokyo, Japan}, pages
+  31--34, 2000.
+
+\bibitem{DBLP:conf/ewcg/KatzNS00}
+Matthew~J. Katz, Frank Nielsen, and Michael Segal.
+\newblock Shooter location through piercing sets.
+\newblock In {\em EuroCG}, pages 55--58, 2000.
+
+\bibitem{DBLP:conf/siggraph/PinhanezNB99}
+Claudio~S. Pinhanez, Frank Nielsen, and Kim Binsted.
+\newblock Projecting computer graphics on moving surfaces: a simple calibration
+  and tracking method.
+\newblock In Jodi Giroux, Anne Richardson, and Jill Smolin, editors, {\em
+  Proceedings of the 26th Annual Conference on Computer Graphics and
+  Interactive Techniques, {SIGGRAPH} 1999, Los Angeles, CA, USA, August 8-13,
+  1999, Abstracts and Applications}, page 266. {ACM}, 1999.
+
+\bibitem{DBLP:journals/ijcga/NielsenY98}
+Frank Nielsen and Mariette Yvinec.
+\newblock Output-sensitive convex hull algorithms of planar convex objects.
+\newblock {\em Int. J. Comput. Geom. Appl.}, 8(1):39--66, 1998.
+
+\bibitem{DBLP:conf/cccg/Nielsen98}
+Frank Nielsen.
+\newblock On point covers of c-oriented polygons.
+\newblock In {\em Proceedings of the 10th Canadian Conference on Computational
+  Geometry, McGill University, Montr{\'{e}}al, Qu{\'{e}}bec, Canada, August
+  10-12, 1998}, 1998.
+
+\bibitem{DBLP:conf/jcdcg/Nielsen98}
+Frank Nielsen.
+\newblock Grouping and querying: {A} paradigm to get output-sensitive
+  algorithms.
+\newblock In Jin Akiyama, Mikio Kano, and Masatsugu Urabe, editors, {\em
+  Discrete and Computational Geometry, Japanese Conference, JCDCG'98, Tokyo,
+  Japan, December 9-12, 1998, Revised Papers}, volume 1763 of {\em Lecture
+  Notes in Computer Science}, pages 250--257. Springer, 1998.
+
+\bibitem{DBLP:conf/mva/Nielsen98}
+Frank Nielsen.
+\newblock Randomized adaptive algorithms for mosaicing systems.
+\newblock In {\em Proceedings of {IAPR} Workshop on Machine Vision
+  Applications, {MVA} 1998, November 17-19, 1998, Chiba, Japan}, pages 11--14,
+  1998.
+
+\bibitem{DBLP:conf/wads/EfratKNS97}
+Alon Efrat, Matthew~J. Katz, Frank Nielsen, and Micha Sharir.
+\newblock Dynamic data structures for fat objects and their applications.
+\newblock In Frank K. H.~A. Dehne, Andrew Rau{-}Chaplin,
+  J{\"{o}}rg{-}R{\"{u}}diger Sack, and Roberto Tamassia, editors, {\em
+  Algorithms and Data Structures, 5th International Workshop, {WADS} '97,
+  Halifax, Nova Scotia, Canada, August 6-8, 1997, Proceedings}, volume 1272 of
+  {\em Lecture Notes in Computer Science}, pages 297--306. Springer, 1997.
+
+\bibitem{DBLP:phd/hal/Nielsen96}
+Frank Nielsen.
+\newblock {\em Algorithmes g{\'{e}}om{\'{e}}triques adaptatifs.
+  (Output-sensitive Computational Geometry)}.
+\newblock PhD thesis, University of Nice Sophia Antipolis, France, 1996.
+
+\bibitem{DBLP:journals/ipl/Nielsen96}
+Frank Nielsen.
+\newblock Output-sensitive peeling of convex and maximal layers.
+\newblock {\em Inf. Process. Lett.}, 59(5):255--259, 1996.
+
+\bibitem{DBLP:conf/cccg/Nielsen96}
+Frank Nielsen.
+\newblock Fast stabbing of boxes in high dimensions.
+\newblock In Frank Fiala, Evangelos Kranakis, and J{\"{o}}rg{-}R{\"{u}}diger
+  Sack, editors, {\em Proceedings of the 8th Canadian Conference on
+  Computational Geometry, Carleton University, Ottawa, Canada, August 12-15,
+  1996}, pages 87--92. Carleton University Press, 1996.
+
+\bibitem{DBLP:conf/compgeom/KatzN96}
+Matthew~J. Katz and Frank Nielsen.
+\newblock On piercing sets of objects.
+\newblock In Sue Whitesides, editor, {\em Proceedings of the Twelfth Annual
+  Symposium on Computational Geometry, Philadelphia, PA, USA, May 24-26, 1996},
+  pages 113--121. {ACM}, 1996.
+
+\end{thebibliography}

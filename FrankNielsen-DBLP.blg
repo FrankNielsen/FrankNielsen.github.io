@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: FrankNielsen-DBLP.aux
+The style file: unsrt.bst
+Database file #1: FrankNielsen.bib
+Reallocated field_info (elt_size=4) to 10014 items from 5000.
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+You've used 339 entries,
+            1791 wiz_defined-function locations,
+            2210 strings with 73477 characters,
+and the built_in function-call counts, 93125 in all, are:
+= -- 8749
+> -- 3980
+< -- 205
++ -- 1407
+- -- 1068
+* -- 5900
+:= -- 13952
+add.period$ -- 1148
+call.type$ -- 339
+change.case$ -- 327
+chr.to.int$ -- 0
+cite$ -- 339
+duplicate$ -- 4623
+empty$ -- 8824
+format.name$ -- 1068
+if$ -- 21704
+int.to.chr$ -- 0
+int.to.str$ -- 339
+missing$ -- 331
+newline$ -- 1689
+num.names$ -- 530
+pop$ -- 902
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 2904
+stack$ -- 0
+substring$ -- 5577
+swap$ -- 1826
+text.length$ -- 205
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 940
+width$ -- 342
+write$ -- 3906
