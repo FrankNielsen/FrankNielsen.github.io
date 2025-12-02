@@ -1,0 +1,43 @@
+Significance Statement
+
+Covariance matrices and, more broadly, positive-definite operators constitute fundamental data types 
+in contemporary statistics, arising in applications spanning neuroimaging, radar signal processing, machine learning,
+ and quantitative finance. 
+ These matrices do not form a vector space but instead a convex cone, 
+ motivating a wide range of statistical methodologies grounded in differential geometry. 
+ The predominant geometric model is the affine-invariant Riemannian structure on the space of covariance matrices, 
+ which underpins key constructs such as Fréchet means and Riemannian Gaussian distributions. 
+ Although this framework is theoretically sound, its practical use often entails computationally intensive gradient-based iterative optimization, leading practitioners to adopt faster, closed-form log-Euclidean approximations. However, these approximations sacrifice the affine-invariance properties guaranteed by the affine-invariant Riemannian metric.
+We propose a new log-extrinsic framework that retains affine-invariant equivariance 
+while relying solely on elementary linear algebra, making it well suited for high-dimensional applications. 
+This framework yields a closed-form log-extrinsic mean that coincides with the Riemannian Fréchet mean under
+ mild symmetry conditions, and it supports an associated exponential family of
+ log-extrinsic Gaussian distributions. 
+ Furthermore, the log-extrinsic construction extends naturally to general symmetric cones.
+
+
+
+
+---
+
+Covariance matrices and related positive-definite operators are fundamental data types in modern statistics 
+met in applications ranging from neuroimaging and radar to machine learning and finance. 
+Covariances matrices do not form a vector
+space but a cone for which  numerous differential geometry
+based statistical methodologies
+have been proposed. 
+The most common geometric structure is the so-called affine-invariant Riemannian geometry of covariance matrices which lead
+to many constructions like Fr\´echet means and Riemannian Gaussians.
+Although this approach is theoretically sound, it typically relies on costly
+iterative optimization based on gradients so that practitioners
+often resort to fast so-called log-Euclidean closed-form approximations. 
+However, these approximations loose the invariance properties guaranteed by the affine-invariant
+Riemannian geometry. 
+We introduce a novel log-extrinsic framework
+that preserves the affine-invariant equivariance while using only elementary
+linear algebra, making it suitable for high-dimensional settings.
+Our framework provides a closed-form log-extrinsic
+mean that coincides with the Riemannian Fr\'echet mean under
+simple symmetry assumptions, together with an exponential family
+of log-extrinsic Gaussian distributions.
+This log-extrinsic framework is naturally defined in the more general setting of symmetric cones.

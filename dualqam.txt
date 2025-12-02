@@ -1,0 +1,55 @@
+kill(all)$
+fpprec:300;
+
+h(u):=log(1+exp(u));hinv(v):=log(exp(v)-1);
+fp(theta):=exp(theta)/(1+exp(theta));
+
+hdiamond(u):=2*asin(sqrt(u));
+hdiamondinv(v):=sin(v/2)**2;
+
+
+
+set_random_state(make_random_state(12025))$
+a:random (1.0); b:random (1.0);
+ap:fp(a); bp:fp(b);
+hinv((h(a)+h(b))/2); res1:bfloat(%);
+hdiamondinv((hdiamond(ap)+hdiamond(bp))/2); res2:bfloat(%);
+res1-res2;
+bfloat(%);
+
+hinv(h(u));ratsimp(%);
+h(hinv(v));ratsimp(%);
+
+
+
+-----------------------
+
+
+kill(all)$
+
+fpprec:300;
+
+hinv(theta):=2*log(tan(theta/2));
+fp(theta):=exp(theta)/(1+exp(theta));
+
+
+hdiamond(eta):=2*asin(sqrt(eta));
+hdiamondinv(eta):=sin(eta/2)**2;
+
+set_random_state(make_random_state(12025))$
+a:random (1.0);
+b:random (1.0);
+ap:fp(a);
+bp:fp(b);
+
+hinv((h(a)+h(b))/2);
+res1:bfloat(%);
+
+hdiamondinv((hdiamond(ap)+hdiamond(bp))/2);
+res2:bfloat(%);
+
+res1-res2;
+bfloat(%);
+
+
+
