@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Variance–Information Double Cone (bivariate case)</title>
+  <!-- Plotly.js from CDN -->
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 20px;
+    }
+    .controls {
+      margin-bottom: 16px;
+    }
+    .control-row {
+      margin-bottom: 8px;
+    }
+    label {
+      display: inline-block;
+      width: 40px;
+    }
+    input[type="range"] {
+      width: 300px;
+      vertical-align: middle;
+    }
+    .value {
+      display: inline-block;
+      width: 60px;
+      text-align: right;
+      margin-left: 6px;
+    }
+    #plots {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    #cone3d, #ellipse2d {
+      width: 600px;
+      height: 500px;
+      min-width: 320px;
+    }
+    @media (max-width: 1300px) {
+      #cone3d, #ellipse2d {
+        width: 100%;
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>Variance–Information Double Cone (bivariate case)</h2>
+
+  <div class="controls">
+    <div class="control-row">
+      <label for="r">r</label>
+      <input id="r" type="range" min="0" max="1" step="0.02" value="0.3">
+      <span class="value" id="rVal">0.30</span>
+    </div>
+    <div class="control-row">
+      <label for="theta">θ</label>
+      <input id="theta" type="range" min="-180" max="180" step="1" value="45">
+      <span class="value" id="thetaVal">45°</span>
+    </div>
+    <div class="control-row">
+      <label for="z">ζ</label>
+      <input id="z" type="range" min="-1" max="1" step="0.02" value="0">
+      <span class="value" id="zVal">0.00</span>
+    </div>
+  </div>
+
+  <div id="plots">
+    <div id="cone3d"></div>
+    <div id="ellipse2d"></div>
+  </div>
+
+  <script>
+    // ---------- Helpers: math ported from Python ----------
+
+    function covarianceFromRThetaZ(r, theta, z, epsilon = 1e-6) {
+      // Reconstruct Σ from (r, θ, ζ)
+      let denom = Math.pow(1 - z, 2) - r * r;
+      if (denom < epsilon) denom = epsilon;
+      const d = 4.0 / denom;
+      const t = d * (1 - z) - 2.0;
+      const sigma11 = (t + d * r * Math.cos(theta)) / 2.0;
+      const sigma22 = (t - d * r * Math.cos(theta)) / 2.0;
+      const sigma12 = 0.5 * d * r * Math.sin(theta);
+      return [[sigma11, sigma12], [sigma12, sigma22]];
+    }
+
+    function ellipseFromCov(Sigma, n = 200) {
+      // Σ = [[a,b],[b,c]]
+      const a = Sigma[0][0];
+      const b = Sigma[0][1];
+      const c = Sigma[1][1];
+
+      const trace = a + c;
+      const det = a * c - b * b;
+      const disc = Math.max(trace * trace - 4 * det, 0);
+      const temp = Math.sqrt(disc);
+      const lambda1 = 0.5 * (trace + temp);
+      const lambda2 = 0.5 * (trace - temp);
+
+      const s1 = Math.sqrt(Math.max(lambda1, 0));
+      const s2 = Math.sqrt(Math.max(lambda2, 0));
+
+      function eigenvector(lambda) {
+        let vx, vy;
+        if (Math.abs(b) > 1e-12) {
+          vx = b;
+          vy = lambda - a;
+        } else {
+          // diagonal matrix; pick standard basis
+          if (Math.abs(a - lambda) < Math.abs(c - lambda)) {
+            vx = 1; vy = 0;
+          } else {
+            vx = 0; vy = 1;
+          }
+        }
+        const norm = Math.hypot(vx, vy) || 1;
+        return [vx / norm, vy / norm];
+      }
+
+      const v1 = eigenvector(lambda1);
+      const v2 = eigenvector(lambda2);
+
+      const xs = [];
+      const ys = [];
+      for (let i = 0; i < n; i++) {
+        const angle = 2 * Math.PI * i / (n - 1);
+        const cosA = Math.cos(angle);
+        const sinA = Math.sin(angle);
+        // ellipse = V * diag(sqrt(λ)) * [cos, sin]
+        const x = s1 * v1[0] * cosA + s2 * v2[0] * sinA;
+        const y = s1 * v1[1] * cosA + s2 * v2[1] * sinA;
+        xs.push(x);
+        ys.push(y);
+      }
+      return { x: xs, y: ys };
+    }
+
+    function makeConeSurface(res = 80) {
+      const X = [];
+      const Y = [];
+      const Z = [];
+      for (let i = 0; i < res; i++) {
+        const z = -1 + 2 * i / (res - 1);
+        const r = 1 - Math.abs(z);
+        const rowX = [];
+        const rowY = [];
+        const rowZ = [];
+        for (let j = 0; j < res; j++) {
+          const theta = 2 * Math.PI * j / (res - 1);
+          rowX.push(r * Math.cos(theta));
+          rowY.push(r * Math.sin(theta));
+          rowZ.push(z);
+        }
+        X.push(rowX);
+        Y.push(rowY);
+        Z.push(rowZ);
+      }
+      return { X, Y, Z };
+    }
+
+    // ---------- Plot initialization ----------
+
+    const cone = makeConeSurface();
+
+    const coneTrace = {
+      type: "surface",
+      x: cone.X,
+      y: cone.Y,
+      z: cone.Z,
+      opacity: 0.25,
+      showscale: false,
+      colorscale: "Greys",
+      hoverinfo: "skip"
+    };
+
+    const pointTraceInitial = {
+      type: "scatter3d",
+      mode: "markers",
+      x: [0],
+      y: [0],
+      z: [0],
+      marker: { size: 6, color: "red" },
+      name: "chosen Σ"
+    };
+
+    const layout3d = {
+      title: "Variance–Information Double Cone (bivariate case)",
+      scene: {
+        xaxis: { title: "x" },
+        yaxis: { title: "y" },
+        zaxis: { title: "ζ" },
+        aspectmode: "cube"
+      },
+      margin: { l: 0, r: 0, t: 40, b: 0 }
+    };
+
+    Plotly.newPlot("cone3d", [coneTrace, pointTraceInitial], layout3d);
+
+    const ellipseTraceInitial = {
+      type: "scatter",
+      mode: "lines",
+      x: [],
+      y: [],
+      name: "1-σ contour"
+    };
+
+    const layout2d = {
+      title: "Standard-deviation-1 Ellipse for the Selected Σ",
+      xaxis: {
+        scaleanchor: "y",
+        scaleratio: 1,
+        zeroline: false,
+        range: [-2, 2]
+      },
+      yaxis: {
+        zeroline: false,
+        range: [-2, 2]
+      },
+      margin: { l: 0, r: 0, t: 40, b: 0 }
+    };
+
+    Plotly.newPlot("ellipse2d", [ellipseTraceInitial], layout2d);
+
+    // ---------- Update logic ----------
+
+    function updatePlots() {
+      const rSlider = document.getElementById("r");
+      const thetaSlider = document.getElementById("theta");
+      const zSlider = document.getElementById("z");
+
+      const r = parseFloat(rSlider.value);
+      const thetaDeg = parseFloat(thetaSlider.value);
+      const z = parseFloat(zSlider.value);
+
+      // Update labels
+      document.getElementById("rVal").textContent = r.toFixed(2);
+      document.getElementById("thetaVal").textContent = thetaDeg.toFixed(0) + "°";
+      document.getElementById("zVal").textContent = z.toFixed(2);
+
+      const theta = thetaDeg * Math.PI / 180.0;
+
+      // Covariance & ellipse
+      const Sigma = covarianceFromRThetaZ(r, theta, z);
+      const ellipse = ellipseFromCov(Sigma);
+
+      // Update 3D point
+      const pointTrace = {
+        type: "scatter3d",
+        mode: "markers",
+        x: [r * Math.cos(theta)],
+        y: [r * Math.sin(theta)],
+        z: [z],
+        marker: { size: 6, color: "red" },
+        name: "chosen Σ"
+      };
+      Plotly.react("cone3d", [coneTrace, pointTrace], layout3d);
+
+      // Update 2D ellipse
+      const ellipseTrace = {
+        type: "scatter",
+        mode: "lines",
+        x: ellipse.x,
+        y: ellipse.y,
+        name: "1-σ contour"
+      };
+      Plotly.react("ellipse2d", [ellipseTrace], layout2d);
+    }
+
+    // Attach listeners after DOM is ready
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("r").addEventListener("input", updatePlots);
+      document.getElementById("theta").addEventListener("input", updatePlots);
+      document.getElementById("z").addEventListener("input", updatePlots);
+
+      // Initial draw
+      updatePlots();
+    });
+  </script>
+</body>
+</html>
