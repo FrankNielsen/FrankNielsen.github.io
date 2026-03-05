@@ -49,7 +49,7 @@
   </style>
 </head>
 <body>
-  <h2>Variance–Information Double Cone (bivariate case)</h2>
+  <h2>Variance–Information Bicone model: Illustation with bivariate Gaussian normal distributions</h2>
 
   <div class="controls">
     <div class="control-row">
@@ -63,7 +63,7 @@
       <span class="value" id="thetaVal">45°</span>
     </div>
     <div class="control-row">
-      <label for="z">ζ</label>
+      <label for="z">z</label>
       <input id="z" type="range" min="-1" max="1" step="0.02" value="0">
       <span class="value" id="zVal">0.00</span>
     </div>
@@ -189,11 +189,11 @@
     };
 
     const layout3d = {
-      title: "Variance–Information Double Cone (bivariate case)",
+      title: "Variance–information bicone (2D Gaussians)",
       scene: {
         xaxis: { title: "x" },
         yaxis: { title: "y" },
-        zaxis: { title: "ζ" },
+        zaxis: { title: "z" },
         aspectmode: "cube"
       },
       margin: { l: 0, r: 0, t: 40, b: 0 }
