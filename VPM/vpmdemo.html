@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <title>Variance-Information model</title>
+
+  <!-- Plotly.js from CDN -->
+
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+
+  <style>
+
+    body {
+
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+      margin: 20px;
+
+    }
+
+    .controls {
+
+      margin-bottom: 16px;
+
+    }
+
+    .control-row {
+
+      margin-bottom: 8px;
+
+    }
+
+    label {
+
+      display: inline-block;
+
+      width: 40px;
+
+    }
+
+    input[type="range"] {
+
+      width: 300px;
+
+      vertical-align: middle;
+
+    }
+
+    .value {
+
+      display: inline-block;
+
+      width: 60px;
+
+      text-align: right;
+
+      margin-left: 6px;
+
+    }
+
+    #status {
+
+      margin-top: 8px;
+
+      font-size: 14px;
+
+      color: #444;
+
+    }
+
+    #plots {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 20px;
+
+    }
+
+    #cone3d, #ellipse2d {
+
+      width: 600px;
+
+      height: 500px;
+
+      min-width: 320px;
+
+    }
+
+    @media (max-width: 1300px) {
+
+      #cone3d, #ellipse2d {
+
+        width: 100%;
+
+        height: 400px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h2>Variance-Information model</h2>
+
+
+
+  <div class="controls">
+
+    <div class="control-row">
+
+      <label for="r">r</label>
+
+      <input id="r" type="range" min="0" max="1" step="0.02" value="0.3">
+
+      <span class="value" id="rVal">0.30</span>
+
+    </div>
+
+    <div class="control-row">
+
+      <label for="theta">θ</label>
+
+      <input id="theta" type="range" min="-180" max="180" step="1" value="45">
+
+      <span class="value" id="thetaVal">45°</span>
+
+    </div>
+
+    <div class="control-row">
+
+      <label for="z">ζ</label>
+
+      <input id="z" type="range" min="-1" max="1" step="0.02" value="0">
+
+      <span class="value" id="zVal">0.00</span>
+
+    </div>
+
+    <div id="status"></div>
+
+  </div>
+
+
+
+  <div id="plots">
+
+    <div id="cone3d"></div>
+
+    <div id="ellipse2d"></div>
+
+  </div>
+
+
+
+  <script>
+
+    // ---------- Helpers: math ported from Python ----------
+
+
+
+    const EPS = 1e-8;
+
+
+
+    function covarianceFromRThetaZ(r, theta, z, epsilon = 1e-6) {
+
+      // Reconstruct Σ = (I + A)(I - A)^(-1)
+
+      // where A = [[ζ + r cos θ, r sin θ], [r sin θ, ζ - r cos θ]].
+
+      let denom = Math.pow(1 - z, 2) - r * r;
+
+      if (denom < epsilon) denom = epsilon;
+
+      const d = 4.0 / denom;
+
+      const t = d * (1 - z) - 2.0;
+
+      const sigma11 = (t + d * r * Math.cos(theta)) / 2.0;
+
+      const sigma22 = (t - d * r * Math.cos(theta)) / 2.0;
+
+      const sigma12 = 0.5 * d * r * Math.sin(theta);
+
+      return [[sigma11, sigma12], [sigma12, sigma22]];
+
+    }
+
+
+
+    function precisionFromRThetaZ(r, theta, z, epsilon = 1e-6) {
+
+      // Reconstruct Λ = Σ^(-1) = (I - A)(I + A)^(-1).
+
+      // This is covarianceFromRThetaZ applied to -A.
+
+      let denom = Math.pow(1 + z, 2) - r * r;
+
+      if (denom < epsilon) denom = epsilon;
+
+      const d = 4.0 / denom;
+
+      const t = d * (1 + z) - 2.0;
+
+      const lambda11 = (t - d * r * Math.cos(theta)) / 2.0;
+
+      const lambda22 = (t + d * r * Math.cos(theta)) / 2.0;
+
+      const lambda12 = -0.5 * d * r * Math.sin(theta);
+
+      return [[lambda11, lambda12], [lambda12, lambda22]];
+
+    }
+
+
+
+    function ellipseFromCov(Sigma, n = 200) {
+
+      // Σ = [[a,b],[b,c]]
+
+      const a = Sigma[0][0];
+
+      const b = Sigma[0][1];
+
+      const c = Sigma[1][1];
+
+
+
+      const trace = a + c;
+
+      const det = a * c - b * b;
+
+      const disc = Math.max(trace * trace - 4 * det, 0);
+
+      const temp = Math.sqrt(disc);
+
+      const lambda1 = 0.5 * (trace + temp);
+
+      const lambda2 = 0.5 * (trace - temp);
+
+
+
+      const s1 = Math.sqrt(Math.max(lambda1, 0));
+
+      const s2 = Math.sqrt(Math.max(lambda2, 0));
+
+
+
+      function eigenvector(lambda) {
+
+        let vx, vy;
+
+        if (Math.abs(b) > 1e-12) {
+
+          vx = b;
+
+          vy = lambda - a;
+
+        } else {
+
+          // diagonal matrix; pick standard basis
+
+          if (Math.abs(a - lambda) < Math.abs(c - lambda)) {
+
+            vx = 1; vy = 0;
+
+          } else {
+
+            vx = 0; vy = 1;
+
+          }
+
+        }
+
+        const norm = Math.hypot(vx, vy) || 1;
+
+        return [vx / norm, vy / norm];
+
+      }
+
+
+
+      const v1 = eigenvector(lambda1);
+
+      const v2 = eigenvector(lambda2);
+
+
+
+      const xs = [];
+
+      const ys = [];
+
+      for (let i = 0; i < n; i++) {
+
+        const angle = 2 * Math.PI * i / (n - 1);
+
+        const cosA = Math.cos(angle);
+
+        const sinA = Math.sin(angle);
+
+        // ellipse = V * diag(sqrt(λ)) * [cos, sin]
+
+        const x = s1 * v1[0] * cosA + s2 * v2[0] * sinA;
+
+        const y = s1 * v1[1] * cosA + s2 * v2[1] * sinA;
+
+        xs.push(x);
+
+        ys.push(y);
+
+      }
+
+      return { x: xs, y: ys };
+
+    }
+
+
+
+    function makeConeSurface(res = 80, zMin = -1, zMax = 1) {
+
+      const X = [];
+
+      const Y = [];
+
+      const Z = [];
+
+      for (let i = 0; i < res; i++) {
+
+        const z = zMin + (zMax - zMin) * i / (res - 1);
+
+        const r = 1 - Math.abs(z);
+
+        const rowX = [];
+
+        const rowY = [];
+
+        const rowZ = [];
+
+        for (let j = 0; j < res; j++) {
+
+          const theta = 2 * Math.PI * j / (res - 1);
+
+          rowX.push(r * Math.cos(theta));
+
+          rowY.push(r * Math.sin(theta));
+
+          rowZ.push(z);
+
+        }
+
+        X.push(rowX);
+
+        Y.push(rowY);
+
+        Z.push(rowZ);
+
+      }
+
+      return { X, Y, Z };
+
+    }
+
+
+
+    function makeBaseRing(res = 160) {
+
+      const x = [];
+
+      const y = [];
+
+      const z = [];
+
+      for (let j = 0; j <= res; j++) {
+
+        const theta = 2 * Math.PI * j / res;
+
+        x.push(Math.cos(theta));
+
+        y.push(Math.sin(theta));
+
+        z.push(0);
+
+      }
+
+      return { x, y, z };
+
+    }
+
+
+
+    // The coordinate matrix A has eigenvalues α+ = ζ + r and α− = ζ − r.
+
+    // Covariance eigenvalues are (1 + α)/(1 − α), while precision eigenvalues are
+
+    // their reciprocals, (1 − α)/(1 + α). The limiting values 0 and Infinity are
+
+    // intentionally kept so the boundary cases can be drawn explicitly.
+
+    function eigensystemForRThetaZ(r, theta, z, kind) {
+
+      const alphaPlus = z + r;
+
+      const alphaMinus = z - r;
+
+
+
+      function valueFromAlpha(alpha) {
+
+        if (kind === "covariance") {
+
+          if (1 - alpha <= EPS) return Infinity;
+
+          if (1 + alpha <= EPS) return 0;
+
+          return Math.max(0, (1 + alpha) / (1 - alpha));
+
+        } else {
+
+          if (1 + alpha <= EPS) return Infinity;
+
+          if (1 - alpha <= EPS) return 0;
+
+          return Math.max(0, (1 - alpha) / (1 + alpha));
+
+        }
+
+      }
+
+
+
+      return {
+
+        values: [valueFromAlpha(alphaPlus), valueFromAlpha(alphaMinus)],
+
+        vectors: [
+
+          [Math.cos(theta / 2), Math.sin(theta / 2)],
+
+          [-Math.sin(theta / 2), Math.cos(theta / 2)]
+
+        ]
+
+      };
+
+    }
+
+
+
+    function finiteRadii(values) {
+
+      return values
+
+        .filter(v => Number.isFinite(v) && v >= 0)
+
+        .map(v => Math.sqrt(v));
+
+    }
+
+
+
+    function axisLimitForTraces(covValues, precisionValues) {
+
+      const radii = finiteRadii(covValues).concat(finiteRadii(precisionValues));
+
+      const finiteMax = radii.length ? Math.max(...radii) : 2;
+
+      const hasInfinity = covValues.concat(precisionValues).some(v => !Number.isFinite(v));
+
+      const base = hasInfinity ? Math.max(4, finiteMax * 1.3) : Math.max(2, finiteMax * 1.25);
+
+      return Math.min(10, base);
+
+    }
+
+
+
+    function segmentTrace(v, halfLength, color, name, dash = "solid", showlegend = true) {
+
+      return {
+
+        type: "scatter",
+
+        mode: "lines",
+
+        x: [-halfLength * v[0], halfLength * v[0]],
+
+        y: [-halfLength * v[1], halfLength * v[1]],
+
+        line: { color, width: 3, dash },
+
+        name,
+
+        showlegend
+
+      };
+
+    }
+
+
+
+    function parallelLineTrace(direction, normal, offset, halfLength, color, name, showlegend) {
+
+      return {
+
+        type: "scatter",
+
+        mode: "lines",
+
+        x: [offset * normal[0] - halfLength * direction[0], offset * normal[0] + halfLength * direction[0]],
+
+        y: [offset * normal[1] - halfLength * direction[1], offset * normal[1] + halfLength * direction[1]],
+
+        line: { color, width: 3, dash: "dash" },
+
+        name,
+
+        showlegend
+
+      };
+
+    }
+
+
+
+    function pointTrace2d(color, name) {
+
+      return {
+
+        type: "scatter",
+
+        mode: "markers",
+
+        x: [0],
+
+        y: [0],
+
+        marker: { color, size: 8 },
+
+        name,
+
+        showlegend: true
+
+      };
+
+    }
+
+
+
+    function largeCircleTrace(radius, color, name) {
+
+      const x = [];
+
+      const y = [];
+
+      for (let i = 0; i < 200; i++) {
+
+        const a = 2 * Math.PI * i / 199;
+
+        x.push(radius * Math.cos(a));
+
+        y.push(radius * Math.sin(a));
+
+      }
+
+      return {
+
+        type: "scatter",
+
+        mode: "lines",
+
+        x,
+
+        y,
+
+        line: { color, width: 3, dash: "dot" },
+
+        name,
+
+        showlegend: true
+
+      };
+
+    }
+
+
+
+    function visualTracesFromEigensystem(es, color, name, axisLimit) {
+
+      const values = es.values;
+
+      const vectors = es.vectors;
+
+      const v0 = values[0];
+
+      const v1 = values[1];
+
+      const e0 = vectors[0];
+
+      const e1 = vectors[1];
+
+      const inf0 = !Number.isFinite(v0);
+
+      const inf1 = !Number.isFinite(v1);
+
+      const zero0 = !inf0 && v0 <= EPS;
+
+      const zero1 = !inf1 && v1 <= EPS;
+
+      const traces = [];
+
+
+
+      if (!inf0 && !inf1 && !zero0 && !zero1) {
+
+        const s0 = Math.sqrt(v0);
+
+        const s1 = Math.sqrt(v1);
+
+        const x = [];
+
+        const y = [];
+
+        for (let i = 0; i < 200; i++) {
+
+          const a = 2 * Math.PI * i / 199;
+
+          const ca = Math.cos(a);
+
+          const sa = Math.sin(a);
+
+          x.push(s0 * e0[0] * ca + s1 * e1[0] * sa);
+
+          y.push(s0 * e0[1] * ca + s1 * e1[1] * sa);
+
+        }
+
+        traces.push({
+
+          type: "scatter",
+
+          mode: "lines",
+
+          x,
+
+          y,
+
+          line: { color, width: 3 },
+
+          name
+
+        });
+
+        return traces;
+
+      }
+
+
+
+      if (zero0 && zero1) {
+
+        traces.push(pointTrace2d(color, name + " point limit"));
+
+        return traces;
+
+      }
+
+
+
+      if (inf0 && inf1) {
+
+        traces.push(largeCircleTrace(axisLimit * 0.92, color, name + " all-plane limit"));
+
+        return traces;
+
+      }
+
+
+
+      if (inf0 && zero1) {
+
+        traces.push(segmentTrace(e0, axisLimit, color, name + " mixed limit", "dash", true));
+
+        return traces;
+
+      }
+
+
+
+      if (zero0 && inf1) {
+
+        traces.push(segmentTrace(e1, axisLimit, color, name + " mixed limit", "dash", true));
+
+        return traces;
+
+      }
+
+
+
+      if (zero0 && Number.isFinite(v1)) {
+
+        traces.push(segmentTrace(e1, Math.sqrt(v1), color, name + " rank-1 limit", "solid", true));
+
+        return traces;
+
+      }
+
+
+
+      if (zero1 && Number.isFinite(v0)) {
+
+        traces.push(segmentTrace(e0, Math.sqrt(v0), color, name + " rank-1 limit", "solid", true));
+
+        return traces;
+
+      }
+
+
+
+      if (inf0 && Number.isFinite(v1)) {
+
+        const offset = Math.sqrt(Math.max(v1, 0));
+
+        traces.push(parallelLineTrace(e0, e1, offset, axisLimit, color, name + " unbounded limit", true));
+
+        traces.push(parallelLineTrace(e0, e1, -offset, axisLimit, color, name + " unbounded limit", false));
+
+        return traces;
+
+      }
+
+
+
+      if (inf1 && Number.isFinite(v0)) {
+
+        const offset = Math.sqrt(Math.max(v0, 0));
+
+        traces.push(parallelLineTrace(e1, e0, offset, axisLimit, color, name + " unbounded limit", true));
+
+        traces.push(parallelLineTrace(e1, e0, -offset, axisLimit, color, name + " unbounded limit", false));
+
+        return traces;
+
+      }
+
+
+
+      return traces;
+
+    }
+
+
+
+    function boundaryStatusText(r, z) {
+
+      const alphaPlus = z + r;
+
+      const alphaMinus = z - r;
+
+      const upperApex = Math.abs(z - 1) <= EPS && r <= EPS;
+
+      const lowerApex = Math.abs(z + 1) <= EPS && r <= EPS;
+
+      const upperBoundary = Math.abs(alphaPlus - 1) <= 5 * EPS;
+
+      const lowerBoundary = Math.abs(alphaMinus + 1) <= 5 * EPS;
+
+
+
+      return "";
+
+    }
+
+
+
+    // ---------- Plot initialization ----------
+
+
+
+    const covarianceBoundary = makeConeSurface(80, -1, 0);
+
+    const precisionBoundary = makeConeSurface(80, 0, 1);
+
+    const mixedRing = makeBaseRing();
+
+
+
+    const covarianceBoundaryTrace = {
+
+      type: "surface",
+
+      x: covarianceBoundary.X,
+
+      y: covarianceBoundary.Y,
+
+      z: covarianceBoundary.Z,
+
+      opacity: 0.28,
+
+      showscale: false,
+
+      colorscale: [[0, "orange"], [1, "orange"]],
+
+      hoverinfo: "skip",
+
+      name: "covariance-degenerate boundary"
+
+    };
+
+
+
+    const precisionBoundaryTrace = {
+
+      type: "surface",
+
+      x: precisionBoundary.X,
+
+      y: precisionBoundary.Y,
+
+      z: precisionBoundary.Z,
+
+      opacity: 0.22,
+
+      showscale: false,
+
+      colorscale: [[0, "green"], [1, "green"]],
+
+      hoverinfo: "skip",
+
+      name: "precision-degenerate boundary"
+
+    };
+
+
+
+    const mixedRingTrace = {
+
+      type: "scatter3d",
+
+      mode: "lines",
+
+      x: mixedRing.x,
+
+      y: mixedRing.y,
+
+      z: mixedRing.z,
+
+      line: { width: 5, color: "purple" },
+
+      name: "mixed degeneracy"
+
+    };
+
+
+
+    const pointTraceInitial = {
+
+      type: "scatter3d",
+
+      mode: "markers",
+
+      x: [0],
+
+      y: [0],
+
+      z: [0],
+
+      marker: { size: 6, color: "black" },
+
+      name: "chosen point"
+
+    };
+
+
+
+    const layout3d = {
+
+      title: "Variance-Information model",
+
+      scene: {
+
+        xaxis: { title: "x" },
+
+        yaxis: { title: "y" },
+
+        zaxis: { title: "ζ" },
+
+        aspectmode: "cube"
+
+      },
+
+      uirevision: "keep",
+
+      margin: { l: 0, r: 0, t: 40, b: 0 }
+
+    };
+
+
+
+    Plotly.newPlot("cone3d", [
+
+      covarianceBoundaryTrace,
+
+      precisionBoundaryTrace,
+
+      mixedRingTrace,
+
+      pointTraceInitial
+
+    ], layout3d);
+
+
+
+    const ellipseTraceInitial = {
+
+      type: "scatter",
+
+      mode: "lines",
+
+      x: [],
+
+      y: [],
+
+      name: "covariance"
+
+    };
+
+
+
+    const precisionTraceInitial = {
+
+      type: "scatter",
+
+      mode: "lines",
+
+      x: [],
+
+      y: [],
+
+      name: "precision"
+
+    };
+
+
+
+    const layout2d = {
+
+      title: "Covariance / Precision Contours for the chosen (black) point",
+
+      xaxis: {
+
+        scaleanchor: "y",
+
+        scaleratio: 1,
+
+        zeroline: false,
+
+        range: [-2, 2]
+
+      },
+
+      yaxis: {
+
+        zeroline: false,
+
+        range: [-2, 2]
+
+      },
+
+      uirevision: "keep",
+
+      margin: { l: 0, r: 0, t: 40, b: 0 }
+
+    };
+
+
+
+    Plotly.newPlot("ellipse2d", [ellipseTraceInitial, precisionTraceInitial], layout2d);
+
+
+
+    // ---------- Update logic ----------
+
+
+
+    function clamp(value, min, max) {
+
+      return Math.min(max, Math.max(min, value));
+
+    }
+
+
+
+    function roundToSliderStep(value, slider) {
+
+      const step = parseFloat(slider.step || "0.01");
+
+      const min = parseFloat(slider.min || "0");
+
+      return min + Math.round((value - min) / step) * step;
+
+    }
+
+
+
+    function updatePlots(changed = null) {
+
+      const rSlider = document.getElementById("r");
+
+      const thetaSlider = document.getElementById("theta");
+
+      const zSlider = document.getElementById("z");
+
+
+
+      // Keep both sliders at their full ranges. When a requested move leaves
+
+      // the bicone r <= 1 - |ζ|, slide the other coordinate back onto the
+
+      // boundary instead of shrinking the r-slider range.
+
+      rSlider.max = "1";
+
+
+
+      let r = parseFloat(rSlider.value);
+
+      let z = parseFloat(zSlider.value);
+
+
+
+      r = clamp(r, 0, 1);
+
+      z = clamp(z, -1, 1);
+
+
+
+      const rMaxForZ = Math.max(0, 1 - Math.abs(z));
+
+      if (r > rMaxForZ + EPS) {
+
+        if (changed === "r") {
+
+          // r moved too far for the current ζ: keep r and slide ζ toward 0,
+
+          // staying on the same upper/lower cone side.
+
+          const sign = z < 0 ? -1 : 1;
+
+          z = sign * Math.max(0, 1 - r);
+
+          z = clamp(roundToSliderStep(z, zSlider), -1, 1);
+
+          zSlider.value = z.toFixed(2);
+
+        } else {
+
+          // ζ moved too far for the current r, or this is initial cleanup:
+
+          // keep ζ and slide r inward to the boundary.
+
+          r = rMaxForZ;
+
+          r = clamp(roundToSliderStep(r, rSlider), 0, 1);
+
+          rSlider.value = r.toFixed(2);
+
+        }
+
+      } else {
+
+        rSlider.value = r.toFixed(2);
+
+        zSlider.value = z.toFixed(2);
+
+      }
+
+
+
+      const thetaDeg = parseFloat(thetaSlider.value);
+
+
+
+      // Update labels
+
+      document.getElementById("rVal").textContent = r.toFixed(2);
+
+      document.getElementById("thetaVal").textContent = thetaDeg.toFixed(0) + "°";
+
+      document.getElementById("zVal").textContent = z.toFixed(2);
+
+
+
+      const theta = thetaDeg * Math.PI / 180.0;
+
+
+
+      // Keep these matrix reconstructions available for debugging / inspection.
+
+      // The displayed contours below use the spectral formulas so boundary cases
+
+      // can be represented as rank-1, unbounded, or all-plane limits.
+
+      const Sigma = covarianceFromRThetaZ(r, theta, z);
+
+      const Precision = precisionFromRThetaZ(r, theta, z);
+
+      void Sigma;
+
+      void Precision;
+
+
+
+      // Update 3D point
+
+      const pointTrace = {
+
+        type: "scatter3d",
+
+        mode: "markers",
+
+        x: [r * Math.cos(theta)],
+
+        y: [r * Math.sin(theta)],
+
+        z: [z],
+
+        marker: { size: 6, color: "black" },
+
+        name: "chosen point"
+
+      };
+
+      Plotly.react("cone3d", [
+
+        covarianceBoundaryTrace,
+
+        precisionBoundaryTrace,
+
+        mixedRingTrace,
+
+        pointTrace
+
+      ], layout3d);
+
+
+
+      // Update 2D covariance and precision contours, including limits.
+
+      const covES = eigensystemForRThetaZ(r, theta, z, "covariance");
+
+      const precisionES = eigensystemForRThetaZ(r, theta, z, "precision");
+
+      const axisLimit = axisLimitForTraces(covES.values, precisionES.values);
+
+      const covTraces = visualTracesFromEigensystem(covES, "red", "covariance", axisLimit);
+
+      const precisionTraces = visualTracesFromEigensystem(precisionES, "blue", "precision", axisLimit);
+
+
+
+      const layout2dUpdated = {
+
+        ...layout2d,
+
+        xaxis: { ...layout2d.xaxis, range: [-axisLimit, axisLimit] },
+
+        yaxis: { ...layout2d.yaxis, range: [-axisLimit, axisLimit] }
+
+      };
+
+      Plotly.react("ellipse2d", covTraces.concat(precisionTraces), layout2dUpdated);
+
+
+
+      document.getElementById("status").textContent = boundaryStatusText(r, z);
+
+    }
+
+
+
+    // Attach listeners after DOM is ready
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      document.getElementById("r").addEventListener("input", () => updatePlots("r"));
+
+      document.getElementById("theta").addEventListener("input", () => updatePlots("theta"));
+
+      document.getElementById("z").addEventListener("input", () => updatePlots("z"));
+
+
+
+      // Initial draw
+
+      updatePlots();
+
+    });
+
+  </script>
+
+</body>
+
+</html>
