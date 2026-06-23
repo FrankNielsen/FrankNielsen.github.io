@@ -36,8 +36,8 @@ boolean toggleRectify=false;
 
 
 int n;
-int nstart=8;
-//int nstart=128;
+//int nstart=8;
+int nstart=128;
 //int nstart=64;
 
 
