@@ -1,0 +1,29 @@
+/* Itakura-Saito divergence: Check that geometric mean is symmetrized centroid thetaS */
+kill(all);
+F(theta):=-log(theta);
+gradF(theta):=-1/theta;
+BD(theta1,theta2):=F(theta1)-F(theta2)-(theta1-theta2)*gradF(theta2);
+thetabar  : (theta1+theta2)/2;  /* arithmetic mean */
+thetaubar: 2/((1/theta1)+(1/theta2)); /* harmonic mean */
+thetaS : sqrt(theta1*theta2); /* geometric mean */
+/* let us check that thetaS belongs to the mixed bisector */
+BD(thetabar,thetaS)-BD(thetaS,thetaubar);
+ratsimp(%);
+%,logcontract;
+
+
+theta1:random (1.0);
+theta2:random (1.0);
+
+
+
+bfloat(%);
+
+
+BD(thetabar,theta)-BD(theta,thetaubar);
+solve(%,theta);
+
+
+f(x):=-log(x)-log(1-x);
+derivative(f(x),x,2);
+plot2d(%,[x,0.2,0.8]);
