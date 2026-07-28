@@ -1,6 +1,7 @@
 // Frank.Nielsen@acm.org
 // July 2026
 //
+// C:\Travail\GitHub\FrankNielsen.github.io\P5\PowerMEBBregmanMEBPDE
 
 import processing.pdf.*;
 
@@ -8,109 +9,24 @@ int side = 800;
 int ww = side;
 int hh = side;
 
-
-
-// exp
-double MINP=-5,MAXP=10;
- double delta=0.2;
- double minx=MINP-delta;
- double maxx=MAXP+delta;
- double miny=MINP-delta;
- double maxy=MAXP+delta;
- 
- // parameter for clipping
- double MIN=-10000000;
- double deltat=-0.005;
- double minxt=MIN;
- double maxxt=-MIN;
- double minyt=MIN;
- double maxyt=-MIN;
-// end exp
-
-
-/*
-// L22
- double delta=0.2;
- double minx=-delta;
- double maxx=1.0+delta;
- double miny=-delta;
- double maxy=1.0+delta;
- 
- 
- double deltat=-0.005;
- double minxt=-deltat;
- double maxxt=1.0+deltat;
- double minyt=-deltat;
- double maxyt=1.0+deltat;
- */
-
-
-boolean toggleLink=true;
-boolean toggleText=true;
-
-
-/*
-double MINP=-20;
 double delta=0.2;
-double minx=MINP-delta;
-double maxx=-MINP+delta;
-double miny=MINP-delta;
-double maxy=-MINP+delta;
+double minx=-delta;
+double maxx=1.0+delta;
+double miny=-delta;
+double maxy=1.0+delta;
 
-double MIN=0, MAX=10;
-double deltat=0.005;
-double minxt=MIN+delta;
-double maxxt=MAX;
-double minyt=MIN+delta;
-double maxyt=MAX;
-*/
-
-/*
-double F(double t) {
-  return Math.log(t)-t;
-}
-
-double gradF(double t) {
-  return Math.log(t);
-}
-*/
-
-
-double F(double t) {
- return Math.exp(t);
- }
- 
- double gradF(double t) {
- return Math.exp(t);
- }
- 
-
-
-/*
-double F(double t) {
- return 0.5*t*t;
- }
- double gradF(double t) {
- return t;
- }
- */
-
-// Separable Bregman divergence
-double F(double [] t) {
-  return F(t[0])+F(t[1]);
-}
-
-
+boolean toggleText=true;
+boolean toggleAnimation=true;
+boolean toggleRectify=false;
 
 
 int n;
-int nstart=32; //16;//2;
+int nstart=8;
+//int nstart=2;
 
 
 double [][] point; // stored 2d coordinates
 double [] weight; // weight
-
-double [][] param; // Bregman
 float ptsize=3;
 
 color colgen=color(255, 0, 0);
@@ -132,12 +48,51 @@ public   double inner(double [] pt1, double [] pt2)
 }
 
 
+WeightedPoint [] wset;
+WeightedPoint PMEB;
+int nbiter=1000;
+
+WeightedPoint BMEB;
+double [][] bregset;
+
+
+// Initialize weighted point set
+void initializeWS()
+{
+  n=nstart;
+  wset=new WeightedPoint [n];
+  bregset=new double [n][2];
+  int i, j;
+
+  /*
+  for(i=0;i<n;i++) {wset[i]=WeightedPoint.Random(2);
+   for(j=0;j<2;j++) bregset[i][j]=wset[i].x[j];
+   //println(wset[i].w);
+   }
+   */
+
+  for (i=0; i<n; i++) {
+    for (j=0; j<2; j++) bregset[i][j]=Math.random();
+
+    wset[i]=new WeightedPoint(2);
+    wset[i].x[0]=BregmanMEB.fprime(bregset[i][0]);
+    wset[i].x[1]=BregmanMEB.fprime(bregset[i][1]);
+    wset[i].w=sqr(wset[i].x[0])+sqr(wset[i].x[1])+2*BregmanMEB.g(wset[i].x[0])+2*BregmanMEB.g(wset[i].x[1]);
+  }
+
+
+
+  PMEB=PowerMEB.PowerMEB(wset, nbiter);
+  BMEB=BregmanMEB.BregmanMEB(bregset, nbiter);
+}
 
 void setup()
 {
   size(800, 800);
   n=nstart;
   initialize();
+
+  initializeWS();
 }
 
 
@@ -181,14 +136,57 @@ void MyCircle(float xx, float yy, float rr)
   // circle((float)x2X(point[i][0]), (float)y2Y(point[i][1]), (float)x2X(Math.sqrt(weight[i])));
 }
 
+
+// drawgin
 void draw()
+{
+
+  int i, j, ii, jj;
+
+
+
+  surface.setTitle("n="+n);
+
+
+
+  background(255, 255, 255);
+
+
+  stroke(0, 0, 255);
+  MyPoint(PMEB.x[0], PMEB.x[1]);
+
+  if (PMEB.w>0)
+    MyCircle((float)(PMEB.x[0]), (float)(PMEB.x[1]), (float)Math.sqrt(PMEB.w));
+
+  strokeWeight(2);
+  fill(colgen);
+  stroke(colgen);
+
+  for (i=0; i<n; i++) {
+    fill(240);
+    stroke(240);
+    //circle((float)x2X(point[i][0]), (float)y2Y(point[i][1]), (float)x2X(Math.sqrt(weight[i])));
+    MyCircle((float)(wset[i].x[0]), (float)(wset[i].x[1]), (float)Math.sqrt(wset[i].w));
+
+    fill(colgen);
+    stroke(colgen);
+    MyPoint(wset[i].x[0], wset[i].x[1]);
+    //   ellipse((float)x2X(point[i][0]), (float)y2Y(point[i][1]), ptsize,ptsize);
+  }
+
+
+  stroke(0, 255, 0);
+  MyPoint(BMEB.x[0], BMEB.x[1]);
+}
+
+void drawPD()
 {
   int i, j, ii, jj;
   Site site;
   PolygonSimple polygon;
 
-  //  println("n="+n);
-  surface.setTitle("Bregman Voronoi/Power diagram n="+n);
+  println("n="+n);
+  surface.setTitle("Power diagram n="+n);
 
 
 
@@ -205,27 +203,14 @@ void draw()
     //circle((float)x2X(point[i][0]), (float)y2Y(point[i][1]), (float)x2X(Math.sqrt(weight[i])));
     MyCircle((float)(point[i][0]), (float)(point[i][1]), (float)Math.sqrt(weight[i]));
 
-    fill(0, 0, 255);
-    stroke(0, 0, 255);
+    fill(colgen);
+    stroke(colgen);
     MyPoint(point[i][0], point[i][1]);
     //   ellipse((float)x2X(point[i][0]), (float)y2Y(point[i][1]), ptsize,ptsize);
   }
 
 
   strokeWeight(1);
-  
-  if (toggleLink)
-  {
-    for (i=0; i<n; i++) {
-    fill(0,255,0);
-    stroke(0,255,0);
-  
- MyLine(param[i][0], param[i][1], point[i][0], point[i][1]);
- 
- }
-  }
-  
-  
   stroke(colVor);
   fill(colVor);
 
@@ -242,12 +227,8 @@ void draw()
     }
   }
 
-  // BVD in red
-  for (i=0; i<n; i++) {
-    fill(255, 0, 0);
-    stroke(255, 0, 0);
-    MyPoint(param[i][0], param[i][1]);
-  }
+
+
 
 
   float rr;
@@ -272,6 +253,10 @@ public static double mind(double x, double y)
   else return y;
 }
 
+public static double sqr(double x) {
+  return x;
+}
+
 
 void computePD()
 {
@@ -289,82 +274,26 @@ void computePD()
   diagram.computeDiagram();
 }
 
-
-double lambda=1;
-
-void ConvertPD()
-{ double [] eta=new double[2];
-   int i;
-    for ( i = 0; i < n; i++) {
-
-     
-
-    eta[0]=gradF(param[i][0]);
-    eta[1]=gradF(param[i][1]);
-
-    // equivalent weighted points
-    point[i][0]=lambda*(eta[0]);
-    point[i][1]=lambda* (eta[1]);
-    weight[i]=lambda*(inner(eta, eta)+2*(F(param[i])-inner(param[i], eta)));
-  }
-
-
-  double Wmin=weight[0];
-  for ( i = 1; i < n; i++) Wmin=mind(Wmin, weight[i]);
-  for ( i = 0; i < n; i++) {
-    weight[i]+=Wmin;
-    println(i+" "+weight[i]);
-    println(param[i][0]+" "+param[i][1]+" -> "+point[i][0]+" "+point[i][1]);
-  }
-
-}
-
 // Initialization procedure
 void initialize()
 {
   int i;
-  param=new double[n][2];
+
   point=new double[n][2];
   weight=new double[n];
 
-  double [] eta=new double[2];
-
   for ( i = 0; i < n; i++) {
-
-    // Bregman parameters
-    param[i][0]=Math.random();
-    param[i][1]=Math.random();
-  }
-  
-  ConvertPD();
-  
-  /*
-    eta[0]=gradF(param[i][0]);
-    eta[1]=gradF(param[i][1]);
-
-    // equivalent weighted points
-    point[i][0]=lambda*(eta[0]);
-    point[i][1]=lambda* (eta[1]);
-    weight[i]=lambda*(inner(eta, eta)+2*(F(param[i])-inner(param[i], eta)));
+    point[i][0]=Math.random();
+    point[i][1]=Math.random();
+    weight[i]=0.1*Math.random();
   }
 
-
-  double Wmin=weight[0];
-  for ( i = 1; i < n; i++) Wmin=mind(Wmin, weight[i]);
-  for ( i = 0; i < n; i++) {
-    weight[i]+=Wmin;
-    println(i+" "+weight[i]);
-    println(param[i][0]+" "+param[i][1]+" -> "+point[i][0]+" "+point[i][1]);
-  }
-*/
-
-  // clip to domain
   rootPolygon = new PolygonSimple();
 
-  rootPolygon.add(minxt, minyt);
-  rootPolygon.add(maxxt, minyt);
-  rootPolygon.add(maxxt, maxyt);
-  rootPolygon.add(minyt, maxyt);
+  rootPolygon.add(minx, miny);
+  rootPolygon.add(maxx, miny);
+  rootPolygon.add(maxx, maxy);
+  rootPolygon.add(miny, maxy);
 
 
 
@@ -379,6 +308,7 @@ void keyPressed()
 
   if (key==' ') {
     initialize();
+    initializeWS();
     draw();
   }
 
@@ -388,17 +318,8 @@ void keyPressed()
     draw();
   }
 
-if (key=='l') {toggleLink=!toggleLink;
- 
-    draw();
-  }
 
-if (key=='w') { 
- lambda=0.5;
- ConvertPD();computePD();
-    draw();
-  }
-  
+
 
   if (key=='n') {
     n=nstart;
@@ -460,12 +381,12 @@ void savepdffile()
 {
   String suffix=year()+"-"+month()+"-"+day()+"-"+hour()+"-"+minute()+"-"+second();
 
-  beginRecord(PDF, "BVDPD-"+n+"-"+suffix+".pdf");
+  beginRecord(PDF, "BregmanPDMEB-"+n+"-"+suffix+".pdf");
 
 
   draw();
 
-  save("BVDPD-"+n+"-"+suffix+".png");
+  save("BregmanPDMEB-"+n+"-"+suffix+".png");
   endRecord();
 }
 

@@ -8,92 +8,43 @@ int side = 800;
 int ww = side;
 int hh = side;
 
-
-
-// exp
-double MINP=-5,MAXP=10;
- double delta=0.2;
- double minx=MINP-delta;
- double maxx=MAXP+delta;
- double miny=MINP-delta;
- double maxy=MAXP+delta;
+double lambda=1;
  
- // parameter for clipping
- double MIN=-10000000;
- double deltat=-0.005;
- double minxt=MIN;
- double maxxt=-MIN;
- double minyt=MIN;
- double maxyt=-MIN;
-// end exp
-
-
-/*
-// L22
- double delta=0.2;
- double minx=-delta;
- double maxx=1.0+delta;
- double miny=-delta;
- double maxy=1.0+delta;
+ double delta=-4;
+ 
+ // in theta space
+ double minx=delta;
+ double maxx=1;
+ double miny=delta;
+ double maxy=1.0;
  
  
- double deltat=-0.005;
- double minxt=-deltat;
- double maxxt=1.0+deltat;
- double minyt=-deltat;
- double maxyt=1.0+deltat;
- */
+ double deltat=-10;
+ double minxt=deltat;
+ double maxxt=1.0-deltat;
+ double minyt=deltat;
+ double maxyt=1.0-deltat;
+ 
 
 
 boolean toggleLink=true;
 boolean toggleText=true;
 
 
-/*
-double MINP=-20;
-double delta=0.2;
-double minx=MINP-delta;
-double maxx=-MINP+delta;
-double miny=MINP-delta;
-double maxy=-MINP+delta;
+ 
+// extended Shannon
 
-double MIN=0, MAX=10;
-double deltat=0.005;
-double minxt=MIN+delta;
-double maxxt=MAX;
-double minyt=MIN+delta;
-double maxyt=MAX;
-*/
-
-/*
 double F(double t) {
-  return Math.log(t)-t;
+  return t*Math.log(t)-t;
 }
 
 double gradF(double t) {
   return Math.log(t);
 }
-*/
 
 
-double F(double t) {
- return Math.exp(t);
- }
  
- double gradF(double t) {
- return Math.exp(t);
- }
  
-
-
-/*
-double F(double t) {
- return 0.5*t*t;
- }
- double gradF(double t) {
- return t;
- }
- */
 
 // Separable Bregman divergence
 double F(double [] t) {
@@ -104,7 +55,7 @@ double F(double [] t) {
 
 
 int n;
-int nstart=32; //16;//2;
+int nstart=8; //16;//2;
 
 
 double [][] point; // stored 2d coordinates
@@ -181,6 +132,8 @@ void MyCircle(float xx, float yy, float rr)
   // circle((float)x2X(point[i][0]), (float)y2Y(point[i][1]), (float)x2X(Math.sqrt(weight[i])));
 }
 
+float rescalew=1; //0.5;
+
 void draw()
 {
   int i, j, ii, jj;
@@ -202,8 +155,7 @@ void draw()
   for (i=0; i<n; i++) {
     fill(240);
     stroke(240);
-    //circle((float)x2X(point[i][0]), (float)y2Y(point[i][1]), (float)x2X(Math.sqrt(weight[i])));
-    MyCircle((float)(point[i][0]), (float)(point[i][1]), (float)Math.sqrt(weight[i]));
+    MyCircle((float)(point[i][0]), (float)(point[i][1]), (float)(Math.sqrt(rescalew*weight[i])));
 
     fill(0, 0, 255);
     stroke(0, 0, 255);
@@ -258,12 +210,18 @@ void draw()
 
   if (toggleText)
   {
-    String msg="PD n="+n;
+  //  String msg="PD n="+n;
+  String msg="λ="+lambda; //+ "\nweight scale="+rescalew ;
     textSize(32);
     fill(0, 0, 0);
     stroke(0, 0, 0);
     text(msg, 100, 30);
   }
+  
+  
+  stroke(255,0,255);
+  MyLine(minxt,0,maxxt,0);
+    MyLine(0,minyt,0,maxyt);
 }
 
 public static double mind(double x, double y)
@@ -290,7 +248,7 @@ void computePD()
 }
 
 
-double lambda=1;
+double sqr(double x){return x*x;}
 
 void ConvertPD()
 { double [] eta=new double[2];
@@ -304,8 +262,10 @@ void ConvertPD()
 
     // equivalent weighted points
     point[i][0]=lambda*(eta[0]);
-    point[i][1]=lambda* (eta[1]);
-    weight[i]=lambda*(inner(eta, eta)+2*(F(param[i])-inner(param[i], eta)));
+    point[i][1]=lambda*(eta[1]);
+    
+    
+    weight[i]=sqr(lambda)*inner(eta, eta) +2*lambda*(F(param[i])-inner(param[i], eta)) ;
   }
 
 
@@ -361,12 +321,21 @@ void initialize()
   // clip to domain
   rootPolygon = new PolygonSimple();
 
+
   rootPolygon.add(minxt, minyt);
   rootPolygon.add(maxxt, minyt);
   rootPolygon.add(maxxt, maxyt);
   rootPolygon.add(minyt, maxyt);
 
 
+/*
+// bad
+  rootPolygon.add(0,0);
+  rootPolygon.add(1,0);
+  rootPolygon.add(1,1);
+  rootPolygon.add(0,1);
+  rootPolygon.add(0,0);
+*/
 
 
 
@@ -375,9 +344,15 @@ void initialize()
 
 void keyPressed()
 {
+  
+   if (key==',') {rescalew/=2.0; draw();}
+    if (key=='.') {rescalew*=2.0; draw();}
+   
+   
+   
   if (key=='q') exit();
 
-  if (key==' ') {
+  if (key==' ') {lambda=1;
     initialize();
     draw();
   }
@@ -394,7 +369,8 @@ if (key=='l') {toggleLink=!toggleLink;
   }
 
 if (key=='w') { 
- lambda=0.5;
+ lambda = 2*Math.random();
+ println("lambda="+lambda);
  ConvertPD();computePD();
     draw();
   }
