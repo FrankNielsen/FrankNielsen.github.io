@@ -21,6 +21,8 @@ class BregmanMEB
  static double gprime(double y){return Math.exp(y);}
 */
 
+
+// squared Euclidean
 /*
    static double f(double x){return x*x;}
  static double fprime(double x){return 2*x;}
