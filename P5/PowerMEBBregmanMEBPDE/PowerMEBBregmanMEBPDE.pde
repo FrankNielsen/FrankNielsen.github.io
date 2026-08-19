@@ -1,5 +1,5 @@
 // Frank.Nielsen@acm.org
-// July 2026
+// July/August 2026
 //
 // C:\Travail\GitHub\FrankNielsen.github.io\P5\PowerMEBBregmanMEBPDE
 
@@ -24,7 +24,7 @@ boolean toggleRectify=false;
 int n;
 //int nstart=8;
 //int nstart=2;
-int nstart=8;
+int nstart=128;
 
 
 double [][] point; // stored 2d coordinates
@@ -52,7 +52,7 @@ public   double inner(double [] pt1, double [] pt2)
 
 WeightedPoint [] wset;
 WeightedPoint PMEB, PMEB2;
-int nbiter=1000000;
+int nbiter=10000;
 
 WeightedPoint BMEB;
 double [][] bregset;
@@ -125,10 +125,10 @@ private static double[] gaussianSolve(double[][] A, double[] b) {
   return x;
 }
 
-  int [] sv;
+int [] sv;
 
- int nbsv;
- 
+int nbsv;
+
 void Test()
 {
   int i, j, rr;
@@ -145,7 +145,7 @@ void Test()
   println("all weights to 0 Sqr radius="+PMEB.w);
 
 
- sv=PowerMEB.SupportPoints(wset, PMEB.x, PMEB.w);
+  sv=PowerMEB.SupportPoints(wset, PMEB.x, PMEB.w);
   nbsv=sv.length;
   println("#support points:"+sv.length);
   double RR=0;
@@ -164,7 +164,7 @@ void Test()
   if (nbsv==3)
   {
     double [][] vertex=new double [3][2];
- 
+
     for (i=0; i<3; i++)
       for (j=0; j<2; j++) vertex[i][j]=wset[sv[i]].x[j];
 
@@ -185,13 +185,18 @@ void Test()
 
 
 void Welzl()
-{double [][] pts=new double[n][3];
-int i;
-for(i=0;i<n;i++) {pts[i][0]=wset[i].x[0];pts[i][1]=wset[i].x[1];pts[i][2]=wset[i].w;}
+{
+  double [][] pts=new double[n][3];
+  int i;
+  for (i=0; i<n; i++) {
+    pts[i][0]=wset[i].x[0];
+    pts[i][1]=wset[i].x[1];
+    pts[i][2]=wset[i].w;
+  }
 
- double[] ball=PowerMEBWelzl.powerMiniball(pts); 
+  double[] ball=PowerMEBWelzl.powerMiniball(pts);
 
-System.out.println("Welzl power meb:"+ball[0]+" "+ball[1]+ " w^*="+ball[2]);
+  System.out.println("Welzl power meb:"+ball[0]+" "+ball[1]+ " w^*="+ball[2]);
 }
 
 
@@ -220,45 +225,46 @@ void initializeWS()
     wset[i].x[0]=BregmanMEB.fprime(bregset[i][0]);
     wset[i].x[1]=BregmanMEB.fprime(bregset[i][1]);
     wset[i].w=sqr(wset[i].x[0])+sqr(wset[i].x[1])+2*BregmanMEB.g(wset[i].x[0])+2*BregmanMEB.g(wset[i].x[1]);
-    
-   // remove later
-  // wset[i].w=0;
-  wset[i].w=Math.random()*0.02;
+
+    // remove later
+    // wset[i].w=0;
+ //   wset[i].w=Math.random()*0.02;
+ wset[i].w=Math.random()*0.01;
   }
 
 
-// Frank-Wolfe
+  // Frank-Wolfe
   PMEB=PowerMEB.PowerMEB(wset, nbiter);
-  
-  if (n==2){  PMEB2=PowerMEB.ExactPowerMEB2(wset);
-println("Exact:"+PMEB2.x[0]+" "+PMEB2.x[1]+ " w="+PMEB2.w);
-println("Approximated:"+PMEB.x[0]+" "+PMEB.x[1]+ " w="+PMEB.w);
 
-double distc1=PowerMEB.PowerDistance(wset[0],PMEB2);
-double distc2=PowerMEB.PowerDistance(wset[1],PMEB2);
+  if (n==2) {
+    PMEB2=PowerMEB.ExactPowerMEB2(wset);
+    println("Exact:"+PMEB2.x[0]+" "+PMEB2.x[1]+ " w="+PMEB2.w);
+    println("Approximated:"+PMEB.x[0]+" "+PMEB.x[1]+ " w="+PMEB.w);
 
-println("PMEB Orthogonal to basis spheres? "+distc1+ " " +distc2);
-}
-  
-  
+    double distc1=PowerMEB.PowerDistance(wset[0], PMEB2);
+    double distc2=PowerMEB.PowerDistance(wset[1], PMEB2);
+
+    println("PMEB Orthogonal to basis spheres? "+distc1+ " " +distc2);
+  }
+
+
   BMEB=BregmanMEB.BregmanMEB(bregset, nbiter);
-  
 
-  
-  
-  PowerMEB.CheckBarycentricIdentity(wset,PMEB);
-  
+
+
+
+  PowerMEB.CheckBarycentricIdentity(wset, PMEB);
 }
 
 void setup()
 {
   sandbox.Test();
-  
+
   size(800, 800);
   n=nstart;
   initialize();
 
-   initializeWS();
+  initializeWS();
 }
 
 
@@ -303,99 +309,100 @@ void MyCircle(float xx, float yy, float rr)
 }
 
 boolean supportVector(int label)
-{ if (sv==null) return false;
- int i;
- for(i=0;i<nbsv;i++) if (sv[i]==label) return true;
- return false;
+{
+  if (sv==null) return false;
+  int i;
+  for (i=0; i<nbsv; i++) if (sv[i]==label) return true;
+  return false;
 }
 
 public static double[] tangentPoint(
-        WeightedPoint center, WeightedPoint pp, int side) {
-          double[] c=pp.x;
-        double r=Math.sqrt(pp.w);
-        
-        double[] p=center.x;
-        
-       // println("side="+side);
+  WeightedPoint center, WeightedPoint pp, int side) {
+  double[] c=pp.x;
+  double r=Math.sqrt(pp.w);
+
+  double[] p=center.x;
+
+  // println("side="+side);
+
+
+  double dx = p[0] - c[0];
+  double dy = p[1] - c[1];
+
+  double d2 = dx*dx + dy*dy;
+
+  if (d2 <= r*r)
+    return null;   // point is inside/on disk
+
+  double factor1 = r*r / d2;
+  double factor2 = side * r * Math.sqrt(d2 - r*r) / d2;
+
+  // perpendicular vector to (dx,dy)
+  double px = -dy;
+  double py = dx;
+
+  double qx = c[0] + factor1*dx + factor2*px;
+  double qy = c[1] + factor1*dy + factor2*py;
+
+  return new double[]{qx, qy};
+
+  /*
          
-         
-         double dx = p[0] - c[0];
-    double dy = p[1] - c[1];
-
-    double d2 = dx*dx + dy*dy;
-
-    if (d2 <= r*r)
-        return null;   // point is inside/on disk
-
-    double factor1 = r*r / d2;
-    double factor2 = side * r * Math.sqrt(d2 - r*r) / d2;
-
-    // perpendicular vector to (dx,dy)
-    double px = -dy;
-    double py = dx;
-
-    double qx = c[0] + factor1*dx + factor2*px;
-    double qy = c[1] + factor1*dy + factor2*py;
-
-    return new double[]{qx, qy};
-    
-    /*
-         
-             double dx = p[0] - c[0];
-    double dy = p[1] - c[1];
-
-    double d2 = dx*dx + dy*dy;
-
-    if (d2 <= r*r)
-        return null;   // point is inside/on disk
-
-    double factor1 = r*r / d2;
-    double factor2 = side * r * Math.sqrt(d2 - r*r) / d2;
-
-    // perpendicular vector to (dx,dy)
-    double px = -dy;
-    double py = dx;
-
-    double qx = c[0] + factor1*dx + factor2*px;
-    double qy = c[1] + factor1*dy + factor2*py;
-    
-         
-     
-    return new double[]{qx, qy};
-    */
+   double dx = p[0] - c[0];
+   double dy = p[1] - c[1];
+   
+   double d2 = dx*dx + dy*dy;
+   
+   if (d2 <= r*r)
+   return null;   // point is inside/on disk
+   
+   double factor1 = r*r / d2;
+   double factor2 = side * r * Math.sqrt(d2 - r*r) / d2;
+   
+   // perpendicular vector to (dx,dy)
+   double px = -dy;
+   double py = dx;
+   
+   double qx = c[0] + factor1*dx + factor2*px;
+   double qy = c[1] + factor1*dy + factor2*py;
+   
+   
+   
+   return new double[]{qx, qy};
+   */
 }
 
 
 public static double[] GoodtangentPoint(WeightedPoint center, WeightedPoint pp, int side)
 {
-          double[] c=pp.x;
-        double r=Math.sqrt(pp.w);
-        
-        double[] p=center.x;
-         
-             
-    double dx = p[0] - c[0];
-    double dy = p[1] - c[1];
+  double[] c=pp.x;
+  double r=Math.sqrt(pp.w);
 
-    double d2 = dx*dx + dy*dy;
+  double[] p=center.x;
 
-    // Point inside or on disk: no proper tangent
-    if (d2 <= r*r)
-        return null;
 
-    double alpha = r*r / d2;
+  double dx = p[0] - c[0];
+  double dy = p[1] - c[1];
 
-    double beta =
-        side * r * Math.sqrt(d2 - r*r) / d2;
+  double d2 = dx*dx + dy*dy;
 
-    // perpendicular vector (-dy,dx)
-    double qx =
-        c[0] + alpha*dx - beta*dy;
+  // Point inside or on disk: no proper tangent
+  if (d2 <= r*r)
+    return null;
 
-    double qy =
-        c[1] + alpha*dy + beta*dx;
+  double alpha = r*r / d2;
 
-    return new double[]{qx,qy};
+  double beta =
+    side * r * Math.sqrt(d2 - r*r) / d2;
+
+  // perpendicular vector (-dy,dx)
+  double qx =
+    c[0] + alpha*dx - beta*dy;
+
+  double qy =
+    c[1] + alpha*dy + beta*dx;
+
+  return new double[]{qx, qy};
 }
 
 boolean toggleSV=false;
@@ -403,86 +410,106 @@ boolean toggleSV=false;
 // drawgin
 void draw()
 {
-
   int i, j, ii, jj;
-
-
-
-  surface.setTitle("n="+n);
-
-
+  surface.setTitle("Power MEB with n="+n);
 
   background(255, 255, 255);
 
-// Blue circumcenter MEB
-  stroke(0, 0, 255);
+  // Blue circumcenter MEB
+  stroke(0, 0, 255);// blue
   MyPoint(PMEB.x[0], PMEB.x[1]);
 
-if (n==2){
-  stroke(255, 0, 255);
- // MyPoint(PMEB2.x[0], PMEB2.x[1]);
-  MyCircle((float)(PMEB2.x[0]), (float)(PMEB2.x[1]), (float)0.01);
-  
- //  MyCircle((float)(PMEB2.x[0]), (float)(PMEB2.x[1]), (float)Math.sqrt(PMEB2.w)+0.01);
-  strokeWeight(1);
-}
+  if (n==2) {
+    stroke(255, 0, 255);
+    // MyPoint(PMEB2.x[0], PMEB2.x[1]);
+    MyCircle((float)(PMEB2.x[0]), (float)(PMEB2.x[1]), (float)0.01);
+
+    //  MyCircle((float)(PMEB2.x[0]), (float)(PMEB2.x[1]), (float)Math.sqrt(PMEB2.w)+0.01);
+    strokeWeight(1);
+  }
 
 
   stroke(0, 0, 0);
-  
+
+// BC
   if (PMEB.w>0)
-   {strokeWeight(5); MyCircle((float)(PMEB.x[0]), (float)(PMEB.x[1]), (float)Math.sqrt(PMEB.w));}
+  {
+    strokeWeight(5);
+    MyCircle((float)(PMEB.x[0]), (float)(PMEB.x[1]), (float)Math.sqrt(PMEB.w));
+  }
+
+strokeWeight(1);
+
+for (i=0; i<n; i++) {
+  if (PowerMEB.coreset[i]) {
+        stroke(0, 0, 255); MyCircle((float)(wset[i].x[0]), (float)(wset[i].x[1]), (float)Math.sqrt(wset[i].w)+0.005);
+      } else {
+        stroke(120);
+      } 
+      
+     
+}
 
   strokeWeight(2);
   fill(colgen);
   stroke(colgen);
 
-// SV
+  // SV
   for (i=0; i<n; i++) {
-    
-    
-    if (Math.abs(PowerMEB.PowerDistance(PMEB,wset[i]))<1.e-4) {stroke(0,255,0);strokeWeight(3);} else {stroke(120);strokeWeight(1);}
-    {}
-    
-    double[] tp=tangentPoint(PMEB, wset[i],+1);
-    if (tp!=null) MyLine((float)(PMEB.x[0]), (float)(PMEB.x[1]),(float)(tp[0]), (float)(tp[1]));
-      tp=tangentPoint(PMEB, wset[i],-1);
-    if (tp!=null) MyLine((float)(PMEB.x[0]), (float)(PMEB.x[1]),(float)(tp[0]), (float)(tp[1]));
-    
-    if ((toggleSV)&&(supportVector(i))){strokeWeight(3);
-    fill(240);
-    stroke(0,255,0);
-    //circle((float)x2X(point[i][0]), (float)y2Y(point[i][1]), (float)x2X(Math.sqrt(weight[i])));
-    MyCircle((float)(wset[i].x[0]), (float)(wset[i].x[1]), (float)Math.sqrt(wset[i].w));
-    MyCircle((float)(wset[i].x[0]), (float)(wset[i].x[1]), (float)Math.sqrt(wset[i].w)+0.01);
 
-    fill(colgen);
-    stroke(colgen);
-    MyPoint(wset[i].x[0], wset[i].x[1]);
-    //   ellipse((float)x2X(point[i][0]), (float)y2Y(point[i][1]), ptsize,ptsize);}
-  }
-    else
-    {//strokeWeight(1);
-     //    fill(120);
-    //stroke(120);
-    //circle((float)x2X(point[i][0]), (float)y2Y(point[i][1]), (float)x2X(Math.sqrt(weight[i])));
-    MyCircle((float)(wset[i].x[0]), (float)(wset[i].x[1]), (float)Math.sqrt(wset[i].w));
 
-    //fill(colgen);
-    //stroke(colgen);
-    MyPoint(wset[i].x[0], wset[i].x[1]);
-    //   ellipse((float)x2X(point[i][0]), (float)y2Y(point[i][1]), ptsize,ptsize); 
+    if (Math.abs(PowerMEB.PowerDistance(PMEB, wset[i]))<1.e-4) {
+      stroke(0, 255, 0);
+      strokeWeight(3);
+    } else {
+      stroke(120);
       strokeWeight(1);
     }
-    
+
+
+    double[] tp=tangentPoint(PMEB, wset[i], +1);
+    if (tp!=null) MyLine((float)(PMEB.x[0]), (float)(PMEB.x[1]), (float)(tp[0]), (float)(tp[1]));
+    tp=tangentPoint(PMEB, wset[i], -1);
+    if (tp!=null) MyLine((float)(PMEB.x[0]), (float)(PMEB.x[1]), (float)(tp[0]), (float)(tp[1]));
+
+    if ((toggleSV)&&(supportVector(i))) {
+      strokeWeight(3);
+      fill(240);
+      stroke(0, 255, 0); //green
+      //circle((float)x2X(point[i][0]), (float)y2Y(point[i][1]), (float)x2X(Math.sqrt(weight[i])));
+      MyCircle((float)(wset[i].x[0]), (float)(wset[i].x[1]), (float)Math.sqrt(wset[i].w));
+      MyCircle((float)(wset[i].x[0]), (float)(wset[i].x[1]), (float)Math.sqrt(wset[i].w)+0.01);
+
+      fill(colgen);
+      stroke(colgen);
+      MyPoint(wset[i].x[0], wset[i].x[1]);
+      //   ellipse((float)x2X(point[i][0]), (float)y2Y(point[i][1]), ptsize,ptsize);}
+    } else
+    {//strokeWeight(1);
+      //    fill(120);
+      //stroke(120);
+      //circle((float)x2X(point[i][0]), (float)y2Y(point[i][1]), (float)x2X(Math.sqrt(weight[i])));
+      /*if (PowerMEB.coreset[i]) {
+        stroke(0, 0, 255);
+      } else {
+        stroke(240);  stroke(colgen);
+      }*/
+      
+      MyCircle((float)(wset[i].x[0]), (float)(wset[i].x[1]), (float)Math.sqrt(wset[i].w));
+
+      //fill(colgen);
+      //stroke(colgen);
+      MyPoint(wset[i].x[0], wset[i].x[1]);
+      //   ellipse((float)x2X(point[i][0]), (float)y2Y(point[i][1]), ptsize,ptsize);
+      strokeWeight(1);
+    }
   }
 
-if (false){
-// Bregman circumcenter green
-  stroke(0, 255, 0);
-  MyPoint(BMEB.x[0], BMEB.x[1]);
-}
-
+  if (false) {
+    // Bregman circumcenter green
+    stroke(0, 255, 0);
+    MyPoint(BMEB.x[0], BMEB.x[1]);
+  }
 }
 
 
@@ -613,7 +640,9 @@ void initialize()
 
 void keyPressed()
 {
-   if (key=='w') {Welzl();}
+  if (key=='w') {
+    Welzl();
+  }
   if (key=='q') exit();
 
   if (key==' ') {
@@ -628,36 +657,44 @@ void keyPressed()
     initialize();
     draw();
   }
-  
-   if (key=='3') {
-    nstart=3;
-    initialize();  initializeWS();
-    draw();
-    
-  }
-  
-  if (key=='8') {
-    nstart=8;
-    initialize();  initializeWS();
-    draw();
-    
-  }
 
-if (key=='>') {nstart+=10;  
+  if (key=='3') {
+    nstart=3;
     initialize();
     initializeWS();
-    draw(); }
-    
-    
-if (key=='<') {nstart=max(8,nstart-10);  
-    initialize(); initializeWS();
-    draw(); }
-
-if (key=='i')
-{int i; for(i=0;i<n;i++) wset[i].w+=0.01;
-  computePD();initializeWS();
     draw();
-}
+  }
+
+  if (key=='8') {
+    nstart=8;
+    initialize();
+    initializeWS();
+    draw();
+  }
+
+  if (key=='>') {
+    nstart+=10;
+    initialize();
+    initializeWS();
+    draw();
+  }
+
+
+  if (key=='<') {
+    nstart=max(8, nstart-10);
+    initialize();
+    initializeWS();
+    draw();
+  }
+
+  if (key=='i')
+  {
+    int i;
+    for (i=0; i<n; i++) wset[i].w+=0.01;
+    computePD();
+    initializeWS();
+    draw();
+  }
 
   if (key=='n') {
     n=nstart;

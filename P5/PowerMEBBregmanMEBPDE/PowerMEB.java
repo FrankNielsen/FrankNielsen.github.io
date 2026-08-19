@@ -335,22 +335,27 @@ res.w=PowerDistance(res,set[0]);
 return res;
 }
 
+static boolean [] coreset;
 
 
   // the weights is min
   static WeightedPoint PowerMEB(WeightedPoint [] set, int T)
   {
-    
+int f, i;
     int nn=set.length;
+      coreset=new boolean[nn];
+     for (i=0; i<nn; i++) coreset[i]=false;
+    
     
   //  if (nn==2) return ExactPowerMEB2(set);
     
     double [] center=set[0].x;
-    int f, i;
+    
 
     for (i=0; i<T; i++)
     {
       f=ArgMaxPowerDistance(center, set);
+      coreset[f]=true;
       center=LERP(center, set[f].x, 1.0/(1.0+i));
     }
 
