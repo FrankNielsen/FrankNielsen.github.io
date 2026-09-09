@@ -24,7 +24,7 @@ boolean toggleRectify=false;
 int n;
 //int nstart=8;
 //int nstart=2;
-int nstart=128;
+int nstart=16; //128;
 
 
 double [][] point; // stored 2d coordinates
@@ -176,6 +176,9 @@ void Test()
 
 
     RR/=2.0;
+    
+     for (i=0; i<3; i++) 
+      println("bd ccenter radius "+BregmanMEB.BregmanDivergence(PMEB.x,bregset[sv[i]]));
   }
 
 
@@ -256,9 +259,10 @@ void initializeWS()
   PowerMEB.CheckBarycentricIdentity(wset, PMEB);
 }
 
+// Entry
 void setup()
 {
-  sandbox.Test();
+//  sandbox.Test();
 
   size(800, 800);
   n=nstart;

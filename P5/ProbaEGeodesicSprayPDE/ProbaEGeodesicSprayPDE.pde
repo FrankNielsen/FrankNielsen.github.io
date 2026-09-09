@@ -3,8 +3,8 @@
 
 import processing.pdf.*;
 
-//int side = 800;
-int side = 512;
+int side = 1024;
+//int side = 512;
 int ww = side;
 int hh = side;
 /*
@@ -21,15 +21,18 @@ double maxy=1.05;
 
 
 boolean toggleText=true;
-boolean toggleAnimation=false;
-//boolean toggleAnimation=true;
+
+//boolean toggleAnimation=false;
+
+boolean toggleAnimation=true;
+
 //boolean toggleRectify=false;
 boolean toggleRectify=true;
 boolean toggleMidpoint=true;
 
 
-boolean toggleInitDegenerate=true;
-//boolean toggleInitDegenerate=false;
+//boolean toggleInitDegenerate=true;
+boolean toggleInitDegenerate=false;
 
 
 int n;
@@ -169,7 +172,9 @@ public   double [] gradF(double [] theta)
 
 void setup()
 {
-  size(512,512);
+  //size(512,512);
+  size(1024,1024);
+  
   initialize();
 }
 
@@ -414,8 +419,8 @@ double galpha=1;
 
 void draw()
 {
-// drawAlpha(galpha); 
-drawVoronoi();
+ drawAlpha(galpha); 
+//drawVoronoi();
 }
 
 
@@ -737,11 +742,15 @@ void initializeDegenerate()
 
 
 void keyPressed()
-{if (key=='a'){toggleAnimation=!toggleAnimation;println("Animation:"+toggleAnimation);}
+{
+print(".");
+
+if (key=='a'){toggleAnimation=!toggleAnimation;println("Animation:"+toggleAnimation);}
 
 if (key=='m'){toggleMidpoint=!toggleMidpoint;}
 
-if (key=='d') {initializeDegenerate();toggleAnimation=false;}
+if (key=='d') {toggleInitDegenerate=!toggleInitDegenerate; println("Degenerate:"+toggleInitDegenerate);  
+if (toggleInitDegenerate) {initializeDegenerate();toggleAnimation=false;} else initialize();}
   if (key=='q') exit();
   if (key==' ') {
     initialize();

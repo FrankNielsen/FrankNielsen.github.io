@@ -19,8 +19,8 @@ class BregmanMEB
    static double f(double x){return x*Math.log(x)-x;}
  static double fprime(double x){return Math.log(x);}
  static double gprime(double y){return Math.exp(y);}
+static double g(double y){return Math.exp(y);}
 */
-
 
 // squared Euclidean
 /*
@@ -30,11 +30,23 @@ class BregmanMEB
  static double g(double y) { return y*y/4.0;}
 */
 
+/*
+// good
    static double f(double x){return 0.5*x*x;}
  static double fprime(double x){return x;}
  static double gprime(double y){return y;}
  static double g(double y) { return 0.5*y*y;}
+*/
 
+/*
+   static double f(double x){return 5*x*x;}
+ static double fprime(double x){return 10*x;}
+ static double gprime(double y){return y/10.0;}
+ static double g(double y) { return y*y/20.0;}
+ */
+ 
+
+//separable
   static double BregmanDivergence(double [] p, double [] q)
   {
     int d=p.length, i;

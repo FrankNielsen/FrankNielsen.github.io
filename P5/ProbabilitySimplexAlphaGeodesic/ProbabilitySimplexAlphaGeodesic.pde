@@ -3,8 +3,8 @@
 
 import processing.pdf.*;
 
-//int side = 800;
-int side = 512;
+int side = 1024;
+//int side = 512;
 int ww = side;
 int hh = side;
 /*
@@ -20,7 +20,8 @@ double miny=-0.05;
 double maxy=1.05;
 
 
-boolean toggleText=true;
+//boolean toggleText=true;
+boolean toggleText=false;
 boolean toggleAnimation=true;
 boolean toggleRectify=false;
 boolean toggleMidpoint=true;
@@ -163,7 +164,8 @@ public   double [] gradF(double [] theta)
 
 void setup()
 {
-  size(512,512);
+  //size(512,512);
+  size(1024,1024);
   initialize();
 }
 
@@ -393,7 +395,8 @@ double alpha;
   for(alpha=minalpha;alpha<=maxalpha;alpha+=stepalpha)
   {
     float intensity=(float)((alpha-minalpha)/(maxalpha-minalpha));
-    stroke(255*(1-intensity),255*(1-intensity),255*(1-intensity));
+   // stroke(255*(1-intensity),255*(1-intensity),255*(1-intensity));
+   stroke(0,255*(1-intensity),0);
   drawGeodesic(alpha, p, q);
   
   stroke(0);
