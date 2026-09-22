@@ -170,6 +170,7 @@ void Test()
 
     double [] lambda=barycentric( vertex, PMEB.x);
 
+// check decomposition lemma
     for (i=0; i<nbsv; i++)
       for (j=0; j<nbsv; j++)
         RR+=lambda[i]*lambda[j]*PowerMEB.SqrDistance(wset[sv[i]].x, wset[sv[j]].x);
