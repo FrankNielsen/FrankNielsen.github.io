@@ -1,5 +1,5 @@
 // Frank.Nielsen@acm.org
-// July/August 2026
+// started July/August 2026, updated October
 //
 // C:\Travail\GitHub\FrankNielsen.github.io\P5\PowerMEBBregmanMEBPDE
 
@@ -515,6 +515,17 @@ for (i=0; i<n; i++) {
     stroke(0, 255, 0);
     MyPoint(BMEB.x[0], BMEB.x[1]);
   }
+  
+  
+  
+  if (animate) {
+    initialize();
+    initializeWS();
+    println("Power FW MEB : "+PMEB.x[0]+" "+PMEB.x[1]+" w="+PMEB.w );
+    delay(1000);
+  }
+  
+  
 }
 
 
@@ -642,9 +653,13 @@ void initialize()
 }
 
 
+boolean animate=true;
 
 void keyPressed()
 {
+  
+  if (key=='d') {animate=!animate;}
+  
   if (key=='w') {
     Welzl();
   }
