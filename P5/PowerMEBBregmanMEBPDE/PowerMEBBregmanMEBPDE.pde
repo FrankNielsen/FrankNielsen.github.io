@@ -9,7 +9,7 @@ int side = 800;
 int ww = side;
 int hh = side;
 
-double border=0.0;
+double border=0.1;
 double delta=0.2;
 double minx=-border-delta;
 double maxx=1.0+border+ delta;
@@ -411,7 +411,7 @@ public static double[] GoodtangentPoint(WeightedPoint center, WeightedPoint pp, 
 }
 
 boolean toggleSV=false;
-
+boolean toggleCoreset=false;
 // drawgin
 void draw()
 {
@@ -446,7 +446,7 @@ void draw()
 strokeWeight(1);
 
 for (i=0; i<n; i++) {
-  if (PowerMEB.coreset[i]) {
+  if ((PowerMEB.coreset[i])&&(toggleCoreset)) {
         stroke(0, 0, 255); MyCircle((float)(wset[i].x[0]), (float)(wset[i].x[1]), (float)Math.sqrt(wset[i].w)+0.005);
       } else {
         stroke(120);
@@ -463,7 +463,7 @@ for (i=0; i<n; i++) {
   for (i=0; i<n; i++) {
 
 
-    if (Math.abs(PowerMEB.PowerDistance(PMEB, wset[i]))<1.e-4) {
+    if (Math.abs(PowerMEB.PowerDistance(PMEB, wset[i]))<1.e-3) {
       stroke(0, 255, 0);
       strokeWeight(3);
     } else {
@@ -521,8 +521,9 @@ for (i=0; i<n; i++) {
   if (animate) {
     initialize();
     initializeWS();
+   
     println("Power FW MEB : "+PMEB.x[0]+" "+PMEB.x[1]+" w="+PMEB.w );
-    delay(1000);
+    delay(700);
   }
   
   
