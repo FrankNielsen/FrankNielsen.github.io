@@ -412,6 +412,8 @@ public static double[] GoodtangentPoint(WeightedPoint center, WeightedPoint pp, 
 
 boolean toggleSV=false;
 boolean toggleCoreset=false;
+
+
 // drawgin
 void draw()
 {
@@ -523,7 +525,7 @@ for (i=0; i<n; i++) {
     initializeWS();
    
     println("Power FW MEB : "+PMEB.x[0]+" "+PMEB.x[1]+" w="+PMEB.w );
-    delay(700);
+    delay(1000);
   }
   
   

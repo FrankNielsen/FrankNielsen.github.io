@@ -1,6 +1,6 @@
 // Frank.Nielsen@acm.org
 // August 2026
-// Visualize the power distance
+// Visualize the power distance from the paraboloid potential
 
 // Extending Hausdorff Distances to Asymmetric Geometries, page 64
 import processing.pdf.*;
@@ -173,7 +173,9 @@ double p1=Math.random();
 double w1=Math.random();
 
 boolean toggleTranslated=true;
-void draw()
+
+
+void drawToDebug()
 {
   background(255);
   int i;
@@ -198,8 +200,10 @@ void draw()
 
     line((float)i, (float)bb.y2Y(y), (float)(i+step), (float)bb.y2Y(ny));
   }
+  
   stroke(0);
   strokeWeight(1);
+  
   Line tangentQ0, tangentQ1, TtangentQ0, TtangentQ1, TBtangentQ0, TBtangentQ1 ; // translated tangent
 
   tangentQ0=new Line(gradQ(p0), Q(p0)-p0*gradQ(p0));
@@ -287,7 +291,7 @@ double sqrd=sqr(p0-p1)-w0-w1;
 double sqr(double x){return x*x;}
 
 
-void drawGood()
+void draw()
 {
   background(255);
   int i;
