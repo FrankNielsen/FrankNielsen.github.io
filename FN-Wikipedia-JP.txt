@@ -1,0 +1,134 @@
+
+{{Short description|フランスの計算機科学者・情報幾何学研究者}}
+{{Infobox scientist
+| name = フランク・ニールセン
+| native_name = Frank Nielsen
+| nationality = フランス
+| fields = 計算幾何学、情報幾何学、情報理論、機械学習
+| workplaces = ソニーコンピュータサイエンス研究所
+| alma_mater = リヨン高等師範学校、ニース・ソフィア・アンティポリス大学
+| doctoral_advisor = ジャン＝ダニエル・ボワサンナ
+| website = https://franknielsen.github.io/
+}}
+
+'''フランク・ニールセン'''（Frank Nielsen）は、フランスの計算機科学者、研究者。計算幾何学、情報幾何学、情報理論、機械学習、コンピュータグラフィックスを専門とする。東京の[[ソニーコンピュータサイエンス研究所]]（Sony CSL）のシニアリサーチャーおよびフェローを務める。
+
+研究では、幾何学と情報科学の融合を推進し、特に'''計算情報幾何学'''（Computational Information Geometry）の発展に貢献している。ブレグマン発散に基づくボロノイ図や幾何アルゴリズム、統計分布の幾何学的表現、情報幾何学的なクラスタリングや最適化などを研究している。また、統計モデルの幾何学、非ユークリッド幾何学、機械学習における幾何学的方法にも取り組んでいる。
+
+2026年、情報幾何学的理論および情報量に関する貢献により、[[IEEEフェロー]]に選出された<ref name="IEEE">{{cite web |title=IEEE Fellows |url=https://www.ieee.org/about/awards/fellows.html |publisher=IEEE |access-date=2026-10-30}}</ref>。
+
+== 経歴 ==
+
+フランスのリヨン高等師範学校（École normale supérieure de Lyon）で並列・分散計算に関する修士課程を修了した。その後、INRIAソフィア・アンティポリスにおいてジャン＝ダニエル・ボワサンナの指導のもと計算幾何学の博士研究を行い、1996年にニース・ソフィア・アンティポリス大学で博士号を取得した<ref name="bio">{{cite web |title=Biography |url=https://franknielsen.github.io/nbiography.html |publisher=Frank Nielsen |access-date=2026-10-30}}</ref>。
+
+1998年にソニーコンピュータサイエンス研究所（Sony CSL）に加わり、東京を拠点に研究を続けている。初期には、コンピュータビジョン、画像処理、パノラマ画像、映像技術、幾何モデリングなどを研究した。パノラマ映像やインタラクティブ映像技術に関する研究成果は、ソニーの映像製品にも応用された<ref name="bio"/>。
+
+その後、計算幾何学と統計学、情報理論を結びつける研究へと展開し、統計モデルや確率分布に内在する幾何学的構造をアルゴリズムとして扱う計算情報幾何学を発展させた。
+
+== 研究 ==
+
+=== 計算幾何学 ===
+
+ニールセンの初期の研究は、計算幾何学および幾何アルゴリズムを中心としている。凸包、幾何学的データ構造、ボロノイ図、幾何学的近接問題、計算複雑性などを扱い、高次元空間における効率的なアルゴリズムや出力依存型アルゴリズムについて研究した。
+
+また、最小包含球問題（Minimum Enclosing Ball）や幾何学的クラスタリングなど、データ解析や機械学習にも関係する幾何最適化問題に取り組んだ。これらの研究は、後のブレグマン発散に基づく情報幾何学的アルゴリズムの基礎となった。
+
+=== 統計的領域併合とコンピュータビジョン ===
+
+リチャード・ノック（Richard Nock）との共同研究では、画像分割のための統計的領域併合（Statistical Region Merging）アルゴリズムを開発した。
+
+この手法は、画像内の隣接領域を統計的な基準に基づいて逐次的に統合するものであり、画像の色や画素値などの統計的性質を利用して領域分割を行う。計算効率と統計的妥当性を両立させた手法として、コンピュータビジョン分野で研究された<ref name="SRM">{{cite journal |last1=Nock |first1=Richard |last2=Nielsen |first2=Frank |title=Statistical region merging |journal=IEEE Transactions on Pattern Analysis and Machine Intelligence |volume=26 |issue=11 |pages=1452–1458 |year=2004 |doi=10.1109/TPAMI.2004.110}}</ref>。
+
+=== ブレグマン発散と計算情報幾何学 ===
+
+ニールセンの主要な研究分野の一つが、ブレグマン発散（Bregman divergence）の計算幾何学的研究である。
+
+ブレグマン発散は、二乗ユークリッド距離を一般化する非対称な非負の尺度であり、カルバック・ライブラー情報量など、情報理論や統計学で重要な量を含む。ニールセンは、ジャン＝ダニエル・ボワサンナ、リチャード・ノックらとの共同研究を通じて、ブレグマン発散に基づくボロノイ図の理論とアルゴリズムを発展させた。
+
+2010年に発表された「Bregman Voronoi diagrams」では、ブレグマン発散に基づくボロノイ図とその双対構造を研究し、凸解析、双対性、パワー図などとの関係を明らかにした<ref name="Bregman">{{cite journal |last1=Boissonnat |first1=Jean-Daniel |last2=Nielsen |first2=Frank |last3=Nock |first3=Richard |title=Bregman Voronoi diagrams |journal=Discrete & Computational Geometry |volume=44 |issue=2 |pages=281–307 |year=2010 |doi=10.1007/s00454-010-9256-1}}</ref>。
+
+この研究は、ユークリッド幾何学で知られるボロノイ図やドロネー型構造を、統計分布や情報量の空間へ拡張するものである。機械学習におけるクラスタリング、近傍探索、統計的データ表現などに幾何学的な枠組みを提供する。
+
+さらに、ブレグマン重心、情報円板、最小包含情報球などの問題を研究し、非対称な発散に対する幾何学的平均や最適化手法を発展させた<ref>{{cite journal |last1=Nielsen |first1=Frank |last2=Nock |first2=Richard |title=Sided and symmetrized Bregman centroids |journal=IEEE Transactions on Information Theory |volume=55 |issue=6 |year=2009}}</ref>。
+
+=== 情報幾何学 ===
+
+[[情報幾何学]]は、確率分布や統計モデルを微分幾何学的な対象として扱う数学分野である。フィッシャー情報計量、統計多様体、双対アファイン接続、測地線、情報量などを用いて、統計学や情報理論の幾何学的構造を研究する。
+
+ニールセンは、情報幾何学の理論と応用に関する研究および教育的著作を発表している。特に、ブレグマン発散、指数型分布族、混合分布族、双対平坦空間、ルジャンドル双対性などの関係を研究した。
+
+2020年に発表した論文「An Elementary Introduction to Information Geometry」は、情報幾何学の基礎を微分幾何学と統計学の観点から体系的に解説した入門的総説である<ref>{{cite journal |last=Nielsen |first=Frank |title=An Elementary Introduction to Information Geometry |journal=Entropy |volume=22 |issue=10 |pages=1100 |year=2020 |doi=10.3390/e22101100}}</ref>。
+
+また、2022年には米国数学会の学術誌『Notices of the American Mathematical Society』に「The Many Faces of Information Geometry」を発表し、情報幾何学の多様な数学的構造と応用を概説した<ref>{{cite journal |last=Nielsen |first=Frank |title=The Many Faces of Information Geometry |journal=Notices of the American Mathematical Society |volume=69 |issue=1 |pages=36–45 |year=2022}}</ref>。
+
+=== 非ユークリッド幾何学と統計多様体 ===
+
+ニールセンは、ユークリッド幾何学以外の幾何学的構造を統計モデルや機械学習に応用する研究も行っている。
+
+研究対象には、双曲幾何学、ヒルベルト幾何学、射影幾何学、正定値行列の幾何学などが含まれる。これらの幾何学は、確率分布や統計モデルの構造を異なる視点から表現し、データの近接性や類似性を測るために用いられる。
+
+例えば、コーシー分布族の情報幾何学的構造を研究し、フィッシャー・ラオ距離、カルバック・ライブラー情報量、カイ二乗発散などに基づくボロノイ図を構成した<ref>{{cite journal |last=Nielsen |first=Frank |title=On Voronoi Diagrams on the Information-Geometric Cauchy Manifolds |journal=Entropy |volume=22 |issue=7 |pages=713 |year=2020 |doi=10.3390/e22070713}}</ref>。
+
+また、ポアンカレ円板や双曲面モデルに関連する指数型分布族の幾何学を研究し、双曲幾何学と統計的情報量との関係を明らかにしている。
+
+正定値行列の幾何学については、共分散行列、ガウス分布、行列平均、統計的クラスタリングなどへの応用を研究している。
+
+=== 機械学習と最適化 ===
+
+ニールセンの研究は、機械学習におけるデータ表現、クラスタリング、統計的最適化にも及ぶ。
+
+ブレグマン発散や情報幾何学的量を用いたクラスタリング、統計分布の重心計算、指数型分布族の混合モデル学習などを研究している。また、自然勾配法（Natural Gradient）など、統計モデルの幾何学的構造を利用する最適化手法にも取り組んでいる。
+
+これらの研究は、ユークリッド空間における通常の距離や勾配だけでは捉えにくい統計モデルの構造を、情報幾何学的に扱うことを目的としている。
+
+== 著書・編著 ==
+
+ニールセンは、計算幾何学、コンピュータグラフィックス、情報幾何学、高性能計算などに関する著書・編著を発表している。
+
+* ''Visual Computing: Geometry, Graphics, and Vision''（2005年）
+* ''A Concise and Practical Introduction to Programming Algorithms in Java''（2009年）
+* ''Matrix Information Geometry''（2012年）
+* ''Introduction to HPC with MPI for Data Science''（2016年）
+* ''Computational Information Geometry: For Image and Signal Processing''（2017年）
+* ''Geometric Structures of Information''（2019年）
+* ''Progress in Information Geometry: Theory and Applications''（2021年）
+* ''Handbook of Geometry and Statistics''（2022年）
+
+== 学術活動 ==
+
+ニールセンは、情報幾何学、情報理論、計算幾何学などの分野において国際的な学術活動に参加している。
+
+フレデリック・バルバレスコ（Frédéric Barbaresco）らとともに、国際会議「Geometric Science of Information（GSI）」の運営に携わっている。同会議では、情報幾何学、統計学、情報理論、信号処理、最適化、計算幾何学、機械学習などの研究者が集まり、幾何学と情報科学の接点について議論する<ref>{{cite web |title=Geometric Science of Information |url=https://conference-gsi.org/ |access-date=2026-10-30}}</ref>。
+
+また、学術誌『Information Geometry』などの編集活動にも携わっている。
+
+== 受賞・栄誉 ==
+
+* IEEEフェロー（2026年）。「幾何学的情報理論および情報量への貢献」に対して選出<ref name="IEEE"/>。
+* Springer Nature Editorial Contribution Award（2025年）。学術誌『Information Geometry』への編集上の貢献に対して受賞<ref name="bio"/>。
+* IAPR Machine Vision Applications Best Practical Paper Award（2013年）。
+* フランス国立研究機構（ANR）デジタル技術グランプリ（2013年）。
+* International Conference on Pattern Recognition Best Paper Award（2008年）。
+* European Conference on Artificial Intelligence Best Paper Award（2006年）。
+
+== 主要論文 ==
+
+* Nock, Richard; Nielsen, Frank (2004). "Statistical region merging". ''IEEE Transactions on Pattern Analysis and Machine Intelligence'', 26(11), 1452–1458.
+* Nielsen, Frank; Nock, Richard (2009). "Sided and symmetrized Bregman centroids". ''IEEE Transactions on Information Theory'', 55(6).
+* Boissonnat, Jean-Daniel; Nielsen, Frank; Nock, Richard (2010). "Bregman Voronoi diagrams". ''Discrete & Computational Geometry'', 44, 281–307.
+* Nielsen, Frank (2020). "An Elementary Introduction to Information Geometry". ''Entropy'', 22(10), 1100.
+* Nielsen, Frank (2022). "The Many Faces of Information Geometry". ''Notices of the American Mathematical Society'', 69(1), 36–45.
+
+== 外部リンク ==
+
+* [https://franknielsen.github.io/ 公式ウェブサイト]
+* [https://franknielsen.github.io/nbiography.html 略歴]
+* [https://franknielsen.github.io/npublications.html 論文一覧]
+* [https://dblp.org/pid/16/3039.html DBLP]
+* [https://orcid.org/0000-0001-5728-0726 ORCID]
+* [https://conference-gsi.org/ Geometric Science of Information]
+
+[[Category:フランスの計算機科学者]]
+[[Category:情報理論家]]
+[[Category:情報幾何学]]
+[[Category:IEEEフェロー]]

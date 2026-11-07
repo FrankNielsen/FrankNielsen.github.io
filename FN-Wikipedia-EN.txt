@@ -1,0 +1,150 @@
+
+{{Short description|French computer scientist and information geometer}}
+
+{{Infobox scientist
+| name             = Frank Nielsen
+| image            = 
+| caption          = Frank Nielsen
+| education        = [[École normale supérieure de Lyon]], [[Université Côte d'Azur]] 
+| occupation       = Researcher
+| fields           = [[Information Theory]] [[Information Geometry]] [[Machine Learning]]
+| workplaces       = [[Sony | Sony Computer Science Laboratories]]<ref>{{cite web |title=Frank Nielsen |url=https://www.sonycsl.co.jp/en/people/frank-nielsen/ |website=Sony CSL |access-date=14 September 2026 |date=6 July 2026}}</ref>
+| doctoral_advisor = [[Jean-Daniel Boissonnat]]<ref name=NielsenMathGeneology>{{cite web |title=Frank Nielsen - The Mathematics Genealogy Project |url=https://www.genealogy.math.ndsu.nodak.edu/id.php?id=107407 |website=www.genealogy.math.ndsu.nodak.edu |access-date=14 September 2026}}</ref>
+| awards           = 
+| website          = {{URL|https://franknielsen.github.io/}}
+}}
+
+
+'''Frank Nielsen''' is a French computer scientist whose research spans computational geometry, information geometry, information theory, machine learning, and visual computing. He is a Senior Researcher and Fellow at [[Sony Computer Science Laboratories]] in Tokyo, Japan. His work develops geometric methods for representing, comparing, and processing information, particularly through divergences, statistical manifolds, and non-Euclidean geometries.
+
+Nielsen's research has contributed to computational information geometry, including algorithms for [[Bregman divergence]]s, Bregman Voronoi diagrams, statistical clustering, and geometric representations of probability distributions. His work connects differential geometry, convex analysis, computational geometry, and statistical learning. He became an [[IEEE Fellow]] in 2026, with the citation "for contributions to geometric information theory and information measures".<ref name="IEEE2026">{{cite web |title=2026 Newly Elevated IEEE Fellows |url=https://www.itsoc.org/honors/fellows/ieee-fellows |publisher=IEEE Information Theory Society |access-date=30 October 2026}}</ref>
+
+== Education and career ==
+
+Nielsen received a master's degree in parallel and distributed computing from the [[École normale supérieure de Lyon]]. He subsequently conducted doctoral research in computational geometry at [[INRIA]] Sophia Antipolis under the supervision of [[Jean-Daniel Boissonnat]]. He received his PhD in 1996 from the University of Nice-Sophia-Antipolis (now part of [[Université Côte d'Azur]]).<ref name="MathGenealogy">{{cite web |title=Frank Nielsen |url=https://www.mathgenealogy.org/id.php?id= |publisher=Mathematics Genealogy Project |access-date=30 October 2026}}</ref>
+
+He joined Sony Computer Science Laboratories in Tokyo, where he has pursued research in geometric modeling, visual computing, computational geometry, and information sciences. His earlier work included algorithms for panoramic imaging and interactive video-based multimedia applications, as well as research on computational geometry for computer vision.<ref name="SonyBio">{{cite web |title=Frank Nielsen |url=https://franknielsen.github.io/nbiography.html |publisher=Sony Computer Science Laboratories |access-date=30 October 2026}}</ref>
+
+His subsequent research increasingly focused on the geometric structures of statistical models and information measures, connecting computational geometry with information theory, statistics, and machine learning.
+
+== Research ==
+
+=== Computational geometry and geometric algorithms ===
+
+Nielsen's early research concerned computational geometry, including adaptive geometric algorithms, geometric data structures, Voronoi diagrams, and geometric modeling. His work explored algorithms for geometric problems beyond conventional Euclidean settings, with applications in computer graphics, image processing, and data analysis.
+
+He developed geometric methods for computing and approximating smallest enclosing balls, geometric clustering, and proximity structures. These problems subsequently became important components of his research on statistical distributions and information geometry.
+
+His work on Voronoi diagrams extended classical proximity structures to non-Euclidean dissimilarities and divergence functions. In particular, his research established connections between Bregman Voronoi diagrams, convex duality, power diagrams, and Delaunay-type structures.<ref name="BregmanVoronoi">{{cite journal |last1=Boissonnat |first1=Jean-Daniel |last2=Nielsen |first2=Frank |last3=Nock |first3=Richard |title=Bregman Voronoi diagrams |journal=Discrete & Computational Geometry |volume=44 |issue=2 |pages=281–307 |year=2010 |doi=10.1007/s00454-010-9256-1}}</ref>
+
+=== Statistical region merging and visual computing ===
+
+In computer vision, Nielsen and Richard Nock developed statistical region merging, an approach to image segmentation based on statistical criteria for deciding when adjacent image regions should be combined.
+
+Their method provides a statistical and algorithmic framework for region merging with theoretical control of segmentation error. It was designed to be computationally efficient and applicable to different numerical pixel attribute spaces, including grayscale and color images.<ref name="SRM">{{cite journal |last1=Nock |first1=Richard |last2=Nielsen |first2=Frank |title=Statistical region merging |journal=IEEE Transactions on Pattern Analysis and Machine Intelligence |volume=26 |issue=11 |pages=1452–1458 |year=2004 |doi=10.1109/TPAMI.2004.110}}</ref>
+
+This research illustrates Nielsen's broader approach of combining statistical modeling, mathematical geometry, and efficient algorithms to address problems in visual computing.
+
+=== Bregman divergences and computational information geometry ===
+
+A major direction of Nielsen's research concerns the computational geometry of [[Bregman divergence]]s. These divergences generalize squared Euclidean distance and include important information-theoretic quantities such as the Kullback–Leibler divergence.
+
+Together with Jean-Daniel Boissonnat and Richard Nock, Nielsen developed a framework for Bregman Voronoi diagrams, extending classical Voronoi constructions to a broad class of non-Euclidean divergence functions. Their work established relationships between different types of Bregman diagrams through convex duality and showed how such diagrams can be computed using power diagrams, geometric embeddings, and polyhedral constructions.<ref name="BregmanVoronoi"/>
+
+The resulting framework provides geometric tools for studying proximity, clustering, 
+and triangulations in statistical and information-theoretic spaces. 
+It also connects computational geometry with convex analysis and the geometry 
+of exponential families.<ref>{{cite conference |last1=Nielsen |first1=Frank |last2=Boissonnat 
+|first2=Jean-Daniel |last3=Nock |first3=Richard 
+|title=On Bregman Voronoi diagrams |book-title=Proceedings of the 18th Annual ACM-SIAM Symposium on Discrete Algorithms |year=2007}}</ref>
+
+Nielsen also developed geometric algorithms for computing Bregman centroids, information disks, and smallest enclosing information balls. These constructions extend familiar Euclidean geometric problems to statistical spaces and provide tools for clustering and machine learning.
+
+His research on Bregman centroids includes sided and symmetrized centroids, Burbea–Rao and Bhattacharyya centroids, and Jeffreys centroids. These studies investigate optimization and geometric averaging under asymmetric statistical divergences.<ref>{{cite journal |last1=Nielsen |first1=Frank |last2=Nock |first2=Richard |title=Sided and symmetrized Bregman centroids |journal=IEEE Transactions on Information Theory |volume=55 |issue=6 |pages=2882–2904 |year=2009}}</ref><ref>{{cite journal |last1=Nielsen |first1=Frank |title=The Burbea–Rao and Bhattacharyya centroids |journal=IEEE Transactions on Information Theory |volume=57 |issue=8 |pages=5455–5466 |year=2011}}</ref>
+
+He has also investigated computational methods for statistical divergences, including f-divergences, Jensen–Shannon divergences, Chernoff information, and divergences between parametric statistical distributions.
+
+=== Information geometry ===
+
+Nielsen's research has made contributions to the development and dissemination of [[information geometry]], the mathematical study of geometric structures associated with statistical models and probability distributions.
+
+Information geometry uses differential geometry, particularly the [[Fisher information metric]], to study statistical models as geometric spaces. Its framework includes Riemannian metrics, affine connections, duality, and geometric divergences.
+
+Nielsen has worked on the geometric interpretation of statistical divergences, dually flat spaces, exponential families, mixture families, information projections, and geometric means. His research connects these structures with convex analysis, Legendre transformations, and Bregman divergences.
+
+His 2020 article ''An Elementary Introduction to Information Geometry'' presents a self-contained introduction to the subject, including its differential-geometric foundations and applications to information sciences.<ref name="Elementary">{{cite journal |last=Nielsen |first=Frank |title=An Elementary Introduction to Information Geometry |journal=Entropy |volume=22 |issue=10 |pages=1100 |year=2020 |doi=10.3390/e22101100}}</ref>
+
+He also authored ''The Many Faces of Information Geometry'', published in the [[Notices of the American Mathematical Society]] in 2022, which surveys the mathematical foundations and diverse applications of information geometry.<ref name="ManyFaces">{{cite journal |last=Nielsen |first=Frank |title=The Many Faces of Information Geometry |journal=Notices of the American Mathematical Society |volume=69 |issue=1 |pages=36–45 |year=2022}}</ref>
+
+Other contributions include research on the Fisher–Rao geometry of statistical models, statistical divergences, geometric Jensen–Shannon divergences, and information-geometric structures of parametric distributions.
+
+=== Non-Euclidean geometry and statistical manifolds ===
+
+Nielsen has investigated geometric structures beyond conventional Euclidean spaces and their applications to statistical modeling and machine learning.
+
+His work includes the geometry of hyperbolic statistical models, Hilbert geometry, projective geometry, and the geometry of positive-definite matrices. These approaches provide alternative geometric representations for statistical distributions and structured data.
+
+His research on the information geometry of Cauchy distributions studies the Fisher–Rao metric, Kullback–Leibler divergence, and other statistical divergences on the corresponding statistical manifolds.<ref>{{cite journal |last=Nielsen |first=Frank |title=On Voronoi Diagrams on the Information-Geometric Cauchy Manifolds |journal=Entropy |volume=22 |issue=7 |pages=713 |year=2020 |doi=10.3390/e22070713}}</ref>
+
+He has also studied hyperbolic exponential families and geometric embeddings of supervised models, connecting non-Euclidean geometry with modern machine learning.<ref>{{cite journal |last=Nielsen |first=Frank |title=Information measures and geometry of the hyperbolic exponential families of Poincaré and hyperboloid distributions |journal=Information Geometry |year=2024}}</ref>
+
+His work on positive-definite matrix geometry includes applications to covariance matrices, Gaussian statistical models, matrix means, and geometric clustering.
+
+=== Machine learning and optimization ===
+
+Nielsen's work applies information geometry and non-Euclidean computational geometry to statistical learning and optimization.
+
+His research includes geometric approaches to clustering, classification, statistical mixture learning, and the optimization of machine learning models. He has investigated the use of Bregman divergences and information-geometric quantities for constructing centroids, clustering algorithms, and geometric representations of data.
+
+In collaboration with other researchers, he has also studied natural-gradient methods and structured optimization, including relative Fisher information and natural gradients for learning large modular models.<ref>{{cite conference |last1=Nielsen |first1=Frank |last2=Nock |first2=Richard |title=Relative Fisher Information and Natural Gradient for Learning Large Modular Models 
+|book-title=Proceedings of the International Conference on Machine Learning |year=2017}}</ref>
+
+His more recent research includes hyperbolic embeddings of supervised models, geometric approaches to optimal transport, and the use of statistical geometry for learning structured representations.<ref>{{cite conference |last1=Amid |first1=Ehsan |last2=Nock |first2=Richard |last3=Nielsen |first3=Frank |last4=Soen |first4=Alexander |last5=Warmuth |first5=Manfred K. |title=Hyperbolic Embeddings of Supervised Models
+ |book-title=Advances in Neural Information Processing Systems |year=2024}}</ref>
+
+== Books and edited volumes ==
+
+Nielsen has authored and edited books on computational geometry, visual computing, high-performance computing, and information geometry.
+
+* ''Visual Computing: Geometry, Graphics, and Vision''. Charles River Media, 2005.
+* ''A Concise and Practical Introduction to Programming Algorithms in Java''. Springer, 2009.
+* ''Matrix Information Geometry''. Springer, 2012.
+* ''Introduction to HPC with MPI for Data Science''. Springer, 2016.
+* ''Computational Information Geometry: For Image and Signal Processing''. Edited with Frank Critchley and Christopher T. J. Dodson. Springer, 2017.
+* ''Geometric Structures of Information''. Edited volume, Springer, 2019.
+* ''Progress in Information Geometry: Theory and Applications''. Edited volume, Springer, 2021.
+* ''Handbook of Geometry and Statistics''. Edited volume, Elsevier, 2022.
+
+== Academic service ==
+
+Nielsen has served on the editorial boards of scientific journals, including ''Information Geometry'', ''IEEE Transactions on Information Theory'', and ''Entropy''. He previously served as an editor of the ''Journal of Mathematical Imaging and Vision''.
+
+He co-organizes the biennial international conference series [[Geometric Science of Information]] (GSI), together with Frédéric Barbaresco. The conference brings together researchers in information geometry, statistics, information theory, signal processing, optimization, computational geometry, and machine learning.<ref>{{cite web |title=Geometric Science of Information |url=https://conference-gsi.org/ |access-date=30 October 2026}}</ref>
+
+== Awards and recognition ==
+
+* IEEE Fellow, Class of 2026, for contributions to geometric information theory and information measures.<ref name="IEEE2026"/>
+* Springer Nature Editorial Contribution Award, 2025, for contributions to the journal ''Information Geometry''.<ref name="SonyBio"/>
+
+== Selected publications ==
+
+* Nock, Richard; Nielsen, Frank (2004). "Statistical region merging". ''IEEE Transactions on Pattern Analysis and Machine Intelligence'', 26(11), 1452–1458.
+* Nielsen, Frank; Nock, Richard (2009). "Sided and symmetrized Bregman centroids". ''IEEE Transactions on Information Theory'', 55(6), 2882–2904.
+* Boissonnat, Jean-Daniel; Nielsen, Frank; Nock, Richard (2010). "Bregman Voronoi diagrams". ''Discrete & Computational Geometry'', 44(2), 281–307.
+* Nielsen, Frank (2020). "An Elementary Introduction to Information Geometry". ''Entropy'', 22(10), 1100.
+* Nielsen, Frank (2022). "The Many Faces of Information Geometry". ''Notices of the American Mathematical Society'', 69(1), 36–45.
+* Nielsen, Frank (2024). "Information measures and geometry of the hyperbolic exponential families of Poincaré and hyperboloid distributions". ''Information Geometry''.
+
+== External links ==
+
+* [https://franknielsen.github.io/ Official website]
+* [https://franknielsen.github.io/npublications.html Publication list]
+* [https://dblp.org/pid/16/3039.html DBLP bibliography]
+* [https://arxiv.org/search/?searchtype=author&query=Nielsen,+F Frank Nielsen on arXiv]
+* [https://orcid.org/0000-0001-5728-0726 ORCID]
+* [https://conference-gsi.org/ Geometric Science of Information]
+
+[[Category:French computer scientists]]
+[[Category:French information theorists]]
+[[Category:Information geometers]]
+[[Category:Fellows of the IEEE]]

@@ -23,8 +23,8 @@ boolean toggleRectify=false;
 
 int n;
 //int nstart=8;
-//int nstart=2;
-int nstart=16; //128;
+int nstart=2;
+//int nstart=16; //128;
 
 
 double [][] point; // stored 2d coordinates
@@ -656,7 +656,7 @@ void initialize()
 }
 
 
-boolean animate=true;
+boolean animate=false; //true;
 
 void keyPressed()
 {
