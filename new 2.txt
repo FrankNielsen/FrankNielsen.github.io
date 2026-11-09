@@ -1,0 +1,93 @@
+
+{{Short description|French computer scientist and information geometer}}
+{{Infobox scientist
+| name             = Frank Nielsen
+| image            =
+| caption          = Frank Nielsen
+| education        = [[École normale supérieure de Lyon]], [[Université Côte d'Azur]]
+| occupation       = Computer scientist, researcher
+| fields           = [[Computational geometry]], [[Information geometry]], [[Information theory]], [[Machine learning]]
+| workplaces       = [[Sony Computer Science Laboratories]]<ref>{{cite web |title=Frank Nielsen |url=https://www.sonycsl.co.jp/en/people/frank-nielsen/ |website=Sony CSL |access-date=14 September 2026}}</ref>
+| doctoral_advisor = [[Jean-Daniel Boissonnat]]<ref name="MathGenealogy">{{cite web |title=Frank Nielsen |url=https://www.genealogy.math.ndsu.nodak.edu/id.php?id=107407 |website=Mathematics Genealogy Project |access-date=14 September 2026}}</ref>
+| awards           = IEEE Fellow (2026)
+| website          = {{URL|https://franknielsen.github.io/}}
+}}
+
+'''Frank Nielsen''' is a French [[computer scientist]] and researcher in [[computational geometry]] and [[information geometry]]. He is a Senior Researcher and Fellow at [[Sony Computer Science Laboratories]] (Sony CSL) in Tokyo, Japan.<ref name="bio">{{cite web |title=Biography |url=https://franknielsen.github.io/nbiography.html |website=Frank Nielsen's academic website |access-date=15 October 2026}}</ref>
+
+Nielsen received his master's degree in parallel 
+and distributed computing from the [[École normale supérieure de Lyon]]. He completed doctoral research in computational geometry at INRIA Sophia Antipolis in 1996 under the supervision of [[Jean-Daniel Boissonnat]], and subsequently received a PhD and a ''habilitation à diriger des recherches'' from [[Université Côte d'Azur]].<ref name="bio"/><ref name="MathGenealogy"/>
+
+Nielsen joined Sony CSL in Tokyo in 1998.<ref>{{cite web |title=Frank Nielsen |url=https://www.sonycsl.co.jp/en/people/frank-nielsen/ |website=Sony CSL |access-date=15 October 2026}}</ref> His early research included computational geometry, geometric modeling, computer vision, and visual computing. His work on panoramic video and interactive multimedia applications contributed to technology commercialized through Sony's Fourthview product line.<ref name="bio"/>
+
+He became an [[IEEE Fellow]] in 2026, with the citation "for contributions to geometric information theory and information measures".<ref name="IEEE2026">{{cite web |title=ITSoc Members Elevated to IEEE Fellow in 2026 |url=https://www.itsoc.org/news/itsoc-members-elevated-ieee-fellow-2026 |website=IEEE Information Theory Society |access-date=14 September 2026}}</ref>
+
+== Research ==
+
+Nielsen's research spans computational geometry, information geometry,
+ statistical divergences, machine learning, computer vision, and information theory.<ref name="homepage">{{cite web |title=Frank Nielsen: Research and publications |url=https://franknielsen.github.io/ |website=Frank Nielsen's academic website |access-date=15 October 2026}}</ref>
+
+=== Computational geometry ===
+
+Nielsen has contributed to computational geometry, including Voronoi diagrams, geometric algorithms, and methods for processing visual information. With Richard Nock, he co-authored the paper "Statistical Region Merging", published in ''IEEE Transactions on Pattern Analysis and Machine Intelligence'' in 2004.<ref name="SRM">{{cite journal |last1=Nock |first1=Richard |last2=Nielsen |first2=Frank |title=Statistical region merging |journal=IEEE Transactions on Pattern Analysis and Machine Intelligence |volume=26 |issue=11 |pages=1452–1458 |date=2004 |doi=10.1109/TPAMI.2004.110}}</ref>
+
+His research also concerns computational methods in non-Euclidean
+ geometries and their applications to machine learning, including geometric 
+ structures defined by divergences and curved spaces.<ref name="homepage"/>
+
+=== Information geometry ===
+
+Nielsen has worked on information geometry, which applies differential geometry and convex analysis to probability distributions, statistical models, and information processing. His research includes [[Bregman divergence]]s, Jensen divergences, statistical distances, geometric centroids, and computational methods for clustering and statistical learning.<ref name="homepage"/>
+
+His publications include "An Elementary Introduction to Information Geometry", published in the journal ''Entropy'' in 2020, and "The Many Faces of Information Geometry", published in ''Notices of the American Mathematical Society'' in 2022.<ref name="elementary">{{cite journal |last=Nielsen |first=Frank |title=An Elementary Introduction to Information Geometry |journal=Entropy |volume=22 |issue=10 |pages=1100 |date=2020 |doi=10.3390/e22101100}}</ref><ref>{{cite journal |last=Nielsen |first=Frank |title=The Many Faces of Information Geometry |journal=Notices of the American Mathematical Society |volume=69 |issue=1 |pages=36–45 |date=2022}}</ref>
+
+His other research interests include [[Riemannian geometry]], 
+[[Finsler geometry]], hyperbolic and projective geometries, positive-definite matrix geometry,
+ and geometric optimization methods for machine learning.<ref name="homepage"/>
+
+== Books ==
+
+Nielsen has authored and co-authored books on computational geometry, visual computing, information geometry, programming, and high-performance computing. Selected books include:
+
+* ''Visual Computing: Geometry, Graphics, and Vision'' (2005).
+* ''A Concise and Practical Introduction to Programming Algorithms in Java'' (2009).
+* ''Matrix Information Geometry'' (2012).
+* ''Introduction to HPC with MPI for Data Science'' (2016).
+* ''Computational Information Geometry'' (2017).<ref name="homepage"/>
+
+== Academic service ==
+
+Nielsen serves on the editorial boards of the journals ''Information Geometry'' and ''Entropy''. 
+He previously served as an editor of the ''IEEE Transactions on Information Theory'' and of the ''Journal of Mathematical Imaging and Vision'' from 2014 to 2016.<ref name="bio"/>
+He co-organizes the biennial international conference series ''Geometric Science of Information'',
+ which brings together researchers in information geometry, statistics, information theory, signal processing, 
+ and related fields.<ref>{{cite web |title=Geometric Science of Information |url=https://franknielsen.github.io/GSI/ |website=Geometric Science of Information |access-date=15 October 2026}}</ref>
+
+== Awards and honours ==
+
+* IEEE Fellow (2026), for contributions to geometric information theory and information measures.<ref name="IEEE2026"/>
+* Springer Nature Editorial Contribution Award (2025), for contributions to the journal ''Information Geometry''.<ref name="bio"/>
+* Best Practical Paper Award, IAPR Machine Vision Applications (2013).<ref name="bio"/>
+* Grand Prize, Digital Technologies ANR Awards (2013), associated with computational information geometry.<ref name="bio"/>
+* Best Paper Award, International Conference on Pattern Recognition (2008), for work on convex surrogates in supervised learning.<ref name="bio"/>
+* Best Paper Award, European Conference on Artificial Intelligence (2006).<ref name="bio"/>
+
+== References ==
+
+{{reflist}}
+
+== External links ==
+
+* {{Official website|https://franknielsen.github.io/}}
+* [https://franknielsen.github.io/nbiography.html Biography]
+* [https://franknielsen.github.io/npublications.html Publications]
+* [https://franknielsen.github.io/GSI/ Geometric Science of Information]
+
+{{Authority control}}
+{{DEFAULTSORT:Nielsen, Frank}}
+[[Category:Living people]]
+[[Category:French computer scientists]]
+[[Category:French information theorists]]
+[[Category:Fellows of the IEEE]]
+{{Compu-scientist-stub}}
+{{France-scientist-stub}}
