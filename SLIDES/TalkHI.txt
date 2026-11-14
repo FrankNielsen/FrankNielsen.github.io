@@ -1,0 +1,61 @@
+BD & GLM
+Key Reference: Banerjee, A., Merugu, S., Dhillon, I. S., & Ghosh, J. (2005). Clustering with Bregman Divergences. Journal of Machine Learning Research, 6(Oct), 1705–1749.
+
+BD & clustering
+
+Generalized nonnegative matrix approximations with Bregman divergences.
+
+BD and opt
+
+Beck, A., & Teboulle, M. (2003). Mirror descent and nonlinear projected subgradient methods for convex optimization. Operations Research Letters, 31(3), 167–175.
+
+BD and matrix approx
+
+Kulis, B., Sustik, M. A., & Dhillon, I. S. (2009). Low-Rank Kernel Learning with Bregman Matrix Divergences. Journal of Machine Learning Research, 10(Feb), 341–376.
+
+
+
+@article{guha2008sketching,
+  title={Sketching information divergences},
+  author={Guha, Sudipto and Indyk, Piotr and McGregor, Andrew},
+  journal={Machine Learning},
+  volume={72},
+  number={1},
+  pages={5--19},
+  year={2008},
+  publisher={Springer}
+}
+
+
+"Bregman divergences: Theory, Applications, and Extensions"
+by Frank Nielsen
+https://franknielsen.github.io/
+
+Abstract:
+Bregman divergences (BDs) are generic distortion measures that unify squared Euclidean distances with information-theoretic relative entropies. They serve as fundamental workhorses across the information sciences, including information theory, statistics, data science, machine learning, and artificial intelligence.
+In this talk, I first review how the convex duality underlying Bregman divergences gives rise to Bregman manifolds, a fundamental information-geometric structure that provides a geometric perspective on several key results in information sciences.
+I then present recent developments and extensions of the Bregman framework, illustrated through applications in machine learning and AI. These include duo Bregman pseudo-divergences, curved Bregman divergences, chord Bregman divergences, and Bregman power distances, among other extensions.
+
+
+
+
+Bregman divergences are generic distortion measures which unify the squared Euclidean distance with information-theoretic relative entropies.
+BDs are the workhorses in information sciences which encompasses information theory, statistics, data science, machine learning and AI. 
+In this talk, I review how the convex duality of BDs yield Bregman manifolds, an information-geometric structure which allows one to interpret several key results from the lens of geometry.
+I then discuss several recent results and extensions illustrated with applications in machine learning and AI:
+duo Bregman pseudo-divergences, curved Bregman divergences, chord Bregman divergences, Bregman power distances, etc.
+
+
+---
+
+
+
+By analogy to the terminology of curved exponential families in statistics, we define curved Bregman divergences as Bregman divergences restricted to non-affine parameter subspaces and sub-dimensional Bregman divergences when the restrictions are affine. A common example of curved Bregman divergence is the cosine dissimilarity between normalized vectors: a curved squared Euclidean divergence. We prove that the barycenter of a finite weighted set of parameters under a curved Bregman divergence amounts to the right Bregman projection onto the non-affine subspace of the barycenter with respect to the full Bregman divergence, and interpret a generalization of the weighted Bregman centroid of 
+ parameters as a 
+-fold sub-dimensional Bregman divergence. We demonstrate the significance of curved Bregman divergences with several examples: (1) symmetrized Bregman divergences, (2) pointwise symmetrized Bregman divergences, and (3) the Kullback-Leibler divergence between circular complex normal distributions. We explain how to reparameterize sub-dimensional Bregman divergences on simplicial sub-dimensional domains. We then consider monotonic embeddings to define representational curved Bregman divergences and show that the 
+-divergences are representational curved Bregman divergences with respect to 
+-embeddings of the probability simplex into the positive measure cone. As an application, we report an efficient method to calculate the intersection of a finite set of 
+-divergence spheres.
+
+
+
