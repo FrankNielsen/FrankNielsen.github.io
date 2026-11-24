@@ -1,6 +1,6 @@
 /*
 Frank.Nielsen@acm.org 
-April 2021
+April 2021, updated for duality 20 Nov 2026
 https://franknielsen.github.io/BregmanSphere/
 
 On geodesic triangles with right angles in a dually flat space
@@ -16,12 +16,22 @@ float ptsize=3;
 boolean first=true;
 boolean animation=true;
 int side = 512;
+
+
 double minxTheta=0.01;
-double maxxTheta=5;
+double maxxTheta=1;
 double minyTheta=minxTheta;
 double maxyTheta=maxxTheta;
 
-BB bbTheta;
+
+double minxEta=gradIS(maxxTheta);  
+double maxxEta=gradIS(minxTheta);
+double minyEta=gradIS(maxyTheta);  
+double maxyEta=gradIS(minyTheta);
+
+
+
+BB bbTheta, bbEta;
 double xx=0, yy=0, rr=0;
 
 float u=0;
@@ -41,7 +51,9 @@ void Initialize()
   maxyTheta=maxxTheta;
 
   bbTheta=new BB(minxTheta, maxxTheta, minyTheta, maxyTheta, side, side);
-
+  bbEta=new BB(minxEta, maxxEta, minyEta, maxyEta, side, side);
+  
+  
   InitializeCircle();
   first=true;
 }
@@ -65,7 +77,8 @@ void savepdffile()
 }
 
 void draw()
-{drawPDF();}
+{if (!toggleDual) drawPDF(); else
+drawDualPDF();}
 
 void drawAnimation()
 {
@@ -129,6 +142,42 @@ double u1=u; double u2=rr-u1;
   }
 }
 
+boolean toggleText=false;
+
+double gradxx, gradyy;
+
+void drawDualPDF()
+{
+background(255);
+strokefill(200,200,200);  
+ 
+String str="Dual Itakura-Saito circle for center ("+nf((float)xx, 1, 3)+","+nf((float)yy, 1, 3)+") radius="+nf((float)rr, 1, 3);
+  background(255);
+  
+  if (toggleText){
+strokefill(150,150,150);
+textSize(8);
+text(str,10,512-10);
+  }
+  
+  
+gradxx=gradIS(xx);
+gradyy=gradIS(yy);
+  
+  line((float)bbEta.x2X(gradxx), (float)bbEta.x2X(minyEta), (float)bbEta.x2X(gradxx), 
+    (float)bbEta.x2X(maxyEta));
+  line((float)bbEta.x2X(minxEta), (float)bbEta.y2Y(gradyy), (float)bbEta.x2X(maxxEta), 
+    (float)bbEta.y2Y(gradyy));
+
+
+  ellipse((float)bbEta.x2X(gradxx), (float)bbEta.y2Y(gradyy), ptsize, ptsize);
+  
+  strokefill(0, 0, 0);
+  
+drawISPDFDual(xx, yy, rr); 
+
+}
+
 
 
 
@@ -139,9 +188,13 @@ strokefill(200,200,200);
  
 String str="Itakura-Saito circle for center ("+nf((float)xx, 1, 3)+","+nf((float)yy, 1, 3)+") radius="+nf((float)rr, 1, 3);
   background(255);
+  
+  if (toggleText){
 strokefill(150,150,150);
 textSize(8);
 text(str,10,512-10);
+  }
+  
   
   line((float)bbTheta.x2X(xx), (float)bbTheta.x2X(minyTheta), (float)bbTheta.x2X(xx), 
     (float)bbTheta.x2X(maxyTheta));
@@ -293,6 +346,68 @@ void drawISPDF(double cx, double cy, double r)
 }
 
 
+
+double gradIS(double theta){return -1.0/theta;}
+
+void drawISPDFDual(double cx, double cy, double r)
+{
+  int nbsteps=1000;
+  double u, du=r/(double)nbsteps;
+  double xr1, yr1, xr2, yr2;
+  double nxr1, nyr1, nxr2, nyr2;
+  double a, b;
+  double u1,u2,nu1,nu2;
+
+  strokefill(0, 0, 0);
+  strokeWeight(1);
+
+  for (u=0; u<=r; u+=du)
+  {
+
+    u1=u;
+    u2=r-u;
+
+    // positive orthant: ok
+    xr1=-cx/W0(-Math.exp(-u1-1));
+    yr1=-cy/W0(-Math.exp(-u2-1));
+
+  
+    // negative orthant: ok
+     xr2=-cx/WNeg1(-Math.exp(-u1-1));
+    yr2=-cy/WNeg1(-Math.exp(-u2-1));
+    
+  
+    nu1=u+du;
+    nu2=r-nu1;
+
+    // positive orthant: ok
+    nxr1=-cx/W0(-Math.exp(-nu1-1));
+    nyr1=-cy/W0(-Math.exp(-nu2-1));
+
+  
+    // negative orthant: ok
+     nxr2=-cx/WNeg1(-Math.exp(-nu1-1));
+    nyr2=-cy/WNeg1(-Math.exp(-nu2-1));
+    
+    xr1=gradIS(xr1); yr1=gradIS(yr1);
+    nxr1=gradIS(nxr1); nyr1=gradIS(nyr1);
+    
+    xr2=gradIS(xr2); yr2=gradIS(yr2);
+    nxr2=gradIS(nxr2); nyr2=gradIS(nyr2);
+    
+    line((float)bbEta.x2X(xr1), (float)bbEta.y2Y(yr1), (float)bbEta.x2X(nxr1), (float)bbEta.y2Y(nyr1));
+
+  line((float)bbEta.x2X(xr2), (float)bbEta.y2Y(yr1), (float)bbEta.x2X(nxr2), (float)bbEta.y2Y(nyr1));
+   
+ line((float)bbEta.x2X(xr2), (float)bbEta.y2Y(yr2), (float)bbEta.x2X(nxr2), (float)bbEta.y2Y(nyr2));
+    line((float)bbEta.x2X(xr1), (float)bbEta.y2Y(yr2), (float)bbEta.x2X(nxr1), (float)bbEta.y2Y(nyr2));
+ 
+ }
+  
+ 
+
+}
+
 // Lambert W principal branch
 double W0(double x)
 {
@@ -304,9 +419,15 @@ double WNeg1(double x)
   return LambertW.branchNeg1(x);
 }
 
+boolean toggleDual=false;
 
+// 'p' for PDF export
 void keyPressed()
 {
+  
+   if (key=='t') {toggleText=!toggleText;}
+   
+   
   if (key=='q') exit();
 
 if (key=='p') {SavePDF();}
@@ -321,4 +442,6 @@ if (key=='p') {SavePDF();}
     {animation=!animation;u=0;}
   }
   if (key=='x') savepdffile();
+  
+  if (key=='d') {toggleDual=!toggleDual;}
 }
