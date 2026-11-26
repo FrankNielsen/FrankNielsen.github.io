@@ -20,12 +20,13 @@ boolean toggleRectify=false;
 
 
 int n;
-int nstart=8; //16; //32;
+int nstart=8; //8; //16; //32;
 
 
 double [][] point; // stored 2d coordinates
 
 double [][] opoint; // in ordinary
+double [] displacement;
 
 double [] weight; // weight
 float ptsize=5;
@@ -109,6 +110,7 @@ void draw()
   println("n="+n);
   surface.setTitle("Equivalence 1D Power/ 2D Ordinary Voronoi diagrams, n="+n);
 
+colgen=10;
 
 
   background(255, 255, 255);
@@ -123,7 +125,7 @@ void draw()
 
   for (i=0; i<n; i++) {
     fill(240);
-    stroke(240);
+    stroke(200);
     //circle((float)x2X(point[i][0]), (float)y2Y(point[i][1]), (float)x2X(Math.sqrt(weight[i])));
     MyCircle((float)(point[i][0]), (float)(point[i][1]), (float)Math.sqrt(weight[i]));
 
@@ -184,13 +186,18 @@ void draw()
 
   if (toggleText)
   {
-    String msg="PD n="+n;
-    textSize(32);
+    //String msg="PD n="+n;
+    String msg="Equivalence 1D power diagram with 2D Voronoi diagram, n="+n;
+    textSize(20);
     fill(0, 0, 0);
     stroke(0, 0, 0);
     text(msg, 100, 30);
   }
+  
+  if (toggleAnimation){upDate();}
 }
+
+
 
 public static double mind(double x, double y)
 {
@@ -252,12 +259,16 @@ void initialize()
   weight=new double[n];
   double W=0;
   opoint=new double[n][2];
+  
+  displacement=new double[n];
 
   for ( i = 0; i < n; i++) {
     point[i][0]=Math.random();
     // point[i][1]=Math.random(); point[i][1]=0;
     weight[i]=0.01*Math.random();
     W=max(W, weight[i]);
+    
+    displacement[i]=(Math.random()-0.5)*0.01;
   }
 
   println("Max weight W="+W);
@@ -282,6 +293,23 @@ void initialize()
   computePDEuc();
 }
 
+
+void upDate()
+{
+ int i;
+ for(i=0;i<n;i++) 
+{
+  point[i][0]=point[i][0]+displacement[i];
+  if (point[i][0]>maxx) displacement[i]=-displacement[i];
+   if (point[i][0]<minx) displacement[i]=-displacement[i];
+   opoint[i][0]=point[i][0];
+}
+
+    computePD();
+  computePDEuc();
+}
+
+
 void keyPressed()
 {
   if (key=='q') exit();
@@ -297,7 +325,7 @@ void keyPressed()
     draw();
   }
 
-
+ if (key=='m') {toggleAnimation=!toggleAnimation;}
 
 
   if (key=='n') {
